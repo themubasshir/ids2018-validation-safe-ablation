@@ -1,0 +1,34 @@
+[
+  {
+    "Model": "MLP",
+    "Input Type": "2d",
+    "Batch Size": 1024,
+    "Learning Rate": 0.001,
+    "Maximum Epochs": 30,
+    "Early-Stopping Patience": 4
+  },
+  {
+    "Model": "1D-CNN",
+    "Input Type": "3d",
+    "Batch Size": 1024,
+    "Learning Rate": 0.001,
+    "Maximum Epochs": 30,
+    "Early-Stopping Patience": 4
+  },
+  {
+    "Model": "LSTM",
+    "Input Type": "3d",
+    "Batch Size": 1024,
+    "Learning Rate": 0.001,
+    "Maximum Epochs": 30,
+    "Early-Stopping Patience": 4
+  },
+  {
+    "Model": "Transformer Encoder",
+    "Input Type": "3d",
+    "Batch Size": 1024,
+    "Learning Rate": 0.0005,
+    "Maximum Epochs": 30,
+    "Early-Stopping Patience": 4
+  }
+]

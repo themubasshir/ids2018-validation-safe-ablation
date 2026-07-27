@@ -1,0 +1,18 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Validation-only threshold selection",
+  "Winning Model": "XGBoost Tuned",
+  "Threshold Grid": {
+    "Minimum": 0.05,
+    "Maximum": 0.95,
+    "Step": 0.01,
+    "Count": 91
+  },
+  "Operating Points": {
+    "Standard Threshold": 0.5,
+    "Maximum Validation F1": 0.51,
+    "Maximum Validation F2": 0.16
+  },
+  "Threshold Selection Split": "Validation",
+  "Test Set Used": false
+}

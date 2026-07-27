@@ -1,0 +1,2 @@
+Model,Candidate,Hidden Layers,Dropout,Learning Rate,Batch Size,Best Epoch,Epochs Completed,Evaluation Split,Training Device,Threshold,Accuracy,Precision,Recall,F1-score,FPR,FNR,TP,TN,FP,FN,Training Time (sec),Prediction Time (sec)
+MLP Tuned,MLP-05,"[512, 256, 128]",0.3,0.0005,1024,28,33,Validation,GPU,0.5,0.938171093896031,0.9937273823884197,0.8515168742570676,0.9171421414456289,0.003611111111111111,0.14848312574293246,16476,28696,104,2873,29.68562543200005,0.840669457000331

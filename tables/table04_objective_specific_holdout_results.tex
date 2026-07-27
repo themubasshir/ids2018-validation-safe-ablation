@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Objective-specific performance on the holdout test set.}
+\label{tab:holdout_results}
+\begin{tabular}{llrrrrrrrrrrrrrr}
+\toprule
+Objective & Model & Threshold & Accuracy & Precision & Recall & F1-score & F2-score & FPR & FNR & TP & TN & FP & FN & ROC-AUC & PR-AUC \\
+\midrule
+Standard Reference & XGBoost Tuned & 0.5000 & 0.9459 & 0.9892 & 0.8749 & 0.9286 & 0.8956 & 0.0064 & 0.1251 & 21161 & 35769 & 231 & 3025 & 0.9802 & 0.9776 \\
+Maximum Validation F1 & XGBoost Tuned & 0.5100 & 0.9459 & 0.9898 & 0.8744 & 0.9285 & 0.8953 & 0.0061 & 0.1256 & 21148 & 35781 & 219 & 3038 & 0.9802 & 0.9776 \\
+Standard Reference & LightGBM Tuned & 0.5000 & 0.9458 & 0.9897 & 0.8741 & 0.9283 & 0.8950 & 0.0061 & 0.1259 & 21141 & 35780 & 220 & 3045 & 0.9802 & 0.9777 \\
+Constrained Security Maximum F2 & LightGBM Tuned & 0.2600 & 0.9347 & 0.9290 & 0.9068 & 0.9178 & 0.9112 & 0.0466 & 0.0932 & 21932 & 34324 & 1676 & 2254 & 0.9802 & 0.9777 \\
+\bottomrule
+\end{tabular}
+\end{table}

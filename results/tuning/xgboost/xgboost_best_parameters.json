@@ -1,0 +1,23 @@
+{
+  "Model": "XGBoost Tuned",
+  "Selection Metric": "Mean 3-fold training CV F1-score",
+  "Best CV F1-score": 0.9276028996530336,
+  "Random Candidates": 15,
+  "CV Folds": 3,
+  "Training Device": "GPU",
+  "Training Records": 192593,
+  "Validation Records": 48149,
+  "Feature Count": 78,
+  "Test Set Used": false,
+  "Best Parameters": {
+    "subsample": 0.8,
+    "reg_lambda": 1.0,
+    "reg_alpha": 1.0,
+    "n_estimators": 500,
+    "min_child_weight": 1,
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "gamma": 0.1,
+    "colsample_bytree": 0.9
+  }
+}

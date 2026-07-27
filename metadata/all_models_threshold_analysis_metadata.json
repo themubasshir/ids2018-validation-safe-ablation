@@ -1,0 +1,22 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "All top-five validation threshold analysis",
+  "Models": [
+    "XGBoost Tuned",
+    "LightGBM Tuned",
+    "CatBoost Tuned",
+    "MLP Tuned",
+    "1D-CNN Tuned"
+  ],
+  "Threshold Grid": {
+    "Minimum": 0.05,
+    "Maximum": 0.95,
+    "Step": 0.01,
+    "Count": 91
+  },
+  "Constrained Objective": "Maximum validation F2",
+  "FPR Constraint": 0.05,
+  "Threshold Selection Split": "Validation",
+  "Training Performed": false,
+  "Test Set Used": false
+}

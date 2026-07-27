@@ -1,0 +1,6 @@
+Model,Result Available,Probability Available,Result Path,Probability Path
+XGBoost Tuned,True,True,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/xgboost/results/xgboost_tuned_validation_result.csv,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/xgboost/results/xgboost_validation_probabilities.csv
+LightGBM Tuned,True,True,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/lightgbm/results/lightgbm_tuned_validation_result.csv,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/lightgbm/results/lightgbm_validation_probabilities.csv
+CatBoost Tuned,True,True,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/catboost/results/catboost_tuned_validation_result.csv,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/catboost/results/catboost_validation_probabilities.csv
+MLP Tuned,True,True,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/mlp/results/mlp_tuned_validation_result.csv,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/mlp/results/mlp_validation_probabilities.csv
+1D-CNN Tuned,True,True,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/cnn/results/cnn_tuned_validation_result.csv,/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/cnn/results/cnn_validation_probabilities.csv

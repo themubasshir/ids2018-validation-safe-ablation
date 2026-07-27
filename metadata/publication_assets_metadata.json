@@ -1,0 +1,14 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Publication-ready asset generation",
+  "Figures Generated": 15,
+  "CSV Tables Generated": 4,
+  "LaTeX Tables Generated": 4,
+  "Balanced Model": "XGBoost Tuned",
+  "Balanced Threshold": 0.51,
+  "Security Model": "LightGBM Tuned",
+  "Security Threshold": 0.26,
+  "Training Performed": false,
+  "Model Selection Performed": false,
+  "Threshold Selection Performed": false
+}

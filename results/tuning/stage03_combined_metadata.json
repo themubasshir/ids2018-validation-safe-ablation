@@ -1,0 +1,17 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Top-five tuned validation comparison",
+  "Ranking Metric": "Validation F1-score at threshold 0.50",
+  "Tie Breakers": [
+    "Validation recall",
+    "Validation precision"
+  ],
+  "Models": [
+    "XGBoost Tuned",
+    "LightGBM Tuned",
+    "CatBoost Tuned",
+    "MLP Tuned",
+    "1D-CNN Tuned"
+  ],
+  "Test Set Used": false
+}

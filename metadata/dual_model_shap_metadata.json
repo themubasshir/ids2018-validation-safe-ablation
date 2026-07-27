@@ -1,0 +1,28 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Dual-model post-evaluation SHAP analysis",
+  "Models": {
+    "Balanced Model": "XGBoost Tuned",
+    "Balanced Threshold": 0.51,
+    "Security Model": "LightGBM Tuned",
+    "Security Threshold": 0.26
+  },
+  "Explanation Split": "Shared stratified sample from holdout test set",
+  "Total Explanation Records": 5000,
+  "Benign Explanation Records": 2500,
+  "Attack Explanation Records": 2500,
+  "Random State": 42,
+  "Feature Count": 78,
+  "Top Features Reported": 20,
+  "Top-20 Shared Feature Count": 15,
+  "Top-20 Jaccard Similarity": 0.6,
+  "All-Feature Spearman Rank Correlation": 0.8540662778147889,
+  "Spearman P-value": 2.839526154790284e-23,
+  "XGBoost Waterfall Test Position": 45755,
+  "XGBoost Waterfall Probability": 0.9998977184295654,
+  "LightGBM Waterfall Test Position": 10387,
+  "LightGBM Waterfall Probability": 0.9998417303876846,
+  "Training Performed": false,
+  "Model Selection Performed": false,
+  "Threshold Selection Performed": false
+}

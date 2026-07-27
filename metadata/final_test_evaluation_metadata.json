@@ -1,0 +1,21 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "One-time untouched test evaluation",
+  "Final Model": "XGBoost Tuned",
+  "Model Artifact": "/kaggle/working/ids2018_clean_validation_v2/stage03_top5_tuning/xgboost/models/xgboost_tuned.joblib",
+  "Frozen Thresholds": {
+    "Standard": 0.5,
+    "Constrained Security": 0.27
+  },
+  "Validation FPR Constraint": 0.05,
+  "Test Records": 60186,
+  "Test Benign": 36000,
+  "Test Attack": 24186,
+  "Feature Count": 78,
+  "Model Retrained During Stage 5": false,
+  "Threshold Selected Using Test": false,
+  "Model Selected Using Test": false,
+  "Test Evaluations Performed": 1,
+  "ROC-AUC": 0.9801912125472036,
+  "PR-AUC": 0.9776433333080397
+}

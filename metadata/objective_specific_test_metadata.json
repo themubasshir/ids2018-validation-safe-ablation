@@ -1,0 +1,20 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Objective-specific final holdout comparison",
+  "Balanced Operating Point": {
+    "Model": "XGBoost Tuned",
+    "Threshold": 0.51,
+    "Selection Criterion": "Maximum validation F1"
+  },
+  "Security Operating Point": {
+    "Model": "LightGBM Tuned",
+    "Threshold": 0.26,
+    "Selection Criterion": "Maximum validation F2 subject to FPR <= 5%"
+  },
+  "Standard Threshold": 0.5,
+  "Model Selection Used Test": false,
+  "Threshold Selection Used Test": false,
+  "Training Performed": false,
+  "Important Note": "The holdout set was evaluated for final objective-specific reporting. No decisions were revised using holdout results.",
+  "LightGBM Prediction Time (sec)": 0.3078398150009889
+}

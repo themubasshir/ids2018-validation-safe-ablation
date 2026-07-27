@@ -1,0 +1,15 @@
+\begin{table}
+\caption{Validation performance of the five hyperparameter-tuned models.}
+\label{tab:tuned_top5}
+\begin{tabular}{rlrrrrrrrrrr}
+\toprule
+Rank & Model & Accuracy & Precision & Recall & F1-score & FPR & FNR & TP & TN & FP & FN \\
+\midrule
+1 & XGBoost Tuned & 0.9447 & 0.9869 & 0.8738 & 0.9269 & 0.0078 & 0.1262 & 16908 & 28576 & 224 & 2441 \\
+2 & LightGBM Tuned & 0.9446 & 0.9881 & 0.8726 & 0.9268 & 0.0071 & 0.1274 & 16884 & 28596 & 204 & 2465 \\
+3 & CatBoost Tuned & 0.9440 & 0.9878 & 0.8713 & 0.9259 & 0.0072 & 0.1287 & 16859 & 28592 & 208 & 2490 \\
+4 & MLP Tuned & 0.9382 & 0.9937 & 0.8515 & 0.9171 & 0.0036 & 0.1485 & 16476 & 28696 & 104 & 2873 \\
+5 & 1D-CNN Tuned & 0.9358 & 0.9880 & 0.8505 & 0.9141 & 0.0069 & 0.1495 & 16456 & 28600 & 200 & 2893 \\
+\bottomrule
+\end{tabular}
+\end{table}

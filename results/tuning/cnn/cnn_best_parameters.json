@@ -1,0 +1,43 @@
+{
+  "Model": "1D-CNN Tuned",
+  "Selection Metric": "External validation F1-score at threshold 0.50",
+  "Early Stopping Data": "15% stratified subset of training set",
+  "Training Records Total": 192593,
+  "Fitting Records": 163704,
+  "Early-Stopping Records": 28889,
+  "External Validation Records": 48149,
+  "Feature Count": 78,
+  "Input Shape": [
+    78,
+    1
+  ],
+  "Training Device": "GPU",
+  "Test Set Used": false,
+  "Best Candidate": {
+    "Model": "1D-CNN Tuned",
+    "Candidate": "CNN-05",
+    "Filters": "[128, 256, 256]",
+    "Kernel Size": 5,
+    "Dropout": 0.4,
+    "Dense Units": 128,
+    "Learning Rate": 0.0003,
+    "Batch Size": 512,
+    "Best Epoch": 26,
+    "Epochs Completed": 31,
+    "Evaluation Split": "Validation",
+    "Training Device": "GPU",
+    "Threshold": 0.5,
+    "Accuracy": 0.9357619057508982,
+    "Precision": 0.9879923150816523,
+    "Recall": 0.8504832291074474,
+    "F1-score": 0.9140952645465907,
+    "FPR": 0.006944444444444444,
+    "FNR": 0.14951677089255258,
+    "TP": 16456,
+    "TN": 28600,
+    "FP": 200,
+    "FN": 2893,
+    "Training Time (sec)": 137.8993429789998,
+    "Prediction Time (sec)": 2.4924535419995664
+  }
+}

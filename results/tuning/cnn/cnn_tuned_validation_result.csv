@@ -1,0 +1,2 @@
+Model,Candidate,Filters,Kernel Size,Dropout,Dense Units,Learning Rate,Batch Size,Best Epoch,Epochs Completed,Evaluation Split,Training Device,Threshold,Accuracy,Precision,Recall,F1-score,FPR,FNR,TP,TN,FP,FN,Training Time (sec),Prediction Time (sec)
+1D-CNN Tuned,CNN-05,"[128, 256, 256]",5,0.4,128,0.0003,512,26,31,Validation,GPU,0.5,0.9357619057508982,0.9879923150816523,0.8504832291074474,0.9140952645465907,0.006944444444444444,0.14951677089255258,16456,28600,200,2893,137.8993429789998,2.4924535419995664

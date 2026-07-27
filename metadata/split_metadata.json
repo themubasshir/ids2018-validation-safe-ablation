@@ -1,0 +1,28 @@
+{
+  "experiment_name": "IDS2018 Clean Validation V2",
+  "dataset_path": "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv",
+  "dataset_rows": 300928,
+  "dataset_columns": 80,
+  "predictor_features": 78,
+  "target_column": "binary_label",
+  "excluded_columns": [
+    "Label",
+    "binary_label"
+  ],
+  "random_state": 42,
+  "training_ratio": 0.64,
+  "validation_ratio": 0.16,
+  "test_ratio": 0.2,
+  "training_records": 192593,
+  "validation_records": 48149,
+  "test_records": 60186,
+  "training_benign": 115200,
+  "training_attack": 77393,
+  "validation_benign": 28800,
+  "validation_attack": 19349,
+  "test_benign": 36000,
+  "test_attack": 24186,
+  "scaler_fit_split": "Training only",
+  "feature_signature_sha256": "4e0f554e183f9ef2405bd07eb6cfbf78c2a957d36c9fd505d0ac97ccaac50a9f",
+  "test_used_for_selection": false
+}

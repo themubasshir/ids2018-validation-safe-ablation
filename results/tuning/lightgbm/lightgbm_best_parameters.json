@@ -1,0 +1,24 @@
+{
+  "Model": "LightGBM Tuned",
+  "Selection Metric": "Mean 3-fold training CV F1-score",
+  "Best CV F1-score": 0.9277967199754164,
+  "Random Candidates": 15,
+  "CV Folds": 3,
+  "Training Device": "GPU",
+  "LightGBM Backend": "gpu",
+  "Training Records": 192593,
+  "Validation Records": 48149,
+  "Feature Count": 78,
+  "Test Set Used": false,
+  "Best Parameters": {
+    "subsample": 0.9,
+    "reg_lambda": 5.0,
+    "reg_alpha": 1.0,
+    "num_leaves": 63,
+    "n_estimators": 200,
+    "min_child_samples": 10,
+    "max_depth": -1,
+    "learning_rate": 0.1,
+    "colsample_bytree": 0.8
+  }
+}

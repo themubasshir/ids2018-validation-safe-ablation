@@ -44,6 +44,28 @@ Dual-model SHAP uses an identical deterministic stratified holdout sample of 5,0
 
 ![SHAP rank agreement](figures/figure09_shap_rank_agreement.png)
 
+## Journal-Extension Analyses
+
+Stages 8-12 add journal-strengthening robustness and deployment analyses.
+
+1. Bootstrap confidence: balanced XGBoost and LightGBM differences are statistically unresolved because all major paired confidence intervals include zero. See `docs/STATISTICAL_CONFIDENCE.md`.
+2. Calibration: both selected models are reasonably calibrated, with no statistically resolved calibration winner and no recalibration performed. See `docs/CALIBRATION_ASSESSMENT.md`.
+3. Operational cost: LightGBM security becomes preferable to LightGBM balanced when one missed attack costs more than `1.8407079646017699` false-positive investigations. See `docs/OPERATIONAL_COST_ANALYSIS.md`.
+4. Attack categories: residual errors are concentrated mainly in `Infilteration` and `Brute Force -Web`; most DoS/DDoS and FTP brute-force categories reached 100% detection. See `docs/ATTACK_CATEGORY_ANALYSIS.md`.
+5. Multi-seed robustness: XGBoost was selected for the balanced objective in `3/5` fixed-hyperparameter runs, and LightGBM was selected for the security objective in `4/5`. See `docs/MULTISEED_ROBUSTNESS.md`.
+
+![Bootstrap operating-point intervals](figures/statistical_confidence/figure_bootstrap_operating_point_intervals.png)
+
+![Calibration metric intervals](figures/calibration/figure_calibration_metric_intervals.png)
+
+![Break-even cost ratios](figures/operational_cost/figure_break_even_cost_ratios.png)
+
+![Attack-category detection rates](figures/attack_category/figure_attack_category_detection_rates.png)
+
+![Multi-seed winner frequency](figures/multiseed/figure_multiseed_winner_frequency.png)
+
+The cross-stage interpretation is summarized in `docs/JOURNAL_EXTENSION_SUMMARY.md`, and manuscript figure recommendations are listed in `figures/JOURNAL_FIGURE_INDEX.md`.
+
 ## Repository Structure
 
 - `metadata/`: split metadata, feature names, scaler, checksums, environment details, and validation report.
@@ -52,6 +74,11 @@ Dual-model SHAP uses an identical deterministic stratified holdout sample of 5,0
 - `results/threshold/`: validation threshold sweeps and operating-point selections.
 - `results/holdout/`: final holdout summaries and probability files for selected objectives.
 - `results/shap/`: SHAP top-feature tables and rank-comparison CSVs.
+- `results/statistical_confidence/`: Stage 8 paired bootstrap confidence outputs.
+- `results/calibration/`: Stage 9 calibration metrics, bins, and bootstrap intervals.
+- `results/operational_cost/`: Stage 10 cost-ratio and break-even analyses.
+- `results/attack_category/`: Stage 11 category-level detection and paired tests.
+- `results/multiseed/`: Stage 12 fixed-hyperparameter multi-seed robustness outputs.
 - `results/comparison/`: generated Markdown summaries from CSV artifacts.
 - `models/`: portable top-five tuned model artifacts.
 - `figures/` and `tables/`: publication figures and CSV/LaTeX tables.

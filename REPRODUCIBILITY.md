@@ -13,3 +13,17 @@ CPU/GPU differences are documented in the result tables. Several archived runs u
 To restore artifacts, install `requirements.txt`, place the processed dataset locally if rerunning from data, and use the files in `metadata/` for feature names, split metadata, split indices, and scaler state. Verify the source archive checksum with the companion `.sha256` file when available.
 
 Notebook availability: the archive bundle included `notebook9662bff2fb.ipynb`, copied here as `notebooks/original_kaggle_working_notebook.ipynb`. Stage-specific notebooks were not present, so this repository provides maintainable validation and report-generation scripts rather than reconstructed notebooks.
+
+## Journal-Extension Reproducibility
+
+Stage 8 uses paired class-stratified percentile bootstrap confidence intervals with random state `42`, 2,000 successful replicates, and identical bootstrap indices for paired XGBoost/LightGBM comparisons.
+
+Stage 9 assesses calibration on the frozen holdout probabilities without recalibration. It uses 15-bin equal-width and equal-frequency reliability summaries, sensitivity checks with 10, 15, and 20 bins, Brier decomposition, and 2,000 paired bootstrap replicates.
+
+Stage 10 uses a relative operational cost model where false-negative cost is expressed as a multiple of false-positive investigation cost. It evaluates validation-selected thresholds on the holdout set and reports break-even FN:FP ratios for switching to security operating points.
+
+Stage 11 reconstructs holdout attack-category labels for category-level analysis. The included prediction manifest contains original dataset indices, category labels, binary labels, probabilities, and predictions; it does not contain raw predictor features.
+
+Stage 12 is a fixed-hyperparameter multi-seed robustness study using seeds `42`, `52`, `62`, `72`, and `82`. For every seed, the split, model fitting, validation threshold selection, and holdout evaluation are repeated. The complete hyperparameter search is not repeated for every seed. The stage metadata records Linux CPU execution with 4 CPU threads for the robustness extension.
+
+Limitations: the extension quantifies uncertainty, calibration, operational trade-offs, category-level performance, and split/training robustness, but it remains a single-dataset study and does not establish cross-dataset generalization.

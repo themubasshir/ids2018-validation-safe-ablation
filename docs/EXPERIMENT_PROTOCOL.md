@@ -27,3 +27,23 @@ SHAP is computed for both selected models on the same deterministic stratified h
 ## Stage 7: Publication Assets
 
 Publication figures, CSV tables, LaTeX tables, and metadata are copied from the archive. Generated Markdown summaries can be refreshed with `python scripts/generate_comparison_report.py`.
+
+## Stage 8: Paired Bootstrap Confidence
+
+A paired class-stratified bootstrap with 2,000 successful replicates quantifies holdout-sample uncertainty for selected operating points. The same bootstrap indices are used for XGBoost and LightGBM in every replicate. Balanced model differences are interpreted as statistically unresolved when intervals include zero.
+
+## Stage 9: Calibration Assessment
+
+Calibration is assessed post-selection on the holdout set without recalibration. The analysis includes Brier score, log loss, equal-width and equal-frequency calibration bins, bin-count sensitivity, Brier decomposition, and paired bootstrap intervals with 2,000 successful replicates.
+
+## Stage 10: Operational Cost Analysis
+
+The operational cost stage evaluates thresholds under relative false-negative to false-positive cost ratios, compares frozen validation-selected operating points on holdout data, and estimates break-even cost ratios for security thresholds. The analysis documents why unconstrained high FN:FP ratios can select low thresholds with unacceptable FPR, motivating the explicit FPR <= 5% constraint.
+
+## Stage 11: Attack-Category Analysis
+
+Attack labels are reconstructed for the holdout predictions without including raw predictor features. Category-level detection rates, support counts, paired tests, threshold effects, and hardest-category summaries are reported for 12 attack categories.
+
+## Stage 12: Fixed-Hyperparameter Multi-Seed Robustness
+
+Seeds `42`, `52`, `62`, `72`, and `82` repeat the split, model fitting, validation threshold selection, and holdout evaluation for XGBoost and LightGBM. Hyperparameters remain fixed from the seed-42 tuning stage; the complete hyperparameter search is not repeated for every seed.

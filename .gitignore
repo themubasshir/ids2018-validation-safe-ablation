@@ -19,5 +19,7 @@ FINAL_REVISED_LIGHTGBM/
 .virtual_documents/
 *.npy
 complete_working_manifest.json
+complete_working_manifest_final.json
 ids2018_validation_safe_complete_working.tar.gz.sha256
+ids2018_validation_safe_complete_working_final.tar.gz.sha256
 notebook9662bff2fb.ipynb

@@ -18,6 +18,7 @@ RAW_DATA_PATTERNS = (
     "merged_balanced_ids2018_safe.csv",
     "ids2018-balanced-binary-dataset",
 )
+ARCHIVE_PATTERNS = (".tar.gz", ".zip")
 SKIP_DIRS = {".git", ".venv", "venv", "__pycache__", "ids2018_clean_validation_v2", "FINAL_REVISED_LIGHTGBM", ".virtual_documents"}
 
 
@@ -46,6 +47,55 @@ REQUIRED_FILES = [
     "docs/EXPERIMENT_PROTOCOL.md",
     "docs/ORIGINAL_VS_VALIDATION_SAFE.md",
     "docs/RESULTS_SUMMARY.md",
+    "docs/STATISTICAL_CONFIDENCE.md",
+    "docs/CALIBRATION_ASSESSMENT.md",
+    "docs/OPERATIONAL_COST_ANALYSIS.md",
+    "docs/ATTACK_CATEGORY_ANALYSIS.md",
+    "docs/MULTISEED_ROBUSTNESS.md",
+    "docs/JOURNAL_EXTENSION_SUMMARY.md",
+    "results/statistical_confidence/bootstrap_point_estimates.csv",
+    "results/statistical_confidence/operating_point_bootstrap_intervals.csv",
+    "results/statistical_confidence/paired_balanced_model_differences.csv",
+    "results/statistical_confidence/paired_security_model_differences.csv",
+    "results/statistical_confidence/paired_auc_differences.csv",
+    "results/statistical_confidence/within_model_threshold_tradeoffs.csv",
+    "results/statistical_confidence/bootstrap_replicates.npz",
+    "metadata/statistical_confidence/bootstrap_methodology.json",
+    "results/calibration/calibration_metric_point_estimates.csv",
+    "results/calibration/calibration_bootstrap_intervals.csv",
+    "results/calibration/paired_calibration_differences.csv",
+    "results/calibration/calibration_bins_equal_width.csv",
+    "results/calibration/calibration_bins_equal_frequency.csv",
+    "results/calibration/calibration_bin_sensitivity.csv",
+    "results/calibration/brier_score_decomposition.csv",
+    "results/calibration/probability_distribution_summary.csv",
+    "results/calibration/calibration_bootstrap_replicates.npz",
+    "metadata/calibration/calibration_assessment_methodology.json",
+    "results/operational_cost/validation_cost_ratio_threshold_selection.csv",
+    "results/operational_cost/holdout_cost_ratio_evaluation.csv",
+    "results/operational_cost/frozen_operating_point_costs.csv",
+    "results/operational_cost/break_even_cost_analysis.csv",
+    "results/operational_cost/validation_fp_fn_pareto_frontier.csv",
+    "results/operational_cost/normalized_operational_burden.csv",
+    "metadata/operational_cost/operational_cost_methodology.json",
+    "results/attack_category/attack_category_operating_point_metrics.csv",
+    "results/attack_category/attack_category_support_summary.csv",
+    "results/attack_category/paired_xgboost_balanced_vs_lightgbm_security.csv",
+    "results/attack_category/paired_xgboost_security_vs_lightgbm_security.csv",
+    "results/attack_category/within_model_attack_category_threshold_effects.csv",
+    "results/attack_category/hardest_attack_categories.csv",
+    "results/attack_category/holdout_attack_category_prediction_manifest.csv",
+    "metadata/attack_category/attack_category_methodology.json",
+    "results/multiseed/multiseed_model_operating_points.csv",
+    "results/multiseed/multiseed_selected_winners.csv",
+    "results/multiseed/multiseed_metric_summary.csv",
+    "results/multiseed/multiseed_winner_frequency.csv",
+    "results/multiseed/multiseed_threshold_stability.csv",
+    "results/multiseed/multiseed_paired_model_differences.csv",
+    "results/multiseed/multiseed_split_summary.csv",
+    "metadata/multiseed/fixed_model_parameters.json",
+    "metadata/multiseed/multiseed_methodology.json",
+    "figures/JOURNAL_FIGURE_INDEX.md",
 ]
 
 
@@ -90,6 +140,10 @@ def repo_files(pattern: str) -> list[Path]:
 def validate_png(path: Path) -> bool:
     with path.open("rb") as handle:
         return handle.read(8) == b"\x89PNG\r\n\x1a\n"
+
+
+def approx(value: float, expected: float, tolerance: float = 1e-6) -> bool:
+    return abs(value - expected) <= tolerance
 
 
 def main() -> int:
@@ -162,11 +216,75 @@ def main() -> int:
     else:
         fail("SHAP shared top-20 count is not 15", failures)
 
+    bootstrap_meta = json.loads((ROOT / "metadata/statistical_confidence/bootstrap_methodology.json").read_text(encoding="utf-8"))
+    if bootstrap_meta.get("Successful Bootstrap Replicates") == 2000:
+        ok("Stage 8 replicate count is 2,000")
+    else:
+        fail("Stage 8 replicate count is not 2,000", failures)
+
+    calibration_meta = json.loads((ROOT / "metadata/calibration/calibration_assessment_methodology.json").read_text(encoding="utf-8"))
+    if calibration_meta.get("Successful Bootstrap Replicates") == 2000:
+        ok("Stage 9 calibration replicate count is 2,000")
+    else:
+        fail("Stage 9 calibration replicate count is not 2,000", failures)
+
+    break_even = read_csv("results/operational_cost/break_even_cost_analysis.csv")
+    lgb_break_even = next((row for row in break_even if row["Comparison"] == "LightGBM Security vs LightGBM Balanced"), None)
+    if lgb_break_even and approx(float(lgb_break_even["Break-even FN to FP Cost Ratio"]), 1.840708, 1e-6):
+        ok("Stage 10 LightGBM break-even ratio is approximately 1.840708")
+    else:
+        fail("Stage 10 LightGBM break-even ratio check failed", failures)
+
+    attack_support = read_csv("results/attack_category/attack_category_support_summary.csv")
+    if len({row["Attack Category"] for row in attack_support}) == 12:
+        ok("Stage 11 attack category count is 12")
+    else:
+        fail("Stage 11 attack category count is not 12", failures)
+    infiltration = next((row for row in attack_support if row["Attack Category"] == "Infilteration"), None)
+    if infiltration and int(infiltration["Support"]) == 3967:
+        ok("Stage 11 Infiltration support is 3,967")
+    else:
+        fail("Stage 11 Infiltration support is not 3,967", failures)
+
+    multiseed = read_csv("results/multiseed/multiseed_split_summary.csv")
+    seeds = {int(row["Seed"]) for row in multiseed}
+    if seeds == {42, 52, 62, 72, 82}:
+        ok("Stage 12 contains exactly five expected seeds")
+    else:
+        fail(f"Stage 12 seed set mismatch: {sorted(seeds)}", failures)
+
+    winner_frequency = read_csv("results/multiseed/multiseed_winner_frequency.csv")
+    totals = {}
+    wins = {}
+    for row in winner_frequency:
+        objective = row["Objective"]
+        count = int(row["Winner Count"])
+        totals[objective] = totals.get(objective, 0) + count
+        wins[(objective, row["Selected Model"])] = count
+    if totals.get("Balanced") == 5:
+        ok("balanced winner frequency totals five")
+    else:
+        fail("balanced winner frequency does not total five", failures)
+    if totals.get("Security") == 5:
+        ok("security winner frequency totals five")
+    else:
+        fail("security winner frequency does not total five", failures)
+    if wins.get(("Balanced", "XGBoost Tuned")) == 3:
+        ok("XGBoost balanced wins three")
+    else:
+        fail("XGBoost balanced does not win three times", failures)
+    if wins.get(("Security", "LightGBM Tuned")) == 4:
+        ok("LightGBM security wins four")
+    else:
+        fail("LightGBM security does not win four times", failures)
+
     tracked = tracked_files()
     for path in tracked:
         rel = path.relative_to(ROOT).as_posix()
         if any(pattern in rel for pattern in RAW_DATA_PATTERNS):
             fail(f"raw dataset appears tracked: {rel}", failures)
+        if rel.endswith(ARCHIVE_PATTERNS):
+            fail(f"archive appears tracked: {rel}", failures)
         if path.exists() and path.stat().st_size >= GITHUB_LIMIT:
             fail(f"tracked file exceeds 100 MB: {rel}", failures)
     ok("tracked-file raw-data and 100 MB checks completed")

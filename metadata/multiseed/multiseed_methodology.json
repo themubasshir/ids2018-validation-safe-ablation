@@ -1,0 +1,43 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Fixed-hyperparameter multi-seed robustness",
+  "Seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "Seed Count": 5,
+  "Models": [
+    "XGBoost Tuned",
+    "LightGBM Tuned"
+  ],
+  "Split Protocol": "For every seed, first reserve 20% stratified holdout; then split the remaining 80% into 80% training and 20% validation, yielding 64/16/20.",
+  "Training Records": 192593,
+  "Validation Records": 48149,
+  "Test Records": 60186,
+  "Feature Count": 78,
+  "Hyperparameter Search Repeated": false,
+  "Fixed Hyperparameters": "Hyperparameters were copied from the seed-42 validation-safe tuning stage.",
+  "Threshold Selection": "Performed independently on each seed's validation set.",
+  "Balanced Objective": "Maximum validation F1",
+  "Security Objective": "Maximum validation F2 subject to FPR <= 5%",
+  "Holdout-Based Selection": false,
+  "Total Runtime Seconds": 115.24497549499938,
+  "CPU Threads": 4,
+  "Software Versions": {
+    "Python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "Platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0"
+  },
+  "Limitations": [
+    "The complete hyperparameter search was not repeated for every seed.",
+    "The multi-seed analysis focuses on the two final objective-specific candidates rather than all sixteen baseline models.",
+    "The experiment measures split and training robustness but not cross-dataset generalization."
+  ]
+}

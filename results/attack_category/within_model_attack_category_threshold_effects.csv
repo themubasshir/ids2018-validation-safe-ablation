@@ -1,0 +1,25 @@
+Comparison,First Operating Point,Second Operating Point,Attack Category,Support,First Detected,Second Detected,First Detection Rate,Second Detection Rate,Detection Rate Difference,Difference CI Lower,Difference CI Upper,Both Detected,First Only Detected,Second Only Detected,Both Missed,Discordant Predictions,McNemar Exact P-value,Benjamini-Hochberg Adjusted P-value,Significant After BH 0.05,Difference CI Excludes Zero
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,Bot,3998,3997,3996,0.9997498749374687,0.9994997498749375,0.0002501250625311924,0.0,0.0007503751875937992,3996,1,0,1,1,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,Brute Force -Web,134,107,99,0.7985074626865671,0.7388059701492538,0.05970149253731338,0.022388059701492602,0.10447761194029848,99,8,0,27,8,0.0078125,0.046875,True,True
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,Brute Force -XSS,50,49,47,0.98,0.94,0.040000000000000036,0.0,0.09999999999999998,47,2,0,1,2,0.5,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,DDOS attack-HOIC,3970,3970,3970,1.0,1.0,0.0,0.0,0.0,3970,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,DDOS attack-LOIC-UDP,75,75,75,1.0,1.0,0.0,0.0,0.0,75,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,DoS attacks-GoldenEye,3141,3141,3141,1.0,1.0,0.0,0.0,0.0,3141,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,DoS attacks-Hulk,347,347,347,1.0,1.0,0.0,0.0,0.0,347,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,DoS attacks-SlowHTTPTest,3721,3721,3721,1.0,1.0,0.0,0.0,0.0,3721,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,DoS attacks-Slowloris,820,820,820,1.0,1.0,0.0,0.0,0.0,820,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,FTP-BruteForce,3950,3950,3950,1.0,1.0,0.0,0.0,0.0,3950,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,Infilteration,3967,1709,970,0.43080413410637763,0.24451726745651625,0.18628686664986138,0.17443912276279305,0.1986450718427023,970,739,0,2258,739,6.916130828522582e-223,8.299356994227098e-222,True,True
+XGBoost Security minus XGBoost Balanced,XGBoost Security,XGBoost Balanced,SQL Injection,13,13,12,1.0,0.9230769230769231,0.07692307692307687,0.0,0.23076923076923073,12,1,0,0,1,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,Bot,3998,3997,3993,0.9997498749374687,0.9987493746873437,0.0010005002501249916,0.0002501250625311924,0.002001000500250094,3993,4,0,1,4,0.125,0.5,False,True
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,Brute Force -Web,134,110,97,0.8208955223880597,0.7238805970149254,0.09701492537313439,0.05223880597014918,0.15671641791044766,97,13,0,24,13,0.000244140625,0.00146484375,True,True
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,Brute Force -XSS,50,49,47,0.98,0.94,0.040000000000000036,0.0,0.09999999999999998,47,2,0,1,2,0.5,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,DDOS attack-HOIC,3970,3970,3970,1.0,1.0,0.0,0.0,0.0,3970,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,DDOS attack-LOIC-UDP,75,75,75,1.0,1.0,0.0,0.0,0.0,75,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,DoS attacks-GoldenEye,3141,3141,3141,1.0,1.0,0.0,0.0,0.0,3141,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,DoS attacks-Hulk,347,347,347,1.0,1.0,0.0,0.0,0.0,347,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,DoS attacks-SlowHTTPTest,3721,3721,3721,1.0,1.0,0.0,0.0,0.0,3721,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,DoS attacks-Slowloris,820,820,820,1.0,1.0,0.0,0.0,0.0,820,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,FTP-BruteForce,3950,3950,3950,1.0,1.0,0.0,0.0,0.0,3950,0,0,0,0,1.0,1.0,False,False
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,Infilteration,3967,1739,968,0.4383665238215276,0.24401310814217292,0.19435341567935466,0.1819952104865137,0.2067116208721956,968,771,0,2228,771,1.6102871923992833e-232,1.93234463087914e-231,True,True
+LightGBM Security minus LightGBM Balanced,LightGBM Security,LightGBM Balanced,SQL Injection,13,13,12,1.0,0.9230769230769231,0.07692307692307687,0.0,0.23076923076923073,12,1,0,0,1,1.0,1.0,False,False

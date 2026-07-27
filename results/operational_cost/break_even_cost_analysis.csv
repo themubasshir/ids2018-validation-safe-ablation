@@ -1,0 +1,4 @@
+Comparison,Security Operating Point,Reference Operating Point,Additional False Positives,False Negatives Reduced,Additional False Alerts per Additional Attack Detected,Break-even FN to FP Cost Ratio,Bootstrap CI Lower,Bootstrap CI Upper,Valid Bootstrap Ratios
+XGBoost Security vs XGBoost Balanced,XGBoost Security,XGBoost Balanced,1435,751,1.9107856191744341,1.9107856191744341,1.7557153734902833,2.0803045624172385,2000
+LightGBM Security vs LightGBM Balanced,LightGBM Security,LightGBM Balanced,1456,791,1.8407079646017699,1.8407079646017699,1.6987043925893093,1.9973514290693621,2000
+LightGBM Security vs XGBoost Balanced,LightGBM Security,XGBoost Balanced,1457,784,1.8584183673469388,1.8584183673469388,1.7128947748789476,2.026500762079631,2000

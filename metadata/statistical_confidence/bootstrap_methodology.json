@@ -1,0 +1,42 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Paired stratified bootstrap confidence analysis",
+  "Method": "Paired class-stratified percentile bootstrap",
+  "Bootstrap Replicates": 2000,
+  "Successful Bootstrap Replicates": 2000,
+  "Random State": 42,
+  "Confidence Level": 0.95,
+  "Lower Percentile": 2.500000000000002,
+  "Upper Percentile": 97.5,
+  "Parallel Workers": 3,
+  "Runtime Seconds": 57.127652557001056,
+  "Holdout Records": 60186,
+  "Benign Records": 36000,
+  "Attack Records": 24186,
+  "Pairing Method": "The same bootstrap indices were used for XGBoost and LightGBM in every replicate.",
+  "Stratification Method": "Benign and attack records were sampled separately with replacement while preserving the original class counts.",
+  "Thresholds": {
+    "xgboost_standard": 0.5,
+    "xgboost_balanced": 0.51,
+    "xgboost_security": 0.27,
+    "lightgbm_balanced": 0.5,
+    "lightgbm_security": 0.26
+  },
+  "Input Paths": {
+    "XGBoost Probabilities": "/kaggle/working/ids2018_clean_validation_v2/stage05_final_test/predictions/xgboost_final_test_probabilities.csv",
+    "LightGBM Probabilities": "/kaggle/working/ids2018_clean_validation_v2/stage05_final_test_comparison/predictions/lightgbm_final_test_probabilities.csv",
+    "Validation Threshold Selection": "/kaggle/working/ids2018_clean_validation_v2/stage04_threshold/all_models/results/all_top5_selected_validation_operating_points.csv"
+  },
+  "Replicate File Included": true,
+  "Replicate File Size Bytes": 537533,
+  "Software Versions": {
+    "Python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "Platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0",
+    "joblib": "1.5.3"
+  },
+  "Limitations": "These intervals quantify holdout-sample uncertainty conditional on the models, hyperparameters, and thresholds selected from the validation workflow. They do not incorporate uncertainty from repeating the complete model-selection procedure across different random splits."
+}

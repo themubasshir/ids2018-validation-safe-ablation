@@ -1,0 +1,31 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Operational cost and alert-burden analysis",
+  "Threshold Selection Split": "Validation",
+  "Holdout Use": "Descriptive evaluation of thresholds selected using validation costs",
+  "False Positive Unit Cost": 1.0,
+  "False Negative to False Positive Cost Ratios": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "Cost Function": "Cost = C_FP * FP + C_FN * FN",
+  "Models": [
+    "XGBoost Tuned",
+    "LightGBM Tuned"
+  ],
+  "Holdout Records": 60186,
+  "Benign Records": 36000,
+  "Attack Records": 24186,
+  "Bootstrap Break-even Intervals Included": true,
+  "Selection Limitations": [
+    "Cost ratios are hypothetical relative values rather than monetary estimates.",
+    "The analysis does not account for analyst capacity, alert correlation, or downstream incident-response workflows.",
+    "Holdout data were not used to select thresholds.",
+    "The reported break-even ratios are conditional on the sampled dataset and frozen models."
+  ]
+}

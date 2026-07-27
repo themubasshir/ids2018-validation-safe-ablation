@@ -1,0 +1,13 @@
+Comparison,First Operating Point,Second Operating Point,Attack Category,Support,First Detected,Second Detected,First Detection Rate,Second Detection Rate,Detection Rate Difference,Difference CI Lower,Difference CI Upper,Both Detected,First Only Detected,Second Only Detected,Both Missed,Discordant Predictions,McNemar Exact P-value,Benjamini-Hochberg Adjusted P-value,Significant After BH 0.05,Difference CI Excludes Zero
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,Bot,3998,3997,3997,0.9997498749374687,0.9997498749374687,0.0,0.0,0.0,3997,0,0,1,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,Brute Force -Web,134,107,110,0.7985074626865671,0.8208955223880597,-0.022388059701492602,-0.05223880597014918,0.0,107,0,3,24,3,0.25,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,Brute Force -XSS,50,49,49,0.98,0.98,0.0,0.0,0.0,49,0,0,1,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,DDOS attack-HOIC,3970,3970,3970,1.0,1.0,0.0,0.0,0.0,3970,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,DDOS attack-LOIC-UDP,75,75,75,1.0,1.0,0.0,0.0,0.0,75,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,DoS attacks-GoldenEye,3141,3141,3141,1.0,1.0,0.0,0.0,0.0,3141,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,DoS attacks-Hulk,347,347,347,1.0,1.0,0.0,0.0,0.0,347,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,DoS attacks-SlowHTTPTest,3721,3721,3721,1.0,1.0,0.0,0.0,0.0,3721,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,DoS attacks-Slowloris,820,820,820,1.0,1.0,0.0,0.0,0.0,820,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,FTP-BruteForce,3950,3950,3950,1.0,1.0,0.0,0.0,0.0,3950,0,0,0,0,1.0,1.0,False,False
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,Infilteration,3967,1709,1739,0.43080413410637763,0.4383665238215276,-0.007562389715149942,-0.015376859087471662,-0.0002520796571716666,1605,104,134,2124,238,0.05990875040361667,0.7189050048434,False,True
+XGBoost Security minus LightGBM Security,XGBoost Security,LightGBM Security,SQL Injection,13,13,13,1.0,1.0,0.0,0.0,0.0,13,0,0,0,0,1.0,1.0,False,False

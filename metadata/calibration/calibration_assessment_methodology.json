@@ -1,0 +1,65 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Holdout calibration assessment",
+  "Assessment Type": "Descriptive post-selection calibration assessment without recalibration",
+  "Models": {
+    "Balanced Model": "XGBoost Tuned",
+    "Balanced Threshold": 0.51,
+    "Security Model": "LightGBM Tuned",
+    "Security Threshold": 0.26
+  },
+  "Holdout Records": 60186,
+  "Benign Records": 36000,
+  "Attack Records": 24186,
+  "Primary Bin Count": 15,
+  "Bin Sensitivity Counts": [
+    10,
+    15,
+    20
+  ],
+  "Bootstrap Method": "Paired class-stratified percentile bootstrap",
+  "Bootstrap Replicates": 2000,
+  "Successful Bootstrap Replicates": 2000,
+  "Confidence Level": 0.95,
+  "Random State": 42,
+  "Parallel Workers": 3,
+  "Runtime Seconds": 27.40461958100059,
+  "Metrics": [
+    "Brier Score",
+    "Log Loss",
+    "Equal-width ECE",
+    "Equal-width MCE",
+    "Equal-width RMSCE",
+    "Equal-frequency adaptive ECE",
+    "Equal-frequency MCE",
+    "Equal-frequency RMSCE",
+    "Calibration Intercept",
+    "Calibration Slope",
+    "Brier Reliability",
+    "Brier Resolution",
+    "Brier Uncertainty"
+  ],
+  "Software Versions": {
+    "Python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "Platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.0",
+    "joblib": "1.5.3"
+  },
+  "Input Paths": {
+    "XGBoost Probabilities": "/kaggle/working/ids2018_clean_validation_v2/stage05_final_test/predictions/xgboost_final_test_probabilities.csv",
+    "LightGBM Probabilities": "/kaggle/working/ids2018_clean_validation_v2/stage05_final_test_comparison/predictions/lightgbm_final_test_probabilities.csv",
+    "Threshold Selection": "/kaggle/working/ids2018_clean_validation_v2/stage04_threshold/all_models/results/all_top5_selected_validation_operating_points.csv"
+  },
+  "Recalibration Performed": false,
+  "Threshold Selection Performed": false,
+  "Model Selection Performed": false,
+  "Limitations": [
+    "Calibration error metrics depend partly on the binning strategy and bin count.",
+    "The analysis assesses calibration on the holdout set after model and threshold selection.",
+    "No recalibration model was fitted, and no threshold was revised using holdout results.",
+    "Bootstrap intervals quantify holdout-sample uncertainty conditional on the frozen models."
+  ]
+}

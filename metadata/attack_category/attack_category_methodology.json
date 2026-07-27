@@ -1,0 +1,63 @@
+{
+  "Experiment": "IDS2018 Clean Validation V2",
+  "Stage": "Attack-category holdout analysis",
+  "Dataset Path": "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv",
+  "Original Label Column": "Label",
+  "Binary Target Column": "binary_label",
+  "Split Indices Path": "/kaggle/working/ids2018_clean_validation_v2/stage01_data/split_indices.npz",
+  "Test Index Key": "test_indices",
+  "Dataset Records": 300928,
+  "Holdout Records": 60186,
+  "Holdout Attacks": 24186,
+  "Attack Category Count": 12,
+  "Attack Categories": [
+    "Bot",
+    "Brute Force -Web",
+    "Brute Force -XSS",
+    "DDOS attack-HOIC",
+    "DDOS attack-LOIC-UDP",
+    "DoS attacks-GoldenEye",
+    "DoS attacks-Hulk",
+    "DoS attacks-SlowHTTPTest",
+    "DoS attacks-Slowloris",
+    "FTP-BruteForce",
+    "Infilteration",
+    "SQL Injection"
+  ],
+  "Operating Points": {
+    "xgboost_balanced": {
+      "Display Name": "XGBoost Balanced",
+      "Model": "XGBoost Tuned",
+      "Threshold": 0.51
+    },
+    "xgboost_security": {
+      "Display Name": "XGBoost Security",
+      "Model": "XGBoost Tuned",
+      "Threshold": 0.27
+    },
+    "lightgbm_balanced": {
+      "Display Name": "LightGBM Balanced",
+      "Model": "LightGBM Tuned",
+      "Threshold": 0.5
+    },
+    "lightgbm_security": {
+      "Display Name": "LightGBM Security",
+      "Model": "LightGBM Tuned",
+      "Threshold": 0.26
+    }
+  },
+  "Detection Rate Confidence Interval": "Wilson score interval",
+  "Paired Difference Interval": "Paired percentile bootstrap with 1000 replicates",
+  "Paired Significance Test": "Exact McNemar/binomial test on discordant predictions",
+  "Multiple Testing Correction": "Benjamini-Hochberg false-discovery-rate correction",
+  "Random State": 42,
+  "Minimum Support for Hardest-Category Ranking": 20,
+  "Model Training Performed": false,
+  "Threshold Selection Performed": false,
+  "Limitations": [
+    "Category estimates for low-support attacks have wide uncertainty and must be interpreted cautiously.",
+    "The analysis reflects the category distribution of the rebalanced processed dataset.",
+    "Attack categories were used only for post-selection holdout analysis and not as predictive inputs.",
+    "The analysis does not establish cross-dataset attack-category generalization."
+  ]
+}

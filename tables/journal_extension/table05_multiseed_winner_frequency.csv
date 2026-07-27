@@ -1,0 +1,5 @@
+Objective,Selected Model,Winner Count,Winner Proportion
+Balanced,LightGBM Tuned,2,0.4
+Balanced,XGBoost Tuned,3,0.6
+Security,LightGBM Tuned,4,0.8
+Security,XGBoost Tuned,1,0.2

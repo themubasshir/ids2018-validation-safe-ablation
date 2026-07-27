@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\caption{Key attack-category detection results}
+\begin{tabular}{lllllllll}
+\hline
+Attack Category & Support & Operating Point & Threshold & Detected & Missed & Detection Rate & Detection Rate CI Lower & Detection Rate CI Upper \\
+\hline
+Brute Force -Web & 134 & XGBoost Balanced & 0.51 & 99 & 35 & 0.7388059701492538 & 0.6585154628366853 & 0.8057860655101091 \\
+Brute Force -Web & 134 & XGBoost Security & 0.27 & 107 & 27 & 0.7985074626865671 & 0.7227118753584653 & 0.8576650350750276 \\
+Brute Force -Web & 134 & LightGBM Balanced & 0.5 & 97 & 37 & 0.7238805970149254 & 0.6427464230451555 & 0.7925362597799642 \\
+Brute Force -Web & 134 & LightGBM Security & 0.26 & 110 & 24 & 0.8208955223880597 & 0.7473197986028969 & 0.8765853801131082 \\
+Infilteration & 3967 & XGBoost Balanced & 0.51 & 970 & 2997 & 0.24451726745651625 & 0.23139391280427832 & 0.25813493869461734 \\
+Infilteration & 3967 & XGBoost Security & 0.27 & 1709 & 2258 & 0.43080413410637763 & 0.41546891222401666 & 0.4462732384779536 \\
+Infilteration & 3967 & LightGBM Balanced & 0.5 & 968 & 2999 & 0.24401310814217292 & 0.23089956419248622 & 0.25762194414212514 \\
+Infilteration & 3967 & LightGBM Security & 0.26 & 1739 & 2228 & 0.4383665238215276 & 0.42299297545368925 & 0.4538593227125464 \\
+SQL Injection & 13 & XGBoost Balanced & 0.51 & 12 & 1 & 0.9230769230769231 & 0.6668604907890041 & 0.9862895787574435 \\
+SQL Injection & 13 & XGBoost Security & 0.27 & 13 & 0 & 1.0 & 0.7719046276458016 & 0.9999999999999999 \\
+SQL Injection & 13 & LightGBM Balanced & 0.5 & 12 & 1 & 0.9230769230769231 & 0.6668604907890041 & 0.9862895787574435 \\
+SQL Injection & 13 & LightGBM Security & 0.26 & 13 & 0 & 1.0 & 0.7719046276458016 & 0.9999999999999999 \\
+\hline
+\end{tabular}
+\end{table}

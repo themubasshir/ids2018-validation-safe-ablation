@@ -1,0 +1,6 @@
+Analysis,Finding,Source Artifact
+Bootstrap confidence,CI includes zero,paired_balanced_model_differences.csv
+Calibration,0.04277372026730192,calibration_metric_point_estimates.csv
+Operational cost,1.8407079646017699,break_even_cost_analysis.csv
+Attack categories,0.4383665238215276,attack_category_operating_point_metrics.csv
+Multi-seed robustness,4,multiseed_winner_frequency.csv

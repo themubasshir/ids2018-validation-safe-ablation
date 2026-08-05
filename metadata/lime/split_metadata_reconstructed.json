@@ -1,0 +1,27 @@
+{
+  "random_state": 42,
+  "first_split_test_size": 0.2,
+  "second_split_validation_share": 0.2,
+  "counts": {
+    "total": 300928,
+    "train": 192593,
+    "validation": 48149,
+    "holdout": 60186
+  },
+  "class_counts": {
+    "train": {
+      "benign": 115200,
+      "attack": 77393
+    },
+    "validation": {
+      "benign": 28800,
+      "attack": 19349
+    },
+    "holdout": {
+      "benign": 36000,
+      "attack": 24186
+    }
+  },
+  "dataset_path": "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv",
+  "feature_count": 78
+}

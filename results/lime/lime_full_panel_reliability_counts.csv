@@ -1,0 +1,14 @@
+model_display,selected_outcome,reliability_label,case_count
+LightGBM,FN,Local decision mismatch,8
+LightGBM,FP,Cross-method divergent,1
+LightGBM,FP,Fidelity-limited,6
+LightGBM,FP,Qualified supplementary explanation,1
+LightGBM,TN,Fidelity-limited,2
+LightGBM,TN,Local decision mismatch,6
+LightGBM,TP,Fidelity-limited,6
+LightGBM,TP,Local decision mismatch,1
+LightGBM,TP,Qualified supplementary explanation,1
+XGBoost,FN,Fidelity-limited,8
+XGBoost,FP,Local decision mismatch,8
+XGBoost,TN,Fidelity-limited,8
+XGBoost,TP,Local decision mismatch,8

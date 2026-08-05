@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Sensitivity of LIME fidelity to the tested perturbation and discretization configurations.}
+\label{tab:lime_configuration_sensitivity}
+\begin{tabular}{rlrrrrrrr}
+\toprule
+Rank & Configuration & Decision agreement & Mean local R2 & Median local R2 & Minimum local R2 & Median fidelity gap & P90 fidelity gap & Maximum fidelity gap \\
+\midrule
+1 & continuous_wide_10k & 0.875 & 0.269 & 0.280 & 0.092 & 0.142 & 0.357 & 0.467 \\
+2 & continuous_local_10k & 0.875 & 0.269 & 0.279 & 0.092 & 0.142 & 0.357 & 0.467 \\
+3 & continuous_narrow_10k & 0.875 & 0.268 & 0.276 & 0.092 & 0.142 & 0.358 & 0.467 \\
+4 & quartile_local_10k & 0.625 & 0.219 & 0.213 & 0.157 & 0.161 & 0.383 & 0.606 \\
+5 & baseline_quartile_5k & 0.708 & 0.220 & 0.204 & 0.148 & 0.167 & 0.448 & 0.560 \\
+6 & decile_local_10k & 0.583 & 0.155 & 0.145 & 0.094 & 0.200 & 0.405 & 0.491 \\
+\bottomrule
+\end{tabular}
+\end{table}

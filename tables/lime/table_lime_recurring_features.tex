@@ -1,0 +1,30 @@
+\begin{table}
+\caption{Most frequently selected LIME features across five perturbation seeds for the disagreement panel.}
+\label{tab:lime_recurring_features}
+\begin{tabular}{llrrrrrr}
+\toprule
+Model & Feature & Selections & Selection frequency & Unique cases & Mean absolute weight & Mean signed weight & Mean rank \\
+\midrule
+LightGBM & Init Fwd Win Byts & 60 & 1.000 & 12 & 0.110 & -0.110 & 1.300 \\
+LightGBM & Fwd Pkts/s & 59 & 0.983 & 12 & 0.024 & 0.024 & 5.186 \\
+LightGBM & ECE Flag Cnt & 52 & 0.867 & 12 & 0.026 & 0.026 & 5.269 \\
+LightGBM & Fwd Pkt Len Max & 49 & 0.817 & 10 & 0.052 & -0.052 & 4.531 \\
+LightGBM & Dst Port & 49 & 0.817 & 11 & 0.026 & 0.003 & 5.204 \\
+LightGBM & RST Flag Cnt & 46 & 0.767 & 11 & 0.021 & 0.021 & 6.261 \\
+LightGBM & Pkt Size Avg & 42 & 0.700 & 11 & 0.009 & 0.007 & 10.810 \\
+LightGBM & Fwd Seg Size Min & 36 & 0.600 & 8 & 0.048 & 0.048 & 6.167 \\
+LightGBM & Flow IAT Max & 36 & 0.600 & 10 & 0.024 & -0.024 & 5.917 \\
+LightGBM & Bwd Pkt Len Mean & 34 & 0.567 & 9 & 0.009 & 0.009 & 11.088 \\
+XGBoost & Init Fwd Win Byts & 60 & 1.000 & 12 & 0.057 & -0.057 & 2.450 \\
+XGBoost & Fwd Pkt Len Max & 52 & 0.867 & 11 & 0.026 & -0.026 & 7.077 \\
+XGBoost & Pkt Size Avg & 51 & 0.850 & 11 & 0.018 & 0.016 & 8.333 \\
+XGBoost & Bwd Pkt Len Max & 50 & 0.833 & 10 & 0.024 & -0.024 & 5.800 \\
+XGBoost & Dst Port & 45 & 0.750 & 10 & 0.030 & 0.006 & 4.267 \\
+XGBoost & Fwd Seg Size Min & 36 & 0.600 & 8 & 0.034 & 0.034 & 6.111 \\
+XGBoost & Flow IAT Std & 32 & 0.533 & 7 & 0.026 & -0.026 & 4.781 \\
+XGBoost & Pkt Len Std & 32 & 0.533 & 8 & 0.006 & -0.000 & 12.625 \\
+XGBoost & Fwd IAT Std & 30 & 0.500 & 9 & 0.016 & 0.015 & 7.767 \\
+XGBoost & Fwd IAT Tot & 30 & 0.500 & 6 & 0.016 & 0.016 & 7.133 \\
+\bottomrule
+\end{tabular}
+\end{table}

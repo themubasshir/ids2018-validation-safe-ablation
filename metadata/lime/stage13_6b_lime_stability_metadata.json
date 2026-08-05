@@ -1,0 +1,50 @@
+{
+  "stage": "13.6B",
+  "purpose": "Evaluate LIME stability across independent perturbation seeds using the globally selected Stage 13.6A configuration.",
+  "selected_configuration": {
+    "config_order": 6,
+    "config_id": "continuous_wide_10k",
+    "description": "Continuous features with a wider local kernel",
+    "discretize_continuous": false,
+    "discretizer": null,
+    "sample_around_instance": true,
+    "num_samples": 10000,
+    "kernel_width": 8.831760866327848
+  },
+  "cases": 12,
+  "models": [
+    "XGBoost",
+    "LightGBM"
+  ],
+  "replicates_per_case_model": 5,
+  "replicate_base_seeds": [
+    137000,
+    138000,
+    139000,
+    140000,
+    141000
+  ],
+  "total_explanations": 120,
+  "pairwise_seed_comparisons_per_case_model": 10,
+  "top_k_values": [
+    5,
+    10,
+    15
+  ],
+  "stability_metrics": [
+    "top-k Jaccard similarity",
+    "sparse attribution-vector cosine similarity",
+    "shared-feature sign agreement",
+    "Spearman correlation of absolute attribution vectors",
+    "feature-selection frequency",
+    "local R2 variation",
+    "fidelity-gap variation",
+    "local decision agreement"
+  ],
+  "operational_stability_categories": {
+    "High": "mean top-10 Jaccard >= 0.75 and mean cosine similarity >= 0.80",
+    "Moderate": "mean top-10 Jaccard >= 0.50 and mean cosine similarity >= 0.60",
+    "Low": "does not satisfy the Moderate criteria",
+    "warning": "These categories are descriptive operational rules for this study, not universal standards."
+  }
+}

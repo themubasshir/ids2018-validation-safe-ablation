@@ -1,0 +1,37 @@
+{
+  "stage": "13.4",
+  "random_state": 42,
+  "background_source": "training partition only",
+  "background_sampling": "StratifiedShuffleSplit",
+  "background_size": 20000,
+  "background_class_counts": {
+    "0": 11963,
+    "1": 8037
+  },
+  "feature_count": 78,
+  "input_representation": "raw unscaled tabular flow features",
+  "class_names": [
+    "Benign",
+    "Attack"
+  ],
+  "lime_mode": "classification",
+  "discretize_continuous": true,
+  "discretizer": "quartile",
+  "feature_selection": "auto",
+  "sample_around_instance": false,
+  "model_probability_column_order": [
+    "P(benign)",
+    "P(attack)"
+  ],
+  "xgboost_threshold": 0.51,
+  "lightgbm_threshold": 0.26,
+  "environment_versions": {
+    "python": "3.12.13",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "lime": "0.2.0.1"
+  }
+}

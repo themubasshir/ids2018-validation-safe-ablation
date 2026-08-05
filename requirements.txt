@@ -9,3 +9,6 @@ shap
 scipy
 matplotlib
 joblib
+
+# Stage 13 local explanation analysis
+lime==0.2.0.1

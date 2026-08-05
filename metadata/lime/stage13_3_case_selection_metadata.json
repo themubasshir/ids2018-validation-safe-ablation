@@ -1,0 +1,41 @@
+{
+  "cases_per_model_outcome": 8,
+  "models": {
+    "xgboost": {
+      "display_name": "XGBoost",
+      "probability_column": "xgboost_probability",
+      "prediction_column": "xgboost_prediction_t051",
+      "outcome_column": "xgboost_outcome",
+      "threshold": 0.51
+    },
+    "lightgbm": {
+      "display_name": "LightGBM",
+      "probability_column": "lightgbm_probability",
+      "prediction_column": "lightgbm_prediction_t026",
+      "outcome_column": "lightgbm_outcome",
+      "threshold": 0.26
+    }
+  },
+  "outcomes": [
+    "TP",
+    "TN",
+    "FP",
+    "FN"
+  ],
+  "model_specific_case_count": 64,
+  "unique_shared_case_count": 60,
+  "disagreement_pool_count": 2253,
+  "selected_disagreement_case_count": 12,
+  "selection_strategy": {
+    "nearest_threshold": 2,
+    "probability_quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "maximum_prediction_confidence": 1,
+    "deterministic_tie_breaker": "holdout_position"
+  }
+}

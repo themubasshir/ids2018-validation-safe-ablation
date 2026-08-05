@@ -1,0 +1,36 @@
+{
+  "stage": "13.7A",
+  "purpose": "Compare five-seed LIME consensus explanations with exact local TreeSHAP explanations on the same 12 cross-model disagreement cases.",
+  "models": [
+    "XGBoost",
+    "LightGBM"
+  ],
+  "cases": 12,
+  "lime_consensus_replicates": 5,
+  "shap_output_space": "raw model score/log-odds",
+  "comparison_note": "LIME and SHAP attribution magnitudes are in different output spaces. Comparisons therefore emphasize ranks, overlap, cosine similarity and direction rather than direct numerical equality.",
+  "top_k_values": [
+    5,
+    10,
+    15
+  ],
+  "agreement_metrics": [
+    "top-k overlap",
+    "top-k Jaccard similarity",
+    "absolute attribution cosine similarity",
+    "signed attribution cosine similarity",
+    "absolute attribution Spearman correlation",
+    "signed attribution Spearman correlation",
+    "sign agreement on LIME-selected features",
+    "sign agreement on shared top-10 features"
+  ],
+  "xgboost_shap_additivity": {
+    "maximum_raw_score_difference": 1.5715486370027065e-06,
+    "maximum_probability_difference": 3.3299072332848567e-07
+  },
+  "lightgbm_shap_additivity": {
+    "maximum_raw_score_difference": 6.661338147750939e-15,
+    "maximum_probability_difference": 1.0547118733938987e-15
+  },
+  "operational_reliability_warning": "Reliability labels are study-specific descriptive categories and are not universal XAI standards."
+}

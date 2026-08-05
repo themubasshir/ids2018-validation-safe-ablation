@@ -1,0 +1,658 @@
+{
+  "stage": "13.9A",
+  "generated_at_utc": "2026-08-05T21:25:31.770852+00:00",
+  "repository": "themubasshir/ids2018-validation-safe-ablation",
+  "branch_before_packaging": "main",
+  "head_before_packaging": "e7c2e5a",
+  "methodological_decision": {
+    "primary_local_explainer": "TreeSHAP",
+    "supplementary_explainer": "LIME",
+    "lime_role": "surrogate-reliability stress test"
+  },
+  "core_results": {
+    "full_panel_cases": 64,
+    "qualified": 2,
+    "fidelity_limited": 30,
+    "local_decision_mismatch": 31,
+    "cross_method_divergent": 1,
+    "xgboost_tree_shap_max_raw_error": 5.8675650507211685e-06,
+    "lightgbm_tree_shap_max_raw_error": 1.7763568394002505e-14
+  },
+  "excluded_artifacts": [
+    "Initial per-explanation HTML files were excluded because they precede the final reliability synthesis.",
+    "Initial per-explanation PNG files were excluded because the consolidated publication figures supersede them.",
+    "Checkpoint CSV files were excluded because final completed result files are available.",
+    "The incorrect scaled tree-model holdout manifest was overwritten during Stage 13.2B and is not included."
+  ],
+  "file_count": 68,
+  "total_size_bytes": 6276513,
+  "total_size_mb": 5.985749244689941,
+  "largest_files": [
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/lime_background_data.npz",
+      "repository_path": "metadata/lime/lime_background_data.npz",
+      "size_bytes": 2404606,
+      "size_mb": 2.293210983276367,
+      "sha256": "fd26bcb852cd4661e5a4cd70ffd10d560e42556f90e02cf5ac2946e698b8900c"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/split_indices_reconstructed.npz",
+      "repository_path": "metadata/lime/split_indices_reconstructed.npz",
+      "size_bytes": 942399,
+      "size_mb": 0.8987417221069336,
+      "sha256": "e90ede72bfcee672543aada4840a40334a180109e1482560df1681f3241a0b10"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/shap_full_panel_terms.csv",
+      "repository_path": "results/lime/shap_full_panel_terms.csv",
+      "size_bytes": 594824,
+      "size_mb": 0.5672683715820312,
+      "sha256": "e61e7fa5f004cbd6f6cbdd6c009549a7495a15cf0e0a420fa96db26857dec2f3"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/lime_background_manifest.csv",
+      "repository_path": "metadata/lime/lime_background_manifest.csv",
+      "size_bytes": 409797,
+      "size_mb": 0.39081287384033203,
+      "sha256": "db64a773e0641f4a7684d0fd490c5f1c972bfe4efcbe3bf6f6b6947b5250adee"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/lime_local_r2_vs_fidelity_gap.png",
+      "repository_path": "figures/lime/lime_local_r2_vs_fidelity_gap.png",
+      "size_bytes": 241294,
+      "size_mb": 0.2301158905029297,
+      "sha256": "9b7301a2d82571d442793b721302b142cda4356008ba3c152e2503a06376daa6"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/local_shap_disagreement_terms.csv",
+      "repository_path": "results/lime/local_shap_disagreement_terms.csv",
+      "size_bytes": 238932,
+      "size_mb": 0.22786331176757812,
+      "sha256": "408b3f413dffbb406338665482c10400374be509d51e971458a00eb1e04cd0a3"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/shap_lime_agreement_vs_fidelity.png",
+      "repository_path": "figures/lime/shap_lime_agreement_vs_fidelity.png",
+      "size_bytes": 235037,
+      "size_mb": 0.22414875030517578,
+      "sha256": "5d1727009d19b711c8f4699efc181457159c60258533bbaaa49b909aff63bf06"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_terms.csv",
+      "repository_path": "results/lime/lime_seed_stability_terms.csv",
+      "size_bytes": 214844,
+      "size_mb": 0.20489120483398438,
+      "sha256": "00577ac36b947f519322f1025c71b4250602dbbc4dabb3154f42c949370e912c"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_full_panel_terms.csv",
+      "repository_path": "results/lime/lime_full_panel_terms.csv",
+      "size_bytes": 125816,
+      "size_mb": 0.11998748779296875,
+      "sha256": "a60779d593cb1e82a65696ac41229cc72bb4f6a97f034d061caf0d871399fadc"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/lime_reliability_classifications_by_model.png",
+      "repository_path": "figures/lime/lime_reliability_classifications_by_model.png",
+      "size_bytes": 122980,
+      "size_mb": 0.11728286743164062,
+      "sha256": "58ef3ee6ff3e8bc4bc43ba631dd9c5f4818872c8c7923423ed83b884a18b96da"
+    }
+  ],
+  "files": [
+    {
+      "category": "documentation",
+      "source": "/kaggle/working/stage13_lime/publication_assets/text/stage13_formal_findings.md",
+      "repository_path": "docs/STAGE13_LOCAL_EXPLANATION_RELIABILITY.md",
+      "size_bytes": 3803,
+      "size_mb": 0.0036268234252929688,
+      "sha256": "9af0ee1c621f01f9c748aa219adb68e50bf39dc9ee329898b82288cc26b7aa57"
+    },
+    {
+      "category": "documentation",
+      "source": "/kaggle/working/stage13_lime/publication_assets/text/stage13_manuscript_paragraph.txt",
+      "repository_path": "docs/STAGE13_MANUSCRIPT_PARAGRAPH.txt",
+      "size_bytes": 874,
+      "size_mb": 0.0008335113525390625,
+      "sha256": "a9857e780b8c93f8cba171c6747a3700304ae4b045600d2d40b3d5ed106c12c5"
+    },
+    {
+      "category": "documentation",
+      "source": "generated",
+      "repository_path": "results/lime/README.md",
+      "size_bytes": 1814,
+      "size_mb": 0.0017299652099609375,
+      "sha256": "65b0665fcfe5ec8b0280556a21e836808e58020f1b7c08ab06c4fb56e5eb40c5"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/feature_names.json",
+      "repository_path": "metadata/lime/feature_names.json",
+      "size_bytes": 1462,
+      "size_mb": 0.0013942718505859375,
+      "sha256": "bbe392324367669d47364ebf1bebf11bf9b814f1035c557176815980ef0b36c4"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/lime_background_data.npz",
+      "repository_path": "metadata/lime/lime_background_data.npz",
+      "size_bytes": 2404606,
+      "size_mb": 2.293210983276367,
+      "sha256": "fd26bcb852cd4661e5a4cd70ffd10d560e42556f90e02cf5ac2946e698b8900c"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/lime_background_manifest.csv",
+      "repository_path": "metadata/lime/lime_background_manifest.csv",
+      "size_bytes": 409797,
+      "size_mb": 0.39081287384033203,
+      "sha256": "db64a773e0641f4a7684d0fd490c5f1c972bfe4efcbe3bf6f6b6947b5250adee"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/local_shap_disagreement_values.npz",
+      "repository_path": "metadata/lime/local_shap_disagreement_values.npz",
+      "size_bytes": 11771,
+      "size_mb": 0.011225700378417969,
+      "sha256": "44f4b05f2c3c50f7e9957534d4b541c7714a8b409d65604a7ac635b73dd86c19"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/split_indices_reconstructed.npz",
+      "repository_path": "metadata/lime/split_indices_reconstructed.npz",
+      "size_bytes": 942399,
+      "size_mb": 0.8987417221069336,
+      "sha256": "e90ede72bfcee672543aada4840a40334a180109e1482560df1681f3241a0b10"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/split_metadata_reconstructed.json",
+      "repository_path": "metadata/lime/split_metadata_reconstructed.json",
+      "size_bytes": 586,
+      "size_mb": 0.0005588531494140625,
+      "sha256": "b291776c484afdfc8345bb526cad954836f2846f4648c2e0f824d093278e2b5a"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_2_verification_summary.json",
+      "repository_path": "metadata/lime/stage13_2_verification_summary.json",
+      "size_bytes": 1515,
+      "size_mb": 0.0014448165893554688,
+      "sha256": "97a82f964489826345c73c31fc98e851e9aef6eb8f03897342a8ce0ac6290cea"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_3_case_selection_metadata.json",
+      "repository_path": "metadata/lime/stage13_3_case_selection_metadata.json",
+      "size_bytes": 966,
+      "size_mb": 0.0009212493896484375,
+      "sha256": "f5bb605dcde3f63f1b571bcf91854cf6f7229ba341e65c83f302f13a92b43e1d"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_4_lime_configuration.json",
+      "repository_path": "metadata/lime/stage13_4_lime_configuration.json",
+      "size_bytes": 875,
+      "size_mb": 0.0008344650268554688,
+      "sha256": "6a3a494975935121c8c0e5b5c428cd55f60aae8216aebfad212c1549c4f72880"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_5_lime_metadata.json",
+      "repository_path": "metadata/lime/stage13_5_lime_metadata.json",
+      "size_bytes": 725,
+      "size_mb": 0.0006914138793945312,
+      "sha256": "5c4ee0431e33ac64a46032b9cfbb1bfe406034defe50f1cdc5e480a142d5b7f5"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_6a_selected_lime_configuration.json",
+      "repository_path": "metadata/lime/stage13_6a_selected_lime_configuration.json",
+      "size_bytes": 1354,
+      "size_mb": 0.0012912750244140625,
+      "sha256": "f1c31d0f1935ae4200da178b57a091566bcf20e70b9cd9915e9f90290cc0d94c"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_6b_lime_stability_metadata.json",
+      "repository_path": "metadata/lime/stage13_6b_lime_stability_metadata.json",
+      "size_bytes": 1497,
+      "size_mb": 0.0014276504516601562,
+      "sha256": "8e9a239e5edf77305c0fce9c52cd2cb9789ee83cbfcab803542bd753ed3e9211"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_7a_shap_lime_metadata.json",
+      "repository_path": "metadata/lime/stage13_7a_shap_lime_metadata.json",
+      "size_bytes": 1394,
+      "size_mb": 0.0013294219970703125,
+      "sha256": "53ef28043e1849e733a9b3523a7274a3504c54f40dfa77f16c66b07dca052759"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/stage13_7b_full_panel_metadata.json",
+      "repository_path": "metadata/lime/stage13_7b_full_panel_metadata.json",
+      "size_bytes": 1212,
+      "size_mb": 0.001155853271484375,
+      "sha256": "8eb0cb60256056cec9277c03f6ac7c5c123a28d6c4ad4926038fd485bd88499e"
+    },
+    {
+      "category": "metadata",
+      "source": "/kaggle/working/stage13_lime/standard_scaler_reconstructed.joblib",
+      "repository_path": "metadata/lime/standard_scaler_reconstructed.joblib",
+      "size_bytes": 2487,
+      "size_mb": 0.0023717880249023438,
+      "sha256": "d55bd57968784fa8d652fc0a45410c28d44a294b34181d14f04715b0a23ed91f"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/lime_decision_agreement_by_outcome.png",
+      "repository_path": "figures/lime/lime_decision_agreement_by_outcome.png",
+      "size_bytes": 92651,
+      "size_mb": 0.08835887908935547,
+      "sha256": "ef2efc60f599196097a9aaca17a04843ba67402a566f10c552b62e1cbe8ffa57"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/lime_local_r2_vs_fidelity_gap.png",
+      "repository_path": "figures/lime/lime_local_r2_vs_fidelity_gap.png",
+      "size_bytes": 241294,
+      "size_mb": 0.2301158905029297,
+      "sha256": "9b7301a2d82571d442793b721302b142cda4356008ba3c152e2503a06376daa6"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/lime_median_fidelity_gap_by_outcome.png",
+      "repository_path": "figures/lime/lime_median_fidelity_gap_by_outcome.png",
+      "size_bytes": 94971,
+      "size_mb": 0.09057140350341797,
+      "sha256": "7137559b9c36a5cb773014321cf5f7fb2bbee0e77e072ed8cf926505c08b397f"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/lime_reliability_classifications_by_model.png",
+      "repository_path": "figures/lime/lime_reliability_classifications_by_model.png",
+      "size_bytes": 122980,
+      "size_mb": 0.11728286743164062,
+      "sha256": "58ef3ee6ff3e8bc4bc43ba631dd9c5f4818872c8c7923423ed83b884a18b96da"
+    },
+    {
+      "category": "publication_figure",
+      "source": "/kaggle/working/stage13_lime/publication_assets/figures/shap_lime_agreement_vs_fidelity.png",
+      "repository_path": "figures/lime/shap_lime_agreement_vs_fidelity.png",
+      "size_bytes": 235037,
+      "size_mb": 0.22414875030517578,
+      "sha256": "5d1727009d19b711c8f4699efc181457159c60258533bbaaa49b909aff63bf06"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_configuration_sensitivity.csv",
+      "repository_path": "tables/lime/table_lime_configuration_sensitivity.csv",
+      "size_bytes": 1021,
+      "size_mb": 0.0009737014770507812,
+      "sha256": "3fbccef9702f1e738c34ede0ef04b20a589462546a4b5369112bc01515e6eb43"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_configuration_sensitivity.tex",
+      "repository_path": "tables/lime/table_lime_configuration_sensitivity.tex",
+      "size_bytes": 901,
+      "size_mb": 0.0008592605590820312,
+      "sha256": "15ed7665ad840fee09fd34b956f1b26481764cb67e9c0f4f85486c9b28a31715"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_model_reliability.csv",
+      "repository_path": "tables/lime/table_lime_model_reliability.csv",
+      "size_bytes": 668,
+      "size_mb": 0.000637054443359375,
+      "sha256": "94898d20a272e75a62cc5ad0e778a6912287e0bc3cffecea58e2cc8b1d9098e5"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_model_reliability.tex",
+      "repository_path": "tables/lime/table_lime_model_reliability.tex",
+      "size_bytes": 681,
+      "size_mb": 0.0006494522094726562,
+      "sha256": "4dc7d68cea6776716a966618be462b4c79fa08c807410cf02303c5b72793e997"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_outcome_stratified_results.csv",
+      "repository_path": "tables/lime/table_lime_outcome_stratified_results.csv",
+      "size_bytes": 1118,
+      "size_mb": 0.0010662078857421875,
+      "sha256": "e372cf9c0ae068075d5704e01177c6f2aa47a9b682367465f5cf64214786004d"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_outcome_stratified_results.tex",
+      "repository_path": "tables/lime/table_lime_outcome_stratified_results.tex",
+      "size_bytes": 1058,
+      "size_mb": 0.0010089874267578125,
+      "sha256": "d8d44b0bfab12d89de1fbcade9f8c5b1f5c5725bacb53e72fad72a4fe0bc4726"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_qualified_cases.csv",
+      "repository_path": "tables/lime/table_lime_qualified_cases.csv",
+      "size_bytes": 450,
+      "size_mb": 0.0004291534423828125,
+      "sha256": "bd9e47f00678553cf802dae6a913dd61923aa1b55cc58c31ab6fedab486ea319"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_qualified_cases.tex",
+      "repository_path": "tables/lime/table_lime_qualified_cases.tex",
+      "size_bytes": 592,
+      "size_mb": 0.0005645751953125,
+      "sha256": "a109d2d19069d8027855fe0b7555b97c0a2516276c0f860428c89e5ac928c3b7"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_recurring_features.csv",
+      "repository_path": "tables/lime/table_lime_recurring_features.csv",
+      "size_bytes": 1961,
+      "size_mb": 0.0018701553344726562,
+      "sha256": "724865241b3872736f3e0ef969d0faccee8a4bcc8e2b1ae3f9c551eb45f9626a"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_recurring_features.tex",
+      "repository_path": "tables/lime/table_lime_recurring_features.tex",
+      "size_bytes": 1757,
+      "size_mb": 0.0016756057739257812,
+      "sha256": "4759e1d7ce9d3ab61d6506f22f8d3587a3dffe2890f428b2e5c9ec5e86ed8ebf"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_reliability_distribution.csv",
+      "repository_path": "tables/lime/table_lime_reliability_distribution.csv",
+      "size_bytes": 111,
+      "size_mb": 0.00010585784912109375,
+      "sha256": "526930ff52f3a4eff2c7d06d1c4f2033f8e4fbb9cb2658feaa61595853e8ce0f"
+    },
+    {
+      "category": "publication_table",
+      "source": "/kaggle/working/stage13_lime/publication_assets/tables/table_lime_reliability_distribution.tex",
+      "repository_path": "tables/lime/table_lime_reliability_distribution.tex",
+      "size_bytes": 354,
+      "size_mb": 0.0003376007080078125,
+      "sha256": "73a8eabbad2e5fd306938de6cc641707b2f13795c37d11e01eadbba7656e1942"
+    },
+    {
+      "category": "repository_update",
+      "source": "generated_or_updated",
+      "repository_path": "README.md",
+      "size_bytes": 8374,
+      "size_mb": 0.007986068725585938,
+      "sha256": "e713b30f7048c02e8a36a42729a9df00b5ea20f50ae24457f6e9292d8a107f48"
+    },
+    {
+      "category": "repository_update",
+      "source": "generated_or_updated",
+      "repository_path": "docs/EXPERIMENT_PROTOCOL.md",
+      "size_bytes": 5172,
+      "size_mb": 0.004932403564453125,
+      "sha256": "0501fc6e12208a7d34374ef50444a2fb5dd5ac9f788229e1848b6c244087cd78"
+    },
+    {
+      "category": "repository_update",
+      "source": "generated_or_updated",
+      "repository_path": "requirements.txt",
+      "size_bytes": 188,
+      "size_mb": 0.000179290771484375,
+      "sha256": "2028137110a0a4035642ef134265fb6dee2ef32fb693bee23e37298602ea6055"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_disagreement_cases.csv",
+      "repository_path": "results/lime/lime_disagreement_cases.csv",
+      "size_bytes": 3075,
+      "size_mb": 0.0029325485229492188,
+      "sha256": "c5bb28eb26c1ce7cc6c08320e60a8400ff0274392ce43a4a4ce269996bf3fadd"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_disagreement_pair_comparison.csv",
+      "repository_path": "results/lime/lime_disagreement_pair_comparison.csv",
+      "size_bytes": 2488,
+      "size_mb": 0.00237274169921875,
+      "sha256": "c0417ceda934016e612c48f5ac72d267680a7b9932787b813a28d063bff3fc09"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_fidelity_configuration_model_summary.csv",
+      "repository_path": "results/lime/lime_fidelity_configuration_model_summary.csv",
+      "size_bytes": 2306,
+      "size_mb": 0.0021991729736328125,
+      "sha256": "0b6b556232cc2ebec7b5a1c47a123cec48ae44c3bbe5dc58957fa8186302b9e4"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_fidelity_configuration_results.csv",
+      "repository_path": "results/lime/lime_fidelity_configuration_results.csv",
+      "size_bytes": 99664,
+      "size_mb": 0.0950469970703125,
+      "sha256": "8490d8bffec835424ccf863aa7a48f669d1cebd6caea3b5638b7c5016fc5edc1"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_fidelity_configuration_summary.csv",
+      "repository_path": "results/lime/lime_fidelity_configuration_summary.csv",
+      "size_bytes": 2351,
+      "size_mb": 0.0022420883178710938,
+      "sha256": "a83d408059486cb0aa8a6c067caa23571b423b7e194480871fe28b7ebf174597"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_full_panel_reliability_counts.csv",
+      "repository_path": "results/lime/lime_full_panel_reliability_counts.csv",
+      "size_bytes": 538,
+      "size_mb": 0.0005130767822265625,
+      "sha256": "5b74666c7b35e49e64a27142c8ea3010d06894dd964aec8c6318c2fb0a8fb09f"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_full_panel_summary.csv",
+      "repository_path": "results/lime/lime_full_panel_summary.csv",
+      "size_bytes": 33965,
+      "size_mb": 0.03239154815673828,
+      "sha256": "5970211fd7ef34c260bd3da788adcf4a8b73aa68f4299153150944fe7f774cae"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_full_panel_terms.csv",
+      "repository_path": "results/lime/lime_full_panel_terms.csv",
+      "size_bytes": 125816,
+      "size_mb": 0.11998748779296875,
+      "sha256": "a60779d593cb1e82a65696ac41229cc72bb4f6a97f034d061caf0d871399fadc"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_initial_explanation_summary.csv",
+      "repository_path": "results/lime/lime_initial_explanation_summary.csv",
+      "size_bytes": 14077,
+      "size_mb": 0.013424873352050781,
+      "sha256": "87bf8da1e71a2350856d228c75efefac1f5344df1ba1bd76833d26a3d993ec09"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_initial_explanation_terms.csv",
+      "repository_path": "results/lime/lime_initial_explanation_terms.csv",
+      "size_bytes": 66449,
+      "size_mb": 0.0633707046508789,
+      "sha256": "35797b2a32f6ff0cef8e435d20b4103df9534a8e2170d548cef8d21650397cba"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_model_specific_cases.csv",
+      "repository_path": "results/lime/lime_model_specific_cases.csv",
+      "size_bytes": 14617,
+      "size_mb": 0.013939857482910156,
+      "sha256": "6cc805e3e7a9f4b475f6fa2cf13f30c85339ee78c694b74b99616046f4623a0b"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_case_summary.csv",
+      "repository_path": "results/lime/lime_seed_stability_case_summary.csv",
+      "size_bytes": 11929,
+      "size_mb": 0.011376380920410156,
+      "sha256": "15307f49affc9e0a86f45169099f0280f160cf93b008a2baf8da32de6607489d"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_feature_frequency.csv",
+      "repository_path": "results/lime/lime_seed_stability_feature_frequency.csv",
+      "size_bytes": 62842,
+      "size_mb": 0.05993080139160156,
+      "sha256": "2f0ff8fb441803694933087c677265484c7eb1d9dd3d45f414f6681fcefd2413"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_global_feature_frequency.csv",
+      "repository_path": "results/lime/lime_seed_stability_global_feature_frequency.csv",
+      "size_bytes": 11829,
+      "size_mb": 0.011281013488769531,
+      "sha256": "3167491ef5ef0d40e888c52bbf94e5fcfd74b4e83a16fd5e30ec46f4d342d4fb"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_model_summary.csv",
+      "repository_path": "results/lime/lime_seed_stability_model_summary.csv",
+      "size_bytes": 1054,
+      "size_mb": 0.0010051727294921875,
+      "sha256": "c5f2ea70daebe937e390bdfc9478708c1745ebc5336ca6c4820a7dd8f3d0bbf9"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_pairwise.csv",
+      "repository_path": "results/lime/lime_seed_stability_pairwise.csv",
+      "size_bytes": 37674,
+      "size_mb": 0.03592872619628906,
+      "sha256": "26da45aab76e79c66b88ad19780381c528577ee5db0653240ff1da6b230ff306"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_runs.csv",
+      "repository_path": "results/lime/lime_seed_stability_runs.csv",
+      "size_bytes": 38493,
+      "size_mb": 0.03670978546142578,
+      "sha256": "34fc2e23b7bc31bb3bd3b41fc2e205799254451ed0fb7937df86752226f2eca0"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_seed_stability_terms.csv",
+      "repository_path": "results/lime/lime_seed_stability_terms.csv",
+      "size_bytes": 214844,
+      "size_mb": 0.20489120483398438,
+      "sha256": "00577ac36b947f519322f1025c71b4250602dbbc4dabb3154f42c949370e912c"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_shap_disagreement_vs_agreement_summary.csv",
+      "repository_path": "results/lime/lime_shap_disagreement_vs_agreement_summary.csv",
+      "size_bytes": 777,
+      "size_mb": 0.0007410049438476562,
+      "sha256": "9df69c3483d7f895ec3abd17dc63933e8345691e71f15fae85125937c7ccfcd6"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_shap_full_panel_agreement.csv",
+      "repository_path": "results/lime/lime_shap_full_panel_agreement.csv",
+      "size_bytes": 33965,
+      "size_mb": 0.03239154815673828,
+      "sha256": "5970211fd7ef34c260bd3da788adcf4a8b73aa68f4299153150944fe7f774cae"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_shap_full_panel_outcome_summary.csv",
+      "repository_path": "results/lime/lime_shap_full_panel_outcome_summary.csv",
+      "size_bytes": 2487,
+      "size_mb": 0.0023717880249023438,
+      "sha256": "20fcc1fe3d9a9b458dbcbaeca09c5cc9df065b48bfc32a1ae09592d8014d6226"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_shap_reliability_synthesis.csv",
+      "repository_path": "results/lime/lime_shap_reliability_synthesis.csv",
+      "size_bytes": 16134,
+      "size_mb": 0.015386581420898438,
+      "sha256": "4df95826ba6cae8919f02ced73dc695c333ff642be43c9cb08a08b130e36ae77"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_shared_cases.csv",
+      "repository_path": "results/lime/lime_shared_cases.csv",
+      "size_bytes": 14443,
+      "size_mb": 0.013773918151855469,
+      "sha256": "5d9232a8062a04170bb3331b1c05f8bc8778db34dac3da29b455b487b4777ebb"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/lime_wrapper_verification.csv",
+      "repository_path": "results/lime/lime_wrapper_verification.csv",
+      "size_bytes": 7808,
+      "size_mb": 0.0074462890625,
+      "sha256": "6b2807d60080bdce1be39cb09e8e055ad2282bf659e019b46e1fcc4a9e619ec3"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/local_shap_disagreement_terms.csv",
+      "repository_path": "results/lime/local_shap_disagreement_terms.csv",
+      "size_bytes": 238932,
+      "size_mb": 0.22786331176757812,
+      "sha256": "408b3f413dffbb406338665482c10400374be509d51e971458a00eb1e04cd0a3"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/local_shap_lime_agreement.csv",
+      "repository_path": "results/lime/local_shap_lime_agreement.csv",
+      "size_bytes": 18664,
+      "size_mb": 0.01779937744140625,
+      "sha256": "0b8c1e2697291c05450e5229e16abf201c95ccab41bce00e088d1754edd234f4"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/local_shap_lime_case_summary.csv",
+      "repository_path": "results/lime/local_shap_lime_case_summary.csv",
+      "size_bytes": 1783,
+      "size_mb": 0.0017004013061523438,
+      "sha256": "643656aad55f040a4d6269de414baa5d28b2a2d80c754e18a98e8526eee80268"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/local_shap_lime_model_summary.csv",
+      "repository_path": "results/lime/local_shap_lime_model_summary.csv",
+      "size_bytes": 937,
+      "size_mb": 0.0008935928344726562,
+      "sha256": "3e40220bc75107ed4eb21d3129f6bcbfc06e3ae581fc89a0f0063a8ae49e44f9"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/published_metric_reproduction.csv",
+      "repository_path": "results/lime/published_metric_reproduction.csv",
+      "size_bytes": 1272,
+      "size_mb": 0.00121307373046875,
+      "sha256": "004f412023e8b98db51233445f84cce9fc3d16ff54200adad65a1bb07d6137bf"
+    },
+    {
+      "category": "result",
+      "source": "/kaggle/working/stage13_lime/shap_full_panel_terms.csv",
+      "repository_path": "results/lime/shap_full_panel_terms.csv",
+      "size_bytes": 594824,
+      "size_mb": 0.5672683715820312,
+      "sha256": "e61e7fa5f004cbd6f6cbdd6c009549a7495a15cf0e0a420fa96db26857dec2f3"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+\begin{table}
+\caption{Cases satisfying all study-specific LIME fidelity and cross-method agreement criteria.}
+\label{tab:lime_qualified_cases}
+\begin{tabular}{llllrrrrrrr}
+\toprule
+Case & Model & Outcome & Traffic class & Models disagree & Attack probability & Local R2 & Fidelity gap & Top-10 Jaccard & Absolute cosine & Signed cosine \\
+\midrule
+LIGHTGBM_FP_01 & LightGBM & FP & Benign & True & 0.260 & 0.386 & 0.035 & 0.429 & 0.641 & -0.278 \\
+LIGHTGBM_TP_01 & LightGBM & TP & Infilteration & True & 0.260 & 0.387 & 0.044 & 0.429 & 0.565 & -0.322 \\
+\bottomrule
+\end{tabular}
+\end{table}

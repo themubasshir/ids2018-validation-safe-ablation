@@ -1,0 +1,35 @@
+{
+  "stage": "13.6A",
+  "selected_config_id": "continuous_wide_10k",
+  "selection_scope": "One global LIME configuration across both models and all 12 disagreement cases",
+  "selection_rule": {
+    "primary_metrics": [
+      "decision agreement rate, descending",
+      "median local R2, descending",
+      "median absolute fidelity gap, ascending",
+      "90th-percentile fidelity gap, ascending"
+    ],
+    "ranking_method": "Sum of deterministic metric ranks; configuration order resolves any final tie"
+  },
+  "selected_configuration": {
+    "config_order": 6,
+    "config_id": "continuous_wide_10k",
+    "description": "Continuous features with a wider local kernel",
+    "discretize_continuous": false,
+    "discretizer": null,
+    "sample_around_instance": true,
+    "num_samples": 10000,
+    "kernel_width": 8.831760866327848
+  },
+  "selected_summary": {
+    "decision_agreement_rate": 0.875,
+    "mean_local_r2": 0.26927379419581593,
+    "median_local_r2": 0.2801647400783644,
+    "minimum_local_r2": 0.0917218085654311,
+    "median_fidelity_gap": 0.14172843058160417,
+    "p90_fidelity_gap": 0.35723273882236084,
+    "maximum_fidelity_gap": 0.46717344269129213,
+    "rank_sum": 4.0
+  },
+  "important_interpretive_note": "Selection identifies the strongest tested configuration. It does not by itself establish that LIME fidelity is adequate."
+}

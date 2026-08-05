@@ -1,0 +1,12 @@
+\begin{table}
+\caption{Model-level LIME fidelity, seed stability, and local agreement with TreeSHAP.}
+\label{tab:lime_model_reliability}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Model & Decision agreement & Mean local R2 & Median local R2 & Mean fidelity gap & Seed top-10 Jaccard & Seed weight cosine & Seed sign agreement & SHAP–LIME top-10 Jaccard & SHAP–LIME absolute cosine & SHAP–LIME signed cosine & SHAP–LIME Spearman \\
+\midrule
+LightGBM & 0.917 & 0.338 & 0.350 & 0.180 & 0.745 & 0.990 & 0.970 & 0.360 & 0.603 & 0.012 & 0.501 \\
+XGBoost & 0.833 & 0.203 & 0.212 & 0.155 & 0.753 & 0.962 & 0.979 & 0.304 & 0.623 & 0.214 & 0.440 \\
+\bottomrule
+\end{tabular}
+\end{table}

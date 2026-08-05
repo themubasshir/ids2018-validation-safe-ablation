@@ -1,0 +1,29 @@
+{
+  "stage": "13.7B",
+  "purpose": "Determine whether LIME fidelity and SHAP agreement limitations are specific to cross-model disagreement cases or extend across representative TP, TN, FP and FN cases.",
+  "selected_configuration": {
+    "config_order": 6,
+    "config_id": "continuous_wide_10k",
+    "description": "Continuous features with a wider local kernel",
+    "discretize_continuous": false,
+    "discretizer": null,
+    "sample_around_instance": true,
+    "num_samples": 10000,
+    "kernel_width": 8.831760866327848
+  },
+  "cases": 64,
+  "cases_per_model": 32,
+  "cases_per_model_outcome": 8,
+  "num_samples_per_lime_explanation": 10000,
+  "num_features_per_lime_explanation": 15,
+  "tree_shap_output_space": "raw model score/log-odds",
+  "tree_shap_additivity": {
+    "xgboost_max_raw_difference": 5.8675650507211685e-06,
+    "lightgbm_max_raw_difference": 1.7763568394002505e-14
+  },
+  "reliability_rule": {
+    "qualified_fidelity": "local decision agreement, local R2 >= 0.30 and fidelity gap <= 0.10",
+    "qualified_cross_method": "top-10 Jaccard >= 0.40 and absolute attribution cosine >= 0.50",
+    "warning": "These are study-specific descriptive criteria, not universal XAI standards."
+  }
+}

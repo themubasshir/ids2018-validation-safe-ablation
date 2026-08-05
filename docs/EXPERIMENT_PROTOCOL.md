@@ -47,3 +47,35 @@ Attack labels are reconstructed for the holdout predictions without including ra
 ## Stage 12: Fixed-Hyperparameter Multi-Seed Robustness
 
 Seeds `42`, `52`, `62`, `72`, and `82` repeat the split, model fitting, validation threshold selection, and holdout evaluation for XGBoost and LightGBM. Hyperparameters remain fixed from the seed-42 tuning stage; the complete hyperparameter search is not repeated for every seed.
+
+<!-- BEGIN STAGE 13 LOCAL EXPLANATION RELIABILITY -->
+## Stage 13: Local Explanation Reliability
+
+Stage 13 evaluates local explanations for the selected XGBoost and
+LightGBM models using exact TreeSHAP and LIME.
+
+A deterministic case panel contains eight true positives, true
+negatives, false positives, and false negatives for each model.
+Additional analysis uses 12 cross-model disagreement cases.
+
+Six LIME configurations are evaluated using local decision agreement,
+local surrogate R2, absolute model-surrogate probability gap, and
+worst-case fidelity. The selected configuration uses continuous
+features, instance-centred perturbations, 10,000 samples, and kernel
+width 8.8317608663.
+
+Five independent perturbation seeds assess feature-selection and
+attribution-weight stability. LIME explanations are then compared with
+exact local TreeSHAP using top-k overlap, Jaccard similarity, cosine
+similarity, Spearman correlation, and attribution-direction agreement.
+
+TreeSHAP passes additive raw-score reconstruction for both models. In
+the complete 64-case panel, only 2 LIME explanations satisfy all
+study-specific fidelity and cross-method criteria; 31 produce local
+decision mismatches, 30 are fidelity-limited, and 1 is cross-method
+divergent.
+
+TreeSHAP is therefore the primary local attribution method. LIME is
+retained as a supplementary surrogate-reliability analysis rather than
+an equivalent attribution ground truth.
+<!-- END STAGE 13 LOCAL EXPLANATION RELIABILITY -->

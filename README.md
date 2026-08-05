@@ -118,3 +118,26 @@ This repository preserves exact archived metrics and artifacts, but it does not 
 ## Citation
 
 If you use this repository, cite the CSE-CIC-IDS2018 dataset source and this validation-safe reproducibility repository. This work should be read as a methodological refinement, robustness analysis, and reproducibility extension of the original experiment.
+
+<!-- BEGIN STAGE 13 LOCAL EXPLANATION RELIABILITY -->
+## Stage 13: Local Explanation Reliability
+
+The repository now includes an outcome-stratified local explanation
+audit for the selected XGBoost and LightGBM models.
+
+Key findings:
+
+- TreeSHAP reconstructs both tree-model outputs to numerical precision.
+- LIME feature rankings are comparatively repeatable across seeds.
+- LIME stability does not imply local faithfulness.
+- Only 2 of 64 representative LIME explanations satisfy all
+  study-specific fidelity and TreeSHAP-agreement criteria.
+- TreeSHAP is the primary local explanation method.
+- LIME is reported as a supplementary surrogate-reliability stress test.
+
+Detailed findings are available in
+[`docs/STAGE13_LOCAL_EXPLANATION_RELIABILITY.md`](docs/STAGE13_LOCAL_EXPLANATION_RELIABILITY.md).
+Publication tables are under `tables/lime/`, figures under
+`figures/lime/`, detailed results under `results/lime/`, and
+reproducibility artifacts under `metadata/lime/`.
+<!-- END STAGE 13 LOCAL EXPLANATION RELIABILITY -->

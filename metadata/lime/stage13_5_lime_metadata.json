@@ -1,0 +1,26 @@
+{
+  "stage": "13.5",
+  "case_source": "12 deterministic cross-model disagreement cases",
+  "models": [
+    "XGBoost",
+    "LightGBM"
+  ],
+  "total_cases": 12,
+  "total_explanations": 24,
+  "label_explained": {
+    "index": 1,
+    "name": "Attack"
+  },
+  "num_samples_per_explanation": 5000,
+  "num_features_per_explanation": 15,
+  "base_seed": 130500,
+  "paired_seed_policy": "The same derived seed is used for both models within each disagreement case.",
+  "background_records": 20000,
+  "background_source": "training partition only",
+  "discretizer": "quartile",
+  "feature_selection": "auto",
+  "sample_around_instance": false,
+  "distance_metric": "euclidean",
+  "xgboost_threshold": 0.51,
+  "lightgbm_threshold": 0.26
+}

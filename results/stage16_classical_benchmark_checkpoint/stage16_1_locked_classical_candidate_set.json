@@ -1,0 +1,299 @@
+{
+  "stage": "16.1",
+  "status": "LOCKED_BEFORE_DUPLICATE_SAFE_CLASSICAL_TRAINING",
+  "locked_at_utc": "2026-08-06T16:48:10.217901+00:00",
+  "repository_commit": "6067823d043765077457d30059e34afa5b63bc29",
+  "candidate_count": 12,
+  "candidates": [
+    {
+      "candidate_id": "LOGISTIC_REGRESSION",
+      "model_name": "Logistic Regression",
+      "implementation": "sklearn.linear_model.LogisticRegression",
+      "input_representation": "scaled",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "C": 1.0,
+        "penalty": "l2",
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "GAUSSIAN_NAIVE_BAYES",
+      "model_name": "Naive Bayes",
+      "implementation": "sklearn.naive_bayes.GaussianNB",
+      "input_representation": "scaled",
+      "score_method": "predict_proba",
+      "stochastic": false,
+      "random_seed": null,
+      "baseline_parameters": {
+        "var_smoothing": 1e-09
+      }
+    },
+    {
+      "candidate_id": "K_NEAREST_NEIGHBORS",
+      "model_name": "KNN",
+      "implementation": "sklearn.neighbors.KNeighborsClassifier",
+      "input_representation": "scaled",
+      "score_method": "predict_proba",
+      "stochastic": false,
+      "random_seed": null,
+      "baseline_parameters": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "algorithm": "auto",
+        "leaf_size": 30,
+        "p": 2,
+        "metric": "minkowski",
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate_id": "LINEAR_SVM",
+      "model_name": "Linear SVM",
+      "implementation": "sklearn.svm.LinearSVC",
+      "input_representation": "scaled",
+      "score_method": "expit_of_decision_function",
+      "score_interpretation": "Uncalibrated monotonic sigmoid mapping of the LinearSVC margin. Used only for validation-based threshold selection and ranking.",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "C": 1.0,
+        "penalty": "l2",
+        "loss": "squared_hinge",
+        "dual": "auto",
+        "tol": 0.0001,
+        "max_iter": 10000,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "DECISION_TREE",
+      "model_name": "Decision Tree",
+      "implementation": "sklearn.tree.DecisionTreeClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "criterion": "gini",
+        "splitter": "best",
+        "max_depth": null,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "model_name": "Random Forest",
+      "implementation": "sklearn.ensemble.RandomForestClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "n_jobs": -1,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "EXTRA_TREES",
+      "model_name": "Extra Trees",
+      "implementation": "sklearn.ensemble.ExtraTreesClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "max_features": "sqrt",
+        "bootstrap": false,
+        "n_jobs": -1,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "ADABOOST",
+      "model_name": "AdaBoost",
+      "implementation": "sklearn.ensemble.AdaBoostClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "n_estimators": 50,
+        "learning_rate": 1.0,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "GRADIENT_BOOSTING",
+      "model_name": "Gradient Boosting",
+      "implementation": "sklearn.ensemble.GradientBoostingClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "baseline_parameters": {
+        "loss": "log_loss",
+        "learning_rate": 0.1,
+        "n_estimators": 100,
+        "subsample": 1.0,
+        "criterion": "friedman_mse",
+        "max_depth": 3,
+        "random_state": 42
+      }
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "model_name": "XGBoost",
+      "implementation": "xgboost.XGBClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "preferred_device": "GPU",
+      "baseline_parameters": {
+        "objective": "binary:logistic",
+        "n_estimators": 100,
+        "learning_rate": 0.3,
+        "max_depth": 6,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "tree_method": "hist",
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate_id": "LIGHTGBM",
+      "model_name": "LightGBM",
+      "implementation": "lightgbm.LGBMClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "preferred_device": "GPU",
+      "baseline_parameters": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "n_estimators": 100,
+        "learning_rate": 0.1,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "device_type": "gpu",
+        "verbosity": -1,
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate_id": "CATBOOST",
+      "model_name": "CatBoost",
+      "implementation": "catboost.CatBoostClassifier",
+      "input_representation": "raw",
+      "score_method": "predict_proba",
+      "stochastic": true,
+      "random_seed": 42,
+      "preferred_device": "GPU",
+      "baseline_parameters": {
+        "iterations": 300,
+        "learning_rate": 0.1,
+        "depth": 6,
+        "loss_function": "Logloss",
+        "eval_metric": "F1",
+        "random_seed": 42,
+        "task_type": "GPU",
+        "devices": "0",
+        "verbose": false,
+        "allow_writing_files": false
+      }
+    }
+  ],
+  "excluded_neural_baselines": [
+    {
+      "model_name": "MLP",
+      "reason": "Neural model; excluded from the classical benchmark stage."
+    },
+    {
+      "model_name": "1D-CNN",
+      "reason": "Neural model; excluded from the classical benchmark stage."
+    },
+    {
+      "model_name": "LSTM",
+      "reason": "Sequence neural model without a natural sequence in the retained tabular predictors."
+    },
+    {
+      "model_name": "Transformer Encoder",
+      "reason": "Superseded by the completed duplicate-safe FT_BALANCED Stage 15 experiment."
+    }
+  ],
+  "baseline_training_seed": 42,
+  "fit_data": "Exact duplicate-safe training split only",
+  "selection_data": "Exact duplicate-safe validation split only",
+  "threshold_protocol": {
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005,
+    "primary_objective": "maximum validation F1",
+    "tie_breakers": [
+      "maximum validation F2",
+      "maximum validation recall",
+      "minimum validation FPR",
+      "minimum threshold"
+    ]
+  },
+  "ranking_protocol": [
+    "highest validation F1",
+    "highest validation PR-AUC",
+    "highest validation F2",
+    "highest validation recall",
+    "lowest validation FPR",
+    "lowest training time",
+    "lexicographic candidate ID"
+  ],
+  "preprocessing_policy": {
+    "scaled_candidates": [
+      "LOGISTIC_REGRESSION",
+      "GAUSSIAN_NAIVE_BAYES",
+      "K_NEAREST_NEIGHBORS",
+      "LINEAR_SVM"
+    ],
+    "raw_candidates": [
+      "DECISION_TREE",
+      "RANDOM_FOREST",
+      "EXTRA_TREES",
+      "ADABOOST",
+      "GRADIENT_BOOSTING",
+      "XGBOOST",
+      "LIGHTGBM",
+      "CATBOOST"
+    ],
+    "scaler_source": "Stage 15 archived StandardScaler fitted on duplicate-safe training rows only"
+  },
+  "future_holdout_policy": {
+    "holdout_access_during_baseline_training": false,
+    "holdout_access_during_validation_selection": false,
+    "future_classical_holdout_access": "One predeclared batch only after all classical model files and thresholds are frozen",
+    "post_holdout_model_selection": false,
+    "post_holdout_threshold_adjustment": false,
+    "post_holdout_retraining": false
+  },
+  "transformer_policy_modified": false,
+  "holdout_accessed_in_stage16_1": false
+}

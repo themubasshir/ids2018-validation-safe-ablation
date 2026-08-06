@@ -1,0 +1,178 @@
+{
+  "stage": "16.1B",
+  "generated_at_utc": "2026-08-06T16:58:18.473964+00:00",
+  "repository": {
+    "branch": "main",
+    "base_commit": "6067823d043765077457d30059e34afa5b63bc29",
+    "package_relative_path": "results/stage16_classical_benchmark_checkpoint"
+  },
+  "copied_scientific_file_count": 11,
+  "copied_scientific_files": [
+    {
+      "relative_path": "stage16_0_classical_artifact_inventory.csv",
+      "size_bytes": 115935,
+      "sha256": "b9b41aa708ac32c67d9b8960f6c8208738d149f4048b9b1cf0608a95b583a85d"
+    },
+    {
+      "relative_path": "stage16_0_classical_benchmark_protocol.json",
+      "size_bytes": 4754,
+      "sha256": "9256dc828ea02c87aa9099e6cd88694207cfe4348e64e9309385c2975053336f"
+    },
+    {
+      "relative_path": "stage16_0_classical_comparability_audit.json",
+      "size_bytes": 1744,
+      "sha256": "0def006ab5e0a28f6719c61a22247a5fce671c1cae6c2ed1c3db5cc136dd819e"
+    },
+    {
+      "relative_path": "stage16_0_classical_comparability_metadata.json",
+      "size_bytes": 550,
+      "sha256": "b07c4ac22f32ca164695094d7aabd804a9470ae16aac9c1b6e7e7cdc84ae62ad"
+    },
+    {
+      "relative_path": "stage16_0_discovered_model_evidence.csv",
+      "size_bytes": 3981,
+      "sha256": "752b8910404c993abd41271f2b3d46685de028a0b34da451a2cbf106a5943857"
+    },
+    {
+      "relative_path": "stage16_0_exact_reuse_candidates.csv",
+      "size_bytes": 412,
+      "sha256": "2b5301682cedd68ea4537653de65fd6bac8327327fbeff3345487a138e17f320"
+    },
+    {
+      "relative_path": "stage16_1_candidate_lock_and_cache_metadata.json",
+      "size_bytes": 668,
+      "sha256": "32d5097d353ae9c1d85e7f4b89b917c9189817160c11a07865d7071d9e1baa1b"
+    },
+    {
+      "relative_path": "stage16_1_candidate_lock_and_cache_result.json",
+      "size_bytes": 1375,
+      "sha256": "e929aecaa7bbbff69eb890a9a3b9136ea3b992891c4668a63d028749b2972e8d"
+    },
+    {
+      "relative_path": "stage16_1_data_cache_manifest.json",
+      "size_bytes": 5751,
+      "sha256": "e6e48e1b6e4a4f0c143b2d07125a3c66e28f835cf71f0b87cb221a904d095ce4"
+    },
+    {
+      "relative_path": "stage16_1_locked_classical_candidate_set.json",
+      "size_bytes": 8807,
+      "sha256": "b1b9c077e534b63b100bc713699e604cc3e90c74968756f83f91b38d269b8a39"
+    },
+    {
+      "relative_path": "stage16_1b_pretraining_protocol_lock.json",
+      "size_bytes": 7028,
+      "sha256": "1483451f9bf1db8c231e070bc60937b6a955b297221a4cc776d92634847ec7af"
+    }
+  ],
+  "pretraining_lock_path": "stage16_1b_pretraining_protocol_lock.json",
+  "pretraining_lock_sha256": "1483451f9bf1db8c231e070bc60937b6a955b297221a4cc776d92634847ec7af",
+  "candidate_count": 12,
+  "candidate_ids": [
+    "LOGISTIC_REGRESSION",
+    "GAUSSIAN_NAIVE_BAYES",
+    "K_NEAREST_NEIGHBORS",
+    "LINEAR_SVM",
+    "DECISION_TREE",
+    "RANDOM_FOREST",
+    "EXTRA_TREES",
+    "ADABOOST",
+    "GRADIENT_BOOSTING",
+    "XGBOOST",
+    "LIGHTGBM",
+    "CATBOOST"
+  ],
+  "local_cache_file_count": 8,
+  "local_cache_size_bytes": 109545473,
+  "local_cache_files_committed": false,
+  "local_cache_locks": {
+    "X_train_raw": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_raw_float32.npy",
+      "shape": [
+        154686,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 43312208,
+      "sha256": "af32fd99bd2cbff1cd8805bf18f2a1d161879f8aebcc87ddbb97698272704c83"
+    },
+    "X_train_scaled": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_scaled_float32.npy",
+      "shape": [
+        154686,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 43312208,
+      "sha256": "e48e1e71d5a5f9f43a9414b11d0acb056df57642c36fe403d4d82a9f1abca0b3"
+    },
+    "X_validation_raw": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_raw_float32.npy",
+      "shape": [
+        37835,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 10593928,
+      "sha256": "660b222becb2b811fa2856ff9fcb0ac37a956b6a0b3201daefcf2f3dee1104ec"
+    },
+    "X_validation_scaled": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_scaled_float32.npy",
+      "shape": [
+        37835,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 10593928,
+      "sha256": "a6ad8c00009f3c5fdde99ecfff27d6723a41070d408d7135aca5868da72ffbf4"
+    },
+    "train_indices": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/train_indices_int64.npy",
+      "shape": [
+        154686
+      ],
+      "dtype": "int64",
+      "size_bytes": 1237616,
+      "sha256": "d52928c77eb1264e7b60391068722cb9c216ba4a2732a9d6e449f0e9d28701ef"
+    },
+    "validation_indices": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/validation_indices_int64.npy",
+      "shape": [
+        37835
+      ],
+      "dtype": "int64",
+      "size_bytes": 302808,
+      "sha256": "bbc7d9833ef91e1c65cff35173a501b9d0cbc5af02f35ae589db2c27681bf286"
+    },
+    "y_train": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_train_int8.npy",
+      "shape": [
+        154686
+      ],
+      "dtype": "int8",
+      "size_bytes": 154814,
+      "sha256": "d908d1af7c14ae63c1f75ec81b23e51f20d08cfb10087b35c95e5709bfbf1d31"
+    },
+    "y_validation": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_validation_int8.npy",
+      "shape": [
+        37835
+      ],
+      "dtype": "int8",
+      "size_bytes": 37963,
+      "sha256": "b16e9950a97b2169f5d5e879173042ecc74186e4e85c0be50ba83003826f8463"
+    }
+  },
+  "classical_model_fit_count": 0,
+  "validation_prediction_count": 0,
+  "holdout_accessed": false,
+  "cache_policy": {
+    "excluded_directory": "data_cache",
+    "reason": "Large deterministic matrices are represented by immutable SHA-256 identities.",
+    "excluded_disposable_files": [
+      "__pycache__",
+      ".pyc",
+      ".DS_Store"
+    ]
+  },
+  "next_step": "Train and validate all 12 locked classical candidates."
+}

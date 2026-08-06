@@ -1,0 +1,15 @@
+{
+  "stage": "16.0",
+  "generated_at_utc": "2026-08-06T16:41:56.432820+00:00",
+  "operation": "Read-only artifact and provenance audit",
+  "repository_scanned": "/kaggle/working/ids2018-validation-safe-ablation",
+  "stage15_package_excluded_from_artifact_search": true,
+  "binary_models_loaded": false,
+  "dataset_csv_loaded": false,
+  "training_performed": false,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false
+}

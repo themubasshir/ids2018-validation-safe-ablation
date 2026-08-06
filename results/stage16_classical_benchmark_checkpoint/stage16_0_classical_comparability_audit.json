@@ -1,0 +1,41 @@
+{
+  "stage": "16.0",
+  "status": "COMPLETED",
+  "generated_at_utc": "2026-08-06T16:41:56.432441+00:00",
+  "repository_commit": "6067823d043765077457d30059e34afa5b63bc29",
+  "stage15_experiment_complete": true,
+  "stage15_holdout_status": "EVALUATED_ONCE",
+  "artifact_file_count": 212,
+  "discovered_model_count": 11,
+  "discovered_models": [
+    "AdaBoost",
+    "CatBoost",
+    "Decision Tree",
+    "Extra Trees",
+    "Gradient Boosting",
+    "K-Nearest Neighbors",
+    "LightGBM",
+    "Linear SVM",
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost"
+  ],
+  "exact_reuse_artifact_count": 0,
+  "models_with_exact_reuse_evidence": [],
+  "audit_decision": "RETRAIN_CLASSICAL_MODELS_ON_EXACT_DUPLICATE_SAFE_SPLIT",
+  "audit_reason": "No existing artifact demonstrated complete provenance for the exact Stage 15 split, 70-feature configuration, and validation-only threshold policy.",
+  "training_performed": false,
+  "validation_predictions_generated": false,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false,
+  "next_step": "Finalize the classical candidate set and construct the duplicate-safe training and validation benchmark.",
+  "artifacts": {
+    "inventory": "/kaggle/working/stage16_classical_benchmark/stage16_0_classical_artifact_inventory.csv",
+    "model_evidence": "/kaggle/working/stage16_classical_benchmark/stage16_0_discovered_model_evidence.csv",
+    "exact_reuse_candidates": "/kaggle/working/stage16_classical_benchmark/stage16_0_exact_reuse_candidates.csv",
+    "benchmark_protocol": "/kaggle/working/stage16_classical_benchmark/stage16_0_classical_benchmark_protocol.json"
+  }
+}

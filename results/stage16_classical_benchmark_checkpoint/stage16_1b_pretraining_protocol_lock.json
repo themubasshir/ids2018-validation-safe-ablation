@@ -1,0 +1,198 @@
+{
+  "stage": "16.1B",
+  "status": "LOCKED_BEFORE_FIRST_DUPLICATE_SAFE_CLASSICAL_MODEL_FIT",
+  "locked_at_utc": "2026-08-06T16:58:18.467668+00:00",
+  "repository_base_commit": "6067823d043765077457d30059e34afa5b63bc29",
+  "scientific_scope": {
+    "candidate_count": 12,
+    "candidate_ids": [
+      "LOGISTIC_REGRESSION",
+      "GAUSSIAN_NAIVE_BAYES",
+      "K_NEAREST_NEIGHBORS",
+      "LINEAR_SVM",
+      "DECISION_TREE",
+      "RANDOM_FOREST",
+      "EXTRA_TREES",
+      "ADABOOST",
+      "GRADIENT_BOOSTING",
+      "XGBOOST",
+      "LIGHTGBM",
+      "CATBOOST"
+    ],
+    "baseline_seed": 42,
+    "training_rows": 154686,
+    "validation_rows": 37835,
+    "feature_count": 70,
+    "training_benign": 110161,
+    "training_attack": 44525,
+    "validation_benign": 27143,
+    "validation_attack": 10692
+  },
+  "locked_artifacts": {
+    "audit": {
+      "path": "/kaggle/working/stage16_classical_benchmark/stage16_0_classical_comparability_audit.json",
+      "size_bytes": 1744,
+      "sha256": "0def006ab5e0a28f6719c61a22247a5fce671c1cae6c2ed1c3db5cc136dd819e"
+    },
+    "benchmark_protocol": {
+      "path": "/kaggle/working/stage16_classical_benchmark/stage16_0_classical_benchmark_protocol.json",
+      "size_bytes": 4754,
+      "sha256": "9256dc828ea02c87aa9099e6cd88694207cfe4348e64e9309385c2975053336f"
+    },
+    "candidate_set": {
+      "path": "/kaggle/working/stage16_classical_benchmark/stage16_1_locked_classical_candidate_set.json",
+      "size_bytes": 8807,
+      "sha256": "b1b9c077e534b63b100bc713699e604cc3e90c74968756f83f91b38d269b8a39"
+    },
+    "cache_manifest": {
+      "path": "/kaggle/working/stage16_classical_benchmark/stage16_1_data_cache_manifest.json",
+      "size_bytes": 5751,
+      "sha256": "e6e48e1b6e4a4f0c143b2d07125a3c66e28f835cf71f0b87cb221a904d095ce4"
+    }
+  },
+  "data_identity": {
+    "dataset_path": "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv",
+    "split_path": "/kaggle/working/stage15_transformer/stage15_1_duplicate_safe_split_indices.npz",
+    "split_sha256": "fd66772bc17e6e629f561bc6a2c5e188d1cf2f923c14830646f4af684400417e",
+    "feature_configuration_path": "/kaggle/working/stage15_transformer/stage15_1_feature_configuration.json",
+    "feature_configuration_sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872",
+    "training_only_scaler_path": "/kaggle/working/stage15_transformer/stage15_2_standard_scaler.joblib",
+    "training_only_scaler_sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5"
+  },
+  "local_cache_locks": {
+    "X_train_raw": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_raw_float32.npy",
+      "shape": [
+        154686,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 43312208,
+      "sha256": "af32fd99bd2cbff1cd8805bf18f2a1d161879f8aebcc87ddbb97698272704c83"
+    },
+    "X_train_scaled": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_scaled_float32.npy",
+      "shape": [
+        154686,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 43312208,
+      "sha256": "e48e1e71d5a5f9f43a9414b11d0acb056df57642c36fe403d4d82a9f1abca0b3"
+    },
+    "X_validation_raw": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_raw_float32.npy",
+      "shape": [
+        37835,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 10593928,
+      "sha256": "660b222becb2b811fa2856ff9fcb0ac37a956b6a0b3201daefcf2f3dee1104ec"
+    },
+    "X_validation_scaled": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_scaled_float32.npy",
+      "shape": [
+        37835,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 10593928,
+      "sha256": "a6ad8c00009f3c5fdde99ecfff27d6723a41070d408d7135aca5868da72ffbf4"
+    },
+    "train_indices": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/train_indices_int64.npy",
+      "shape": [
+        154686
+      ],
+      "dtype": "int64",
+      "size_bytes": 1237616,
+      "sha256": "d52928c77eb1264e7b60391068722cb9c216ba4a2732a9d6e449f0e9d28701ef"
+    },
+    "validation_indices": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/validation_indices_int64.npy",
+      "shape": [
+        37835
+      ],
+      "dtype": "int64",
+      "size_bytes": 302808,
+      "sha256": "bbc7d9833ef91e1c65cff35173a501b9d0cbc5af02f35ae589db2c27681bf286"
+    },
+    "y_train": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_train_int8.npy",
+      "shape": [
+        154686
+      ],
+      "dtype": "int8",
+      "size_bytes": 154814,
+      "sha256": "d908d1af7c14ae63c1f75ec81b23e51f20d08cfb10087b35c95e5709bfbf1d31"
+    },
+    "y_validation": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_validation_int8.npy",
+      "shape": [
+        37835
+      ],
+      "dtype": "int8",
+      "size_bytes": 37963,
+      "sha256": "b16e9950a97b2169f5d5e879173042ecc74186e4e85c0be50ba83003826f8463"
+    }
+  },
+  "preprocessing_policy": {
+    "scaled_candidates": [
+      "LOGISTIC_REGRESSION",
+      "GAUSSIAN_NAIVE_BAYES",
+      "K_NEAREST_NEIGHBORS",
+      "LINEAR_SVM"
+    ],
+    "raw_candidates": [
+      "DECISION_TREE",
+      "RANDOM_FOREST",
+      "EXTRA_TREES",
+      "ADABOOST",
+      "GRADIENT_BOOSTING",
+      "XGBOOST",
+      "LIGHTGBM",
+      "CATBOOST"
+    ],
+    "scaler_source": "Stage 15 archived StandardScaler fitted on duplicate-safe training rows only"
+  },
+  "threshold_protocol": {
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005,
+    "primary_objective": "maximum validation F1",
+    "tie_breakers": [
+      "maximum validation F2",
+      "maximum validation recall",
+      "minimum validation FPR",
+      "minimum threshold"
+    ]
+  },
+  "ranking_protocol": [
+    "highest validation F1",
+    "highest validation PR-AUC",
+    "highest validation F2",
+    "highest validation recall",
+    "lowest validation FPR",
+    "lowest training time",
+    "lexicographic candidate ID"
+  ],
+  "future_holdout_policy": {
+    "holdout_access_during_baseline_training": false,
+    "holdout_access_during_validation_selection": false,
+    "future_classical_holdout_access": "One predeclared batch only after all classical model files and thresholds are frozen",
+    "post_holdout_model_selection": false,
+    "post_holdout_threshold_adjustment": false,
+    "post_holdout_retraining": false
+  },
+  "existing_classical_results_reused": false,
+  "classical_model_fit_count": 0,
+  "validation_prediction_count": 0,
+  "transformer_policy_modified": false,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false,
+  "next_permitted_action": "Fit the 12 locked classical candidates using only the verified training caches and select their operating thresholds using only the verified validation caches."
+}

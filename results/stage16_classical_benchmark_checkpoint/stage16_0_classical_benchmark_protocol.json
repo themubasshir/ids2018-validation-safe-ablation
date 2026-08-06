@@ -1,0 +1,126 @@
+{
+  "stage": "16.0",
+  "protocol_status": "PREDECLARED_BEFORE_CLASSICAL_TRAINING",
+  "created_at_utc": "2026-08-06T16:41:56.431651+00:00",
+  "purpose": "Create a fair duplicate-safe classical-model benchmark for direct comparison with the locked FT_BALANCED Transformer ensemble.",
+  "locked_transformer_reference": {
+    "commit": "6067823d043765077457d30059e34afa5b63bc29",
+    "architecture": "FT_BALANCED",
+    "parameter_count": 159169,
+    "checkpoint_count": 5,
+    "ensemble_method": "Unweighted arithmetic mean probabilities",
+    "operating_threshold": 0.73,
+    "holdout_metrics": {
+      "accuracy": 0.9331042284787295,
+      "precision": 0.9909064241713113,
+      "recall": 0.7691840607210626,
+      "f1": 0.8660798222374156,
+      "f2": 0.8052187455305353,
+      "fpr": 0.002761774662944705,
+      "fnr": 0.23081593927893737,
+      "mcc": 0.8341528410178524,
+      "roc_auc": 0.9543620498317444,
+      "pr_auc": 0.9287861970480663,
+      "brier_score": 0.06361848212645473,
+      "log_loss": 0.21022838568430788,
+      "true_negative": 33581,
+      "false_positive": 93,
+      "false_negative": 3041,
+      "true_positive": 10134
+    },
+    "policy_modification_permitted": false
+  },
+  "duplicate_safe_data_identity": {
+    "split_path": "/kaggle/working/stage15_transformer/stage15_1_duplicate_safe_split_indices.npz",
+    "split_sha256": "fd66772bc17e6e629f561bc6a2c5e188d1cf2f923c14830646f4af684400417e",
+    "training_rows": 154686,
+    "validation_rows": 37835,
+    "holdout_rows": 46849,
+    "feature_count": 70,
+    "feature_configuration_path": "/kaggle/working/stage15_transformer/stage15_1_feature_configuration.json",
+    "feature_configuration_sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872",
+    "training_only_scaler_path": "/kaggle/working/stage15_transformer/stage15_2_standard_scaler.joblib",
+    "training_only_scaler_sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5"
+  },
+  "candidate_set_status": "PENDING_FINALIZATION_AFTER_ARTIFACT_AUDIT",
+  "discovered_existing_models": [
+    "AdaBoost",
+    "CatBoost",
+    "Decision Tree",
+    "Extra Trees",
+    "Gradient Boosting",
+    "K-Nearest Neighbors",
+    "LightGBM",
+    "Linear SVM",
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost"
+  ],
+  "reuse_policy": {
+    "minimum_requirements": [
+      "Exact Stage 15 duplicate-safe split identity",
+      "Same 70 retained predictors",
+      "Training data restricted to duplicate-safe training rows",
+      "Model and threshold decisions based only on validation",
+      "No holdout-derived hyperparameter or threshold selection"
+    ],
+    "default_when_provenance_is_incomplete": "Retrain from scratch",
+    "exact_reuse_artifact_count": 0,
+    "models_with_exact_reuse_evidence": []
+  },
+  "preprocessing_policy": {
+    "tree_based_models": "Use the 70 retained numerical predictors without StandardScaler transformation.",
+    "scale_sensitive_models": "Use the archived StandardScaler fitted only on duplicate-safe training rows.",
+    "feature_selection": "No holdout-informed feature selection"
+  },
+  "training_policy": {
+    "fit_data": "Duplicate-safe training split only",
+    "model_selection_data": "Duplicate-safe validation split only",
+    "holdout_access_during_training": false,
+    "random_seed_policy": "Use a fixed predefined seed set for stochastic classical models"
+  },
+  "threshold_policy": {
+    "data": "Duplicate-safe validation only",
+    "grid": {
+      "minimum": 0.05,
+      "maximum": 0.95,
+      "step": 0.005
+    },
+    "primary_objective": "Maximum validation F1",
+    "tie_breakers": [
+      "Maximum validation F2",
+      "Maximum validation recall",
+      "Minimum validation FPR",
+      "Minimum threshold"
+    ],
+    "threshold_search_on_holdout": false
+  },
+  "classical_holdout_policy": {
+    "current_holdout_status": "EVALUATED_ONCE_FOR_LOCKED_TRANSFORMER",
+    "development_access": false,
+    "future_access": "One predeclared batch evaluation after all classical candidates, fitted models, and thresholds are frozen.",
+    "post_batch_model_selection": false,
+    "post_batch_threshold_adjustment": false,
+    "post_batch_retraining": false
+  },
+  "primary_comparison_metrics": [
+    "F1",
+    "PR-AUC",
+    "precision",
+    "recall",
+    "F2",
+    "false-positive rate",
+    "false-negative rate",
+    "MCC",
+    "ROC-AUC"
+  ],
+  "efficiency_metrics": [
+    "training time",
+    "inference time",
+    "serialized model size",
+    "parameter count where applicable",
+    "peak memory where measurable"
+  ],
+  "publication_boundary": "Transformer superiority may be claimed only when supported by results generated under this same duplicate-safe comparison protocol.",
+  "holdout_accessed_in_stage16_0": false
+}

@@ -1,0 +1,198 @@
+{
+  "stage": "16.1",
+  "generated_at_utc": "2026-08-06T16:48:13.730483+00:00",
+  "repository_commit": "6067823d043765077457d30059e34afa5b63bc29",
+  "source_identity": {
+    "dataset_path": "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv",
+    "split_path": "/kaggle/working/stage15_transformer/stage15_1_duplicate_safe_split_indices.npz",
+    "split_sha256": "fd66772bc17e6e629f561bc6a2c5e188d1cf2f923c14830646f4af684400417e",
+    "feature_configuration_path": "/kaggle/working/stage15_transformer/stage15_1_feature_configuration.json",
+    "feature_configuration_sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872",
+    "training_only_scaler_path": "/kaggle/working/stage15_transformer/stage15_2_standard_scaler.joblib",
+    "training_only_scaler_sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5"
+  },
+  "feature_names": [
+    "Dst Port",
+    "Protocol",
+    "Flow Duration",
+    "Tot Fwd Pkts",
+    "Tot Bwd Pkts",
+    "TotLen Fwd Pkts",
+    "TotLen Bwd Pkts",
+    "Fwd Pkt Len Max",
+    "Fwd Pkt Len Min",
+    "Fwd Pkt Len Mean",
+    "Fwd Pkt Len Std",
+    "Bwd Pkt Len Max",
+    "Bwd Pkt Len Min",
+    "Bwd Pkt Len Mean",
+    "Bwd Pkt Len Std",
+    "Flow Byts/s",
+    "Flow Pkts/s",
+    "Flow IAT Mean",
+    "Flow IAT Std",
+    "Flow IAT Max",
+    "Flow IAT Min",
+    "Fwd IAT Tot",
+    "Fwd IAT Mean",
+    "Fwd IAT Std",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Bwd IAT Tot",
+    "Bwd IAT Mean",
+    "Bwd IAT Std",
+    "Bwd IAT Max",
+    "Bwd IAT Min",
+    "Fwd PSH Flags",
+    "Fwd URG Flags",
+    "Fwd Header Len",
+    "Bwd Header Len",
+    "Fwd Pkts/s",
+    "Bwd Pkts/s",
+    "Pkt Len Min",
+    "Pkt Len Max",
+    "Pkt Len Mean",
+    "Pkt Len Std",
+    "Pkt Len Var",
+    "FIN Flag Cnt",
+    "SYN Flag Cnt",
+    "RST Flag Cnt",
+    "PSH Flag Cnt",
+    "ACK Flag Cnt",
+    "URG Flag Cnt",
+    "CWE Flag Count",
+    "ECE Flag Cnt",
+    "Down/Up Ratio",
+    "Pkt Size Avg",
+    "Fwd Seg Size Avg",
+    "Bwd Seg Size Avg",
+    "Subflow Fwd Pkts",
+    "Subflow Fwd Byts",
+    "Subflow Bwd Pkts",
+    "Subflow Bwd Byts",
+    "Init Fwd Win Byts",
+    "Init Bwd Win Byts",
+    "Fwd Act Data Pkts",
+    "Fwd Seg Size Min",
+    "Active Mean",
+    "Active Std",
+    "Active Max",
+    "Active Min",
+    "Idle Mean",
+    "Idle Std",
+    "Idle Max",
+    "Idle Min"
+  ],
+  "feature_count": 70,
+  "training": {
+    "rows": 154686,
+    "benign": 110161,
+    "attack": 44525,
+    "attack_rate": 0.2878411750255356
+  },
+  "validation": {
+    "rows": 37835,
+    "benign": 27143,
+    "attack": 10692,
+    "attack_rate": 0.28259548037531385
+  },
+  "cache_files": {
+    "X_train_raw": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_raw_float32.npy",
+      "shape": [
+        154686,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 43312208,
+      "sha256": "af32fd99bd2cbff1cd8805bf18f2a1d161879f8aebcc87ddbb97698272704c83"
+    },
+    "X_validation_raw": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_raw_float32.npy",
+      "shape": [
+        37835,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 10593928,
+      "sha256": "660b222becb2b811fa2856ff9fcb0ac37a956b6a0b3201daefcf2f3dee1104ec"
+    },
+    "X_train_scaled": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_scaled_float32.npy",
+      "shape": [
+        154686,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 43312208,
+      "sha256": "e48e1e71d5a5f9f43a9414b11d0acb056df57642c36fe403d4d82a9f1abca0b3"
+    },
+    "X_validation_scaled": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_scaled_float32.npy",
+      "shape": [
+        37835,
+        70
+      ],
+      "dtype": "float32",
+      "size_bytes": 10593928,
+      "sha256": "a6ad8c00009f3c5fdde99ecfff27d6723a41070d408d7135aca5868da72ffbf4"
+    },
+    "y_train": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_train_int8.npy",
+      "shape": [
+        154686
+      ],
+      "dtype": "int8",
+      "size_bytes": 154814,
+      "sha256": "d908d1af7c14ae63c1f75ec81b23e51f20d08cfb10087b35c95e5709bfbf1d31"
+    },
+    "y_validation": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_validation_int8.npy",
+      "shape": [
+        37835
+      ],
+      "dtype": "int8",
+      "size_bytes": 37963,
+      "sha256": "b16e9950a97b2169f5d5e879173042ecc74186e4e85c0be50ba83003826f8463"
+    },
+    "train_indices": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/train_indices_int64.npy",
+      "shape": [
+        154686
+      ],
+      "dtype": "int64",
+      "size_bytes": 1237616,
+      "sha256": "d52928c77eb1264e7b60391068722cb9c216ba4a2732a9d6e449f0e9d28701ef"
+    },
+    "validation_indices": {
+      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/validation_indices_int64.npy",
+      "shape": [
+        37835
+      ],
+      "dtype": "int64",
+      "size_bytes": 302808,
+      "sha256": "bbc7d9833ef91e1c65cff35173a501b9d0cbc5af02f35ae589db2c27681bf286"
+    }
+  },
+  "cache_runtime_seconds": 3.100809357001708,
+  "software_versions": {
+    "python": "Python 3.12.13",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "joblib": "1.5.3",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.10"
+  },
+  "gpu_status": {
+    "available": true,
+    "query_output": "Tesla P100-PCIE-16GB, 16384, 0, 16270"
+  },
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false
+}

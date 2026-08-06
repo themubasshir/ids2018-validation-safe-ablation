@@ -1,0 +1,19 @@
+{
+  "stage": "16.1",
+  "generated_at_utc": "2026-08-06T16:48:13.738054+00:00",
+  "operation": "Candidate locking and train/validation cache construction",
+  "dataset_csv_loaded": true,
+  "training_indices_loaded": true,
+  "validation_indices_loaded": true,
+  "holdout_indices_loaded": false,
+  "training_features_loaded": true,
+  "validation_features_loaded": true,
+  "holdout_features_loaded": false,
+  "training_labels_loaded": true,
+  "validation_labels_loaded": true,
+  "holdout_labels_loaded": false,
+  "model_training_performed": false,
+  "validation_predictions_generated": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false
+}

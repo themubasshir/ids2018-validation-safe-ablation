@@ -1,0 +1,18 @@
+{
+  "stage": "16.3B",
+  "generated_at_utc": "2026-08-06T18:21:15.901472+00:00",
+  "operation": "Locked 60-configuration validation-only classical hyperparameter search",
+  "candidate_count": 5,
+  "planned_configuration_count": 60,
+  "completed_configuration_count": 60,
+  "new_fit_invocations_this_execution": 60,
+  "retained_model_count": 5,
+  "trial_model_files_retained": false,
+  "training_cache_loaded": true,
+  "validation_cache_loaded": true,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false
+}

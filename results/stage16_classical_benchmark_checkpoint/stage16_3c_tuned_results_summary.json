@@ -1,0 +1,104 @@
+{
+  "stage": "16.3C",
+  "completed_configuration_count": 60,
+  "threshold_evaluation_count": 10860,
+  "retained_tuned_model_count": 5,
+  "tuned_validation_leader": {
+    "candidate_id": "LIGHTGBM",
+    "winning_configuration_id": "LGBM_11",
+    "selected_threshold": 0.47,
+    "accuracy": 0.9384961014933264,
+    "precision": 0.9673706559392112,
+    "recall": 0.8096707818930041,
+    "f1": 0.8815233440252532,
+    "f2": 0.8369588336523774,
+    "fpr": 0.0107578381166414,
+    "fnr": 0.1903292181069958,
+    "roc_auc": 0.9682541016535458,
+    "pr_auc": 0.9466063189077636
+  },
+  "baseline_to_tuned_changes": {
+    "XGBOOST": {
+      "baseline_threshold": 0.44,
+      "tuned_threshold": 0.465,
+      "baseline_f1": 0.8786891919397517,
+      "tuned_f1": 0.8799631128643886,
+      "f1_change": 0.0012739209246368,
+      "baseline_pr_auc": 0.9449217502319894,
+      "tuned_pr_auc": 0.9453847557659392,
+      "pr_auc_change": 0.0004630055339498,
+      "baseline_recall": 0.8075196408529742,
+      "tuned_recall": 0.8032173587729143,
+      "recall_change": -0.0043022820800598,
+      "winning_configuration_id": "XGB_11"
+    },
+    "LIGHTGBM": {
+      "baseline_threshold": 0.395,
+      "tuned_threshold": 0.47,
+      "baseline_f1": 0.8777471123377287,
+      "tuned_f1": 0.8815233440252532,
+      "f1_change": 0.0037762316875245,
+      "baseline_pr_auc": 0.9430224299198858,
+      "tuned_pr_auc": 0.9466063189077636,
+      "pr_auc_change": 0.0035838889878777,
+      "baseline_recall": 0.8031238309016087,
+      "tuned_recall": 0.8096707818930041,
+      "recall_change": 0.0065469509913954,
+      "winning_configuration_id": "LGBM_11"
+    },
+    "CATBOOST": {
+      "baseline_threshold": 0.415,
+      "tuned_threshold": 0.435,
+      "baseline_f1": 0.8763619622487084,
+      "tuned_f1": 0.8775635767022149,
+      "f1_change": 0.0012016144535064,
+      "baseline_pr_auc": 0.9410131099245688,
+      "tuned_pr_auc": 0.9430447292850748,
+      "pr_auc_change": 0.0020316193605061,
+      "baseline_recall": 0.80115974560419,
+      "tuned_recall": 0.8004115226337448,
+      "recall_change": -0.0007482229704451,
+      "winning_configuration_id": "CAT_04"
+    },
+    "K_NEAREST_NEIGHBORS": {
+      "baseline_threshold": 0.605,
+      "tuned_threshold": 0.575,
+      "baseline_f1": 0.8688814830243698,
+      "tuned_f1": 0.869881521513199,
+      "f1_change": 0.0010000384888291,
+      "baseline_pr_auc": 0.8992827888842705,
+      "tuned_pr_auc": 0.9071277191286072,
+      "pr_auc_change": 0.0078449302443367,
+      "baseline_recall": 0.7803030303030303,
+      "tuned_recall": 0.7828282828282829,
+      "recall_change": 0.0025252525252525,
+      "winning_configuration_id": "KNN_02"
+    },
+    "RANDOM_FOREST": {
+      "baseline_threshold": 0.745,
+      "tuned_threshold": 0.565,
+      "baseline_f1": 0.868177298655084,
+      "tuned_f1": 0.8793902564630756,
+      "f1_change": 0.0112129578079915,
+      "baseline_pr_auc": 0.9306468926130664,
+      "tuned_pr_auc": 0.9424412299327124,
+      "pr_auc_change": 0.0117943373196459,
+      "baseline_recall": 0.7758136924803591,
+      "tuned_recall": 0.7985409652076318,
+      "recall_change": 0.0227272727272727,
+      "winning_configuration_id": "RF_09"
+    }
+  },
+  "confirmation_candidate_ids": [
+    "LIGHTGBM",
+    "XGBOOST",
+    "RANDOM_FOREST"
+  ],
+  "confirmation_reason": "The top three tuned candidates fall within 0.0025 validation F1 of the leader. Their ranking must therefore be tested under independent random seeds before a final classical model is selected.",
+  "scientific_status": {
+    "tuned_results_frozen": true,
+    "multi_seed_confirmation_performed": false,
+    "final_classical_winner_frozen": false,
+    "holdout_accessed": false
+  }
+}

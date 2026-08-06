@@ -1,0 +1,26 @@
+{
+  "stage": "15.4B",
+  "generated_at_utc": "2026-08-06T13:33:24.936261+00:00",
+  "purpose": "Resolve the Stage 15.4A FT_BALANCED seed-7 best-checkpoint-at-ceiling condition.",
+  "continuation_integrity": {
+    "model_state_restored": true,
+    "optimizer_state_restored": true,
+    "scheduler_state_restored": true,
+    "shuffle_generator_state_restored": true,
+    "class_weight_unchanged": true,
+    "early_stopping_metric_unchanged": true,
+    "early_stopping_patience_unchanged": true,
+    "only_epoch_ceiling_changed": true
+  },
+  "data_access": {
+    "training_indices_loaded": true,
+    "validation_indices_loaded": true,
+    "holdout_indices_loaded": false,
+    "holdout_features_loaded": false,
+    "holdout_labels_loaded": false,
+    "holdout_probabilities_generated": false,
+    "holdout_metrics_generated": false
+  },
+  "architecture_frozen": false,
+  "next_step": "Add two independent confirmation seeds across all three architectures and aggregate five seeds."
+}

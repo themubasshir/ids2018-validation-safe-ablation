@@ -1,74 +1,75 @@
 # Stage 15 Transformer Checkpoint
 
-This package preserves the complete Transformer feasibility,
-duplicate-safe partitioning, preprocessing, GPU compatibility,
-architecture screening, convergence extension, and independent
-multi-seed confirmation work.
-
-## Repository state
-
-- Base commit: `14337726fd76ec041fda1561be50aae627b1a93d`
-- Generated: `2026-08-06T13:12:36.655412+00:00`
-- Branch: `main`
+This package preserves Transformer feasibility, duplicate-safe
+partitioning, preprocessing, P100 compatibility, architecture
+screening, convergence analysis, and independent multi-seed
+confirmation.
 
 ## Duplicate-safe data
 
 - Training rows: 154,686
 - Validation rows: 37,835
 - Holdout rows: 46,849
-- Retained predictors: 70
+- Predictors: 70
 - Cross-split exact-pattern overlap: zero
 
-## Stage 15.4A independent confirmation
+## Stage 15.4B convergence repair
 
-Architectures:
+The FT_BALANCED seed-7 run originally obtained its best
+checkpoint at the 40-epoch ceiling.
 
-- FT_COMPACT
-- FT_BALANCED
-- FT_DEEP_REGULARIZED
+The run was continued with the exact saved:
 
-Independent confirmation seeds:
+- model state
+- optimizer state
+- scheduler state
+- DataLoader RNG byte state
+- class weighting
+- early-stopping policy
 
-- 7
-- 29
-- 101
+Only the maximum epoch allowance changed.
 
-Completed candidate-seed runs: 9/9
+### Repaired seed-7 result
 
-### Provisional leader
+- Best epoch: 50
+- Final epoch: 56
+- Validation threshold: 0.6949999999999997
+- Validation F1: 0.866284523189161
+- Validation recall: 0.7774036662925552
+- Validation PR-AUC: 0.9291636892316072
+- Convergence repaired: true
 
-- Architecture: FT_BALANCED
+## Repaired three-seed aggregate
+
+- Provisional leader: FT_BALANCED
 - Runner-up: FT_COMPACT
-- Mean validation F1: 0.8641820553183144
-- Validation F1 standard deviation: 0.002178217156171591
-- Worst-seed validation F1: 0.8623930277734025
-- Mean validation PR-AUC: 0.9269290149821972
-- Mean validation recall: 0.771293178700586
-- Seed wins: 2
-- Mean F1 margin: 0.0011366260042979803
+- Mean F1: 0.8654792204569005
+- F1 standard deviation: 0.0016824237516274293
+- Worst-seed F1: 0.8635455023671751
+- Mean PR-AUC: 0.9276945190543403
+- Mean recall: 0.7743795984536725
+- Seed wins: 3 of 3
+- Mean F1 margin: 0.002433791142884112
+- Best-checkpoint ceiling hits: 0
 
-Confirmation status:
+All predefined first-phase lead conditions pass after convergence
+repair.
 
-`CLOSE_OR_UNSTABLE_MULTI_SEED_RANKING`
+## Selection status
 
-The architecture is not frozen because one FT_BALANCED run obtained
-its best checkpoint at the 40-epoch ceiling. Additional convergence
-and independent-seed confirmation are required.
+The architecture remains unfrozen because two final independent
+confirmation seeds remain under the predefined protocol.
 
 ## Scientific boundary
 
-The duplicate-safe holdout remains untouched. It has not been used
+The duplicate-safe holdout remains untouched and has not been used
 for architecture selection, early stopping, threshold selection,
-probability generation, or model evaluation.
+probability generation, or performance evaluation.
 
 ## Next step
 
-1. Continue the ceiling-limited FT_BALANCED seed-7 run.
-2. Add two independent confirmation seeds across all three
-   architectures.
-3. Aggregate five independent seeds.
-4. Freeze the architecture only after convergence and stability
-   conditions pass.
+Evaluate seeds 313 and 997 across all three candidate architectures,
+then aggregate five independent confirmation seeds.
 
 ## Packaging policy
 

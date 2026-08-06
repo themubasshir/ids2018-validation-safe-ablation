@@ -1,0 +1,21 @@
+{
+  "stage": "15.4B",
+  "run_id": "FT_BALANCED_seed_7",
+  "candidate_id": "FT_BALANCED",
+  "seed": 7,
+  "resume_epoch_expected": 40,
+  "maximum_total_epochs": 70,
+  "early_stopping_patience": 6,
+  "early_stopping_metric": "validation PR-AUC",
+  "checkpoint_improvement_tolerance": 1e-07,
+  "scheduler_policy": "Restore the exact ReduceLROnPlateau state from the Stage 15.4A last checkpoint",
+  "optimizer_policy": "Restore the exact AdamW state from the Stage 15.4A last checkpoint",
+  "shuffle_policy": "Restore the exact DataLoader generator state from the Stage 15.4A last checkpoint",
+  "gradient_clip_norm": 1.0,
+  "batch_size": 1024,
+  "threshold_minimum": 0.05,
+  "threshold_maximum": 0.95,
+  "threshold_step": 0.005,
+  "threshold_objective": "maximum validation F1",
+  "holdout_access": false
+}

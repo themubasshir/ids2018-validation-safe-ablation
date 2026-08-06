@@ -1,12 +1,12 @@
 {
-  "stage": "15.4-PK",
-  "generated_at_utc": "2026-08-06T13:12:36.655845+00:00",
+  "stage": "15.4B-PK",
+  "generated_at_utc": "2026-08-06T13:39:32.829485+00:00",
   "repository": {
     "branch": "main",
-    "base_commit": "14337726fd76ec041fda1561be50aae627b1a93d",
+    "base_commit": "0a464e3635595dc09e77c7199399b446efbac98c",
     "package_relative_path": "results/stage15_transformer_checkpoint"
   },
-  "copied_file_count": 119,
+  "copied_file_count": 134,
   "copied_files": [
     {
       "relative_path": "ft_transformer_numeric.py",
@@ -602,6 +602,81 @@
       "relative_path": "stage15_4a_validation_probabilities.npz",
       "size_bytes": 1132899,
       "sha256": "96303e23b8538abc641924ba9b3b10a4088a4bc6bc876a96b179b71ca5a48770"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7/FT_BALANCED_seed_7_combined_history.csv",
+      "size_bytes": 8602,
+      "sha256": "75cd3c5609f2a095ed43c89260c1f3f2fa5c3d684b4e55d826989fda6bcf79c3"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7/FT_BALANCED_seed_7_extended_thresholds.csv",
+      "size_bytes": 37644,
+      "sha256": "7acf6d5812bd6a28920ae96f146a045f1d495988614d9a17db756818cac33b85"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7/FT_BALANCED_seed_7_extended_validation_probabilities.npz",
+      "size_bytes": 131642,
+      "sha256": "f2042f3d0fd9857030e90251e6d3ea6828382e365f057a94fd3096a83bb57eb0"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7/FT_BALANCED_seed_7_extension_history.csv",
+      "size_bytes": 2726,
+      "sha256": "9f17c79cef291be74d8718d41608adf78d38a06b2da1d8e4b29e037fcfb4386e"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7_convergence_repair.py",
+      "size_bytes": 38786,
+      "sha256": "dbb1f8741d76454531239db9ba15e9b2226c1902112a5eb7c7dca58d2eb5c2cd"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7_convergence_repair_metadata.json",
+      "size_bytes": 977,
+      "sha256": "f6a3a306fee5d6d4dbdd6aa12d0903e8e0b78562ab2e677d9c7df1c42f0b8788"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7_convergence_repair_result.json",
+      "size_bytes": 1888,
+      "sha256": "86d62024baa6a81aedfed92e5420620b7c160afa958d383de0f6ee1c332b5699"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7_extension_config.json",
+      "size_bytes": 802,
+      "sha256": "7a7b061ff485be73c5a786cc0fe7b43dd95ae6cf4f04bc41d46bc2018ac336a9"
+    },
+    {
+      "relative_path": "stage15_4b_balanced_seed7_original_vs_extended.csv",
+      "size_bytes": 597,
+      "sha256": "10e7f81214f2f76858aa719833005a49a9677f96e9a3d6442e5815641db73e64"
+    },
+    {
+      "relative_path": "stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+      "size_bytes": 1968137,
+      "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31"
+    },
+    {
+      "relative_path": "stage15_4b_models/FT_BALANCED_seed_7_last_extended.pt",
+      "size_bytes": 1973536,
+      "sha256": "c26dab4a7b110edbeaccd44c90f919a847a6e15227b3c842823b690d1e2125be"
+    },
+    {
+      "relative_path": "stage15_4b_repaired_three_seed_candidate_summary.csv",
+      "size_bytes": 2016,
+      "sha256": "1c175c0d8ed674ee3cfb9ebb7b9e3c5360f86c4f27671d7c3c065288bdc42a1a"
+    },
+    {
+      "relative_path": "stage15_4b_repaired_three_seed_metrics.csv",
+      "size_bytes": 3047,
+      "sha256": "4c578676b9714ba63f02bd2bb3774d0e4a65cab5d2e2427163f6dddb49645d30"
+    },
+    {
+      "relative_path": "stage15_4b_repaired_three_seed_selection.json",
+      "size_bytes": 4244,
+      "sha256": "41c9d97c485771c19210862ba2dfdeacca563be171cbee25a5aef0d239a35860"
+    },
+    {
+      "relative_path": "stage15_4b_repaired_three_seed_winners.csv",
+      "size_bytes": 357,
+      "sha256": "baccce85bb800663b9456be5a2f131a378736835b2adda4f66e484be25ba7747"
     }
   ],
   "cache_policy": {
@@ -612,56 +687,62 @@
       ".pyc"
     ]
   },
-  "duplicate_safe_data": {
-    "training_rows": 154686,
-    "validation_rows": 37835,
-    "holdout_rows": 46849,
-    "retained_predictors": 70,
-    "cross_split_exact_overlap": 0
+  "stage15_4b": {
+    "candidate_id": "FT_BALANCED",
+    "seed": 7,
+    "continued_from_epoch": 40,
+    "best_epoch": 50,
+    "final_epoch": 56,
+    "early_stopping_triggered": true,
+    "convergence_repaired": true,
+    "validation_metrics": {
+      "threshold": 0.6949999999999997,
+      "f1": 0.866284523189161,
+      "f2": 0.8106737408808957,
+      "recall": 0.7774036662925552,
+      "roc_auc": 0.9547162015744053,
+      "pr_auc": 0.9291636892316072
+    }
   },
-  "stage15_4a": {
-    "confirmation_seeds": [
-      7,
-      29,
-      101
-    ],
-    "candidate_count": 3,
-    "completed_run_count": 9,
-    "provisional_leader": "FT_BALANCED",
+  "repaired_three_seed_selection": {
+    "stage": "15.4B",
+    "selection_scope": "Independent seeds 7, 29, and 101 after repairing the FT_BALANCED seed-7 epoch-ceiling condition",
+    "screening_seed_excluded": 42,
+    "provisional_multiseed_leader": "FT_BALANCED",
     "runner_up": "FT_COMPACT",
     "leader_summary": {
       "aggregate_rank": 1,
       "candidate_id": "FT_BALANCED",
       "parameter_count": 159169,
       "seed_count": 3,
-      "seed_win_count": 2,
-      "mean_best_epoch": 39.0,
-      "maximum_best_epoch": 40,
-      "best_checkpoint_ceiling_hits": 1,
-      "mean_threshold": 0.6783333333333331,
-      "threshold_std": 0.04481443219916255,
-      "mean_accuracy": 0.9314920047574997,
-      "accuracy_std": 0.0007942370398475973,
-      "mean_precision": 0.9825601362740684,
-      "precision_std": 0.0044541893323534415,
-      "mean_recall": 0.771293178700586,
-      "recall_std": 0.005863483970729384,
-      "mean_f1": 0.8641820553183144,
-      "f1_std": 0.002178217156171591,
-      "minimum_f1": 0.8623930277734025,
+      "seed_win_count": 3,
+      "mean_best_epoch": 42.333333333333336,
+      "maximum_best_epoch": 50,
+      "best_checkpoint_ceiling_hits": 0,
+      "mean_threshold": 0.693333333333333,
+      "threshold_std": 0.03752776749732571,
+      "mean_accuracy": 0.9319765649090348,
+      "accuracy_std": 0.00047008754052966817,
+      "mean_precision": 0.9809295722573393,
+      "precision_std": 0.005063975703658267,
+      "mean_recall": 0.7743795984536725,
+      "recall_std": 0.005814044352778609,
+      "mean_f1": 0.8654792204569005,
+      "f1_std": 0.0016824237516274293,
+      "minimum_f1": 0.8635455023671751,
       "maximum_f1": 0.8666076358143654,
-      "mean_f2": 0.805941353601176,
-      "f2_std": 0.004566515773898801,
-      "mean_fpr": 0.005403480332559653,
-      "fpr_std": 0.0014445287013258286,
-      "mean_fnr": 0.2287068212994139,
-      "fnr_std": 0.005863483970729375,
-      "mean_roc_auc": 0.9528681873642241,
-      "roc_auc_std": 0.0004838397045489551,
-      "mean_pr_auc": 0.9269290149821972,
-      "pr_auc_std": 0.0006740038174934187,
-      "mean_peak_gpu_memory_mb": 1129.52294921875,
-      "total_runtime_seconds": 2300.7221625059983
+      "mean_f2": 0.8084129981646409,
+      "f2_std": 0.004391952083188445,
+      "mean_fpr": 0.005943828365815598,
+      "fpr_std": 0.001638257244534745,
+      "mean_fnr": 0.22562040154632745,
+      "fnr_std": 0.005814044352778581,
+      "mean_roc_auc": 0.9534313697789104,
+      "roc_auc_std": 0.0012055544708639188,
+      "mean_pr_auc": 0.9276945190543403,
+      "pr_auc_std": 0.0014388394464635637,
+      "mean_peak_gpu_memory_mb": 1129.3714192708333,
+      "total_runtime_seconds": 2613.3817139249977
     },
     "runner_up_summary": {
       "aggregate_rank": 2,
@@ -676,8 +757,8 @@
       "threshold_std": 0.033291640592396934,
       "mean_accuracy": 0.9311484075591383,
       "accuracy_std": 0.00015858332232060457,
-      "mean_precision": 0.9854777421814637,
-      "precision_std": 0.001828235356204556,
+      "mean_precision": 0.9854777421814638,
+      "precision_std": 0.0018282353562045172,
       "mean_recall": 0.7676767676767676,
       "recall_std": 0.0019461889306663903,
       "mean_f1": 0.8630454293140164,
@@ -686,26 +767,71 @@
       "maximum_f1": 0.8635050680111339,
       "mean_f2": 0.8031775761199554,
       "f2_std": 0.0014671044366466133,
-      "mean_fpr": 0.0044578712743617134,
-      "fpr_std": 0.0005790160868548691,
-      "mean_fnr": 0.23232323232323235,
-      "fnr_std": 0.0019461889306663597,
-      "mean_roc_auc": 0.946734107326805,
-      "roc_auc_std": 0.00017372361826975113,
+      "mean_fpr": 0.004457871274361667,
+      "fpr_std": 0.0005790160868548352,
+      "mean_fnr": 0.2323232323232323,
+      "fnr_std": 0.0019461889306663816,
+      "mean_roc_auc": 0.9467341073268049,
+      "roc_auc_std": 0.00017372361826970136,
       "mean_pr_auc": 0.9201649460841425,
-      "pr_auc_std": 0.00018779477789495323,
+      "pr_auc_std": 0.0001877947778949186,
       "mean_peak_gpu_memory_mb": 403.015625,
       "total_runtime_seconds": 884.6973975830006
     },
-    "mean_f1_margin": 0.0011366260042979803,
-    "confirmation_status": "CLOSE_OR_UNSTABLE_MULTI_SEED_RANKING",
+    "mean_f1_margin": 0.002433791142884112,
+    "seed_winners": [
+      {
+        "seed": 7,
+        "winning_candidate_id": "FT_BALANCED",
+        "winning_f1": 0.866284523189161,
+        "winning_pr_auc": 0.9291636892316072,
+        "winning_recall": 0.7774036662925552,
+        "winning_threshold": 0.6949999999999997
+      },
+      {
+        "seed": 29,
+        "winning_candidate_id": "FT_BALANCED",
+        "winning_f1": 0.8666076358143654,
+        "winning_pr_auc": 0.9276318068669108,
+        "winning_recall": 0.7780583613916947,
+        "winning_threshold": 0.6549999999999997
+      },
+      {
+        "seed": 101,
+        "winning_candidate_id": "FT_BALANCED",
+        "winning_f1": 0.8635455023671751,
+        "winning_pr_auc": 0.9262880610645032,
+        "winning_recall": 0.7676767676767676,
+        "winning_threshold": 0.7299999999999998
+      }
+    ],
+    "phase_1_requirements": {
+      "minimum_mean_f1_margin": 0.001,
+      "mean_f1_margin_passed": true,
+      "minimum_seed_wins": 2,
+      "seed_win_requirement_passed": true,
+      "no_best_checkpoint_at_epoch_ceiling": true,
+      "convergence_requirement_passed": true,
+      "all_phase_1_conditions_passed": true
+    },
+    "confirmation_status": "CLEAR_PROVISIONAL_MULTI_SEED_LEAD_AFTER_CONVERGENCE_REPAIR",
     "architecture_frozen": false,
+    "reason_not_frozen": "Two preregistered final independent seeds remain to be evaluated across all candidates.",
+    "recommended_next_step": "Evaluate seeds 313 and 997 across all three architectures, then aggregate five independent seeds.",
     "holdout_status": "UNTOUCHED"
   },
+  "architecture_frozen": false,
+  "holdout_status": "UNTOUCHED",
   "next_step": {
-    "convergence_repair": "Continue FT_BALANCED seed 7 beyond epoch 40",
-    "additional_confirmation_seeds": 2,
-    "candidate_scope": "All three architectures",
+    "additional_seeds": [
+      313,
+      997
+    ],
+    "candidate_scope": [
+      "FT_COMPACT",
+      "FT_BALANCED",
+      "FT_DEEP_REGULARIZED"
+    ],
     "target_independent_seed_count": 5
   }
 }

@@ -1,0 +1,10 @@
+Model,Feature,Reference-stable top-10 cases,Reference-stable top-10 rate,Mean absolute attribution,Mean signed attribution,Mean sign consistency,Dominant direction
+CNN,Pkt Size Avg,13,0.40625,1.000685758537885,0.6796057475532175,0.7908653846153846,Predominantly increases attack logit
+CNN,Pkt Len Max,11,0.34375,0.7562187535298501,0.5607024390979484,0.8153409090909091,Predominantly increases attack logit
+CNN,Fwd Seg Size Min,10,0.3125,3.78173275955849,3.78173275955849,0.8875,Predominantly increases attack logit
+MLP,Fwd Pkt Len Max,16,0.5,2.68265716494313,2.385895082772354,0.791015625,Predominantly increases attack logit
+MLP,Pkt Len Max,15,0.46875,0.8878130103228875,0.7263837250817122,0.8145833333333333,Predominantly increases attack logit
+MLP,Fwd Seg Size Min,13,0.40625,5.308711485736823,5.308711485736823,0.9326923076923076,Predominantly increases attack logit
+MLP,Bwd Pkt Len Max,13,0.40625,1.1320768737731075,0.4474242840474914,0.7668269230769231,Predominantly increases attack logit
+MLP,Fwd Seg Size Avg,12,0.375,1.843523466483788,-1.843523466483788,0.7942708333333334,Predominantly decreases attack logit
+MLP,Pkt Len Mean,10,0.3125,0.9840982538636942,0.6754544040719775,0.8,Predominantly increases attack logit

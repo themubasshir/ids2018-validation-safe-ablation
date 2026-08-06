@@ -1,0 +1,91 @@
+{
+  "stage": "14.4A",
+  "purpose": "Compute the complete outcome-stratified Integrated Gradients panel for the selected MLP and CNN models.",
+  "environment": {
+    "python_version": "3.12.13",
+    "tensorflow_version": "2.19.0",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3"
+  },
+  "seed": 42,
+  "target": "Pre-sigmoid attack logit",
+  "integration_method": "Trapezoidal rule over a straight-line path",
+  "integration_steps": 128,
+  "primary_baseline": "benign_reference_32",
+  "reference_count": 32,
+  "case_count": 64,
+  "cases_per_model": {
+    "cnn": 32,
+    "mlp": 32
+  },
+  "cases_per_model_outcome": {
+    "cnn:FN": 8,
+    "cnn:FP": 8,
+    "cnn:TN": 8,
+    "cnn:TP": 8,
+    "mlp:FN": 8,
+    "mlp:FP": 8,
+    "mlp:TN": 8,
+    "mlp:TP": 8
+  },
+  "completeness_pass_count": 64,
+  "completeness_pass_rate": 1.0,
+  "maximum_absolute_completeness_error": 0.025058062371480005,
+  "maximum_normalized_completeness_error": 0.005070277007034774,
+  "cross_model_feature_summary": {
+    "mlp_top10_features": [
+      "Bwd Pkt Len Std",
+      "Dst Port",
+      "ECE Flag Cnt",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Std",
+      "Fwd Seg Size Avg",
+      "Fwd Seg Size Min",
+      "Init Fwd Win Byts",
+      "PSH Flag Cnt",
+      "Pkt Len Max"
+    ],
+    "cnn_top10_features": [
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Std",
+      "ECE Flag Cnt",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Std",
+      "Fwd Seg Size Min",
+      "Init Bwd Win Byts",
+      "Init Fwd Win Byts",
+      "Pkt Size Avg",
+      "RST Flag Cnt"
+    ],
+    "shared_top10_features": [
+      "Bwd Pkt Len Std",
+      "ECE Flag Cnt",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Std",
+      "Fwd Seg Size Min",
+      "Init Fwd Win Byts"
+    ],
+    "top10_union_features": [
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Std",
+      "Dst Port",
+      "ECE Flag Cnt",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Std",
+      "Fwd Seg Size Avg",
+      "Fwd Seg Size Min",
+      "Init Bwd Win Byts",
+      "Init Fwd Win Byts",
+      "PSH Flag Cnt",
+      "Pkt Len Max",
+      "Pkt Size Avg",
+      "RST Flag Cnt"
+    ],
+    "top10_shared_count": 6,
+    "top10_jaccard": 0.42857142857142855,
+    "absolute_global_importance_cosine": 0.9106885334707071,
+    "signed_global_attribution_cosine": 0.7905788222220796
+  },
+  "elapsed_minutes": 0.28256831169128416,
+  "interpretation_note": "Positive attributions increase the attack logit relative to the benign-reference distribution; negative attributions decrease it. Attribution magnitudes and directions remain conditional on the selected baseline distribution."
+}

@@ -1,0 +1,3 @@
+model,model_display,sample_count,maximum_probability_reconstruction_error,mean_probability_reconstruction_error,allclose_1e_6
+mlp,MLP,1024,8.621626923499548e-08,8.909073893449702e-09,True
+cnn,CNN,1024,9.995984862065654e-08,1.1581628830487275e-08,True

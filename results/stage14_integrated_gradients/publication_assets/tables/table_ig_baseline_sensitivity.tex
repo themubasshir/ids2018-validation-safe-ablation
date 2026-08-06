@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Baseline sensitivity on the neural cross-model disagreement panel.}
+\label{tab:ig_baseline_sensitivity}
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+Model & Comparison baseline & Cases & Mean signed cosine & Minimum signed cosine & Mean absolute cosine & Mean top-10 Jaccard & Mean top-10 sign agreement & Strong agreement cases & Moderate agreement cases & Weak agreement cases \\
+\midrule
+cnn & benign\_median & 12 & 0.7506 & 0.4754 & 0.8058 & 0.4228 & 0.7083 & 2 & 5 & 5 \\
+cnn & zero\_scaled & 12 & 0.7391 & 0.5379 & 0.8193 & 0.4818 & 0.8250 & 5 & 5 & 2 \\
+mlp & benign\_median & 12 & 0.5919 & 0.2430 & 0.6459 & 0.4715 & 0.6917 & 4 & 1 & 7 \\
+mlp & zero\_scaled & 12 & 0.7424 & 0.4582 & 0.7759 & 0.5291 & 0.9750 & 6 & 5 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}

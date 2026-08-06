@@ -1,0 +1,23 @@
+Model,Outcome,Reliability classification,Cases,Rate within model–outcome group
+MLP,TP,Reference-robust,3,0.375
+MLP,TP,Moderately reference-stable,4,0.5
+MLP,TP,Reference-sensitive,1,0.125
+MLP,TN,Reference-robust,1,0.125
+MLP,TN,Moderately reference-stable,1,0.125
+MLP,TN,Reference-sensitive,6,0.75
+MLP,FP,Reference-robust,1,0.125
+MLP,FP,Moderately reference-stable,6,0.75
+MLP,FP,Reference-sensitive,1,0.125
+MLP,FN,Moderately reference-stable,2,0.25
+MLP,FN,Reference-sensitive,6,0.75
+CNN,TP,Reference-robust,2,0.25
+CNN,TP,Moderately reference-stable,5,0.625
+CNN,TP,Reference-sensitive,1,0.125
+CNN,TN,Reference-robust,2,0.25
+CNN,TN,Moderately reference-stable,2,0.25
+CNN,TN,Reference-sensitive,4,0.5
+CNN,FP,Reference-robust,1,0.125
+CNN,FP,Moderately reference-stable,6,0.75
+CNN,FP,Reference-sensitive,1,0.125
+CNN,FN,Moderately reference-stable,3,0.375
+CNN,FN,Reference-sensitive,5,0.625

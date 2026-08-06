@@ -1,0 +1,36 @@
+{
+  "stage": "14.4B",
+  "purpose": "Separate numerically complete Integrated Gradients explanations according to sensitivity across the 32 benign references and audit disagreement-case sensitivity to alternative baseline definitions.",
+  "environment": {
+    "python_version": "3.12.13",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3"
+  },
+  "case_count": 64,
+  "reference_count_per_case": 32,
+  "case_reliability_criteria": {
+    "reference_robust": {
+      "mean_reference_cosine_minimum": 0.65,
+      "minimum_reference_cosine_minimum": 0.0,
+      "mean_top10_jaccard_minimum": 0.4,
+      "mean_top10_sign_agreement_minimum": 0.7
+    },
+    "moderately_reference_stable": {
+      "mean_reference_cosine_minimum": 0.5,
+      "mean_top10_jaccard_minimum": 0.3,
+      "mean_top10_sign_agreement_minimum": 0.6
+    }
+  },
+  "feature_direction_thresholds": {
+    "reference_stable": 0.75,
+    "moderately_stable": 0.65
+  },
+  "case_reliability_counts": {
+    "Reference-robust": 10,
+    "Moderately reference-stable": 29,
+    "Reference-sensitive": 25
+  },
+  "negative_reference_cosine_case_count": 22,
+  "interpretation": "Numerical completeness establishes that the attributions reconstruct the selected logit difference. It does not establish that the same feature ranking or direction is obtained from every valid benign reference.",
+  "cnn_scope_warning": "The saved CNN operates over the fixed ordered 78-feature vector. Integrated Gradients identifies sensitivity to feature positions, but does not by itself validate spatial locality between adjacent tabular features."
+}

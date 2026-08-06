@@ -1,0 +1,32 @@
+\begin{table}
+\caption{Integrated Gradients reference reliability by neural architecture and prediction outcome.}
+\label{tab:ig_reliability_by_outcome}
+\begin{tabular}{lllrr}
+\toprule
+Model & Outcome & Reliability classification & Cases & Rate within model–outcome group \\
+\midrule
+MLP & TP & Reference-robust & 3 & 0.3750 \\
+MLP & TP & Moderately reference-stable & 4 & 0.5000 \\
+MLP & TP & Reference-sensitive & 1 & 0.1250 \\
+MLP & TN & Reference-robust & 1 & 0.1250 \\
+MLP & TN & Moderately reference-stable & 1 & 0.1250 \\
+MLP & TN & Reference-sensitive & 6 & 0.7500 \\
+MLP & FP & Reference-robust & 1 & 0.1250 \\
+MLP & FP & Moderately reference-stable & 6 & 0.7500 \\
+MLP & FP & Reference-sensitive & 1 & 0.1250 \\
+MLP & FN & Moderately reference-stable & 2 & 0.2500 \\
+MLP & FN & Reference-sensitive & 6 & 0.7500 \\
+CNN & TP & Reference-robust & 2 & 0.2500 \\
+CNN & TP & Moderately reference-stable & 5 & 0.6250 \\
+CNN & TP & Reference-sensitive & 1 & 0.1250 \\
+CNN & TN & Reference-robust & 2 & 0.2500 \\
+CNN & TN & Moderately reference-stable & 2 & 0.2500 \\
+CNN & TN & Reference-sensitive & 4 & 0.5000 \\
+CNN & FP & Reference-robust & 1 & 0.1250 \\
+CNN & FP & Moderately reference-stable & 6 & 0.7500 \\
+CNN & FP & Reference-sensitive & 1 & 0.1250 \\
+CNN & FN & Moderately reference-stable & 3 & 0.3750 \\
+CNN & FN & Reference-sensitive & 5 & 0.6250 \\
+\bottomrule
+\end{tabular}
+\end{table}

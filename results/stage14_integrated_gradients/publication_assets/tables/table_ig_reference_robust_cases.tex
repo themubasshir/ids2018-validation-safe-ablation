@@ -1,0 +1,20 @@
+\begin{table}
+\caption{Integrated Gradients cases satisfying every study-specific reference-robustness criterion.}
+\label{tab:ig_reference_robust_cases}
+\begin{tabular}{llllrrrrrrr}
+\toprule
+Case & Model & Outcome & Traffic category & Attack probability & Mean reference cosine & Minimum reference cosine & Mean top-10 Jaccard & Mean top-10 sign agreement & Absolute completeness error & Normalized completeness error \\
+\midrule
+CNN\_FP\_05 & CNN & FP & Benign & 0.8226 & 0.8560 & 0.5696 & 0.4056 & 0.8906 & 0.0116 & 0.0017 \\
+CNN\_TN\_06 & CNN & TN & Benign & 0.0010 & 0.7183 & 0.2521 & 0.4262 & 0.8062 & 0.0070 & 0.0041 \\
+CNN\_TN\_07 & CNN & TN & Benign & 0.0001 & 0.7185 & 0.2147 & 0.4229 & 0.7188 & 0.0067 & 0.0016 \\
+CNN\_TP\_03 & CNN & TP & FTP-BruteForce & 1.0000 & 0.7916 & 0.5571 & 0.4277 & 0.7000 & 0.0099 & 0.0006 \\
+CNN\_TP\_08 & CNN & TP & DoS attacks-GoldenEye & 1.0000 & 0.7305 & 0.1057 & 0.5233 & 0.8219 & 0.0065 & 0.0003 \\
+MLP\_FP\_04 & MLP & FP & Benign & 0.6669 & 0.9726 & 0.7859 & 0.4179 & 0.7156 & 0.0019 & 0.0003 \\
+MLP\_TN\_08 & MLP & TN & Benign & 0.0000 & 0.9010 & 0.5823 & 0.5589 & 0.8500 & 0.0031 & 0.0002 \\
+MLP\_TP\_05 & MLP & TP & DoS attacks-SlowHTTPTest & 1.0000 & 0.8070 & 0.4835 & 0.4840 & 0.8062 & 0.0001 & 0.0000 \\
+MLP\_TP\_06 & MLP & TP & DoS attacks-SlowHTTPTest & 1.0000 & 0.8291 & 0.5440 & 0.5189 & 0.8312 & 0.0045 & 0.0002 \\
+MLP\_TP\_07 & MLP & TP & FTP-BruteForce & 1.0000 & 0.8291 & 0.5440 & 0.5189 & 0.8312 & 0.0045 & 0.0002 \\
+\bottomrule
+\end{tabular}
+\end{table}

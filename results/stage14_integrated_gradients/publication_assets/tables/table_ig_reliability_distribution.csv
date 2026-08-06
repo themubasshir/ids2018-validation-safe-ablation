@@ -1,0 +1,4 @@
+Reliability classification,Cases,Rate
+Reference-robust,10,0.15625
+Moderately reference-stable,29,0.453125
+Reference-sensitive,25,0.390625

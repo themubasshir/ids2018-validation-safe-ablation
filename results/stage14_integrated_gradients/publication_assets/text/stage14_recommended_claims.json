@@ -1,0 +1,15 @@
+{
+  "primary_methodological_claim": "Integrated Gradients explanations were numerically complete but not uniformly invariant to valid benign reference selection.",
+  "primary_reporting_decision": "Use aggregate recurring feature patterns as the main neural explanation result and restrict individual main-text examples to reference-robust cases.",
+  "qualified_case_count": 10,
+  "moderately_stable_case_count": 29,
+  "reference_sensitive_case_count": 25,
+  "false_negative_warning": "No MLP or CNN false-negative case satisfied every study-specific reference-robustness criterion.",
+  "cnn_scope_warning": "The one-dimensional CNN explanation does not establish meaningful spatial locality between adjacent tabular features.",
+  "claims_to_avoid": [
+    "All numerically complete Integrated Gradients explanations are stable.",
+    "The selected feature ordering represents natural spatial or temporal locality.",
+    "A single zero baseline is architecture-neutral.",
+    "Individual false-negative explanations are reference-robust."
+  ]
+}

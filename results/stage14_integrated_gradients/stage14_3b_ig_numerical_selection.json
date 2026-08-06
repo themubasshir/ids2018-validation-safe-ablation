@@ -1,0 +1,104 @@
+{
+  "stage": "14.3B",
+  "purpose": "Audit Integrated Gradients numerical completeness and convergence before computing the complete outcome-stratified neural explanation panel.",
+  "environment": {
+    "python_version": "3.12.13",
+    "tensorflow_version": "2.19.0",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3"
+  },
+  "seed": 42,
+  "target": "Pre-sigmoid attack logit",
+  "integration_method": "Trapezoidal rule over a straight-line path",
+  "audited_step_counts": [
+    16,
+    32,
+    64,
+    128
+  ],
+  "maximum_grid_steps": 128,
+  "gradient_batch_size": 512,
+  "completeness_tolerances": {
+    "absolute": 0.05,
+    "normalized": 0.01,
+    "normalized_denominator": "max(abs(input_logit - mean_baseline_logit), 1.0)"
+  },
+  "baseline_roles": {
+    "zero_scaled": {
+      "display_name": "Zero standardized vector",
+      "semantic_role": "Sensitivity control only",
+      "reference_count": 1,
+      "primary_candidate": false
+    },
+    "benign_median": {
+      "display_name": "Benign training median",
+      "semantic_role": "Single benign reference sensitivity baseline",
+      "reference_count": 1,
+      "primary_candidate": false
+    },
+    "benign_reference_32": {
+      "display_name": "Mean IG over 32 benign training references",
+      "semantic_role": "Primary distribution-aware baseline candidate",
+      "reference_count": 32,
+      "primary_candidate": true
+    }
+  },
+  "primary_baseline": "benign_reference_32",
+  "selected_integration_steps": 128,
+  "selection_status": "Lowest audited resolution satisfying all completeness and convergence criteria.",
+  "selection_criteria": {
+    "worst_model_completeness_pass_rate": ">= 0.95",
+    "worst_p95_normalized_error": "<= 0.01",
+    "worst_mean_signed_cosine_to_128": ">= 0.995",
+    "worst_mean_top10_jaccard_to_128": ">= 0.95"
+  },
+  "cross_model_primary_summary": [
+    {
+      "integration_steps": 16,
+      "models": 2,
+      "overall_pass_rate": 0.5,
+      "worst_model_pass_rate": 0.16666666666666666,
+      "worst_p95_normalized_error": 0.051189686386511085,
+      "worst_maximum_normalized_error": 0.05243106082457394,
+      "worst_mean_signed_cosine": 0.9996415295646335,
+      "worst_mean_top10_jaccard": 0.9848484848484849,
+      "worst_minimum_top10_jaccard": 0.8181818181818182
+    },
+    {
+      "integration_steps": 32,
+      "models": 2,
+      "overall_pass_rate": 0.625,
+      "worst_model_pass_rate": 0.25,
+      "worst_p95_normalized_error": 0.020689895905750315,
+      "worst_maximum_normalized_error": 0.02164132890004489,
+      "worst_mean_signed_cosine": 0.9999153378486647,
+      "worst_mean_top10_jaccard": 0.9848484848484849,
+      "worst_minimum_top10_jaccard": 0.8181818181818182
+    },
+    {
+      "integration_steps": 64,
+      "models": 2,
+      "overall_pass_rate": 0.9166666666666667,
+      "worst_model_pass_rate": 0.8333333333333334,
+      "worst_p95_normalized_error": 0.005976151536297896,
+      "worst_maximum_normalized_error": 0.006185383730203381,
+      "worst_mean_signed_cosine": 0.9999938394114398,
+      "worst_mean_top10_jaccard": 1.0,
+      "worst_minimum_top10_jaccard": 1.0
+    },
+    {
+      "integration_steps": 128,
+      "models": 2,
+      "overall_pass_rate": 1.0,
+      "worst_model_pass_rate": 1.0,
+      "worst_p95_normalized_error": 0.0028593598605957875,
+      "worst_maximum_normalized_error": 0.0033549092770213083,
+      "worst_mean_signed_cosine": 1.0,
+      "worst_mean_top10_jaccard": 1.0,
+      "worst_minimum_top10_jaccard": 1.0
+    }
+  ],
+  "case_count": 12,
+  "model_count": 2,
+  "elapsed_minutes": 0.16570839484532673
+}

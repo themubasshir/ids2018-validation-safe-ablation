@@ -1,0 +1,96 @@
+{
+  "stage": "14.3A",
+  "purpose": "Reconstruct neural holdout predictions, select representative explanation cases, validate exact logit targets, and construct reproducible Integrated Gradients baselines.",
+  "environment": {
+    "python_version": "3.12.13",
+    "tensorflow_version": "2.19.0",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3"
+  },
+  "seed": 42,
+  "feature_count": 78,
+  "split_counts": {
+    "train": 192593,
+    "validation": 48149,
+    "holdout": 60186
+  },
+  "selected_thresholds": {
+    "mlp": 0.5,
+    "cnn": 0.5
+  },
+  "holdout_metrics": [
+    {
+      "model": "mlp",
+      "model_display": "MLP",
+      "threshold": 0.5,
+      "accuracy": 0.9394875884757252,
+      "precision": 0.9951793289625916,
+      "recall": 0.8535516414454644,
+      "f1": 0.9189405742265747,
+      "f2": 0.8785578101593354,
+      "fpr": 0.002777777777777778,
+      "fnr": 0.14644835855453567,
+      "roc_auc": 0.9667888671821163,
+      "pr_auc": 0.9654608078124768,
+      "tp": 20644,
+      "tn": 35900,
+      "fp": 100,
+      "fn": 3542
+    },
+    {
+      "model": "cnn",
+      "model_display": "CNN",
+      "threshold": 0.5,
+      "accuracy": 0.9370451600039876,
+      "precision": 0.9899120910794063,
+      "recall": 0.8520218308112131,
+      "f1": 0.9158056129591361,
+      "f2": 0.8764386148467604,
+      "fpr": 0.005833333333333334,
+      "fnr": 0.1479781691887869,
+      "roc_auc": 0.9629712729816147,
+      "pr_auc": 0.962466058506949,
+      "tp": 20607,
+      "tn": 35790,
+      "fp": 210,
+      "fn": 3579
+    }
+  ],
+  "model_specific_case_count": 64,
+  "unique_shared_case_count": 64,
+  "disagreement_case_count": 12,
+  "case_selection": {
+    "cases_per_model_outcome": 8,
+    "method": "Eight evenly spaced positions after sorting each outcome group by absolute distance from the validation-selected threshold.",
+    "purpose": "Cover boundary-near through high-confidence cases without outcome cherry-picking."
+  },
+  "disagreement_selection": {
+    "per_true_class": 6,
+    "method": "Largest absolute MLP\u2013CNN probability differences among cases with different thresholded predictions."
+  },
+  "ig_target": "Pre-sigmoid attack logit",
+  "ig_target_reason": "The logit avoids severe sigmoid saturation and supports direct completeness testing.",
+  "baseline_strategies": {
+    "zero_scaled": "Zero standardized vector, equivalent to the repository scaler's overall training mean.",
+    "benign_median": "Feature-wise median of benign training rows.",
+    "benign_reference_32": "Thirty-two deterministic benign training records sampled without replacement using seed 42; intended for averaged multi-baseline IG."
+  },
+  "logit_validation": [
+    {
+      "model": "mlp",
+      "model_display": "MLP",
+      "sample_count": 1024,
+      "maximum_probability_reconstruction_error": 8.621626923499548e-08,
+      "mean_probability_reconstruction_error": 8.909073893449702e-09,
+      "allclose_1e_6": true
+    },
+    {
+      "model": "cnn",
+      "model_display": "CNN",
+      "sample_count": 1024,
+      "maximum_probability_reconstruction_error": 9.995984862065654e-08,
+      "mean_probability_reconstruction_error": 1.1581628830487275e-08,
+      "allclose_1e_6": true
+    }
+  ]
+}

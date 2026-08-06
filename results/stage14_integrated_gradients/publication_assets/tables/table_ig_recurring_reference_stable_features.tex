@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Recurring top-10 features with reference-stable attribution directions.}
+\label{tab:ig_recurring_reference_stable_features}
+\begin{tabular}{llrrrrrl}
+\toprule
+Model & Feature & Reference-stable top-10 cases & Reference-stable top-10 rate & Mean absolute attribution & Mean signed attribution & Mean sign consistency & Dominant direction \\
+\midrule
+CNN & Pkt Size Avg & 13 & 0.4062 & 1.0007 & 0.6796 & 0.7909 & Predominantly increases attack logit \\
+CNN & Pkt Len Max & 11 & 0.3438 & 0.7562 & 0.5607 & 0.8153 & Predominantly increases attack logit \\
+CNN & Fwd Seg Size Min & 10 & 0.3125 & 3.7817 & 3.7817 & 0.8875 & Predominantly increases attack logit \\
+MLP & Fwd Pkt Len Max & 16 & 0.5000 & 2.6827 & 2.3859 & 0.7910 & Predominantly increases attack logit \\
+MLP & Pkt Len Max & 15 & 0.4688 & 0.8878 & 0.7264 & 0.8146 & Predominantly increases attack logit \\
+MLP & Fwd Seg Size Min & 13 & 0.4062 & 5.3087 & 5.3087 & 0.9327 & Predominantly increases attack logit \\
+MLP & Bwd Pkt Len Max & 13 & 0.4062 & 1.1321 & 0.4474 & 0.7668 & Predominantly increases attack logit \\
+MLP & Fwd Seg Size Avg & 12 & 0.3750 & 1.8435 & -1.8435 & 0.7943 & Predominantly decreases attack logit \\
+MLP & Pkt Len Mean & 10 & 0.3125 & 0.9841 & 0.6755 & 0.8000 & Predominantly increases attack logit \\
+\bottomrule
+\end{tabular}
+\end{table}

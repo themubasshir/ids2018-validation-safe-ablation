@@ -1,0 +1,54 @@
+{
+  "mlp_top10_features": [
+    "Bwd Pkt Len Std",
+    "Dst Port",
+    "ECE Flag Cnt",
+    "Fwd Pkt Len Max",
+    "Fwd Pkt Len Std",
+    "Fwd Seg Size Avg",
+    "Fwd Seg Size Min",
+    "Init Fwd Win Byts",
+    "PSH Flag Cnt",
+    "Pkt Len Max"
+  ],
+  "cnn_top10_features": [
+    "Bwd Pkt Len Max",
+    "Bwd Pkt Len Std",
+    "ECE Flag Cnt",
+    "Fwd Pkt Len Max",
+    "Fwd Pkt Len Std",
+    "Fwd Seg Size Min",
+    "Init Bwd Win Byts",
+    "Init Fwd Win Byts",
+    "Pkt Size Avg",
+    "RST Flag Cnt"
+  ],
+  "shared_top10_features": [
+    "Bwd Pkt Len Std",
+    "ECE Flag Cnt",
+    "Fwd Pkt Len Max",
+    "Fwd Pkt Len Std",
+    "Fwd Seg Size Min",
+    "Init Fwd Win Byts"
+  ],
+  "top10_union_features": [
+    "Bwd Pkt Len Max",
+    "Bwd Pkt Len Std",
+    "Dst Port",
+    "ECE Flag Cnt",
+    "Fwd Pkt Len Max",
+    "Fwd Pkt Len Std",
+    "Fwd Seg Size Avg",
+    "Fwd Seg Size Min",
+    "Init Bwd Win Byts",
+    "Init Fwd Win Byts",
+    "PSH Flag Cnt",
+    "Pkt Len Max",
+    "Pkt Size Avg",
+    "RST Flag Cnt"
+  ],
+  "top10_shared_count": 6,
+  "top10_jaccard": 0.42857142857142855,
+  "absolute_global_importance_cosine": 0.9106885334707071,
+  "signed_global_attribution_cosine": 0.7905788222220796
+}

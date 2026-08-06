@@ -1,0 +1,3 @@
+scaler_id,scaler_display,model,model_display,validation_rows,maximum_absolute_difference,mean_absolute_difference,median_absolute_difference,p99_absolute_difference,correlation,allclose_1e_6
+repository_scaler,Repository scaler,mlp,MLP,48149,4.766234588671203e-07,7.494004473968774e-09,2.2311401615127124e-09,4.649775848020173e-08,0.9999999999999991,True
+repository_scaler,Repository scaler,cnn,CNN,48149,7.060440063710871e-07,7.500330729956949e-09,2.3721313802127497e-09,6.134641265087552e-08,0.9999999999999988,True

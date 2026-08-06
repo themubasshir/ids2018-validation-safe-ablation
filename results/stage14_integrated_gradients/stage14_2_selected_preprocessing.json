@@ -1,0 +1,48 @@
+{
+  "stage": "14.2A-R",
+  "purpose": "Recover the authoritative neural preprocessing metadata after a Kaggle runtime reset.",
+  "environment": {
+    "python_version": "3.12.13",
+    "tensorflow_version": "2.19.0",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3"
+  },
+  "selected_scaler_id": "repository_scaler",
+  "selected_scaler_display": "Repository scaler",
+  "selected_scaler_source": "/kaggle/working/ids2018-validation-safe-ablation/metadata/standard_scaler.joblib",
+  "selected_scaler_n_samples_seen": 192593,
+  "selected_minimum_correlation": 0.9999999999999988,
+  "selected_worst_model_mean_difference": 7.500330729956949e-09,
+  "selected_worst_maximum_difference": 7.060440063710871e-07,
+  "selected_scaler_reproduces_archived": true,
+  "integrated_gradients_ready": true,
+  "selected_reproduction": [
+    {
+      "scaler_id": "repository_scaler",
+      "scaler_display": "Repository scaler",
+      "model": "mlp",
+      "model_display": "MLP",
+      "validation_rows": 48149,
+      "maximum_absolute_difference": 4.766234588671203e-07,
+      "mean_absolute_difference": 7.494004473968774e-09,
+      "median_absolute_difference": 2.2311401615127124e-09,
+      "p99_absolute_difference": 4.649775848020173e-08,
+      "correlation": 0.9999999999999991,
+      "allclose_1e_6": true
+    },
+    {
+      "scaler_id": "repository_scaler",
+      "scaler_display": "Repository scaler",
+      "model": "cnn",
+      "model_display": "CNN",
+      "validation_rows": 48149,
+      "maximum_absolute_difference": 7.060440063710871e-07,
+      "mean_absolute_difference": 7.500330729956949e-09,
+      "median_absolute_difference": 2.3721313802127497e-09,
+      "p99_absolute_difference": 6.134641265087552e-08,
+      "correlation": 0.9999999999999988,
+      "allclose_1e_6": true
+    }
+  ],
+  "recovery_note": "This file was regenerated because the prior /kaggle/working Stage 14 directory was removed during a Kaggle runtime reset."
+}

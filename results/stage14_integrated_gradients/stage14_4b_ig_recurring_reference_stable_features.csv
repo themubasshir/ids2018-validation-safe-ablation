@@ -1,0 +1,74 @@
+model,model_display,feature_index,feature_name,stable_top10_case_count,mean_absolute_attribution,mean_attribution,positive_case_fraction,mean_reference_sign_consistency,scope,selected_outcome,available_case_count,stable_top10_case_rate,dominant_direction
+cnn,CNN,12,Bwd Pkt Len Min,3,0.856899128380261,0.6687943266267768,0.6666666666666666,0.8645833333333334,Model and outcome,FN,8,0.375,Direction varies across cases
+cnn,CNN,40,Pkt Len Max,3,0.3687089515681934,0.018684403941966576,0.6666666666666666,0.8854166666666666,Model and outcome,FN,8,0.375,Direction varies across cases
+cnn,CNN,69,Fwd Seg Size Min,2,1.0182005903568911,1.0182005903568911,1.0,0.75,Model and outcome,FN,8,0.25,Predominantly increases attack logit
+cnn,CNN,11,Bwd Pkt Len Max,2,0.5713573970123278,-0.1374363719324376,0.5,0.828125,Model and outcome,FN,8,0.25,Direction varies across cases
+cnn,CNN,53,Pkt Size Avg,2,0.47739716904775553,0.47739716904775553,1.0,0.78125,Model and outcome,FN,8,0.25,Predominantly increases attack logit
+cnn,CNN,2,Flow Duration,2,0.4396605400479693,0.4396605400479693,1.0,0.8125,Model and outcome,FN,8,0.25,Predominantly increases attack logit
+cnn,CNN,8,Fwd Pkt Len Min,2,0.38998333812504693,0.38998333812504693,1.0,0.8125,Model and outcome,FN,8,0.25,Predominantly increases attack logit
+cnn,CNN,53,Pkt Size Avg,6,0.9373469397467672,0.9373469397467672,1.0,0.7708333333333334,Model and outcome,FP,8,0.75,Predominantly increases attack logit
+cnn,CNN,40,Pkt Len Max,4,1.0798591294392748,1.0798591294392748,1.0,0.765625,Model and outcome,FP,8,0.5,Predominantly increases attack logit
+cnn,CNN,69,Fwd Seg Size Min,2,4.414084940598324,4.414084940598324,1.0,0.953125,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+cnn,CNN,66,Init Fwd Win Byts,2,2.1552416575828928,2.1552416575828928,1.0,0.9375,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+cnn,CNN,25,Fwd IAT Min,2,1.468347043970113,1.468347043970113,1.0,0.953125,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+cnn,CNN,13,Bwd Pkt Len Mean,2,0.9134292877327429,0.9134292877327429,1.0,0.75,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+cnn,CNN,41,Pkt Len Mean,2,0.9077687220751902,0.9077687220751902,1.0,0.8125,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+cnn,CNN,42,Pkt Len Std,2,0.8116818414471045,0.24895127350768803,0.5,0.828125,Model and outcome,FP,8,0.25,Direction varies across cases
+cnn,CNN,54,Fwd Seg Size Avg,2,0.475608723499342,0.475608723499342,1.0,0.78125,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+cnn,CNN,67,Init Bwd Win Byts,3,1.0243066865008008,0.30748866867725866,0.3333333333333333,0.84375,Model and outcome,TN,8,0.375,Direction varies across cases
+cnn,CNN,14,Bwd Pkt Len Std,3,0.91126415921069,-0.36390681809106407,0.3333333333333333,0.8229166666666666,Model and outcome,TN,8,0.375,Direction varies across cases
+cnn,CNN,40,Pkt Len Max,3,0.6500494898171671,0.2831808845264208,0.6666666666666666,0.8125,Model and outcome,TN,8,0.375,Direction varies across cases
+cnn,CNN,11,Bwd Pkt Len Max,2,1.316833320786671,-0.48690580614029655,0.5,0.828125,Model and outcome,TN,8,0.25,Direction varies across cases
+cnn,CNN,2,Flow Duration,2,1.0947178016993209,-0.661490842318825,0.5,0.890625,Model and outcome,TN,8,0.25,Direction varies across cases
+cnn,CNN,10,Fwd Pkt Len Std,2,1.031544897618368,-1.031544897618368,0.0,0.84375,Model and outcome,TN,8,0.25,Predominantly decreases attack logit
+cnn,CNN,12,Bwd Pkt Len Min,2,0.42062890915123885,0.21772572503637766,0.5,0.859375,Model and outcome,TN,8,0.25,Direction varies across cases
+cnn,CNN,69,Fwd Seg Size Min,5,5.179834931044047,5.179834931044047,1.0,0.94375,Model and outcome,TP,8,0.625,Predominantly increases attack logit
+cnn,CNN,66,Init Fwd Win Byts,4,3.3738306842237393,3.3738306842237393,1.0,0.90625,Model and outcome,TP,8,0.5,Predominantly increases attack logit
+cnn,CNN,48,ACK Flag Cnt,4,1.6220582552886291,1.1630469942186072,0.75,0.78125,Model and outcome,TP,8,0.5,Predominantly increases attack logit
+cnn,CNN,53,Pkt Size Avg,4,1.085754703254013,1.085754703254013,1.0,0.7734375,Model and outcome,TP,8,0.5,Predominantly increases attack logit
+cnn,CNN,11,Bwd Pkt Len Max,3,2.3836547000701924,-1.6767821460232593,0.3333333333333333,0.75,Model and outcome,TP,8,0.375,Direction varies across cases
+cnn,CNN,42,Pkt Len Std,3,1.14850128185417,1.14850128185417,1.0,0.8229166666666666,Model and outcome,TP,8,0.375,Predominantly increases attack logit
+cnn,CNN,14,Bwd Pkt Len Std,2,6.585260161188781,6.585260161188781,1.0,0.875,Model and outcome,TP,8,0.25,Predominantly increases attack logit
+cnn,CNN,38,Bwd Pkts/s,2,2.2755778880857003,2.2755778880857003,1.0,0.890625,Model and outcome,TP,8,0.25,Predominantly increases attack logit
+cnn,CNN,41,Pkt Len Mean,2,1.0682554006120992,1.0682554006120992,1.0,0.8125,Model and outcome,TP,8,0.25,Predominantly increases attack logit
+mlp,MLP,40,Pkt Len Max,4,0.6438243721803825,0.6438243721803825,1.0,0.828125,Model and outcome,FN,8,0.5,Predominantly increases attack logit
+mlp,MLP,7,Fwd Pkt Len Max,3,0.9458287293733801,0.9458287293733801,1.0,0.7708333333333334,Model and outcome,FN,8,0.375,Predominantly increases attack logit
+mlp,MLP,41,Pkt Len Mean,3,0.4542386337837894,0.4542386337837894,1.0,0.7916666666666666,Model and outcome,FN,8,0.375,Predominantly increases attack logit
+mlp,MLP,66,Init Fwd Win Byts,2,0.9305154963659463,-0.47438298960051273,0.5,0.828125,Model and outcome,FN,8,0.25,Direction varies across cases
+mlp,MLP,12,Bwd Pkt Len Min,2,0.7452699810039556,0.7452699810039556,1.0,0.953125,Model and outcome,FN,8,0.25,Predominantly increases attack logit
+mlp,MLP,11,Bwd Pkt Len Max,2,0.2824951704426873,0.09107185673978718,0.5,0.78125,Model and outcome,FN,8,0.25,Direction varies across cases
+mlp,MLP,69,Fwd Seg Size Min,7,2.1423867545265325,2.1423867545265325,1.0,0.90625,Model and outcome,FP,8,0.875,Predominantly increases attack logit
+mlp,MLP,7,Fwd Pkt Len Max,5,2.2352439265536233,2.2352439265536233,1.0,0.8,Model and outcome,FP,8,0.625,Predominantly increases attack logit
+mlp,MLP,54,Fwd Seg Size Avg,4,1.4284744826184619,-1.4284744826184619,0.0,0.796875,Model and outcome,FP,8,0.5,Predominantly decreases attack logit
+mlp,MLP,11,Bwd Pkt Len Max,4,1.0757728259234396,1.0757728259234396,1.0,0.75,Model and outcome,FP,8,0.5,Predominantly increases attack logit
+mlp,MLP,40,Pkt Len Max,4,1.0097425795317845,1.0097425795317845,1.0,0.796875,Model and outcome,FP,8,0.5,Predominantly increases attack logit
+mlp,MLP,33,Fwd URG Flags,2,3.1246530448439174,3.1246530448439174,1.0,1.0,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+mlp,MLP,50,CWE Flag Count,2,2.2990012228183287,2.2990012228183287,1.0,0.96875,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+mlp,MLP,41,Pkt Len Mean,2,1.161409604357409,1.161409604357409,1.0,0.8125,Model and outcome,FP,8,0.25,Predominantly increases attack logit
+mlp,MLP,40,Pkt Len Max,4,0.7334450687978448,0.12808524914343733,0.75,0.8359375,Model and outcome,TN,8,0.5,Predominantly increases attack logit
+mlp,MLP,11,Bwd Pkt Len Max,3,0.7389285441782429,0.006680249209465305,0.6666666666666666,0.8020833333333334,Model and outcome,TN,8,0.375,Direction varies across cases
+mlp,MLP,7,Fwd Pkt Len Max,2,1.8754575127274298,-0.49863914463878156,0.5,0.765625,Model and outcome,TN,8,0.25,Direction varies across cases
+mlp,MLP,54,Fwd Seg Size Avg,2,0.6349180388244755,-0.6349180388244755,0.0,0.78125,Model and outcome,TN,8,0.25,Predominantly decreases attack logit
+mlp,MLP,74,Idle Mean,2,0.3718165325977483,-0.3718165325977483,0.0,0.75,Model and outcome,TN,8,0.25,Predominantly decreases attack logit
+mlp,MLP,7,Fwd Pkt Len Max,6,4.192982298791161,4.192982298791161,1.0,0.8020833333333334,Model and outcome,TP,8,0.75,Predominantly increases attack logit
+mlp,MLP,69,Fwd Seg Size Min,5,10.706996037402956,10.706996037402956,1.0,0.96875,Model and outcome,TP,8,0.625,Predominantly increases attack logit
+mlp,MLP,54,Fwd Seg Size Avg,5,2.951312238800728,-2.951312238800728,0.0,0.8,Model and outcome,TP,8,0.625,Predominantly decreases attack logit
+mlp,MLP,66,Init Fwd Win Byts,4,5.6482834885004145,5.6482834885004145,1.0,1.0,Model and outcome,TP,8,0.5,Predominantly increases attack logit
+mlp,MLP,11,Bwd Pkt Len Max,4,1.9080330204841347,0.32780998195391464,0.75,0.75,Model and outcome,TP,8,0.5,Predominantly increases attack logit
+mlp,MLP,41,Pkt Len Mean,4,1.3620842363389918,0.5904746118597002,0.75,0.796875,Model and outcome,TP,8,0.5,Predominantly increases attack logit
+mlp,MLP,38,Bwd Pkts/s,3,8.389596410400108,8.389596410400108,1.0,1.0,Model and outcome,TP,8,0.375,Predominantly increases attack logit
+mlp,MLP,37,Fwd Pkts/s,3,4.356301475439391,-4.356301475439391,0.0,1.0,Model and outcome,TP,8,0.375,Predominantly decreases attack logit
+mlp,MLP,40,Pkt Len Max,3,1.2563823576010884,1.2563823576010884,1.0,0.7916666666666666,Model and outcome,TP,8,0.375,Predominantly increases attack logit
+mlp,MLP,0,Dst Port,2,3.2538526240722736,3.2538526240722736,1.0,0.96875,Model and outcome,TP,8,0.25,Predominantly increases attack logit
+mlp,MLP,16,Flow Pkts/s,2,2.873318868776158,2.873318868776158,1.0,1.0,Model and outcome,TP,8,0.25,Predominantly increases attack logit
+mlp,MLP,48,ACK Flag Cnt,2,2.0457241142611307,2.0457241142611307,1.0,0.765625,Model and outcome,TP,8,0.25,Predominantly increases attack logit
+mlp,MLP,42,Pkt Len Std,2,1.696897485140881,-0.04088441066205428,0.5,0.78125,Model and outcome,TP,8,0.25,Direction varies across cases
+cnn,CNN,53,Pkt Size Avg,13,1.000685758537885,0.6796057475532175,0.9230769230769231,0.7908653846153846,Model overall,ALL,32,0.40625,Predominantly increases attack logit
+cnn,CNN,40,Pkt Len Max,11,0.7562187535298501,0.5607024390979484,0.8181818181818182,0.8153409090909091,Model overall,ALL,32,0.34375,Predominantly increases attack logit
+cnn,CNN,69,Fwd Seg Size Min,10,3.7817327595584906,3.7817327595584906,1.0,0.8875,Model overall,ALL,32,0.3125,Predominantly increases attack logit
+mlp,MLP,7,Fwd Pkt Len Max,16,2.68265716494313,2.385895082772354,0.9375,0.791015625,Model overall,ALL,32,0.5,Predominantly increases attack logit
+mlp,MLP,40,Pkt Len Max,15,0.8878130103228875,0.7263837250817122,0.9333333333333333,0.8145833333333333,Model overall,ALL,32,0.46875,Predominantly increases attack logit
+mlp,MLP,69,Fwd Seg Size Min,13,5.308711485736823,5.308711485736823,1.0,0.9326923076923077,Model overall,ALL,32,0.40625,Predominantly increases attack logit
+mlp,MLP,11,Bwd Pkt Len Max,13,1.1320768737731077,0.4474242840474914,0.7692307692307693,0.7668269230769231,Model overall,ALL,32,0.40625,Predominantly increases attack logit
+mlp,MLP,54,Fwd Seg Size Avg,12,1.8435234664837878,-1.8435234664837878,0.0,0.7942708333333334,Model overall,ALL,32,0.375,Predominantly decreases attack logit
+mlp,MLP,41,Pkt Len Mean,10,0.9840982538636942,0.6754544040719775,0.9,0.8,Model overall,ALL,32,0.3125,Predominantly increases attack logit

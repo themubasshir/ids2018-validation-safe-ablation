@@ -1,0 +1,42 @@
+{
+  "stage": "15.3B",
+  "selection_data": "Duplicate-safe validation split only",
+  "selected_candidate_id": "FT_BALANCED",
+  "selected_validation_metrics": {
+    "candidate_id": "FT_BALANCED",
+    "parameter_count": 159169,
+    "original_best_epoch": 15,
+    "extended_best_epoch": 28,
+    "final_epoch_executed": 30,
+    "additional_epochs_executed": 15,
+    "best_validation_loss": 0.335881362278647,
+    "roc_auc": 0.9533749623500613,
+    "pr_auc": 0.9272883071218994,
+    "threshold": 0.6599999999999997,
+    "accuracy": 0.9309105325756575,
+    "precision": 0.9840604026845637,
+    "recall": 0.7679573512906847,
+    "f1": 0.8626812355536877,
+    "f2": 0.8032360306777273,
+    "fpr": 0.004899974210662049,
+    "fnr": 0.23204264870931537,
+    "true_negative": 27010,
+    "false_positive": 133,
+    "false_negative": 2481,
+    "true_positive": 8211,
+    "peak_gpu_memory_mb": 1127.46533203125,
+    "runtime_seconds": 292.46708886999977,
+    "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3b_models/FT_BALANCED_best_extended.pt"
+  },
+  "selection_rule": [
+    "Highest validation F1",
+    "Highest validation PR-AUC",
+    "Highest validation F2",
+    "Highest validation recall",
+    "Lowest validation false-negative rate",
+    "Lowest parameter count",
+    "Lexicographic candidate ID"
+  ],
+  "status": "Convergence-adjusted provisional winner. Multi-seed confirmation remains required.",
+  "holdout_status": "UNTOUCHED"
+}

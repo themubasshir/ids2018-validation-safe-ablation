@@ -1,0 +1,189 @@
+{
+  "stage": "15.3A",
+  "generated_at_utc": "2026-08-06T10:07:17.398393+00:00",
+  "runtime_seconds": 792.000983206,
+  "runtime_minutes": 13.200016386766666,
+  "candidate_count": 3,
+  "candidate_results": [
+    {
+      "candidate_id": "FT_COMPACT",
+      "architecture": {
+        "candidate_id": "FT_COMPACT",
+        "d_token": 32,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 128,
+        "dropout": 0.1,
+        "learning_rate": 0.001,
+        "weight_decay": 1e-05
+      },
+      "validation": {
+        "candidate_id": "FT_COMPACT",
+        "parameter_count": 30017,
+        "best_epoch": 15,
+        "epochs_executed": 15,
+        "best_validation_loss": 0.35319080283072474,
+        "roc_auc": 0.9456791153734707,
+        "pr_auc": 0.9185686342779837,
+        "threshold": 0.7199999999999998,
+        "accuracy": 0.9304083520549755,
+        "precision": 0.9886019158481872,
+        "recall": 0.762532734754957,
+        "f1": 0.8609747082739321,
+        "f2": 0.7990787023424483,
+        "fpr": 0.0034631396676859595,
+        "fnr": 0.23746726524504302,
+        "true_negative": 27049,
+        "false_positive": 94,
+        "false_negative": 2539,
+        "true_positive": 8153,
+        "peak_gpu_memory_mb": 402.65087890625,
+        "runtime_seconds": 115.66336174399976,
+        "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_COMPACT_best.pt"
+      }
+    },
+    {
+      "candidate_id": "FT_BALANCED",
+      "architecture": {
+        "candidate_id": "FT_BALANCED",
+        "d_token": 64,
+        "n_heads": 8,
+        "n_layers": 3,
+        "d_ff": 256,
+        "dropout": 0.1,
+        "learning_rate": 0.0005,
+        "weight_decay": 1e-05
+      },
+      "validation": {
+        "candidate_id": "FT_BALANCED",
+        "parameter_count": 159169,
+        "best_epoch": 15,
+        "epochs_executed": 15,
+        "best_validation_loss": 0.35438806735194783,
+        "roc_auc": 0.9445647681559743,
+        "pr_auc": 0.9179547103497577,
+        "threshold": 0.7349999999999997,
+        "accuracy": 0.9303819215012554,
+        "precision": 0.9832094027344687,
+        "recall": 0.7667414889637112,
+        "f1": 0.8615869679453495,
+        "f2": 0.8020584667162368,
+        "fpr": 0.005157867590170578,
+        "fnr": 0.2332585110362888,
+        "true_negative": 27003,
+        "false_positive": 140,
+        "false_negative": 2494,
+        "true_positive": 8198,
+        "peak_gpu_memory_mb": 1126.83056640625,
+        "runtime_seconds": 291.2284069409998,
+        "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_BALANCED_best.pt"
+      }
+    },
+    {
+      "candidate_id": "FT_DEEP_REGULARIZED",
+      "architecture": {
+        "candidate_id": "FT_DEEP_REGULARIZED",
+        "d_token": 64,
+        "n_heads": 8,
+        "n_layers": 4,
+        "d_ff": 256,
+        "dropout": 0.2,
+        "learning_rate": 0.0005,
+        "weight_decay": 5e-05
+      },
+      "validation": {
+        "candidate_id": "FT_DEEP_REGULARIZED",
+        "parameter_count": 209153,
+        "best_epoch": 15,
+        "epochs_executed": 15,
+        "best_validation_loss": 0.3555142886394142,
+        "roc_auc": 0.9443536852296835,
+        "pr_auc": 0.917372820746131,
+        "threshold": 0.6049999999999998,
+        "accuracy": 0.9303026298400952,
+        "precision": 0.9813553244890642,
+        "recall": 0.7679573512906847,
+        "f1": 0.861640169998426,
+        "f2": 0.8028747433264887,
+        "fpr": 0.005747338171904358,
+        "fnr": 0.23204264870931537,
+        "true_negative": 26987,
+        "false_positive": 156,
+        "false_negative": 2481,
+        "true_positive": 8211,
+        "peak_gpu_memory_mb": 1461.7333984375,
+        "runtime_seconds": 383.6367408130004,
+        "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_DEEP_REGULARIZED_best.pt"
+      }
+    }
+  ],
+  "selected_candidate": {
+    "stage": "15.3A",
+    "selection_data": "Duplicate-safe validation split only",
+    "selection_rule": [
+      "Highest validation F1 at a validation-selected threshold",
+      "Highest validation PR-AUC",
+      "Highest validation F2",
+      "Highest validation recall",
+      "Lowest validation false-negative rate",
+      "Lowest parameter count",
+      "Lexicographic candidate ID"
+    ],
+    "selected_candidate_id": "FT_DEEP_REGULARIZED",
+    "selected_validation_metrics": {
+      "candidate_id": "FT_DEEP_REGULARIZED",
+      "parameter_count": 209153,
+      "best_epoch": 15,
+      "epochs_executed": 15,
+      "best_validation_loss": 0.3555142886394142,
+      "roc_auc": 0.9443536852296835,
+      "pr_auc": 0.917372820746131,
+      "threshold": 0.6049999999999998,
+      "accuracy": 0.9303026298400952,
+      "precision": 0.9813553244890642,
+      "recall": 0.7679573512906847,
+      "f1": 0.861640169998426,
+      "f2": 0.8028747433264887,
+      "fpr": 0.005747338171904358,
+      "fnr": 0.23204264870931537,
+      "true_negative": 26987,
+      "false_positive": 156,
+      "false_negative": 2481,
+      "true_positive": 8211,
+      "peak_gpu_memory_mb": 1461.7333984375,
+      "runtime_seconds": 383.6367408130004,
+      "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_DEEP_REGULARIZED_best.pt"
+    },
+    "selected_checkpoint": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_DEEP_REGULARIZED_best.pt",
+    "architecture_status": "Provisional validation-selected winner. Requires multi-seed confirmation before holdout evaluation.",
+    "holdout_status": "UNTOUCHED"
+  },
+  "GPU": {
+    "device": "Tesla P100-PCIE-16GB",
+    "capability": [
+      6,
+      0
+    ],
+    "torch_version": "2.7.1+cu118",
+    "CUDA_runtime": "11.8",
+    "compiled_architectures": [
+      "sm_50",
+      "sm_60",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_37",
+      "sm_90"
+    ]
+  },
+  "data": {
+    "training_rows": 154686,
+    "validation_rows": 37835,
+    "retained_features": 70,
+    "training_benign": 110161,
+    "training_attack": 44525,
+    "positive_class_weight": 2.4741381246490737
+  },
+  "holdout_status": "UNTOUCHED"
+}

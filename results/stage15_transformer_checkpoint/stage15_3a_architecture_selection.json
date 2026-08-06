@@ -1,0 +1,41 @@
+{
+  "stage": "15.3A",
+  "selection_data": "Duplicate-safe validation split only",
+  "selection_rule": [
+    "Highest validation F1 at a validation-selected threshold",
+    "Highest validation PR-AUC",
+    "Highest validation F2",
+    "Highest validation recall",
+    "Lowest validation false-negative rate",
+    "Lowest parameter count",
+    "Lexicographic candidate ID"
+  ],
+  "selected_candidate_id": "FT_DEEP_REGULARIZED",
+  "selected_validation_metrics": {
+    "candidate_id": "FT_DEEP_REGULARIZED",
+    "parameter_count": 209153,
+    "best_epoch": 15,
+    "epochs_executed": 15,
+    "best_validation_loss": 0.3555142886394142,
+    "roc_auc": 0.9443536852296835,
+    "pr_auc": 0.917372820746131,
+    "threshold": 0.6049999999999998,
+    "accuracy": 0.9303026298400952,
+    "precision": 0.9813553244890642,
+    "recall": 0.7679573512906847,
+    "f1": 0.861640169998426,
+    "f2": 0.8028747433264887,
+    "fpr": 0.005747338171904358,
+    "fnr": 0.23204264870931537,
+    "true_negative": 26987,
+    "false_positive": 156,
+    "false_negative": 2481,
+    "true_positive": 8211,
+    "peak_gpu_memory_mb": 1461.7333984375,
+    "runtime_seconds": 383.6367408130004,
+    "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_DEEP_REGULARIZED_best.pt"
+  },
+  "selected_checkpoint": "/kaggle/working/stage15_transformer/stage15_3a_models/FT_DEEP_REGULARIZED_best.pt",
+  "architecture_status": "Provisional validation-selected winner. Requires multi-seed confirmation before holdout evaluation.",
+  "holdout_status": "UNTOUCHED"
+}

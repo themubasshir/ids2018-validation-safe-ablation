@@ -1,0 +1,14 @@
+{
+  "stage": "15.3B",
+  "generated_at_utc": "2026-08-06T10:25:17.888550+00:00",
+  "purpose": "Determine whether the Stage 15.3A ranking was affected by the 15-epoch training ceiling.",
+  "resume_policy": "Resume each seed-42 best checkpoint and continue training to at most 30 total epochs.",
+  "selection_metric": "Validation F1 at a validation-selected threshold",
+  "early_stopping_metric": "Validation PR-AUC",
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_probabilities_generated": false,
+  "holdout_metrics_generated": false,
+  "next_step": "Multi-seed confirmation of the convergence-adjusted candidate ranking."
+}

@@ -1,68 +1,74 @@
 # Stage 15 Transformer Checkpoint
 
-This directory preserves the completed Stage 15 work before a
-Kaggle session reset required to release an orphaned Tesla P100
-CUDA context.
+This package preserves Transformer feasibility, duplicate-safe
+partitioning, preprocessing, GPU compatibility, architecture
+screening, and convergence-extension results.
 
 ## Repository state
 
-- Base commit: `15a5e8add4eb40c64ddc31cd5e545e449c78ddaa`
+- Base commit: `21eb0854f2749562f2ba21255c59c8cc6f2f009b`
+- Generated: `2026-08-06T10:43:13.949579+00:00`
 - Branch: `main`
-- Checkpoint generated: `2026-08-06T09:21:37.743119+00:00`
 
-## Completed work
+## Completed stages
 
 ### Stage 15.0
 
-- Audited Transformer feasibility and leakage risk.
-- Detected exact-pattern duplication across the original split.
-- Confirmed that no validated temporal sequence metadata exists.
-- Selected an FT-Transformer-style numerical feature tokenizer.
+- Audited Transformer feasibility.
+- Identified exact-pattern duplication and conflicting labels.
+- Rejected unsupported temporal or spatial Transformer claims.
 
 ### Stage 15.1
 
-- Removed globally conflicting binary-label patterns.
-- Deduplicated each split deterministically.
-- Removed cross-split exact-pattern overlap.
-- Produced duplicate-safe split sizes:
-  - Training: 154,686
-  - Validation: 37,835
-  - Holdout: 46,849
-- Removed eight constant predictors.
-- Retained 70 predictors.
+- Created duplicate-safe train, validation, and holdout partitions.
+- Training rows: 154,686
+- Validation rows: 37,835
+- Holdout rows: 46,849
+- Cross-split exact-pattern overlap: zero
+- Retained predictors: 70
 
 ### Stage 15.2
 
-- Fit a StandardScaler using duplicate-safe training rows only.
-- Derived positive-class weight from training labels only.
-- Implemented `NumericFTTransformer`.
-- Passed CPU forward, backward, and optimizer-step tests.
-- Preserved the holdout without transformation or evaluation.
+- Fit StandardScaler using training rows only.
+- Implemented numerical FT-Transformer.
+- Verified PyTorch 2.7.1 CUDA 11.8 on Tesla P100.
+- Confirmed `sm_60`, CUDA forward/backward execution, and
+  optimizer updates.
 
-## CUDA environment finding
+### Stage 15.3A
 
-The Kaggle system PyTorch build was incompatible with the Tesla
-P100 because it lacked `sm_60`. An isolated PyTorch 2.7.1 CUDA
-11.8 environment successfully:
+Compared three architectures using training and validation only:
 
-- imported from the isolated directory;
-- detected the Tesla P100 with capability `(6, 0)`;
-- exposed `sm_60`;
-- executed basic CUDA tensor operations;
-- executed a small FT-Transformer GPU forward pass.
+- FT_COMPACT
+- FT_BALANCED
+- FT_DEEP_REGULARIZED
 
-The full batch verification was prevented by an orphaned CUDA
-process holding approximately 15.8 GB of GPU memory. The isolated
-PyTorch installation itself is not included in this repository
-checkpoint because it is several gigabytes and can be recreated.
+### Stage 15.3B
 
-## Resume procedure
+Extended the seed-42 checkpoints beyond the original 15-epoch
+ceiling.
 
-1. Start a fresh Kaggle GPU session.
-2. Clone or pull this repository.
-3. Restore this directory to `/kaggle/working/stage15_transformer`.
-4. Reinstall PyTorch 2.7.1 CUDA 11.8 in an isolated target directory.
-5. Run the preserved P100 CUDA verification script.
-6. Begin Stage 15.3 training/validation-only architecture benchmarking.
-7. Do not inspect the duplicate-safe holdout until the architecture,
-   early-stopping rule, and operating threshold are frozen.
+Convergence-adjusted provisional winner:
+
+- Architecture: FT_BALANCED
+- Best epoch: 28
+- Validation threshold: 0.6599999999999997
+- Validation F1: 0.8626812355536877
+- Validation PR-AUC: 0.9272883071218994
+- Validation recall: 0.7679573512906847
+
+The deep model reached its best result at the 30-epoch ceiling.
+The next standardized from-scratch multi-seed protocol should
+therefore allow up to 40 epochs.
+
+## Scientific boundary
+
+The duplicate-safe holdout has not been used for architecture
+selection, early stopping, threshold selection, probability
+generation, or performance evaluation.
+
+## Packaging correction
+
+`__pycache__` directories and `.pyc` files are intentionally
+excluded. They are runtime-generated files and are not scientific
+artifacts.

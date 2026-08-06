@@ -1,0 +1,54 @@
+{
+  "stage": "15.3A",
+  "seed": 42,
+  "training_protocol": {
+    "batch_size": 1024,
+    "maximum_epochs": 15,
+    "early_stopping_patience": 4,
+    "scheduler_patience": 1,
+    "scheduler_factor": 0.5,
+    "minimum_learning_rate": 1e-05,
+    "gradient_clip_norm": 1.0,
+    "validation_selection_metric": "PR-AUC",
+    "threshold_selection_metric": "F1",
+    "threshold_minimum": 0.05,
+    "threshold_maximum": 0.95,
+    "threshold_step": 0.005,
+    "class_weighting": "Training-derived positive-class weight",
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "holdout_access": false
+  },
+  "candidates": [
+    {
+      "candidate_id": "FT_COMPACT",
+      "d_token": 32,
+      "n_heads": 4,
+      "n_layers": 2,
+      "d_ff": 128,
+      "dropout": 0.1,
+      "learning_rate": 0.001,
+      "weight_decay": 1e-05
+    },
+    {
+      "candidate_id": "FT_BALANCED",
+      "d_token": 64,
+      "n_heads": 8,
+      "n_layers": 3,
+      "d_ff": 256,
+      "dropout": 0.1,
+      "learning_rate": 0.0005,
+      "weight_decay": 1e-05
+    },
+    {
+      "candidate_id": "FT_DEEP_REGULARIZED",
+      "d_token": 64,
+      "n_heads": 8,
+      "n_layers": 4,
+      "d_ff": 256,
+      "dropout": 0.2,
+      "learning_rate": 0.0005,
+      "weight_decay": 5e-05
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "stage": "15.3B",
+  "seed": 42,
+  "resume_source": "Best Stage 15.3A seed-42 checkpoints",
+  "start_epoch_expected": 15,
+  "maximum_total_epoch": 30,
+  "maximum_additional_epochs": 15,
+  "early_stopping_patience": 5,
+  "scheduler": {
+    "type": "ReduceLROnPlateau",
+    "metric": "validation PR-AUC",
+    "mode": "max",
+    "factor": 0.5,
+    "patience": 1,
+    "minimum_learning_rate": 1e-05
+  },
+  "gradient_clip_norm": 1.0,
+  "batch_size": 1024,
+  "checkpoint_improvement_tolerance": 1e-07,
+  "threshold_minimum": 0.05,
+  "threshold_maximum": 0.95,
+  "threshold_step": 0.005,
+  "architecture_selection_rule": [
+    "Highest validation F1",
+    "Highest validation PR-AUC",
+    "Highest validation F2",
+    "Highest validation recall",
+    "Lowest validation false-negative rate",
+    "Lowest parameter count",
+    "Lexicographic candidate ID"
+  ],
+  "holdout_access": false
+}

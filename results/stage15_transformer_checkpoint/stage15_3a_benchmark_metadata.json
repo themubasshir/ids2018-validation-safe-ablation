@@ -1,0 +1,17 @@
+{
+  "stage": "15.3A",
+  "generated_at_utc": "2026-08-06T10:07:17.398887+00:00",
+  "purpose": "Compare compact FT-Transformer architectures using duplicate-safe training and validation only.",
+  "dataset_loading_policy": "The CSV was read in chunks and only rows belonging to the training or validation index sets were retained.",
+  "holdout_access": false,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_probabilities_generated": false,
+  "holdout_metrics_generated": false,
+  "preprocessing": "Archived StandardScaler fit on duplicate-safe training rows only",
+  "class_weighting": "Positive-class weight derived from training labels only",
+  "early_stopping_metric": "Validation PR-AUC",
+  "threshold_selection": "Validation F1 with deterministic tie-breaking",
+  "next_step": "Run multi-seed confirmation for the provisional winning architecture before touching holdout."
+}

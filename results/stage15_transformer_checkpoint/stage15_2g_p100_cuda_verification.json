@@ -1,0 +1,45 @@
+{
+  "stage": "15.2-G",
+  "generated_at_utc": "2026-08-06T09:32:38.183950+00:00",
+  "python_executable": "/usr/bin/python3",
+  "torch_module_path": "/kaggle/working/stage15_torch271_cu118/torch/__init__.py",
+  "torch_version": "2.7.1+cu118",
+  "torch_cuda_version": "11.8",
+  "cuda_available": true,
+  "device_name": "Tesla P100-PCIE-16GB",
+  "device_capability": [
+    6,
+    0
+  ],
+  "compiled_cuda_architectures": [
+    "sm_50",
+    "sm_60",
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_37",
+    "sm_90"
+  ],
+  "required_architecture": "sm_60",
+  "required_architecture_present": true,
+  "basic_cuda_matrix_multiplication": "PASSED",
+  "basic_cuda_result_mean_absolute": 18.012924194335938,
+  "ft_transformer_parameter_count": 159169,
+  "ft_transformer_input_shape": [
+    256,
+    70
+  ],
+  "ft_transformer_output_shape": [
+    256
+  ],
+  "initial_loss": 1.0627137422561646,
+  "global_gradient_norm": 2.072434029592323,
+  "parameter_update_maximum": 0.0010000001639127731,
+  "peak_gpu_memory_mb": 297.09912109375,
+  "forward_pass": "PASSED",
+  "backward_pass": "PASSED",
+  "optimizer_step": "PASSED",
+  "gpu_training_readiness": "PASSED",
+  "holdout_status": "UNTOUCHED"
+}

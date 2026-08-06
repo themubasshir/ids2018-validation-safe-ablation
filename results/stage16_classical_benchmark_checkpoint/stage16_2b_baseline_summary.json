@@ -1,0 +1,42 @@
+{
+  "stage": "16.2B",
+  "baseline_candidate_count": 12,
+  "baseline_winner": {
+    "candidate_id": "XGBOOST",
+    "model_name": "XGBoost",
+    "threshold": 0.44,
+    "accuracy": 0.9369895599312805,
+    "precision": 0.9636160714285714,
+    "recall": 0.8075196408529742,
+    "f1": 0.8786891919397517,
+    "f2": 0.8345576863594185,
+    "fpr": 0.012010463102825775,
+    "fnr": 0.19248035914702583,
+    "roc_auc": 0.9670573787201974,
+    "pr_auc": 0.9449217502319894
+  },
+  "top5_tuning_candidate_ids": [
+    "XGBOOST",
+    "LIGHTGBM",
+    "CATBOOST",
+    "K_NEAREST_NEIGHBORS",
+    "RANDOM_FOREST"
+  ],
+  "locked_transformer_validation_reference": {
+    "model": "Five-checkpoint FT_BALANCED soft-voting ensemble",
+    "threshold": 0.73,
+    "f1": 0.8663129694804853,
+    "pr_auc": 0.9295715928199866
+  },
+  "development_comparison": {
+    "xgboost_minus_transformer_f1": 0.012376222459266395,
+    "xgboost_minus_transformer_pr_auc": 0.015350157412002852,
+    "interpretation": "Validation-only comparison. No final superiority claim is permitted before the frozen classical holdout batch evaluation."
+  },
+  "scientific_status": {
+    "baseline_results_frozen": true,
+    "top5_tuning_set_frozen": true,
+    "hyperparameter_tuning_performed": false,
+    "holdout_accessed": false
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "stage": "16.1B",
-  "generated_at_utc": "2026-08-06T16:58:18.473964+00:00",
+  "stage": "16.2B",
+  "generated_at_utc": "2026-08-06T17:24:23.063208+00:00",
   "repository": {
     "branch": "main",
-    "base_commit": "6067823d043765077457d30059e34afa5b63bc29",
+    "base_commit": "d41b469397ae7918f811f41578cf95f4384e67dd",
     "package_relative_path": "results/stage16_classical_benchmark_checkpoint"
   },
-  "copied_scientific_file_count": 11,
+  "copied_scientific_file_count": 72,
   "copied_scientific_files": [
     {
       "relative_path": "stage16_0_classical_artifact_inventory.csv",
@@ -62,117 +62,354 @@
       "relative_path": "stage16_1b_pretraining_protocol_lock.json",
       "size_bytes": 7028,
       "sha256": "1483451f9bf1db8c231e070bc60937b6a955b297221a4cc776d92634847ec7af"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/ADABOOST_run.json",
+      "size_bytes": 3341,
+      "sha256": "d9591b66acc824cf736e5dde2507acc0b8a9b7fc72d61c5694d774b54f3e769e"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/CATBOOST_run.json",
+      "size_bytes": 3516,
+      "sha256": "2d3cc79f3d2d3c01bc69a4ba4debc4e073781489c32fe479d3d2ed084c0ed829"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/DECISION_TREE_run.json",
+      "size_bytes": 3464,
+      "sha256": "244240ec49955db843725b932c588d831539c21f70797a8205895c7e760b5ec6"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/EXTRA_TREES_run.json",
+      "size_bytes": 3442,
+      "sha256": "0473aad0959257ceb4aa72b712f609930601faf4e9b23b6272d26dfcdde56e69"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/GAUSSIAN_NAIVE_BAYES_run.json",
+      "size_bytes": 3182,
+      "sha256": "107c91189f7654e2db96cc6bd76c42bec587e1d8f789e97ae6ce7741f1202f46"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/GRADIENT_BOOSTING_run.json",
+      "size_bytes": 3515,
+      "sha256": "b53888bdc3abe519825801bc6c06762c63d9db3cf12807356bdf6cc9405191f2"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/K_NEAREST_NEIGHBORS_run.json",
+      "size_bytes": 3286,
+      "sha256": "71a1f4ff8d882e338be5b071890b67fbd9614e786139cfdc72845758862dd634"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/LIGHTGBM_run.json",
+      "size_bytes": 6645,
+      "sha256": "b5809aedd56954e361acf9b1696d0197a4cd07c29eb64bf7a006f5233e0a1262"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/LINEAR_SVM_run.json",
+      "size_bytes": 3568,
+      "sha256": "fd8b369f0d406224116a691dcc9e1ace6d149a1c1c6449abefd9dd6b221b8231"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/LOGISTIC_REGRESSION_run.json",
+      "size_bytes": 3597,
+      "sha256": "eb8c5811da74b95ef837d30f74aee6bb4f751b952956d4d78e4f81f75499479e"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/RANDOM_FOREST_run.json",
+      "size_bytes": 3458,
+      "sha256": "36661ba277a2f969a148c4daf710ea90dbfbc9f5638d62e5b5ebb8991cb9e8d7"
+    },
+    {
+      "relative_path": "stage16_2_candidate_runs/XGBOOST_run.json",
+      "size_bytes": 3533,
+      "sha256": "91f8704e62c82d2068039c3d85d16d8f02e6f0fd9d80f0b15cff3a7e2b271088"
+    },
+    {
+      "relative_path": "stage16_2_models/ADABOOST.joblib",
+      "size_bytes": 7744,
+      "sha256": "590b9cf61cc724bcb712887cd19b3de2bd98ac795f6e268b19736623a48c6f77"
+    },
+    {
+      "relative_path": "stage16_2_models/CATBOOST.joblib",
+      "size_bytes": 119160,
+      "sha256": "3f6a8cc5b71079b8d088c936ce33df14c3c07258f296db96ecfbd3ae37055577"
+    },
+    {
+      "relative_path": "stage16_2_models/DECISION_TREE.joblib",
+      "size_bytes": 309315,
+      "sha256": "2449cc11f6351e30cfba1a01648c80ebb820946e3f801ad3f4acc30ef9c18532"
+    },
+    {
+      "relative_path": "stage16_2_models/EXTRA_TREES.joblib",
+      "size_bytes": 75912905,
+      "sha256": "2969051f79ba1adac0b4c431ce879f5f95a7e4a09fa483f2dbca94a193a6ccb4"
+    },
+    {
+      "relative_path": "stage16_2_models/GAUSSIAN_NAIVE_BAYES.joblib",
+      "size_bytes": 1851,
+      "sha256": "fadd0dbf975f4e14e09afad5e110e96de9ab3bfbaacbf480f796e40ce83b4731"
+    },
+    {
+      "relative_path": "stage16_2_models/GRADIENT_BOOSTING.joblib",
+      "size_bytes": 44873,
+      "sha256": "38c788b72e370fb03a67f0b4c05e471eb26292b898d8faf3354fed1caf918d6f"
+    },
+    {
+      "relative_path": "stage16_2_models/K_NEAREST_NEIGHBORS.joblib",
+      "size_bytes": 17091160,
+      "sha256": "0883926b543945c917d6510e04bf6ade930f13de173d2c405043a69581353e76"
+    },
+    {
+      "relative_path": "stage16_2_models/LIGHTGBM.joblib",
+      "size_bytes": 150937,
+      "sha256": "a5c70475dd0173b45f22b5f6b1a7e34fdee14bfb7e6d1771969095adbe05a58c"
+    },
+    {
+      "relative_path": "stage16_2_models/LINEAR_SVM.joblib",
+      "size_bytes": 1084,
+      "sha256": "5dab65e6da245886980d6cc1762556351c3e03cee19684af1abdbd1fd322f76e"
+    },
+    {
+      "relative_path": "stage16_2_models/LOGISTIC_REGRESSION.joblib",
+      "size_bytes": 1137,
+      "sha256": "fcbc04e6478137f136318ab1be8917e6eb2a2f32be1c2cc45baf7db6bca539d4"
+    },
+    {
+      "relative_path": "stage16_2_models/RANDOM_FOREST.joblib",
+      "size_bytes": 29775029,
+      "sha256": "5494ab734cbeb6907b57271a943ef307acdafb84c6832e9b647ceffaa270564d"
+    },
+    {
+      "relative_path": "stage16_2_models/XGBOOST.joblib",
+      "size_bytes": 132878,
+      "sha256": "b1ef811d475dc9b0153a20183da24c6c955cb1bb9e2ebb751b3f0d476d37e265"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/ADABOOST_threshold_sweep.csv",
+      "size_bytes": 45676,
+      "sha256": "fc2ab304c7f63c46c0183abbdfec94e16f4c9ee7f562ebdc1ee1c1e996ddc32e"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/CATBOOST_threshold_sweep.csv",
+      "size_bytes": 59146,
+      "sha256": "b34648a1adbe6b4f61d950a7a18bd47745b63d55562ebc1273c5a31103ba7f39"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/DECISION_TREE_threshold_sweep.csv",
+      "size_bytes": 60590,
+      "sha256": "9fc74dbb7ace69fd4fb7f684fb75a1ba467a1b20ac6c0ec4c7c3eefd83c8352d"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/EXTRA_TREES_threshold_sweep.csv",
+      "size_bytes": 59857,
+      "sha256": "3da0dc44a9d4e8afd0cab2c2cac0f128058c032a9f083021ad1e6b9c9a7becde"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/GAUSSIAN_NAIVE_BAYES_threshold_sweep.csv",
+      "size_bytes": 61595,
+      "sha256": "432547448ccb5ef90bc2c364a161a15a430229171ab8460a783cb187c82bda3c"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/GRADIENT_BOOSTING_threshold_sweep.csv",
+      "size_bytes": 62008,
+      "sha256": "795e4eaf92115797e8c515473734efbfffa17d8dcc0ca6315674686bdd1bc12e"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/K_NEAREST_NEIGHBORS_threshold_sweep.csv",
+      "size_bytes": 59997,
+      "sha256": "70b09713981592a843cf1db2125f20009e9f6251e8411df1dc372607e541ca18"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/LIGHTGBM_threshold_sweep.csv",
+      "size_bytes": 59115,
+      "sha256": "290ec431193d5f3d1079c7231432dff78a761dbca24a0449f134d0121491879b"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/LINEAR_SVM_threshold_sweep.csv",
+      "size_bytes": 59505,
+      "sha256": "f08c818fc107887f7f1bf355e7c839988e1dff68478c12200e70635c4fcca5e4"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/LOGISTIC_REGRESSION_threshold_sweep.csv",
+      "size_bytes": 62726,
+      "sha256": "2f38a0e21725a2a596313f1438e42993ecdbb49790d56e9bd480e6cd78b71ce5"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/RANDOM_FOREST_threshold_sweep.csv",
+      "size_bytes": 60756,
+      "sha256": "b82c84b627d87731fe9973c4caa3e5ded88efdff8c7ae06dbb19113d2bb217d9"
+    },
+    {
+      "relative_path": "stage16_2_threshold_sweeps/XGBOOST_threshold_sweep.csv",
+      "size_bytes": 58027,
+      "sha256": "73d93d5fe77d4cb663a9d289c799c75d4f4880046c0c85e72df79e6c1c873ce4"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/ADABOOST_validation_probabilities.npz",
+      "size_bytes": 47358,
+      "sha256": "2e75c37f065659f1f94ac993a84f0cd89c48e522722dd8713dbdc2d9bd4ae4dd"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/CATBOOST_validation_probabilities.npz",
+      "size_bytes": 128445,
+      "sha256": "a96b85dcfe8bc30acb1615764fa4a95a443a17e932b720398b09d3f708135ef7"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/DECISION_TREE_validation_probabilities.npz",
+      "size_bytes": 9177,
+      "sha256": "8880adb64583bd3f52f4521a526a109bbc5a665a960d6f71472ee7b136bc0898"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/EXTRA_TREES_validation_probabilities.npz",
+      "size_bytes": 30734,
+      "sha256": "fc11793da0d269fa7ac4196181afff49cb84a3f8882a51e5da3e9ab9e6ad1b97"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/GAUSSIAN_NAIVE_BAYES_validation_probabilities.npz",
+      "size_bytes": 140731,
+      "sha256": "b0109ba954495696e3565e81602de8f98387a12f07fb931fa6a3fa9d02a776cf"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/GRADIENT_BOOSTING_validation_probabilities.npz",
+      "size_bytes": 77602,
+      "sha256": "20a35ddca214a8de1f6d16d031d09a8477d6ae82615f0c160ef0008d1dec3c0f"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/K_NEAREST_NEIGHBORS_validation_probabilities.npz",
+      "size_bytes": 16482,
+      "sha256": "1f9bb74147378368d18e04c36911d2cc6edce99f437d6691d770551ed7e7f1d0"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/LIGHTGBM_validation_probabilities.npz",
+      "size_bytes": 103504,
+      "sha256": "bdf04f04b98305ceb45074ebae1cc4798f694ace06c90b2960739d15b62622b9"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/LINEAR_SVM_validation_probabilities.npz",
+      "size_bytes": 131407,
+      "sha256": "f405f5023bd4ffce3796017b71dbf5fafa56904d7bfcb5234e4113dffe50d163"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/LOGISTIC_REGRESSION_validation_probabilities.npz",
+      "size_bytes": 138191,
+      "sha256": "5e4b7bfcc1d327ff91de6fc6fd7dc97bae353032709fc99a4dd9306884a823d1"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/RANDOM_FOREST_validation_probabilities.npz",
+      "size_bytes": 36336,
+      "sha256": "e71109c46e44a95ee15066c11d95212ec3aa177cce512478450a4f17c6448787"
+    },
+    {
+      "relative_path": "stage16_2_validation_probabilities/XGBOOST_validation_probabilities.npz",
+      "size_bytes": 118966,
+      "sha256": "f751cb77bbf2bc0d79efda004fde949bf6a5ecb971114d0a425f1af833a0e76d"
+    },
+    {
+      "relative_path": "stage16_2a_all_threshold_sweeps.csv",
+      "size_bytes": 696157,
+      "sha256": "e58d408f64329a3ad0c9e1684424fb097faf92b4e4cffd0817e66864a59f6181"
+    },
+    {
+      "relative_path": "stage16_2a_baseline_execution_plan.json",
+      "size_bytes": 1565,
+      "sha256": "a0d0d4de526dfba681de0daf55cbf00fb0a73030084d986ea1a1c14929962bd1"
+    },
+    {
+      "relative_path": "stage16_2a_baseline_execution_state.json",
+      "size_bytes": 2638,
+      "sha256": "841a3137b94cdbd2a0abcf326073fa3fbc759aaa535e30361ae35d53567f1b0f"
+    },
+    {
+      "relative_path": "stage16_2a_baseline_metadata.json",
+      "size_bytes": 749,
+      "sha256": "0e1c2f938e1688d5cf4f67840914b3cdb3217d13565d0088ca8a40a916fd24c9"
+    },
+    {
+      "relative_path": "stage16_2a_baseline_ranking.csv",
+      "size_bytes": 5262,
+      "sha256": "197527fcb7a46ae25aafc4a525b8dfabff7db553da390d35544c3dda04d73989"
+    },
+    {
+      "relative_path": "stage16_2a_baseline_result.json",
+      "size_bytes": 2266,
+      "sha256": "bb30dd2cc7ec713b0c336feed230419888503b22a30958e95d0cc7ce45d11323"
+    },
+    {
+      "relative_path": "stage16_2a_default_threshold_metrics.csv",
+      "size_bytes": 5197,
+      "sha256": "453e2fcb4328a20c41223f5d9472f3a0601e02672cd7395d539d93e0cfedadd4"
+    },
+    {
+      "relative_path": "stage16_2a_model_manifest.json",
+      "size_bytes": 12862,
+      "sha256": "a138daf7abbb96a0a8bab188d6acfbf44357820bc8c79c63a67047bee112ef04"
+    },
+    {
+      "relative_path": "stage16_2a_selected_threshold_metrics.csv",
+      "size_bytes": 5221,
+      "sha256": "9d5766b645ad583444b739f021074c91df7fe0c6dd0bf69e1a58948e1ed3b788"
+    },
+    {
+      "relative_path": "stage16_2a_top5_validation_selection.json",
+      "size_bytes": 6313,
+      "sha256": "ae85ffb8f51524e64492ca648b1bf46ddb116d48f5401ee01b89c63cccf89d32"
+    },
+    {
+      "relative_path": "stage16_2a_validation_probabilities.npz",
+      "size_bytes": 979118,
+      "sha256": "a276cad5af8740ccb5a210b29f85bf0d6dd8f3df944ebd23595c9b6d3a111191"
+    },
+    {
+      "relative_path": "stage16_2b_baseline_selection_lock.json",
+      "size_bytes": 23133,
+      "sha256": "2c5b0fba4da5fc6a42ac52c7d5c9798dc37a48fa67f8885755cd97a893c5f6d6"
+    },
+    {
+      "relative_path": "stage16_2b_baseline_summary.json",
+      "size_bytes": 1282,
+      "sha256": "f8aa638db577ea2c05dc8de14bebabf03a292cdc6706a8d5b10cea64b24cda6e"
     }
   ],
-  "pretraining_lock_path": "stage16_1b_pretraining_protocol_lock.json",
-  "pretraining_lock_sha256": "1483451f9bf1db8c231e070bc60937b6a955b297221a4cc776d92634847ec7af",
+  "baseline_selection_lock_path": "stage16_2b_baseline_selection_lock.json",
+  "baseline_selection_lock_sha256": "2c5b0fba4da5fc6a42ac52c7d5c9798dc37a48fa67f8885755cd97a893c5f6d6",
   "candidate_count": 12,
-  "candidate_ids": [
-    "LOGISTIC_REGRESSION",
-    "GAUSSIAN_NAIVE_BAYES",
-    "K_NEAREST_NEIGHBORS",
-    "LINEAR_SVM",
-    "DECISION_TREE",
-    "RANDOM_FOREST",
-    "EXTRA_TREES",
-    "ADABOOST",
-    "GRADIENT_BOOSTING",
+  "completed_candidate_count": 12,
+  "baseline_winner": {
+    "candidate_id": "XGBOOST",
+    "model_name": "XGBoost",
+    "threshold": 0.44,
+    "accuracy": 0.9369895599312805,
+    "precision": 0.9636160714285714,
+    "recall": 0.8075196408529742,
+    "f1": 0.8786891919397517,
+    "f2": 0.8345576863594185,
+    "fpr": 0.012010463102825775,
+    "fnr": 0.19248035914702583,
+    "roc_auc": 0.9670573787201974,
+    "pr_auc": 0.9449217502319894
+  },
+  "top5_tuning_candidate_ids": [
     "XGBOOST",
     "LIGHTGBM",
-    "CATBOOST"
+    "CATBOOST",
+    "K_NEAREST_NEIGHBORS",
+    "RANDOM_FOREST"
   ],
+  "model_file_count": 12,
+  "total_model_size_bytes": 123548073,
   "local_cache_file_count": 8,
-  "local_cache_size_bytes": 109545473,
   "local_cache_files_committed": false,
-  "local_cache_locks": {
-    "X_train_raw": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_raw_float32.npy",
-      "shape": [
-        154686,
-        70
-      ],
-      "dtype": "float32",
-      "size_bytes": 43312208,
-      "sha256": "af32fd99bd2cbff1cd8805bf18f2a1d161879f8aebcc87ddbb97698272704c83"
-    },
-    "X_train_scaled": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_train_scaled_float32.npy",
-      "shape": [
-        154686,
-        70
-      ],
-      "dtype": "float32",
-      "size_bytes": 43312208,
-      "sha256": "e48e1e71d5a5f9f43a9414b11d0acb056df57642c36fe403d4d82a9f1abca0b3"
-    },
-    "X_validation_raw": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_raw_float32.npy",
-      "shape": [
-        37835,
-        70
-      ],
-      "dtype": "float32",
-      "size_bytes": 10593928,
-      "sha256": "660b222becb2b811fa2856ff9fcb0ac37a956b6a0b3201daefcf2f3dee1104ec"
-    },
-    "X_validation_scaled": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/X_validation_scaled_float32.npy",
-      "shape": [
-        37835,
-        70
-      ],
-      "dtype": "float32",
-      "size_bytes": 10593928,
-      "sha256": "a6ad8c00009f3c5fdde99ecfff27d6723a41070d408d7135aca5868da72ffbf4"
-    },
-    "train_indices": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/train_indices_int64.npy",
-      "shape": [
-        154686
-      ],
-      "dtype": "int64",
-      "size_bytes": 1237616,
-      "sha256": "d52928c77eb1264e7b60391068722cb9c216ba4a2732a9d6e449f0e9d28701ef"
-    },
-    "validation_indices": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/validation_indices_int64.npy",
-      "shape": [
-        37835
-      ],
-      "dtype": "int64",
-      "size_bytes": 302808,
-      "sha256": "bbc7d9833ef91e1c65cff35173a501b9d0cbc5af02f35ae589db2c27681bf286"
-    },
-    "y_train": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_train_int8.npy",
-      "shape": [
-        154686
-      ],
-      "dtype": "int8",
-      "size_bytes": 154814,
-      "sha256": "d908d1af7c14ae63c1f75ec81b23e51f20d08cfb10087b35c95e5709bfbf1d31"
-    },
-    "y_validation": {
-      "path": "/kaggle/working/stage16_classical_benchmark/data_cache/y_validation_int8.npy",
-      "shape": [
-        37835
-      ],
-      "dtype": "int8",
-      "size_bytes": 37963,
-      "sha256": "b16e9950a97b2169f5d5e879173042ecc74186e4e85c0be50ba83003826f8463"
-    }
-  },
-  "classical_model_fit_count": 0,
-  "validation_prediction_count": 0,
+  "baseline_model_fit_count": 12,
+  "validation_prediction_count": 12,
+  "threshold_sweep_count": 12,
   "holdout_accessed": false,
   "cache_policy": {
     "excluded_directory": "data_cache",
-    "reason": "Large deterministic matrices are represented by immutable SHA-256 identities.",
+    "reason": "Large deterministic development matrices are represented by immutable hashes.",
     "excluded_disposable_files": [
       "__pycache__",
       ".pyc",
       ".DS_Store"
     ]
   },
-  "next_step": "Train and validate all 12 locked classical candidates."
+  "next_step": "Validation-only hyperparameter tuning of the five frozen classical candidates."
 }

@@ -1,0 +1,21 @@
+{
+  "stage": "16.2A",
+  "generated_at_utc": "2026-08-06T17:19:48.647867+00:00",
+  "operation": "Twelve-model duplicate-safe baseline training and validation",
+  "training_cache_loaded": true,
+  "validation_cache_loaded": true,
+  "raw_training_matrix_loaded": true,
+  "scaled_training_matrix_loaded": true,
+  "raw_validation_matrix_loaded": true,
+  "scaled_validation_matrix_loaded": true,
+  "candidate_count": 12,
+  "classical_model_fit_count": 12,
+  "validation_prediction_count": 12,
+  "validation_threshold_search_count": 12,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false,
+  "post_holdout_selection": false
+}

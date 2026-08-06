@@ -1,0 +1,53 @@
+{
+  "stage": "16.2A",
+  "status": "LOCKED_BEFORE_BASELINE_MODEL_FITTING",
+  "repository_commit": "d41b469397ae7918f811f41578cf95f4384e67dd",
+  "pretraining_lock_sha256": "1483451f9bf1db8c231e070bc60937b6a955b297221a4cc776d92634847ec7af",
+  "candidate_count": 12,
+  "candidate_ids": [
+    "LOGISTIC_REGRESSION",
+    "GAUSSIAN_NAIVE_BAYES",
+    "K_NEAREST_NEIGHBORS",
+    "LINEAR_SVM",
+    "DECISION_TREE",
+    "RANDOM_FOREST",
+    "EXTRA_TREES",
+    "ADABOOST",
+    "GRADIENT_BOOSTING",
+    "XGBOOST",
+    "LIGHTGBM",
+    "CATBOOST"
+  ],
+  "training_seed": 42,
+  "fit_data": "Exact duplicate-safe training cache only",
+  "selection_data": "Exact duplicate-safe validation cache only",
+  "threshold_grid": {
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005,
+    "count": 181
+  },
+  "threshold_selection_rule": [
+    "highest validation F1",
+    "highest validation F2",
+    "highest validation recall",
+    "lowest validation FPR",
+    "lowest threshold"
+  ],
+  "candidate_ranking_rule": [
+    "highest selected-threshold validation F1",
+    "highest validation PR-AUC",
+    "highest selected-threshold validation F2",
+    "highest selected-threshold validation recall",
+    "lowest selected-threshold validation FPR",
+    "lowest training time",
+    "lexicographic candidate ID"
+  ],
+  "top_candidate_count_for_next_stage": 5,
+  "model_serialization": {
+    "format": "joblib",
+    "compression": 3
+  },
+  "resume_policy": "Reuse only completed candidate artifacts whose model, probability, and threshold-sweep hashes verify.",
+  "holdout_access": false
+}

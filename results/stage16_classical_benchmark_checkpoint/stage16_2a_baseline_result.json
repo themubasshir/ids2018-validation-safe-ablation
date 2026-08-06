@@ -1,0 +1,53 @@
+{
+  "stage": "16.2A",
+  "status": "COMPLETED",
+  "completed_at_utc": "2026-08-06T17:19:48.647380+00:00",
+  "repository_commit": "d41b469397ae7918f811f41578cf95f4384e67dd",
+  "execution_plan_sha256": "2db14672e3fb973740c045e9838dd4bb11f304e2ca9ccb47c9d6bc3d72e54119",
+  "candidate_count": 12,
+  "completed_candidate_count": 12,
+  "classical_model_fit_count": 12,
+  "validation_prediction_count": 12,
+  "threshold_sweep_count": 12,
+  "threshold_candidates_per_model": 181,
+  "total_threshold_rows": 2172,
+  "baseline_winner": {
+    "candidate_id": "XGBOOST",
+    "model_name": "XGBoost",
+    "threshold": 0.44,
+    "accuracy": 0.9369895599312805,
+    "precision": 0.9636160714285714,
+    "recall": 0.8075196408529742,
+    "f1": 0.8786891919397517,
+    "f2": 0.8345576863594185,
+    "fpr": 0.012010463102825775,
+    "fnr": 0.19248035914702583,
+    "roc_auc": 0.9670573787201974,
+    "pr_auc": 0.9449217502319894
+  },
+  "top5_candidate_ids": [
+    "XGBOOST",
+    "LIGHTGBM",
+    "CATBOOST",
+    "K_NEAREST_NEIGHBORS",
+    "RANDOM_FOREST"
+  ],
+  "overall_runtime_seconds": 703.7631645759975,
+  "artifacts": {
+    "default_metrics": "/kaggle/working/stage16_classical_benchmark/stage16_2a_default_threshold_metrics.csv",
+    "selected_metrics": "/kaggle/working/stage16_classical_benchmark/stage16_2a_selected_threshold_metrics.csv",
+    "all_threshold_sweeps": "/kaggle/working/stage16_classical_benchmark/stage16_2a_all_threshold_sweeps.csv",
+    "ranking": "/kaggle/working/stage16_classical_benchmark/stage16_2a_baseline_ranking.csv",
+    "top5_selection": "/kaggle/working/stage16_classical_benchmark/stage16_2a_top5_validation_selection.json",
+    "validation_probabilities": "/kaggle/working/stage16_classical_benchmark/stage16_2a_validation_probabilities.npz",
+    "model_manifest": "/kaggle/working/stage16_classical_benchmark/stage16_2a_model_manifest.json"
+  },
+  "existing_classical_results_reused": false,
+  "transformer_policy_modified": false,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false,
+  "next_step": "Package the baseline results and freeze the five validation-selected candidates before hyperparameter tuning."
+}

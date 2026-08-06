@@ -1,11 +1,24 @@
-# Stage 16 Classical Benchmark Checkpoint
+# Stage 16 Classical Benchmark
 
-This checkpoint locks the classical-model comparison protocol
-before the first duplicate-safe classical model is fitted.
+This package contains the exact duplicate-safe classical
+baseline experiment performed after the Stage 15 Transformer
+experiment was frozen.
 
-## Candidate set
+## Development data
 
-Twelve classical candidates are locked:
+- Training rows: 154,686
+- Validation rows: 37,835
+- Predictors: 70
+- Existing classical results reused: none
+- Baseline seed: 42
+
+The large deterministic development matrices are excluded from
+Git. Their exact SHA-256 identities remain stored in the cache
+manifest and pretraining lock.
+
+## Baseline candidate set
+
+Twelve classical candidates were fitted:
 
 1. Logistic Regression
 2. Gaussian Naive Bayes
@@ -20,41 +33,62 @@ Twelve classical candidates are locked:
 11. LightGBM
 12. CatBoost
 
-The earlier MLP, 1D-CNN, LSTM, and Transformer Encoder results
-are excluded from this classical benchmark.
+## Baseline winner
 
-## Duplicate-safe development data
+- Model: XGBoost
+- Validation-selected threshold: 0.44
+- Accuracy: 0.9369895599312805
+- Precision: 0.9636160714285714
+- Recall: 0.8075196408529742
+- F1: 0.8786891919397517
+- F2: 0.8345576863594185
+- FPR: 0.012010463102825775
+- FNR: 0.19248035914702583
+- ROC-AUC: 0.9670573787201974
+- PR-AUC: 0.9449217502319894
 
-- Training rows: 154,686
-- Validation rows: 37,835
-- Predictors: 70
-- Existing classical artifacts reused: none
+## Validation-selected tuning set
 
-Both raw and training-only-standardized caches were constructed
-from the exact Stage 15 duplicate-safe training and validation
-indices.
+The following five candidates are frozen for validation-only
+hyperparameter tuning:
 
-## Cache policy
+1. XGBoost
+2. LightGBM
+3. CatBoost
+4. K-Nearest Neighbors
+5. Random Forest
 
-The eight NumPy cache files total approximately 104 MB and are
-not duplicated in Git. Their paths, shapes, dtypes, sizes, and
-SHA-256 hashes are stored in:
+## Preserved artifacts
 
-- `stage16_1_data_cache_manifest.json`
-- `stage16_1b_pretraining_protocol_lock.json`
+The package includes:
+
+- All 12 fitted baseline model files
+- All 12 validation probability vectors
+- All 12 threshold sweeps
+- All 12 candidate run records
+- Default-threshold metrics
+- Validation-selected metrics
+- Complete ranking
+- Exact top-five selection
+- Baseline selection lock
 
 ## Scientific boundary
 
-At checkpoint creation:
+All models were fitted using only the duplicate-safe training
+split. Threshold selection and ranking used only the
+duplicate-safe validation split.
 
-- Classical model fits: 0
-- Validation predictions: 0
+At package creation:
+
+- Baseline model fits: 12
+- Validation probability vectors: 12
+- Threshold sweeps: 12
 - Holdout indices loaded: false
 - Holdout features loaded: false
 - Holdout labels loaded: false
 - Holdout predictions generated: false
 - Holdout metrics generated: false
 
-Model fitting may use only the duplicate-safe training cache.
-Threshold selection and candidate ranking may use only the
-duplicate-safe validation cache.
+The baseline validation advantage over the Transformer is not a
+final superiority claim. Final comparison requires the frozen
+classical holdout batch evaluation.

@@ -1,12 +1,12 @@
 {
-  "stage": "15.3-PK",
-  "generated_at_utc": "2026-08-06T10:43:13.949938+00:00",
+  "stage": "15.4-PK",
+  "generated_at_utc": "2026-08-06T13:12:36.655845+00:00",
   "repository": {
     "branch": "main",
-    "base_commit": "21eb0854f2749562f2ba21255c59c8cc6f2f009b",
+    "base_commit": "14337726fd76ec041fda1561be50aae627b1a93d",
     "package_relative_path": "results/stage15_transformer_checkpoint"
   },
-  "copied_file_count": 54,
+  "copied_file_count": 119,
   "copied_files": [
     {
       "relative_path": "ft_transformer_numeric.py",
@@ -277,6 +277,331 @@
       "relative_path": "stage15_3b_original_vs_extended_metrics.csv",
       "size_bytes": 1360,
       "sha256": "f3935fd40992321431346d0ad30dd1dc39fb37277e5b0f0f0f29a1e43efe4f22"
+    },
+    {
+      "relative_path": "stage15_4a_candidate_summary.csv",
+      "size_bytes": 2001,
+      "sha256": "a8b0135c621d94171305f2785ce1c0d30213caa72d5192a216e2a113a32cd545"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+      "size_bytes": 1966315,
+      "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_BALANCED_seed_101_last.pt",
+      "size_bytes": 1971707,
+      "sha256": "59398fefb57f599d628d329e424cdac67bdfd7298cbe64331892d8fff3369295"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+      "size_bytes": 1966137,
+      "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_BALANCED_seed_29_last.pt",
+      "size_bytes": 1971528,
+      "sha256": "f3402e024623b6939c5ebf965e30e50e5fd040502ab91b273d352ff452d3bfa1"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_BALANCED_seed_7_best.pt",
+      "size_bytes": 1965959,
+      "sha256": "e1730f80ccc5d4832874344263ea9c83f4171a6466bc95d93d51d18c1b32d538"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_BALANCED_seed_7_last.pt",
+      "size_bytes": 1971349,
+      "sha256": "e005383c3faab6e5693ed7dd9834c4814ad810619e10854afb9242070494743c"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_COMPACT_seed_101_best.pt",
+      "size_bytes": 401129,
+      "sha256": "dbef54747d547b0f9fc7291701d843d9da6026d2f6d0460ed019e205fdb38b56"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_COMPACT_seed_101_last.pt",
+      "size_bytes": 406520,
+      "sha256": "4fb9692418f860c0cf262384385f3fb9aad54a9775dc0780057673d6debc1b17"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_COMPACT_seed_29_best.pt",
+      "size_bytes": 400999,
+      "sha256": "1c34f5d1c8dafc737a517399ded448cf3b2d00950c3b97091204a28bce03f93e"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_COMPACT_seed_29_last.pt",
+      "size_bytes": 406389,
+      "sha256": "8c472a6e43582217be6764c472d48f66d31260e6d1078cbae4f46b77d7bed7f0"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_COMPACT_seed_7_best.pt",
+      "size_bytes": 400869,
+      "sha256": "3741bb58828eecc1013320ca08d8f251acae1c760da78b32d6c61e4bdb6d1500"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_COMPACT_seed_7_last.pt",
+      "size_bytes": 406258,
+      "sha256": "bd9a6406e6b0a5e897c7baa5b9f41265616c750c70bc2723775f6267654ca019"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_DEEP_REGULARIZED_seed_101_best.pt",
+      "size_bytes": 2583163,
+      "sha256": "cd38b11194aa56e705880a2db678150505645c926ed21a973b61bbeb503f04a1"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_DEEP_REGULARIZED_seed_101_last.pt",
+      "size_bytes": 2588563,
+      "sha256": "dce1dfe37cbf307a917e3fe113697c775caf265a22f6ac5067b36e06cb1061ca"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_DEEP_REGULARIZED_seed_29_best.pt",
+      "size_bytes": 2582937,
+      "sha256": "ff0c42053029c6255066fb8b3ac591c8d6cc518debffdcd21b659b30a481df57"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_DEEP_REGULARIZED_seed_29_last.pt",
+      "size_bytes": 2588336,
+      "sha256": "f4a35d9e12713032ddc8913d5eff1caf5d0d970bfbc13f89d8c90a5248fcd284"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_DEEP_REGULARIZED_seed_7_best.pt",
+      "size_bytes": 2582711,
+      "sha256": "4ba0ee703f07662c742cb95a432ab26d420dbe3b82ef40676d6051b11e7b9563"
+    },
+    {
+      "relative_path": "stage15_4a_models/FT_DEEP_REGULARIZED_seed_7_last.pt",
+      "size_bytes": 2588109,
+      "sha256": "6597a7ceba5e385e8a1a0ac20867832d5e22446bc26c8342da7203ce9e2daf52"
+    },
+    {
+      "relative_path": "stage15_4a_multiseed_configuration.json",
+      "size_bytes": 1616,
+      "sha256": "41fc33c24c688cd1f813c35e9cac6479048f0758df740ff4ce5ca3f2976788d0"
+    },
+    {
+      "relative_path": "stage15_4a_multiseed_confirmation.py",
+      "size_bytes": 52902,
+      "sha256": "b42b3688c327294c8bcbdb30148e569de1bc2875c130ae24e7f50316f18c5721"
+    },
+    {
+      "relative_path": "stage15_4a_multiseed_metadata.json",
+      "size_bytes": 991,
+      "sha256": "98a94361ecc1a575d8f1c95542f181b94149fbd9445645a6e40f386ffaf2813c"
+    },
+    {
+      "relative_path": "stage15_4a_multiseed_result.json",
+      "size_bytes": 23572,
+      "sha256": "09217c280539d4fe305c9fd24b3efff702f95e98cf6d26b34ace612ca04ae09b"
+    },
+    {
+      "relative_path": "stage15_4a_multiseed_selection.json",
+      "size_bytes": 3459,
+      "sha256": "e9237b7bff9221479fe8ddd3ca355118f3b04a6697d23a82ea35f6f59b60890d"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_101_history.csv",
+      "size_bytes": 6154,
+      "sha256": "46e487476105ea75c8b67f76396a37c9c700b30cb46994f8b3a223ca3b8ed6fb"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_101_result.json",
+      "size_bytes": 1439,
+      "sha256": "45aa6d15a1011b316c61896f2c8772dbc48ebadcfcc562869781731c1d0d4dba"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_101_thresholds.csv",
+      "size_bytes": 38394,
+      "sha256": "5ead8f966cac453651582de7d6dfb67795a65fe5da9313c3ea45c875778c71c5"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_101_validation_probabilities.npz",
+      "size_bytes": 131686,
+      "sha256": "95918be6333154a59f07239c275f4f0157ae2b48095f43241927f64f44b0ad9c"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_29_history.csv",
+      "size_bytes": 6148,
+      "sha256": "56812205ef90573014a241cc949b661a774a33b88d77b109b19483f79cb1e8b4"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_29_result.json",
+      "size_bytes": 1434,
+      "sha256": "6abd5030b1bcd1242c6ec6c680065de61b472d82c9ef11b6945fc7f3a9afa7fa"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_29_thresholds.csv",
+      "size_bytes": 38003,
+      "sha256": "d2f9fee5d65fafabb1321e6cd698fe0299871c0a423f14108cc8d6552bcf1aed"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_29_validation_probabilities.npz",
+      "size_bytes": 131587,
+      "sha256": "fc500035618aeff60533da4dcf4fa76557a7b0cbca5c6eab7baebce1ecc0a653"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_7_history.csv",
+      "size_bytes": 6022,
+      "sha256": "fd67a1de29348c67e25b41db9d0ead190ef05ba5c4db0b6fcdef82931314dc5a"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_7_result.json",
+      "size_bytes": 1427,
+      "sha256": "ead83c7d9b2b6973e21f60eb63aedac9ea33d947aaf4213dace14cb44495b403"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_7_thresholds.csv",
+      "size_bytes": 37611,
+      "sha256": "e22bf0e157a7e6e1832b21532dec1ffd00cad9e37e1d734325c456f953f55eb3"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_BALANCED_seed_7_validation_probabilities.npz",
+      "size_bytes": 131664,
+      "sha256": "75e93c546963b8c29cb5e5ddf6c48d07dbc6c8c472fe6a5d8e039fd311e46e91"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_101_history.csv",
+      "size_bytes": 6050,
+      "sha256": "ac3cf0085b8ff6e692cca0787a110e55782f3d2cfe326218556348ff38b797ed"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_101_result.json",
+      "size_bytes": 1430,
+      "sha256": "398cb4d140c68537979ee43a85058d8a47a4081dcaa8bede6a43a849795bb5dc"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_101_thresholds.csv",
+      "size_bytes": 37972,
+      "sha256": "8b521783151b332535127d5782dcf43f978a9904e0e5ddf34c640c05ac2d7446"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_101_validation_probabilities.npz",
+      "size_bytes": 132502,
+      "sha256": "53bce05f203713c629f3141d76b1108871f25a8c3fcf462d8bac4669cdf87af8"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_29_history.csv",
+      "size_bytes": 5698,
+      "sha256": "770e420286452f5500aa65a85ce6d402c8ffcb611e0861b3a70a24c497ca7571"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_29_result.json",
+      "size_bytes": 1422,
+      "sha256": "f7e8a24b91ab9abe523cb0f56a391b2b089da102d81154a4a978bc11e7f4c23a"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_29_thresholds.csv",
+      "size_bytes": 37666,
+      "sha256": "823b151f1d186ea6abbc4f0721ea7f8b9da324352c559c09f5d709634f5777e5"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_29_validation_probabilities.npz",
+      "size_bytes": 129792,
+      "sha256": "91ff16097b4ff468d763703f419548f7c73a0e972f80c1f8ae40dc217f28721d"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_7_history.csv",
+      "size_bytes": 5909,
+      "sha256": "c00db9ceea2b1b1726d44d27e8b0a06f2a55b87f8c6d1376836d4734c2368354"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_7_result.json",
+      "size_bytes": 1419,
+      "sha256": "26d711ed317223bffd4c16c2c16d79a5958542cf9e62341a7bab0e94294d1a73"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_7_thresholds.csv",
+      "size_bytes": 37250,
+      "sha256": "a44d7327f79d26f8eacd88c6d61b5a52142e69eaca0b2f655df09b61000f4ed8"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_COMPACT_seed_7_validation_probabilities.npz",
+      "size_bytes": 132609,
+      "sha256": "f67e8990863a1845da8f417dd35bf27d7f3c5daf3ac37b68524e8b4c580aa89a"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_101_history.csv",
+      "size_bytes": 6814,
+      "sha256": "9aac5e17a4f8b608ee5fb6969f0dbf2c488acfe37377a50cc9cf5b73d048ea38"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_101_result.json",
+      "size_bytes": 1486,
+      "sha256": "b901391a9327b2ad47d36899c6d5e6aa0b7cb057d6ed58ec8af586ec34917b8f"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_101_thresholds.csv",
+      "size_bytes": 41244,
+      "sha256": "184c39bbaa257f7d0770c738bfc32eef253ec5e481dfb36bdf821fe9ba9f9a41"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_101_validation_probabilities.npz",
+      "size_bytes": 130687,
+      "sha256": "80702ee800de58343e54ac5b6eb78befe030d646c06dd1fd721dab6d0ffff640"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_29_history.csv",
+      "size_bytes": 5753,
+      "sha256": "abd9f59a4120ccd6a0293a35445600ed1b70d86298ef33e1abecaaa340461586"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_29_result.json",
+      "size_bytes": 1476,
+      "sha256": "4a6df6e792c813eb6546e2c4a43fa4663ace0787289ae7eb7cd9ef655cf58e39"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_29_thresholds.csv",
+      "size_bytes": 40905,
+      "sha256": "117322b01e922ca77dfe5306bbc12c496014f460f05c83b15e5be30451230518"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_29_validation_probabilities.npz",
+      "size_bytes": 130648,
+      "sha256": "cb36d57a350afd05085ecd090cbc72551944d6a335cc1b10fe89a119d1ce8ede"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_7_history.csv",
+      "size_bytes": 6666,
+      "sha256": "3dd3c6e8286db57d8878e21d688e23e0afce17a67d3ace455ead8c67da97c7d0"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_7_result.json",
+      "size_bytes": 1478,
+      "sha256": "60e9fb196d4031b98239e7a29db475e42db3c1e70fac8dfed2789aacaae2fe61"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_7_thresholds.csv",
+      "size_bytes": 40529,
+      "sha256": "9aecd94d855292525200ef5166b4b04167774f63fed8f11cf8024345bad15e99"
+    },
+    {
+      "relative_path": "stage15_4a_runs/FT_DEEP_REGULARIZED_seed_7_validation_probabilities.npz",
+      "size_bytes": 129654,
+      "sha256": "7cdf913922f77215ce3c1160a3f48eac672157b6565d996534ae4cf0336d860e"
+    },
+    {
+      "relative_path": "stage15_4a_seed_metrics.csv",
+      "size_bytes": 3069,
+      "sha256": "c1734f1b1f7b4cfa76f1ba5fece9aeb91149eab85b977eb7ecc13d42d29087da"
+    },
+    {
+      "relative_path": "stage15_4a_seed_winners.csv",
+      "size_bytes": 366,
+      "sha256": "e6866ae511fba6c5531a2cc18464941cd510c3111b48f02cc75d7376bf609908"
+    },
+    {
+      "relative_path": "stage15_4a_threshold_sweep.csv",
+      "size_bytes": 343251,
+      "sha256": "307e5d24c187fcefc71757fce48c8cab1febf71b54f1d0f21388e66a93da9400"
+    },
+    {
+      "relative_path": "stage15_4a_training_history.csv",
+      "size_bytes": 53306,
+      "sha256": "f9ac20d4fad7530670a91d4bd7e5914d0f56248f10b7c97f0aa23906c8b28c63"
+    },
+    {
+      "relative_path": "stage15_4a_validation_probabilities.npz",
+      "size_bytes": 1132899,
+      "sha256": "96303e23b8538abc641924ba9b3b10a4088a4bc6bc876a96b179b71ca5a48770"
     }
   ],
   "cache_policy": {
@@ -294,39 +619,93 @@
     "retained_predictors": 70,
     "cross_split_exact_overlap": 0
   },
-  "stage15_3a": {
+  "stage15_4a": {
+    "confirmation_seeds": [
+      7,
+      29,
+      101
+    ],
     "candidate_count": 3,
-    "holdout_status": "UNTOUCHED"
-  },
-  "stage15_3b": {
-    "selected_candidate": "FT_BALANCED",
-    "selected_metrics": {
+    "completed_run_count": 9,
+    "provisional_leader": "FT_BALANCED",
+    "runner_up": "FT_COMPACT",
+    "leader_summary": {
+      "aggregate_rank": 1,
       "candidate_id": "FT_BALANCED",
       "parameter_count": 159169,
-      "original_best_epoch": 15,
-      "extended_best_epoch": 28,
-      "final_epoch_executed": 30,
-      "additional_epochs_executed": 15,
-      "best_validation_loss": 0.335881362278647,
-      "roc_auc": 0.9533749623500613,
-      "pr_auc": 0.9272883071218994,
-      "threshold": 0.6599999999999997,
-      "accuracy": 0.9309105325756575,
-      "precision": 0.9840604026845637,
-      "recall": 0.7679573512906847,
-      "f1": 0.8626812355536877,
-      "f2": 0.8032360306777273,
-      "fpr": 0.004899974210662049,
-      "fnr": 0.23204264870931537,
-      "true_negative": 27010,
-      "false_positive": 133,
-      "false_negative": 2481,
-      "true_positive": 8211,
-      "peak_gpu_memory_mb": 1127.46533203125,
-      "runtime_seconds": 292.46708886999977,
-      "checkpoint_path": "/kaggle/working/stage15_transformer/stage15_3b_models/FT_BALANCED_best_extended.pt"
+      "seed_count": 3,
+      "seed_win_count": 2,
+      "mean_best_epoch": 39.0,
+      "maximum_best_epoch": 40,
+      "best_checkpoint_ceiling_hits": 1,
+      "mean_threshold": 0.6783333333333331,
+      "threshold_std": 0.04481443219916255,
+      "mean_accuracy": 0.9314920047574997,
+      "accuracy_std": 0.0007942370398475973,
+      "mean_precision": 0.9825601362740684,
+      "precision_std": 0.0044541893323534415,
+      "mean_recall": 0.771293178700586,
+      "recall_std": 0.005863483970729384,
+      "mean_f1": 0.8641820553183144,
+      "f1_std": 0.002178217156171591,
+      "minimum_f1": 0.8623930277734025,
+      "maximum_f1": 0.8666076358143654,
+      "mean_f2": 0.805941353601176,
+      "f2_std": 0.004566515773898801,
+      "mean_fpr": 0.005403480332559653,
+      "fpr_std": 0.0014445287013258286,
+      "mean_fnr": 0.2287068212994139,
+      "fnr_std": 0.005863483970729375,
+      "mean_roc_auc": 0.9528681873642241,
+      "roc_auc_std": 0.0004838397045489551,
+      "mean_pr_auc": 0.9269290149821972,
+      "pr_auc_std": 0.0006740038174934187,
+      "mean_peak_gpu_memory_mb": 1129.52294921875,
+      "total_runtime_seconds": 2300.7221625059983
     },
+    "runner_up_summary": {
+      "aggregate_rank": 2,
+      "candidate_id": "FT_COMPACT",
+      "parameter_count": 30017,
+      "seed_count": 3,
+      "seed_win_count": 0,
+      "mean_best_epoch": 35.666666666666664,
+      "maximum_best_epoch": 38,
+      "best_checkpoint_ceiling_hits": 0,
+      "mean_threshold": 0.6516666666666664,
+      "threshold_std": 0.033291640592396934,
+      "mean_accuracy": 0.9311484075591383,
+      "accuracy_std": 0.00015858332232060457,
+      "mean_precision": 0.9854777421814637,
+      "precision_std": 0.001828235356204556,
+      "mean_recall": 0.7676767676767676,
+      "recall_std": 0.0019461889306663903,
+      "mean_f1": 0.8630454293140164,
+      "f1_std": 0.0005563737684274256,
+      "minimum_f1": 0.8624268928816059,
+      "maximum_f1": 0.8635050680111339,
+      "mean_f2": 0.8031775761199554,
+      "f2_std": 0.0014671044366466133,
+      "mean_fpr": 0.0044578712743617134,
+      "fpr_std": 0.0005790160868548691,
+      "mean_fnr": 0.23232323232323235,
+      "fnr_std": 0.0019461889306663597,
+      "mean_roc_auc": 0.946734107326805,
+      "roc_auc_std": 0.00017372361826975113,
+      "mean_pr_auc": 0.9201649460841425,
+      "pr_auc_std": 0.00018779477789495323,
+      "mean_peak_gpu_memory_mb": 403.015625,
+      "total_runtime_seconds": 884.6973975830006
+    },
+    "mean_f1_margin": 0.0011366260042979803,
+    "confirmation_status": "CLOSE_OR_UNSTABLE_MULTI_SEED_RANKING",
+    "architecture_frozen": false,
     "holdout_status": "UNTOUCHED"
   },
-  "next_step": "Standardized from-scratch multi-seed architecture confirmation with a maximum of 40 epochs."
+  "next_step": {
+    "convergence_repair": "Continue FT_BALANCED seed 7 beyond epoch 40",
+    "additional_confirmation_seeds": 2,
+    "candidate_scope": "All three architectures",
+    "target_independent_seed_count": 5
+  }
 }

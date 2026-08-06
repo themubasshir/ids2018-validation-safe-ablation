@@ -1,74 +1,76 @@
 # Stage 15 Transformer Checkpoint
 
-This package preserves Transformer feasibility, duplicate-safe
-partitioning, preprocessing, GPU compatibility, architecture
-screening, and convergence-extension results.
+This package preserves the complete Transformer feasibility,
+duplicate-safe partitioning, preprocessing, GPU compatibility,
+architecture screening, convergence extension, and independent
+multi-seed confirmation work.
 
 ## Repository state
 
-- Base commit: `21eb0854f2749562f2ba21255c59c8cc6f2f009b`
-- Generated: `2026-08-06T10:43:13.949579+00:00`
+- Base commit: `14337726fd76ec041fda1561be50aae627b1a93d`
+- Generated: `2026-08-06T13:12:36.655412+00:00`
 - Branch: `main`
 
-## Completed stages
+## Duplicate-safe data
 
-### Stage 15.0
-
-- Audited Transformer feasibility.
-- Identified exact-pattern duplication and conflicting labels.
-- Rejected unsupported temporal or spatial Transformer claims.
-
-### Stage 15.1
-
-- Created duplicate-safe train, validation, and holdout partitions.
 - Training rows: 154,686
 - Validation rows: 37,835
 - Holdout rows: 46,849
-- Cross-split exact-pattern overlap: zero
 - Retained predictors: 70
+- Cross-split exact-pattern overlap: zero
 
-### Stage 15.2
+## Stage 15.4A independent confirmation
 
-- Fit StandardScaler using training rows only.
-- Implemented numerical FT-Transformer.
-- Verified PyTorch 2.7.1 CUDA 11.8 on Tesla P100.
-- Confirmed `sm_60`, CUDA forward/backward execution, and
-  optimizer updates.
-
-### Stage 15.3A
-
-Compared three architectures using training and validation only:
+Architectures:
 
 - FT_COMPACT
 - FT_BALANCED
 - FT_DEEP_REGULARIZED
 
-### Stage 15.3B
+Independent confirmation seeds:
 
-Extended the seed-42 checkpoints beyond the original 15-epoch
-ceiling.
+- 7
+- 29
+- 101
 
-Convergence-adjusted provisional winner:
+Completed candidate-seed runs: 9/9
+
+### Provisional leader
 
 - Architecture: FT_BALANCED
-- Best epoch: 28
-- Validation threshold: 0.6599999999999997
-- Validation F1: 0.8626812355536877
-- Validation PR-AUC: 0.9272883071218994
-- Validation recall: 0.7679573512906847
+- Runner-up: FT_COMPACT
+- Mean validation F1: 0.8641820553183144
+- Validation F1 standard deviation: 0.002178217156171591
+- Worst-seed validation F1: 0.8623930277734025
+- Mean validation PR-AUC: 0.9269290149821972
+- Mean validation recall: 0.771293178700586
+- Seed wins: 2
+- Mean F1 margin: 0.0011366260042979803
 
-The deep model reached its best result at the 30-epoch ceiling.
-The next standardized from-scratch multi-seed protocol should
-therefore allow up to 40 epochs.
+Confirmation status:
+
+`CLOSE_OR_UNSTABLE_MULTI_SEED_RANKING`
+
+The architecture is not frozen because one FT_BALANCED run obtained
+its best checkpoint at the 40-epoch ceiling. Additional convergence
+and independent-seed confirmation are required.
 
 ## Scientific boundary
 
-The duplicate-safe holdout has not been used for architecture
-selection, early stopping, threshold selection, probability
-generation, or performance evaluation.
+The duplicate-safe holdout remains untouched. It has not been used
+for architecture selection, early stopping, threshold selection,
+probability generation, or model evaluation.
 
-## Packaging correction
+## Next step
 
-`__pycache__` directories and `.pyc` files are intentionally
-excluded. They are runtime-generated files and are not scientific
-artifacts.
+1. Continue the ceiling-limited FT_BALANCED seed-7 run.
+2. Add two independent confirmation seeds across all three
+   architectures.
+3. Aggregate five independent seeds.
+4. Freeze the architecture only after convergence and stability
+   conditions pass.
+
+## Packaging policy
+
+Runtime-generated `__pycache__` directories and `.pyc` files are
+excluded.

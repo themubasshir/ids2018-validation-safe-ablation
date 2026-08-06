@@ -1,0 +1,59 @@
+{
+  "stage": "15.4A",
+  "purpose": "Independent from-scratch robustness comparison after seed-42 architecture screening",
+  "confirmation_seeds": [
+    7,
+    29,
+    101
+  ],
+  "architecture_screening_seed_excluded": 42,
+  "training_protocol": {
+    "batch_size": 1024,
+    "maximum_epochs": 40,
+    "early_stopping_patience": 6,
+    "early_stopping_metric": "validation PR-AUC",
+    "checkpoint_improvement_tolerance": 1e-07,
+    "scheduler": {
+      "type": "ReduceLROnPlateau",
+      "mode": "max",
+      "metric": "validation PR-AUC",
+      "factor": 0.5,
+      "patience": 2,
+      "minimum_learning_rate": 1e-05
+    },
+    "gradient_clip_norm": 1.0,
+    "optimizer": "AdamW",
+    "loss": "BCEWithLogitsLoss",
+    "positive_class_weight_source": "duplicate-safe training labels only",
+    "precision": "float32"
+  },
+  "threshold_protocol": {
+    "data": "duplicate-safe validation only",
+    "objective": "maximum F1",
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005,
+    "tie_breakers": [
+      "highest F2",
+      "highest recall",
+      "lowest FPR",
+      "lowest threshold"
+    ]
+  },
+  "aggregate_selection_rule": [
+    "highest mean validation F1",
+    "highest mean validation PR-AUC",
+    "highest worst-seed validation F1",
+    "lowest validation F1 standard deviation",
+    "highest mean validation F2",
+    "highest mean validation recall",
+    "lowest parameter count",
+    "lexicographic candidate ID"
+  ],
+  "phase_1_clear_lead_rule": {
+    "minimum_mean_f1_margin": 0.001,
+    "minimum_seed_wins": 2,
+    "no_best_checkpoint_at_epoch_ceiling": true
+  },
+  "holdout_access": false
+}

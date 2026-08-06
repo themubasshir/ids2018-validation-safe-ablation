@@ -1,0 +1,30 @@
+{
+  "stage": "15.4A",
+  "generated_at_utc": "2026-08-06T12:41:52.200093+00:00",
+  "scientific_purpose": "Measure architecture robustness to independent model initialization and training-order seeds.",
+  "screening_seed_excluded": 42,
+  "confirmation_seeds": [
+    7,
+    29,
+    101
+  ],
+  "from_scratch_training": true,
+  "resume_safe": true,
+  "resume_artifacts": [
+    "per-run last checkpoint",
+    "per-run best checkpoint",
+    "per-run epoch history",
+    "per-run threshold sweep",
+    "per-run validation probabilities",
+    "per-run final result"
+  ],
+  "preprocessing": "Archived StandardScaler fit on duplicate-safe training rows only",
+  "early_stopping_data": "Duplicate-safe validation only",
+  "threshold_selection_data": "Duplicate-safe validation only",
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_probabilities_generated": false,
+  "holdout_metrics_generated": false,
+  "architecture_frozen": false
+}

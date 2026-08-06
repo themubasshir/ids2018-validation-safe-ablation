@@ -1,9 +1,9 @@
 {
-  "stage": "16.2B",
-  "generated_at_utc": "2026-08-06T17:24:23.063208+00:00",
+  "stage": "16.3A",
+  "generated_at_utc": "2026-08-06T17:31:37.881708+00:00",
   "repository": {
     "branch": "main",
-    "base_commit": "d41b469397ae7918f811f41578cf95f4384e67dd",
+    "base_commit": "d975bcfd04b6c3ee47c01048a97f901d2c6a6d33",
     "package_relative_path": "results/stage16_classical_benchmark_checkpoint"
   },
   "copied_scientific_file_count": 72,
@@ -411,5 +411,11 @@
       ".DS_Store"
     ]
   },
-  "next_step": "Validation-only hyperparameter tuning of the five frozen classical candidates."
+  "next_step": "Execute the 60 predeclared validation-only hyperparameter-tuning configurations.",
+  "tuning_protocol_lock_path": "stage16_3a_tuning_protocol_lock.json",
+  "tuning_protocol_lock_sha256": "91475641392a52755dd40875693db0ad8b32d8b917c530e4333134395ed19781",
+  "tuning_candidate_count": 5,
+  "tuning_configuration_count": 60,
+  "hyperparameter_tuning_fit_count": 0,
+  "tuning_validation_prediction_count": 0
 }

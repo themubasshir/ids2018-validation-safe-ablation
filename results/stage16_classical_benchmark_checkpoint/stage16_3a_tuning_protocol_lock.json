@@ -1,0 +1,1185 @@
+{
+  "stage": "16.3A",
+  "status": "LOCKED_BEFORE_FIRST_TOP5_HYPERPARAMETER_TUNING_FIT",
+  "locked_at_utc": "2026-08-06T17:31:37.878700+00:00",
+  "repository_base_commit": "d975bcfd04b6c3ee47c01048a97f901d2c6a6d33",
+  "baseline_selection_lock": {
+    "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage16_classical_benchmark_checkpoint/stage16_2b_baseline_selection_lock.json",
+    "sha256": "2c5b0fba4da5fc6a42ac52c7d5c9798dc37a48fa67f8885755cd97a893c5f6d6"
+  },
+  "top5_candidate_ids": [
+    "XGBOOST",
+    "LIGHTGBM",
+    "CATBOOST",
+    "K_NEAREST_NEIGHBORS",
+    "RANDOM_FOREST"
+  ],
+  "candidate_count": 5,
+  "configuration_count_per_candidate": 12,
+  "total_configuration_count": 60,
+  "tuning_seed": 42,
+  "fit_data": "Exact duplicate-safe training cache only",
+  "selection_data": "Exact duplicate-safe validation cache only",
+  "input_representations": {
+    "XGBOOST": "raw",
+    "LIGHTGBM": "raw",
+    "CATBOOST": "raw",
+    "K_NEAREST_NEIGHBORS": "scaled",
+    "RANDOM_FOREST": "raw"
+  },
+  "search_method": "Deterministic predeclared finite configuration search",
+  "search_spaces": {
+    "XGBOOST": [
+      {
+        "configuration_id": "XGB_00",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 100,
+          "learning_rate": 0.3,
+          "max_depth": 6,
+          "subsample": 1.0,
+          "colsample_bytree": 1.0,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1
+        },
+        "is_original_baseline": true
+      },
+      {
+        "configuration_id": "XGB_01",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 250,
+          "learning_rate": 0.1,
+          "max_depth": 4,
+          "subsample": 0.85,
+          "colsample_bytree": 0.85,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 1,
+          "gamma": 0.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_02",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 400,
+          "learning_rate": 0.05,
+          "max_depth": 4,
+          "subsample": 0.85,
+          "colsample_bytree": 0.85,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 3,
+          "gamma": 0.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 3.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_03",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 600,
+          "learning_rate": 0.03,
+          "max_depth": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 3,
+          "gamma": 0.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 3.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_04",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 350,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "subsample": 0.8,
+          "colsample_bytree": 0.8,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 1,
+          "gamma": 0.1,
+          "reg_alpha": 0.1,
+          "reg_lambda": 3.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_05",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 500,
+          "learning_rate": 0.04,
+          "max_depth": 7,
+          "subsample": 0.85,
+          "colsample_bytree": 0.8,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 5,
+          "gamma": 0.1,
+          "reg_alpha": 0.1,
+          "reg_lambda": 5.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_06",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 300,
+          "learning_rate": 0.08,
+          "max_depth": 3,
+          "subsample": 1.0,
+          "colsample_bytree": 1.0,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 1,
+          "gamma": 0.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_07",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 450,
+          "learning_rate": 0.05,
+          "max_depth": 8,
+          "subsample": 0.8,
+          "colsample_bytree": 0.8,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 10,
+          "gamma": 0.3,
+          "reg_alpha": 0.5,
+          "reg_lambda": 10.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_08",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 700,
+          "learning_rate": 0.025,
+          "max_depth": 6,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 5,
+          "gamma": 0.1,
+          "reg_alpha": 0.1,
+          "reg_lambda": 5.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_09",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 300,
+          "learning_rate": 0.1,
+          "max_depth": 5,
+          "subsample": 0.7,
+          "colsample_bytree": 0.7,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 3,
+          "gamma": 0.2,
+          "reg_alpha": 0.25,
+          "reg_lambda": 5.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_10",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 500,
+          "learning_rate": 0.04,
+          "max_depth": 4,
+          "subsample": 1.0,
+          "colsample_bytree": 0.85,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 10,
+          "gamma": 0.0,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "XGB_11",
+        "parameters": {
+          "objective": "binary:logistic",
+          "n_estimators": 400,
+          "learning_rate": 0.06,
+          "max_depth": 7,
+          "subsample": 0.9,
+          "colsample_bytree": 1.0,
+          "tree_method": "hist",
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_weight": 1,
+          "gamma": 0.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 3.0
+        },
+        "is_original_baseline": false
+      }
+    ],
+    "LIGHTGBM": [
+      {
+        "configuration_id": "LGBM_00",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 100,
+          "learning_rate": 0.1,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "subsample": 1.0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 0.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1
+        },
+        "is_original_baseline": true
+      },
+      {
+        "configuration_id": "LGBM_01",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 250,
+          "learning_rate": 0.08,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_alpha": 0.0,
+          "reg_lambda": 0.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 20,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_02",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 400,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "subsample": 0.85,
+          "colsample_bytree": 0.85,
+          "reg_alpha": 0.1,
+          "reg_lambda": 1.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 30,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_03",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 600,
+          "learning_rate": 0.03,
+          "num_leaves": 63,
+          "max_depth": -1,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_alpha": 0.1,
+          "reg_lambda": 3.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 30,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_04",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 350,
+          "learning_rate": 0.05,
+          "num_leaves": 63,
+          "max_depth": 10,
+          "subsample": 0.8,
+          "colsample_bytree": 0.8,
+          "reg_alpha": 0.2,
+          "reg_lambda": 3.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 20,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_05",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 500,
+          "learning_rate": 0.04,
+          "num_leaves": 127,
+          "max_depth": 14,
+          "subsample": 0.85,
+          "colsample_bytree": 0.8,
+          "reg_alpha": 0.5,
+          "reg_lambda": 5.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 40,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_06",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 300,
+          "learning_rate": 0.08,
+          "num_leaves": 15,
+          "max_depth": 6,
+          "subsample": 1.0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 20,
+          "subsample_freq": 0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_07",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 700,
+          "learning_rate": 0.025,
+          "num_leaves": 63,
+          "max_depth": -1,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_alpha": 0.5,
+          "reg_lambda": 10.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 50,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_08",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 450,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": 8,
+          "subsample": 0.8,
+          "colsample_bytree": 0.9,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 60,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_09",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 300,
+          "learning_rate": 0.1,
+          "num_leaves": 63,
+          "max_depth": 10,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 0.1,
+          "reg_lambda": 3.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 10,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_10",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 550,
+          "learning_rate": 0.035,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "subsample": 1.0,
+          "colsample_bytree": 0.85,
+          "reg_alpha": 0.5,
+          "reg_lambda": 5.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 100,
+          "subsample_freq": 0
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "LGBM_11",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "objective": "binary",
+          "n_estimators": 400,
+          "learning_rate": 0.06,
+          "num_leaves": 127,
+          "max_depth": 12,
+          "subsample": 0.9,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 3.0,
+          "device_type": "gpu",
+          "verbosity": -1,
+          "random_state": 42,
+          "n_jobs": -1,
+          "min_child_samples": 20,
+          "subsample_freq": 1
+        },
+        "is_original_baseline": false
+      }
+    ],
+    "CATBOOST": [
+      {
+        "configuration_id": "CAT_00",
+        "parameters": {
+          "iterations": 300,
+          "learning_rate": 0.1,
+          "depth": 6,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false
+        },
+        "is_original_baseline": true
+      },
+      {
+        "configuration_id": "CAT_01",
+        "parameters": {
+          "iterations": 400,
+          "learning_rate": 0.08,
+          "depth": 5,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 3.0,
+          "random_strength": 1.0,
+          "bagging_temperature": 1.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_02",
+        "parameters": {
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "depth": 6,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 5.0,
+          "random_strength": 1.0,
+          "bagging_temperature": 1.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_03",
+        "parameters": {
+          "iterations": 800,
+          "learning_rate": 0.03,
+          "depth": 7,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 5.0,
+          "random_strength": 1.0,
+          "bagging_temperature": 1.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_04",
+        "parameters": {
+          "iterations": 500,
+          "learning_rate": 0.05,
+          "depth": 8,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 8.0,
+          "random_strength": 0.5,
+          "bagging_temperature": 1.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_05",
+        "parameters": {
+          "iterations": 700,
+          "learning_rate": 0.04,
+          "depth": 9,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 10.0,
+          "random_strength": 1.0,
+          "bagging_temperature": 2.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_06",
+        "parameters": {
+          "iterations": 350,
+          "learning_rate": 0.1,
+          "depth": 4,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 3.0,
+          "random_strength": 0.5,
+          "bagging_temperature": 0.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_07",
+        "parameters": {
+          "iterations": 900,
+          "learning_rate": 0.025,
+          "depth": 6,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 10.0,
+          "random_strength": 2.0,
+          "bagging_temperature": 2.0,
+          "border_count": 254
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_08",
+        "parameters": {
+          "iterations": 550,
+          "learning_rate": 0.05,
+          "depth": 7,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 6.0,
+          "random_strength": 0.5,
+          "bagging_temperature": 3.0,
+          "border_count": 254
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_09",
+        "parameters": {
+          "iterations": 450,
+          "learning_rate": 0.08,
+          "depth": 6,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 12.0,
+          "random_strength": 2.0,
+          "bagging_temperature": 0.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_10",
+        "parameters": {
+          "iterations": 750,
+          "learning_rate": 0.035,
+          "depth": 8,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 15.0,
+          "random_strength": 1.0,
+          "bagging_temperature": 2.0,
+          "border_count": 254
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "CAT_11",
+        "parameters": {
+          "iterations": 600,
+          "learning_rate": 0.05,
+          "depth": 10,
+          "loss_function": "Logloss",
+          "eval_metric": "F1",
+          "random_seed": 42,
+          "task_type": "GPU",
+          "devices": "0",
+          "verbose": false,
+          "allow_writing_files": false,
+          "l2_leaf_reg": 20.0,
+          "random_strength": 2.0,
+          "bagging_temperature": 3.0,
+          "border_count": 128
+        },
+        "is_original_baseline": false
+      }
+    ],
+    "K_NEAREST_NEIGHBORS": [
+      {
+        "configuration_id": "KNN_00",
+        "parameters": {
+          "n_neighbors": 5,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": true
+      },
+      {
+        "configuration_id": "KNN_01",
+        "parameters": {
+          "n_neighbors": 3,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_02",
+        "parameters": {
+          "n_neighbors": 7,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_03",
+        "parameters": {
+          "n_neighbors": 11,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_04",
+        "parameters": {
+          "n_neighbors": 15,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 45,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_05",
+        "parameters": {
+          "n_neighbors": 21,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 60,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_06",
+        "parameters": {
+          "n_neighbors": 31,
+          "weights": "uniform",
+          "algorithm": "auto",
+          "leaf_size": 60,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_07",
+        "parameters": {
+          "n_neighbors": 5,
+          "weights": "distance",
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_08",
+        "parameters": {
+          "n_neighbors": 9,
+          "weights": "distance",
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_09",
+        "parameters": {
+          "n_neighbors": 15,
+          "weights": "distance",
+          "algorithm": "auto",
+          "leaf_size": 45,
+          "p": 2,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_10",
+        "parameters": {
+          "n_neighbors": 21,
+          "weights": "distance",
+          "algorithm": "auto",
+          "leaf_size": 45,
+          "p": 1,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "KNN_11",
+        "parameters": {
+          "n_neighbors": 31,
+          "weights": "distance",
+          "algorithm": "auto",
+          "leaf_size": 60,
+          "p": 1,
+          "metric": "minkowski",
+          "n_jobs": -1
+        },
+        "is_original_baseline": false
+      }
+    ],
+    "RANDOM_FOREST": [
+      {
+        "configuration_id": "RF_00",
+        "parameters": {
+          "n_estimators": 100,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42
+        },
+        "is_original_baseline": true
+      },
+      {
+        "configuration_id": "RF_01",
+        "parameters": {
+          "n_estimators": 150,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": null,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_02",
+        "parameters": {
+          "n_estimators": 250,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": null,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_03",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": 20,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_04",
+        "parameters": {
+          "n_estimators": 250,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": 30,
+          "min_samples_split": 5,
+          "min_samples_leaf": 1,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_05",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": null,
+          "min_samples_split": 5,
+          "min_samples_leaf": 2,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_06",
+        "parameters": {
+          "n_estimators": 250,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": null,
+          "min_samples_split": 10,
+          "min_samples_leaf": 4,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_07",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_features": "log2",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": 20,
+          "min_samples_split": 5,
+          "min_samples_leaf": 2,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_08",
+        "parameters": {
+          "n_estimators": 250,
+          "criterion": "gini",
+          "max_features": 0.5,
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": null,
+          "min_samples_split": 2,
+          "min_samples_leaf": 1,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_09",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_features": 0.5,
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": 30,
+          "min_samples_split": 5,
+          "min_samples_leaf": 2,
+          "class_weight": null
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_10",
+        "parameters": {
+          "n_estimators": 250,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": null,
+          "min_samples_split": 5,
+          "min_samples_leaf": 2,
+          "class_weight": "balanced_subsample"
+        },
+        "is_original_baseline": false
+      },
+      {
+        "configuration_id": "RF_11",
+        "parameters": {
+          "n_estimators": 200,
+          "criterion": "gini",
+          "max_features": "sqrt",
+          "bootstrap": true,
+          "n_jobs": -1,
+          "random_state": 42,
+          "max_depth": 20,
+          "min_samples_split": 10,
+          "min_samples_leaf": 4,
+          "class_weight": "balanced_subsample"
+        },
+        "is_original_baseline": false
+      }
+    ]
+  },
+  "threshold_protocol": {
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005,
+    "count": 181,
+    "selection_rule": [
+      "highest validation F1",
+      "highest validation F2",
+      "highest validation recall",
+      "lowest validation FPR",
+      "lowest threshold"
+    ]
+  },
+  "configuration_selection_rule": [
+    "highest selected-threshold validation F1",
+    "highest validation PR-AUC",
+    "highest selected-threshold validation F2",
+    "highest selected-threshold validation recall",
+    "lowest selected-threshold validation FPR",
+    "lowest training time",
+    "lexicographic configuration ID"
+  ],
+  "tuned_model_ranking_rule": [
+    "highest selected-threshold validation F1",
+    "highest validation PR-AUC",
+    "highest selected-threshold validation F2",
+    "highest selected-threshold validation recall",
+    "lowest selected-threshold validation FPR",
+    "lowest training time",
+    "lexicographic candidate ID"
+  ],
+  "artifact_policy": {
+    "all_trial_metrics_saved": true,
+    "all_trial_validation_probabilities_saved": true,
+    "all_trial_threshold_sweeps_saved": true,
+    "all_trial_models_saved": false,
+    "saved_model_policy": "Save only the validation-selected winning model for each of the five candidates.",
+    "final_tuned_model_count": 5,
+    "reason": "Avoid unnecessary duplication of large nonwinning model files."
+  },
+  "resume_policy": "Completed trial metrics and probability vectors may be reused only when their configuration identity and hashes verify.",
+  "future_confirmation_policy": "The validation-selected tuned leader will undergo independent multi-seed confirmation before the classical holdout batch is opened.",
+  "baseline_results_modified": false,
+  "transformer_policy_modified": false,
+  "hyperparameter_tuning_fit_count": 0,
+  "validation_prediction_count": 0,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_predictions_generated": false,
+  "holdout_metrics_generated": false,
+  "next_permitted_action": "Execute the 60 predeclared tuning configurations using only duplicate-safe training and validation."
+}

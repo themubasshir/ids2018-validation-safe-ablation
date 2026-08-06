@@ -1,0 +1,41 @@
+{
+  "stage": "15.6A",
+  "generated_at_utc": "2026-08-06T16:04:11.507885+00:00",
+  "scientific_boundary": "One locked evaluation event after architecture, threshold, and checkpoint hashes were committed",
+  "primary_reported_model": "Five-checkpoint FT_BALANCED soft-voting ensemble",
+  "ensemble_method": "Unweighted arithmetic mean probabilities",
+  "operating_threshold": 0.73,
+  "architecture_search_during_holdout": false,
+  "checkpoint_selection_during_holdout": false,
+  "threshold_search_during_holdout": false,
+  "threshold_adjustment_during_holdout": false,
+  "hyperparameter_tuning_during_holdout": false,
+  "calibration_fitting_during_holdout": false,
+  "retraining_during_holdout": false,
+  "holdout_indices_loaded": true,
+  "holdout_features_loaded": true,
+  "holdout_labels_loaded": true,
+  "holdout_probabilities_generated": true,
+  "holdout_metrics_generated": true,
+  "holdout_evaluation_count": 1,
+  "holdout_status": "EVALUATED_ONCE",
+  "GPU": {
+    "device": "Tesla P100-PCIE-16GB",
+    "capability": [
+      6,
+      0
+    ],
+    "torch_version": "2.7.1+cu118",
+    "CUDA_runtime": "11.8",
+    "compiled_architectures": [
+      "sm_50",
+      "sm_60",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_37",
+      "sm_90"
+    ]
+  }
+}

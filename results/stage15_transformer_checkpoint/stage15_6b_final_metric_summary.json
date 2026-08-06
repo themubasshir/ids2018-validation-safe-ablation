@@ -1,0 +1,72 @@
+{
+  "stage": "15.6B",
+  "model": "Five-checkpoint FT_BALANCED soft-voting ensemble",
+  "architecture": {
+    "candidate_id": "FT_BALANCED",
+    "parameter_count": 159169,
+    "checkpoint_count": 5,
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ]
+  },
+  "decision_policy": {
+    "operating_threshold": 0.73,
+    "decision_rule": "Predict attack when ensemble probability is greater than or equal to 0.73",
+    "ensemble_method": "Unweighted arithmetic mean probabilities"
+  },
+  "holdout_composition": {
+    "rows": 46849,
+    "benign": 33674,
+    "attack": 13175,
+    "attack_rate": 0.28122265149736386
+  },
+  "primary_holdout_metrics": {
+    "accuracy": 0.9331042284787295,
+    "precision": 0.9909064241713113,
+    "recall": 0.7691840607210626,
+    "specificity": 0.9972382253370553,
+    "balanced_accuracy": 0.883211143029059,
+    "f1": 0.8660798222374156,
+    "f2": 0.8052187455305353,
+    "fpr": 0.002761774662944705,
+    "fnr": 0.23081593927893737,
+    "mcc": 0.8341528410178524,
+    "roc_auc": 0.9543620498317444,
+    "pr_auc": 0.9287861970480663,
+    "brier_score": 0.06361848212645473,
+    "log_loss": 0.21022838568430788
+  },
+  "confusion_matrix": {
+    "true_negative": 33581,
+    "false_positive": 93,
+    "false_negative": 3041,
+    "true_positive": 10134
+  },
+  "individual_checkpoint_robustness": {
+    "mean_f1": 0.8653187697770944,
+    "f1_standard_deviation": 0.0014939135859888047,
+    "minimum_f1": 0.8628659476117103,
+    "maximum_f1": 0.8665730934456213,
+    "mean_pr_auc": 0.925171859943149
+  },
+  "validation_to_holdout_gaps": {
+    "f1": -0.0002331472430696646,
+    "precision": 0.002769815423558142,
+    "recall": -0.0020467660653197273,
+    "pr_auc": -0.000785395771920272
+  },
+  "scientific_status": {
+    "architecture_frozen_before_holdout": true,
+    "threshold_frozen_before_holdout": true,
+    "checkpoint_set_frozen_before_holdout": true,
+    "holdout_evaluation_count": 1,
+    "post_holdout_selection": false,
+    "post_holdout_threshold_adjustment": false,
+    "post_holdout_retraining": false,
+    "holdout_status": "EVALUATED_ONCE"
+  }
+}

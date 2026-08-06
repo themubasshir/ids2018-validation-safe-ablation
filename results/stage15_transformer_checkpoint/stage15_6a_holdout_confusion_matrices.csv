@@ -1,0 +1,7 @@
+model,seed,threshold,true_negative,false_positive,false_negative,true_positive
+FT_BALANCED_seed_7,7.0,0.73,33525,149,2988,10187
+FT_BALANCED_seed_29,29.0,0.73,33557,117,3017,10158
+FT_BALANCED_seed_101,101.0,0.73,33565,109,3095,10080
+FT_BALANCED_seed_313,313.0,0.73,33567,107,3037,10138
+FT_BALANCED_seed_997,997.0,0.73,33574,100,3057,10118
+five_checkpoint_soft_voting_ensemble,,0.73,33581,93,3041,10134

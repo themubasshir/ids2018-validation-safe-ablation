@@ -1,12 +1,12 @@
 {
-  "stage": "15.5B",
-  "generated_at_utc": "2026-08-06T15:30:27.244566+00:00",
+  "stage": "15.6B",
+  "generated_at_utc": "2026-08-06T16:11:35.482646+00:00",
   "repository": {
     "branch": "main",
-    "base_commit": "8b437233fe2551e4ff6043f31d1d0245d26bcdbb",
+    "base_commit": "94e1f5c551d02e570f6521a43f75c9783becc309",
     "package_relative_path": "results/stage15_transformer_checkpoint"
   },
-  "copied_source_file_count": 203,
+  "copied_source_file_count": 223,
   "copied_source_files": [
     {
       "relative_path": "ft_transformer_numeric.py",
@@ -1022,40 +1022,144 @@
       "relative_path": "stage15_5b_preholdout_decision_lock.json",
       "size_bytes": 5287,
       "sha256": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae"
+    },
+    {
+      "relative_path": "stage15_6a_ensemble_validation_holdout_gap.json",
+      "size_bytes": 2245,
+      "sha256": "d95ae4343f21fe6db241b6e03425120dbff568efaeb3f6e47aa21fc8da6196a7"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_confusion_matrices.csv",
+      "size_bytes": 401,
+      "sha256": "b18327aaf9a48894ad47f9c9d8aada90fdc64eb6ad8861adfadc2c1165ac4c13"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_ensemble_metrics.json",
+      "size_bytes": 1073,
+      "sha256": "8f4f314f7605e19bf5528cd3916bfd040c8db376e09de152b00e369370efcfb9"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_evaluation.py",
+      "size_bytes": 49814,
+      "sha256": "519c58f9d52bf4a14066e18bb5935425c387432b7995c96d7fad37d4b574664d"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_evaluation_metadata.json",
+      "size_bytes": 1273,
+      "sha256": "160c57b8540cc7d44815805c4d49d36ae6f418bd0ccd14f455859ac092b2636d"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_evaluation_plan.json",
+      "size_bytes": 2369,
+      "sha256": "31b509412777968ea1095b17c291f70aabb1cd06a12af05e660881ed04c88ea6"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_evaluation_result.json",
+      "size_bytes": 12683,
+      "sha256": "502baef03425921b19216a78aa77f7c8c9bd083b243223a872c741cdb2e78b07"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_execution_state.json",
+      "size_bytes": 2285,
+      "sha256": "58125ec3519e6bffd389f900372f207abbf09f733b6027c0c7b5b99f5509cfe2"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_predictions.npz",
+      "size_bytes": 121050,
+      "sha256": "9c338f007f46a579c47b3a60073153dfa35df2eaf833ab7bbbe8cec50fe9020c"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_probabilities.npz",
+      "size_bytes": 1006892,
+      "sha256": "7c77f0028f51acbffe6678b5fb2894878652d005a0658c1de89147b3cff288d7"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_seed_aggregate.csv",
+      "size_bytes": 2288,
+      "sha256": "3fd71cd147ba7775874a1f998872e8d58345e5669f477d3c50548810d657363f"
+    },
+    {
+      "relative_path": "stage15_6a_holdout_seed_metrics.csv",
+      "size_bytes": 2066,
+      "sha256": "74de8876a7451ea128c1c406841f8922df6a49684a156d24138f0b977af39649"
+    },
+    {
+      "relative_path": "stage15_6a_seed_probabilities/FT_BALANCED_seed_101_holdout_probabilities.npz",
+      "size_bytes": 228942,
+      "sha256": "4a0b8fc9438698370a04bd72785e4be783f5715d8667cc3076cd20a2cbcc84c2"
+    },
+    {
+      "relative_path": "stage15_6a_seed_probabilities/FT_BALANCED_seed_29_holdout_probabilities.npz",
+      "size_bytes": 228628,
+      "sha256": "8e8a0ba48fc16c8f521aa82bb27e014e6f0db967af8541b26cbe27212e28c3f9"
+    },
+    {
+      "relative_path": "stage15_6a_seed_probabilities/FT_BALANCED_seed_313_holdout_probabilities.npz",
+      "size_bytes": 227072,
+      "sha256": "0d0868f4bdc1b796e5fa0b535e4f80ab38c67c96af211da5ff8bc60259232a29"
+    },
+    {
+      "relative_path": "stage15_6a_seed_probabilities/FT_BALANCED_seed_7_holdout_probabilities.npz",
+      "size_bytes": 228772,
+      "sha256": "b28e8a8cfd80dd3d6705c1098c1ab77b9939738f13430ecbeb29dd556c96482e"
+    },
+    {
+      "relative_path": "stage15_6a_seed_probabilities/FT_BALANCED_seed_997_holdout_probabilities.npz",
+      "size_bytes": 225634,
+      "sha256": "a4b13a006bfc24a20af2f2b59144b4d8e42e5e7e5af77b00580b086cc9c93d23"
+    },
+    {
+      "relative_path": "stage15_6a_validation_holdout_gaps.csv",
+      "size_bytes": 3379,
+      "sha256": "4a1b6b38d0444786cb815e23cdd7654231abce42a579684caf7ced3d561ccafd"
+    },
+    {
+      "relative_path": "stage15_6b_final_metric_summary.json",
+      "size_bytes": 2109,
+      "sha256": "65f6345cf9659d31404e7b16809f5a4c1b2d815e7936147ceea1f8456ed2222e"
+    },
+    {
+      "relative_path": "stage15_6b_transformer_experiment_completion.json",
+      "size_bytes": 5329,
+      "sha256": "de8ac73dfc790c51d28dd890a3acb8816b1ea1f0ecc341b20be181cb600dd238"
     }
   ],
-  "frozen_model_policy": {
-    "candidate_id": "FT_BALANCED",
-    "architecture": {
-      "candidate_id": "FT_BALANCED",
-      "d_token": 64,
-      "n_heads": 8,
-      "n_layers": 3,
-      "d_ff": 256,
-      "dropout": 0.1,
-      "learning_rate": 0.0005,
-      "weight_decay": 1e-05
-    },
+  "completion_record": "stage15_6b_transformer_experiment_completion.json",
+  "completion_record_sha256": "de8ac73dfc790c51d28dd890a3acb8816b1ea1f0ecc341b20be181cb600dd238",
+  "frozen_policy": {
+    "architecture": "FT_BALANCED",
     "parameter_count": 159169,
-    "input_predictor_count": 70,
-    "confirmation_seeds": [
+    "checkpoint_seeds": [
       7,
       29,
       101,
       313,
       997
     ],
-    "screening_seed_excluded": 42,
-    "operating_threshold": 0.73,
-    "decision_rule": "Predict attack when probability is greater than or equal to 0.73"
+    "ensemble_method": "Unweighted arithmetic mean probabilities",
+    "operating_threshold": 0.73
   },
-  "preholdout_lock_path": "stage15_5b_preholdout_decision_lock.json",
-  "preholdout_lock_sha256": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae",
-  "architecture_frozen": true,
-  "threshold_frozen": true,
-  "checkpoint_set_frozen": true,
-  "holdout_evaluation_count": 0,
-  "holdout_status": "UNTOUCHED",
+  "primary_holdout_result": {
+    "accuracy": 0.9331042284787295,
+    "precision": 0.9909064241713113,
+    "recall": 0.7691840607210626,
+    "f1": 0.8660798222374156,
+    "f2": 0.8052187455305353,
+    "fpr": 0.002761774662944705,
+    "fnr": 0.23081593927893737,
+    "mcc": 0.8341528410178524,
+    "roc_auc": 0.9543620498317444,
+    "pr_auc": 0.9287861970480663,
+    "brier_score": 0.06361848212645473,
+    "log_loss": 0.21022838568430788,
+    "true_negative": 33581,
+    "false_positive": 93,
+    "false_negative": 3041,
+    "true_positive": 10134
+  },
+  "holdout_evaluation_count": 1,
+  "holdout_status": "EVALUATED_ONCE",
+  "experimental_stage_complete": true,
   "cache_policy": {
     "excluded_directories": [
       "__pycache__"
@@ -1067,5 +1171,5 @@
       ".DS_Store"
     ]
   },
-  "next_step": "One-time duplicate-safe holdout evaluation"
+  "next_step": "Publication tables, figures, and comparison against classical models under the same duplicate-safe protocol"
 }

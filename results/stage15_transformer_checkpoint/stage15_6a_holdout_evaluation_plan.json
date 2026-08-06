@@ -1,0 +1,60 @@
+{
+  "stage": "15.6A",
+  "purpose": "Single final evaluation of the locked FT_BALANCED model policy on the duplicate-safe holdout split",
+  "preholdout_commit": "94e1f5c551d02e570f6521a43f75c9783becc309",
+  "preholdout_lock_sha256": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae",
+  "candidate_id": "FT_BALANCED",
+  "checkpoint_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "checkpoint_paths": {
+    "7": "/kaggle/working/stage15_transformer/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+    "29": "/kaggle/working/stage15_transformer/stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+    "101": "/kaggle/working/stage15_transformer/stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+    "313": "/kaggle/working/stage15_transformer/stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+    "997": "/kaggle/working/stage15_transformer/stage15_4c_models/FT_BALANCED_seed_997_best.pt"
+  },
+  "operating_threshold": 0.73,
+  "decision_rule": "Predict attack when probability >= 0.73",
+  "inference_batch_size": 1024,
+  "individual_model_protocol": "Evaluate each locked checkpoint independently using the same frozen threshold",
+  "ensemble_protocol": {
+    "method": "Unweighted arithmetic mean of the five locked checkpoint probabilities",
+    "name": "five_checkpoint_soft_voting_ensemble",
+    "operating_threshold": 0.73,
+    "primary_endpoint": "F1",
+    "secondary_endpoints": [
+      "accuracy",
+      "precision",
+      "recall",
+      "F2",
+      "false-positive rate",
+      "false-negative rate",
+      "ROC-AUC",
+      "PR-AUC",
+      "Matthews correlation coefficient",
+      "Brier score",
+      "log loss"
+    ]
+  },
+  "reporting_protocol": {
+    "primary_result": "Five-checkpoint soft-voting ensemble",
+    "robustness_result": "Mean, standard deviation, minimum, and maximum across the five individual checkpoints",
+    "generalization_gap": "Holdout minus validation at the same frozen threshold"
+  },
+  "forbidden_actions": [
+    "architecture selection",
+    "checkpoint selection using holdout performance",
+    "threshold searching",
+    "threshold adjustment",
+    "hyperparameter tuning",
+    "holdout-based calibration",
+    "model retraining"
+  ],
+  "resume_policy": "Completed probability vectors may be reused after an interruption, but the frozen plan cannot be changed",
+  "holdout_evaluation_event_limit": 1
+}

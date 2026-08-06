@@ -1,0 +1,33 @@
+{
+  "stage": "15.6A",
+  "status": "COMPLETED",
+  "evaluation_plan_sha256": "e93d3f2a277cf760d52ae491b93fac1cff9a7ac532001950965831f3893a81ad",
+  "preholdout_lock_sha256": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae",
+  "preholdout_commit": "94e1f5c551d02e570f6521a43f75c9783becc309",
+  "holdout_opened": true,
+  "holdout_evaluation_count": 1,
+  "completed_seed_inferences": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "metrics_generated": true,
+  "started_at_utc": "2026-08-06T16:04:02.205774+00:00",
+  "holdout_opened_at_utc": "2026-08-06T16:04:02.217317+00:00",
+  "completed_at_utc": "2026-08-06T16:04:11.512081+00:00",
+  "result_path": "/kaggle/working/stage15_transformer/stage15_6a_holdout_evaluation_result.json",
+  "output_hashes": {
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_probabilities.npz": "7c77f0028f51acbffe6678b5fb2894878652d005a0658c1de89147b3cff288d7",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_predictions.npz": "9c338f007f46a579c47b3a60073153dfa35df2eaf833ab7bbbe8cec50fe9020c",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_seed_metrics.csv": "74de8876a7451ea128c1c406841f8922df6a49684a156d24138f0b977af39649",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_seed_aggregate.csv": "3fd71cd147ba7775874a1f998872e8d58345e5669f477d3c50548810d657363f",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_ensemble_metrics.json": "8f4f314f7605e19bf5528cd3916bfd040c8db376e09de152b00e369370efcfb9",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_confusion_matrices.csv": "b18327aaf9a48894ad47f9c9d8aada90fdc64eb6ad8861adfadc2c1165ac4c13",
+    "/kaggle/working/stage15_transformer/stage15_6a_validation_holdout_gaps.csv": "4a1b6b38d0444786cb815e23cdd7654231abce42a579684caf7ced3d561ccafd",
+    "/kaggle/working/stage15_transformer/stage15_6a_ensemble_validation_holdout_gap.json": "d95ae4343f21fe6db241b6e03425120dbff568efaeb3f6e47aa21fc8da6196a7",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_evaluation_result.json": "502baef03425921b19216a78aa77f7c8c9bd083b243223a872c741cdb2e78b07",
+    "/kaggle/working/stage15_transformer/stage15_6a_holdout_evaluation_metadata.json": "160c57b8540cc7d44815805c4d49d36ae6f418bd0ccd14f455859ac092b2636d"
+  }
+}

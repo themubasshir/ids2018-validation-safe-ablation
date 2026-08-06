@@ -1,0 +1,4 @@
+split,original_rows,conflicting_label_rows_removed,previous_split_pattern_rows_removed,within_split_duplicate_rows_removed,retained_rows,total_removed,retained_rate
+train,192593,2237,0,35670,154686,37907,0.8031756086669817
+validation,48149,569,9632,113,37835,10314,0.7857899437163804
+holdout,60186,676,12497,164,46849,13337,0.7784036154587446

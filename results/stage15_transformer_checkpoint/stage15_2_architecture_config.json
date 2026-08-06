@@ -1,0 +1,21 @@
+{
+  "stage": "15.2",
+  "architecture_family": "FT-Transformer-style numerical feature tokenizer",
+  "model_class": "NumericFTTransformer",
+  "module_path": "/kaggle/working/stage15_transformer/ft_transformer_numeric.py",
+  "n_features": 70,
+  "d_token": 64,
+  "n_heads": 8,
+  "n_layers": 3,
+  "d_ff": 256,
+  "dropout": 0.1,
+  "activation": "gelu",
+  "use_positional_encoding": false,
+  "output": "single_binary_logit",
+  "total_parameter_count": 159169,
+  "trainable_parameter_count": 159169,
+  "token_identity_mechanism": "Feature-specific tokenizer weights and biases",
+  "positional_encoding": null,
+  "scientific_boundary": "Self-attention operates across tabular feature tokens. The model does not assume temporal order, packet sequence, or spatial adjacency.",
+  "status": "Compatibility-test configuration only; not yet selected as the final trained architecture."
+}

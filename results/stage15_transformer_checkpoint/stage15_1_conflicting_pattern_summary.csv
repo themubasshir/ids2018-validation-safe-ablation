@@ -1,0 +1,3 @@
+conflict_type,pattern_count,affected_row_count,action
+Identical predictors with multiple binary labels,1176,3482,Exclude from all duplicate-safe splits
+Binary-consistent attack pattern with multiple attack-category labels,16,27116,Retain for binary classification; flag for attack-category interpretation

@@ -1,0 +1,41 @@
+{
+  "stage": "15.2-R",
+  "execution_device": "cpu",
+  "cpu_recovery_reason": "Installed PyTorch CUDA binary raised cudaErrorNoKernelImageForDevice on Tesla P100.",
+  "detected_gpu": "Tesla P100-PCIE-16GB",
+  "torch_version": "2.10.0+cu128",
+  "torch_cuda_version": "12.8",
+  "compiled_cuda_architectures": [
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120"
+  ],
+  "required_p100_architecture": "sm_60",
+  "batch_size": 256,
+  "batch_benign_count": 128,
+  "batch_attack_count": 128,
+  "input_shape": [
+    256,
+    70
+  ],
+  "output_shape": [
+    256
+  ],
+  "initial_loss": 1.0708101987838745,
+  "initial_logit_minimum": 0.03837576508522034,
+  "initial_logit_maximum": 1.2407580614089966,
+  "initial_logit_mean": 0.5699880719184875,
+  "global_gradient_norm": 2.4522955721481416,
+  "all_gradients_finite": true,
+  "parameter_update_maximum": 0.0010000001639127731,
+  "post_step_logits_finite": true,
+  "forward_pass": "PASSED",
+  "loss_test": "PASSED",
+  "backward_pass": "PASSED",
+  "optimizer_step": "PASSED",
+  "gpu_training_readiness": "NOT YET PASSED"
+}

@@ -1,0 +1,38 @@
+{
+  "stage": "15.2-GD",
+  "python_executable": "/usr/bin/python3",
+  "isolated_torch_directory": "/kaggle/working/stage15_torch271_cu118",
+  "torch_related_directories": [
+    "torch",
+    "torch-2.7.1+cu118.dist-info",
+    "torchgen"
+  ],
+  "torch_dist_info_directories": [
+    "torch-2.7.1+cu118.dist-info"
+  ],
+  "library_directories": [
+    "/kaggle/working/stage15_torch271_cu118/torch/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cublas/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cuda_cupti/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cuda_nvrtc/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cuda_runtime/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cudnn/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cufft/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/curand/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cusolver/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/cusparse/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/nccl/lib",
+    "/kaggle/working/stage15_torch271_cu118/nvidia/nvtx/lib"
+  ],
+  "probe": {
+    "return_code": 0,
+    "stdout": "Torch import: PASSED\nTorch module: /kaggle/working/stage15_torch271_cu118/torch/__init__.py\nTorch version: 2.7.1+cu118\nTorch CUDA: 11.8\nCompiled architectures: ['sm_50', 'sm_60', 'sm_70', 'sm_75', 'sm_80', 'sm_86', 'sm_37', 'sm_90']\nCUDA available: True\nDevice: Tesla P100-PCIE-16GB\nCapability: (6, 0)\nBasic CUDA tensor result: [2.0, 5.0, 10.0]\nFT-Transformer module import: PASSED\nFT-Transformer GPU output shape: (8,)\nFT-Transformer GPU output finite: True\n\nPROBE_JSON_BEGIN\n{\n  \"python_executable\": \"/usr/bin/python3\",\n  \"python_version\": \"3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]\",\n  \"python_path_first_entries\": [\n    \"/kaggle/working/stage15_transformer\",\n    \"/kaggle/working/stage15_torch271_cu118\",\n    \"/kaggle/lib/kagglegym\",\n    \"/kaggle/lib\",\n    \"/usr/lib/python312.zip\",\n    \"/usr/lib/python3.12\",\n    \"/usr/lib/python3.12/lib-dynload\",\n    \"/usr/local/lib/python3.12/dist-packages\"\n  ],\n  \"status\": \"PASSED\",\n  \"torch_import\": \"PASSED\",\n  \"torch_module_path\": \"/kaggle/working/stage15_torch271_cu118/torch/__init__.py\",\n  \"torch_version\": \"2.7.1+cu118\",\n  \"torch_cuda_version\": \"11.8\",\n  \"cuda_available\": true,\n  \"compiled_architectures\": [\n    \"sm_50\",\n    \"sm_60\",\n    \"sm_70\",\n    \"sm_75\",\n    \"sm_80\",\n    \"sm_86\",\n    \"sm_37\",\n    \"sm_90\"\n  ],\n  \"device_name\": \"Tesla P100-PCIE-16GB\",\n  \"device_capability\": [\n    6,\n    0\n  ],\n  \"basic_cuda_tensor_result\": [\n    2.0,\n    5.0,\n    10.0\n  ],\n  \"model_module_import\": \"PASSED\",\n  \"model_forward_shape\": [\n    8\n  ],\n  \"model_forward_finite\": true\n}\nPROBE_JSON_END\n",
+    "stderr": ""
+  },
+  "full_verification": {
+    "executed": true,
+    "return_code": 1,
+    "stdout": "====================================================================================================\nSTAGE 15.2-G \u2014 P100 CUDA EXECUTION VERIFICATION\n====================================================================================================\n\nImported PyTorch:\n  Module: /kaggle/working/stage15_torch271_cu118/torch/__init__.py\n  Version: 2.7.1+cu118\n  CUDA runtime: 11.8\n\nCUDA device:\n  Name: Tesla P100-PCIE-16GB\n  Capability: (6, 0)\n  Compiled architectures: ['sm_50', 'sm_60', 'sm_70', 'sm_75', 'sm_80', 'sm_86', 'sm_37', 'sm_90']\n\nBasic CUDA kernel:\n  Matrix multiplication: PASSED\n  Mean absolute result: 18.012924194335938\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/kaggle/working/stage15_transformer/stage15_2g_verify_p100_cuda.py\", line 227, in <module>\n    logits = model(x)\n             ^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_transformer/ft_transformer_numeric.py\", line 192, in forward\n    encoded = self.encoder(tokens)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/transformer.py\", line 514, in forward\n    output = mod(\n             ^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/transformer.py\", line 907, in forward\n    x = x + self._sa_block(\n            ^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/transformer.py\", line 928, in _sa_block\n    x = self.self_attn(\n        ^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/modules/activation.py\", line 1373, in forward\n    attn_output, attn_output_weights = F.multi_head_attention_forward(\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/functional.py\", line 6230, in multi_head_attention_forward\n    q, k, v = _in_projection_packed(query, key, value, in_proj_weight, in_proj_bias)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/stage15_torch271_cu118/torch/nn/functional.py\", line 5621, in _in_projection_packed\n    .contiguous()\n     ^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 0 has a total capacity of 15.89 GiB of which 29.12 MiB is free. Process 3902 has 15.44 GiB memory in use. Process 42978 has 430.00 MiB memory in use. Of the allocated memory 122.91 MiB is allocated by PyTorch, and 11.09 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"
+  }
+}

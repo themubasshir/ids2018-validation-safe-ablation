@@ -1,0 +1,8 @@
+audit_type,split_a,split_b,row_count_a,row_count_b,unique_pattern_count_a,unique_pattern_count_b,duplicate_rows_within_a,shared_unique_pattern_count,rows_in_a_matching_b,rows_in_b_matching_a
+overall,all,,300928,,240546,,60382.0,,,
+within_split,train,,192593,,155775,,36818.0,,,
+within_split,validation,,48149,,40111,,8038.0,,,
+within_split,holdout,,60186,,49817,,10369.0,,,
+cross_split,train,validation,192593,48149.0,155775,40111.0,,2222.0,35079.0,10135.0
+cross_split,train,holdout,192593,60186.0,155775,49817.0,,2593.0,35768.0,12708.0
+cross_split,validation,holdout,48149,60186.0,40111,49817.0,,1124.0,8884.0,11008.0

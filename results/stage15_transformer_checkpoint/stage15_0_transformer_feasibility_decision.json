@@ -1,0 +1,102 @@
+{
+  "stage": "15.0",
+  "dataset": {
+    "row_count": 300928,
+    "predictor_count": 78,
+    "all_predictors_numeric": true,
+    "non_numeric_predictors": [],
+    "low_cardinality_numeric_candidates": [
+      "Protocol",
+      "Fwd PSH Flags",
+      "Bwd PSH Flags",
+      "Fwd URG Flags",
+      "Bwd URG Flags",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Fwd Byts/b Avg",
+      "Fwd Pkts/b Avg",
+      "Fwd Blk Rate Avg",
+      "Bwd Byts/b Avg",
+      "Bwd Pkts/b Avg",
+      "Bwd Blk Rate Avg",
+      "Fwd Seg Size Min"
+    ],
+    "constant_feature_count": 8,
+    "near_constant_feature_count": 10,
+    "suspicious_target_name_count": 0,
+    "high_correlation_pair_count": 15
+  },
+  "split_integrity": {
+    "index_integrity_pass": true,
+    "train_validation_index_overlap": 0,
+    "train_holdout_index_overlap": 0,
+    "validation_holdout_index_overlap": 0,
+    "combined_index_count": 300928,
+    "combined_unique_index_count": 300928,
+    "dataset_row_count": 300928,
+    "minimum_index": 0,
+    "maximum_index": 300927
+  },
+  "duplicate_audit": {
+    "overall_duplicate_rows": 60382,
+    "conflicting_binary_label_pattern_count": 1176,
+    "conflicting_binary_label_row_count": 3482,
+    "cross_split_shared_pattern_sum": 5939,
+    "cross_split_matching_row_sum": 113582,
+    "exact_pattern_overlap_detected": true,
+    "methodological_decision": "Cross-split exact feature-pattern overlap was detected. A duplicate-aware sensitivity evaluation is required before presenting Transformer performance as an independent generalization estimate.",
+    "hashing_note": "Duplicate screening used deterministic 64-bit pandas row hashes; collisions are theoretically possible but extremely unlikely."
+  },
+  "metadata_readiness": {
+    "temporal_metadata_columns": [],
+    "identity_metadata_columns": [],
+    "temporal_transformer_ready": false
+  },
+  "architecture_decision": {
+    "recommended_initial_architecture": "FT-Transformer-style numeric feature tokenizer with a CLS token and Transformer encoder",
+    "tabtransformer_primary_choice": false,
+    "tabtransformer_reason": "The archived predictor matrix contains no explicit categorical columns. Low-cardinality numeric features may be tested later as a separate representation ablation.",
+    "temporal_transformer_primary_choice": false,
+    "temporal_transformer_reason": "The current merged dataset does not preserve validated temporal sequence metadata.",
+    "cnn_comparison_boundary": "The existing one-dimensional CNN uses a fixed feature order, but adjacency between tabular features is not established as spatial locality."
+  },
+  "training_protocol": {
+    "model_selection_data": "Training and validation splits only",
+    "holdout_policy": "Do not inspect holdout performance until the Transformer architecture, hyperparameters, early stopping rule, and operating threshold have been finalized from training and validation.",
+    "primary_metric": "Validation F1 with recall, F2, FPR, and FNR reported jointly",
+    "seed": 42
+  },
+  "environment": {
+    "stage": "15.0",
+    "python_version": "3.12.13",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3",
+    "packages": {
+      "torch": true,
+      "tensorflow": true,
+      "sklearn": true,
+      "rtdl_revisiting_models": false,
+      "pytorch_tabular": false,
+      "tab_transformer_pytorch": false,
+      "lightning": false,
+      "pytorch_lightning": true
+    },
+    "torch": {
+      "available": true,
+      "version": "2.10.0+cu128",
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "cuda_device_name": "Tesla P100-PCIE-16GB",
+      "cuda_total_memory_gb": 15.887939453125
+    },
+    "nvidia_smi_available": true,
+    "nvidia_smi_output": "Tesla P100-PCIE-16GB, 16384 MiB"
+  }
+}

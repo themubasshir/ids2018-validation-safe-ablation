@@ -1,0 +1,16 @@
+first_feature_index,first_feature,second_feature_index,second_feature,correlation,absolute_correlation,sample_count
+3,Tot Fwd Pkts,62,Subflow Fwd Pkts,1.0,1.0,50000
+5,TotLen Fwd Pkts,63,Subflow Fwd Byts,1.0,1.0,50000
+4,Tot Bwd Pkts,64,Subflow Bwd Pkts,1.0,1.0,50000
+6,TotLen Bwd Pkts,65,Subflow Bwd Byts,1.0,1.0,50000
+31,Fwd PSH Flags,45,SYN Flag Cnt,1.0,1.0,50000
+13,Bwd Pkt Len Mean,55,Bwd Seg Size Avg,1.0,1.0,50000
+9,Fwd Pkt Len Mean,54,Fwd Seg Size Avg,1.0,1.0,50000
+46,RST Flag Cnt,51,ECE Flag Cnt,1.0,1.0,50000
+33,Fwd URG Flags,50,CWE Flag Count,1.0,1.0,50000
+3,Tot Fwd Pkts,68,Fwd Act Data Pkts,0.999992562937309,0.999992562937309,50000
+62,Subflow Fwd Pkts,68,Fwd Act Data Pkts,0.999992562937309,0.999992562937309,50000
+35,Fwd Header Len,62,Subflow Fwd Pkts,0.999973532447294,0.999973532447294,50000
+3,Tot Fwd Pkts,35,Fwd Header Len,0.999973532447294,0.999973532447294,50000
+35,Fwd Header Len,68,Fwd Act Data Pkts,0.999941246611578,0.999941246611578,50000
+2,Flow Duration,21,Fwd IAT Tot,0.9971759946003985,0.9971759946003985,50000

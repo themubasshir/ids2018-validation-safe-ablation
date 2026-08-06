@@ -1,0 +1,26 @@
+{
+  "stage": "15.0",
+  "python_version": "3.12.13",
+  "numpy_version": "2.4.6",
+  "pandas_version": "2.3.3",
+  "packages": {
+    "torch": true,
+    "tensorflow": true,
+    "sklearn": true,
+    "rtdl_revisiting_models": false,
+    "pytorch_tabular": false,
+    "tab_transformer_pytorch": false,
+    "lightning": false,
+    "pytorch_lightning": true
+  },
+  "torch": {
+    "available": true,
+    "version": "2.10.0+cu128",
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_name": "Tesla P100-PCIE-16GB",
+    "cuda_total_memory_gb": 15.887939453125
+  },
+  "nvidia_smi_available": true,
+  "nvidia_smi_output": "Tesla P100-PCIE-16GB, 16384 MiB"
+}

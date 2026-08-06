@@ -1,0 +1,4 @@
+split,row_count,benign_count,attack_count,attack_rate,positive_class_weight,used_for_class_weight
+train,154686,110161.0,44525.0,0.28784117102622986,2.4741381246490737,True
+validation,37835,27143.0,10692.0,0.2825954854488373,,False
+holdout,46849,,,,,False

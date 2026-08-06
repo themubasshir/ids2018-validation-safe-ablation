@@ -1,0 +1,4 @@
+split_a,split_b,rows_a,rows_b,unique_patterns_a,unique_patterns_b,shared_exact_pattern_count
+train,validation,154686,37835,154686,37835,0
+train,holdout,154686,46849,154686,46849,0
+validation,holdout,37835,46849,37835,46849,0

@@ -1,0 +1,92 @@
+{
+  "stage": "15.5A",
+  "status": "FROZEN",
+  "frozen_at_utc": "2026-08-06T15:22:20.617563+00:00",
+  "candidate_id": "FT_BALANCED",
+  "architecture_frozen": true,
+  "operating_threshold": 0.73,
+  "threshold_frozen": true,
+  "selection_data": "Duplicate-safe validation probabilities from five independent FT_BALANCED seeds",
+  "confirmation_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "threshold_grid": {
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005
+  },
+  "selection_method": "Robust near-optimal mean-F1 plateau",
+  "plateau_rule": {
+    "maximum_mean_f1": 0.86556294899573,
+    "mean_f1_tolerance": 0.0005,
+    "minimum_eligible_mean_f1": 0.8650629489957301,
+    "plateau_threshold_minimum": 0.675,
+    "plateau_threshold_maximum": 0.795,
+    "eligible_threshold_count": 24
+  },
+  "robust_ranking_rule": [
+    "highest worst-seed F1",
+    "lowest F1 standard deviation",
+    "highest mean F2",
+    "highest mean recall",
+    "lowest mean FPR",
+    "smallest distance from median seed-specific optimum",
+    "lowest threshold"
+  ],
+  "selected_validation_summary": {
+    "robust_rank": 1.0,
+    "threshold": 0.73,
+    "seed_count": 5.0,
+    "mean_accuracy": 0.9322320602616625,
+    "accuracy_std": 0.0004962332061720368,
+    "minimum_accuracy": 0.9314391436500594,
+    "mean_precision": 0.9859272946228013,
+    "precision_std": 0.0027580470964224195,
+    "minimum_precision": 0.9810561212408241,
+    "mean_recall": 0.7712121212121211,
+    "recall_std": 0.002725499098174941,
+    "minimum_recall": 0.7676767676767676,
+    "mean_f1": 0.8654450257424102,
+    "f1_std": 0.001142542079354036,
+    "minimum_f1": 0.8635455023671751,
+    "maximum_f1": 0.8664392547887694,
+    "mean_f2": 0.8063296130739867,
+    "f2_std": 0.002114955253361024,
+    "minimum_f2": 0.8033512116822612,
+    "mean_fpr": 0.004339977158014959,
+    "fpr_std": 0.0008797428782506832,
+    "maximum_fpr": 0.005894705817337803,
+    "mean_fnr": 0.22878787878787882,
+    "fnr_std": 0.002725499098174934,
+    "maximum_fnr": 0.23232323232323232,
+    "distance_to_seed_optimum_mean": 0.05499999999999994,
+    "distance_to_seed_optimum_median": 0.05499999999999994
+  },
+  "seed_specific_threshold_summary": {
+    "thresholds": {
+      "7": 0.695,
+      "29": 0.655,
+      "101": 0.73,
+      "313": 0.62,
+      "997": 0.675
+    },
+    "mean": 0.675,
+    "median": 0.675,
+    "standard_deviation": 0.04138236339311711,
+    "minimum": 0.62,
+    "maximum": 0.73,
+    "first_quartile": 0.655,
+    "third_quartile": 0.695
+  },
+  "threshold_regret": {
+    "mean_f1_regret": 0.0003313863673154893,
+    "maximum_f1_regret": 0.0007376080699454945,
+    "mean_absolute_threshold_distance": 0.05499999999999998
+  },
+  "deployment_policy": "Apply the same frozen threshold to all independently trained FT_BALANCED checkpoints.",
+  "holdout_status": "UNTOUCHED"
+}

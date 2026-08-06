@@ -1,0 +1,21 @@
+{
+  "stage": "15.4C",
+  "candidate_id": "FT_BALANCED",
+  "seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "best_checkpoint_paths": {
+    "7": "/kaggle/working/stage15_transformer/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+    "29": "/kaggle/working/stage15_transformer/stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+    "101": "/kaggle/working/stage15_transformer/stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+    "313": "/kaggle/working/stage15_transformer/stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+    "997": "/kaggle/working/stage15_transformer/stage15_4c_models/FT_BALANCED_seed_997_best.pt"
+  },
+  "architecture_frozen": true,
+  "threshold_frozen": false,
+  "holdout_status": "UNTOUCHED"
+}

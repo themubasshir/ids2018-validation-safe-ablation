@@ -1,0 +1,22 @@
+{
+  "stage": "15.4C",
+  "candidate_id": "FT_BALANCED",
+  "seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "validation_row_count": 37835,
+  "source_probability_paths": {
+    "7": "/kaggle/working/stage15_transformer/stage15_4b_balanced_seed7/FT_BALANCED_seed_7_extended_validation_probabilities.npz",
+    "29": "/kaggle/working/stage15_transformer/stage15_4a_runs/FT_BALANCED_seed_29_validation_probabilities.npz",
+    "101": "/kaggle/working/stage15_transformer/stage15_4a_runs/FT_BALANCED_seed_101_validation_probabilities.npz",
+    "313": "/kaggle/working/stage15_transformer/stage15_4c_runs/FT_BALANCED_seed_313_validation_probabilities.npz",
+    "997": "/kaggle/working/stage15_transformer/stage15_4c_runs/FT_BALANCED_seed_997_validation_probabilities.npz"
+  },
+  "consolidated_archive": "/kaggle/working/stage15_transformer/stage15_4c_leader_five_seed_validation_probabilities.npz",
+  "purpose": "Validation-only threshold stabilization for the frozen architecture",
+  "holdout_status": "UNTOUCHED"
+}

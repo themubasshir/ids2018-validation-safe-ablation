@@ -1,0 +1,28 @@
+{
+  "stage": "15.4C",
+  "generated_at_utc": "2026-08-06T15:17:29.584850+00:00",
+  "purpose": "Complete the five-seed independent architecture confirmation and freeze the winning FT-Transformer configuration.",
+  "independent_confirmation_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "architecture_screening_seed_excluded": 42,
+  "selection_data": "Duplicate-safe validation only",
+  "architecture_frozen": true,
+  "threshold_frozen": false,
+  "frozen_candidate_id": "FT_BALANCED",
+  "data_access": {
+    "training_indices_loaded": false,
+    "validation_labels_loaded": true,
+    "validation_probabilities_loaded": true,
+    "holdout_indices_loaded": false,
+    "holdout_features_loaded": false,
+    "holdout_labels_loaded": false,
+    "holdout_probabilities_generated": false,
+    "holdout_metrics_generated": false
+  },
+  "next_step": "Validation-only threshold stabilization across the five frozen-architecture seeds."
+}

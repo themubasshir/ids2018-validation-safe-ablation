@@ -1,13 +1,13 @@
 {
-  "stage": "15.4B-PK",
-  "generated_at_utc": "2026-08-06T13:39:32.829485+00:00",
+  "stage": "15.5B",
+  "generated_at_utc": "2026-08-06T15:30:27.244566+00:00",
   "repository": {
     "branch": "main",
-    "base_commit": "0a464e3635595dc09e77c7199399b446efbac98c",
+    "base_commit": "8b437233fe2551e4ff6043f31d1d0245d26bcdbb",
     "package_relative_path": "results/stage15_transformer_checkpoint"
   },
-  "copied_file_count": 134,
-  "copied_files": [
+  "copied_source_file_count": 203,
+  "copied_source_files": [
     {
       "relative_path": "ft_transformer_numeric.py",
       "size_bytes": 4443,
@@ -677,161 +677,395 @@
       "relative_path": "stage15_4b_repaired_three_seed_winners.csv",
       "size_bytes": 357,
       "sha256": "baccce85bb800663b9456be5a2f131a378736835b2adda4f66e484be25ba7747"
+    },
+    {
+      "relative_path": "stage15_4c_final_seed_configuration.json",
+      "size_bytes": 1608,
+      "sha256": "12a09e9e3b72808c588ae486549c7d48d1ea3695b623458836d775218fae3c9b"
+    },
+    {
+      "relative_path": "stage15_4c_final_seed_confirmation.py",
+      "size_bytes": 54326,
+      "sha256": "f55cd9ab4e51008c051adfdcd36e50b0a8cf89a8647184874e399a81863beb35"
+    },
+    {
+      "relative_path": "stage15_4c_five_seed_architecture_selection.json",
+      "size_bytes": 5587,
+      "sha256": "c764daa44c5c770cf286392df94e41244a0506ba9489fbc753d0aa222b96ee39"
+    },
+    {
+      "relative_path": "stage15_4c_five_seed_candidate_summary.csv",
+      "size_bytes": 2344,
+      "sha256": "868a1106a42426310a405476cce24c30fdcccfdeaf5e87ff6390a73c0e047b28"
+    },
+    {
+      "relative_path": "stage15_4c_five_seed_metadata.json",
+      "size_bytes": 936,
+      "sha256": "5264196b3919ec010e7129aa425a1e02a62c9f7c0e1c48a4df34402295fae571"
+    },
+    {
+      "relative_path": "stage15_4c_five_seed_metrics.csv",
+      "size_bytes": 4896,
+      "sha256": "5380462c364095f3f4e56babccb08268cd06e7555f91a2c72d67ee9e656ec9ef"
+    },
+    {
+      "relative_path": "stage15_4c_five_seed_result.json",
+      "size_bytes": 12437,
+      "sha256": "9e9bb11881348e9b35334c23bd150513f1b93e5a8bfe02fa25e5f30ddc70e8d9"
+    },
+    {
+      "relative_path": "stage15_4c_five_seed_winners.csv",
+      "size_bytes": 540,
+      "sha256": "124c07cfed2184311e8be6da819b193ecd5f4d1381cf00136ac24f35bb5cd8bc"
+    },
+    {
+      "relative_path": "stage15_4c_frozen_architecture.json",
+      "size_bytes": 2298,
+      "sha256": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa"
+    },
+    {
+      "relative_path": "stage15_4c_leader_checkpoint_manifest.json",
+      "size_bytes": 728,
+      "sha256": "a0b36b120bfcc2aa02f98983d3d60099bf4fb83c468d1bbc6d559e92a3fc2a6d"
+    },
+    {
+      "relative_path": "stage15_4c_leader_five_seed_validation_probabilities.npz",
+      "size_bytes": 630101,
+      "sha256": "0b04a1a62f30691b39a086795acb3616aa92a1cde0faff601e80e17abdae2331"
+    },
+    {
+      "relative_path": "stage15_4c_leader_probability_manifest.json",
+      "size_bytes": 1015,
+      "sha256": "043e78a32d3f0f1fafdc6b03b6d82ee7a029a78eda536e887947ca9c500af774"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+      "size_bytes": 1966315,
+      "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_BALANCED_seed_313_last.pt",
+      "size_bytes": 1971707,
+      "sha256": "148f1ad9b8250e55d38902eb2da9397761b2127232eb24c40d59b42d379b3b64"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_BALANCED_seed_997_best.pt",
+      "size_bytes": 1966315,
+      "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_BALANCED_seed_997_last.pt",
+      "size_bytes": 1971707,
+      "sha256": "6fe8ff26537dd3cd4e2c34c796053f49ea524048c464a728e4e790ef4116d4c0"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_COMPACT_seed_313_best.pt",
+      "size_bytes": 401129,
+      "sha256": "640df47d358d575e5df70d1579e93bf2bd134a94419a06b292e80aa3107454cc"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_COMPACT_seed_313_last.pt",
+      "size_bytes": 406520,
+      "sha256": "5c0a1f37f6d25301092aab5a1f67ca72acd783b8da778d9bcd9d4980bfd53ea0"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_COMPACT_seed_997_best.pt",
+      "size_bytes": 401129,
+      "sha256": "71920bb6c634462b1e26bd0dcdab66394b8f6ccd10343276a39d710422454bb5"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_COMPACT_seed_997_last.pt",
+      "size_bytes": 406520,
+      "sha256": "ab5dde672c7ce9a25490508eb65a8a598c49f2be08300ecdcb94e6b88f2de9b9"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_DEEP_REGULARIZED_seed_313_best.pt",
+      "size_bytes": 2583163,
+      "sha256": "00e4fe30670f36f9d26ca3a13e83883d14ecf485ac8b541afdd5cce61c1cb596"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_DEEP_REGULARIZED_seed_313_last.pt",
+      "size_bytes": 2588563,
+      "sha256": "b1d1adca7231e623ddf4913e416fc45f6318bcc4d3b266ca0eec3c11af0ef834"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_DEEP_REGULARIZED_seed_997_best.pt",
+      "size_bytes": 2583163,
+      "sha256": "412f22eb138fc0313ccf53d96a3255d6908787a6de7b859644c1d47ac0123547"
+    },
+    {
+      "relative_path": "stage15_4c_models/FT_DEEP_REGULARIZED_seed_997_last.pt",
+      "size_bytes": 2588563,
+      "sha256": "013d23bf33993b760bb7a5dc919d1befa9d876aecefcaee0a4f80e36d30f4ab9"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_batch_metadata.json",
+      "size_bytes": 985,
+      "sha256": "cea3592e6424f56d274beb270cc0165f0401a6ed74058bd9954cfcb02cfd7cf3"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_batch_result.json",
+      "size_bytes": 18502,
+      "sha256": "0670f3f2f0dbb2b24e99067ca7b9e0f4861096fb3869fe0a547b59ac30c39b36"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_batch_selection.json",
+      "size_bytes": 3508,
+      "sha256": "8ced32e7c29a676a4ab188be1fcb26da75650ace1e16a51d9799816230a03251"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_candidate_summary.csv",
+      "size_bytes": 1965,
+      "sha256": "92d92e4117990f95bb6096b77b1656af28d6ad8099f3381b378930f3565932e6"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_metrics.csv",
+      "size_bytes": 2159,
+      "sha256": "02beb32d45dade559b85b904cf62ae4fe988e298d1d3a146226f9ff489f14335"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_threshold_sweep.csv",
+      "size_bytes": 230986,
+      "sha256": "43877650c0c566e90336d5e1b3a703927444452afba5532bd5bd8229944d0bad"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_validation_probabilities.npz",
+      "size_bytes": 754516,
+      "sha256": "b59f47f83e78c9202ee839d615f8677785322fd413b0842db5098d442c64f7f4"
+    },
+    {
+      "relative_path": "stage15_4c_new_seed_winners.csv",
+      "size_bytes": 268,
+      "sha256": "8e6940f9e0447323eff69c36f0931dab39239ddb5210fe7b4342351eb35f4db2"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_313_history.csv",
+      "size_bytes": 6033,
+      "sha256": "b30a9e2853f641d88f34a317e1e44ae39aa3622690cafc4d100dafcb758028b1"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_313_result.json",
+      "size_bytes": 1442,
+      "sha256": "ce57e6ed3f88278c54ea02b4b9da7c058e8c31cc51cfc44c64e25287f1a1ff54"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_313_thresholds.csv",
+      "size_bytes": 38324,
+      "sha256": "ceee80bfc0a6ab7280760a8d59cea7517dd9cb750cfa1b02bce92fb3abfb5f6f"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_313_validation_probabilities.npz",
+      "size_bytes": 130300,
+      "sha256": "f979c23f379695adc3800b15e35108ceb7d0b6f8fe61e7ed5772b658112895f0"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_997_history.csv",
+      "size_bytes": 6217,
+      "sha256": "24ffb6696b66056a2cc8d331a76c991b27ac2e194dc68c8e53793086bfd896cc"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_997_result.json",
+      "size_bytes": 1438,
+      "sha256": "b09efdba00fecbcc02cd0ca3540ce47597f9f631b39b526f57c1f25128d6e79d"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_997_thresholds.csv",
+      "size_bytes": 38356,
+      "sha256": "73dc39819f9c8c085880ace1ce09f912b8a9edb3912ff1b8beddd5db95cfe32f"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_BALANCED_seed_997_validation_probabilities.npz",
+      "size_bytes": 128982,
+      "sha256": "136456e9c302ed022ac301904faaf3478e22d1515c99592822efa19720cfe63d"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_313_history.csv",
+      "size_bytes": 6970,
+      "sha256": "813c1bb5dcbe9c5d66515355e472970285a840cd1f7b583a5bdd675ea399f13d"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_313_result.json",
+      "size_bytes": 1432,
+      "sha256": "fcd20e4ae5af70beffa52177c602c81f9c58988eb520417fafc66a3a7c6b4858"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_313_thresholds.csv",
+      "size_bytes": 37969,
+      "sha256": "0550fe30ec73b98b855007d14b6bc806e0eb22fb993f9b9dc315181373e5bc9b"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_313_validation_probabilities.npz",
+      "size_bytes": 132392,
+      "sha256": "dc66135dc101a2a0ff0add4994584e4b38d89cbb8115e9ac8bce146ecdbbc81d"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_997_history.csv",
+      "size_bytes": 9186,
+      "sha256": "279028bb84d7770fbd2c3c556dc3ee5ffa84f4bcb618208bbecb4dfe164e158a"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_997_result.json",
+      "size_bytes": 1426,
+      "sha256": "169c46826ff72dde7f0e01fda74ccc214d3be345c3453181f7601383958b19e8"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_997_thresholds.csv",
+      "size_bytes": 37984,
+      "sha256": "3e1e30477d82bbc7c64c1f7b3077761c50939be561363b6e657a14472da8054a"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_COMPACT_seed_997_validation_probabilities.npz",
+      "size_bytes": 130796,
+      "sha256": "1306348448a9ed038b3350730bfbde252ae5cc5d223c6969a8c77dad42e69175"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_313_history.csv",
+      "size_bytes": 6681,
+      "sha256": "6ca68cb984eea68e934bc21a3d5466d504c5bc461ba6744ee7e113146a311821"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_313_result.json",
+      "size_bytes": 1485,
+      "sha256": "3ed5fe171ffcc76786ace30fbc495e90269f229ffcbd220d70ce9f58afb6d69f"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_313_thresholds.csv",
+      "size_bytes": 41227,
+      "sha256": "9fdf0682f4e7ea99c5db77189fb3daaba59c121e65616f120601393990831566"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_313_validation_probabilities.npz",
+      "size_bytes": 131679,
+      "sha256": "9e10b3bd92580853ddcee27c2891ac1c0b163844a9cd629693b0ec63ab2463b2"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_997_history.csv",
+      "size_bytes": 9196,
+      "sha256": "6caf4eb5151e84ff6bbef85a60e6abdf09c0578a52c99dfc031edc046f22b1ec"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_997_result.json",
+      "size_bytes": 1488,
+      "sha256": "1ad247e0270e194929881d6b38851a5287e7444d2e6b25d2a2da3f0dc155c0d9"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_997_thresholds.csv",
+      "size_bytes": 41250,
+      "sha256": "43138dfdbd397c5479d8a40dd66dad74ec631d359f43f2801c1ef1ca410100c5"
+    },
+    {
+      "relative_path": "stage15_4c_runs/FT_DEEP_REGULARIZED_seed_997_validation_probabilities.npz",
+      "size_bytes": 130305,
+      "sha256": "48f010bda3246d0286d9f3bd722821c6dead09414df3c8edd6950eea8698fb83"
+    },
+    {
+      "relative_path": "stage15_4c_training_history.csv",
+      "size_bytes": 42996,
+      "sha256": "8cd4a1366dc8d4ebf99f08a3deb50e7ffbc878fd48ef5f78b83e2d3c0447a4b9"
+    },
+    {
+      "relative_path": "stage15_5a_common_threshold_regret.csv",
+      "size_bytes": 2450,
+      "sha256": "7bd9670713c465b85f00a61db9517a6e2d7d195e62c92522a2eef27fd0b3b24e"
+    },
+    {
+      "relative_path": "stage15_5a_common_threshold_seed_metrics.csv",
+      "size_bytes": 1209,
+      "sha256": "c3fd0de7261118de7ed57398799906d7df1bb76268598c74a2ed2b1a33fddf6b"
+    },
+    {
+      "relative_path": "stage15_5a_frozen_operating_threshold.json",
+      "size_bytes": 2835,
+      "sha256": "45cb0008b313cdc027ff08a5910efa04c3a74661e4e9e09ff28d6035c24e5adb"
+    },
+    {
+      "relative_path": "stage15_5a_local_threshold_sensitivity.csv",
+      "size_bytes": 10881,
+      "sha256": "2ffa65a5a30596bfa01308c533dda3da530349458904ce7504df44b7c94daa21"
+    },
+    {
+      "relative_path": "stage15_5a_robust_threshold_plateau.csv",
+      "size_bytes": 12089,
+      "sha256": "5d6ec058cb944200af9481f29755ce49a3898df9d7190973e806ec6a497c2978"
+    },
+    {
+      "relative_path": "stage15_5a_seed_specific_threshold_optima.csv",
+      "size_bytes": 1120,
+      "sha256": "80634072e589095933bdb7ef6fdcb493ad8b213482133853f919745bf945c6cb"
+    },
+    {
+      "relative_path": "stage15_5a_threshold_aggregate.csv",
+      "size_bytes": 86866,
+      "sha256": "1caa12ea3bbf20df86a2e4187c800a018e44babf290de793b47bc70ff04df649"
+    },
+    {
+      "relative_path": "stage15_5a_threshold_stabilization_configuration.json",
+      "size_bytes": 1038,
+      "sha256": "ddd7867362a9a4fd878928cb7362473225d01483c3de853ebcca0262d541ffbd"
+    },
+    {
+      "relative_path": "stage15_5a_threshold_stabilization_metadata.json",
+      "size_bytes": 893,
+      "sha256": "ef9508549aa41b0a093be2be7bb40267dd19a631377eb126b6fb655c9e54cabd"
+    },
+    {
+      "relative_path": "stage15_5a_threshold_stabilization_result.json",
+      "size_bytes": 6785,
+      "sha256": "5c360c7d5da71c643e94cf49f2d624d4dea60c0e44dba728aab380029a446ffc"
+    },
+    {
+      "relative_path": "stage15_5a_threshold_sweep_by_seed.csv",
+      "size_bytes": 193870,
+      "sha256": "0638b942d1e4c75963d24d85948d0e3576f67ef08068d92b85ab97b64ff32ce2"
+    },
+    {
+      "relative_path": "stage15_5b_preholdout_decision_lock.json",
+      "size_bytes": 5287,
+      "sha256": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae"
     }
   ],
+  "frozen_model_policy": {
+    "candidate_id": "FT_BALANCED",
+    "architecture": {
+      "candidate_id": "FT_BALANCED",
+      "d_token": 64,
+      "n_heads": 8,
+      "n_layers": 3,
+      "d_ff": 256,
+      "dropout": 0.1,
+      "learning_rate": 0.0005,
+      "weight_decay": 1e-05
+    },
+    "parameter_count": 159169,
+    "input_predictor_count": 70,
+    "confirmation_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "screening_seed_excluded": 42,
+    "operating_threshold": 0.73,
+    "decision_rule": "Predict attack when probability is greater than or equal to 0.73"
+  },
+  "preholdout_lock_path": "stage15_5b_preholdout_decision_lock.json",
+  "preholdout_lock_sha256": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae",
+  "architecture_frozen": true,
+  "threshold_frozen": true,
+  "checkpoint_set_frozen": true,
+  "holdout_evaluation_count": 0,
+  "holdout_status": "UNTOUCHED",
   "cache_policy": {
     "excluded_directories": [
       "__pycache__"
     ],
     "excluded_extensions": [
       ".pyc"
+    ],
+    "excluded_names": [
+      ".DS_Store"
     ]
   },
-  "stage15_4b": {
-    "candidate_id": "FT_BALANCED",
-    "seed": 7,
-    "continued_from_epoch": 40,
-    "best_epoch": 50,
-    "final_epoch": 56,
-    "early_stopping_triggered": true,
-    "convergence_repaired": true,
-    "validation_metrics": {
-      "threshold": 0.6949999999999997,
-      "f1": 0.866284523189161,
-      "f2": 0.8106737408808957,
-      "recall": 0.7774036662925552,
-      "roc_auc": 0.9547162015744053,
-      "pr_auc": 0.9291636892316072
-    }
-  },
-  "repaired_three_seed_selection": {
-    "stage": "15.4B",
-    "selection_scope": "Independent seeds 7, 29, and 101 after repairing the FT_BALANCED seed-7 epoch-ceiling condition",
-    "screening_seed_excluded": 42,
-    "provisional_multiseed_leader": "FT_BALANCED",
-    "runner_up": "FT_COMPACT",
-    "leader_summary": {
-      "aggregate_rank": 1,
-      "candidate_id": "FT_BALANCED",
-      "parameter_count": 159169,
-      "seed_count": 3,
-      "seed_win_count": 3,
-      "mean_best_epoch": 42.333333333333336,
-      "maximum_best_epoch": 50,
-      "best_checkpoint_ceiling_hits": 0,
-      "mean_threshold": 0.693333333333333,
-      "threshold_std": 0.03752776749732571,
-      "mean_accuracy": 0.9319765649090348,
-      "accuracy_std": 0.00047008754052966817,
-      "mean_precision": 0.9809295722573393,
-      "precision_std": 0.005063975703658267,
-      "mean_recall": 0.7743795984536725,
-      "recall_std": 0.005814044352778609,
-      "mean_f1": 0.8654792204569005,
-      "f1_std": 0.0016824237516274293,
-      "minimum_f1": 0.8635455023671751,
-      "maximum_f1": 0.8666076358143654,
-      "mean_f2": 0.8084129981646409,
-      "f2_std": 0.004391952083188445,
-      "mean_fpr": 0.005943828365815598,
-      "fpr_std": 0.001638257244534745,
-      "mean_fnr": 0.22562040154632745,
-      "fnr_std": 0.005814044352778581,
-      "mean_roc_auc": 0.9534313697789104,
-      "roc_auc_std": 0.0012055544708639188,
-      "mean_pr_auc": 0.9276945190543403,
-      "pr_auc_std": 0.0014388394464635637,
-      "mean_peak_gpu_memory_mb": 1129.3714192708333,
-      "total_runtime_seconds": 2613.3817139249977
-    },
-    "runner_up_summary": {
-      "aggregate_rank": 2,
-      "candidate_id": "FT_COMPACT",
-      "parameter_count": 30017,
-      "seed_count": 3,
-      "seed_win_count": 0,
-      "mean_best_epoch": 35.666666666666664,
-      "maximum_best_epoch": 38,
-      "best_checkpoint_ceiling_hits": 0,
-      "mean_threshold": 0.6516666666666664,
-      "threshold_std": 0.033291640592396934,
-      "mean_accuracy": 0.9311484075591383,
-      "accuracy_std": 0.00015858332232060457,
-      "mean_precision": 0.9854777421814638,
-      "precision_std": 0.0018282353562045172,
-      "mean_recall": 0.7676767676767676,
-      "recall_std": 0.0019461889306663903,
-      "mean_f1": 0.8630454293140164,
-      "f1_std": 0.0005563737684274256,
-      "minimum_f1": 0.8624268928816059,
-      "maximum_f1": 0.8635050680111339,
-      "mean_f2": 0.8031775761199554,
-      "f2_std": 0.0014671044366466133,
-      "mean_fpr": 0.004457871274361667,
-      "fpr_std": 0.0005790160868548352,
-      "mean_fnr": 0.2323232323232323,
-      "fnr_std": 0.0019461889306663816,
-      "mean_roc_auc": 0.9467341073268049,
-      "roc_auc_std": 0.00017372361826970136,
-      "mean_pr_auc": 0.9201649460841425,
-      "pr_auc_std": 0.0001877947778949186,
-      "mean_peak_gpu_memory_mb": 403.015625,
-      "total_runtime_seconds": 884.6973975830006
-    },
-    "mean_f1_margin": 0.002433791142884112,
-    "seed_winners": [
-      {
-        "seed": 7,
-        "winning_candidate_id": "FT_BALANCED",
-        "winning_f1": 0.866284523189161,
-        "winning_pr_auc": 0.9291636892316072,
-        "winning_recall": 0.7774036662925552,
-        "winning_threshold": 0.6949999999999997
-      },
-      {
-        "seed": 29,
-        "winning_candidate_id": "FT_BALANCED",
-        "winning_f1": 0.8666076358143654,
-        "winning_pr_auc": 0.9276318068669108,
-        "winning_recall": 0.7780583613916947,
-        "winning_threshold": 0.6549999999999997
-      },
-      {
-        "seed": 101,
-        "winning_candidate_id": "FT_BALANCED",
-        "winning_f1": 0.8635455023671751,
-        "winning_pr_auc": 0.9262880610645032,
-        "winning_recall": 0.7676767676767676,
-        "winning_threshold": 0.7299999999999998
-      }
-    ],
-    "phase_1_requirements": {
-      "minimum_mean_f1_margin": 0.001,
-      "mean_f1_margin_passed": true,
-      "minimum_seed_wins": 2,
-      "seed_win_requirement_passed": true,
-      "no_best_checkpoint_at_epoch_ceiling": true,
-      "convergence_requirement_passed": true,
-      "all_phase_1_conditions_passed": true
-    },
-    "confirmation_status": "CLEAR_PROVISIONAL_MULTI_SEED_LEAD_AFTER_CONVERGENCE_REPAIR",
-    "architecture_frozen": false,
-    "reason_not_frozen": "Two preregistered final independent seeds remain to be evaluated across all candidates.",
-    "recommended_next_step": "Evaluate seeds 313 and 997 across all three architectures, then aggregate five independent seeds.",
-    "holdout_status": "UNTOUCHED"
-  },
-  "architecture_frozen": false,
-  "holdout_status": "UNTOUCHED",
-  "next_step": {
-    "additional_seeds": [
-      313,
-      997
-    ],
-    "candidate_scope": [
-      "FT_COMPACT",
-      "FT_BALANCED",
-      "FT_DEEP_REGULARIZED"
-    ],
-    "target_independent_seed_count": 5
-  }
+  "next_step": "One-time duplicate-safe holdout evaluation"
 }

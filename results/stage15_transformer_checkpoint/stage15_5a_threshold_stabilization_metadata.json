@@ -1,0 +1,19 @@
+{
+  "stage": "15.5A",
+  "generated_at_utc": "2026-08-06T15:22:20.621124+00:00",
+  "purpose": "Select and freeze one seed-independent operating threshold for the frozen FT_BALANCED architecture.",
+  "architecture_selection_modified": false,
+  "architecture_frozen": true,
+  "threshold_frozen": true,
+  "threshold_selection_data": "Five validation probability vectors only",
+  "training_data_loaded": false,
+  "dataset_csv_loaded": false,
+  "validation_labels_loaded": true,
+  "validation_probabilities_loaded": true,
+  "holdout_indices_loaded": false,
+  "holdout_features_loaded": false,
+  "holdout_labels_loaded": false,
+  "holdout_probabilities_generated": false,
+  "holdout_metrics_generated": false,
+  "next_step": "Package and preserve the frozen architecture and threshold. Then perform the single final duplicate-safe holdout evaluation across the five frozen FT_BALANCED checkpoints."
+}

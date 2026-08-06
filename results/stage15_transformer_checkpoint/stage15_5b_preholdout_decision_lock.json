@@ -1,0 +1,134 @@
+{
+  "stage": "15.5B",
+  "status": "LOCKED_BEFORE_FIRST_HOLDOUT_EVALUATION",
+  "locked_at_utc": "2026-08-06T15:30:26.675240+00:00",
+  "repository_base_commit": "8b437233fe2551e4ff6043f31d1d0245d26bcdbb",
+  "model_policy": {
+    "candidate_id": "FT_BALANCED",
+    "architecture": {
+      "candidate_id": "FT_BALANCED",
+      "d_token": 64,
+      "n_heads": 8,
+      "n_layers": 3,
+      "d_ff": 256,
+      "dropout": 0.1,
+      "learning_rate": 0.0005,
+      "weight_decay": 1e-05
+    },
+    "parameter_count": 159169,
+    "input_predictor_count": 70,
+    "confirmation_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "screening_seed_excluded": 42,
+    "operating_threshold": 0.73,
+    "decision_rule": "Predict attack when probability is greater than or equal to 0.73"
+  },
+  "architecture_selection_summary": {
+    "mean_f1": 0.8657764121097257,
+    "f1_standard_deviation": 0.0013195381641824143,
+    "minimum_f1": 0.8635455023671751,
+    "mean_recall": 0.77433595211373,
+    "mean_pr_auc": 0.9261649995539398,
+    "seed_win_count": 4,
+    "mean_f1_margin": 0.002301870050082866,
+    "best_checkpoint_ceiling_hits": 0
+  },
+  "frozen_threshold_validation_summary": {
+    "threshold": 0.73,
+    "mean_accuracy": 0.9322320602616625,
+    "mean_precision": 0.9859272946228013,
+    "mean_recall": 0.7712121212121211,
+    "mean_f1": 0.8654450257424102,
+    "f1_standard_deviation": 0.001142542079354036,
+    "minimum_f1": 0.8635455023671751,
+    "mean_f2": 0.8063296130739867,
+    "mean_fpr": 0.004339977158014959,
+    "mean_fnr": 0.22878787878787882
+  },
+  "checkpoint_locks": {
+    "7": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+      "size_bytes": 1968137,
+      "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31"
+    },
+    "29": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+      "size_bytes": 1966137,
+      "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c"
+    },
+    "101": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+      "size_bytes": 1966315,
+      "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552"
+    },
+    "313": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+      "size_bytes": 1966315,
+      "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739"
+    },
+    "997": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4c_models/FT_BALANCED_seed_997_best.pt",
+      "size_bytes": 1966315,
+      "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66"
+    }
+  },
+  "critical_file_locks": {
+    "frozen_architecture": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4c_frozen_architecture.json",
+      "size_bytes": 2298,
+      "sha256": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa"
+    },
+    "architecture_selection": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4c_five_seed_architecture_selection.json",
+      "size_bytes": 5587,
+      "sha256": "c764daa44c5c770cf286392df94e41244a0506ba9489fbc753d0aa222b96ee39"
+    },
+    "five_seed_result": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4c_five_seed_result.json",
+      "size_bytes": 12437,
+      "sha256": "9e9bb11881348e9b35334c23bd150513f1b93e5a8bfe02fa25e5f30ddc70e8d9"
+    },
+    "checkpoint_manifest": {
+      "path": "/kaggle/working/stage15_transformer/stage15_4c_leader_checkpoint_manifest.json",
+      "size_bytes": 728,
+      "sha256": "a0b36b120bfcc2aa02f98983d3d60099bf4fb83c468d1bbc6d559e92a3fc2a6d"
+    },
+    "frozen_threshold": {
+      "path": "/kaggle/working/stage15_transformer/stage15_5a_frozen_operating_threshold.json",
+      "size_bytes": 2835,
+      "sha256": "45cb0008b313cdc027ff08a5910efa04c3a74661e4e9e09ff28d6035c24e5adb"
+    },
+    "threshold_result": {
+      "path": "/kaggle/working/stage15_transformer/stage15_5a_threshold_stabilization_result.json",
+      "size_bytes": 6785,
+      "sha256": "5c360c7d5da71c643e94cf49f2d624d4dea60c0e44dba728aab380029a446ffc"
+    },
+    "threshold_metadata": {
+      "path": "/kaggle/working/stage15_transformer/stage15_5a_threshold_stabilization_metadata.json",
+      "size_bytes": 893,
+      "sha256": "ef9508549aa41b0a093be2be7bb40267dd19a631377eb126b6fb655c9e54cabd"
+    },
+    "threshold_aggregate": {
+      "path": "/kaggle/working/stage15_transformer/stage15_5a_threshold_aggregate.csv",
+      "size_bytes": 86866,
+      "sha256": "1caa12ea3bbf20df86a2e4187c800a018e44babf290de793b47bc70ff04df649"
+    },
+    "common_threshold_seed_metrics": {
+      "path": "/kaggle/working/stage15_transformer/stage15_5a_common_threshold_seed_metrics.csv",
+      "size_bytes": 1209,
+      "sha256": "c3fd0de7261118de7ed57398799906d7df1bb76268598c74a2ed2b1a33fddf6b"
+    }
+  },
+  "architecture_frozen": true,
+  "threshold_frozen": true,
+  "checkpoint_set_frozen": true,
+  "holdout_opened": false,
+  "holdout_evaluation_count": 0,
+  "holdout_status": "UNTOUCHED",
+  "next_permitted_action": "One-time duplicate-safe holdout inference using only the five locked checkpoints and the frozen threshold 0.73"
+}

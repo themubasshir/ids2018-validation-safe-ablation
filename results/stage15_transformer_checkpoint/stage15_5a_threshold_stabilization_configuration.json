@@ -1,0 +1,41 @@
+{
+  "stage": "15.5A",
+  "candidate_id": "FT_BALANCED",
+  "validation_seed_count": 5,
+  "validation_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "threshold_grid": {
+    "minimum": 0.05,
+    "maximum": 0.95,
+    "step": 0.005
+  },
+  "seed_specific_objective": {
+    "primary": "maximum F1",
+    "tie_breakers": [
+      "maximum F2",
+      "maximum recall",
+      "minimum FPR",
+      "minimum threshold"
+    ]
+  },
+  "common_threshold_rule": {
+    "step_1": "Find the maximum mean validation F1 across the five seeds.",
+    "step_2": "Define a near-optimal plateau containing thresholds no more than 0.0005 below the maximum mean F1.",
+    "step_3": "Within the plateau, prioritize the highest worst-seed F1.",
+    "remaining_tie_breakers": [
+      "lowest F1 standard deviation",
+      "highest mean F2",
+      "highest mean recall",
+      "lowest mean FPR",
+      "smallest distance from the median seed-specific optimum",
+      "lowest threshold"
+    ]
+  },
+  "mean_f1_plateau_tolerance": 0.0005,
+  "holdout_access": false
+}

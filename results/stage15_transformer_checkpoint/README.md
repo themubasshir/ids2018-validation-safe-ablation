@@ -1,77 +1,58 @@
 # Stage 15 Transformer Checkpoint
 
-This package preserves Transformer feasibility, duplicate-safe
-partitioning, preprocessing, P100 compatibility, architecture
-screening, convergence analysis, and independent multi-seed
-confirmation.
+This package contains the complete Transformer feasibility,
+duplicate-safe data partitioning, preprocessing, architecture
+screening, convergence repair, five-seed confirmation, and
+operating-threshold stabilization artifacts.
 
-## Duplicate-safe data
+## Frozen model policy
 
-- Training rows: 154,686
-- Validation rows: 37,835
-- Holdout rows: 46,849
-- Predictors: 70
-- Cross-split exact-pattern overlap: zero
+- Architecture: FT_BALANCED
+- Trainable parameters: 159169
+- Numerical predictors: 70
+- Independent confirmation seeds: 7, 29, 101, 313, 997
+- Operating threshold: 0.73
+- Decision rule: probability >= 0.73 predicts attack
 
-## Stage 15.4B convergence repair
+## Five-seed architecture confirmation
 
-The FT_BALANCED seed-7 run originally obtained its best
-checkpoint at the 40-epoch ceiling.
-
-The run was continued with the exact saved:
-
-- model state
-- optimizer state
-- scheduler state
-- DataLoader RNG byte state
-- class weighting
-- early-stopping policy
-
-Only the maximum epoch allowance changed.
-
-### Repaired seed-7 result
-
-- Best epoch: 50
-- Final epoch: 56
-- Validation threshold: 0.6949999999999997
-- Validation F1: 0.866284523189161
-- Validation recall: 0.7774036662925552
-- Validation PR-AUC: 0.9291636892316072
-- Convergence repaired: true
-
-## Repaired three-seed aggregate
-
-- Provisional leader: FT_BALANCED
-- Runner-up: FT_COMPACT
-- Mean F1: 0.8654792204569005
-- F1 standard deviation: 0.0016824237516274293
-- Worst-seed F1: 0.8635455023671751
-- Mean PR-AUC: 0.9276945190543403
-- Mean recall: 0.7743795984536725
-- Seed wins: 3 of 3
-- Mean F1 margin: 0.002433791142884112
+- Mean validation F1: 0.8657764121097257
+- F1 standard deviation: 0.0013195381641824143
+- Worst-seed validation F1: 0.8635455023671751
+- Mean validation recall: 0.77433595211373
+- Mean validation PR-AUC: 0.9261649995539398
+- Seed wins: 4 of 5
+- Mean F1 margin over runner-up: 0.002301870050082866
 - Best-checkpoint ceiling hits: 0
 
-All predefined first-phase lead conditions pass after convergence
-repair.
+## Frozen-threshold validation performance
 
-## Selection status
+- Threshold: 0.73
+- Mean accuracy: 0.9322320602616625
+- Mean precision: 0.9859272946228013
+- Mean recall: 0.7712121212121211
+- Mean F1: 0.8654450257424102
+- F1 standard deviation: 0.001142542079354036
+- Worst-seed F1: 0.8635455023671751
+- Mean F2: 0.8063296130739867
+- Mean FPR: 0.004339977158014959
+- Mean FNR: 0.22878787878787882
 
-The architecture remains unfrozen because two final independent
-confirmation seeds remain under the predefined protocol.
+## Pre-holdout lock
 
-## Scientific boundary
+The architecture, common operating threshold, and exact five
+checkpoint hashes were locked before any holdout evaluation.
 
-The duplicate-safe holdout remains untouched and has not been used
-for architecture selection, early stopping, threshold selection,
-probability generation, or performance evaluation.
+At package creation:
 
-## Next step
+- Holdout opened: false
+- Holdout evaluations: 0
+- Holdout status: UNTOUCHED
 
-Evaluate seeds 313 and 997 across all three candidate architectures,
-then aggregate five independent confirmation seeds.
+The next permitted action is one final duplicate-safe holdout
+evaluation using only the locked checkpoints and threshold.
 
 ## Packaging policy
 
-Runtime-generated `__pycache__` directories and `.pyc` files are
-excluded.
+Runtime-generated `__pycache__` directories, `.pyc` files, and
+`.DS_Store` files are excluded.

@@ -1,0 +1,370 @@
+{
+  "component_model_identities": {
+    "LIGHTGBM": {
+      "candidate_id": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "input_representation": "raw",
+      "model_sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2",
+      "original_single_model_threshold": 0.47,
+      "seed": 42,
+      "validation_f1": 0.8815233440252532,
+      "validation_pr_auc": 0.9466063189077636,
+      "validation_probability_sha256": "ce6c1224b75c56a0c8e18ed5cf54eabd33fd3bfcc20611b1b8d9d875ec02262e"
+    },
+    "RANDOM_FOREST": {
+      "candidate_id": "RANDOM_FOREST",
+      "configuration_id": "RF_09",
+      "input_representation": "raw",
+      "model_sha256": "a5a441a9ce5772e0433b15104c0040de30ac93e11627c6d4bc6a00d0ab8bce92",
+      "original_single_model_threshold": 0.565,
+      "seed": 42,
+      "validation_f1": 0.8793902564630756,
+      "validation_pr_auc": 0.9424412299327124,
+      "validation_probability_sha256": "51de137ab322569b68c951f3b658958c2087dfed8002440509bf0a364a5f146c"
+    },
+    "XGBOOST": {
+      "candidate_id": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "input_representation": "raw",
+      "model_sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f",
+      "original_single_model_threshold": 0.465,
+      "seed": 42,
+      "validation_f1": 0.8799631128643886,
+      "validation_pr_auc": 0.9453847557659393,
+      "validation_probability_sha256": "ff594513657e46caff3eb6af80730400000e23381e9f760b4014e222d2468c11"
+    }
+  },
+  "confirmation_evaluation_policy": {
+    "aggregate_statistics": [
+      "mean",
+      "standard_deviation",
+      "minimum",
+      "maximum"
+    ],
+    "confirmation_seed_count": 5,
+    "confirmation_threshold_evaluations": 2715,
+    "ensemble_family_count": 3,
+    "ensemble_seed_probability_vectors": 15,
+    "required_metrics_per_seed": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "f2",
+      "fpr",
+      "fnr",
+      "mcc",
+      "roc_auc",
+      "pr_auc",
+      "brier_score",
+      "log_loss",
+      "selected_threshold"
+    ],
+    "standard_deviation_ddof": 0,
+    "thresholds_per_vector": 181,
+    "validation_rows": 37835
+  },
+  "confirmation_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "confirmed_single_model_reference": {
+    "candidate_id": "LIGHTGBM",
+    "configuration_id": "LGBM_11",
+    "confirmation_mean_validation_f1": 0.881278056845761,
+    "confirmation_mean_validation_f2": 0.8346706110046596,
+    "confirmation_mean_validation_fpr": 0.0092473197509486,
+    "confirmation_mean_validation_pr_auc": 0.9465257773415968,
+    "confirmation_mean_validation_recall": 0.8062476618032175,
+    "confirmation_std_validation_f1": 0.0002934699776579,
+    "operating_threshold": 0.47,
+    "operational_model_count": 1,
+    "operational_seed": 42,
+    "strategy_id": "SINGLE_LIGHTGBM"
+  },
+  "ensemble_candidate_count": 3,
+  "ensemble_candidates": [
+    {
+      "ensemble_id": "ENS_LGBM_XGB_EQUAL",
+      "member_count": 2,
+      "members": [
+        "LIGHTGBM",
+        "XGBOOST"
+      ],
+      "probability_rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "weights": {
+        "LIGHTGBM": 0.5,
+        "XGBOOST": 0.5
+      }
+    },
+    {
+      "ensemble_id": "ENS_LGBM_RF_EQUAL",
+      "member_count": 2,
+      "members": [
+        "LIGHTGBM",
+        "RANDOM_FOREST"
+      ],
+      "probability_rule": "0.5 * P_LIGHTGBM + 0.5 * P_RANDOM_FOREST",
+      "weights": {
+        "LIGHTGBM": 0.5,
+        "RANDOM_FOREST": 0.5
+      }
+    },
+    {
+      "ensemble_id": "ENS_LGBM_XGB_RF_EQUAL",
+      "member_count": 3,
+      "members": [
+        "LIGHTGBM",
+        "XGBOOST",
+        "RANDOM_FOREST"
+      ],
+      "probability_rule": "(P_LIGHTGBM + P_XGBOOST + P_RANDOM_FOREST) / 3",
+      "weights": {
+        "LIGHTGBM": 0.3333333333333333,
+        "RANDOM_FOREST": 0.3333333333333333,
+        "XGBOOST": 0.3333333333333333
+      }
+    }
+  ],
+  "ensemble_family_ranking_policy": [
+    {
+      "criterion": "highest mean validation F1 across five confirmation seeds",
+      "direction": "descending",
+      "priority": 1
+    },
+    {
+      "criterion": "highest mean validation PR-AUC across five confirmation seeds",
+      "direction": "descending",
+      "priority": 2
+    },
+    {
+      "criterion": "highest mean validation F2 across five confirmation seeds",
+      "direction": "descending",
+      "priority": 3
+    },
+    {
+      "criterion": "highest mean validation recall across five confirmation seeds",
+      "direction": "descending",
+      "priority": 4
+    },
+    {
+      "criterion": "lowest mean validation FPR across five confirmation seeds",
+      "direction": "ascending",
+      "priority": 5
+    },
+    {
+      "criterion": "lowest validation F1 standard deviation across five confirmation seeds",
+      "direction": "ascending",
+      "priority": 6
+    },
+    {
+      "criterion": "fewest ensemble members",
+      "direction": "ascending",
+      "priority": 7
+    },
+    {
+      "criterion": "lexicographically smallest ensemble_id",
+      "direction": "ascending",
+      "priority": 8
+    }
+  ],
+  "final_classical_strategy_ranking_policy": [
+    {
+      "criterion": "highest mean validation F1 across five confirmation seeds",
+      "direction": "descending",
+      "priority": 1
+    },
+    {
+      "criterion": "highest mean validation PR-AUC across five confirmation seeds",
+      "direction": "descending",
+      "priority": 2
+    },
+    {
+      "criterion": "highest mean validation F2 across five confirmation seeds",
+      "direction": "descending",
+      "priority": 3
+    },
+    {
+      "criterion": "highest mean validation recall across five confirmation seeds",
+      "direction": "descending",
+      "priority": 4
+    },
+    {
+      "criterion": "lowest mean validation FPR across five confirmation seeds",
+      "direction": "ascending",
+      "priority": 5
+    },
+    {
+      "criterion": "lowest validation F1 standard deviation across five confirmation seeds",
+      "direction": "ascending",
+      "priority": 6
+    },
+    {
+      "criterion": "fewest operational models",
+      "direction": "ascending",
+      "priority": 7
+    },
+    {
+      "criterion": "lexicographically smallest strategy_id",
+      "direction": "ascending",
+      "priority": 8
+    }
+  ],
+  "final_strategy_candidate_rule": {
+    "candidates": [
+      "SINGLE_LIGHTGBM",
+      "BEST_STAGE16_5B_ENSEMBLE_FAMILY"
+    ],
+    "comparison_basis": "Five-seed confirmation aggregate metrics.",
+    "complexity_tie_break": "If all earlier ranking criteria tie, prefer the strategy with fewer operational models.",
+    "ensemble_metrics_source": "Stage 16.5B five-seed aggregate metrics computed under this precommitted protocol.",
+    "single_model_metrics_source": "Frozen Stage 16.4C LightGBM confirmation aggregate metrics."
+  },
+  "holdout_embargo": {
+    "next_possible_holdout_stage": "Stage 16.6 only after the final classical single-model-or-ensemble strategy, all constituent model identities, fixed weights, preprocessing representation, and exact operating threshold are frozen and Git-anchored.",
+    "prohibited_holdout_actions": [
+      "load holdout indices",
+      "load holdout features",
+      "load holdout labels",
+      "inspect holdout class distribution",
+      "generate holdout probabilities",
+      "generate holdout predictions",
+      "calculate holdout metrics",
+      "select ensemble based on holdout",
+      "change ensemble weights based on holdout",
+      "change operating threshold based on holdout"
+    ],
+    "stage16_5a_holdout_access_allowed": false,
+    "stage16_5b_holdout_access_allowed": false,
+    "stage16_5c_holdout_access_allowed": false
+  },
+  "locked_at_utc": "2026-08-07T08:04:13.853830+00:00",
+  "next_action_after_protocol_commit": "Stage 16.5B: calculate exactly the three precommitted ensemble families across the five confirmation seeds plus their three seed-42 operational validation vectors, execute exactly 3258 frozen threshold evaluations, and report results without holdout access.",
+  "operational_policy": {
+    "ensemble_if_selected": {
+      "component_model_source": "Already-frozen Stage 16.3B seed-42 component models only.",
+      "component_weights": "Exactly those specified by the winning Stage 16.5A ensemble family.",
+      "confirmation_threshold_mean_used": false,
+      "confirmation_threshold_median_used": false,
+      "operating_threshold_rule": "Select once on the seed-42 validation ensemble probability vector using the exact frozen 181-threshold grid and tie-break rule.",
+      "operational_seed": 42,
+      "retraining_allowed": false
+    },
+    "single_model_if_selected": {
+      "candidate_id": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "operating_threshold": 0.47,
+      "operational_seed": 42,
+      "strategy_id": "SINGLE_LIGHTGBM",
+      "threshold_already_frozen": true
+    }
+  },
+  "probability_combination_policy": {
+    "cross_seed_probability_mixing_allowed": false,
+    "mathematical_form": "P_ensemble = sum_i(weight_i * P_i), with fixed weights summing exactly to 1.",
+    "same_seed_component_rule": "For confirmation seed s, combine only component probability vectors generated with the same seed s.",
+    "type": "soft voting",
+    "weight_optimization_allowed": false,
+    "weights_precommitted": true
+  },
+  "prohibited_actions": [
+    "optimize ensemble weights",
+    "grid-search ensemble weights",
+    "random-search ensemble weights",
+    "Bayesian-optimize ensemble weights",
+    "create stacking meta-model",
+    "train ensemble meta-classifier",
+    "introduce hard-voting variant",
+    "introduce rank averaging variant",
+    "introduce calibration solely for ensemble improvement",
+    "add CatBoost after seeing ensemble results",
+    "add KNN after seeing ensemble results",
+    "remove an ensemble candidate after seeing partial results",
+    "replace a confirmation seed",
+    "silently drop a failed ensemble-seed evaluation",
+    "change the threshold grid",
+    "change the threshold tie-break policy",
+    "average confirmation thresholds into operational threshold",
+    "use confirmation mean threshold as operational threshold",
+    "retrain constituent models",
+    "load holdout indices",
+    "load holdout features",
+    "load holdout labels",
+    "generate holdout probabilities",
+    "generate holdout predictions",
+    "calculate holdout metrics"
+  ],
+  "repository_base_commit": "536dd2f0f54ece6966ed4b28f05581ee08c771f6",
+  "scientific_boundaries": {
+    "ensemble_family_winner_available": false,
+    "ensemble_result_available": false,
+    "ensemble_search_space_frozen": true,
+    "ensemble_weights_frozen": true,
+    "holdout_accessed": false,
+    "holdout_metrics_available": false,
+    "new_hyperparameter_tuning_allowed": false,
+    "new_model_training_allowed": false,
+    "overall_final_classical_strategy_frozen": false,
+    "single_model_winner_already_frozen": true
+  },
+  "scientific_purpose": "Determine whether a small precommitted equal-weight soft-voting ensemble family improves upon the confirmed LightGBM single-model family across the same five independent confirmation seeds, without additional model fitting and without accessing the duplicate-safe holdout.",
+  "seed42_operational_evaluation_policy": {
+    "ensemble_family_count": 3,
+    "ensemble_probability_vectors": 3,
+    "purpose": "Precompute the deployable seed-42 operating point for every precommitted ensemble family. These results do not alter multi-seed family ranking.",
+    "seed": 42,
+    "threshold_evaluations": 543,
+    "thresholds_per_vector": 181
+  },
+  "stage": "16.5A",
+  "status": "LOCKED_BEFORE_FIRST_ENSEMBLE_VALIDATION_PROBABILITY_OR_METRIC",
+  "threshold_policy": {
+    "count": 181,
+    "integer_construction": {
+      "divisor": 1000,
+      "start_integer": 50,
+      "step_integer": 5,
+      "stop_integer_inclusive": 950
+    },
+    "maximum": 0.95,
+    "minimum": 0.05,
+    "selection_rule": [
+      "highest validation F1",
+      "highest validation F2",
+      "highest validation recall",
+      "lowest validation FPR",
+      "lowest threshold"
+    ],
+    "step": 0.005
+  },
+  "total_stage16_5b_execution": {
+    "confirmation_probability_vectors": 15,
+    "ensemble_probability_vectors": 18,
+    "model_fits": 0,
+    "seed42_operational_probability_vectors": 3,
+    "threshold_evaluations": 3258
+  },
+  "upstream_artifacts": {
+    "stage16_3b_tuned_model_manifest": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_3b_tuned_model_manifest.json",
+      "sha256": "d1e6f385c0fb10b589940bb034f00c10b8f977db75be264585f43560ec745a87"
+    },
+    "stage16_4b_multiseed_validation_probabilities": {
+      "expected_probability_vector_count": 15,
+      "expected_rows_per_vector": 37835,
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_validation_probabilities.npz",
+      "sha256": "c7d0dae673cf4e9ce31b08d142583e1f741928934824f2b150d6cdd0f653d3e4"
+    },
+    "stage16_4b_repository_package_manifest": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_repository_package_manifest.json",
+      "sha256": "00bc829da68c33f8b68d7c3938ef228f24e4a599b296d8c348cf8a76c1fc99ee"
+    },
+    "stage16_4c_confirmation_selection_lock": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_4c_confirmation_selection_lock.json",
+      "sha256": "bbf9b3dbbab7298cd490d87d57b62a084d653f9aa416e556d47855224b4f6909"
+    }
+  }
+}

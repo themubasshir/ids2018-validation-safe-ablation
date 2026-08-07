@@ -1,0 +1,310 @@
+{
+  "attention_capture": {
+    "analysis_batch_size": 16,
+    "attention_heads_per_layer": 8,
+    "capture_mechanism": {
+      "architecture_modification": false,
+      "checkpoint_state_modification": false,
+      "expected_attention_shape": "[batch, 8 heads, 71 query tokens, 71 key tokens]",
+      "forward_hook": "Capture returned per-head attention weights without altering model parameters or logits.",
+      "forward_pre_hook": "Set need_weights=True and average_attn_weights=False for analysis only.",
+      "location": "self_attn module inside each of the three frozen TransformerEncoderLayer instances",
+      "module": "torch.nn.MultiheadAttention",
+      "parameter_modification": false
+    },
+    "checkpoint_count": 5,
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "cls_tokens": 1,
+    "compatibility_failure_policy": "If per-head weights cannot be captured using the precommitted hook mechanism, stop Stage 17.1. Do not silently substitute another attention extraction implementation.",
+    "encoder_layers": 3,
+    "evaluation_mode": true,
+    "expected_batches_per_checkpoint": 4,
+    "expected_total_forward_batches": 20,
+    "feature_tokens": 70,
+    "gradient_tracking": false,
+    "head_dimension": 8,
+    "input_representation": "Stage 15 StandardScaler-transformed numerical validation predictors in frozen feature order",
+    "model_family": "FT_BALANCED NumericFTTransformer",
+    "sequence_length": 71
+  },
+  "attention_diagnostics": {
+    "cross_seed_stability_metrics": [
+      "Spearman rank correlation",
+      "cosine similarity",
+      "top-10 Jaccard similarity"
+    ],
+    "direct_attention": [
+      "per-layer per-head CLS-to-feature vectors",
+      "head-mean CLS-to-feature vectors",
+      "layer-mean CLS-to-feature vectors",
+      "final-layer CLS-to-feature vectors"
+    ],
+    "entropy": {
+      "definition": "Normalized Shannon entropy of each feature-renormalized 70-dimensional CLS attention vector.",
+      "normalizer": "log(70)",
+      "range": "[0, 1]"
+    },
+    "group_aggregations": [
+      "TP",
+      "TN",
+      "FP",
+      "FN",
+      "true attack = TP + FN",
+      "true benign = TN + FP",
+      "predicted attack = TP + FP",
+      "predicted benign = TN + FN",
+      "all 64 representative cases"
+    ],
+    "rollout": [
+      "per-sample per-seed rollout vector",
+      "five-seed mean rollout vector"
+    ],
+    "top_k_values": [
+      5,
+      10,
+      20
+    ],
+    "within_layer_head_redundancy": [
+      "pairwise cosine similarity between head vectors",
+      "mean pairwise head similarity",
+      "minimum pairwise head similarity"
+    ]
+  },
+  "attention_rollout": {
+    "final_vector": "Use final rollout CLS row index 0, remove CLS column index 0, then renormalize the remaining 70 feature values to sum to 1.",
+    "head_aggregation": "Arithmetic mean of the eight attention matrices within each encoder layer.",
+    "layer_order": "encoder layer 1 -> layer 2 -> layer 3",
+    "output_vector_length": 70,
+    "residual_rule": "Add 71x71 identity matrix to the head-mean attention matrix.",
+    "rollout_initialization": "71x71 identity matrix",
+    "row_normalization": "Normalize each residual-augmented row to sum to 1.",
+    "update_rule": "rollout = normalized_layer_attention @ rollout"
+  },
+  "case_selection_policy": {
+    "attention_based_case_selection": false,
+    "cases_per_confusion_state": 16,
+    "confusion_states": [
+      "TP",
+      "TN",
+      "FP",
+      "FN"
+    ],
+    "coverage_rule": "Select 16 deterministic evenly spaced ranks across the complete sorted confusion-state group using floor(linspace(0, n_group-1, 16)).",
+    "ensemble_probability_source": "results/stage15_transformer_checkpoint/stage15_4c_leader_five_seed_validation_probabilities.npz",
+    "frozen_operating_threshold": 0.73,
+    "holdout_allowed": false,
+    "manual_case_selection": false,
+    "partition": "duplicate-safe validation only",
+    "replacement": false,
+    "same_cases_for_all_seeds": true,
+    "selection_order": "Within each TP/TN/FP/FN group, sort by ascending absolute threshold margin; break ties by ascending validation row position.",
+    "selection_score": "absolute difference between frozen five-checkpoint ensemble probability and threshold 0.73",
+    "total_cases": 64
+  },
+  "checkpoints": {
+    "101": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+      "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552"
+    },
+    "29": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+      "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c"
+    },
+    "313": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+      "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739"
+    },
+    "7": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+      "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31"
+    },
+    "997": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_997_best.pt",
+      "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66"
+    }
+  },
+  "cross_seed_policy": {
+    "checkpoint_exclusion_allowed": false,
+    "global_attention_consensus": "Arithmetic mean of per-seed group-level renormalized feature attention vectors.",
+    "seed_selection": "all five frozen checkpoints",
+    "seed_specific_feature_selection": false,
+    "seed_weighting": "equal",
+    "stability_reporting": {
+      "pairwise_seed_comparisons": 10,
+      "report_maximum": true,
+      "report_mean": true,
+      "report_minimum": true
+    }
+  },
+  "direct_cls_feature_attention": {
+    "cls_self_attention_excluded": true,
+    "feature_key_indices": "indices 1 through 70",
+    "feature_renormalization": "After removing CLS-key attention, divide the 70 feature weights by their feature-weight sum.",
+    "interpretation": "Attention allocation from the CLS query to feature tokens; not assumed to equal causal feature importance.",
+    "per_head_vector_length": 70,
+    "query_token": "CLS token index 0",
+    "stored_levels": [
+      "sample",
+      "seed",
+      "layer",
+      "head"
+    ]
+  },
+  "execution_budget": {
+    "architecture_searches": 0,
+    "cases_per_confusion_state": 16,
+    "checkpoint_selection_events": 0,
+    "checkpoints": 5,
+    "confusion_states": 4,
+    "encoder_layers": 3,
+    "expected_forward_batches": 20,
+    "expected_head_level_attention_matrices": 7680,
+    "expected_rollout_vectors": 320,
+    "head_level_attention_matrices": 7680,
+    "heads_per_layer": 8,
+    "holdout_inference": 0,
+    "holdout_metric_computation": 0,
+    "holdout_openings": 0,
+    "model_fits": 0,
+    "model_retraining": 0,
+    "representative_validation_cases": 64,
+    "rollout_vectors": 320,
+    "threshold_searches": 0
+  },
+  "interpretation_policy": {
+    "attention_is_causal_explanation": false,
+    "attention_is_feature_importance_ground_truth": false,
+    "attention_is_model_behavior_diagnostic": true,
+    "claims_allowed": [
+      "which feature tokens receive comparatively higher CLS attention",
+      "how attention allocation changes across layers, heads, seeds, and confusion states",
+      "whether attention rankings are stable across the five independently trained checkpoints",
+      "whether attention-derived rankings agree or disagree with previously frozen SHAP/IG rankings"
+    ],
+    "claims_forbidden": [
+      "attention weight proves causal influence",
+      "largest attention value proves the feature caused the prediction",
+      "attention agreement with SHAP/IG proves explanation correctness"
+    ]
+  },
+  "locked_at_utc": "2026-08-07T15:57:37.532689+00:00",
+  "next_permitted_action": "Git-anchor this Stage 17.0 protocol. Only after remote verification may Stage 17.1 select the 64 validation cases according to the frozen deterministic rule and extract attention from all five archived Transformer checkpoints.",
+  "repository_parent_commit": "5056d699efa96199cb8d332a49012fb6a98ce884",
+  "scientific_constraints": {
+    "architecture_modification_allowed": false,
+    "attention_based_case_selection_allowed": false,
+    "checkpoint_exclusion_after_attention_allowed": false,
+    "checkpoint_selection_allowed": false,
+    "classical_holdout_rerun_allowed": false,
+    "holdout_access_allowed": false,
+    "integrated_gradients_recomputation_allowed": false,
+    "manual_case_selection_allowed": false,
+    "model_retraining_allowed": false,
+    "model_training_allowed": false,
+    "shap_recomputation_allowed": false,
+    "threshold_search_allowed": false,
+    "transformer_holdout_rerun_allowed": false
+  },
+  "scientific_goal": "Characterize attention allocation, attention rollout, head diversity, confusion-state behavior, and cross-seed stability of the already-frozen FT_BALANCED Transformer without retraining or reopening the holdout.",
+  "stage": "17.0",
+  "status": "LOCKED_BEFORE_FIRST_TRANSFORMER_ATTENTION_EXTRACTION",
+  "transformer_identity": {
+    "architecture": {
+      "candidate_id": "FT_BALANCED",
+      "cls_token_count": 1,
+      "d_ff": 256,
+      "d_token": 64,
+      "dropout": 0.1,
+      "feature_token_count": 70,
+      "n_features": 70,
+      "n_heads": 8,
+      "n_layers": 3,
+      "positional_encoding": false,
+      "sequence_length": 71,
+      "trainable_parameters": 159169
+    },
+    "candidate_id": "FT_BALANCED",
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "frozen_architecture": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4c_frozen_architecture.json",
+      "sha256": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa"
+    },
+    "frozen_threshold": 0.73,
+    "model_source": {
+      "path": "results/stage15_transformer_checkpoint/ft_transformer_numeric.py",
+      "sha256": "8233a7b62e7045d7c920c15fd8ec974ed8b3db6f2f131dc4c64ba0ce0133dcfc"
+    }
+  },
+  "upstream_completion": {
+    "additional_classical_holdout_openings_allowed": false,
+    "classical_holdout_consumed": true,
+    "stage16_6c_final_lock": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_6c_final_classical_holdout_lock.json",
+      "sha256": "8eafe1bedb8c5fed5f0236aa8df5e4a8d4f0e1b3313d4b96dac47eca9fa25857"
+    }
+  },
+  "validation_inputs": {
+    "feature_configuration": {
+      "path": "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+      "sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872"
+    },
+    "frozen_validation_probabilities": {
+      "path": "results/stage15_transformer_checkpoint/stage15_4c_leader_five_seed_validation_probabilities.npz",
+      "sha256": "0b04a1a62f30691b39a086795acb3616aa92a1cde0faff601e80e17abdae2331"
+    },
+    "holdout_allowed": false,
+    "split_archive": {
+      "path": "results/stage15_transformer_checkpoint/stage15_1_duplicate_safe_split_indices.npz",
+      "sha256": "fd66772bc17e6e629f561bc6a2c5e188d1cf2f923c14830646f4af684400417e"
+    },
+    "standard_scaler": {
+      "path": "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+      "sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5"
+    }
+  },
+  "visualization_policy": {
+    "all_precommitted_core_figures_retained": true,
+    "figure_selection_after_results": false,
+    "planned_figures": [
+      "global five-seed rollout top-20 features",
+      "TP/TN/FP/FN rollout top-feature comparison",
+      "true-attack versus true-benign attention comparison",
+      "layer-by-head attention entropy heatmap",
+      "within-layer head-similarity heatmap",
+      "cross-seed rollout Spearman matrix",
+      "cross-seed rollout top-10 Jaccard matrix",
+      "layer-wise CLS-to-feature attention heatmap",
+      "attention-rollout versus SHAP versus IG agreement figure"
+    ]
+  },
+  "xai_agreement_policy": {
+    "agreement_used_for_model_selection": false,
+    "attention_representation": "five-seed consensus rollout feature ranking",
+    "comparison_status": "PRECOMMITTED_FOR_LATER_STAGE17_ANALYSIS",
+    "comparison_targets": [
+      "previously frozen global TreeSHAP feature ranking",
+      "previously frozen Integrated Gradients global ranking"
+    ],
+    "interpretation": "Agreement is descriptive cross-method evidence. Disagreement is retained and reported rather than optimized away.",
+    "permitted_agreement_metrics": [
+      "Spearman rank correlation across common features",
+      "cosine similarity of normalized importance vectors",
+      "top-10 Jaccard",
+      "top-20 Jaccard"
+    ],
+    "recompute_integrated_gradients": false,
+    "recompute_shap": false
+  }
+}

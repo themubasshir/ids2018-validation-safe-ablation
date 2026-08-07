@@ -1,0 +1,76 @@
+{
+  "completed_candidate_seed_pairs": [
+    {
+      "candidate_id": "LIGHTGBM",
+      "seed": 7
+    },
+    {
+      "candidate_id": "LIGHTGBM",
+      "seed": 29
+    },
+    {
+      "candidate_id": "LIGHTGBM",
+      "seed": 101
+    },
+    {
+      "candidate_id": "LIGHTGBM",
+      "seed": 313
+    },
+    {
+      "candidate_id": "LIGHTGBM",
+      "seed": 997
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "seed": 7
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "seed": 29
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "seed": 101
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "seed": 313
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "seed": 997
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "seed": 7
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "seed": 29
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "seed": 101
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "seed": 313
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "seed": 997
+    }
+  ],
+  "completed_fit_count": 15,
+  "expected_fit_count": 15,
+  "final_classical_winner_frozen": false,
+  "holdout_accessed": false,
+  "next_action": "Stage 16.4C: audit, freeze, checkpoint and Git-anchor the independent confirmation results before ensemble-selection work begins.",
+  "protocol_sha256": "17516e0f76be7380786acac94b1ce08f47bdcd8eb7b9cc94b16154d3ff8f1284",
+  "repository_head": "701672e3f8c4a0278b8905a15e3780bc064ec644",
+  "stage": "16.4B",
+  "status": "COMPLETE",
+  "threshold_evaluation_count": 2715,
+  "training_performed": true,
+  "validation_probabilities_generated": 15
+}

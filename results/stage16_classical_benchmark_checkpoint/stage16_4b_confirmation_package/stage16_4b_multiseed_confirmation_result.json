@@ -1,0 +1,63 @@
+{
+  "artifacts": {
+    "all_threshold_sweeps": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/stage16_4b_all_threshold_sweeps.csv",
+    "candidate_ranking": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/stage16_4b_candidate_ranking.csv",
+    "candidate_summary": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/stage16_4b_candidate_summary.csv",
+    "seed_metrics": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/stage16_4b_seed_metrics.csv",
+    "validation_probabilities": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/stage16_4b_validation_probabilities.npz"
+  },
+  "candidate_addition_performed": false,
+  "candidate_count": 3,
+  "candidate_removal_performed": false,
+  "candidates": [
+    "LIGHTGBM",
+    "XGBOOST",
+    "RANDOM_FOREST"
+  ],
+  "completed_at_utc": "2026-08-07T05:52:01.824899+00:00",
+  "completed_fit_count": 15,
+  "confirmation_leader": {
+    "candidate_id": "LIGHTGBM",
+    "mean_selected_threshold": 0.48999999999999994,
+    "mean_validation_f1": 0.881278056845761,
+    "mean_validation_pr_auc": 0.9465257773415969,
+    "std_validation_f1": 0.0002934699776579578
+  },
+  "confirmation_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "development_seed": 42,
+  "development_seed_used_for_confirmation": false,
+  "holdout_state": {
+    "features_loaded": false,
+    "indices_loaded": false,
+    "labels_loaded": false,
+    "metrics_generated": false,
+    "predictions_generated": false
+  },
+  "hyperparameter_tuning_performed": false,
+  "important_interpretation": "The Stage 16.4B confirmation leader is not yet declared the frozen final classical winner. That identity must be locked in Stage 16.4C before any later ensemble/final-selection step.",
+  "metric_definition": {
+    "brier_score": "sklearn.metrics.brier_score_loss",
+    "log_loss": "sklearn.metrics.log_loss",
+    "pr_auc": "sklearn.metrics.average_precision_score",
+    "roc_auc": "sklearn.metrics.roc_auc_score",
+    "threshold_rule": "prediction = probability >= threshold"
+  },
+  "new_fit_count_this_execution": 15,
+  "overall_execution_seconds": 980.6927327479998,
+  "planned_fit_count": 15,
+  "repository_head": "701672e3f8c4a0278b8905a15e3780bc064ec644",
+  "seed_replacement_performed": false,
+  "stage": "16.4B",
+  "stage16_4a_protocol_sha256": "17516e0f76be7380786acac94b1ce08f47bdcd8eb7b9cc94b16154d3ff8f1284",
+  "standard_deviation_ddof": 0,
+  "status": "INDEPENDENT_MULTI_SEED_CONFIRMATION_COMPLETE_AWAITING_STAGE16_4C_FREEZE",
+  "thresholds_per_fit": 181,
+  "total_threshold_evaluations": 2715,
+  "verified_reused_fit_count": 0
+}

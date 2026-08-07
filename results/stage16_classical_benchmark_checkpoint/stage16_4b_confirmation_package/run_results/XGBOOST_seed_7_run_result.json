@@ -1,0 +1,93 @@
+{
+  "artifacts": {
+    "threshold_sweep": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/runs/XGBOOST_seed_7/threshold_sweep.csv",
+    "threshold_sweep_sha256": "24c1f42d17cae333299604a7d51dcdd3e7fac1581c7752a8c847a0a3a3ae95bb",
+    "validation_probabilities": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/runs/XGBOOST_seed_7/validation_probabilities.npy",
+    "validation_probabilities_sha256": "b3d77d519fe855813eeaf9ada7516d36fe00bfcc4e02ced06e5dd67a8c4c1623"
+  },
+  "candidate_id": "XGBOOST",
+  "completed_at_utc": "2026-08-07T05:36:44.276155+00:00",
+  "configuration_id": "XGB_11",
+  "development_seed_excluded": true,
+  "effective_parameters": {
+    "colsample_bytree": 1.0,
+    "device": "cuda",
+    "eval_metric": "logloss",
+    "gamma": 0.0,
+    "learning_rate": 0.06,
+    "max_depth": 7,
+    "min_child_weight": 1,
+    "n_estimators": 400,
+    "n_jobs": -1,
+    "objective": "binary:logistic",
+    "random_state": 7,
+    "reg_alpha": 0.0,
+    "reg_lambda": 3.0,
+    "subsample": 0.9,
+    "tree_method": "hist"
+  },
+  "feature_count": 70,
+  "holdout_access": {
+    "features_loaded": false,
+    "indices_loaded": false,
+    "labels_loaded": false,
+    "metrics_generated": false,
+    "predictions_generated": false
+  },
+  "hyperparameter_tuning_performed": false,
+  "input_representation": "raw",
+  "parameter_change_from_stage16_3c": {
+    "new_value": 7,
+    "old_value": 42,
+    "parameter": "random_state"
+  },
+  "protocol_sha256": "17516e0f76be7380786acac94b1ce08f47bdcd8eb7b9cc94b16154d3ff8f1284",
+  "repository_head": "701672e3f8c4a0278b8905a15e3780bc064ec644",
+  "seed": 7,
+  "selected_metrics": {
+    "accuracy": 0.9374917404519625,
+    "balanced_accuracy": 0.8986147606725042,
+    "brier_score": 0.04965797801710935,
+    "candidate_id": "XGBOOST",
+    "configuration_id": "XGB_11",
+    "f1": 0.8797600284711983,
+    "f2": 0.8360228041356652,
+    "false_negative": 2040,
+    "false_positive": 325,
+    "fnr": 0.19079685746352412,
+    "fpr": 0.011973621191467413,
+    "log_loss": 0.1660410121703599,
+    "mcc": 0.8438068438293898,
+    "pr_auc": 0.9459511328131051,
+    "precision": 0.9637963684972708,
+    "predicted_attack": 8977,
+    "predicted_benign": 28858,
+    "prediction_seconds": 0.07353392999993957,
+    "recall": 0.8092031425364759,
+    "roc_auc": 0.9678104567461144,
+    "seed": 7,
+    "selected_threshold": 0.425,
+    "specificity": 0.9880263788085326,
+    "training_device": "GPU",
+    "training_seconds": 2.256835302000127,
+    "true_negative": 26818,
+    "true_positive": 8652
+  },
+  "stage": "16.4B",
+  "status": "COMPLETE",
+  "threshold_protocol": {
+    "count": 181,
+    "maximum": 0.95,
+    "minimum": 0.05,
+    "selection_order": [
+      "highest validation F1",
+      "highest validation F2",
+      "highest validation recall",
+      "lowest validation FPR",
+      "lowest threshold"
+    ],
+    "step": 0.005
+  },
+  "training_rows": 154686,
+  "validation_rows": 37835
+}

@@ -1,0 +1,88 @@
+{
+  "artifacts": {
+    "threshold_sweep": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/runs/RANDOM_FOREST_seed_7/threshold_sweep.csv",
+    "threshold_sweep_sha256": "c89eecc95d710dbe378dcbc0628d757bd3331a23b3768113cf8ba86fa58f1605",
+    "validation_probabilities": "/kaggle/working/stage16_classical_benchmark/stage16_4b_multiseed_confirmation/runs/RANDOM_FOREST_seed_7/validation_probabilities.npy",
+    "validation_probabilities_sha256": "cd86683c861f0414ae40e26fdc2e980f317681e2944691add9aa7829b26aa71f"
+  },
+  "candidate_id": "RANDOM_FOREST",
+  "completed_at_utc": "2026-08-07T05:39:54.447594+00:00",
+  "configuration_id": "RF_09",
+  "development_seed_excluded": true,
+  "effective_parameters": {
+    "bootstrap": true,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": 30,
+    "max_features": 0.5,
+    "min_samples_leaf": 2,
+    "min_samples_split": 5,
+    "n_estimators": 200,
+    "n_jobs": -1,
+    "random_state": 7
+  },
+  "feature_count": 70,
+  "holdout_access": {
+    "features_loaded": false,
+    "indices_loaded": false,
+    "labels_loaded": false,
+    "metrics_generated": false,
+    "predictions_generated": false
+  },
+  "hyperparameter_tuning_performed": false,
+  "input_representation": "raw",
+  "parameter_change_from_stage16_3c": {
+    "new_value": 7,
+    "old_value": 42,
+    "parameter": "random_state"
+  },
+  "protocol_sha256": "17516e0f76be7380786acac94b1ce08f47bdcd8eb7b9cc94b16154d3ff8f1284",
+  "repository_head": "701672e3f8c4a0278b8905a15e3780bc064ec644",
+  "seed": 7,
+  "selected_metrics": {
+    "accuracy": 0.9378617682040439,
+    "balanced_accuracy": 0.8973988190933833,
+    "brier_score": 0.050786942884819476,
+    "candidate_id": "RANDOM_FOREST",
+    "configuration_id": "RF_09",
+    "f1": 0.8797503963991612,
+    "f2": 0.8328975148662521,
+    "false_negative": 2092,
+    "false_positive": 259,
+    "fnr": 0.19566030677141788,
+    "fpr": 0.009542055041815569,
+    "log_loss": 0.17329743700047223,
+    "mcc": 0.8450908488997925,
+    "pr_auc": 0.9427708291499729,
+    "precision": 0.9707641946043571,
+    "predicted_attack": 8859,
+    "predicted_benign": 28976,
+    "prediction_seconds": 0.34404892100019424,
+    "recall": 0.8043396932285821,
+    "roc_auc": 0.9649827539057215,
+    "seed": 7,
+    "selected_threshold": 0.52,
+    "specificity": 0.9904579449581844,
+    "training_device": "CPU",
+    "training_seconds": 180.96715010800017,
+    "true_negative": 26884,
+    "true_positive": 8600
+  },
+  "stage": "16.4B",
+  "status": "COMPLETE",
+  "threshold_protocol": {
+    "count": 181,
+    "maximum": 0.95,
+    "minimum": 0.05,
+    "selection_order": [
+      "highest validation F1",
+      "highest validation F2",
+      "highest validation recall",
+      "lowest validation FPR",
+      "lowest threshold"
+    ],
+    "step": 0.005
+  },
+  "training_rows": 154686,
+  "validation_rows": 37835
+}

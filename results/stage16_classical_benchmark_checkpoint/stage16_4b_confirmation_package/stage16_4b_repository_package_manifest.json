@@ -1,0 +1,165 @@
+{
+  "artifacts": [
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_seed_metrics.csv",
+      "sha256": "ace32a11c3d1ab4f9775f9356147516386c68e401da652b40ba6e55223687455",
+      "size_bytes": 5837,
+      "source_relative_path": "stage16_4b_seed_metrics.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_all_threshold_sweeps.csv",
+      "sha256": "a998628f508576c1ec5d664b518de6e9579be82d7afd11f8382b38f2bb12c2e9",
+      "size_bytes": 676285,
+      "source_relative_path": "stage16_4b_all_threshold_sweeps.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_candidate_summary.csv",
+      "sha256": "ddbdc09331ccf19f053186476feba2a82a2e40faa4b5eeebfd9f4864a3b61d71",
+      "size_bytes": 4761,
+      "source_relative_path": "stage16_4b_candidate_summary.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_candidate_ranking.csv",
+      "sha256": "f7919f3918cf6032f3105a2a6031e76910123d90b7a41c3beb6876a2992c970e",
+      "size_bytes": 4785,
+      "source_relative_path": "stage16_4b_candidate_ranking.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_validation_probabilities.npz",
+      "sha256": "c7d0dae673cf4e9ce31b08d142583e1f741928934824f2b150d6cdd0f653d3e4",
+      "size_bytes": 2868885,
+      "source_relative_path": "stage16_4b_validation_probabilities.npz"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_multiseed_confirmation_result.json",
+      "sha256": "1dbdfce00bf3ef664582f208bfb3f5cf1bd769d51da57db549e347428514975e",
+      "size_bytes": 2697,
+      "source_relative_path": "stage16_4b_multiseed_confirmation_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_execution_state.json",
+      "sha256": "2431f888ab62a3274cb77ae0bc955066c6ebdb3e2364f70b90bd213c3ede4fc7",
+      "size_bytes": 1618,
+      "source_relative_path": "stage16_4b_execution_state.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/stage16_4b_artifact_manifest.json",
+      "sha256": "db49a78d91534add7cf63aa0d696d9df72978c5e8758c6791dfca28dad03ef76",
+      "size_bytes": 10316,
+      "source_relative_path": "stage16_4b_artifact_manifest.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/LIGHTGBM_seed_101_run_result.json",
+      "sha256": "de5286f88c7ff056e00f31f1590746b5a7aa10fa74786e4554a35ce6c7951bc2",
+      "size_bytes": 3010,
+      "source_relative_path": "runs/LIGHTGBM_seed_101/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/LIGHTGBM_seed_29_run_result.json",
+      "sha256": "bcd4956a1b009a671293f6576614b2576578d68f75a98a95b5210699b4f8ca9b",
+      "size_bytes": 3007,
+      "source_relative_path": "runs/LIGHTGBM_seed_29/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/LIGHTGBM_seed_313_run_result.json",
+      "sha256": "3f25d722f144d6672fa47311402d9e4fc3a57c7dfc83dcfa7492a2675c298d79",
+      "size_bytes": 3011,
+      "source_relative_path": "runs/LIGHTGBM_seed_313/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/LIGHTGBM_seed_7_run_result.json",
+      "sha256": "a47d1ef7f15557f848eba6a5c4ac7d20f72a391c25802e212321ef40244fdba0",
+      "size_bytes": 3000,
+      "source_relative_path": "runs/LIGHTGBM_seed_7/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/LIGHTGBM_seed_997_run_result.json",
+      "sha256": "c70bcd699cf53283016efdb980287abe744e98be75317f8cb59b8697e27ca1fa",
+      "size_bytes": 3013,
+      "source_relative_path": "runs/LIGHTGBM_seed_997/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/RANDOM_FOREST_seed_101_run_result.json",
+      "sha256": "13eac9e9266288c04bfd481859bf93e5c5c0bee0437cf43cb75e297145360853",
+      "size_bytes": 2878,
+      "source_relative_path": "runs/RANDOM_FOREST_seed_101/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/RANDOM_FOREST_seed_29_run_result.json",
+      "sha256": "cd84060c05b27d2f3e6998810f02fc53179151786874956a195126ab7f7b4c8f",
+      "size_bytes": 2868,
+      "source_relative_path": "runs/RANDOM_FOREST_seed_29/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/RANDOM_FOREST_seed_313_run_result.json",
+      "sha256": "837cc5054312f0fc89ae261b661793147b345e9fb118b73c0f3c0ee74119e0aa",
+      "size_bytes": 2880,
+      "source_relative_path": "runs/RANDOM_FOREST_seed_313/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/RANDOM_FOREST_seed_7_run_result.json",
+      "sha256": "82e188c27fadf1e11595a9c03a2ad66f3c24dc25020d4e5143b048e418f1077e",
+      "size_bytes": 2870,
+      "source_relative_path": "runs/RANDOM_FOREST_seed_7/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/RANDOM_FOREST_seed_997_run_result.json",
+      "sha256": "b49adac7a3bbc27c1ae8d814e058eb7bfb20485986b6088a4c7f8b9e251e257f",
+      "size_bytes": 2877,
+      "source_relative_path": "runs/RANDOM_FOREST_seed_997/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/XGBOOST_seed_101_run_result.json",
+      "sha256": "a32b6a93a493d5e88c5e443564124eb9c120807fc2778ff745a8fa3e6fcc9f90",
+      "size_bytes": 2983,
+      "source_relative_path": "runs/XGBOOST_seed_101/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/XGBOOST_seed_29_run_result.json",
+      "sha256": "7e4d17d4374f83eeac52856964119e345e40a4271be99b59d2a79011d69ef78b",
+      "size_bytes": 2983,
+      "source_relative_path": "runs/XGBOOST_seed_29/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/XGBOOST_seed_313_run_result.json",
+      "sha256": "07b2614fa1a6c041ed6700473b45a104da2cb46c1220184953b99437e55a4a06",
+      "size_bytes": 2986,
+      "source_relative_path": "runs/XGBOOST_seed_313/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/XGBOOST_seed_7_run_result.json",
+      "sha256": "de47ae86c9e4e88a5af9d9e4372b33443f330667cd6feee0be0092094f443a54",
+      "size_bytes": 2974,
+      "source_relative_path": "runs/XGBOOST_seed_7/run_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_4b_confirmation_package/run_results/XGBOOST_seed_997_run_result.json",
+      "sha256": "b4b1414f313875ef3aadd13a501fc70f9a8e7267d16a077cdd4406d20d4e7177",
+      "size_bytes": 2984,
+      "source_relative_path": "runs/XGBOOST_seed_997/run_result.json"
+    }
+  ],
+  "copied_artifact_count": 23,
+  "generated_at_utc": "2026-08-07T05:57:25.320982+00:00",
+  "holdout_accessed": false,
+  "package_policy": {
+    "all_15_run_result_records_preserved": true,
+    "candidate_ranking_preserved": true,
+    "candidate_summary_preserved": true,
+    "combined_seed_metrics_preserved": true,
+    "combined_threshold_sweeps_preserved": true,
+    "combined_validation_probabilities_preserved": true,
+    "per_run_probability_duplicates_preserved": false,
+    "per_run_threshold_sweep_duplicates_preserved": false,
+    "reason_for_nonredundant_packaging": "The combined probability archive and combined threshold-sweep table already preserve all 15 candidate-seed outputs. Individual run-result JSON records are retained for parameter/provenance audit without duplicating the same numerical probability and sweep payloads.",
+    "source_artifact_manifest_preserved": true,
+    "stage16_4b_execution_state_preserved": true,
+    "stage16_4b_result_preserved": true
+  },
+  "package_role": "Non-redundant repository evidence package for completed Stage 16.4B independent multi-seed confirmation.",
+  "repository_parent_commit": "701672e3f8c4a0278b8905a15e3780bc064ec644",
+  "source_artifact_manifest_entries_verified": 52,
+  "source_stage16_4b_artifact_manifest_sha256": "db49a78d91534add7cf63aa0d696d9df72978c5e8758c6791dfca28dad03ef76",
+  "stage": "16.4C",
+  "stage16_4a_protocol_sha256": "17516e0f76be7380786acac94b1ce08f47bdcd8eb7b9cc94b16154d3ff8f1284"
+}

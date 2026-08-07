@@ -1,0 +1,269 @@
+{
+  "aggregation_policy": {
+    "candidate_summary_statistics": [
+      "mean",
+      "standard_deviation",
+      "minimum",
+      "maximum"
+    ],
+    "primary_stability_metric": "validation F1 standard deviation",
+    "required_completed_seeds": 5,
+    "required_metrics_per_seed": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "f2",
+      "fpr",
+      "fnr",
+      "mcc",
+      "roc_auc",
+      "pr_auc",
+      "brier_score",
+      "log_loss",
+      "selected_threshold",
+      "training_seconds",
+      "prediction_seconds"
+    ],
+    "threshold_stability": "Report mean, standard deviation, minimum, and maximum of validation-selected thresholds across the five independent seeds."
+  },
+  "candidate_count": 3,
+  "candidate_selection_origin": "Stage 16.3C candidates whose tuned validation F1 was within 0.0025 of the tuned validation leader.",
+  "candidates": [
+    {
+      "candidate_id": "LIGHTGBM",
+      "confirmation_rank": 1,
+      "development_seed_value": 42,
+      "input_representation": "raw",
+      "seed_parameter": "random_state",
+      "stage16_3_validation": {
+        "f1": 0.8815233440252532,
+        "f1_gap_from_leader": 0.0,
+        "pr_auc": 0.9466063189077636,
+        "recall": 0.8096707818930041,
+        "threshold": 0.47
+      },
+      "winning_configuration_id": "LGBM_11",
+      "winning_parameters_seed42": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "gpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      }
+    },
+    {
+      "candidate_id": "XGBOOST",
+      "confirmation_rank": 2,
+      "development_seed_value": 42,
+      "input_representation": "raw",
+      "seed_parameter": "random_state",
+      "stage16_3_validation": {
+        "f1": 0.8799631128643886,
+        "f1_gap_from_leader": 0.001560231160864678,
+        "pr_auc": 0.9453847557659392,
+        "recall": 0.8032173587729143,
+        "threshold": 0.465
+      },
+      "winning_configuration_id": "XGB_11",
+      "winning_parameters_seed42": {
+        "colsample_bytree": 1.0,
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      }
+    },
+    {
+      "candidate_id": "RANDOM_FOREST",
+      "confirmation_rank": 3,
+      "development_seed_value": 42,
+      "input_representation": "raw",
+      "seed_parameter": "random_state",
+      "stage16_3_validation": {
+        "f1": 0.8793902564630756,
+        "f1_gap_from_leader": 0.0021330875621776713,
+        "pr_auc": 0.9424412299327124,
+        "recall": 0.7985409652076318,
+        "threshold": 0.565
+      },
+      "winning_configuration_id": "RF_09",
+      "winning_parameters_seed42": {
+        "bootstrap": true,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 30,
+        "max_features": 0.5,
+        "min_samples_leaf": 2,
+        "min_samples_split": 5,
+        "n_estimators": 200,
+        "n_jobs": -1,
+        "random_state": 42
+      }
+    }
+  ],
+  "confirmation_seed_count": 5,
+  "confirmation_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "data_policy": {
+    "feature_addition_allowed": false,
+    "feature_removal_allowed": false,
+    "feature_selection_allowed": false,
+    "fit_data": "Frozen duplicate-safe training split only",
+    "input_feature_count": 70,
+    "resampling_allowed": false,
+    "scaler_refitting_policy": "Use the already-defined Stage 16 preprocessing representation. Do not derive preprocessing statistics from validation or holdout.",
+    "selection_and_evaluation_data": "Frozen duplicate-safe validation split only",
+    "split_mutation_allowed": false
+  },
+  "development_seed": 42,
+  "development_seed_role": "Used for Stage 16 baseline development and tuning; explicitly excluded from independent confirmation.",
+  "final_candidate_ranking_policy": [
+    {
+      "criterion": "highest mean validation F1",
+      "direction": "descending",
+      "priority": 1
+    },
+    {
+      "criterion": "highest mean validation PR-AUC",
+      "direction": "descending",
+      "priority": 2
+    },
+    {
+      "criterion": "highest mean validation F2",
+      "direction": "descending",
+      "priority": 3
+    },
+    {
+      "criterion": "highest mean validation recall",
+      "direction": "descending",
+      "priority": 4
+    },
+    {
+      "criterion": "lowest mean validation FPR",
+      "direction": "ascending",
+      "priority": 5
+    },
+    {
+      "criterion": "lowest validation F1 standard deviation",
+      "direction": "ascending",
+      "priority": 6
+    },
+    {
+      "criterion": "lexicographically smallest candidate_id",
+      "direction": "ascending",
+      "priority": 7
+    }
+  ],
+  "holdout_embargo": {
+    "next_possible_holdout_stage": "Stage 16.6, only after all classical model/ensemble identity and threshold decisions are frozen.",
+    "prohibited_actions": [
+      "load holdout indices",
+      "load holdout features",
+      "load holdout labels",
+      "inspect holdout class distribution",
+      "generate holdout probabilities",
+      "generate holdout predictions",
+      "calculate holdout metrics",
+      "change candidate selection based on holdout",
+      "change hyperparameters based on holdout",
+      "change thresholds based on holdout"
+    ],
+    "stage16_4a_holdout_access_allowed": false,
+    "stage16_4b_holdout_access_allowed": false,
+    "stage16_4c_holdout_access_allowed": false
+  },
+  "locked_at_utc": "2026-08-07T05:23:27.001984+00:00",
+  "per_seed_confirmation_policy": {
+    "fit_count_per_candidate": 5,
+    "fit_rule": "Fit the exact Stage 16.3C winning configuration on the frozen duplicate-safe training split. The only model-parameter change permitted is replacing random_state=42 with the assigned independent confirmation seed.",
+    "no_candidate_addition": true,
+    "no_candidate_removal": true,
+    "no_early_candidate_elimination": true,
+    "no_failed_seed_silent_drop": true,
+    "no_hyperparameter_search": true,
+    "no_seed_replacement": true,
+    "threshold_rule": "For every candidate-seed validation probability vector, evaluate the exact frozen 181-threshold grid from 0.05 through 0.95 inclusive in increments of 0.005.",
+    "threshold_selection_rule": [
+      "highest validation F1",
+      "highest validation F2",
+      "highest validation recall",
+      "lowest validation FPR",
+      "lowest threshold"
+    ],
+    "validation_probability_rule": "Generate exactly one validation probability vector for every candidate-seed fit."
+  },
+  "planned_fit_count": 15,
+  "repository_base_commit": "c78f5a2f284fa5834b95ef9f517e051a9e0173c2",
+  "scientific_boundaries": {
+    "candidate_set_frozen": true,
+    "confirmation_is_not_new_tuning": true,
+    "ensemble_selection_started": false,
+    "final_classical_winner_frozen": false,
+    "holdout_accessed": false,
+    "holdout_metrics_available": false,
+    "hyperparameter_tuning_completed": true,
+    "new_hyperparameter_tuning_allowed": false,
+    "ranking_policy_frozen": true,
+    "seed_set_frozen": true,
+    "threshold_grid_frozen": true
+  },
+  "scientific_purpose": "Independently confirm the validation robustness of the three Stage 16.3C near-leading tuned classical candidates under five precommitted random seeds without accessing the duplicate-safe holdout.",
+  "stage": "16.4A",
+  "status": "LOCKED_BEFORE_FIRST_INDEPENDENT_MULTI_SEED_CONFIRMATION_FIT",
+  "threshold_integer_construction": {
+    "divisor": 1000,
+    "start_integer": 50,
+    "step_integer": 5,
+    "stop_integer_inclusive": 950
+  },
+  "threshold_protocol": {
+    "count": 181,
+    "maximum": 0.95,
+    "minimum": 0.05,
+    "selection_rule": [
+      "highest validation F1",
+      "highest validation F2",
+      "highest validation recall",
+      "lowest validation FPR",
+      "lowest threshold"
+    ],
+    "step": 0.005
+  },
+  "upstream_artifacts": {
+    "stage16_3a_tuning_protocol_lock": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_3a_tuning_protocol_lock.json",
+      "sha256": "91475641392a52755dd40875693db0ad8b32d8b917c530e4333134395ed19781"
+    },
+    "stage16_3c_tuned_selection_lock": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_3c_tuned_selection_lock.json",
+      "sha256": "3fac5fad727d92aa7cd049fc6df5472624644e1ba2ebe982ee5db59451e333e7"
+    }
+  }
+}

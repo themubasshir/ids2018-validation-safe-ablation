@@ -1,0 +1,86 @@
+{
+  "analysis_evidence": {
+    "analysis_result_sha256": "4987c269260ba463eccf0bc4e8f3f0dccebe5aa30cd52d8201feda62500b883f",
+    "figure_count": 8,
+    "repository_package_manifest": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/stage17_2_repository_package_manifest.json",
+      "sha256": "12d4efa083543d8c3e5813de3d8d2ba66f33c23da93858e7e44371c4efee5b64"
+    },
+    "source_manifest_sha256": "868378897f4a3758995cceb5655e1de1aaaae44ca88c06337c7e3a3355e5721f"
+  },
+  "class_attention_findings": {
+    "interpretation": "Attention allocation is largely shared across true classes, with somewhat greater rank reorganization between predicted attack and predicted benign states.",
+    "predicted_attack_vs_predicted_benign": {
+      "cosine": 0.984137273,
+      "spearman": 0.754282215,
+      "top10_jaccard": 0.666666667
+    },
+    "true_attack_vs_true_benign": {
+      "cosine": 0.988331099,
+      "l1_distance": 0.079362662,
+      "spearman": 0.86461377,
+      "top10_jaccard": 0.666666667
+    }
+  },
+  "depth_findings": {
+    "global_entropy": 0.740411766,
+    "interpretation": "Early-layer heads are comparatively diverse and specialized. Deeper layers become progressively more diffuse and strongly redundant across heads.",
+    "layer_head_redundancy": {
+      "1": {
+        "mean": 0.329222829,
+        "minimum": 0.006308236
+      },
+      "2": {
+        "mean": 0.670422108,
+        "minimum": 0.251859502
+      },
+      "3": {
+        "mean": 0.902316901,
+        "minimum": 0.750599255
+      }
+    },
+    "layer_mean_entropy": {
+      "1": 0.604121828,
+      "2": 0.728813433,
+      "3": 0.888300037
+    }
+  },
+  "frozen_at_utc": "2026-08-07T16:28:44.490622+00:00",
+  "global_attention_findings": {
+    "interpretation": "Broad rollout-attention distributions are highly similar across independently trained checkpoints, while exact feature-rank ordering shows only moderate stability.",
+    "mean_cross_seed_cosine": 0.970638085,
+    "mean_cross_seed_spearman": 0.448482198,
+    "mean_top10_jaccard": 0.384798535,
+    "minimum_cross_seed_cosine": 0.955024311,
+    "minimum_cross_seed_spearman": 0.263756452,
+    "minimum_top10_jaccard": 0.25,
+    "top3_features": [
+      "Fwd Seg Size Min",
+      "Init Fwd Win Byts",
+      "Dst Port"
+    ]
+  },
+  "next_permitted_action": "Git-anchor this Stage 17.2A freeze. Only after remote verification may the already-frozen TreeSHAP and Integrated Gradients artifacts be resolved for the precommitted cross-method agreement analysis.",
+  "repository_parent_commit": "2dba8e61cceab186ce32ac05c8bcb99095a3cf6a",
+  "scientific_boundary": {
+    "attention_is_causal_explanation": false,
+    "attention_is_model_behavior_diagnostic": true,
+    "checkpoint_selection_events": 0,
+    "classical_holdout_openings": 0,
+    "head_selection_events": 0,
+    "ig_attention_agreement_completed": false,
+    "integrated_gradients_recomputations": 0,
+    "new_attention_extraction": 0,
+    "new_transformer_inference": 0,
+    "shap_attention_agreement_completed": false,
+    "shap_recomputations": 0,
+    "threshold_searches": 0,
+    "transformer_holdout_openings": 0
+  },
+  "stage": "17.2A",
+  "status": "ATTENTION_SCIENTIFIC_RESULTS_FROZEN_BEFORE_SHAP_IG_CROSS_METHOD_ANALYSIS",
+  "upstream_extraction_freeze": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_1a_attention_extraction_freeze_lock.json",
+    "sha256": "91f2434a780f712dbc53f47e652cb2d0e365c4acd4f27f3aea3da103c4ec0638"
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "analysis_scope": {
+    "cases": 64,
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "feature_count": 70,
+    "holdout_accesses": 0,
+    "new_attention_extraction": 0,
+    "new_model_inference": 0,
+    "partition": "duplicate-safe validation representative cases"
+  },
+  "attention_arrays_sha256": "d5377a420777339c20a1963dd73993200758b5ad9e3f1c824494dc90514f5615",
+  "completed_at_utc": "2026-08-07T16:26:03.759084+00:00",
+  "entropy": {
+    "global_maximum": 0.9990816712379456,
+    "global_mean": 0.7404117657262648,
+    "global_minimum": 9.645968020777218e-06,
+    "layer_mean_entropy": {
+      "1": 0.6041218275113899,
+      "2": 0.728813432804148,
+      "3": 0.8883000368632565
+    }
+  },
+  "global_rollout": {
+    "cross_seed_stability": {
+      "mean_cosine": 0.9706380849108985,
+      "mean_spearman": 0.44848219753302426,
+      "mean_top10_jaccard": 0.3847985347985349,
+      "minimum_cosine": 0.9550243109536695,
+      "minimum_spearman": 0.2637564517540023,
+      "minimum_top10_jaccard": 0.25,
+      "pair_count": 10
+    },
+    "top20_features": [
+      {
+        "feature": "Fwd Seg Size Min",
+        "five_seed_consensus_rollout": 0.03372973210387297,
+        "rank": 1
+      },
+      {
+        "feature": "Init Fwd Win Byts",
+        "five_seed_consensus_rollout": 0.02885676627658831,
+        "rank": 2
+      },
+      {
+        "feature": "Dst Port",
+        "five_seed_consensus_rollout": 0.02380290190946343,
+        "rank": 3
+      },
+      {
+        "feature": "Fwd Pkts/s",
+        "five_seed_consensus_rollout": 0.018822922284208125,
+        "rank": 4
+      },
+      {
+        "feature": "ACK Flag Cnt",
+        "five_seed_consensus_rollout": 0.01879467834679463,
+        "rank": 5
+      },
+      {
+        "feature": "Bwd Pkt Len Std",
+        "five_seed_consensus_rollout": 0.018763916241196197,
+        "rank": 6
+      },
+      {
+        "feature": "Fwd Pkt Len Max",
+        "five_seed_consensus_rollout": 0.018360121098708656,
+        "rank": 7
+      },
+      {
+        "feature": "Fwd Pkt Len Mean",
+        "five_seed_consensus_rollout": 0.018200159413576188,
+        "rank": 8
+      },
+      {
+        "feature": "Down/Up Ratio",
+        "five_seed_consensus_rollout": 0.017555285676095645,
+        "rank": 9
+      },
+      {
+        "feature": "Fwd Pkt Len Std",
+        "five_seed_consensus_rollout": 0.01739170318196083,
+        "rank": 10
+      },
+      {
+        "feature": "Fwd Seg Size Avg",
+        "five_seed_consensus_rollout": 0.016988845542246306,
+        "rank": 11
+      },
+      {
+        "feature": "Init Bwd Win Byts",
+        "five_seed_consensus_rollout": 0.016879666099147518,
+        "rank": 12
+      },
+      {
+        "feature": "Bwd Pkt Len Min",
+        "five_seed_consensus_rollout": 0.015297435718977188,
+        "rank": 13
+      },
+      {
+        "feature": "Bwd Pkts/s",
+        "five_seed_consensus_rollout": 0.015229126831555338,
+        "rank": 14
+      },
+      {
+        "feature": "Bwd Pkt Len Mean",
+        "five_seed_consensus_rollout": 0.015203399227330263,
+        "rank": 15
+      },
+      {
+        "feature": "Flow Duration",
+        "five_seed_consensus_rollout": 0.015182618683475126,
+        "rank": 16
+      },
+      {
+        "feature": "ECE Flag Cnt",
+        "five_seed_consensus_rollout": 0.014894394768786531,
+        "rank": 17
+      },
+      {
+        "feature": "PSH Flag Cnt",
+        "five_seed_consensus_rollout": 0.014755865722113655,
+        "rank": 18
+      },
+      {
+        "feature": "Pkt Len Max",
+        "five_seed_consensus_rollout": 0.01466727645617018,
+        "rank": 19
+      },
+      {
+        "feature": "Flow Pkts/s",
+        "five_seed_consensus_rollout": 0.014594842255031347,
+        "rank": 20
+      }
+    ]
+  },
+  "group_attention": {
+    "groups": [
+      "TP",
+      "TN",
+      "FP",
+      "FN",
+      "TRUE_ATTACK",
+      "TRUE_BENIGN",
+      "PREDICTED_ATTACK",
+      "PREDICTED_BENIGN",
+      "ALL"
+    ],
+    "predicted_attack_vs_predicted_benign": {
+      "cosine": 0.9841372731230763,
+      "l1_distance": 0.10237995396696252,
+      "spearman": 0.7542822150293063,
+      "top10_jaccard": 0.6666666666666666
+    },
+    "true_attack_vs_true_benign": {
+      "cosine": 0.9883310988984171,
+      "l1_distance": 0.07936266249708325,
+      "spearman": 0.8646137695739655,
+      "top10_jaccard": 0.6666666666666666
+    }
+  },
+  "head_redundancy": {
+    "layer_summaries": [
+      {
+        "layer": 1,
+        "maximum_pairwise_cosine": 0.9192983349617879,
+        "mean_pairwise_cosine": 0.329222828779302,
+        "mean_pairwise_spearman": 0.07261107014759365,
+        "mean_top10_jaccard": 0.10472689075630252,
+        "minimum_pairwise_cosine": 0.006308235710081212
+      },
+      {
+        "layer": 2,
+        "maximum_pairwise_cosine": 0.9504397584952968,
+        "mean_pairwise_cosine": 0.6704221076926874,
+        "mean_pairwise_spearman": 0.19396128322731418,
+        "mean_top10_jaccard": 0.13395498550297313,
+        "minimum_pairwise_cosine": 0.2518595018043266
+      },
+      {
+        "layer": 3,
+        "maximum_pairwise_cosine": 0.9827669908374862,
+        "mean_pairwise_cosine": 0.9023169014775265,
+        "mean_pairwise_spearman": 0.241130009872902,
+        "mean_top10_jaccard": 0.1749549144894125,
+        "minimum_pairwise_cosine": 0.7505992554728277
+      }
+    ]
+  },
+  "next_permitted_action": "Audit and freeze Stage 17.2 results. Then resolve already-frozen SHAP and Integrated Gradients source artifacts for the precommitted cross-method agreement analysis.",
+  "repository_head": "2dba8e61cceab186ce32ac05c8bcb99095a3cf6a",
+  "scientific_boundary": {
+    "attention_is_behavior_diagnostic": true,
+    "attention_is_causal_explanation": false,
+    "checkpoint_selection_performed": false,
+    "classical_holdout_accessed": false,
+    "head_selection_performed": false,
+    "integrated_gradients_recomputed": false,
+    "model_training_performed": false,
+    "shap_ig_agreement_completed": false,
+    "shap_recomputed": false,
+    "threshold_search_performed": false,
+    "transformer_holdout_accessed": false
+  },
+  "stage": "17.2",
+  "stage17_1a_freeze_lock_sha256": "91f2434a780f712dbc53f47e652cb2d0e365c4acd4f27f3aea3da103c4ec0638",
+  "status": "FROZEN_ATTENTION_ANALYSIS_COMPLETE_AWAITING_AUDIT_AND_CROSS_METHOD_XAI_AGREEMENT"
+}

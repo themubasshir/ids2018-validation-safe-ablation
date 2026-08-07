@@ -1,0 +1,98 @@
+{
+  "comparison_domain": {
+    "legacy_features": 78,
+    "legacy_only_features_excluded": 8,
+    "shared_features": 70
+  },
+  "comparisons": {
+    "ATTENTION_VS_CNN_IG": {
+      "cosine_similarity": 0.779445852,
+      "spearman": 0.695608052,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.333333333,
+      "top20_intersection_count": 13,
+      "top20_jaccard": 0.481481481
+    },
+    "ATTENTION_VS_LIGHTGBM_TREESHAP": {
+      "cosine_similarity": 0.568061045,
+      "spearman": 0.398271352,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.333333333,
+      "top20_intersection_count": 10,
+      "top20_jaccard": 0.333333333
+    },
+    "ATTENTION_VS_MLP_IG": {
+      "cosine_similarity": 0.744964309,
+      "spearman": 0.715650424,
+      "top10_intersection_count": 6,
+      "top10_jaccard": 0.428571429,
+      "top20_intersection_count": 13,
+      "top20_jaccard": 0.481481481
+    },
+    "ATTENTION_VS_XGBOOST_TREESHAP": {
+      "cosine_similarity": 0.585132613,
+      "spearman": 0.456250547,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.333333333,
+      "top20_intersection_count": 12,
+      "top20_jaccard": 0.428571429
+    }
+  },
+  "copied_file_count": 6,
+  "critical_source_hashes": {
+    "agreement_table": "806a05f3b9f51e6490b339b2965cfbf4776a09d9f30f252d5e9ac93b615025f9",
+    "analysis_result": "3034cb9a9c8521bfa0ba51fed5cb39d2258fb9c3eec8485b4ff19a23fd38dcbb",
+    "artifact_manifest": "6f7e02465f107118f8cee5bc5f7a218f7a4484514931829d4095a7fbfb04e969",
+    "figure": "882506b70febde096e0d85e10e35abab70cf1d251ba9ed9802b31e343fffe332",
+    "shared70_vectors": "68a81b8aa1c27d238152d216e577791acef148bad0c7f5801786e7b9a6b2d217",
+    "topk_detail": "6e5dc78ef1f6273c0df9287c8ff9932654df2648c1762ce2f8d275b9ebde95b1"
+  },
+  "files": [
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/figures/stage17_3b_attention_shap_ig_shared70_heatmap.png",
+      "sha256": "882506b70febde096e0d85e10e35abab70cf1d251ba9ed9802b31e343fffe332",
+      "size_bytes": 231366,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement/figures/stage17_3b_attention_shap_ig_shared70_heatmap.png"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3b_artifact_manifest.json",
+      "sha256": "6f7e02465f107118f8cee5bc5f7a218f7a4484514931829d4095a7fbfb04e969",
+      "size_bytes": 1566,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement/stage17_3b_artifact_manifest.json"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3b_cross_method_agreement.csv",
+      "sha256": "806a05f3b9f51e6490b339b2965cfbf4776a09d9f30f252d5e9ac93b615025f9",
+      "size_bytes": 683,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement/stage17_3b_cross_method_agreement.csv"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3b_cross_method_agreement_result.json",
+      "sha256": "3034cb9a9c8521bfa0ba51fed5cb39d2258fb9c3eec8485b4ff19a23fd38dcbb",
+      "size_bytes": 4214,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement/stage17_3b_cross_method_agreement_result.json"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3b_shared70_method_vectors.csv",
+      "sha256": "68a81b8aa1c27d238152d216e577791acef148bad0c7f5801786e7b9a6b2d217",
+      "size_bytes": 9569,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement/stage17_3b_shared70_method_vectors.csv"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3b_topk_overlap_detail.csv",
+      "sha256": "6e5dc78ef1f6273c0df9287c8ff9932654df2648c1762ce2f8d275b9ebde95b1",
+      "size_bytes": 3445,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement/stage17_3b_topk_overlap_detail.csv"
+    }
+  ],
+  "generated_at_utc": "2026-08-07T17:04:47.335900+00:00",
+  "repository_parent_commit": "1f0842c1f3fa0483f76cae36c51297084b4cc1b1",
+  "source_file_count": 6,
+  "source_runtime_directory": "/kaggle/working/stage17_attention_explainability/stage17_3b_cross_method_agreement",
+  "stage": "17.3C",
+  "status": "STAGE17_3B_CROSS_METHOD_RESULTS_PACKAGED_BEFORE_FINAL_STAGE17_INTERPRETATION",
+  "upstream_protocol": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_3a_cross_method_source_protocol_lock.json",
+    "sha256": "4757573f312b8088ab71ca089b5cd8689655a32032b53dd5767b0ffa357e2a9c"
+  }
+}

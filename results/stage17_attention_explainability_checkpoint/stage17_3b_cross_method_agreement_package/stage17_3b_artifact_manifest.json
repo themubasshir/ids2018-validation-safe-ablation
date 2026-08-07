@@ -1,0 +1,44 @@
+{
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "relative_path": "figures/stage17_3b_attention_shap_ig_shared70_heatmap.png",
+      "sha256": "882506b70febde096e0d85e10e35abab70cf1d251ba9ed9802b31e343fffe332",
+      "size_bytes": 231366
+    },
+    {
+      "relative_path": "stage17_3b_cross_method_agreement.csv",
+      "sha256": "806a05f3b9f51e6490b339b2965cfbf4776a09d9f30f252d5e9ac93b615025f9",
+      "size_bytes": 683
+    },
+    {
+      "relative_path": "stage17_3b_cross_method_agreement_result.json",
+      "sha256": "3034cb9a9c8521bfa0ba51fed5cb39d2258fb9c3eec8485b4ff19a23fd38dcbb",
+      "size_bytes": 4214
+    },
+    {
+      "relative_path": "stage17_3b_shared70_method_vectors.csv",
+      "sha256": "68a81b8aa1c27d238152d216e577791acef148bad0c7f5801786e7b9a6b2d217",
+      "size_bytes": 9569
+    },
+    {
+      "relative_path": "stage17_3b_topk_overlap_detail.csv",
+      "sha256": "6e5dc78ef1f6273c0df9287c8ff9932654df2648c1762ce2f8d275b9ebde95b1",
+      "size_bytes": 3445
+    }
+  ],
+  "attention_extraction_events": 0,
+  "comparison_count": 4,
+  "figure_count": 1,
+  "generated_at_utc": "2026-08-07T17:01:43.164485+00:00",
+  "holdout_openings": 0,
+  "ig_recomputations": 0,
+  "metric_count_per_comparison": 4,
+  "repository_head": "1f0842c1f3fa0483f76cae36c51297084b4cc1b1",
+  "shap_recomputations": 0,
+  "shared_feature_count": 70,
+  "stage": "17.3B",
+  "stage17_3a_protocol_sha256": "4757573f312b8088ab71ca089b5cd8689655a32032b53dd5767b0ffa357e2a9c",
+  "status": "CROSS_METHOD_AGREEMENT_EVIDENCE_COMPLETE",
+  "transformer_inference_events": 0
+}

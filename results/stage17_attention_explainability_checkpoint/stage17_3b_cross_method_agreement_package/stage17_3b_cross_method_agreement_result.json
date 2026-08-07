@@ -1,0 +1,94 @@
+{
+  "comparisons": [
+    {
+      "comparison_id": "ATTENTION_VS_XGBOOST_TREESHAP",
+      "comparison_label": "XGBoost TreeSHAP",
+      "cosine_similarity": 0.5851326125585813,
+      "shared_feature_count": 70,
+      "spearman": 0.4562505467588137,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.3333333333333333,
+      "top20_intersection_count": 12,
+      "top20_jaccard": 0.42857142857142855
+    },
+    {
+      "comparison_id": "ATTENTION_VS_LIGHTGBM_TREESHAP",
+      "comparison_label": "LightGBM TreeSHAP",
+      "cosine_similarity": 0.5680610446124249,
+      "shared_feature_count": 70,
+      "spearman": 0.3982713522272269,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.3333333333333333,
+      "top20_intersection_count": 10,
+      "top20_jaccard": 0.3333333333333333
+    },
+    {
+      "comparison_id": "ATTENTION_VS_MLP_IG",
+      "comparison_label": "MLP Integrated Gradients",
+      "cosine_similarity": 0.7449643090331907,
+      "shared_feature_count": 70,
+      "spearman": 0.7156504242848394,
+      "top10_intersection_count": 6,
+      "top10_jaccard": 0.42857142857142855,
+      "top20_intersection_count": 13,
+      "top20_jaccard": 0.48148148148148145
+    },
+    {
+      "comparison_id": "ATTENTION_VS_CNN_IG",
+      "comparison_label": "CNN Integrated Gradients",
+      "cosine_similarity": 0.7794458515499862,
+      "shared_feature_count": 70,
+      "spearman": 0.6956080516560847,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.3333333333333333,
+      "top20_intersection_count": 13,
+      "top20_jaccard": 0.48148148148148145
+    }
+  ],
+  "completed_at_utc": "2026-08-07T17:01:43.161656+00:00",
+  "feature_domain": {
+    "alignment_rule": "Exact feature-name intersection using frozen Stage-17 feature order.",
+    "comparison_feature_count": 70,
+    "legacy_feature_count": 78,
+    "legacy_features_excluded": 8
+  },
+  "interpretation_boundary": {
+    "agreement_used_for_model_selection": false,
+    "all_four_locked_comparisons_reported": true,
+    "causal_faithfulness_test": false,
+    "comparison_type": "global cross-method feature-structure agreement",
+    "favorable_method_selected": false,
+    "required_caveat": "Cross-method differences may reflect both the explanation mechanisms and differences among the underlying fitted model families and earlier experimental representations.",
+    "same_case_attribution_comparison": false,
+    "same_model_comparison": false
+  },
+  "next_permitted_action": "Audit and freeze the complete Stage 17.3B cross-method agreement evidence before any publication interpretation or Stage 17 closure.",
+  "repository_head": "1f0842c1f3fa0483f76cae36c51297084b4cc1b1",
+  "scientific_boundary": {
+    "attention_extraction": false,
+    "checkpoint_selection": false,
+    "classical_holdout_accessed": false,
+    "feature_subset_search": false,
+    "integrated_gradients_recomputed": false,
+    "method_selection": false,
+    "shap_recomputed": false,
+    "top_k_changed_after_results": false,
+    "transformer_holdout_accessed": false,
+    "transformer_inference": false
+  },
+  "source_identities": {
+    "attention_sha256": "6f638f1d4cc9f7a538448e75b586fc554b7da2d45f4b56f9b15cc99a8f2e753b",
+    "integrated_gradients_sha256": "aece5f5a02f9ccd2c8b6b206593948c66db0a3c020c370a2706dd0eea3e6ee89",
+    "treeshap_sha256": "b699d7d74ad10defbf74f532e858e45a7974d6df3e8914d71d42f25488981b79"
+  },
+  "stage": "17.3B",
+  "stage17_3a_protocol_sha256": "4757573f312b8088ab71ca089b5cd8689655a32032b53dd5767b0ffa357e2a9c",
+  "status": "PRECOMMITTED_CROSS_METHOD_AGREEMENT_ANALYSIS_COMPLETE_AWAITING_AUDIT_AND_FREEZE",
+  "vector_construction": {
+    "attention": "Frozen five-seed consensus rollout renormalized over shared 70 features.",
+    "cnn_ig": "Frozen Stage-14 CNN mean absolute IG attribution subset and renormalized over shared 70 features.",
+    "lightgbm_treeshap": "Frozen normalized LightGBM TreeSHAP importance subset and renormalized over shared 70 features.",
+    "mlp_ig": "Frozen Stage-14 MLP mean absolute IG attribution subset and renormalized over shared 70 features.",
+    "xgboost_treeshap": "Frozen normalized XGBoost TreeSHAP importance subset and renormalized over shared 70 features."
+  }
+}

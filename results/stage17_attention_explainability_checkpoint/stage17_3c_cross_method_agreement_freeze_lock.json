@@ -1,0 +1,84 @@
+{
+  "comparison_domain": {
+    "legacy_feature_count": 78,
+    "legacy_only_features_excluded": 8,
+    "shared_feature_count": 70
+  },
+  "descriptive_pattern": {
+    "causal_equivalence_claim": false,
+    "explanation_interchangeability_claim": false,
+    "method_superiority_claim": false,
+    "same_case_attribution_claim": false,
+    "statement": "Transformer rollout attention exhibits stronger global feature-structure agreement with the two frozen neural Integrated Gradients profiles than with the two frozen TreeSHAP profiles, while top-k overlap remains partial across every comparison."
+  },
+  "evidence_identity": {
+    "agreement_table_sha256": "806a05f3b9f51e6490b339b2965cfbf4776a09d9f30f252d5e9ac93b615025f9",
+    "analysis_result_sha256": "3034cb9a9c8521bfa0ba51fed5cb39d2258fb9c3eec8485b4ff19a23fd38dcbb",
+    "figure_sha256": "882506b70febde096e0d85e10e35abab70cf1d251ba9ed9802b31e343fffe332",
+    "repository_package_manifest": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3c_repository_package_manifest.json",
+      "sha256": "5ee938dd223db5001607fc3d5548d0ee5895bf455e0200c80d47fb62f8715d78"
+    },
+    "shared70_vectors_sha256": "68a81b8aa1c27d238152d216e577791acef148bad0c7f5801786e7b9a6b2d217",
+    "source_manifest_sha256": "6f7e02465f107118f8cee5bc5f7a218f7a4484514931829d4095a7fbfb04e969",
+    "topk_detail_sha256": "6e5dc78ef1f6273c0df9287c8ff9932654df2648c1762ce2f8d275b9ebde95b1"
+  },
+  "frozen_at_utc": "2026-08-07T17:04:47.336928+00:00",
+  "frozen_results": {
+    "ATTENTION_VS_CNN_IG": {
+      "cosine_similarity": 0.779445852,
+      "spearman": 0.695608052,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.333333333,
+      "top20_intersection_count": 13,
+      "top20_jaccard": 0.481481481
+    },
+    "ATTENTION_VS_LIGHTGBM_TREESHAP": {
+      "cosine_similarity": 0.568061045,
+      "spearman": 0.398271352,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.333333333,
+      "top20_intersection_count": 10,
+      "top20_jaccard": 0.333333333
+    },
+    "ATTENTION_VS_MLP_IG": {
+      "cosine_similarity": 0.744964309,
+      "spearman": 0.715650424,
+      "top10_intersection_count": 6,
+      "top10_jaccard": 0.428571429,
+      "top20_intersection_count": 13,
+      "top20_jaccard": 0.481481481
+    },
+    "ATTENTION_VS_XGBOOST_TREESHAP": {
+      "cosine_similarity": 0.585132613,
+      "spearman": 0.456250547,
+      "top10_intersection_count": 5,
+      "top10_jaccard": 0.333333333,
+      "top20_intersection_count": 12,
+      "top20_jaccard": 0.428571429
+    }
+  },
+  "next_permitted_action": "Git-anchor this exact Stage 17.3C freeze. Only after remote verification may Stage 17 be scientifically closed and publication-level attention/XAI conclusions drafted.",
+  "repository_parent_commit": "1f0842c1f3fa0483f76cae36c51297084b4cc1b1",
+  "scientific_boundary": {
+    "attention_extraction": 0,
+    "checkpoint_selection_events": 0,
+    "classical_holdout_openings": 0,
+    "feature_subset_searches": 0,
+    "integrated_gradients_recomputations": 0,
+    "method_selection_events": 0,
+    "new_agreement_metrics": 0,
+    "new_comparison_targets": 0,
+    "posthoc_consensus_vectors": 0,
+    "shap_recomputations": 0,
+    "topk_changes": 0,
+    "transformer_holdout_openings": 0,
+    "transformer_inference": 0
+  },
+  "stage": "17.3C",
+  "status": "CROSS_METHOD_AGREEMENT_RESULTS_FROZEN_BEFORE_FINAL_STAGE17_PUBLICATION_INTERPRETATION",
+  "upstream_protocol": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_3a_cross_method_source_protocol_lock.json",
+    "sha256": "4757573f312b8088ab71ca089b5cd8689655a32032b53dd5767b0ffa357e2a9c"
+  }
+}

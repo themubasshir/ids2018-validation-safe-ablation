@@ -1,0 +1,192 @@
+{
+  "closed_at_utc": "2026-08-07T17:08:26.330316+00:00",
+  "closure_rule": {
+    "attention_experiment_reopening_allowed": false,
+    "next_research_phase": "Stage 18 representation-feasibility audits for temporal, vision, and graph Transformer extensions.",
+    "posthoc_result_optimization_allowed": false,
+    "stage17_experiments_complete": true
+  },
+  "frozen_findings": {
+    "attention_methodology": {
+      "attention_layers": 3,
+      "checkpoint_seeds": [
+        7,
+        29,
+        101,
+        313,
+        997
+      ],
+      "confusion_state_cases": {
+        "FN": 16,
+        "FP": 16,
+        "TN": 16,
+        "TP": 16
+      },
+      "feature_tokens": 70,
+      "head_level_attention_matrices": 7680,
+      "heads_per_layer": 8,
+      "interpretation": "Attention is treated as a Transformer model-behavior diagnostic, not as causal feature attribution.",
+      "model": "Numeric FT-Transformer / FT_BALANCED",
+      "representative_validation_cases": 64,
+      "rollout_vectors": 320
+    },
+    "class_and_prediction_attention": {
+      "interpretation": "Attention structure is largely shared between classes and prediction states, although feature-rank emphasis changes more strongly across predicted states.",
+      "predicted_attack_vs_predicted_benign": {
+        "cosine": 0.984137273,
+        "spearman": 0.754282215,
+        "top10_jaccard": 0.666666667
+      },
+      "true_attack_vs_true_benign": {
+        "cosine": 0.988331099,
+        "l1_distance": 0.079362662,
+        "spearman": 0.86461377,
+        "top10_jaccard": 0.666666667
+      }
+    },
+    "cross_method_agreement": {
+      "attention_vs_cnn_ig": {
+        "cosine": 0.779445852,
+        "spearman": 0.695608052,
+        "top10_jaccard": 0.333333333,
+        "top10_shared": 5,
+        "top20_jaccard": 0.481481481,
+        "top20_shared": 13
+      },
+      "attention_vs_lightgbm_treeshap": {
+        "cosine": 0.568061045,
+        "spearman": 0.398271352,
+        "top10_jaccard": 0.333333333,
+        "top10_shared": 5,
+        "top20_jaccard": 0.333333333,
+        "top20_shared": 10
+      },
+      "attention_vs_mlp_ig": {
+        "cosine": 0.744964309,
+        "spearman": 0.715650424,
+        "top10_jaccard": 0.428571429,
+        "top10_shared": 6,
+        "top20_jaccard": 0.481481481,
+        "top20_shared": 13
+      },
+      "attention_vs_xgboost_treeshap": {
+        "cosine": 0.585132613,
+        "spearman": 0.456250547,
+        "top10_jaccard": 0.333333333,
+        "top10_shared": 5,
+        "top20_jaccard": 0.428571429,
+        "top20_shared": 12
+      },
+      "feature_domain": 70,
+      "interpretation": "Transformer rollout attention shows stronger whole-vector agreement with the frozen neural Integrated Gradients profiles than with the frozen TreeSHAP profiles. Top-k overlap remains partial for every comparison, so the explanation mechanisms share structure but are not interchangeable."
+    },
+    "cross_seed_stability": {
+      "interpretation": "Independent checkpoints exhibit highly similar broad rollout distributions but only moderate stability in exact feature ordering and top-10 membership.",
+      "mean_cosine": 0.970638085,
+      "mean_spearman": 0.448482198,
+      "mean_top10_jaccard": 0.384798535,
+      "minimum_cosine": 0.955024311,
+      "minimum_spearman": 0.263756452,
+      "minimum_top10_jaccard": 0.25,
+      "pairwise_seed_comparisons": 10
+    },
+    "depth_behavior": {
+      "interpretation": "Early-layer heads are comparatively diverse and specialized, whereas deeper attention becomes progressively more diffuse and redundant across heads.",
+      "mean_head_cosine_similarity": {
+        "layer_1": 0.329222829,
+        "layer_2": 0.670422108,
+        "layer_3": 0.902316901
+      },
+      "normalized_entropy": {
+        "layer_1": 0.604121828,
+        "layer_2": 0.728813433,
+        "layer_3": 0.888300037
+      }
+    },
+    "global_rollout_top_features": [
+      {
+        "feature": "Fwd Seg Size Min",
+        "importance": 0.033729732,
+        "rank": 1
+      },
+      {
+        "feature": "Init Fwd Win Byts",
+        "importance": 0.028856766,
+        "rank": 2
+      },
+      {
+        "feature": "Dst Port",
+        "importance": 0.023802902,
+        "rank": 3
+      }
+    ]
+  },
+  "limitations": [
+    "Attention analysis uses a deterministic panel of 64 duplicate-safe validation cases rather than the entire validation partition.",
+    "Attention rankings vary across independently trained checkpoints even though broad distributions are highly similar.",
+    "Attention weights indicate internal routing behavior and are not inherently causal feature attributions.",
+    "Cross-method comparisons operate on 70 common feature names because the earlier SHAP/IG experiment used a 78-feature representation.",
+    "TreeSHAP, Integrated Gradients, and attention arise from different fitted model families and explanation mechanisms.",
+    "The cross-method comparison is global rather than same-case attribution agreement.",
+    "Integrated Gradients itself previously demonstrated reference sensitivity, so agreement must remain descriptive rather than a correctness criterion."
+  ],
+  "permitted_publication_claims": [
+    "The frozen FT-Transformer exhibits reproducible broad attention structure across five independently trained checkpoints.",
+    "Exact attention-feature ordering is less stable than the overall distribution, as indicated by high cosine similarity but moderate Spearman and top-k overlap.",
+    "Fwd Seg Size Min, Init Fwd Win Byts, and Dst Port form the three highest-ranked features in the five-seed global rollout profile.",
+    "Attention becomes progressively more diffuse and inter-head redundant in deeper Transformer layers.",
+    "True attack and true benign cases share broadly similar global attention structure.",
+    "Global Transformer attention has stronger agreement with the frozen MLP/CNN Integrated Gradients profiles than with the frozen XGBoost/LightGBM TreeSHAP profiles.",
+    "Cross-method top-k agreement remains partial, demonstrating explanation-method-specific feature prioritization."
+  ],
+  "prohibited_claims": [
+    "Attention weights are causal explanations of the Transformer prediction.",
+    "Attention, SHAP, and Integrated Gradients are interchangeable explanation methods.",
+    "Higher cross-method agreement proves explanation correctness or causal faithfulness.",
+    "Integrated Gradients is universally superior to TreeSHAP.",
+    "The Stage 17 cross-method comparison is a same-case or same-model attribution experiment.",
+    "Stage 17 attention results justify changing model selection, checkpoints, thresholds, or holdout conclusions."
+  ],
+  "repository_parent_commit": "50327e10a97083e79c934b1874fd06360eeb15d5",
+  "scientific_boundary": {
+    "checkpoint_selection_events": 0,
+    "classical_holdout_openings": 0,
+    "head_selection_events": 0,
+    "integrated_gradients_recomputations": 0,
+    "method_selection_events": 0,
+    "model_fits": 0,
+    "new_attention_extraction": 0,
+    "new_attention_rankings": 0,
+    "new_comparisons": 0,
+    "new_metrics_calculated": 0,
+    "new_transformer_inference": 0,
+    "shap_recomputations": 0,
+    "threshold_searches": 0,
+    "transformer_holdout_openings": 0
+  },
+  "scope": "Transformer attention-behavior analysis and descriptive cross-method XAI agreement.",
+  "stage": "17-FINAL",
+  "status": "ATTENTION_EXPLAINABILITY_SCIENTIFICALLY_CLOSED",
+  "upstream_frozen_records": {
+    "stage17_0_protocol": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_0_attention_protocol_lock.json",
+      "sha256": "872eb003dfb4728abb9898288169ce9bccb448aa5902034640ced8b0b027e3e8"
+    },
+    "stage17_1a_extraction": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_1a_attention_extraction_freeze_lock.json",
+      "sha256": "91f2434a780f712dbc53f47e652cb2d0e365c4acd4f27f3aea3da103c4ec0638"
+    },
+    "stage17_2a_analysis": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_2a_attention_analysis_freeze_lock.json",
+      "sha256": "4265b4732e5d385de87cd8510e7512c65a4fa959dcff327e9cf528652a62485a"
+    },
+    "stage17_3a_cross_method_protocol": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_3a_cross_method_source_protocol_lock.json",
+      "sha256": "4757573f312b8088ab71ca089b5cd8689655a32032b53dd5767b0ffa357e2a9c"
+    },
+    "stage17_3c_cross_method_results": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_3c_cross_method_agreement_freeze_lock.json",
+      "sha256": "d469e35fed4ddc13e9985395a96535612a5f93072834599d970ecaeae98b4745"
+    }
+  }
+}

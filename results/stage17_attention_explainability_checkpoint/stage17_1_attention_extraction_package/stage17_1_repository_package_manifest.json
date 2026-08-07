@@ -1,0 +1,92 @@
+{
+  "copied_file_count": 9,
+  "critical_source_hashes": {
+    "artifact_manifest_sha256": "5540e38d1db0a8bf176d150a080e4d31785e5050f01ee2b2e89cbe7970171b5e",
+    "attention_arrays_sha256": "d5377a420777339c20a1963dd73993200758b5ad9e3f1c824494dc90514f5615",
+    "extraction_result_sha256": "6d47f9bab0c7ace994607da20e373249f32f93c2cc445bbfaf30e0a1f799efa3",
+    "inference_verification_sha256": "2a255220a892ef4a8a5ba60dca6b14573650def8e17d898367000fa23484b88a",
+    "selected_cases_sha256": "40406dc216d1e44d7b9bc9b6dc5d16c6d98cccd76406f9413d4a363eddbcc694",
+    "selected_inputs_sha256": "b897d91e73104cc86a5098626601aad9dd76bd682c3fb46c0b6111753cd5e470"
+  },
+  "execution_identity": {
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "head_level_attention_matrices": 7680,
+    "holdout_openings": 0,
+    "model_fits": 0,
+    "representative_cases": 64,
+    "rollout_vectors": 320,
+    "successful_cpu_forward_batches": 20
+  },
+  "files": [
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_artifact_manifest.json",
+      "sha256": "5540e38d1db0a8bf176d150a080e4d31785e5050f01ee2b2e89cbe7970171b5e",
+      "size_bytes": 2133,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_artifact_manifest.json"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_attention_arrays.npz",
+      "sha256": "d5377a420777339c20a1963dd73993200758b5ad9e3f1c824494dc90514f5615",
+      "size_bytes": 2088727,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_attention_arrays.npz"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_attention_extraction_result.json",
+      "sha256": "6d47f9bab0c7ace994607da20e373249f32f93c2cc445bbfaf30e0a1f799efa3",
+      "size_bytes": 3766,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_attention_extraction_result.json"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_checkpoint_extraction_summary.csv",
+      "sha256": "95b6ea6b8a8cffc5cd5fa812515972a769a03d486695823097922cce76d59f61",
+      "size_bytes": 1557,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_checkpoint_extraction_summary.csv"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_execution_state.json",
+      "sha256": "e71179f28350b5e5b0af09d2e39bb343e3b6005756fac11dccb8494c1dd75ae4",
+      "size_bytes": 1342,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_execution_state.json"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_feature_order.json",
+      "sha256": "bf429d3cda5b70c16e8c880c5e25f02b6f13979f2a53a96b08cbd33379c1c53f",
+      "size_bytes": 1609,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_feature_order.json"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_inference_verification.csv",
+      "sha256": "2a255220a892ef4a8a5ba60dca6b14573650def8e17d898367000fa23484b88a",
+      "size_bytes": 882,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_inference_verification.csv"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_selected_cases.csv",
+      "sha256": "40406dc216d1e44d7b9bc9b6dc5d16c6d98cccd76406f9413d4a363eddbcc694",
+      "size_bytes": 5392,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_selected_cases.csv"
+    },
+    {
+      "repository_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_selected_validation_inputs.npz",
+      "sha256": "b897d91e73104cc86a5098626601aad9dd76bd682c3fb46c0b6111753cd5e470",
+      "size_bytes": 15114,
+      "source_path": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction/stage17_1_selected_validation_inputs.npz"
+    }
+  ],
+  "generated_at_utc": "2026-08-07T16:18:27.183587+00:00",
+  "protocol": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_0_attention_protocol_lock.json",
+    "sha256": "872eb003dfb4728abb9898288169ce9bccb448aa5902034640ced8b0b027e3e8"
+  },
+  "repository_parent_commit": "b2d31bcba581994e2488d99cb01f8dc727d672c8",
+  "source_file_count": 9,
+  "source_runtime_directory": "/kaggle/working/stage17_attention_explainability/stage17_1_attention_extraction",
+  "stage": "17.1A",
+  "status": "STAGE17_1_ATTENTION_EXTRACTION_EVIDENCE_PACKAGED_BEFORE_ANALYSIS"
+}

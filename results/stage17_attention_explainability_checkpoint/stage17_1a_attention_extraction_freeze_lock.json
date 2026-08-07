@@ -1,0 +1,94 @@
+{
+  "cross_device_verification": {
+    "all_five_checkpoints_passed": true,
+    "authoritative_prediction_source": "archived Stage 15 validation probabilities",
+    "inference_verification_sha256": "2a255220a892ef4a8a5ba60dca6b14573650def8e17d898367000fa23484b88a",
+    "maximum_allowed_seed_absolute_delta": 0.0005,
+    "maximum_allowed_seed_mean_delta": 0.0001,
+    "observed_global_max_absolute_delta": 0.000335693359375,
+    "verification_is_selection_criterion": false
+  },
+  "deterministic_case_set": {
+    "FN": 16,
+    "FP": 16,
+    "TN": 16,
+    "TP": 16,
+    "attention_used_for_case_selection": false,
+    "case_reselection_after_failure": false,
+    "selected_cases_sha256": "40406dc216d1e44d7b9bc9b6dc5d16c6d98cccd76406f9413d4a363eddbcc694",
+    "selected_inputs_sha256": "b897d91e73104cc86a5098626601aad9dd76bd682c3fb46c0b6111753cd5e470",
+    "total_cases": 64
+  },
+  "extraction_identity": {
+    "repository_package_manifest": {
+      "path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_repository_package_manifest.json",
+      "sha256": "1d791368ba132c59f6070317343d09f94a8036784dc7294cb5ff64a9e67564e2"
+    },
+    "runtime_manifest_sha256": "5540e38d1db0a8bf176d150a080e4d31785e5050f01ee2b2e89cbe7970171b5e",
+    "runtime_result_sha256": "6d47f9bab0c7ace994607da20e373249f32f93c2cc445bbfaf30e0a1f799efa3"
+  },
+  "frozen_at_utc": "2026-08-07T16:18:27.184584+00:00",
+  "frozen_attention_evidence": {
+    "attention_arrays_sha256": "d5377a420777339c20a1963dd73993200758b5ad9e3f1c824494dc90514f5615",
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "head_level_attention_matrices": 7680,
+    "rollout_vectors": 320,
+    "shape_attention_rollout": [
+      5,
+      64,
+      70
+    ],
+    "shape_direct_cls_feature_attention": [
+      5,
+      64,
+      3,
+      8,
+      70
+    ],
+    "shape_normalized_attention_entropy": [
+      5,
+      64,
+      3,
+      8
+    ],
+    "successful_cpu_forward_batches": 20
+  },
+  "frozen_before_analysis": true,
+  "next_permitted_action": "Git-anchor this Stage 17.1A extraction freeze. Only after remote verification may Stage 17.2 perform the precommitted attention analysis.",
+  "protocol_identity": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_0_attention_protocol_lock.json",
+    "sha256": "872eb003dfb4728abb9898288169ce9bccb448aa5902034640ced8b0b027e3e8"
+  },
+  "recovery_transparency": {
+    "checkpoint_excluded": false,
+    "original_gpu_failure": "cudaErrorNoKernelImageForDevice",
+    "scientific_protocol_changed": false,
+    "seed7_in_memory_attention_reused": true,
+    "seed7_rerun_after_cpu_tolerance_failure": false
+  },
+  "repository_parent_commit": "b2d31bcba581994e2488d99cb01f8dc727d672c8",
+  "scientific_boundary": {
+    "attention_feature_ranking_performed": false,
+    "attention_head_selection_performed": false,
+    "attention_is_causal_explanation": false,
+    "attention_is_model_behavior_diagnostic": true,
+    "checkpoint_selection_performed": false,
+    "classical_holdout_accessed": false,
+    "confusion_state_attention_analysis_performed": false,
+    "cross_seed_stability_analysis_performed": false,
+    "ig_attention_agreement_computed": false,
+    "model_retraining_performed": false,
+    "model_training_performed": false,
+    "shap_attention_agreement_computed": false,
+    "threshold_search_performed": false,
+    "transformer_holdout_accessed": false
+  },
+  "stage": "17.1A",
+  "status": "ATTENTION_EXTRACTION_FROZEN_BEFORE_FIRST_SCIENTIFIC_ATTENTION_ANALYSIS"
+}

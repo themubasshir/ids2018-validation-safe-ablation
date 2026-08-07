@@ -1,0 +1,119 @@
+{
+  "attention_extraction": {
+    "architecture": "FT_BALANCED",
+    "checkpoint_count": 5,
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "direct_attention_max": 0.9999974966049194,
+    "direct_attention_min": 2.74713558277601e-15,
+    "direct_attention_shape": [
+      5,
+      64,
+      3,
+      8,
+      70
+    ],
+    "encoder_layers": 3,
+    "entropy_shape": [
+      5,
+      64,
+      3,
+      8
+    ],
+    "execution_device": "CPU",
+    "feature_tokens": 70,
+    "head_level_attention_matrices": 7680,
+    "heads_per_layer": 8,
+    "normalized_entropy_max": 0.9990816712379456,
+    "normalized_entropy_min": 9.645968020777218e-06,
+    "rollout_max": 0.12185531854629517,
+    "rollout_min": 0.006258956156671047,
+    "rollout_shape": [
+      5,
+      64,
+      70
+    ],
+    "rollout_vectors": 320,
+    "selected_cases": 64,
+    "sequence_length": 71,
+    "successful_forward_batches": 20
+  },
+  "case_selection": {
+    "attention_used_for_selection": false,
+    "cases_per_state": {
+      "FN": 16,
+      "FP": 16,
+      "TN": 16,
+      "TP": 16
+    },
+    "selection_reexecuted_after_failure": false,
+    "total_cases": 64
+  },
+  "completed_at_utc": "2026-08-07T16:13:33.334067+00:00",
+  "cross_device_verification_policy": {
+    "all_five_seeds_passed": true,
+    "authoritative_scientific_probabilities": "archived Stage 15 probabilities",
+    "global_observed_max_absolute_delta": 0.000335693359375,
+    "max_absolute_probability_delta_limit": 0.0005,
+    "mean_absolute_probability_delta_limit": 0.0001,
+    "mean_of_seed_mean_absolute_deltas": 3.6505921411844613e-05,
+    "purpose": "Implementation equivalence only; not a model-performance criterion.",
+    "selected_case_ensemble_max_absolute_delta": 0.00012367963790893555,
+    "selected_case_ensemble_mean_absolute_delta": 2.338285480618311e-05
+  },
+  "execution_recovery_history": {
+    "continuation_repair": {
+      "remaining_seeds_executed": [
+        29,
+        101,
+        313,
+        997
+      ],
+      "scientific_protocol_changed": false,
+      "seed7_attention_reused_from_memory": true,
+      "seed7_reexecuted": false,
+      "stage": "17.1R2",
+      "successful_extraction_forward_batches_total": 20
+    },
+    "first_cpu_recovery_attempt": {
+      "completed_attention_checkpoints": 1,
+      "completed_forward_batches": 4,
+      "failure_reason": "Implementation-equivalence tolerance 1e-5 was too strict for cross-device CPU versus archived GPU probabilities.",
+      "observed_seed7_max_delta": 9.441375732421875e-05,
+      "scientific_results_analyzed": false,
+      "status": "ABORTED_AFTER_SEED7_EXTRACTION"
+    },
+    "initial_cuda_attempt": {
+      "completed_checkpoints": 0,
+      "completed_forward_batches": 0,
+      "reason": "cudaErrorNoKernelImageForDevice",
+      "status": "ABORTED"
+    }
+  },
+  "holdout_accessed": false,
+  "next_permitted_action": "Audit Stage 17.1 extraction, then perform Stage 17.2 frozen-attention analysis.",
+  "partition": "duplicate-safe validation only",
+  "protocol_sha256": "872eb003dfb4728abb9898288169ce9bccb448aa5902034640ced8b0b027e3e8",
+  "repository_head": "b2d31bcba581994e2488d99cb01f8dc727d672c8",
+  "scientific_boundary": {
+    "architecture_searches": 0,
+    "attention_is_causal_explanation": false,
+    "attention_is_model_behavior_diagnostic": true,
+    "checkpoint_selection_events": 0,
+    "classical_holdout_openings": 0,
+    "integrated_gradients_recomputations": 0,
+    "model_fits": 0,
+    "model_retraining": 0,
+    "scientific_ranking_analysis_completed": false,
+    "shap_recomputations": 0,
+    "threshold_searches": 0,
+    "transformer_holdout_openings": 0
+  },
+  "stage": "17.1",
+  "status": "FIVE_CHECKPOINT_ATTENTION_EXTRACTION_COMPLETE_AWAITING_STAGE17_2_ANALYSIS"
+}

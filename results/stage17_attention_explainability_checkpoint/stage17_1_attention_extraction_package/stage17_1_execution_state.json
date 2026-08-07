@@ -1,0 +1,41 @@
+{
+  "attention_extraction_complete": true,
+  "case_selection_reused": true,
+  "cases_reselected": false,
+  "cases_selected": true,
+  "completed_at_utc": "2026-08-07T16:13:33.334682+00:00",
+  "completed_checkpoint_seeds": [
+    7,
+    29,
+    101,
+    313,
+    997
+  ],
+  "confusion_counts_full_validation": {
+    "FN": 2446,
+    "FP": 99,
+    "TN": 27044,
+    "TP": 8246
+  },
+  "cross_device_max_abs_delta_limit": 0.0005,
+  "cross_device_mean_abs_delta_limit": 0.0001,
+  "dataset_rows_reloaded_in_recovery": false,
+  "head_level_attention_matrices": 7680,
+  "holdout_accessed": false,
+  "numerical_verification_policy_repaired": true,
+  "previous_verification_tolerance": 1e-05,
+  "protocol_sha256": "872eb003dfb4728abb9898288169ce9bccb448aa5902034640ced8b0b027e3e8",
+  "recovery_execution_device": "CPU",
+  "recovery_reason": "CUDA_NO_KERNEL_IMAGE_FOR_ASSIGNED_DEVICE",
+  "repository_head": "b2d31bcba581994e2488d99cb01f8dc727d672c8",
+  "rollout_vectors": 320,
+  "scientific_protocol_changed": false,
+  "seed7_reexecuted_after_tolerance_failure": false,
+  "selected_case_count": 64,
+  "split_archive_reopened_in_recovery": false,
+  "stage": "17.1",
+  "started_at_utc": "2026-08-07T16:06:24.485982+00:00",
+  "status": "ATTENTION_EXTRACTION_COMPLETE",
+  "successful_forward_batches": 20,
+  "successful_forward_batches_before_continuation": 4
+}

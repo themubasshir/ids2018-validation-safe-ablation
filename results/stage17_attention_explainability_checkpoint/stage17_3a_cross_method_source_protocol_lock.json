@@ -1,0 +1,242 @@
+{
+  "agreement_metrics": {
+    "cosine_similarity": {
+      "definition": "Cosine similarity between the two 70-feature renormalized magnitude vectors.",
+      "enabled": true
+    },
+    "spearman": {
+      "definition": "scipy.stats.spearmanr over the two 70-feature magnitude vectors.",
+      "enabled": true
+    },
+    "top10_jaccard": {
+      "enabled": true,
+      "k": 10,
+      "tie_policy": "Stable descending sort in frozen feature order."
+    },
+    "top20_jaccard": {
+      "enabled": true,
+      "k": 20,
+      "tie_policy": "Stable descending sort in frozen feature order."
+    }
+  },
+  "anti_selection_policy": {
+    "all_four_comparisons_must_be_reported": true,
+    "average_ig_models_into_new_consensus": false,
+    "average_shap_models_into_new_consensus": false,
+    "change_top_k_after_results": false,
+    "choose_best_ig_model_after_results": false,
+    "choose_best_shap_model_after_results": false,
+    "drop_low_agreement_target": false,
+    "optimize_feature_subset": false,
+    "use_agreement_for_model_selection": false,
+    "weight_methods": false
+  },
+  "attention_source": {
+    "feature_order_path": "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_feature_order.json",
+    "feature_order_sha256": "bf429d3cda5b70c16e8c880c5e25f02b6f13979f2a53a96b08cbd33379c1c53f",
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/stage17_2_global_rollout_feature_ranking.csv",
+    "sha256": "6f638f1d4cc9f7a538448e75b586fc554b7da2d45f4b56f9b15cc99a8f2e753b"
+  },
+  "comparison_targets": [
+    {
+      "comparison_id": "ATTENTION_VS_XGBOOST_TREESHAP",
+      "method": "TreeSHAP",
+      "model": "XGBoost",
+      "source_column": "XGBoost Normalized Importance"
+    },
+    {
+      "comparison_id": "ATTENTION_VS_LIGHTGBM_TREESHAP",
+      "method": "TreeSHAP",
+      "model": "LightGBM",
+      "source_column": "LightGBM Normalized Importance"
+    },
+    {
+      "comparison_id": "ATTENTION_VS_MLP_IG",
+      "method": "Integrated Gradients",
+      "model": "MLP",
+      "source_column": "mean_absolute_attribution",
+      "source_model_key": "mlp"
+    },
+    {
+      "comparison_id": "ATTENTION_VS_CNN_IG",
+      "method": "Integrated Gradients",
+      "model": "CNN",
+      "source_column": "mean_absolute_attribution",
+      "source_model_key": "cnn"
+    }
+  ],
+  "feature_domain": {
+    "common_feature_count": 70,
+    "common_feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "legacy_only_feature_count": 8,
+    "legacy_only_features": [
+      "Bwd Blk Rate Avg",
+      "Bwd Byts/b Avg",
+      "Bwd PSH Flags",
+      "Bwd Pkts/b Avg",
+      "Bwd URG Flags",
+      "Fwd Blk Rate Avg",
+      "Fwd Byts/b Avg",
+      "Fwd Pkts/b Avg"
+    ],
+    "legacy_shap_ig_feature_count": 78,
+    "stage17_feature_count": 70
+  },
+  "integrated_gradients_source": {
+    "git_blob": "81d88986211f2e997f5dbc623d1b6b254c97244f",
+    "latest_commit_touching_source": "15a5e8add4eb40c64ddc31cd5e545e449c78ddaa",
+    "models": [
+      "MLP",
+      "CNN"
+    ],
+    "path": "results/stage14_integrated_gradients/stage14_4_ig_model_feature_summary.csv",
+    "recomputed": false,
+    "sha256": "aece5f5a02f9ccd2c8b6b206593948c66db0a3c020c370a2706dd0eea3e6ee89",
+    "stage14_checksum_verified": true
+  },
+  "interpretation_policy": {
+    "causal_equivalence_claim_allowed": false,
+    "comparison_type": "Global cross-method feature-structure agreement.",
+    "explanation_correctness_claim_allowed": false,
+    "legacy_feature_domain": 78,
+    "permitted_interpretation": "Quantify whether independently derived global importance/attention structures emphasize similar shared traffic features across model families and explanation mechanisms.",
+    "required_caveat": "Differences reflect both explanation-method behavior and underlying model/experimental differences; agreement must not be interpreted as proof of causal faithfulness.",
+    "same_case_attribution_comparison": false,
+    "same_feature_space_before_intersection": false,
+    "same_model_comparison": false,
+    "same_training_split_comparison": false,
+    "shared_feature_domain": 70
+  },
+  "locked_at_utc": "2026-08-07T16:50:27.015753+00:00",
+  "next_permitted_action": "Git-anchor this Stage 17.3A source/protocol lock. Only after remote verification may Stage 17.3B calculate the four precommitted cross-method agreement comparisons.",
+  "repository_parent_commit": "838193af2578db356d79b37b9db4e449b9cd12bb",
+  "scientific_boundary": {
+    "agreement_metrics_computed": false,
+    "attention_extraction": false,
+    "checkpoint_selection": false,
+    "classical_holdout_accessed": false,
+    "cosine_computed": false,
+    "integrated_gradients_recomputed": false,
+    "method_selection": false,
+    "shap_recomputed": false,
+    "spearman_computed": false,
+    "topk_overlap_computed": false,
+    "transformer_holdout_accessed": false,
+    "transformer_inference": false
+  },
+  "stage": "17.3A",
+  "status": "CROSS_METHOD_SOURCES_AND_METRICS_LOCKED_BEFORE_FIRST_AGREEMENT_CALCULATION",
+  "treeshap_source": {
+    "git_blob": "8ebde7625ccaa270f8ba83531e59696f15ce6c1e",
+    "latest_commit_touching_source": "62203101540a53f5ca98180e420533373bfba3c2",
+    "models": [
+      "XGBoost",
+      "LightGBM"
+    ],
+    "path": "results/shap/xgboost_lightgbm_shap_global_comparison.csv",
+    "recomputed": false,
+    "sha256": "b699d7d74ad10defbf74f532e858e45a7974d6df3e8914d71d42f25488981b79"
+  },
+  "upstream_attention_freeze": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_2a_attention_analysis_freeze_lock.json",
+    "sha256": "4265b4732e5d385de87cd8510e7512c65a4fa959dcff327e9cf528652a62485a"
+  },
+  "vector_policy": {
+    "attention_vector": {
+      "source": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/stage17_2_global_rollout_feature_ranking.csv",
+      "source_column": "five_seed_consensus_rollout",
+      "transformation": "Reindex to frozen 70-feature order and renormalize nonnegative magnitude values to sum to 1."
+    },
+    "cnn_ig_vector": {
+      "model_filter": "cnn",
+      "source_column": "mean_absolute_attribution",
+      "transformation": "Use absolute IG magnitude already aggregated by Stage 14; subset to shared 70 features, reindex, renormalize to sum to 1."
+    },
+    "comparison_feature_count": 70,
+    "feature_domain": "Exact Stage-17 retained feature names, in Stage-17 frozen feature order.",
+    "lightgbm_treeshap_vector": {
+      "source_column": "LightGBM Normalized Importance",
+      "transformation": "Subset to shared 70 features, reindex to Stage-17 order, renormalize to sum to 1."
+    },
+    "mlp_ig_vector": {
+      "model_filter": "mlp",
+      "source_column": "mean_absolute_attribution",
+      "transformation": "Use absolute IG magnitude already aggregated by Stage 14; subset to shared 70 features, reindex, renormalize to sum to 1."
+    },
+    "xgboost_treeshap_vector": {
+      "source_column": "XGBoost Normalized Importance",
+      "transformation": "Subset to shared 70 features, reindex to Stage-17 order, renormalize to sum to 1."
+    }
+  }
+}

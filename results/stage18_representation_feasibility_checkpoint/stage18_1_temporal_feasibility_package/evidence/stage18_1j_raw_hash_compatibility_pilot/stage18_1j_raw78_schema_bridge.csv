@@ -1,0 +1,11 @@
+source_file,raw_column_count,required_feature_count,matched_feature_count,missing_feature_count,coverage_rate,normalization_collision_count,missing_features
+02-14-2018.csv,80,78,78,0,1.0,0,
+02-15-2018.csv,80,78,78,0,1.0,0,
+02-16-2018.csv,80,78,78,0,1.0,0,
+02-20-2018.csv,84,78,78,0,1.0,0,
+02-21-2018.csv,80,78,78,0,1.0,0,
+02-22-2018.csv,80,78,78,0,1.0,0,
+02-23-2018.csv,80,78,78,0,1.0,0,
+02-28-2018.csv,80,78,78,0,1.0,0,
+03-01-2018.csv,80,78,78,0,1.0,0,
+03-02-2018.csv,80,78,78,0,1.0,0,

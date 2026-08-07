@@ -1,0 +1,115 @@
+{
+  "candidate": "Temporal / MTemporal Transformer",
+  "closure_statement": "Stage 18.1 is scientifically closed. Temporal/MTemporal modeling is supported with constraints only through an authentic time-bin/snapshot representation and a future separately precommitted chronological leakage-safe development split. No temporal model training is authorized by this closure itself.",
+  "core_findings": {
+    "authentic_timestamp_metadata_exists": true,
+    "authorized_non_holdout_hashes": 192521,
+    "existing_stage15_temporal_leakage": {
+      "all_shared_files_chronologically_interleaved": true,
+      "chronologically_interleaved_source_files": 9,
+      "distinct_temporal_bins": 63278,
+      "mixed_bin_rate": 0.15552008596984734,
+      "mixed_train_validation_bins": 9841,
+      "source_files_with_both_splits": 9,
+      "train_only_bins": 44508,
+      "train_same_bin_leakage_rate": 0.5343999512867157,
+      "train_samples_in_mixed_bins": 70210,
+      "validation_bins_within_0_seconds_of_train_rate": 0.5242940863079382,
+      "validation_bins_within_1_second_of_train_rate": 0.7472029834842834,
+      "validation_bins_within_30_seconds_of_train_rate": 0.9976558337773042,
+      "validation_bins_within_5_seconds_of_train_rate": 0.944326052210975,
+      "validation_only_bins": 8929,
+      "validation_same_bin_leakage_rate": 0.7138004246284501,
+      "validation_samples_in_mixed_bins": 23534
+    },
+    "frozen_70_feature_schema_available_in_all_raw_files": true,
+    "original_78_feature_schema_available_in_all_raw_files": true,
+    "provenance_safe_subset": {
+      "note": "The Stage 18.1L provenance-safe temporal subset contains samples from nine source files. The 02-20 source does not appear in the final unique-bin leakage summary.",
+      "source_files_represented": 9,
+      "total": 164351,
+      "train_under_existing_stage15_membership": 131381,
+      "validation_under_existing_stage15_membership": 32970
+    },
+    "raw_csv_row_order_is_chronology": false,
+    "raw_recovery": {
+      "recovered": 192521,
+      "recovery_rate": 1.0,
+      "unmatched": 0
+    },
+    "recovered_fingerprint_rule": {
+      "array_order_required_for_raw_membership_mapping": false,
+      "dtype_policy": "native processed dtypes: 37 float64 + 41 int64",
+      "feature_scope": "original 78 processed predictors",
+      "function": "pd.util.hash_pandas_object",
+      "index": false,
+      "saved_hash_array_order_reproduced": false,
+      "train_hash_set_exactly_reproduced": true,
+      "validation_hash_set_exactly_reproduced": true
+    },
+    "same_timestamp_flows_must_be_treated_as_simultaneous": true,
+    "temporal_provenance": {
+      "ambiguous_hashes_force_resolved": false,
+      "ambiguous_multiple_bin_hashes": 28170,
+      "ambiguous_rate": 0.14632169997039285,
+      "unique_temporal_bin_hashes": 164351,
+      "unique_temporal_bin_rate": 0.8536783000296072
+    },
+    "timestamp_resolution": "1 second",
+    "unique_within_second_flow_order_proven": false
+  },
+  "created_at_utc": "2026-08-07T18:13:53.301103+00:00",
+  "current_stage15_split_decision": {
+    "reason": "Train and validation observations occupy the same temporal bins and are strongly chronologically interleaved.",
+    "status": "CURRENT_STAGE15_SPLIT_NOT_SAFE_FOR_TEMPORAL_WINDOWS",
+    "valid_for_existing_tabular_experiment": true,
+    "valid_for_temporal_window_modeling": false
+  },
+  "final_feasibility_decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "future_temporal_experiment_requirements": [
+    "Use only samples classified as UNIQUE_TEMPORAL_BIN.",
+    "Exclude all MULTIPLE_TEMPORAL_BINS patterns without force-disambiguation.",
+    "Create a separate chronological leakage-safe development experiment rather than reusing the Stage-15 train/validation assignment.",
+    "Derive the future temporal development universe only from already-authorized non-holdout train+validation patterns.",
+    "Keep the classical holdout permanently closed.",
+    "Keep the Transformer Stage-15 holdout permanently closed for temporal representation design.",
+    "Do not use raw CSV row position as chronology or as a same-second tie-breaker.",
+    "Treat flows sharing a timestamp as simultaneous unless an independently authenticated finer-order identifier is available.",
+    "Precommit snapshot aggregation, chronological split policy, sequence grouping, and window construction before model training.",
+    "Do not select temporal window length based on validation performance before representation semantics are fixed."
+  ],
+  "parent_commit": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "permitted_publication_claims": [
+    "The original CSE-CIC-IDS2018 sources retain authentic second-resolution timestamp metadata.",
+    "The processed research representation can be linked back to the original timestamped source without labels or holdout access.",
+    "All 192,521 authorized train/validation feature patterns were recovered in the original source universe.",
+    "Approximately 85.37% of authorized patterns have unambiguous source-file/timestamp provenance.",
+    "The existing duplicate-safe random split is unsuitable for temporal-window modeling because train and validation observations are strongly temporally interleaved.",
+    "A separate leakage-safe time-bin/snapshot temporal experiment is scientifically justified."
+  ],
+  "prohibited_claims": [
+    "CSV row order is authentic chronological order.",
+    "Flows sharing the same second possess a known within-second order.",
+    "Every processed research row has unique temporal provenance.",
+    "Ambiguous hashes can be resolved using labels, model predictions, or attack categories.",
+    "The existing Stage-15 split is suitable for MTemporal training.",
+    "Temporal/MTemporal performance has been established.",
+    "A temporal model has been trained or evaluated in Stage 18.1."
+  ],
+  "scientific_boundary": {
+    "ambiguous_hashes_force_resolved": false,
+    "classical_holdout_reopened": false,
+    "final_stage18_1_model_fits": 0,
+    "final_stage18_1_model_inference": 0,
+    "final_stage18_1_sequences_constructed": 0,
+    "final_stage18_1_temporal_windows_constructed": 0,
+    "labels_used_for_temporal_mapping": false,
+    "raw_row_order_used_as_chronology": false,
+    "transformer_holdout_reopened": false
+  },
+  "stage": "18.1",
+  "stage18_0_protocol_sha256": "4ff4bace27cd110d557efdab7f996c9625f21692ce6ab8ff2672b609ad2bbf4f",
+  "status": "SCIENTIFICALLY_CLOSED",
+  "supported_representation": "Authentic timestamp-bin / traffic-snapshot temporal representation",
+  "unsupported_representation": "Arbitrarily ordered flow-by-flow temporal sequence"
+}

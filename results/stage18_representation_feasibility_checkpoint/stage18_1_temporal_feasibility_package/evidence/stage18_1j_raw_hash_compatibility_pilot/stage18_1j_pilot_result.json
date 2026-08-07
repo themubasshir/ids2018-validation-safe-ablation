@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-08-07T17:54:50.630397+00:00",
+  "next_permitted_action": "If the precommitted pilot demonstrates raw hash continuity, run the same frozen procedure across all ten raw source files and quantify complete train/validation temporal recovery and ambiguity.",
+  "pilot": {
+    "hashes_with_multiple_raw_timestamps": 4322,
+    "hashes_with_single_raw_timestamp": 25638,
+    "raw_rows_hashed": 328181,
+    "raw_rows_read": 331125,
+    "source_file": "03-01-2018.csv",
+    "train_match_rows": 37846,
+    "unique_authorized_hashes_matched": 29960,
+    "unique_train_hashes_matched": 24073,
+    "unique_validation_hashes_matched": 5887,
+    "validation_match_rows": 8313
+  },
+  "raw78_schema_bridge": {
+    "all_files_collision_free": true,
+    "all_files_complete": true,
+    "files_audited": 10,
+    "files_complete": 10
+  },
+  "recovered_hash_rule": {
+    "dtype_policy": "native_processed_dtype_contract",
+    "evidence": "C1_NATIVE_78 produced exact set equality against both frozen train and validation hash universes.",
+    "feature_scope": "original_78",
+    "function": "pd.util.hash_pandas_object",
+    "index": false,
+    "status": "EXACT_HASH_SET_RULE_RECOVERED_ORDERING_NOT_RECOVERED"
+  },
+  "repository_head": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "scientific_boundary": {
+    "holdout_feature_hashes_accessed": 0,
+    "holdout_feature_values_materialized": 0,
+    "holdout_indices_accessed": 0,
+    "model_outputs_used": 0,
+    "raw_attack_categories_read": 0,
+    "raw_files_schema_only": 9,
+    "raw_files_with_feature_values_read": 1,
+    "raw_labels_read": 0,
+    "sequences_constructed": 0,
+    "temporal_windows_constructed": 0
+  },
+  "stage": "18.1J",
+  "status": "RAW_HASH_CONTINUITY_CONFIRMED_BUT_TEMPORAL_AMBIGUITY_OBSERVED"
+}

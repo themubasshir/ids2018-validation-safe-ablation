@@ -1,0 +1,31 @@
+{
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "relative_path": "stage18_1k_authorized_hash_temporal_mapping.csv",
+      "sha256": "4451e0702db501cff6b15aa995ae54cfc63d7665b9c8b4c049132bc8be6108ab",
+      "size_bytes": 22005286
+    },
+    {
+      "relative_path": "stage18_1k_global_temporal_mapping_result.json",
+      "sha256": "1f522dca624a97a11650082cbe62e7ffe524ee10286607980dbff48cf6e488c6",
+      "size_bytes": 3210
+    },
+    {
+      "relative_path": "stage18_1k_raw_file_mapping_summary.csv",
+      "sha256": "7fed3f281a832bb86a6bced57e5663471b69c0be047a88b9cbb0a158bba2ab2b",
+      "size_bytes": 679
+    },
+    {
+      "relative_path": "stage18_1k_split_mapping_summary.csv",
+      "sha256": "b142392c9439984e1f7fc46b4a8e5c31fe0e0eb1cde9e0055edc988ee6e405dd",
+      "size_bytes": 308
+    }
+  ],
+  "authorized_hashes": 192521,
+  "holdout_members_accessed": 0,
+  "labels_read": 0,
+  "sequences_constructed": 0,
+  "stage": "18.1K",
+  "status": "GLOBAL_TEMPORAL_MAPPING_EVIDENCE_COMPLETE"
+}

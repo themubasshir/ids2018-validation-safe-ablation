@@ -1,0 +1,40 @@
+{
+  "audits": {
+    "18.1D": {
+      "conclusion": "No tracked construction recipe was found that derives merged_balanced_ids2018_safe.csv from the ten original dated CSV files.",
+      "dataset_rows_read": 0,
+      "holdout_artifacts_opened": 0,
+      "name": "Balanced dataset construction provenance audit",
+      "raw_dated_files_construction_signal": false
+    },
+    "18.1F": {
+      "holdout_membership_inspected": false,
+      "name": "Safe train/validation artifact discovery",
+      "safe_train_validation_membership_available": true,
+      "split_archive": "results/stage15_transformer_checkpoint/stage15_1_duplicate_safe_split_indices.npz",
+      "split_archive_sha256": "fd66772bc17e6e629f561bc6a2c5e188d1cf2f923c14830646f4af684400417e"
+    },
+    "18.1G": {
+      "authorized_total": 192521,
+      "holdout_feature_hashes_accessed": false,
+      "holdout_indices_accessed": false,
+      "name": "Non-holdout split and fingerprint provenance audit",
+      "retained_feature_count": 70,
+      "train_membership": 154686,
+      "train_unique_feature_hashes": 154686,
+      "train_validation_hash_overlap": 0,
+      "validation_membership": 37835,
+      "validation_unique_feature_hashes": 37835
+    },
+    "18.1H": {
+      "dataset_rows_read": 0,
+      "exact_hash_implementation_found_in_tracked_source": false,
+      "frozen_hashing_metadata": "Exact-pattern screening used deterministic pandas 64-bit row hashes.",
+      "holdout_arrays_accessed": 0,
+      "name": "Exact tracked hash-source recovery"
+    }
+  },
+  "record_type": "closure_record_for_console_only_audits",
+  "scientific_note": "These audits were intentionally metadata/source-code audits and did not create standalone runtime evidence packages. Their findings are preserved here as part of the final Stage 18.1 closure record.",
+  "stage": "18.1-intermediate-audits"
+}

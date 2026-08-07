@@ -1,0 +1,26 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage18_1e_feature_presence_matrix.csv",
+      "sha256": "47314794d98411d8055b69d0e34bf8bab914dd89cdfac87d1a558e6f79117b69",
+      "size_bytes": 4606
+    },
+    {
+      "relative_path": "stage18_1e_raw_frozen70_schema_bridge.csv",
+      "sha256": "ef4d368d3884374df9e84fb52489a167d4d4d816157ddcdcaa0d9001c98bae44",
+      "size_bytes": 2415
+    },
+    {
+      "relative_path": "stage18_1e_schema_bridge_result.json",
+      "sha256": "80af46a0fe9d582313ba0e7d2d75e033acdadcde42856f745752435523051ed1",
+      "size_bytes": 2130
+    }
+  ],
+  "data_rows_read": 0,
+  "holdout_openings": 0,
+  "raw_header_reads": 10,
+  "row_mappings": 0,
+  "stage": "18.1E",
+  "status": "RAW_SCHEMA_BRIDGE_EVIDENCE_COMPLETE"
+}

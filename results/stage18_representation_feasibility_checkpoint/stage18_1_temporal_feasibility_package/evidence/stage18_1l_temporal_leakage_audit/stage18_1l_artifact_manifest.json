@@ -1,0 +1,26 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage18_1l_per_file_temporal_leakage.csv",
+      "sha256": "023d3fb47526dd6280fc90569dde3159ccda8df3b18b27a093338ac218b505e3",
+      "size_bytes": 1995
+    },
+    {
+      "relative_path": "stage18_1l_temporal_leakage_result.json",
+      "sha256": "3fd0202725f6f8585926c4790ede7cf1cb7a2244d523e25f0f0c0e35f755e787",
+      "size_bytes": 3332
+    },
+    {
+      "relative_path": "stage18_1l_validation_train_proximity.csv",
+      "sha256": "9f5d9f532bb01a10b7795615341cc7e59ed98eb30fd78bd89843a4372a6a97f9",
+      "size_bytes": 732515
+    }
+  ],
+  "holdout_members_accessed": 0,
+  "raw_feature_values_read": 0,
+  "sequences_constructed": 0,
+  "stage": "18.1L",
+  "status": "TEMPORAL_LEAKAGE_EVIDENCE_COMPLETE",
+  "unique_temporal_samples_audited": 164351
+}

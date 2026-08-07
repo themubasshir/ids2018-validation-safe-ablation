@@ -1,0 +1,29 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage18_1b_raw_timestamp_summary.csv",
+      "sha256": "0e4b63060a3994cd8e646c8f748c863dec3ac770914f6c2d6e68e3234e09077c",
+      "size_bytes": 3574
+    },
+    {
+      "relative_path": "stage18_1b_timestamp_chronology_result.json",
+      "sha256": "0dc117b5799b33150dc1dbaeff2c8dd379bdf2558411bde5e519bb21eaf31be0",
+      "size_bytes": 2693
+    },
+    {
+      "relative_path": "stage18_1b_timestamp_date_distribution.csv",
+      "sha256": "707fb105666887f01e6cea121e4c9a473a95010f023b5fb75e2b0ba141b26390",
+      "size_bytes": 835
+    }
+  ],
+  "frozen_holdout_artifacts_opened": 0,
+  "generated_at_utc": "2026-08-07T17:29:39.288831+00:00",
+  "labels_read": 0,
+  "predictive_feature_values_read": 0,
+  "raw_timestamp_metadata_rows_read": 16233002,
+  "repository_head": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "sequences_constructed": 0,
+  "stage": "18.1B",
+  "status": "RAW_TIMESTAMP_AUDIT_EVIDENCE_COMPLETE"
+}

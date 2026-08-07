@@ -1,0 +1,51 @@
+{
+  "aggregate_findings": {
+    "all_files_have_multiple_temporal_bins": true,
+    "all_files_have_tied_seconds": true,
+    "all_files_majority_rows_tied": true,
+    "files_with_fractional_timestamp_precision": 0,
+    "invalid_or_date_inconsistent_rows": 73,
+    "median_file_second_coverage": 0.7419675925925926,
+    "occupied_seconds_total": 272365,
+    "overall_tied_row_rate": 0.9994867839315997,
+    "raw_timestamp_rows_read": 16233002,
+    "rows_in_tied_seconds": 16224598,
+    "timestamps_are_second_precision_only": true,
+    "valid_date_consistent_timestamp_rows": 16232929
+  },
+  "created_at_utc": "2026-08-07T17:33:47.073116+00:00",
+  "interpretation": "The source timestamps provide authentic second-level temporal bins, but do not establish a unique ordering among flows sharing the same second. A future temporal representation must therefore avoid claiming arbitrary within-second flow order. Snapshot/time-bin or another tie-invariant construction may be scientifically defensible subject to separate feature-mapping and leakage audits.",
+  "next_permitted_action": "Audit deterministic mapping between original raw source flows and training/validation-safe research samples, without inspecting holdout membership. Only after mapping integrity is established may a tie-safe temporal representation rule be proposed.",
+  "repository_head": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "scientific_boundary": {
+    "attack_categories_read": 0,
+    "balanced_rows_mapped": 0,
+    "classical_holdout_openings": 0,
+    "holdout_rows_mapped": 0,
+    "labels_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "predictive_feature_values_read": 0,
+    "sequences_constructed": 0,
+    "snapshot_feature_aggregations": 0,
+    "temporal_windows_constructed": 0,
+    "timestamp_metadata_rows_read": 16233002,
+    "train_rows_mapped": 0,
+    "transformer_holdout_openings": 0,
+    "validation_rows_mapped": 0
+  },
+  "scientific_interpretation": {
+    "arbitrary_tie_breaking_authorized": false,
+    "final_temporal_feasibility_decision": false,
+    "flow_level_positional_sequence_authorized": false,
+    "raw_row_position_accepted_as_tie_breaker": false,
+    "snapshot_feature_aggregation_authorized": false,
+    "temporal_window_construction_authorized": false,
+    "timestamp_bin_structure_observed": true,
+    "timestamp_bins_are_authentic_temporal_units": true,
+    "unique_flow_order_within_same_second_proven": false
+  },
+  "stage": "18.1C",
+  "status": "TIMESTAMP_RESOLUTION_AND_SNAPSHOT_STRUCTURE_AUDITED",
+  "upstream_stage18_1b_result_sha256": "0dc117b5799b33150dc1dbaeff2c8dd379bdf2558411bde5e519bb21eaf31be0"
+}

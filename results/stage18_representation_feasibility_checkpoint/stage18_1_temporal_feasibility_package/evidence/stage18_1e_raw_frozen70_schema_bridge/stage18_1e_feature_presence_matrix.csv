@@ -1,0 +1,71 @@
+feature,02-14-2018.csv,02-15-2018.csv,02-16-2018.csv,02-20-2018.csv,02-21-2018.csv,02-22-2018.csv,02-23-2018.csv,02-28-2018.csv,03-01-2018.csv,03-02-2018.csv
+Dst Port,True,True,True,True,True,True,True,True,True,True
+Protocol,True,True,True,True,True,True,True,True,True,True
+Flow Duration,True,True,True,True,True,True,True,True,True,True
+Tot Fwd Pkts,True,True,True,True,True,True,True,True,True,True
+Tot Bwd Pkts,True,True,True,True,True,True,True,True,True,True
+TotLen Fwd Pkts,True,True,True,True,True,True,True,True,True,True
+TotLen Bwd Pkts,True,True,True,True,True,True,True,True,True,True
+Fwd Pkt Len Max,True,True,True,True,True,True,True,True,True,True
+Fwd Pkt Len Min,True,True,True,True,True,True,True,True,True,True
+Fwd Pkt Len Mean,True,True,True,True,True,True,True,True,True,True
+Fwd Pkt Len Std,True,True,True,True,True,True,True,True,True,True
+Bwd Pkt Len Max,True,True,True,True,True,True,True,True,True,True
+Bwd Pkt Len Min,True,True,True,True,True,True,True,True,True,True
+Bwd Pkt Len Mean,True,True,True,True,True,True,True,True,True,True
+Bwd Pkt Len Std,True,True,True,True,True,True,True,True,True,True
+Flow Byts/s,True,True,True,True,True,True,True,True,True,True
+Flow Pkts/s,True,True,True,True,True,True,True,True,True,True
+Flow IAT Mean,True,True,True,True,True,True,True,True,True,True
+Flow IAT Std,True,True,True,True,True,True,True,True,True,True
+Flow IAT Max,True,True,True,True,True,True,True,True,True,True
+Flow IAT Min,True,True,True,True,True,True,True,True,True,True
+Fwd IAT Tot,True,True,True,True,True,True,True,True,True,True
+Fwd IAT Mean,True,True,True,True,True,True,True,True,True,True
+Fwd IAT Std,True,True,True,True,True,True,True,True,True,True
+Fwd IAT Max,True,True,True,True,True,True,True,True,True,True
+Fwd IAT Min,True,True,True,True,True,True,True,True,True,True
+Bwd IAT Tot,True,True,True,True,True,True,True,True,True,True
+Bwd IAT Mean,True,True,True,True,True,True,True,True,True,True
+Bwd IAT Std,True,True,True,True,True,True,True,True,True,True
+Bwd IAT Max,True,True,True,True,True,True,True,True,True,True
+Bwd IAT Min,True,True,True,True,True,True,True,True,True,True
+Fwd PSH Flags,True,True,True,True,True,True,True,True,True,True
+Fwd URG Flags,True,True,True,True,True,True,True,True,True,True
+Fwd Header Len,True,True,True,True,True,True,True,True,True,True
+Bwd Header Len,True,True,True,True,True,True,True,True,True,True
+Fwd Pkts/s,True,True,True,True,True,True,True,True,True,True
+Bwd Pkts/s,True,True,True,True,True,True,True,True,True,True
+Pkt Len Min,True,True,True,True,True,True,True,True,True,True
+Pkt Len Max,True,True,True,True,True,True,True,True,True,True
+Pkt Len Mean,True,True,True,True,True,True,True,True,True,True
+Pkt Len Std,True,True,True,True,True,True,True,True,True,True
+Pkt Len Var,True,True,True,True,True,True,True,True,True,True
+FIN Flag Cnt,True,True,True,True,True,True,True,True,True,True
+SYN Flag Cnt,True,True,True,True,True,True,True,True,True,True
+RST Flag Cnt,True,True,True,True,True,True,True,True,True,True
+PSH Flag Cnt,True,True,True,True,True,True,True,True,True,True
+ACK Flag Cnt,True,True,True,True,True,True,True,True,True,True
+URG Flag Cnt,True,True,True,True,True,True,True,True,True,True
+CWE Flag Count,True,True,True,True,True,True,True,True,True,True
+ECE Flag Cnt,True,True,True,True,True,True,True,True,True,True
+Down/Up Ratio,True,True,True,True,True,True,True,True,True,True
+Pkt Size Avg,True,True,True,True,True,True,True,True,True,True
+Fwd Seg Size Avg,True,True,True,True,True,True,True,True,True,True
+Bwd Seg Size Avg,True,True,True,True,True,True,True,True,True,True
+Subflow Fwd Pkts,True,True,True,True,True,True,True,True,True,True
+Subflow Fwd Byts,True,True,True,True,True,True,True,True,True,True
+Subflow Bwd Pkts,True,True,True,True,True,True,True,True,True,True
+Subflow Bwd Byts,True,True,True,True,True,True,True,True,True,True
+Init Fwd Win Byts,True,True,True,True,True,True,True,True,True,True
+Init Bwd Win Byts,True,True,True,True,True,True,True,True,True,True
+Fwd Act Data Pkts,True,True,True,True,True,True,True,True,True,True
+Fwd Seg Size Min,True,True,True,True,True,True,True,True,True,True
+Active Mean,True,True,True,True,True,True,True,True,True,True
+Active Std,True,True,True,True,True,True,True,True,True,True
+Active Max,True,True,True,True,True,True,True,True,True,True
+Active Min,True,True,True,True,True,True,True,True,True,True
+Idle Mean,True,True,True,True,True,True,True,True,True,True
+Idle Std,True,True,True,True,True,True,True,True,True,True
+Idle Max,True,True,True,True,True,True,True,True,True,True
+Idle Min,True,True,True,True,True,True,True,True,True,True

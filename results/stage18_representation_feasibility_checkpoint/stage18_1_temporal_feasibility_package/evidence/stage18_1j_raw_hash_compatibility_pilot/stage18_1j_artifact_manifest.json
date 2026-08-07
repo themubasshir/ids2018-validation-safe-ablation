@@ -1,0 +1,26 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage18_1j_pilot_hash_matches.csv",
+      "sha256": "a7774d82feb2a428d69d6c5e61da661374523192462097e282b82310b0395905",
+      "size_bytes": 4099488
+    },
+    {
+      "relative_path": "stage18_1j_pilot_result.json",
+      "sha256": "768de3dfcd4842f6ca2443ade97f57ac74f82221d546b3116a53d5f74ccf0ec0",
+      "size_bytes": 1776
+    },
+    {
+      "relative_path": "stage18_1j_raw78_schema_bridge.csv",
+      "sha256": "ebe04e488cdcb7b6f2d1cd007373cb90fe80d191fc081096559438492652bdec",
+      "size_bytes": 487
+    }
+  ],
+  "holdout_members_accessed": 0,
+  "raw_files_with_data_rows_read": 1,
+  "raw_labels_read": 0,
+  "sequences_constructed": 0,
+  "stage": "18.1J",
+  "status": "RAW_HASH_PILOT_EVIDENCE_COMPLETE"
+}

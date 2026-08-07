@@ -1,0 +1,48 @@
+{
+  "aggregate_findings": {
+    "all_files_complete": true,
+    "all_files_normalization_collision_free": true,
+    "features_missing_from_at_least_one_file": 0,
+    "features_present_in_all_files": 70,
+    "files_with_complete_70_feature_bridge": 10,
+    "fingerprint_schema_status": "FULL_RAW_SCHEMA_BRIDGE_AVAILABLE",
+    "minimum_features_present_in_any_file": 70,
+    "missing_anywhere_feature_names": []
+  },
+  "authorization_boundary": {
+    "balanced_feature_value_reads_authorized": false,
+    "final_temporal_decision": false,
+    "raw_feature_value_reads_authorized": false,
+    "raw_to_balanced_mapping_authorized": false,
+    "sequence_construction_authorized": false,
+    "timestamp_mapping_authorized": false
+  },
+  "created_at_utc": "2026-08-07T17:37:37.552751+00:00",
+  "frozen_feature_order": {
+    "feature_count": 70,
+    "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_feature_order.json",
+    "sha256": "bf429d3cda5b70c16e8c880c5e25f02b6f13979f2a53a96b08cbd33379c1c53f"
+  },
+  "interpretation": "This audit establishes only whether the exact frozen 70-feature identity can be obtained from the original timestamped source files. It does not establish row-level uniqueness, raw-to-balanced mapping accuracy, or temporal representation feasibility.",
+  "raw_source_file_count": 10,
+  "raw_source_root": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv",
+  "repository_head": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "scientific_boundary": {
+    "balanced_dataset_rows_read": 0,
+    "classical_holdout_openings": 0,
+    "holdout_membership_inspected": 0,
+    "model_fits": 0,
+    "raw_csv_header_reads": 10,
+    "raw_data_rows_read": 0,
+    "raw_labels_read": 0,
+    "raw_predictive_feature_values_read": 0,
+    "raw_timestamps_read": 0,
+    "raw_to_balanced_rows_mapped": 0,
+    "row_fingerprints_computed": 0,
+    "sequences_constructed": 0,
+    "split_arrays_opened": 0,
+    "transformer_holdout_openings": 0
+  },
+  "stage": "18.1E",
+  "status": "RAW_FROZEN70_SCHEMA_BRIDGE_AUDITED"
+}

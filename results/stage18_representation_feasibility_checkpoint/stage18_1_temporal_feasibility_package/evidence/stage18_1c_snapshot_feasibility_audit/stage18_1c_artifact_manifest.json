@@ -1,0 +1,27 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage18_1c_snapshot_feasibility_result.json",
+      "sha256": "a7ec34f3ce494607c1cbe90a037d3a6ebb7cc7254950629991e341bf72bf3b7a",
+      "size_bytes": 2637
+    },
+    {
+      "relative_path": "stage18_1c_timestamp_bin_summary.csv",
+      "sha256": "adbda712bd4652e13102393c474b765eff49683eca481b8464247cc241422557",
+      "size_bytes": 2609
+    },
+    {
+      "relative_path": "stage18_1c_timestamp_multiplicity_distribution.csv",
+      "sha256": "01a27fe6368eb8dd003b50b9a51d157e7b2513a0e03ae52bf2d5bc859c8a6167",
+      "size_bytes": 70617
+    }
+  ],
+  "holdout_openings": 0,
+  "labels_read": 0,
+  "predictive_feature_values_read": 0,
+  "sequences_constructed": 0,
+  "stage": "18.1C",
+  "status": "SNAPSHOT_FEASIBILITY_EVIDENCE_COMPLETE",
+  "timestamp_rows_read": 16233002
+}

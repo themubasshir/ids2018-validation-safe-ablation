@@ -1,0 +1,18 @@
+{
+  "closure_json_sha256": "fda8ed17c8565622ed91b734fd5a0a2ddbefa67e101f96a6f6187cac11dc99fa",
+  "closure_markdown_sha256": "0c5b4ff36081808c995a2b00b4c8a43fc693df5a388d80af7ac8ef49c141cdc3",
+  "final_feasibility_decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "frozen_rules": {
+    "ambiguous_temporal_patterns_may_be_force_resolved": false,
+    "existing_stage15_split_may_be_used_for_temporal_windows": false,
+    "future_temporal_experiment_requires_new_chronological_protocol": true,
+    "holdouts_may_be_used_for_representation_design": false,
+    "raw_row_order_may_be_used_as_chronology": false
+  },
+  "package_manifest_sha256": "09bef7eef759bf29e910395781e2ae6329c2e387f2c9fa96a0a306e6d35b1289",
+  "parent_commit": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "post_closure_rule": "Stage 18.1 feasibility evidence must not be reopened for post-hoc representation optimization.",
+  "stage": "18.1",
+  "stage18_0_protocol_sha256": "4ff4bace27cd110d557efdab7f996c9625f21692ce6ab8ff2672b609ad2bbf4f",
+  "status": "SCIENTIFICALLY_CLOSED"
+}

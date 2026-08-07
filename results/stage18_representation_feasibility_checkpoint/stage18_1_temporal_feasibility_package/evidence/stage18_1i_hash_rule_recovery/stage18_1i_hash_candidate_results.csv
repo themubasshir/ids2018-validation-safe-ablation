@@ -1,0 +1,7 @@
+candidate_id,feature_scope,feature_count,dtype_policy,pandas_hash_function,index_parameter,train_exact_matches,train_total,train_match_rate,validation_exact_matches,validation_total,validation_match_rate,train_hash_set_equal,validation_hash_set_equal,full_in_order_reproduction
+C1_NATIVE_78,original_78,78,native,pd.util.hash_pandas_object,False,2,154686,1.2929418305470436e-05,0,37835,0.0,True,True,False
+C2_NATIVE_70,retained_70,70,native,pd.util.hash_pandas_object,False,0,154686,0.0,0,37835,0.0,False,False,False
+C3_FLOAT64_78,original_78,78,float64,pd.util.hash_pandas_object,False,0,154686,0.0,0,37835,0.0,False,False,False
+C4_FLOAT64_70,retained_70,70,float64,pd.util.hash_pandas_object,False,0,154686,0.0,0,37835,0.0,False,False,False
+C5_FLOAT32_78,original_78,78,float32,pd.util.hash_pandas_object,False,0,154686,0.0,0,37835,0.0,False,False,False
+C6_FLOAT32_70,retained_70,70,float32,pd.util.hash_pandas_object,False,0,154686,0.0,0,37835,0.0,False,False,False

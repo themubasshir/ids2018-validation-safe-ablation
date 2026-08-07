@@ -1,0 +1,104 @@
+{
+  "chronology": {
+    "all_shared_files_interleaved": true,
+    "files_chronologically_interleaved": 9,
+    "files_with_both_train_and_validation": 9,
+    "source_files": 9
+  },
+  "created_at_utc": "2026-08-07T18:09:47.210885+00:00",
+  "current_stage15_split_temporal_status": "CURRENT_STAGE15_SPLIT_NOT_SAFE_FOR_TEMPORAL_WINDOWS",
+  "next_permitted_action": "If the existing Stage-15 train/validation partition is temporally unsafe, design a separate chronological leakage-safe temporal experiment using only the unambiguous provenance-safe train+validation universe. The closed holdout remains excluded.",
+  "provenance_safe_subset": {
+    "excluded_ambiguous_samples": 28170,
+    "total_unique_temporal_samples": 164351,
+    "train_samples": 131381,
+    "validation_samples": 32970
+  },
+  "repository_head": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "scientific_boundary": {
+    "holdout_feature_hashes_accessed": 0,
+    "holdout_indices_accessed": 0,
+    "holdout_values_materialized": 0,
+    "labels_read": 0,
+    "mapping_rows_read": 192521,
+    "models_fit": 0,
+    "raw_feature_values_read": 0,
+    "sequences_constructed": 0,
+    "temporal_windows_constructed": 0
+  },
+  "scientific_interpretation": {
+    "ambiguous_temporal_patterns_used": false,
+    "existing_duplicate_safe_split_is_valid_for_tabular_modeling": true,
+    "existing_split_automatically_valid_for_temporal_modeling": false,
+    "labels_used": false,
+    "new_temporal_split_created": false,
+    "raw_row_order_used": false,
+    "same_second_train_validation_mixing_is_temporal_leakage": true,
+    "sequence_window_length_selected": false,
+    "temporal_model_authorized": false
+  },
+  "stage": "18.1L",
+  "status": "TRAIN_VALIDATION_TEMPORAL_LEAKAGE_AUDITED",
+  "temporal_bin_composition": {
+    "mixed_bin_rate": 0.15552008596984734,
+    "mixed_train_validation_bins": 9841,
+    "total_distinct_bins": 63278,
+    "train_only_bins": 44508,
+    "train_same_bin_leakage_rate": 0.5343999512867157,
+    "train_samples_in_mixed_bins": 70210,
+    "validation_only_bins": 8929,
+    "validation_same_bin_leakage_rate": 0.7138004246284501,
+    "validation_samples_in_mixed_bins": 23534
+  },
+  "upstream_stage18_1k": {
+    "mapping_sha256": "4451e0702db501cff6b15aa995ae54cfc63d7665b9c8b4c049132bc8be6108ab",
+    "result_sha256": "1f522dca624a97a11650082cbe62e7ffe524ee10286607980dbff48cf6e488c6"
+  },
+  "validation_to_train_temporal_proximity": {
+    "distance_quantiles_seconds": {
+      "0.0": 0.0,
+      "0.25": 0.0,
+      "0.5": 0.0,
+      "0.75": 2.0,
+      "0.9": 4.0,
+      "0.95": 6.0,
+      "0.99": 13.0,
+      "1.0": 507.0
+    },
+    "fixed_horizons_seconds": [
+      0,
+      1,
+      5,
+      30,
+      60,
+      300
+    ],
+    "horizon_results": {
+      "0": {
+        "rate": 0.5242940863079382,
+        "validation_bins": 9841
+      },
+      "1": {
+        "rate": 0.7472029834842834,
+        "validation_bins": 14025
+      },
+      "30": {
+        "rate": 0.9976558337773042,
+        "validation_bins": 18726
+      },
+      "300": {
+        "rate": 0.9997336174746937,
+        "validation_bins": 18765
+      },
+      "5": {
+        "rate": 0.944326052210975,
+        "validation_bins": 17725
+      },
+      "60": {
+        "rate": 0.9987213638785296,
+        "validation_bins": 18746
+      }
+    },
+    "validation_bins_audited": 18770
+  }
+}

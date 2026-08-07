@@ -1,0 +1,85 @@
+{
+  "authorized_universe": {
+    "total": 192521,
+    "train_hashes": 154686,
+    "train_validation_overlap": 0,
+    "validation_hashes": 37835
+  },
+  "created_at_utc": "2026-08-07T18:04:11.944188+00:00",
+  "next_permitted_action": "Evaluate whether the unambiguous train and validation temporal subsets provide adequate coverage across source days and time bins and whether a leakage-safe temporal split/window protocol can be defined without using any holdout information.",
+  "raw_scan": {
+    "authorized_raw_occurrence_rows": 1176368,
+    "matched_rows_with_invalid_timestamp": 0,
+    "raw_rows_read": 16233002,
+    "raw_rows_successfully_hashed": 16137183,
+    "source_file_count": 10,
+    "source_files": [
+      "02-14-2018.csv",
+      "02-15-2018.csv",
+      "02-16-2018.csv",
+      "02-20-2018.csv",
+      "02-21-2018.csv",
+      "02-22-2018.csv",
+      "02-23-2018.csv",
+      "02-28-2018.csv",
+      "03-01-2018.csv",
+      "03-02-2018.csv"
+    ]
+  },
+  "recovered_hash_rule": {
+    "dtype_contract": {
+      "float64_features": 37,
+      "int64_features": 41
+    },
+    "feature_scope": "original_78",
+    "function": "pd.util.hash_pandas_object",
+    "index": false,
+    "matching_semantics": "Frozen train/validation uint64 hash-set membership only.",
+    "status": "EXACT_HASH_SET_RULE_RECOVERED_ORDERING_NOT_REQUIRED"
+  },
+  "repository_head": "468e1d2ec787f7f25534ea41dfa948cf5d2ec6c0",
+  "scientific_boundary": {
+    "authorized_train_membership_used": true,
+    "authorized_validation_membership_used": true,
+    "holdout_feature_hashes_accessed": 0,
+    "holdout_feature_values_materialized": 0,
+    "holdout_indices_accessed": 0,
+    "holdout_membership_inferred": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "raw_attack_categories_read": 0,
+    "raw_labels_read": 0,
+    "raw_predictive_feature_files_read": 10,
+    "sequences_constructed": 0,
+    "snapshot_features_constructed": 0,
+    "temporal_windows_constructed": 0
+  },
+  "scientific_interpretation": {
+    "ambiguous_hashes_disambiguated": false,
+    "feature_hash_can_be_used_as_universal_unique_timestamp_identifier": false,
+    "labels_used_for_mapping": false,
+    "model_outputs_used_for_mapping": false,
+    "raw_row_order_used_for_mapping": false,
+    "temporal_model_authorized": false,
+    "unambiguous_temporal_subset_exists": true
+  },
+  "stage": "18.1K",
+  "status": "GLOBAL_NON_HOLDOUT_TEMPORAL_MAPPING_AUDITED",
+  "temporal_mapping": {
+    "authorized_hashes": 192521,
+    "hashes_seen_in_multiple_source_files": 18468,
+    "mapping_feasibility_state": "HIGH_COVERAGE_UNAMBIGUOUS_TEMPORAL_SUBSET_EXISTS",
+    "match_rate": 1.0,
+    "matched_hashes": 192521,
+    "multiple_temporal_bin_hashes": 28170,
+    "multiple_temporal_bin_rate_among_matched": 0.14632169997039285,
+    "unique_temporal_bin_hashes": 164351,
+    "unique_temporal_bin_rate_all_authorized": 0.8536783000296072,
+    "unique_temporal_bin_rate_among_matched": 0.8536783000296072,
+    "unmatched_hashes": 0
+  },
+  "upstream_evidence": {
+    "stage18_1i_result_sha256": "13a71c1ee66bdec517e33056145b2035ebe8cb9beb1a0570cb704e415bf112d1",
+    "stage18_1j_result_sha256": "768de3dfcd4842f6ca2443ade97f57ac74f82221d546b3116a53d5f74ccf0ec0"
+  }
+}

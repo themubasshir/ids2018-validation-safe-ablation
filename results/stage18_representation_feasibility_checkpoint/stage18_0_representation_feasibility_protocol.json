@@ -1,0 +1,197 @@
+{
+  "anti_posthoc_policy": {
+    "change_feasibility_threshold_after_audit": false,
+    "choose_representation_by_best_validation_score": false,
+    "invent_missing_structure": false,
+    "try_multiple_arbitrary_graphs_then_keep_best": false,
+    "try_multiple_arbitrary_image_layouts_then_keep_best": false,
+    "try_multiple_arbitrary_sequence_definitions_then_keep_best": false,
+    "use_holdout_to_rescue_architecture": false,
+    "use_stage17_xai_to_define_graph_edges": false,
+    "use_stage17_xai_to_design_spatial_layout": false
+  },
+  "audit_order": [
+    {
+      "candidate": "Temporal / MTemporal Transformer",
+      "name": "Temporal representation audit",
+      "stage": "18.1"
+    },
+    {
+      "candidate": "Vision Transformer (ViT)",
+      "name": "Vision representation audit",
+      "stage": "18.2"
+    },
+    {
+      "candidate": "Graph Transformer",
+      "name": "Graph representation audit",
+      "stage": "18.3"
+    }
+  ],
+  "authorization_policy": {
+    "audit_must_precede_training": true,
+    "each_candidate_judged_independently": true,
+    "new_architecture_holdout_access_before_selection": false,
+    "stage18_holdout_openings_authorized": 0,
+    "supervisor_requested_architecture_can_be_rejected": true,
+    "supported_with_constraints_requires_frozen_constraints": true,
+    "unsupported_representation_training_forbidden": true,
+    "valid_outcomes": [
+      "SUPPORTED",
+      "SUPPORTED_WITH_CONSTRAINTS",
+      "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS"
+    ],
+    "validation_accuracy_cannot_override_rejection": true
+  },
+  "created_at_utc": "2026-08-07T17:12:42.440178+00:00",
+  "evidence_policy": {
+    "assumed_row_order_forbidden": true,
+    "field_presence_must_be_verified": true,
+    "field_semantics_must_be_documented": true,
+    "missing_field_may_not_be_imputed_as_structure": true,
+    "rejected_candidate_must_record_reason": true,
+    "representation_decision_must_be_machine_readable": true,
+    "representation_decision_requires_human_readable_summary": true,
+    "source_provenance_must_be_recorded": true
+  },
+  "graph_protocol": {
+    "audit_questions": [
+      "Are source/destination entity identifiers recoverable?",
+      "Are endpoint ports or session fields recoverable?",
+      "Can observed flows define genuine graph edges?",
+      "Are timestamps available if dynamic graphs are proposed?",
+      "Can graph construction preserve split isolation?",
+      "Can cross-split shared-node leakage be controlled?"
+    ],
+    "authorization_rule": "Graph Transformer training is permitted only after node and edge semantics are explicitly documented and leakage-safe graph construction is demonstrated.",
+    "candidate": "Graph Transformer",
+    "prohibited_shortcuts": [
+      "Creating k-nearest-neighbor edges between flows solely because their feature vectors are close.",
+      "Creating arbitrary fully connected graphs.",
+      "Using labels to connect attack flows together.",
+      "Using prediction similarity to define edges.",
+      "Building one global graph across all dataset splits without a leakage analysis.",
+      "Treating each numerical feature as a graph node without a defensible relational interpretation."
+    ],
+    "required_evidence": [
+      "A defensible node definition must be available, such as hosts, IP endpoints, endpoint-port entities, sessions, or another documented network entity.",
+      "A defensible edge relation must be recoverable from original flow semantics.",
+      "Graph edges must correspond to observed network relationships rather than feature-vector similarity chosen post hoc.",
+      "If timestamps are required for dynamic graph construction, authentic temporal information must also pass the temporal feasibility audit.",
+      "Graphs must be constructed without labels determining nodes, edges, components, or neighborhoods.",
+      "Train/validation/holdout isolation must be defined before graph construction.",
+      "Graph construction must address whether shared nodes across splits could leak structural information."
+    ],
+    "scientific_question": "Does the available IDS2018 evidence contain entities and relationships from which a network graph can be reconstructed without inventing edges?"
+  },
+  "next_permitted_action": "Git-anchor this Stage 18.0 protocol. After remote verification, Stage 18.1 may perform the temporal representation audit without training a model.",
+  "objective": "Determine whether Temporal/MTemporal Transformer, Vision Transformer, and Graph Transformer have scientifically defensible representations in the available IDS2018 evidence before any model implementation.",
+  "repository_parent_commit": "1eb3c0eb0dbdd2c45d3e0a5837ab2acea11b7685",
+  "scientific_boundary": {
+    "classical_holdout_openings": 0,
+    "dataset_reads": 0,
+    "dataset_transformations": 0,
+    "graphs_constructed": 0,
+    "hyperparameter_searches": 0,
+    "images_constructed": 0,
+    "model_fits": 0,
+    "model_inference_events": 0,
+    "representation_feasibility_decisions": 0,
+    "sequences_constructed": 0,
+    "transformer_holdout_openings": 0
+  },
+  "split_policy": {
+    "classical_holdout": "PERMANENTLY CLOSED",
+    "holdout_needed_for_feasibility": false,
+    "representation_feasibility_source_priority": [
+      "repository metadata and frozen preprocessing records",
+      "training/validation-safe artifacts",
+      "raw source metadata only when required to determine whether authentic representation fields exist"
+    ],
+    "representation_rules_must_be_frozen_before_training": true,
+    "training_only_fit_for_learned_preprocessing": true,
+    "transformer_holdout": "PERMANENTLY CLOSED FOR REPRESENTATION AUDITS",
+    "validation_may_evaluate_after_representation_freeze": true
+  },
+  "stage": "18.0",
+  "status": "REPRESENTATION_FEASIBILITY_RULES_LOCKED_BEFORE_FIRST_ARCHITECTURE_AUDIT",
+  "temporal_protocol": {
+    "audit_questions": [
+      "Are authentic timestamps available?",
+      "Is original chronological order recoverable?",
+      "Was temporal order destroyed by prior balancing?",
+      "Can a meaningful sequence grouping key be recovered?",
+      "Can sequences be constructed independently inside splits?",
+      "Can causal past-only windows be guaranteed?"
+    ],
+    "authorization_rule": "Training a temporal architecture is permitted only after the temporal audit documents a genuine ordered representation and leakage-safe sequence rule.",
+    "candidate": "Temporal / MTemporal Transformer",
+    "prohibited_shortcuts": [
+      "Treating arbitrary balanced-dataset row order as time.",
+      "Sorting by non-temporal numerical features to manufacture sequences.",
+      "Creating windows that span split boundaries.",
+      "Using labels or prediction outcomes to define sequence membership.",
+      "Choosing sequence length because it maximizes validation performance before the representation itself is justified."
+    ],
+    "required_evidence": [
+      "A timestamp, capture-order identifier, or other documented temporal ordering field must be recoverable with provenance.",
+      "Temporal order must represent actual network observation order rather than current CSV row position unless row order itself is proven to preserve capture order.",
+      "A scientifically meaningful rule for assigning flows to sequences must be identifiable.",
+      "Any grouping field used to build sequences must have network meaning, such as an endpoint, connection/session identity, capture stream, or another documented interaction unit.",
+      "Sequence construction must not use binary labels or attack categories to group or order flows.",
+      "Sequences must not cross train, validation, or holdout boundaries.",
+      "A sequence must not include future observations when predicting an earlier observation."
+    ],
+    "scientific_question": "Does the available IDS2018 evidence preserve enough authentic temporal information to form ordered flow sequences without inventing a sequence structure?"
+  },
+  "universal_rules": {
+    "arbitrary_dimensional_reshaping_forbidden": true,
+    "arbitrary_feature_reordering_forbidden": true,
+    "architecture_must_not_be_forced": true,
+    "cross_split_structure_leakage_forbidden": true,
+    "future_information_leakage_forbidden": true,
+    "holdout_may_not_be_used_for_feasibility": true,
+    "holdout_may_not_be_used_for_representation_design": true,
+    "manual_case_selection_forbidden": true,
+    "performance_cannot_justify_representation": true,
+    "posthoc_representation_search_for_performance_forbidden": true,
+    "representation_before_architecture": true,
+    "target_label_may_not_define_representation_structure": true,
+    "unsupported_architecture_may_be_rejected": true
+  },
+  "upstream_stage17_closure": {
+    "path": "results/stage17_attention_explainability_checkpoint/stage17_final_scientific_closure.json",
+    "sha256": "3be2d5e80c1542f58d9b471e5b5b8ab97b5d266cc39d6aaa16adea96806c5b6e"
+  },
+  "valid_feasibility_outcomes": {
+    "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS": "The available evidence does not support a defensible representation. The architecture must not be forced into the study merely to increase model count.",
+    "SUPPORTED": "The required representation exists naturally or can be reconstructed from documented source fields without introducing arbitrary structure, leakage, or unverifiable assumptions.",
+    "SUPPORTED_WITH_CONSTRAINTS": "The representation is scientifically defensible only under explicitly frozen construction rules and limitations."
+  },
+  "vit_protocol": {
+    "audit_questions": [
+      "Is a published or source-native traffic-image representation recoverable?",
+      "Do image axes have network semantics?",
+      "Does local patch adjacency have meaning?",
+      "Can representation construction avoid label-driven ordering?",
+      "Can the mapping be reproduced deterministically?"
+    ],
+    "authorization_rule": "ViT training is permitted only when a semantically meaningful 2-D traffic representation can be documented. Arbitrary tabular-to-image reshaping results in NOT_SUPPORTED_BY_CURRENT_ARTIFACTS.",
+    "candidate": "Vision Transformer (ViT)",
+    "prohibited_shortcuts": [
+      "Reshaping 70 tabular features into an arbitrary 2-D grid.",
+      "Padding the 70-feature vector merely to obtain a square or rectangular image.",
+      "Sorting features by SHAP, IG, attention, correlation, or model performance and treating the resulting order as spatial structure.",
+      "Duplicating features to fill pixels.",
+      "Creating RGB channels without network-semantic meaning.",
+      "Calling a tabular feature matrix an image only because a ViT implementation accepts it."
+    ],
+    "required_evidence": [
+      "A traffic-image representation must have a documented mapping from network observations to image axes or spatial neighborhoods.",
+      "Adjacent image cells or patches must represent meaningful relationships rather than arbitrary feature proximity.",
+      "Image dimensions and channel definitions must follow a documented traffic representation rule.",
+      "The representation must be reproducible without using labels or validation performance to choose feature placement.",
+      "Any normalization or encoding must be fitted using training evidence only where fitting is required."
+    ],
+    "scientific_question": "Does the available network-flow evidence support a genuine two-dimensional representation whose spatial arrangement has defensible semantic meaning?"
+  }
+}

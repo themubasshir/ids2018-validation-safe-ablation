@@ -1,0 +1,196 @@
+{
+  "audit": {
+    "component_probability_vectors": 2,
+    "fixed_threshold_strategy_evaluations": 2,
+    "holdout_attack": 13175,
+    "holdout_benign": 33674,
+    "holdout_inference_rerun_during_stage16_6c": false,
+    "holdout_metrics_recomputed_from_raw_data_during_stage16_6c": false,
+    "holdout_openings": 1,
+    "holdout_rows": 46849,
+    "model_fits": 0,
+    "model_retraining": 0,
+    "post_holdout_strategy_selection_events": 0,
+    "strategy_probability_vectors": 2,
+    "threshold_searches": 0,
+    "threshold_sweeps": 0,
+    "transformer_holdout_rerun_during_stage16_6c": false,
+    "weight_searches": 0
+  },
+  "classical_vs_frozen_transformer": {
+    "classical_minus_transformer_deltas": {
+      "accuracy": 0.005485709406817696,
+      "brier_score": -0.015016005724781824,
+      "f1": 0.014478155094755252,
+      "f2": 0.02835039236797443,
+      "fnr": -0.03574952561669828,
+      "fpr": 0.006355051374947994,
+      "log_loss": -0.047987154378533486,
+      "mcc": 0.012319279299239372,
+      "pr_auc": 0.01860518856073068,
+      "precision": -0.0190405883941851,
+      "recall": 0.03574952561669831,
+      "roc_auc": 0.014640499333997914
+    },
+    "classical_strategy": "ENS_LGBM_XGB_EQUAL",
+    "classical_threshold": 0.46,
+    "comparison_table": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_6c_classical_vs_transformer_holdout_comparison.csv",
+      "sha256": "0125b4aaa2dee6a2f5ca325f93082c129d9dd058c613c55287e0b9315f4a5d3b"
+    },
+    "comparison_type": "descriptive same-partition cross-family comparison; not a post-holdout selection event",
+    "interpretation": {
+      "classical_strategy_reranked_against_transformer": false,
+      "classical_strengths": "The frozen classical ensemble provides higher recall, F1, F2, MCC, ROC-AUC, PR-AUC, and better probability-error scores on this holdout.",
+      "overall_claim": "The result demonstrates a meaningful operating trade-off rather than a basis for post-holdout model selection. The classical ensemble improves detection coverage and aggregate discrimination, whereas the Transformer favors precision and false-positive control.",
+      "transformer_rerun": false,
+      "transformer_strengths": "The frozen Transformer is more conservative, providing higher precision and substantially lower false-positive rate."
+    },
+    "same_duplicate_safe_holdout": {
+      "attack": 13175,
+      "benign": 33674,
+      "rows": 46849,
+      "verified_from_committed_transformer_summary": true
+    },
+    "transformer_checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "transformer_metrics_source": {
+      "path": "results/stage15_transformer_checkpoint/stage15_6a_holdout_ensemble_metrics.json",
+      "sha256": "8f4f314f7605e19bf5528cd3916bfd040c8db376e09de152b00e369370efcfb9"
+    },
+    "transformer_strategy": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+    "transformer_threshold": 0.73
+  },
+  "final_classical_strategy": {
+    "confusion_matrix": {
+      "false_negative": 2570,
+      "false_positive": 307,
+      "true_negative": 33367,
+      "true_positive": 10605
+    },
+    "holdout_metrics": {
+      "accuracy": 0.9385899378855472,
+      "brier_score": 0.0486024764016729,
+      "f1": 0.8805579773321709,
+      "f2": 0.8335691378985097,
+      "fnr": 0.1950664136622391,
+      "fpr": 0.0091168260378927,
+      "log_loss": 0.1622412313057744,
+      "mcc": 0.8464721203170917,
+      "pr_auc": 0.947391385608797,
+      "precision": 0.9718658357771262,
+      "recall": 0.8049335863377609,
+      "roc_auc": 0.9690025491657424
+    },
+    "members": [
+      "LIGHTGBM / LGBM_11 / seed42 / weight0.5",
+      "XGBOOST / XGB_11 / seed42 / weight0.5"
+    ],
+    "operating_threshold": 0.46,
+    "remains_final_strategy": true,
+    "strategy_id": "ENS_LGBM_XGB_EQUAL",
+    "strategy_status": "SELECTED_AND_FROZEN_BEFORE_HOLDOUT"
+  },
+  "final_scientific_policy": {
+    "additional_classical_holdout_openings_allowed": false,
+    "additional_classical_threshold_search_allowed": false,
+    "additional_classical_weight_search_allowed": false,
+    "classical_holdout_opening_consumed": true,
+    "classical_strategy_selection_complete": true,
+    "final_classical_strategy": "ENS_LGBM_XGB_EQUAL",
+    "post_holdout_retraining_allowed": false,
+    "post_holdout_strategy_switch_allowed": false,
+    "stage16_complete_after_git_anchor": true,
+    "transformer_holdout_rerun_allowed_for_selection": false
+  },
+  "frozen_at_utc": "2026-08-07T15:50:14.953019+00:00",
+  "holdout_artifact_identities": {
+    "X_holdout_sha256": "f40279ee62e36b5750c3d25614fe0a50718c73799dc42117d975899a2a17c548",
+    "holdout_indices_sha256": "8c7bfbd7068b06eb2b4b538b3a71b140f5cfeeb49cba28550cac384a91dc139e",
+    "stage16_6b_artifact_manifest_sha256": "0cd967dd00d35c0498d03280cec9840cdc913c28e05783fd131a7e6dd8467b5d",
+    "stage16_6b_result_sha256": "732c50629c20768e49ce0a8deed489d0cab1382bd33119d7e5e4eaa981a72c67",
+    "y_holdout_sha256": "b167bd15454cce5e21e358bb83089e5f99ab98fdbb2b26953393b7c611d28b38"
+  },
+  "next_permitted_action": "Git-anchor this Stage 16.6C freeze. After remote verification, Stage 16 classical selection and holdout evaluation are complete. Subsequent work must not reopen the classical holdout for selection.",
+  "operational_validation_to_holdout": {
+    "gap_definition": "holdout metric minus seed-42 operational validation metric",
+    "interpretation": "The fixed operational ensemble shows a very small validation-to-holdout F1 difference, supporting stable duplicate-safe generalization without post-holdout tuning.",
+    "metric_gaps": {
+      "f1": -0.0009571587135690507,
+      "f2": -0.002006203241527116,
+      "fpr": -0.0005725966493563012,
+      "mcc": -0.0005852552417596746,
+      "pr_auc": 0.0008560264402903695,
+      "recall": -0.0025860545152133207
+    },
+    "operating_threshold": 0.46,
+    "validation_source": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_seed42_operational_metrics.csv"
+  },
+  "primary_vs_single_diagnostic": {
+    "difference_definition": "final ensemble holdout metric minus single LightGBM holdout metric",
+    "f1_interpretation": "Single LightGBM has a very small numerical holdout F1 advantage. This is descriptive only and cannot reverse the strategy selected before holdout access.",
+    "metric_deltas": {
+      "accuracy": -4.2690345578355604e-05,
+      "brier_score": -7.005027410950104e-05,
+      "f1": -0.0003894739080461118,
+      "f2": -0.00170114510554209,
+      "fnr": 0.0024288425047439,
+      "fpr": -0.0008908950525628005,
+      "log_loss": 0.00013903859661590356,
+      "mcc": 3.286651194600587e-05,
+      "pr_auc": 0.00015268626813180752,
+      "precision": 0.0025747842006725863,
+      "recall": -0.0024288425047438444,
+      "roc_auc": -3.2763074096497924e-05
+    },
+    "strategy_changed_after_holdout": false
+  },
+  "repository_parent_commit": "9c6a9b261c2c27583713ff61326da61303d67f05",
+  "secondary_diagnostic_reference": {
+    "confusion_matrix": {
+      "false_negative": 2538,
+      "false_positive": 337,
+      "true_negative": 33337,
+      "true_positive": 10637
+    },
+    "eligible_to_replace_primary": false,
+    "holdout_metrics": {
+      "accuracy": 0.9386326282311256,
+      "brier_score": 0.0486725266757824,
+      "f1": 0.880947451240217,
+      "f2": 0.8352702830040518,
+      "fnr": 0.1926375711574952,
+      "fpr": 0.0100077210904555,
+      "log_loss": 0.1621021927091585,
+      "mcc": 0.8464392538051457,
+      "pr_auc": 0.9472386993406652,
+      "precision": 0.9692910515764536,
+      "recall": 0.8073624288425048,
+      "roc_auc": 0.9690353122398389
+    },
+    "operating_threshold": 0.47,
+    "role": "REPORTING_ONLY_DIAGNOSTIC_REFERENCE",
+    "strategy_id": "SINGLE_LIGHTGBM"
+  },
+  "stage": "16.6C",
+  "status": "FINAL_CLASSICAL_HOLDOUT_RESULT_FROZEN_AFTER_SINGLE_AUTHORIZED_OPENING",
+  "upstream_locks": {
+    "stage16_5c_final_classical_strategy": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_5c_final_classical_strategy_lock.json",
+      "sha256": "1c119dc730f29e9d673eb1ef7d8bc714a82822a3a12c3d7212030e2050d23256"
+    },
+    "stage16_6a_holdout_authorization": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_6a_one_time_holdout_authorization_lock.json",
+      "sha256": "370c5ba2fa23698712f696e5dd496b64984ab5ae230b1db929cf348811519b40"
+    },
+    "stage16_6b_repository_package_manifest": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_repository_package_manifest.json",
+      "sha256": "b53f5236bfe81d0b2834c9c86569dc6f89465c13e2b886f88034a8a87e09a70f"
+    }
+  }
+}

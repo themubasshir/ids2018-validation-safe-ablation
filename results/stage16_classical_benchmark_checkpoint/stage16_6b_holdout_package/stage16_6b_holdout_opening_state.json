@@ -1,0 +1,23 @@
+{
+  "X_holdout_sha256": "f40279ee62e36b5750c3d25614fe0a50718c73799dc42117d975899a2a17c548",
+  "authorization_sha256": "370c5ba2fa23698712f696e5dd496b64984ab5ae230b1db929cf348811519b40",
+  "authorized_holdout_openings": 1,
+  "completed_at_utc": "2026-08-07T15:42:53.627181+00:00",
+  "component_probability_vectors_generated": 2,
+  "evaluation_complete": true,
+  "fixed_threshold_strategy_evaluations": 2,
+  "holdout_features_materialized": true,
+  "holdout_indices_materialized": true,
+  "holdout_indices_sha256": "8c7bfbd7068b06eb2b4b538b3a71b140f5cfeeb49cba28550cac384a91dc139e",
+  "holdout_labels_materialized": true,
+  "holdout_openings_performed": 1,
+  "model_fits": 0,
+  "repository_head": "9c6a9b261c2c27583713ff61326da61303d67f05",
+  "stage": "16.6B",
+  "started_at_utc": "2026-08-07T15:42:50.922858+00:00",
+  "status": "HOLDOUT_OPENED_ONCE_AND_AUTHORIZED_EVALUATION_COMPLETE",
+  "strategy_probability_vectors_generated": 2,
+  "threshold_sweeps": 0,
+  "weight_searches": 0,
+  "y_holdout_sha256": "b167bd15454cce5e21e358bb83089e5f99ab98fdbb2b26953393b7c611d28b38"
+}

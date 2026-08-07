@@ -1,0 +1,92 @@
+{
+  "authorization": {
+    "path": "results/stage16_classical_benchmark_checkpoint/stage16_6a_one_time_holdout_authorization_lock.json",
+    "sha256": "370c5ba2fa23698712f696e5dd496b64984ab5ae230b1db929cf348811519b40"
+  },
+  "copied_file_count": 10,
+  "files": [
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_X_holdout_raw_float32.npy",
+      "sha256": "f40279ee62e36b5750c3d25614fe0a50718c73799dc42117d975899a2a17c548",
+      "size_bytes": 13117848,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_X_holdout_raw_float32.npy"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_artifact_manifest.json",
+      "sha256": "0cd967dd00d35c0498d03280cec9840cdc913c28e05783fd131a7e6dd8467b5d",
+      "size_bytes": 2130,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_artifact_manifest.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_component_probabilities.npz",
+      "sha256": "bde1118cf4013228ccb1f122c4b3500c2651adad5a0a64d52f4f8ac7233ae06b",
+      "size_bytes": 525010,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_component_probabilities.npz"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_holdout_indices_int64.npy",
+      "sha256": "8c7bfbd7068b06eb2b4b538b3a71b140f5cfeeb49cba28550cac384a91dc139e",
+      "size_bytes": 374920,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_holdout_indices_int64.npy"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_holdout_metrics.csv",
+      "sha256": "ead0ba52ab33085c2963c3b2c380ab289bf4b51609bcfd665fe66a8bd35cfb4a",
+      "size_bytes": 928,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_holdout_metrics.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_holdout_opening_state.json",
+      "sha256": "8398210ffc5f6e838883c22718dcc76b15372061c1fa3dbe76e5f1cd721e2c6e",
+      "size_bytes": 1071,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_holdout_opening_state.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_holdout_result.json",
+      "sha256": "732c50629c20768e49ce0a8deed489d0cab1382bd33119d7e5e4eaa981a72c67",
+      "size_bytes": 3941,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_holdout_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_strategy_predictions.npz",
+      "sha256": "6eaaa0d646d009ec7b6e305e3241e58445e554a555581125f49a4dd025334169",
+      "size_bytes": 13978,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_strategy_predictions.npz"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_strategy_probabilities.npz",
+      "sha256": "36a8ba5c2cd781783ec10edd70545e17b0362ea30d2064798f68cf950a3a1c9b",
+      "size_bytes": 671665,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_strategy_probabilities.npz"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_6b_holdout_package/stage16_6b_y_holdout_int8.npy",
+      "sha256": "b167bd15454cce5e21e358bb83089e5f99ab98fdbb2b26953393b7c611d28b38",
+      "size_bytes": 46977,
+      "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout/stage16_6b_y_holdout_int8.npy"
+    }
+  ],
+  "generated_at_utc": "2026-08-07T15:50:14.951706+00:00",
+  "holdout_evaluation": {
+    "holdout_attack": 13175,
+    "holdout_benign": 33674,
+    "holdout_openings_performed": 1,
+    "holdout_rows": 46849,
+    "model_fits": 0,
+    "model_retraining": 0,
+    "post_holdout_strategy_selections": 0,
+    "threshold_searches": 0,
+    "threshold_sweeps": 0,
+    "weight_searches": 0
+  },
+  "repository_parent_commit": "9c6a9b261c2c27583713ff61326da61303d67f05",
+  "source_evidence": {
+    "runtime_directory": "/kaggle/working/stage16_classical_benchmark/stage16_6b_one_time_holdout",
+    "source_file_count": 10,
+    "source_manifest_artifact_count": 9,
+    "stage16_6b_artifact_manifest_sha256": "0cd967dd00d35c0498d03280cec9840cdc913c28e05783fd131a7e6dd8467b5d",
+    "stage16_6b_result_sha256": "732c50629c20768e49ce0a8deed489d0cab1382bd33119d7e5e4eaa981a72c67"
+  },
+  "stage": "16.6C",
+  "status": "ONE_TIME_STAGE16_6B_HOLDOUT_EVIDENCE_PACKAGED_FOR_IMMUTABLE_FREEZE"
+}

@@ -1,0 +1,60 @@
+{
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "relative_path": "stage16_6b_X_holdout_raw_float32.npy",
+      "sha256": "f40279ee62e36b5750c3d25614fe0a50718c73799dc42117d975899a2a17c548",
+      "size_bytes": 13117848
+    },
+    {
+      "relative_path": "stage16_6b_component_probabilities.npz",
+      "sha256": "bde1118cf4013228ccb1f122c4b3500c2651adad5a0a64d52f4f8ac7233ae06b",
+      "size_bytes": 525010
+    },
+    {
+      "relative_path": "stage16_6b_holdout_indices_int64.npy",
+      "sha256": "8c7bfbd7068b06eb2b4b538b3a71b140f5cfeeb49cba28550cac384a91dc139e",
+      "size_bytes": 374920
+    },
+    {
+      "relative_path": "stage16_6b_holdout_metrics.csv",
+      "sha256": "ead0ba52ab33085c2963c3b2c380ab289bf4b51609bcfd665fe66a8bd35cfb4a",
+      "size_bytes": 928
+    },
+    {
+      "relative_path": "stage16_6b_holdout_opening_state.json",
+      "sha256": "8398210ffc5f6e838883c22718dcc76b15372061c1fa3dbe76e5f1cd721e2c6e",
+      "size_bytes": 1071
+    },
+    {
+      "relative_path": "stage16_6b_holdout_result.json",
+      "sha256": "732c50629c20768e49ce0a8deed489d0cab1382bd33119d7e5e4eaa981a72c67",
+      "size_bytes": 3941
+    },
+    {
+      "relative_path": "stage16_6b_strategy_predictions.npz",
+      "sha256": "6eaaa0d646d009ec7b6e305e3241e58445e554a555581125f49a4dd025334169",
+      "size_bytes": 13978
+    },
+    {
+      "relative_path": "stage16_6b_strategy_probabilities.npz",
+      "sha256": "36a8ba5c2cd781783ec10edd70545e17b0362ea30d2064798f68cf950a3a1c9b",
+      "size_bytes": 671665
+    },
+    {
+      "relative_path": "stage16_6b_y_holdout_int8.npy",
+      "sha256": "b167bd15454cce5e21e358bb83089e5f99ab98fdbb2b26953393b7c611d28b38",
+      "size_bytes": 46977
+    }
+  ],
+  "authorization_sha256": "370c5ba2fa23698712f696e5dd496b64984ab5ae230b1db929cf348811519b40",
+  "generated_at_utc": "2026-08-07T15:42:53.676455+00:00",
+  "holdout_openings_performed": 1,
+  "model_fits": 0,
+  "repository_head": "9c6a9b261c2c27583713ff61326da61303d67f05",
+  "stage": "16.6B",
+  "status": "ONE_TIME_HOLDOUT_EVIDENCE_COMPLETE",
+  "strategy_selection_events": 0,
+  "threshold_sweeps": 0,
+  "weight_searches": 0
+}

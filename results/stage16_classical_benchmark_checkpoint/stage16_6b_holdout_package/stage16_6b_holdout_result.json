@@ -1,0 +1,112 @@
+{
+  "authorization_sha256": "370c5ba2fa23698712f696e5dd496b64984ab5ae230b1db929cf348811519b40",
+  "completed_at_utc": "2026-08-07T15:42:53.582279+00:00",
+  "execution_counts": {
+    "component_probability_vectors": 2,
+    "fixed_threshold_strategy_evaluations": 2,
+    "model_fits": 0,
+    "model_retraining": 0,
+    "strategy_probability_vectors": 2,
+    "strategy_selection_events": 0,
+    "threshold_searches": 0,
+    "threshold_sweeps": 0,
+    "weight_searches": 0
+  },
+  "holdout_opening": {
+    "X_holdout_sha256": "f40279ee62e36b5750c3d25614fe0a50718c73799dc42117d975899a2a17c548",
+    "attack": 13175,
+    "benign": 33674,
+    "features": 70,
+    "holdout_indices_sha256": "8c7bfbd7068b06eb2b4b538b3a71b140f5cfeeb49cba28550cac384a91dc139e",
+    "openings_performed": 1,
+    "rows": 46849,
+    "y_holdout_sha256": "b167bd15454cce5e21e358bb83089e5f99ab98fdbb2b26953393b7c611d28b38"
+  },
+  "post_holdout_policy": {
+    "primary_remains_regardless_of_relative_holdout_performance": true,
+    "primary_strategy_remains": "ENS_LGBM_XGB_EQUAL",
+    "retraining_performed": false,
+    "strategy_changed": false,
+    "strategy_reranking_performed": false,
+    "threshold_changed": false,
+    "threshold_search_performed": false,
+    "weights_changed": false
+  },
+  "primary_final_strategy": {
+    "holdout_metrics": {
+      "accuracy": 0.9385899378855472,
+      "balanced_accuracy": 0.8979083801499341,
+      "brier_score": 0.048602476401672916,
+      "f1": 0.8805579773321709,
+      "f2": 0.8335691378985097,
+      "false_negative": 2570,
+      "false_positive": 307,
+      "fnr": 0.1950664136622391,
+      "fpr": 0.009116826037892736,
+      "log_loss": 0.1622412313057744,
+      "mcc": 0.8464721203170917,
+      "operating_threshold": 0.46,
+      "pr_auc": 0.947391385608797,
+      "precision": 0.9718658357771262,
+      "recall": 0.8049335863377609,
+      "roc_auc": 0.9690025491657424,
+      "role": "PRIMARY_FINAL_CLASSICAL_STRATEGY",
+      "specificity": 0.9908831739621072,
+      "strategy_id": "ENS_LGBM_XGB_EQUAL",
+      "true_negative": 33367,
+      "true_positive": 10605
+    },
+    "members": [
+      "LIGHTGBM / LGBM_11 / seed42",
+      "XGBOOST / XGB_11 / seed42"
+    ],
+    "operating_threshold": 0.46,
+    "remains_final_strategy": true,
+    "role": "PRIMARY_FINAL_CLASSICAL_STRATEGY_FROZEN_BEFORE_HOLDOUT",
+    "strategy_id": "ENS_LGBM_XGB_EQUAL",
+    "weights": {
+      "LIGHTGBM": 0.5,
+      "XGBOOST": 0.5
+    }
+  },
+  "repository_head": "9c6a9b261c2c27583713ff61326da61303d67f05",
+  "scientific_boundary": {
+    "additional_holdout_selection_allowed": false,
+    "additional_threshold_sweep_allowed": false,
+    "additional_weight_search_allowed": false,
+    "one_time_holdout_evaluation_consumed": true,
+    "post_holdout_strategy_switch_allowed": false,
+    "stage16_6c_freeze_required": true
+  },
+  "secondary_diagnostic_reference": {
+    "eligible_to_replace_primary": false,
+    "holdout_metrics": {
+      "accuracy": 0.9386326282311255,
+      "balanced_accuracy": 0.8986773538760247,
+      "brier_score": 0.04867252667578245,
+      "f1": 0.880947451240217,
+      "f2": 0.8352702830040518,
+      "false_negative": 2538,
+      "false_positive": 337,
+      "fnr": 0.19263757115749525,
+      "fpr": 0.010007721090455545,
+      "log_loss": 0.16210219270915854,
+      "mcc": 0.8464392538051457,
+      "operating_threshold": 0.47,
+      "pr_auc": 0.9472386993406652,
+      "precision": 0.9692910515764535,
+      "recall": 0.8073624288425048,
+      "roc_auc": 0.9690353122398387,
+      "role": "SECONDARY_PREDECLARED_DIAGNOSTIC_REFERENCE",
+      "specificity": 0.9899922789095444,
+      "strategy_id": "SINGLE_LIGHTGBM",
+      "true_negative": 33337,
+      "true_positive": 10637
+    },
+    "operating_threshold": 0.47,
+    "role": "REPORTING_ONLY_DIAGNOSTIC_REFERENCE",
+    "strategy_id": "SINGLE_LIGHTGBM"
+  },
+  "stage": "16.6B",
+  "status": "ONE_TIME_CLASSICAL_HOLDOUT_BATCH_EVALUATED_ONCE_AWAITING_STAGE16_6C_FREEZE"
+}

@@ -1,0 +1,139 @@
+{
+  "audit": {
+    "candidate_expansion_performed": false,
+    "ensemble_probability_vectors": 18,
+    "holdout_accessed": false,
+    "model_fits": 0,
+    "stacking_performed": false,
+    "threshold_evaluations": 3258,
+    "verified_ensemble_probability_arithmetic": 18,
+    "verified_operating_points": 18,
+    "weight_optimization_performed": false
+  },
+  "comparison_with_frozen_single_lightgbm": {
+    "ensemble_mean_validation_f1": 0.881317405292694,
+    "interpretation": "The validation advantage over single LightGBM is extremely small and should be described as near-parity rather than a material performance improvement. Nevertheless, the precommitted ranking rule deterministically selects the ensemble.",
+    "mean_f1_delta": 3.9348446932985226e-05,
+    "mean_f2_delta": 0.0007000306845821314,
+    "mean_fpr_delta": 0.0005010499944737394,
+    "mean_pr_auc_delta": 0.00011580768884755788,
+    "mean_recall_delta": 0.0010662177328842892,
+    "selection_reason": "Stage 16.5A precommitted highest five-seed mean validation F1 as the first ranking criterion. ENS_LGBM_XGB_EQUAL has a positive mean-F1 advantage. Operational complexity was only a later tie-break criterion and therefore cannot override the observed F1 ordering.",
+    "single_model_mean_validation_f1": 0.881278056845761,
+    "single_model_strategy_id": "SINGLE_LIGHTGBM"
+  },
+  "final_classical_strategy": {
+    "classification_rule": "Predict attack when P_final >= 0.460; otherwise predict benign.",
+    "member_count": 2,
+    "members": [
+      {
+        "candidate_id": "LIGHTGBM",
+        "configuration_id": "LGBM_11",
+        "input_representation": "raw",
+        "model_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib",
+        "model_sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2",
+        "seed": 42,
+        "validation_probability_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_validation_probabilities/LIGHTGBM_tuned_validation_probabilities.npz",
+        "validation_probability_sha256": "ce6c1224b75c56a0c8e18ed5cf54eabd33fd3bfcc20611b1b8d9d875ec02262e",
+        "weight": 0.5
+      },
+      {
+        "candidate_id": "XGBOOST",
+        "configuration_id": "XGB_11",
+        "input_representation": "raw",
+        "model_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib",
+        "model_sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f",
+        "seed": 42,
+        "validation_probability_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_validation_probabilities/XGBOOST_tuned_validation_probabilities.npz",
+        "validation_probability_sha256": "ff594513657e46caff3eb6af80730400000e23381e9f760b4014e222d2468c11",
+        "weight": 0.5
+      }
+    ],
+    "operating_threshold": 0.46,
+    "operational_seed": 42,
+    "probability_combination_rule": "P_final = 0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "rethresholding_before_holdout": false,
+    "retraining_before_holdout": false,
+    "reweighting_before_holdout": false,
+    "strategy_id": "ENS_LGBM_XGB_EQUAL",
+    "strategy_type": "equal_weight_soft_voting_ensemble",
+    "threshold_grid": {
+      "count": 181,
+      "maximum": 0.95,
+      "minimum": 0.05,
+      "step": 0.005
+    },
+    "threshold_source": "Stage 16.5B seed-42 validation ensemble probability vector evaluated under the Stage 16.5A precommitted 181-threshold grid and frozen tie-break policy."
+  },
+  "five_seed_confirmation_result": {
+    "mean_selected_threshold": 0.458,
+    "mean_validation_f1": 0.881317405292694,
+    "mean_validation_f2": 0.8353706416892417,
+    "mean_validation_fpr": 0.00974836974542234,
+    "mean_validation_pr_auc": 0.9466415850304444,
+    "mean_validation_recall": 0.8073138795361018,
+    "std_validation_f1": 6.0220162172443385e-05
+  },
+  "frozen_at_utc": "2026-08-07T15:31:53.049392+00:00",
+  "holdout_embargo": {
+    "forbidden_before_stage16_6_authorization": [
+      "load holdout indices",
+      "load holdout features",
+      "load holdout labels",
+      "inspect holdout outcomes",
+      "generate holdout probabilities",
+      "generate holdout predictions",
+      "calculate holdout metrics",
+      "change ensemble membership",
+      "change ensemble weights",
+      "change preprocessing",
+      "change operating threshold",
+      "retrain component models"
+    ],
+    "holdout_accessed": false,
+    "holdout_features_loaded": false,
+    "holdout_indices_loaded": false,
+    "holdout_labels_loaded": false,
+    "holdout_metrics_generated": false,
+    "holdout_predictions_generated": false,
+    "next_permitted_stage": "Stage 16.6A explicit holdout authorization only after this Stage 16.5C freeze is Git-anchored."
+  },
+  "repository_parent_commit": "0a0153cdbc0529f5b61f0c110e37e74f6dc4f3b8",
+  "scientific_interpretation": {
+    "component_models_frozen": true,
+    "ensemble_family_frozen": true,
+    "final_classical_strategy_frozen": true,
+    "holdout_access_authorized": false,
+    "holdout_evaluation_completed": false,
+    "input_representation_frozen": true,
+    "operating_threshold_frozen": true,
+    "post_selection_retraining_allowed": false,
+    "post_selection_tuning_allowed": false,
+    "weights_frozen": true
+  },
+  "seed42_operational_validation_result": {
+    "f1": 0.8815151360457399,
+    "f2": 0.8355753411400368,
+    "fpr": 0.009689422687249,
+    "mcc": 0.8470573755588514,
+    "pr_auc": 0.9465353591685066,
+    "recall": 0.8075196408529742,
+    "threshold": 0.46
+  },
+  "stage": "16.5C",
+  "status": "FINAL_CLASSICAL_STRATEGY_FROZEN_BEFORE_HOLDOUT_AUTHORIZATION",
+  "upstream_locks": {
+    "stage16_4c_single_model_lock": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_4c_confirmation_selection_lock.json",
+      "sha256": "bbf9b3dbbab7298cd490d87d57b62a084d653f9aa416e556d47855224b4f6909"
+    },
+    "stage16_5a_ensemble_protocol": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_5a_ensemble_protocol_lock.json",
+      "sha256": "da1c2d9376ff7c6ee39b5e49ee4c9a44fa594c5dc65713b9b3db1921d20cb4c8"
+    },
+    "stage16_5b_repository_package_manifest": {
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_repository_package_manifest.json",
+      "sha256": "15eb001dc099f0ef26ff1795e688110906ca03c964501397cdcd4c8758052761"
+    }
+  }
+}

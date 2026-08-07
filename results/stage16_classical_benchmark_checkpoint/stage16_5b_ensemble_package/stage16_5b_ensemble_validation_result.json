@@ -1,0 +1,58 @@
+{
+  "artifacts": {
+    "all_threshold_sweeps": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_all_threshold_sweeps.csv",
+    "confirmation_seed_metrics": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_confirmation_seed_metrics.csv",
+    "ensemble_probabilities": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_ensemble_probabilities.npz",
+    "ensemble_ranking": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_ensemble_ranking.csv",
+    "ensemble_summary": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_ensemble_summary.csv",
+    "final_strategy_comparison": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_final_strategy_comparison.csv",
+    "seed42_operational_metrics": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_seed42_operational_metrics.csv"
+  },
+  "completed_at_utc": "2026-08-07T15:28:20.379732+00:00",
+  "ensemble_family_leader": {
+    "ensemble_id": "ENS_LGBM_XGB_EQUAL",
+    "mean_validation_f1": 0.881317405292694,
+    "mean_validation_f2": 0.8353706416892417,
+    "mean_validation_fpr": 0.009748369745422394,
+    "mean_validation_pr_auc": 0.9466415850304444,
+    "mean_validation_recall": 0.8073138795361018,
+    "member_count": 2,
+    "seed42_operational_f1": 0.8815151360457399,
+    "seed42_operational_pr_auc": 0.9465353591685066,
+    "seed42_operational_threshold": 0.46,
+    "std_validation_f1": 6.0220162172443385e-05
+  },
+  "execution_counts": {
+    "confirmation_ensemble_probability_vectors": 15,
+    "confirmation_threshold_evaluations": 2715,
+    "model_fits": 0,
+    "seed42_operational_probability_vectors": 3,
+    "seed42_threshold_evaluations": 543,
+    "thresholds_per_vector": 181,
+    "total_ensemble_probability_vectors": 18,
+    "total_threshold_evaluations": 3258
+  },
+  "important_boundary": "The Stage 16.5B ranking is a deterministic result of the precommitted Stage 16.5A protocol but is not yet the immutable final classical strategy. Stage 16.5C must audit and freeze it before any holdout authorization.",
+  "provisional_final_strategy_leader": "ENS_LGBM_XGB_EQUAL",
+  "repository_head": "0a0153cdbc0529f5b61f0c110e37e74f6dc4f3b8",
+  "scientific_constraints": {
+    "candidate_expansion_performed": false,
+    "confirmation_threshold_averaging_performed": false,
+    "holdout_accessed": false,
+    "meta_learning_performed": false,
+    "model_training_performed": false,
+    "stacking_performed": false,
+    "weight_optimization_performed": false
+  },
+  "stage": "16.5B",
+  "stage16_5a_protocol_sha256": "da1c2d9376ff7c6ee39b5e49ee4c9a44fa594c5dc65713b9b3db1921d20cb4c8",
+  "status": "PRECOMMITTED_ENSEMBLE_VALIDATION_COMPLETE_AWAITING_STAGE16_5C_FINAL_STRATEGY_FREEZE",
+  "validation_label_reconstruction": {
+    "exact_stage16_cache_identity": true,
+    "holdout_indices_loaded": false,
+    "validation_attack": 10692,
+    "validation_benign": 27143,
+    "validation_label_sha256": "b16e9950a97b2169f5d5e879173042ecc74186e4e85c0be50ba83003826f8463",
+    "validation_rows": 37835
+  }
+}

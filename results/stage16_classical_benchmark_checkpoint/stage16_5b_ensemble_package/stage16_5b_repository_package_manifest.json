@@ -1,0 +1,79 @@
+{
+  "copied_file_count": 10,
+  "files": [
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_all_threshold_sweeps.csv",
+      "sha256": "5e9cbe975d0208ae51fff47646c4fa46efcbcbfb3da9a7229028eafd018d57be",
+      "size_bytes": 864417,
+      "source_relative_path": "stage16_5b_all_threshold_sweeps.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_artifact_manifest.json",
+      "sha256": "58c9f9d2592d41f4dcfe7899f3ab024ae29f6656073845179d6942c70dcebe2a",
+      "size_bytes": 1998,
+      "source_relative_path": "stage16_5b_artifact_manifest.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_confirmation_seed_metrics.csv",
+      "sha256": "de38202525daf722c83cd03cd45c37f6c1b405bc6b8581e8bcd6a8be38bd6505",
+      "size_bytes": 5383,
+      "source_relative_path": "stage16_5b_confirmation_seed_metrics.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_ensemble_probabilities.npz",
+      "sha256": "3943e094152d622e4260c241cb7ad2f2b7223ff42e9f3b12dcfc8c1b3c8e35a3",
+      "size_bytes": 4583929,
+      "source_relative_path": "stage16_5b_ensemble_probabilities.npz"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_ensemble_ranking.csv",
+      "sha256": "23e6bb686a75748d70db323a99a9fceaf2b9aee898aded3a77ae2446fa2c9c4c",
+      "size_bytes": 3852,
+      "source_relative_path": "stage16_5b_ensemble_ranking.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_ensemble_summary.csv",
+      "sha256": "1f7c9550f9431e66c1292ede94cf10ccca5c21aac6bed88d05b6a7cc59baafe9",
+      "size_bytes": 3832,
+      "source_relative_path": "stage16_5b_ensemble_summary.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_ensemble_validation_result.json",
+      "sha256": "3f6d143441a035aed0f65ad6efe904ce951dfa4382b02c2b71e3a534fc54dedf",
+      "size_bytes": 3211,
+      "source_relative_path": "stage16_5b_ensemble_validation_result.json"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_final_strategy_comparison.csv",
+      "sha256": "2fc994f9453e64a99611a488adc6c0767ca6e42ecbf309a9eab9bee2bd18f236",
+      "size_bytes": 472,
+      "source_relative_path": "stage16_5b_final_strategy_comparison.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_seed42_operational_metrics.csv",
+      "sha256": "2a31b44ae955a682c470bb0a3f009a31fc2f4ecc4de91b1e93296843b953004d",
+      "size_bytes": 1298,
+      "source_relative_path": "stage16_5b_seed42_operational_metrics.csv"
+    },
+    {
+      "repository_path": "results/stage16_classical_benchmark_checkpoint/stage16_5b_ensemble_package/stage16_5b_validation_labels_int8.npy",
+      "sha256": "b16e9950a97b2169f5d5e879173042ecc74186e4e85c0be50ba83003826f8463",
+      "size_bytes": 37963,
+      "source_relative_path": "stage16_5b_validation_labels_int8.npy"
+    }
+  ],
+  "generated_at_utc": "2026-08-07T15:31:53.047892+00:00",
+  "holdout_accessed": false,
+  "repository_parent_commit": "0a0153cdbc0529f5b61f0c110e37e74f6dc4f3b8",
+  "stage": "16.5C",
+  "stage16_5a_protocol": {
+    "path": "results/stage16_classical_benchmark_checkpoint/stage16_5a_ensemble_protocol_lock.json",
+    "sha256": "da1c2d9376ff7c6ee39b5e49ee4c9a44fa594c5dc65713b9b3db1921d20cb4c8"
+  },
+  "stage16_5b_source_manifest": {
+    "artifact_count": 9,
+    "sha256": "58c9f9d2592d41f4dcfe7899f3ab024ae29f6656073845179d6942c70dcebe2a",
+    "source_path": "/kaggle/working/stage16_classical_benchmark/stage16_5b_ensemble_validation/stage16_5b_artifact_manifest.json"
+  },
+  "status": "STAGE16_5B_EVIDENCE_PACKAGED_BEFORE_HOLDOUT_AUTHORIZATION"
+}

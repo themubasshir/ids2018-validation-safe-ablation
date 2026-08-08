@@ -1,0 +1,34 @@
+{
+  "base_features": 78,
+  "coarse_shape_per_sample": [
+    20,
+    80
+  ],
+  "fine_shape_per_sample": [
+    60,
+    80
+  ],
+  "holdout_openings": 0,
+  "holdout_status": "CLOSED",
+  "medium_shape_per_sample": [
+    20,
+    80
+  ],
+  "models_trained": 0,
+  "next_authorized_step": "STAGE_19_3_SINGLE_SCALE_TEMPORAL_TRANSFORMER_DEVELOPMENT_TRAINING",
+  "parent_commit": "9f0a4c8414fa2fc01ae1bbf4c2d3240bc536645c",
+  "stage": "19.2B",
+  "status": "MTEMPORAL_DEVELOPMENT_INPUT_REPRESENTATION_FROZEN",
+  "thresholds_selected": 0,
+  "token_features": 80,
+  "train_materialized_seconds_used_for_scaler": 290729,
+  "train_negative": 258280,
+  "train_only_preprocessing": true,
+  "train_pos_weight": 10.739739698116345,
+  "train_positive": 24049,
+  "train_samples": 282329,
+  "validation_negative": 34838,
+  "validation_positive": 7162,
+  "validation_samples": 42000,
+  "zero_variance_features": 10
+}

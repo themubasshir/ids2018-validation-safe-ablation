@@ -1,0 +1,60 @@
+{
+  "aggregate_holdout_counts": {
+    "1970_dates_corrected": 0,
+    "eligible_seconds": 84000,
+    "embedded_headers_removed": 25,
+    "negative_seconds": 56498,
+    "positive_rate": 0.3274047619047619,
+    "positive_seconds": 27502,
+    "raw_rows": 1379700,
+    "strict_parse_failures": 0,
+    "traffic_rows": 1379675
+  },
+  "created_at_utc": "2026-08-08T16:28:40.679919+00:00",
+  "frozen_operating_points": {
+    "mtemporal_ids": 0.01,
+    "single_scale_temporal": 0.01,
+    "threshold_changes_after_capture": false
+  },
+  "holdout_sources": {
+    "files": [
+      "03-01-2018.csv",
+      "03-02-2018.csv"
+    ],
+    "maximum_authorized_raw_openings": 1,
+    "raw_opening": 1,
+    "source_dates": {
+      "03-01-2018.csv": "2018-03-01",
+      "03-02-2018.csv": "2018-03-02"
+    }
+  },
+  "models": {
+    "inference_performed": false,
+    "next_stage": "19.6B_FROZEN_MODEL_INFERENCE_FROM_COMMITTED_CAPTURE_ONLY",
+    "training_performed": false
+  },
+  "parent_commit": "786e03969d50fd2e6b161503e4e4649e3179b8b1",
+  "representation": {
+    "cross_day_context": false,
+    "empty_numeric_bins": "NAN_BEFORE_FROZEN_TRAIN_ONLY_IMPUTATION",
+    "flow_count_retained": true,
+    "numeric_predictors": 78,
+    "occupancy_retained": true,
+    "prediction_resolution_seconds": 1,
+    "raw_row_order_used": false,
+    "same_second_aggregation": "ORDER_INVARIANT_ARITHMETIC_MEAN",
+    "target_definition": "POSITIVE_IF_AT_LEAST_ONE_NON_BENIGN_FLOW_OCCURS_IN_CURRENT_SECOND",
+    "warmup_seconds": 1200
+  },
+  "stage": "19.6A",
+  "status": "ONE_TIME_RAW_HOLDOUT_CAPTURE_COMPLETE",
+  "timestamp_hygiene": {
+    "1970_wrong_date_policy": "REPLACE_CALENDAR_DATE_WITH_SOURCE_DATE_PRESERVE_TIME_OF_DAY",
+    "embedded_header_rule": "DROP_ONLY_IF_TIMESTAMP_EQUALS_TIMESTAMP_AND_LABEL_EQUALS_LABEL",
+    "inconsistent_header_marker": "ABORT",
+    "labels_used_for_date_correction": false,
+    "other_wrong_source_date": "ABORT",
+    "strict_parse_required": true,
+    "traffic_rows_dropped_for_bad_timestamp": 0
+  }
+}

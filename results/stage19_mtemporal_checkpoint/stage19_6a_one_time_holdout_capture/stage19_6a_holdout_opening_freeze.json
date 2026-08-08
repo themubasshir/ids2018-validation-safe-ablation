@@ -1,0 +1,32 @@
+{
+  "captured_files": [
+    "03-01-2018.csv",
+    "03-02-2018.csv"
+  ],
+  "maximum_authorized_openings": 1,
+  "models_evaluated": 0,
+  "next_authorized_step": "STAGE_19_6B_APPLY_ALL_FROZEN_TEMPORAL_CHECKPOINTS_TO_STAGE19_6A_CAPTURE_ONLY",
+  "parent_commit": "786e03969d50fd2e6b161503e4e4649e3179b8b1",
+  "post_opening_prohibitions": [
+    "RAW_HOLDOUT_REREAD",
+    "MODEL_RETRAINING",
+    "MODEL_SELECTION",
+    "SEED_SELECTION",
+    "PREPROCESSING_CHANGE",
+    "REPRESENTATION_CHANGE",
+    "THRESHOLD_CHANGE",
+    "THRESHOLD_GRID_EXTENSION",
+    "CALIBRATION_FITTING",
+    "HYPERPARAMETER_SEARCH"
+  ],
+  "raw_holdout_openings": 1,
+  "raw_holdout_reopen_permitted": false,
+  "stage": "19.6A",
+  "status": "RAW_STAGE19_HOLDOUT_PERMANENTLY_CLOSED",
+  "sufficient_representation_persisted": true,
+  "thresholds": {
+    "changes_permitted": false,
+    "mtemporal_ids": 0.01,
+    "single_scale_temporal": 0.01
+  }
+}

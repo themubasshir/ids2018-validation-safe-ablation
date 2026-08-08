@@ -1,0 +1,47 @@
+{
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "relative_path": "stage19_6a_holdout_source_audit.csv",
+      "sha256": "a8cac13078153c8aa1e8617fbc497a772ebb95c445f547e29fa70ca6b8736a5d",
+      "size_bytes": 1551
+    },
+    {
+      "relative_path": "stage19_6a_holdout_capture_spec.json",
+      "sha256": "6939d94bbbf1c1707e45f65b5b428dadf29a8d708116a66f93643ca951edc841",
+      "size_bytes": 2000
+    },
+    {
+      "relative_path": "stage19_6a_holdout_opening_freeze.json",
+      "sha256": "0f66b08412b25c7b68939b402eb9a06ec483bd6f0be68d66192ba41f1f9b5c88",
+      "size_bytes": 911
+    },
+    {
+      "relative_path": "arrays/03-01-2018_holdout_one_second.npz",
+      "sha256": "5ffb1b1dc3b77f584433279a72392c0a480916b50eb681af4bcf40f39be26418",
+      "size_bytes": 5672468
+    },
+    {
+      "relative_path": "arrays/03-02-2018_holdout_one_second.npz",
+      "sha256": "cf321ee432d668f6e55d73f239eb967eebeb0f0523cf0e33ae6bf364af6eaf8c",
+      "size_bytes": 6312925
+    },
+    {
+      "relative_path": "indices/03-01-2018_holdout_index.npz",
+      "sha256": "54d363b3bcf2e16088fc8b1aca2cee89acec4ae4a92d78d059221d1ebc4ad70c",
+      "size_bytes": 297273
+    },
+    {
+      "relative_path": "indices/03-02-2018_holdout_index.npz",
+      "sha256": "d44389172d0c5e16c2d70279e5e9b9aeb45966b3f31b45c6e40d8686b3ea42ae",
+      "size_bytes": 297271
+    }
+  ],
+  "models_evaluated": 0,
+  "models_trained": 0,
+  "raw_holdout_openings": 1,
+  "raw_holdout_status": "PERMANENTLY_CLOSED",
+  "stage": "19.6A",
+  "status": "ONE_TIME_HOLDOUT_CAPTURE_PACKAGE_COMPLETE",
+  "threshold_changes": 0
+}

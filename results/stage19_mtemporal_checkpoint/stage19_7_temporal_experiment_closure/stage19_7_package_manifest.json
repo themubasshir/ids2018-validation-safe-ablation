@@ -1,0 +1,34 @@
+{
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "relative_path": "stage19_7_scientific_closure.json",
+      "sha256": "bde7e803e85470030954a6ec8c1159bbfa55094211b5aaf7379844dffb5ddb3b",
+      "size_bytes": 6369
+    },
+    {
+      "relative_path": "STAGE19_TEMPORAL_EXPERIMENT_CLOSURE.md",
+      "sha256": "60900d17661172c499274d55b908ecfd342c65680b0aab3b44230cb72ad8c5e6",
+      "size_bytes": 5282
+    },
+    {
+      "relative_path": "stage19_7_manuscript_results_table.csv",
+      "sha256": "ef161b1fdcb18dcba2eda457f251697e69464542e4c64003f87c2922ab22ac0e",
+      "size_bytes": 594
+    },
+    {
+      "relative_path": "stage19_7_per_day_results_table.csv",
+      "sha256": "e7efd636f24eeab79a423fa5cbcff3e3d4318d863d3c6748e4214c5ffacf9f68",
+      "size_bytes": 616
+    }
+  ],
+  "decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "model_inference": false,
+  "model_training": false,
+  "next_stage": "STAGE_20",
+  "raw_holdout_access": false,
+  "scientific_interpretation_only": true,
+  "stage": "19.7",
+  "status": "STAGE19_TEMPORAL_EXPERIMENT_CLOSED",
+  "threshold_evaluation": false
+}

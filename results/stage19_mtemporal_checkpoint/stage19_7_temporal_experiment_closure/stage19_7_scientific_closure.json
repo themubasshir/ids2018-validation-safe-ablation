@@ -1,0 +1,158 @@
+{
+  "constraints": [
+    "The multiscale advantage was not temporally uniform. On March 1, MTemporal-IDS underperformed the single-scale control in PR-AUC, ROC-AUC, and F1.",
+    "Scale utilization was initialization-sensitive: the three frozen validation seeds independently favored fine, coarse, and medium context.",
+    "MTemporal-IDS had worse pooled Brier score and log loss than the single-scale control, so improved discrimination did not imply improved probability calibration.",
+    "Both validation-selected thresholds occurred at the predeclared lower grid boundary of 0.01. The grid was not extended after observing this result.",
+    "Holdout attack prevalence varied substantially across the two days, so pooled PR-AUC and pooled operating metrics must be interpreted alongside per-day results.",
+    "The experiment supports conditional multiscale temporal benefit, not universal causal superiority of MTemporal-IDS."
+  ],
+  "created_at_utc": "2026-08-08T16:41:27.881098+00:00",
+  "decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "development": {
+    "mtemporal_threshold": 0.01,
+    "mtemporal_validation_pr_auc": 0.2856097446256688,
+    "single_scale_threshold": 0.01,
+    "single_scale_validation_pr_auc": 0.3108128771362852,
+    "threshold_grid": "0.01_TO_0.99_STEP_0.01",
+    "threshold_grid_extended_posthoc": false
+  },
+  "experiment": {
+    "causal_superiority_claim": false,
+    "comparison_scope": "DESCRIPTIVE_CONTROLLED_ABLATION",
+    "control": "SingleScaleTemporalTransformer",
+    "full_name": "Multi-Scale Temporal Transformer for Intrusion Detection",
+    "name": "MTemporal-IDS"
+  },
+  "holdout": {
+    "maximum_raw_openings": 1,
+    "negative": 56498,
+    "positive": 27502,
+    "positive_rate": 0.327404762,
+    "raw_openings": 1,
+    "raw_reopen_permitted": false,
+    "raw_status": "PERMANENTLY_CLOSED",
+    "samples": 84000
+  },
+  "mtemporal_holdout": {
+    "brier": 0.2682234832340909,
+    "f1": 0.7176209461958979,
+    "fpr": 0.06543594463520833,
+    "logloss": 1.3517612042618803,
+    "mcc": 0.6155456836274932,
+    "mean_gate_coarse": 0.44069982357605314,
+    "mean_gate_fine": 0.2387994970180077,
+    "mean_gate_medium": 0.32050067715528935,
+    "pr_auc": 0.8013780402555105,
+    "precision": 0.8252505199470599,
+    "recall": 0.6348265580685041,
+    "roc_auc": 0.8502016529074419
+  },
+  "next_stage": "STAGE_20_AUTHENTIC_VIT_REPRESENTATION_PROTOCOL",
+  "parent_commit": "b48ef33148745f9dd4064bf5a8adf9f98504ef4b",
+  "pooled_deltas_mtemporal_minus_single": {
+    "brier": 0.012918823368865295,
+    "f1": 0.06500337742926077,
+    "fpr": -0.09283514460688874,
+    "logloss": 0.16748672095259987,
+    "mcc": 0.12769112134485772,
+    "pr_auc": 0.04142094558211962,
+    "precision": 0.16149177737354703,
+    "recall": -0.007017671442076989,
+    "roc_auc": 0.004903439498067819
+  },
+  "post_holdout_changes_permitted": {
+    "calibration": false,
+    "model_retraining": false,
+    "raw_holdout_reread": false,
+    "representation_change": false,
+    "seed_selection": false,
+    "threshold_change": false,
+    "threshold_grid_extension": false
+  },
+  "prohibited_claims": [
+    "MTemporal-IDS universally outperforms single-scale temporal modeling.",
+    "Multiscale context causes the observed performance improvement.",
+    "The learned scale gate identifies causally important temporal scales.",
+    "The frozen 0.01 threshold is globally optimal.",
+    "MTemporal-IDS is well calibrated.",
+    "Performance on March 2 guarantees performance on unseen future attack regimes."
+  ],
+  "representation": {
+    "coarse": "20 x 60-second",
+    "cross_day_context": false,
+    "fine": "60 x 1-second",
+    "future_information": false,
+    "maximum_context_seconds": 1200,
+    "medium": "20 x 15-second",
+    "raw_row_order": false
+  },
+  "scale_gate_stability": {
+    "holdout_ensemble_mean_gate": {
+      "coarse": 0.44069982357605314,
+      "fine": 0.2387994970180077,
+      "medium": 0.32050067715528935
+    },
+    "stable_across_seeds": false,
+    "validation_seed_dominance": [
+      {
+        "coarse": 0.36803287,
+        "dominant_scale": "fine",
+        "dominant_weight": 0.5540281,
+        "fine": 0.5540281,
+        "medium": 0.07794301,
+        "seed": 7
+      },
+      {
+        "coarse": 0.83664733,
+        "dominant_scale": "coarse",
+        "dominant_weight": 0.83664733,
+        "fine": 0.10122058,
+        "medium": 0.06226066,
+        "seed": 29
+      },
+      {
+        "coarse": 0.054822028,
+        "dominant_scale": "medium",
+        "dominant_weight": 0.8722164,
+        "fine": 0.07304006,
+        "medium": 0.8722164,
+        "seed": 101
+      }
+    ]
+  },
+  "single_scale_holdout": {
+    "brier": 0.2553046598652256,
+    "f1": 0.6526175687666371,
+    "fpr": 0.15827108924209707,
+    "logloss": 1.1842744833092804,
+    "mcc": 0.48785456228263546,
+    "pr_auc": 0.7599570946733909,
+    "precision": 0.6637587425735129,
+    "recall": 0.6418442295105811,
+    "roc_auc": 0.845298213409374
+  },
+  "stage": "19.7",
+  "status": "STAGE19_TEMPORAL_EXPERIMENT_CLOSED",
+  "supported_findings": [
+    "The multiscale representation is authentic and causal: 1-second, 15-second, and 60-second temporal tokens were constructed from chronological network-flow observations without future or cross-day context.",
+    "On the pooled frozen chronological holdout, MTemporal-IDS improved PR-AUC from 0.759957095 to 0.801378040 and F1 from 0.652617569 to 0.717620946 relative to the frozen single-scale control.",
+    "At the independently frozen validation-selected threshold 0.01, MTemporal-IDS increased precision from 0.663758743 to 0.825250520 while recall changed only from 0.641844230 to 0.634826558.",
+    "The pooled false-positive rate decreased from 0.158271089 to 0.065435945 and MCC increased from 0.487854562 to 0.615545684.",
+    "March 2 showed strong multiscale generalization: MTemporal-IDS achieved PR-AUC 0.957848235, ROC-AUC 0.966206262, and F1 0.889337892."
+  ],
+  "temporal_heterogeneity": {
+    "march_1": {
+      "mtemporal_f1": 0.0582852595981698,
+      "mtemporal_pr_auc": 0.2413295131804692,
+      "single_scale_f1": 0.2222222222222222,
+      "single_scale_pr_auc": 0.2906398532308066
+    },
+    "march_2": {
+      "mtemporal_f1": 0.8893378924463786,
+      "mtemporal_pr_auc": 0.9578482350502562,
+      "single_scale_f1": 0.7944747579019811,
+      "single_scale_pr_auc": 0.9091175830343734
+    }
+  }
+}

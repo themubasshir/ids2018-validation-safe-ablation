@@ -1,0 +1,109 @@
+{
+  "binary_label_matching": {
+    "attack_guided_matching": false,
+    "development_binary_determinism": 1.0,
+    "development_mixed_binary_groups": 0,
+    "exact_signature_matching": true,
+    "field_count": 21,
+    "label_guided_matching": false,
+    "majority_vote_over_conflicting_labels": false,
+    "nearest_neighbor_matching": false,
+    "numeric_tolerance_search": false,
+    "signature_fields": [
+      "Source IP",
+      "Source Port",
+      "Destination IP",
+      "Destination Port",
+      "Protocol",
+      "Timestamp",
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Max",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "URG Flag Count"
+    ],
+    "signature_name": "S4_PACKET_REPRODUCIBLE_DIRECTED_FLOW_SIGNATURE",
+    "timestamp_tolerance_search": false
+  },
+  "created_at_utc": "2026-08-08T17:41:34.855233+00:00",
+  "direction_policy": {
+    "backward_direction": "EXACT_REVERSE_OF_FORWARD_DIRECTION",
+    "bidirectional_tuple_canonicalization_for_label_matching": "PROHIBITED",
+    "forward_direction": "DIRECTION_OF_FIRST_PACKET_IN_RECONSTRUCTED_FLOW",
+    "preserve_original_direction": true,
+    "reason": "BIDIRECTIONAL_COLLAPSE_CREATED_MIXED_CLASS_TEMPORAL_AMBIGUITY_WHILE_DIRECTED_SIGNATURES_REMAINED_BINARY_DETERMINISTIC"
+  },
+  "duplicate_signature_policy": {
+    "binary_label_required": true,
+    "claim_unique_original_row_recovery": false,
+    "multiple_rows_same_s4_mixed_binary_class": "ABORT",
+    "multiple_rows_same_s4_same_binary_class": "ALLOWED_FOR_BINARY_ASSIGNMENT",
+    "unique_original_csv_row_required": false
+  },
+  "duration_policy": {
+    "abs_negative_duration": false,
+    "clip_negative_duration": false,
+    "direct_temporal_envelope_packet_assignment": false,
+    "drop_negative_duration_flows": false,
+    "drop_zero_duration_flows": false,
+    "preserve_signed_flow_duration": true,
+    "reason": "NONPOSITIVE_FLOWS_INCLUDE_952_ATTACKS_AND_BIDIRECTIONAL_TEMPORAL_ENVELOPES_SHOWED_MATERIAL_MIXED_CLASS_AMBIGUITY",
+    "replace_negative_with_zero": false
+  },
+  "flow_reconstruction": {
+    "activity_timeout_microseconds": 5000000,
+    "family": "CICFLOWMETER_COMPATIBLE_BIDIRECTIONAL_FLOW",
+    "flow_timeout_microseconds": 120000000,
+    "tcp_connection_teardown_semantics": "FOLLOW_CICFLOWMETER_COMPATIBLE_IMPLEMENTATION",
+    "timeout_search": false,
+    "timeout_selection": "A_PRIORI_FROM_PUBLISHED_CICIDS2017_RECONSTRUCTION_PROTOCOL",
+    "timeout_tuning_against_holdout": false,
+    "timeout_tuning_against_monday": false,
+    "timeout_tuning_against_validation": false,
+    "udp_timeout_semantics": "FOLLOW_CICFLOWMETER_COMPATIBLE_IMPLEMENTATION"
+  },
+  "holdout": {
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "maximum_openings": 1,
+    "openings": 0,
+    "status": "CLOSED"
+  },
+  "monday_pilot": {
+    "feature_search": false,
+    "image_generation": false,
+    "image_geometry_freeze": false,
+    "match_failure_action": "REPORT_FAILURE_DO_NOT_POSTHOC_TUNE_RECONSTRUCTION_PARAMETERS",
+    "model_training": false,
+    "pcap": "MONDAY_ONLY",
+    "purpose": "TEST_WHETHER_RAW_PCAP_CAN_BE_RECONSTRUCTED_INTO_FLOWS_WHOSE_PACKET_REPRODUCIBLE_S4_SIGNATURES_MATCH_THE_FROZEN_LABEL_INDEX",
+    "signature_search": false,
+    "timeout_search": false
+  },
+  "next_authorized_step": "STAGE_20_1C_MONDAY_RAW_PCAP_RECONSTRUCTION_PILOT",
+  "parent_commit": "337ba854357341a48451d3d67152ff9ec01f6364",
+  "scientific_basis": {
+    "bidirectional_exact_tuple_timestamp_rows": 706745,
+    "bidirectional_mixed_class_tuple_timestamp_groups": 9024,
+    "bidirectional_overlapping_envelope_rows": 971050,
+    "development_flows": 2127498,
+    "negative_duration_flows": 68,
+    "nonpositive_attack_flows": 952,
+    "nonpositive_duration_flows": 2408,
+    "s4_binary_deterministic_rate": 1.0,
+    "s4_mixed_binary_label_groups": 0,
+    "s4_mixed_binary_label_rows": 0
+  },
+  "stage": "20.1B4E",
+  "status": "PACKET_LABEL_RECONSTRUCTION_PROTOCOL_FROZEN"
+}

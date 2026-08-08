@@ -1,0 +1,27 @@
+{
+  "overall_decision": "SUPPORTED_FOR_MONDAY_RAW_PCAP_PILOT_WITH_DIRECTED_CICFLOWMETER_COMPATIBLE_FLOW_RECONSTRUCTION_AND_EXACT_S4_BINARY_LABEL_MATCHING",
+  "source_audits": {
+    "20.1B4A": {
+      "decision": "NEGATIVE_DURATIONS_PRESERVED_NO_REPAIR",
+      "negative_duration_flows": 68
+    },
+    "20.1B4B": {
+      "decision": "NONPOSITIVE_FLOWS_CANNOT_BE_CLASS_DEPENDENTLY_EXCLUDED",
+      "nonpositive_attack_flows": 952,
+      "nonpositive_duration_flows": 2408
+    },
+    "20.1B4C": {
+      "decision": "DIRECT_BIDIRECTIONAL_TEMPORAL_ENVELOPE_ASSIGNMENT_REJECTED",
+      "mixed_class_exact_tuple_timestamp_groups": 9024,
+      "overlapping_same_tuple_envelope_rows": 971050,
+      "same_tuple_exact_timestamp_rows": 706745
+    },
+    "20.1B4D": {
+      "decision": "DIRECTED_S4_BINARY_LABEL_MATCHING_SUPPORTED",
+      "s4_binary_deterministic_rate": 1.0,
+      "s4_mixed_binary_label_groups": 0,
+      "s4_mixed_binary_label_rows": 0
+    }
+  },
+  "stage": "20.1B4E"
+}

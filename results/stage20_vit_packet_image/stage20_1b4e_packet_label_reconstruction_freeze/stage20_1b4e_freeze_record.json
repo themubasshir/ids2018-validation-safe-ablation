@@ -1,0 +1,21 @@
+{
+  "activity_timeout_microseconds": 5000000,
+  "bidirectional_temporal_envelope_assignment": "PROHIBITED",
+  "direction_preserved": true,
+  "duration_modified": false,
+  "flow_timeout_microseconds": 120000000,
+  "holdout_openings": 0,
+  "holdout_status": "CLOSED",
+  "image_geometry_frozen": false,
+  "label_signature": "S4",
+  "next_authorized_step": "STAGE_20_1C_MONDAY_RAW_PCAP_RECONSTRUCTION_PILOT",
+  "packet_reads": 0,
+  "parent_commit": "337ba854357341a48451d3d67152ff9ec01f6364",
+  "pcap_downloads": 0,
+  "s4_binary_deterministic_rate": 1.0,
+  "s4_fields": 21,
+  "s4_mixed_binary_groups": 0,
+  "stage": "20.1B4E",
+  "status": "PACKET_LABEL_RECONSTRUCTION_PROTOCOL_FROZEN",
+  "vit_training_authorized": false
+}

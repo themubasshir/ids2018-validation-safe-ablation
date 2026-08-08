@@ -1,0 +1,29 @@
+{
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "relative_path": "stage20_1b4e_packet_label_reconstruction_spec.json",
+      "sha256": "5923e378039112fded47579f293d094f896929a119da21f2dd88df980c2f0b38",
+      "size_bytes": 4213
+    },
+    {
+      "relative_path": "STAGE20_PACKET_LABEL_RECONSTRUCTION_PROTOCOL.md",
+      "sha256": "3f7f5c687942c611aa1a4d20649cb9878155fac8aefb8544e4867563aa9f2716",
+      "size_bytes": 3568
+    },
+    {
+      "relative_path": "stage20_1b4e_supporting_audit_summary.json",
+      "sha256": "ec7f11628b4142ab66ce08c42e7399f3cbde75df82142f51b5dbb2368a9062e7",
+      "size_bytes": 977
+    },
+    {
+      "relative_path": "stage20_1b4e_freeze_record.json",
+      "sha256": "77af97c7b3b07684f2847d62c1e36fefa263c301acae0ba53fea7250bacf7d96",
+      "size_bytes": 719
+    }
+  ],
+  "friday_access": false,
+  "raw_pcap_access": false,
+  "stage": "20.1B4E",
+  "status": "PACKET_LABEL_RECONSTRUCTION_FREEZE_PACKAGE_COMPLETE"
+}

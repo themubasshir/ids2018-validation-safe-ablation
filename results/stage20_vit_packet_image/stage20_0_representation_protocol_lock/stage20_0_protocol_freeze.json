@@ -1,0 +1,13 @@
+{
+  "dataset": "CICIDS2017",
+  "holdout_openings": 0,
+  "holdout_status": "CLOSED",
+  "image_geometry_dimensions_frozen": false,
+  "next_authorized_step": "STAGE_20_1_PACKET_AND_LABEL_SCHEMA_AUDIT",
+  "packet_header_policy_frozen": false,
+  "parent_commit": "188294432bb9ead288078a2dc68f5461ac81a87c",
+  "representation_family": "PACKET_SEQUENCE_BYTE_IMAGE",
+  "stage": "20.0",
+  "status": "PACKET_IMAGE_REPRESENTATION_PROTOCOL_LOCKED",
+  "training_authorized": false
+}

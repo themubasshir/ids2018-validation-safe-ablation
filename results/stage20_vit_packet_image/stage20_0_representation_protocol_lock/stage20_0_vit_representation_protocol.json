@@ -1,0 +1,116 @@
+{
+  "chronological_split": {
+    "holdout": [
+      "Friday-07-07-2017"
+    ],
+    "holdout_attack_family_overlap_with_train": false,
+    "split_defined_before_packet_inspection": true,
+    "train": [
+      "Monday-03-07-2017",
+      "Tuesday-04-07-2017",
+      "Wednesday-05-07-2017"
+    ],
+    "validation": [
+      "Thursday-06-07-2017"
+    ]
+  },
+  "created_at_utc": "2026-08-08T16:47:25.683491+00:00",
+  "dataset": {
+    "name": "CICIDS2017",
+    "official_source": "University of New Brunswick / Canadian Institute for Cybersecurity",
+    "official_url": "https://www.unb.ca/cic/datasets/ids-2017.html"
+  },
+  "development_policy": {
+    "cnn_training_authorized": false,
+    "holdout_access_authorized": false,
+    "holdout_openings": 0,
+    "holdout_status": "CLOSED",
+    "hyperparameter_search_authorized": false,
+    "maximum_holdout_openings": 1,
+    "next_authorized_stage": "STAGE_20_1_PACKET_AND_LABEL_SCHEMA_AUDIT",
+    "representation_first": true,
+    "vit_training_authorized": false
+  },
+  "identity_leakage_policy": {
+    "audit_required": true,
+    "checksums": "AUDIT_BEFORE_FREEZE",
+    "ethernet_mac_addresses": "AUDIT_BEFORE_FREEZE",
+    "filename_or_day_encoding": "PROHIBITED",
+    "ipv4_source_destination": "AUDIT_BEFORE_FREEZE",
+    "ipv6_source_destination": "AUDIT_BEFORE_FREEZE",
+    "labels_inside_pixels": "PROHIBITED",
+    "timestamps_inside_pixels": "PROHIBITED",
+    "transport_ports": "AUDIT_BEFORE_FREEZE"
+  },
+  "parent_commit": "188294432bb9ead288078a2dc68f5461ac81a87c",
+  "representation_rules": {
+    "arbitrary_feature_reshape": "PROHIBITED",
+    "bytes_per_packet": "NOT_YET_FROZEN",
+    "column_axis_semantics": "BYTE_OFFSET_WITHIN_PACKET",
+    "cross_day_context_permitted": false,
+    "cross_flow_context_permitted": false,
+    "feature_correlation_image": "PROHIBITED",
+    "flow_label_mapping_required": true,
+    "future_packets_permitted": false,
+    "identity_leakage_audit_required": true,
+    "image_channels": "NOT_YET_FROZEN",
+    "image_interpolation_before_split": "PROHIBITED",
+    "label_derived_pixels": "PROHIBITED",
+    "packet_count_per_flow": "NOT_YET_FROZEN",
+    "packet_header_policy": "NOT_YET_FROZEN",
+    "packet_order_preserved": true,
+    "padding_policy": "NOT_YET_FROZEN",
+    "raw_packet_bytes_required": true,
+    "raw_pcap_required": true,
+    "representation_family": "PACKET_SEQUENCE_BYTE_IMAGE",
+    "representation_search_using_holdout": "PROHIBITED",
+    "row_axis_semantics": "PACKET_ORDER_WITHIN_BIDIRECTIONAL_FLOW",
+    "sample_reordering_by_label": "PROHIBITED",
+    "tabular_feature_grid": "PROHIBITED",
+    "truncation_policy": "NOT_YET_FROZEN"
+  },
+  "scientific_scope": {
+    "primary_question": "Can a Vision Transformer learn useful intrusion signals from a semantically justified packet-sequence byte image under chronological and attack-family distribution shift?",
+    "reason": "Stage 20 uses a distinct packet-level dataset and representation; performance is therefore reported as a separate representation-validity experiment rather than a direct Stage-19 architecture comparison.",
+    "stage19_direct_performance_comparison": false
+  },
+  "source_record": {
+    "official_dataset": {
+      "name": "CICIDS2017",
+      "publisher": "University of New Brunswick / Canadian Institute for Cybersecurity",
+      "relevant_properties": [
+        "full packet payload PCAPs",
+        "labeled flows using timestamp, source and destination IP, source and destination port, protocol and attack label",
+        "five-day chronological capture",
+        "Monday benign only",
+        "attacks executed Tuesday through Friday"
+      ],
+      "url": "https://www.unb.ca/cic/datasets/ids-2017.html"
+    },
+    "representation_literature": {
+      "doi": "10.12198/j.issn.1673-159X.5535",
+      "paper": "The Network-Based Intrusion Detection System Based on Packet Sequence Image Representation and the Vision Transformer Model",
+      "use_in_stage20": "SUPPORTS_PACKET_SEQUENCE_IMAGE_AS_A_VIT_REPRESENTATION_FAMILY_ONLY_NOT_A_REPRODUCTION",
+      "year": 2025
+    }
+  },
+  "stage": "20.0",
+  "status": "VIT_PACKET_IMAGE_PROTOCOL_FROZEN",
+  "task": {
+    "negative_class": "BENIGN",
+    "positive_class": "ATTACK",
+    "type": "BINARY_INTRUSION_DETECTION"
+  },
+  "validity_requirements": [
+    "Each image row must correspond to a real packet position within one bidirectional flow.",
+    "Each image column must correspond to a real byte offset within the packet representation.",
+    "Image generation must not introduce artificial adjacency between unrelated tabular flow features.",
+    "The label must originate from an independently defined CICIDS2017 labeled flow.",
+    "Packet-to-flow association must be reproducible from packet metadata and the official labeled-flow metadata.",
+    "Flow-local packet order must be preserved.",
+    "No packets occurring after the end of the labeled flow may be included.",
+    "Any removal, masking, or canonicalization of network identifiers must be defined before model training.",
+    "The image dimensions must be selected from TRAIN data statistics only.",
+    "Friday holdout packet and label distributions must not be inspected during representation design."
+  ]
+}

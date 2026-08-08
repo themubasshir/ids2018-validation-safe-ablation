@@ -1,0 +1,26 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage20_0_vit_representation_protocol.json",
+      "sha256": "307a2b33edc44f0dd31c9ce786a379c29c71c08b4d007d022cade2dc8411ddf6",
+      "size_bytes": 5210
+    },
+    {
+      "relative_path": "STAGE20_VIT_REPRESENTATION_PROTOCOL.md",
+      "sha256": "5ef54c998761d7824db55f41a4f2b5eb067c7f2e2fbf39d7358bf630c6374c63",
+      "size_bytes": 2899
+    },
+    {
+      "relative_path": "stage20_0_protocol_freeze.json",
+      "sha256": "c02970a120195d1fc45ddc05a8e7d8630f1c8e000fa15c5e8f5026f2ac722199",
+      "size_bytes": 470
+    }
+  ],
+  "holdout_openings": 0,
+  "labels_read": false,
+  "models_trained": 0,
+  "raw_packet_data_read": false,
+  "stage": "20.0",
+  "status": "PROTOCOL_PACKAGE_COMPLETE"
+}

@@ -1,0 +1,108 @@
+{
+  "created_at_utc": "2026-08-08T19:02:07.537641+00:00",
+  "friday": {
+    "budget": 1,
+    "openings": 0,
+    "reads": 0,
+    "requests": 0,
+    "status": "CLOSED"
+  },
+  "frozen_reconstruction_effect": {
+    "flow_lifecycle_changed": false,
+    "flow_timeout_changed": false,
+    "future_reconstruction_rule": "RECONSTRUCT_SEMANTIC_TCP_FLAGS_THEN_SERIALIZE_IN_HISTORICAL_HASHMAP_POSITION_ORDER_BEFORE_COMPARISON_TO_PHYSICAL_CICIDS2017_COLUMNS",
+    "packet_length_rule_changed": false,
+    "physical_s4_column_positions_changed": false,
+    "s4_number_of_fields_changed": false,
+    "timestamp_rule_changed": false
+  },
+  "full_monday_authorized": false,
+  "historical_source": {
+    "commit": "eaa853dd82f08ba5288bb7f295b471de7313f883",
+    "repository": "ahlashkari/CICFlowMeter",
+    "status": "EARLIEST_PUBLIC_SNAPSHOT_INSPECTED; NOT CLAIMED BYTE_IDENTICAL_TO_JULY_2017_BUILD"
+  },
+  "image_generation_authorized": false,
+  "next_authorized_step": "BOUNDED_50000_PACKET_EXACT_S4_REPLICATION_WITH_FROZEN_HISTORICAL_FLAG_POSITION_SERIALIZATION",
+  "parent_commit": "40a9eaa26fcc53a1ea8e9f7c2b12f2b28d2a58f9",
+  "physical_csv_column_to_semantic_flag": {
+    "ACK Flag Count": "ACK",
+    "CWE Flag Count": "URG",
+    "ECE Flag Count": "CWR",
+    "FIN Flag Count": "RST",
+    "PSH Flag Count": "SYN",
+    "RST Flag Count": "ECE",
+    "SYN Flag Count": "PSH",
+    "URG Flag Count": "FIN"
+  },
+  "prerequisite_local_records": {
+    "stage20_1c6_sha256": "c744afdfa42e51a1a5b84cb6f459595aa5ae57311bca488f97bf63691ae6eca0",
+    "stage20_1c7_sha256": "df6008a7d60fdb159b9df0ce3a840028b8b15ca462b276245e7c62b0ccbf6a29"
+  },
+  "prohibited": {
+    "best_mapping_search": true,
+    "label_guided_mapping_search": true,
+    "nearest_neighbor_matching": true,
+    "permutation_search": true,
+    "reinterpret_header_names_as_ground_truth_semantics": true,
+    "reverse_label_matching": true,
+    "timeout_search": true,
+    "timestamp_tolerance": true
+  },
+  "scientific_interpretation": {
+    "classification": "SOURCE_DERIVED_EXPORT_SERIALIZATION_DEFECT",
+    "original_dataset_columns_modified": false,
+    "original_labels_modified": false,
+    "physical_columns_preserved": true,
+    "reason": "Historical exporter serialized HashMap iteration order directly into positions named by a fixed CSV header.",
+    "semantic_interpretation_corrected": true
+  },
+  "source_mechanism": {
+    "container": "java.util.HashMap",
+    "csv_header_order": [
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "URG Flag Count",
+      "CWE Flag Count",
+      "ECE Flag Count"
+    ],
+    "derived_java8_serialized_order": [
+      "RST",
+      "PSH",
+      "ECE",
+      "SYN",
+      "ACK",
+      "FIN",
+      "URG",
+      "CWR"
+    ],
+    "insertion_keys": [
+      "FIN",
+      "SYN",
+      "RST",
+      "PSH",
+      "ACK",
+      "URG",
+      "CWR",
+      "ECE"
+    ],
+    "serialization": "for(String key: flagCounts.keySet())"
+  },
+  "stage": "20.1C8",
+  "tuesday_authorized": false,
+  "type": "SOURCE_DERIVED_FLAG_SERIALIZATION_CORRECTION_FREEZE",
+  "validation": {
+    "best_mapping_search": false,
+    "literal_header_all_eight_exact": 254,
+    "literal_header_all_eight_rate": 0.5247933884297521,
+    "permutation_search": false,
+    "population": 484,
+    "population_definition": "UNIQUE_DIRECTED_5TUPLE_PLUS_SOURCE_DERIVED_WHOLE_SECOND_TIMESTAMP_ANCHORS",
+    "source_derived_positional_all_eight_exact": 484,
+    "source_derived_positional_all_eight_rate": 1.0
+  },
+  "vit_training_authorized": false
+}

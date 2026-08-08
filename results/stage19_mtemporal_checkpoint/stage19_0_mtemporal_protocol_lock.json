@@ -1,0 +1,260 @@
+{
+  "claims": {
+    "never_permitted": [
+      "Stage 19 results are directly numerically comparable with the Stage-15/16 per-flow benchmark.",
+      "Same-second flow order is known.",
+      "Multi-scale temporal context causally explains any performance difference.",
+      "The final holdout was used for model, threshold or preprocessing selection.",
+      "Stage 19 modifies or supersedes the frozen Stage 18 feasibility conclusions."
+    ],
+    "permitted_if_supported_by_results": [
+      "MTemporal-IDS captures authentic causal multi-scale temporal context.",
+      "MTemporal-IDS demonstrates chronological second-bin intrusion-detection performance.",
+      "MTemporal-IDS ranking or thresholded performance differs descriptively from the frozen single-scale temporal control."
+    ]
+  },
+  "created_at_utc": "2026-08-08T09:36:21.581240+00:00",
+  "holdout_boundary": {
+    "after_single_opening": "PERMANENTLY_CLOSED",
+    "holdout_may_not_change": [
+      "representation",
+      "feature schema",
+      "imputation",
+      "scaler",
+      "architecture",
+      "class weighting",
+      "seed ensemble",
+      "threshold",
+      "calibration",
+      "model choice"
+    ],
+    "maximum_authorized_openings": 1,
+    "opening_authorized_only_after": [
+      "source schema frozen",
+      "temporal bin materialization frozen",
+      "train preprocessing frozen",
+      "single-scale control training frozen",
+      "MTemporal training frozen",
+      "validation thresholds frozen",
+      "all checkpoints Git-anchored"
+    ],
+    "openings_so_far": 0,
+    "status": "CLOSED"
+  },
+  "metrics": {
+    "calibration": [
+      "BRIER_SCORE",
+      "LOG_LOSS"
+    ],
+    "ranking": [
+      "PR_AUC",
+      "ROC_AUC"
+    ],
+    "report_ensemble_validation": true,
+    "report_per_seed_validation": true,
+    "report_single_scale_control": true,
+    "report_validation_to_holdout_delta": true,
+    "thresholded": [
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "SPECIFICITY",
+      "BALANCED_ACCURACY",
+      "F1",
+      "F2",
+      "FPR",
+      "FNR",
+      "MCC",
+      "TN",
+      "FP",
+      "FN",
+      "TP"
+    ]
+  },
+  "model_naming_boundary": "MTemporal-IDS is the explicit architecture defined by this protocol. The study does not claim reproduction of a universally canonical architecture named MTemporal Transformer.",
+  "mtemporal_model": {
+    "activation": "GELU",
+    "architecture_type": "three_branch_causal_multi_scale_transformer",
+    "attention_heads": 4,
+    "attention_mask": "STRICT_CAUSAL_WITH_CURRENT_TOKEN_VISIBLE",
+    "branch_summary": "FINAL_CAUSAL_TOKEN_STATE",
+    "branches": [
+      "fine_1s_60token",
+      "medium_15s_20token",
+      "coarse_60s_20token"
+    ],
+    "calendar_date_embedding": false,
+    "canonical_external_architecture_claim": false,
+    "classifier": "64_TO_64_GELU_DROPOUT_TO_1",
+    "d_model": 64,
+    "dropout": 0.1,
+    "encoder_layers_per_branch": 2,
+    "feedforward_dim": 128,
+    "fusion": "LEARNED_SOFTMAX_GATED_WEIGHTED_SUM",
+    "fusion_gate_input": "CONCATENATED_THREE_BRANCH_SUMMARIES",
+    "future_tokens_visible": false,
+    "host_identity_embedding": false,
+    "input_projection": "LINEAR_TO_D_MODEL",
+    "label_embedding": false,
+    "long_name": "Multi-Scale Temporal Transformer for Intrusion Detection",
+    "name": "MTemporal-IDS",
+    "normalization": "LayerNorm"
+  },
+  "next_authorized_step": "Stage 19.1 \u2014 raw source schema, timestamp, feature-intersection and chronology audit. TRAIN and VALIDATION may be materialized; HOLDOUT labels/predictors remain closed.",
+  "parent_commit": "868391ea1ba80e113d2f7e42ad7ee3e3dc5a844a",
+  "partition": {
+    "authorized_holdout_openings": 1,
+    "future_holdout_use": "FINAL_REPORTING_ONLY",
+    "holdout_files": [
+      "03-01-2018.csv",
+      "03-02-2018.csv"
+    ],
+    "holdout_openings": 0,
+    "holdout_status": "CLOSED",
+    "partition_boundaries_selected_using_labels": false,
+    "principle": "STRICT_FORWARD_CHRONOLOGY",
+    "stage15_holdout_reused": false,
+    "stage15_membership_reused": false,
+    "stage16_holdout_reused": false,
+    "stage18_graph_holdout_reused": false,
+    "train_files": [
+      "02-14-2018.csv",
+      "02-15-2018.csv",
+      "02-16-2018.csv",
+      "02-20-2018.csv",
+      "02-21-2018.csv",
+      "02-22-2018.csv",
+      "02-23-2018.csv"
+    ],
+    "validation_files": [
+      "02-28-2018.csv"
+    ],
+    "validation_use": [
+      "early_stopping",
+      "threshold_selection",
+      "development_metrics"
+    ]
+  },
+  "preprocessing": {
+    "aggregation_missing_policy": "Per-bin feature means computed from finite observations only.",
+    "feature_selection_using_labels": false,
+    "fit_partition": "TRAIN_ONLY",
+    "flow_count_scaling": "TRAIN_ONLY_STANDARDIZATION",
+    "flow_count_transform": "log1p",
+    "imputation": "TRAIN aggregated-feature mean; no validation or holdout statistics used.",
+    "nonfinite_policy": "Flow-level +/-inf converted to NaN before aggregation.",
+    "normalization": "StandardScaler fitted on TRAIN bins only",
+    "occupied_indicator_scaling": false,
+    "post_partition_feature_search": false
+  },
+  "research_question": "Can a strictly causal multi-scale temporal Transformer detect second-level intrusion activity under a fully chronological CSE-CIC-IDS2018 protocol?",
+  "single_scale_control": {
+    "activation": "GELU",
+    "attention_heads": 4,
+    "branch_summary": "FINAL_CAUSAL_TOKEN_STATE",
+    "causal_claim_permitted": false,
+    "classifier": "64_TO_64_GELU_DROPOUT_TO_1",
+    "d_model": 64,
+    "dropout": 0.1,
+    "encoder_layers": 2,
+    "feedforward_dim": 128,
+    "input": "fine_1s_60token_only",
+    "name": "SingleScaleTemporalTransformer",
+    "purpose": "Paired temporal control for assessing whether multi-scale context provides descriptive benefit.",
+    "reason": "Parameterization and architecture differ after multi-scale fusion, so comparison is descriptive."
+  },
+  "stage": "19.0",
+  "stage18_frozen_synthesis_sha256": "df440cdaa2d88c79465fb225bda9bed9f0a5cab4d680e01b90a8ca48ccf1af17",
+  "stage19_0_data_rows_read": 0,
+  "stage19_0_holdout_openings": 0,
+  "stage19_0_labels_read": 0,
+  "stage19_0_models_trained": 0,
+  "status": "MTEMPORAL_PROTOCOL_LOCKED_BEFORE_DATA_ACCESS",
+  "task": {
+    "comparison_with_flow_level_benchmark": "NOT_DIRECTLY_COMPARABLE because Stage 19 predicts second-level attack presence rather than per-flow binary labels.",
+    "cross_day_sequences": false,
+    "cross_partition_sequences": false,
+    "current_second_features_allowed": true,
+    "future_information_allowed": false,
+    "prediction_interpretation": "Detection after completion of the current one-second traffic interval.",
+    "prediction_unit": "one_second_wall_clock_bin",
+    "same_second_flow_order": "UNORDERED_SIMULTANEOUS",
+    "target_aggregation_rule": "ANY_ATTACK_FLOW_IN_CURRENT_SECOND",
+    "target_definition": "A one-second bin is positive if one or more source flows assigned to that second carry a non-BENIGN label; otherwise it is negative.",
+    "task_type": "binary_second_bin_intrusion_detection",
+    "within_second_row_order_used": false
+  },
+  "temporal_representation": {
+    "additional_bin_features": [
+      "log1p_flow_count",
+      "occupied_bin_indicator"
+    ],
+    "base_resolution_seconds": 1,
+    "context_direction": "PAST_AND_CURRENT_ONLY",
+    "empty_bin_policy": "Numeric aggregate predictors are missing before train-only preprocessing. They are imputed using TRAIN aggregated-feature means so an empty bin maps to zero after standardization. Occupancy remains explicitly 0.",
+    "flow_feature_aggregation": "ARITHMETIC_MEAN_PER_FEATURE",
+    "history_requirement": "FULL_20_MINUTES_WITHIN_SAME_SOURCE_DAY",
+    "missing_seconds": "EXPLICIT_EMPTY_BINS",
+    "no_label_defined_context": true,
+    "positional_encoding": "Deterministic relative temporal position encoding within each scale.",
+    "same_second_aggregation": "ORDER_INVARIANT",
+    "scales": {
+      "coarse": {
+        "bin_width_seconds": 60,
+        "lookback_seconds": 1200,
+        "token_count": 20
+      },
+      "fine": {
+        "bin_width_seconds": 1,
+        "lookback_seconds": 60,
+        "token_count": 60
+      },
+      "medium": {
+        "bin_width_seconds": 15,
+        "lookback_seconds": 300,
+        "token_count": 20
+      }
+    },
+    "source_predictor_policy": "Use the common numeric CICFlowMeter predictor intersection established during Stage 19.1 source audit; identifiers, labels and timestamps are excluded from predictors.",
+    "warmup_policy": "The first 20 minutes of each source day are excluded deterministically before labels are examined.",
+    "window_endpoint": "All three scales terminate at the current prediction second."
+  },
+  "threshold_policy": {
+    "fixed_0_50_also_reported": true,
+    "grid_end": 0.99,
+    "grid_start": 0.01,
+    "grid_step": 0.01,
+    "holdout_threshold_search": false,
+    "objective": "MAXIMUM_F1",
+    "post_holdout_grid_extension": false,
+    "post_holdout_recalibration": false,
+    "selection_partition": "VALIDATION_ONLY",
+    "tie_break_1": "HIGHER_RECALL",
+    "tie_break_2": "LOWER_THRESHOLD"
+  },
+  "training": {
+    "amp": true,
+    "architecture_search": false,
+    "batch_size": 256,
+    "class_weight": "TRAIN_ONLY negative_bin_count / positive_bin_count",
+    "early_stopping_metric": "VALIDATION_PR_AUC",
+    "early_stopping_min_delta": 0.0001,
+    "early_stopping_patience": 4,
+    "ensemble": "UNWEIGHTED_ARITHMETIC_MEAN_PROBABILITY",
+    "gradient_clip_norm": 1.0,
+    "hyperparameter_search": false,
+    "learning_rate": 0.0003,
+    "loss": "BCEWithLogitsLoss",
+    "maximum_epochs": 20,
+    "models_per_family": 3,
+    "optimizer": "AdamW",
+    "scheduler": null,
+    "seed_selection": false,
+    "seeds": [
+      7,
+      29,
+      101
+    ],
+    "weight_decay": 0.0001
+  }
+}

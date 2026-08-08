@@ -1,0 +1,24 @@
+{
+  "artifact_count": 2,
+  "artifacts": [
+    {
+      "relative_path": "stage19_0_mtemporal_protocol_lock.json",
+      "sha256": "bc07366ed6e2c90625203838dc30b822d2efc1275f11c4772fed7b12202f6b45",
+      "size_bytes": 9820
+    },
+    {
+      "relative_path": "STAGE19_0_MTEMPORAL_PROTOCOL.md",
+      "sha256": "1a929c1768fd3aae987a64b1dc5200cac07e9af20368c231d4f330e8634cfed3",
+      "size_bytes": 3504
+    }
+  ],
+  "parent_commit": "868391ea1ba80e113d2f7e42ad7ee3e3dc5a844a",
+  "scientific_boundary": {
+    "holdout_openings": 0,
+    "labels_read": 0,
+    "models_trained": 0,
+    "raw_rows_read": 0
+  },
+  "stage": "19.0",
+  "status": "MTEMPORAL_PROTOCOL_PACKAGE_COMPLETE"
+}

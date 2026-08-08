@@ -1,0 +1,71 @@
+retained_position,original_78_index,feature_name
+0,0,Dst Port
+1,1,Protocol
+2,2,Flow Duration
+3,3,Tot Fwd Pkts
+4,4,Tot Bwd Pkts
+5,5,TotLen Fwd Pkts
+6,6,TotLen Bwd Pkts
+7,7,Fwd Pkt Len Max
+8,8,Fwd Pkt Len Min
+9,9,Fwd Pkt Len Mean
+10,10,Fwd Pkt Len Std
+11,11,Bwd Pkt Len Max
+12,12,Bwd Pkt Len Min
+13,13,Bwd Pkt Len Mean
+14,14,Bwd Pkt Len Std
+15,15,Flow Byts/s
+16,16,Flow Pkts/s
+17,17,Flow IAT Mean
+18,18,Flow IAT Std
+19,19,Flow IAT Max
+20,20,Flow IAT Min
+21,21,Fwd IAT Tot
+22,22,Fwd IAT Mean
+23,23,Fwd IAT Std
+24,24,Fwd IAT Max
+25,25,Fwd IAT Min
+26,26,Bwd IAT Tot
+27,27,Bwd IAT Mean
+28,28,Bwd IAT Std
+29,29,Bwd IAT Max
+30,30,Bwd IAT Min
+31,31,Fwd PSH Flags
+32,33,Fwd URG Flags
+33,35,Fwd Header Len
+34,36,Bwd Header Len
+35,37,Fwd Pkts/s
+36,38,Bwd Pkts/s
+37,39,Pkt Len Min
+38,40,Pkt Len Max
+39,41,Pkt Len Mean
+40,42,Pkt Len Std
+41,43,Pkt Len Var
+42,44,FIN Flag Cnt
+43,45,SYN Flag Cnt
+44,46,RST Flag Cnt
+45,47,PSH Flag Cnt
+46,48,ACK Flag Cnt
+47,49,URG Flag Cnt
+48,50,CWE Flag Count
+49,51,ECE Flag Cnt
+50,52,Down/Up Ratio
+51,53,Pkt Size Avg
+52,54,Fwd Seg Size Avg
+53,55,Bwd Seg Size Avg
+54,62,Subflow Fwd Pkts
+55,63,Subflow Fwd Byts
+56,64,Subflow Bwd Pkts
+57,65,Subflow Bwd Byts
+58,66,Init Fwd Win Byts
+59,67,Init Bwd Win Byts
+60,68,Fwd Act Data Pkts
+61,69,Fwd Seg Size Min
+62,70,Active Mean
+63,71,Active Std
+64,72,Active Max
+65,73,Active Min
+66,74,Idle Mean
+67,75,Idle Std
+68,76,Idle Max
+69,77,Idle Min

@@ -1,0 +1,39 @@
+{
+  "definition": {
+    "seen_edge_flow": "The directed SrcIP->DstIP host pair occurred during chronological training.",
+    "seen_host_flow": "Both validation endpoints were observed as hosts during chronological training.",
+    "unseen_edge_flow": "The directed SrcIP->DstIP host pair did not occur during chronological training.",
+    "unseen_host_flow": "At least one validation endpoint was not observed during chronological training."
+  },
+  "flow_level_context": {
+    "validation_both_hosts_seen_rate": 0.9765318379100512,
+    "validation_flow_edges": 2166254,
+    "validation_flows_with_any_unseen_host": 50838,
+    "validation_flows_with_both_hosts_seen": 2115416,
+    "validation_flows_with_seen_directed_edge": 1816214,
+    "validation_flows_with_unseen_directed_edge": 350040,
+    "validation_seen_edge_rate": 0.8384123006812683
+  },
+  "scientific_interpretation": {
+    "cross_snapshot_message_passing_used": false,
+    "future_information_used": false,
+    "node_identity_embedding_used": false,
+    "persistent_edge_reappearance_is_automatic_leakage": false,
+    "persistent_host_reappearance_is_automatic_leakage": false
+  },
+  "stage": "18.3D-validation-generalization-context",
+  "unique_edge_context": {
+    "training_unique_directed_edges": 459547,
+    "validation_directed_edges_seen_in_training": 112284,
+    "validation_directed_edges_unseen_in_training": 135393,
+    "validation_unique_directed_edges": 247677,
+    "validation_unique_edge_seen_rate": 0.45334851439576546
+  },
+  "unique_host_context": {
+    "training_unique_hosts": 24525,
+    "validation_hosts_seen_in_training": 10541,
+    "validation_hosts_unseen_in_training": 5430,
+    "validation_unique_host_seen_rate": 0.6600087658881724,
+    "validation_unique_hosts": 15971
+  }
+}

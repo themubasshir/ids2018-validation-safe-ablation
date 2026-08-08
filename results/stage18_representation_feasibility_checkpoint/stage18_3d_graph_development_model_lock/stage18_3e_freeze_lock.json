@@ -1,0 +1,30 @@
+{
+  "critical_frozen_values": {
+    "d_model": 64,
+    "dropout": 0.1,
+    "edge_feature_count": 70,
+    "graph_layers": 2,
+    "heads": 4,
+    "max_epochs": 20,
+    "seeds": [
+      7,
+      29,
+      101
+    ],
+    "snapshot_seconds": 60,
+    "threshold_rule": "maximum validation F1",
+    "train_attack_count": 797,
+    "train_attack_rate": 0.00019591142443829097,
+    "train_pos_weight": 5103.347553324968,
+    "validation_attack_count": 423621,
+    "validation_attack_rate": 0.19555463025111552,
+    "validation_monitor": "PR_AUC"
+  },
+  "model_protocol_json_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "model_protocol_markdown_sha256": "ce963c91c635e3748f33d7c06d94a3dcd8aa240d40136ee27a48a01c5dd28b30",
+  "parent_commit": "b8c7d1e3023b792edbf4e1afd19b959c1a3ea956",
+  "post_lock_rule": "Chronology, preprocessing semantics, imbalance handling, architecture, seeds, validation metric and threshold-selection rule may not change in response to subsequent performance.",
+  "stage": "18.3E",
+  "stage18_3d_result_sha256": "acb59474dfb74f44ff0453bb9e1f0d335b042c0d06901e39cf8436155bb29f36",
+  "status": "MODEL_PROTOCOL_LOCKED"
+}

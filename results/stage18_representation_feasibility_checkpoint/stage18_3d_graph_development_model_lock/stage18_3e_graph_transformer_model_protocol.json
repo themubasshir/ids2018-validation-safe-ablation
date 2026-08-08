@@ -1,0 +1,298 @@
+{
+  "chronology": {
+    "boundaries_changeable": false,
+    "class_distribution_used_to_choose_boundaries": false,
+    "graph_holdout": "11:00:00-12:59:59",
+    "snapshot_seconds": 60,
+    "source": "02-20-2018.csv",
+    "train": "01:00:00-08:59:59",
+    "validation": "09:00:00-10:59:59",
+    "validation_distribution_used_to_change_training_data": false
+  },
+  "created_at_utc": "2026-08-08T06:56:31.007328+00:00",
+  "early_stopping": {
+    "enabled": true,
+    "holdout_used": false,
+    "maximum_epochs": 20,
+    "minimum_delta": 0.0001,
+    "mode": "maximize",
+    "monitor": "PR_AUC",
+    "patience_epochs": 4,
+    "per_seed_checkpointing": true,
+    "selection_partition": "validation"
+  },
+  "edge_preprocessing": {
+    "feature_schema": "frozen Stage-15 retained 70 numeric predictors",
+    "fit_partition": "train_only",
+    "holdout": "apply same frozen TRAIN medians and TRAIN scaler only after authorized opening",
+    "input_feature_count": 70,
+    "median_fit_on_holdout": false,
+    "median_fit_on_validation": false,
+    "nan_imputation": "per-feature TRAIN median",
+    "negative_infinity_handling": "convert_to_nan",
+    "positive_infinity_handling": "convert_to_nan",
+    "post_imputation_scaler": "StandardScaler",
+    "reason": "Preserve authentic chronological flow events and avoid changing graph topology by dropping non-finite edge rows.",
+    "row_dropping_for_nonfinite_values": false,
+    "scaler_fit_partition": "train_only",
+    "validation": "apply frozen TRAIN medians and TRAIN scaler only"
+  },
+  "forbidden_after_lock": [
+    "changing 60-second snapshot size",
+    "changing chronological boundaries",
+    "adding training hours from validation",
+    "moving validation attacks into training",
+    "resampling chronology to balance classes",
+    "using validation prevalence to change loss weighting",
+    "using holdout for class weighting",
+    "using holdout for feature preprocessing",
+    "node identity embeddings",
+    "numeric IP embeddings",
+    "feature-similarity graph edges",
+    "fully connected graph edges",
+    "cross-snapshot message passing",
+    "cross-split message passing",
+    "future-to-past information",
+    "architecture tuning after viewing holdout"
+  ],
+  "frozen_class_distribution": {
+    "accepted_without_boundary_modification": true,
+    "interpretation": "extreme chronological class-prior/concept shift",
+    "train": {
+      "attack": 797,
+      "attack_rate": 0.00019591142443829097,
+      "benign": 4067368,
+      "rows": 4068165
+    },
+    "validation": {
+      "attack": 423621,
+      "attack_rate": 0.19555463025111552,
+      "benign": 1742633,
+      "rows": 2166254
+    }
+  },
+  "graph_holdout": {
+    "allowed_openings": 1,
+    "class_distribution_seen": false,
+    "endpoints_seen": false,
+    "labels_seen": false,
+    "opening_requirements": [
+      "TRAIN preprocessing frozen",
+      "three Graph Transformer seed checkpoints frozen",
+      "three edge-only control checkpoints frozen",
+      "validation ensemble construction frozen",
+      "validation-selected threshold frozen",
+      "all development metrics frozen",
+      "repository commit created before holdout opening"
+    ],
+    "period": "11:00:00-12:59:59",
+    "predictors_seen": false,
+    "status": "CLOSED"
+  },
+  "graph_topology": {
+    "artificial_reverse_edges": false,
+    "cross_snapshot_edges": false,
+    "direction": "preserved",
+    "edge": "individual observed flow",
+    "feature_similarity_edges": false,
+    "fully_connected_edges": false,
+    "node": "host",
+    "parallel_edges": "preserved",
+    "self_loop_edge_insertion": false,
+    "type": "directed temporal multigraph"
+  },
+  "graph_transformer": {
+    "edge_classifier": {
+      "concatenated_dimension": 256,
+      "inputs": [
+        "final_source_node_embedding",
+        "final_destination_node_embedding",
+        "encoded_70_feature_edge_embedding",
+        "destination_minus_source_node_embedding"
+      ],
+      "layers": [
+        "Linear(256,128)",
+        "GELU",
+        "Dropout(0.10)",
+        "Linear(128,1)"
+      ],
+      "output": "binary attack logit per individual flow edge"
+    },
+    "edge_encoder": {
+      "input_dim": 70,
+      "layers": [
+        "Linear(70,64)",
+        "LayerNorm(64)",
+        "GELU"
+      ],
+      "output_dim": 64
+    },
+    "external_graph_library_required": false,
+    "graph_layers": {
+      "activation": "GELU",
+      "aggregation": "softmax attention by destination node",
+      "attention_heads": 4,
+      "attention_scope": "observed incoming directed flow edges within the same snapshot only",
+      "count": 2,
+      "d_model": 64,
+      "dropout": 0.1,
+      "edge_attention_bias": true,
+      "edge_message_projection": true,
+      "explicit_self_edges": false,
+      "feedforward_dimension": 128,
+      "head_dimension": 16,
+      "layer_normalization": true,
+      "node_self_information": "preserved through residual connection",
+      "parallel_edges_as_separate_messages": true,
+      "residual_connections": true
+    },
+    "implementation": "custom PyTorch edge-aware directed attention",
+    "name": "EdgeAwareDirectedGraphTransformer",
+    "node_encoder": {
+      "input_dim": 5,
+      "layers": [
+        "Linear(5,64)",
+        "LayerNorm(64)",
+        "GELU"
+      ],
+      "output_dim": 64
+    },
+    "parameter_initialization": "PyTorch default initialization under frozen seed"
+  },
+  "loss_protocol": {
+    "attack_oversampling": false,
+    "benign_downsampling": false,
+    "holdout_used_to_compute_weight": false,
+    "loss": "BCEWithLogitsLoss",
+    "reason": "Use all authentic graph events while correcting the frozen extreme TRAIN imbalance using only TRAIN-label information.",
+    "smote": false,
+    "synthetic_samples": false,
+    "train_positive_weight": 5103.347553324968,
+    "train_positive_weight_formula": "TRAIN_benign / TRAIN_attack",
+    "train_positive_weight_rounded": 5103.347553324968,
+    "training_edges_used": "ALL chronological training edges",
+    "validation_used_to_compute_weight": false
+  },
+  "metrics": {
+    "calibration_metrics": [
+      "Brier_score",
+      "log_loss"
+    ],
+    "generalization_slices": [
+      "both_hosts_seen",
+      "any_unseen_host",
+      "seen_directed_edge",
+      "unseen_directed_edge"
+    ],
+    "primary_threshold_free": "PR_AUC",
+    "secondary_threshold_free": [
+      "ROC_AUC"
+    ],
+    "threshold_metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "specificity",
+      "balanced_accuracy",
+      "F1",
+      "F2",
+      "FPR",
+      "FNR",
+      "MCC"
+    ]
+  },
+  "next_permitted_action": "Stage 18.3F \u2014 fit TRAIN-only preprocessing artifacts, materialize TRAIN/VALIDATION 60-second snapshot tensors, verify exact graph tensor integrity, and prepare deterministic model inputs. No model fitting and no holdout access.",
+  "node_features": {
+    "derived_from": "current 60-second snapshot only",
+    "features": [
+      "constant_one",
+      "log1p_snapshot_in_degree",
+      "log1p_snapshot_out_degree",
+      "log1p_snapshot_incident_flow_count",
+      "log1p_snapshot_unique_peer_count"
+    ],
+    "future_snapshots_used": false,
+    "holdout_fit": false,
+    "labels_used": false,
+    "node_id_embedding": false,
+    "normalization": "TRAIN-only mean/std normalization for the four structural count features; constant-one remains unchanged.",
+    "numeric_ip_encoding": false,
+    "raw_feature_count": 5,
+    "validation_fit": false
+  },
+  "optimization": {
+    "gradient_accumulation_snapshots": 8,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0003,
+    "max_epochs": 20,
+    "mixed_precision": true,
+    "optimizer": "AdamW",
+    "scheduler": "none",
+    "training_snapshot_order": "strict chronological order",
+    "training_snapshot_shuffle": false,
+    "validation_snapshot_order": "strict chronological order",
+    "weight_decay": 0.0001
+  },
+  "paired_edge_only_control": {
+    "architecture": [
+      "Linear(70,128)",
+      "GELU",
+      "Dropout(0.10)",
+      "Linear(128,64)",
+      "GELU",
+      "Dropout(0.10)",
+      "Linear(64,1)"
+    ],
+    "early_stopping": "same validation PR_AUC rule",
+    "enabled": true,
+    "holdout_access_before_final_freeze": false,
+    "input": "same preprocessed 70 edge features",
+    "learning_rate": 0.0003,
+    "loss": "same TRAIN-only weighted BCE",
+    "name": "EdgeOnlyMLPControl",
+    "optimizer": "AdamW",
+    "purpose": "Measure whether graph context adds predictive value beyond the same 70 flow features.",
+    "seeds": [
+      7,
+      29,
+      101
+    ],
+    "threshold_selection": "same validation ensemble F1 rule",
+    "weight_decay": 0.0001
+  },
+  "parent_commit": "b8c7d1e3023b792edbf4e1afd19b959c1a3ea956",
+  "replication": {
+    "final_development_prediction": "unweighted arithmetic mean of the three seed probabilities",
+    "hyperparameter_search": false,
+    "independent_training_runs": 3,
+    "same_architecture_all_seeds": true,
+    "seeds": [
+      7,
+      29,
+      101
+    ]
+  },
+  "scientific_boundary": {
+    "edge_only_controls_trained": 0,
+    "graph_transformer_models_trained": 0,
+    "holdout_endpoints_read": 0,
+    "holdout_labels_read": 0,
+    "holdout_openings": 0,
+    "holdout_predictors_read": 0,
+    "model_performance_observed": false
+  },
+  "stage": "18.3E",
+  "stage18_3d_result_sha256": "acb59474dfb74f44ff0453bb9e1f0d335b042c0d06901e39cf8436155bb29f36",
+  "status": "GRAPH_TRANSFORMER_MODEL_PROTOCOL_LOCKED",
+  "threshold_selection": {
+    "candidate_thresholds": "0.01 through 0.99 inclusive in increments of 0.01",
+    "fixed_0_50_metrics_also_reported": true,
+    "holdout_used": false,
+    "performed_on": "three-seed validation ensemble probabilities",
+    "primary_rule": "maximize validation F1",
+    "threshold_frozen_before_holdout": true,
+    "tie_break_1": "higher validation recall",
+    "tie_break_2": "lower threshold"
+  },
+  "upstream_protocol_sha256": "15d4098a5360e18f30995d5dd52b348b4797a47bb72f028a2afe3a1606e03acf"
+}

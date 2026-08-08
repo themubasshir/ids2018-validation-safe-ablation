@@ -1,0 +1,74 @@
+{
+  "binary_target_implementation": {
+    "benign_mapping": 0,
+    "development_binary_class_support": true,
+    "non_benign_mapping": 1,
+    "raw_attack_category_values_persisted": false,
+    "raw_source_column": "Label",
+    "train_both_classes_present": true,
+    "validation_both_classes_present": true
+  },
+  "created_at_utc": "2026-08-08T06:51:37.478676+00:00",
+  "edge_feature_audit": {
+    "frozen_edge_feature_count": 70,
+    "nonfinite_handling_applied": false,
+    "note": "Stage 18.3D audits finite availability only. No rows are imputed or dropped here.",
+    "train_finite_rows": 4034703,
+    "train_nonfinite_rows": 33462,
+    "validation_finite_rows": 2152154,
+    "validation_nonfinite_rows": 14100
+  },
+  "frozen_protocol_sha256": "15d4098a5360e18f30995d5dd52b348b4797a47bb72f028a2afe3a1606e03acf",
+  "graph_holdout_boundary": {
+    "holdout_70_feature_vectors_materialized": 0,
+    "holdout_class_distribution_inspected": false,
+    "holdout_endpoint_metadata_materialized": 0,
+    "holdout_graphs_constructed": 0,
+    "holdout_labels_materialized": 0,
+    "holdout_model_inference": 0,
+    "status": "CLOSED",
+    "timestamps_used_only_to_exclude_holdout_rows": true
+  },
+  "graph_training_authorized": false,
+  "next_permitted_action": "If the frozen train and validation partitions contain usable binary class support, freeze the Stage 18.3D conformance evidence and define the Graph Transformer model/preprocessing protocol. Any handling of non-finite 70-feature edge rows must be explicitly locked before model fitting. The graph-specific holdout remains closed.",
+  "partition_materialization": {
+    "development_rows_materialized": 6234419,
+    "graph_holdout_rows_identified_by_timestamp_only": 1714329,
+    "snapshot_seconds": 60,
+    "source_rows_total": 7948748,
+    "train_rows": 4068165,
+    "train_snapshots": 480,
+    "validation_rows": 2166254,
+    "validation_snapshots": 120
+  },
+  "protocol_conformance": {
+    "chronological_boundaries_conformant": true,
+    "cross_snapshot_message_passing_used": false,
+    "cross_split_message_passing_used": false,
+    "graph_holdout_boundary_respected": true,
+    "node_identity_embedding_used": false,
+    "overall": true,
+    "random_temporal_shuffle_used": false,
+    "snapshot_protocol_conformant": true,
+    "stage15_membership_reused": false
+  },
+  "repository_head": "b8c7d1e3023b792edbf4e1afd19b959c1a3ea956",
+  "scientific_boundary": {
+    "development_labels_read": true,
+    "development_raw_attack_category_values_persisted": false,
+    "graph_models_fit": 0,
+    "holdout_endpoints_read": 0,
+    "holdout_graphs_constructed": 0,
+    "holdout_labels_read": 0,
+    "holdout_predictors_read": 0,
+    "model_performance_used": false
+  },
+  "stage": "18.3D",
+  "status": "FROZEN_GRAPH_DEVELOPMENT_PARTITIONS_CONFORMANT",
+  "validation_generalization": {
+    "validation_both_hosts_seen_flow_rate": 0.9765318379100512,
+    "validation_seen_edge_flow_rate": 0.8384123006812683,
+    "validation_unique_edge_seen_rate": 0.45334851439576546,
+    "validation_unique_host_seen_rate": 0.6600087658881724
+  }
+}

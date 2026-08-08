@@ -1,0 +1,67 @@
+{
+  "artifact_count": 10,
+  "artifacts": [
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_artifact_manifest.json",
+      "sha256": "e8a775c0f65500b02e75242435f7996a8095786c34d8b344dd78e5a0e187fef0",
+      "size_bytes": 1634
+    },
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_development_partition_indices.npz",
+      "sha256": "51bca83cb8a71ff14d65de43484cef4dbcbceaaa49b9b53e5c158c77d4ff0b61",
+      "size_bytes": 9501852
+    },
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_frozen_edge_feature_schema.csv",
+      "sha256": "9dcaec9b9fe0ffd2b329aea76be2dbb62cd8010824bc6b054f5bf268b06fde8f",
+      "size_bytes": 1397
+    },
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_partition_summary.csv",
+      "sha256": "d0d6dc0093b3f65acfbb0e0a9ebd391c48973a4726a62488d87eee7fbeafb2e5",
+      "size_bytes": 789
+    },
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_protocol_conformance_result.json",
+      "sha256": "acb59474dfb74f44ff0453bb9e1f0d335b042c0d06901e39cf8436155bb29f36",
+      "size_bytes": 3088
+    },
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_snapshot_audit.csv",
+      "sha256": "58284c30d3014abdbc0d30353eaa1ffe74f27de4d1e7c0d0dcff2a1427e45774",
+      "size_bytes": 56869
+    },
+    {
+      "relative_path": "evidence/stage18_3d_graph_partition_materialization/stage18_3d_validation_generalization_context.json",
+      "sha256": "12baca149eee9b97ca650e36e221d3cbe6e806d82cc519004a69c6b05963ac13",
+      "size_bytes": 1764
+    },
+    {
+      "relative_path": "stage18_3e_freeze_lock.json",
+      "sha256": "db2a44a46d953ed234f542fd7a208c9e3a42a64bbce9e5453117d2fc59b62bc6",
+      "size_bytes": 1166
+    },
+    {
+      "relative_path": "stage18_3e_graph_transformer_model_protocol.json",
+      "sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+      "size_bytes": 9951
+    },
+    {
+      "relative_path": "stage18_3e_graph_transformer_model_protocol.md",
+      "sha256": "ce963c91c635e3748f33d7c06d94a3dcd8aa240d40136ee27a48a01c5dd28b30",
+      "size_bytes": 4673
+    }
+  ],
+  "model_protocol_status": "LOCKED",
+  "parent_commit": "b8c7d1e3023b792edbf4e1afd19b959c1a3ea956",
+  "scientific_boundary": {
+    "holdout_endpoints_read": 0,
+    "holdout_labels_read": 0,
+    "holdout_openings": 0,
+    "holdout_predictors_read": 0,
+    "models_fit": 0
+  },
+  "stage": "18.3E",
+  "stage18_3d_status": "FROZEN_GRAPH_DEVELOPMENT_PARTITIONS_CONFORMANT",
+  "status": "GRAPH_DEVELOPMENT_MODEL_LOCK_FROZEN"
+}

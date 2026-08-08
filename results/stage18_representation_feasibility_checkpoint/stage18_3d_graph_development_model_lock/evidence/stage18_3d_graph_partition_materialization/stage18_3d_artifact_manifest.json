@@ -1,0 +1,47 @@
+{
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "relative_path": "stage18_3d_development_partition_indices.npz",
+      "sha256": "51bca83cb8a71ff14d65de43484cef4dbcbceaaa49b9b53e5c158c77d4ff0b61",
+      "size_bytes": 9501852
+    },
+    {
+      "relative_path": "stage18_3d_frozen_edge_feature_schema.csv",
+      "sha256": "9dcaec9b9fe0ffd2b329aea76be2dbb62cd8010824bc6b054f5bf268b06fde8f",
+      "size_bytes": 1397
+    },
+    {
+      "relative_path": "stage18_3d_partition_summary.csv",
+      "sha256": "d0d6dc0093b3f65acfbb0e0a9ebd391c48973a4726a62488d87eee7fbeafb2e5",
+      "size_bytes": 789
+    },
+    {
+      "relative_path": "stage18_3d_protocol_conformance_result.json",
+      "sha256": "acb59474dfb74f44ff0453bb9e1f0d335b042c0d06901e39cf8436155bb29f36",
+      "size_bytes": 3088
+    },
+    {
+      "relative_path": "stage18_3d_snapshot_audit.csv",
+      "sha256": "58284c30d3014abdbc0d30353eaa1ffe74f27de4d1e7c0d0dcff2a1427e45774",
+      "size_bytes": 56869
+    },
+    {
+      "relative_path": "stage18_3d_validation_generalization_context.json",
+      "sha256": "12baca149eee9b97ca650e36e221d3cbe6e806d82cc519004a69c6b05963ac13",
+      "size_bytes": 1764
+    }
+  ],
+  "scientific_boundary": {
+    "development_labels_read": true,
+    "development_rows_materialized": 6234419,
+    "graph_models_fit": 0,
+    "holdout_endpoints_materialized": 0,
+    "holdout_graphs_constructed": 0,
+    "holdout_labels_materialized": 0,
+    "holdout_predictor_vectors_materialized": 0,
+    "holdout_timestamp_boundary_rows_identified": 1714329
+  },
+  "stage": "18.3D",
+  "status": "GRAPH_DEVELOPMENT_MATERIALIZATION_EVIDENCE_COMPLETE"
+}

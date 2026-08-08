@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-08-08T09:16:03.771330+00:00",
+  "frozen_stage18_4_synthesis_sha256": "df440cdaa2d88c79465fb225bda9bed9f0a5cab4d680e01b90a8ca48ccf1af17",
+  "graph_results_preserved": {
+    "final_holdout_attacks": 151773,
+    "final_holdout_f1": 0.0,
+    "final_holdout_pr_auc": 0.9735953918848133,
+    "final_holdout_recall": 0.0,
+    "final_holdout_roc_auc": 0.9986766395630168,
+    "final_holdout_true_positives": 0,
+    "frozen_threshold": 0.01,
+    "validation_pr_auc": 0.9838755704548996
+  },
+  "manuscript_document": "docs/STAGE18_MANUSCRIPT_INTEGRATION.md",
+  "manuscript_document_sha256": "f322453d602621f85317d96db9bb052b2a07b56e0984239f8ff4d7a6ab28a022",
+  "next_authorized_action": "Review the Stage 18.5 manuscript-ready text and integrate selected passages into the final paper. No Stage 18 experimental result may change.",
+  "parent_commit": "1fca90ec4df4e818ae6f814b94551e2e82ab6927",
+  "representation_decisions_preserved": {
+    "graph_transformer": "SUPPORTED_WITH_CONSTRAINTS",
+    "temporal_mtemporal": "SUPPORTED_WITH_CONSTRAINTS",
+    "vision_transformer": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS"
+  },
+  "scientific_boundary": {
+    "dataset_access": false,
+    "holdout_access": false,
+    "inference": false,
+    "recalibration": false,
+    "result_modification": false,
+    "tensor_access": false,
+    "threshold_search": false,
+    "training": false
+  },
+  "sections_created": [
+    "Introduction contribution",
+    "Methods representation-feasibility protocol",
+    "Temporal methods",
+    "ViT methods",
+    "Graph methods",
+    "Results",
+    "Manuscript result table",
+    "Discussion",
+    "Limitations",
+    "Contribution statement",
+    "Publication-safe claims",
+    "Prohibited claims",
+    "Recommended manuscript placement"
+  ],
+  "stage": "18.5",
+  "status": "MANUSCRIPT_INTEGRATION_COMPLETE"
+}

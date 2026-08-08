@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-08-08T14:29:55.847217+00:00",
+  "feature_schema": {
+    "feature_schema_recomputed": false,
+    "reason": "The prior feature-type audit was unaffected by the calendar-date anomaly.",
+    "retained_numeric_predictors": 78,
+    "source": "results/stage19_mtemporal_checkpoint/stage19_1_development_source_audit/stage19_1_common_numeric_feature_schema.csv",
+    "source_sha256": "6b28cfb3e3af13e782b9e8c8d28126bcfca38b24659edc508f69c090faf69ea8"
+  },
+  "holdout": {
+    "files_read": [],
+    "labels_read": 0,
+    "openings": 0,
+    "predictors_read": 0,
+    "rows_read": 0,
+    "status": "CLOSED"
+  },
+  "next_authorized_step": "Stage 19.2 \u2014 materialize corrected TRAIN and VALIDATION one-second temporal series and multi-scale development representation. Stage-19 holdout remains closed.",
+  "parent_commit": "ccb988e598b5f1fdfe476b1d91c4065ab6c3fa6e",
+  "protocol_sha256": "bc07366ed6e2c90625203838dc30b822d2efc1275f11c4772fed7b12202f6b45",
+  "stage": "19.1C",
+  "status": "CORRECTED_DEVELOPMENT_CHRONOLOGY_AUDIT_COMPLETE",
+  "timestamp_hygiene": {
+    "1970_calendar_dates_corrected": 14,
+    "correction_rule": "For a strictly parsed traffic timestamp whose calendar date disagrees with its daily source file, correction is permitted only when the parsed year equals 1970. Replace year/month/day with the source-file date and preserve hour/minute/second.",
+    "correction_uses_labels": false,
+    "correction_uses_model_outputs": false,
+    "embedded_header_rows_removed": 34,
+    "other_wrong_source_dates": 0,
+    "strict_unparsed_traffic_timestamps": 0,
+    "traffic_rows_dropped_for_timestamp_reason": 0
+  },
+  "train": {
+    "eligible_prediction_seconds": 282329,
+    "frozen_pos_weight": 10.739739698116345,
+    "negative_seconds": 258280,
+    "positive_rate": 0.08518076428563838,
+    "positive_seconds": 24049
+  },
+  "validation": {
+    "eligible_prediction_seconds": 42000,
+    "negative_seconds": 34838,
+    "positive_rate": 0.17052380952380952,
+    "positive_seconds": 7162
+  }
+}

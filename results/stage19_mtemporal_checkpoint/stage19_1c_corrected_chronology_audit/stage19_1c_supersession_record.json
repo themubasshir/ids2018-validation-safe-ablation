@@ -1,0 +1,23 @@
+{
+  "invalidated_from_prior_audit": [
+    "per-file temporal span for affected files",
+    "TRAIN eligible-second count",
+    "TRAIN positive-second rate",
+    "TRAIN negative-second count",
+    "TRAIN pos_weight",
+    "any temporal materialization derived from them"
+  ],
+  "prior_artifacts_deleted": false,
+  "prior_git_history_rewritten": false,
+  "reason": "The Stage 19.1 permissive chronology audit included 14 raw source timestamps carrying 1970 calendar dates. These inflated the TRAIN wall-clock span to approximately 3.037 billion eligible seconds and invalidated its temporal class rate and pos_weight.",
+  "replacement": "Stage 19.1C corrected chronology audit",
+  "stage": "19.1C",
+  "status": "STAGE19_1_TEMPORAL_STATISTICS_SUPERSEDED",
+  "still_valid_from_prior_audit": [
+    "78-feature common numeric schema",
+    "embedded duplicate-header detection",
+    "flow-level label counts"
+  ],
+  "superseded_audit_result_sha256": "7191af24732a7a0d9a19650661b1338d97fe41dd857852784752e9c96856b735",
+  "superseded_commit": "ccb988e598b5f1fdfe476b1d91c4065ab6c3fa6e"
+}

@@ -1,0 +1,82 @@
+{
+  "artifact_count": 15,
+  "artifacts": [
+    {
+      "relative_path": "holdout_edge_features.npy",
+      "sha256": "1fb540269827acf816903c268165dda961f6e1541732c6c0b4672edf36b18b4a",
+      "size_bytes": 480012248
+    },
+    {
+      "relative_path": "holdout_binary_labels.npy",
+      "sha256": "f41d8a7b4bfbef70326cebed45b57c399b4081c009724c879c011bd0c4a0ddf7",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_src_global_id.npy",
+      "sha256": "1c996bdd915c94480003b8b7394c45d552cee475ebb45458637e4f4e579af522",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_dst_global_id.npy",
+      "sha256": "edf6bcb1b53714f4f0a3583a8ecbae3393c398ee3f12a6054f07b3269586bd54",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_snapshot_id.npy",
+      "sha256": "06ff56741227214bc87349f562fd7ae8e7831395f142f6cba311701b626dd439",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_raw_row_index.npy",
+      "sha256": "8be56062aefdd072996ee694266c8275c681ae3ef2f888907801aabcf6aaab29",
+      "size_bytes": 13714760
+    },
+    {
+      "relative_path": "holdout_both_hosts_seen_in_train.npy",
+      "sha256": "c7d3ca95236a54e054b397096230035afce10c93be627da423ce801106e54dce",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_directed_edge_seen_in_train.npy",
+      "sha256": "e08f0cc335012d37e908dca4a260712b7e7cb4913f931c8fe2511958a55a5277",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_edge_snapshot_order.npy",
+      "sha256": "441c175a65f14d5a69479bf56027513419d20dc68396a1bed04cc8bc8677e58d",
+      "size_bytes": 13714760
+    },
+    {
+      "relative_path": "holdout_edge_snapshot_offsets.npy",
+      "sha256": "4342a2718d2b98d045d7dfdf2f9ff64602228f1653e6e278b4543cc3555efd4c",
+      "size_bytes": 1096
+    },
+    {
+      "relative_path": "holdout_snapshot_global_id.npy",
+      "sha256": "1371a0799e6592356a9732ad5f682178427075124bd3efe3f56fefb28a0a5017",
+      "size_bytes": 608
+    },
+    {
+      "relative_path": "holdout_node_features.npy",
+      "sha256": "45a7e232d2d4fb11edd6fc669ad9a602c5ab5127c65d02cc196668a26a53912c",
+      "size_bytes": 4088668
+    },
+    {
+      "relative_path": "holdout_edge_src_local_index.npy",
+      "sha256": "e0c45c2d94257eae4b439ae6e14f95c63c59b1a5cd0795529f856525a98f7d95",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_edge_dst_local_index.npy",
+      "sha256": "2c60151edd9b87ec05da8767e57f10facff1d7f0c538a5bee504e341395f3956",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_node_snapshot_offsets.npy",
+      "sha256": "7aabd5a6fafb31c6e0e7ab40357d773a0b5752cf76e583c7d87b7531ba90f7b9",
+      "size_bytes": 1096
+    }
+  ],
+  "opening_number": 1,
+  "stage": "18.3L-materialization"
+}

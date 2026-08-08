@@ -1,0 +1,19 @@
+{
+  "authorized_openings": 1,
+  "edgeonly_freeze_sha256": "33f15f8d9fb050beb099498eccaa5dc8acc408bab4d4e447b74ca83ee64fe1ae",
+  "edgeonly_threshold": 0.01,
+  "graph_transformer_freeze_sha256": "d4695ca89f284d37df63ae481e89cf9783def4bdc4be9d3eb37b08d705394e49",
+  "graph_transformer_threshold": 0.01,
+  "holdout_may_select_anything": false,
+  "holdout_period": "2018-02-20 11:00:00 through 12:59:59",
+  "holdout_use": "FINAL_EVALUATION_ONLY",
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "opening_number": 1,
+  "raw_attack_category_persisted": false,
+  "repository_head": "fcb560684601016f1d76dfd4f12af4dac003bbeb",
+  "source": "02-20-2018.csv",
+  "stage": "18.3L",
+  "started_at_utc": "2026-08-08T08:59:04.721916+00:00",
+  "status": "IRREVERSIBLE_GRAPH_HOLDOUT_OPENING_STARTED",
+  "tensor_freeze_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32"
+}

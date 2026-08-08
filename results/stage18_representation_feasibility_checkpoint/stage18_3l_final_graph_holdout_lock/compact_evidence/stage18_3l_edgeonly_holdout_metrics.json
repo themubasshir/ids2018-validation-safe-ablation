@@ -1,0 +1,49 @@
+{
+  "fixed_0_50_metrics": {
+    "accuracy": 0.9114679854333678,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "f2": 0.0,
+    "fn": 151773,
+    "fnr": 1.0,
+    "fp": 0,
+    "fpr": 0.0,
+    "mcc": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "threshold": 0.5,
+    "tn": 1562556,
+    "tp": 0
+  },
+  "frozen_threshold_metrics": {
+    "accuracy": 0.9193107040713888,
+    "balanced_accuracy": 0.8965876071900398,
+    "f1": 0.6559877841940602,
+    "f2": 0.7690912632184189,
+    "fn": 19886,
+    "fnr": 0.13102462229777365,
+    "fp": 118442,
+    "fpr": 0.07580016332214654,
+    "mcc": 0.6380549302244256,
+    "precision": 0.5268546592684028,
+    "recall": 0.8689753777022263,
+    "specificity": 0.9241998366778534,
+    "threshold": 0.01,
+    "tn": 1444114,
+    "tp": 131887
+  },
+  "frozen_validation_threshold": 0.01,
+  "holdout_opening": 1,
+  "model": "EdgeOnlyMLPControl",
+  "model_retrained": false,
+  "recalibration_performed": false,
+  "stage": "18.3L",
+  "threshold_free": {
+    "brier": 0.0858074684803028,
+    "log_loss": 0.39271739723659754,
+    "pr_auc": 0.42976973171668154,
+    "roc_auc": 0.9089809044929202
+  },
+  "threshold_selected_on_holdout": false
+}

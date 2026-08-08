@@ -1,0 +1,173 @@
+{
+  "artifact_count": 32,
+  "artifacts": [
+    {
+      "relative_path": "edgeonly_holdout_ensemble_probabilities.npy",
+      "sha256": "919c4f37c0d8d329517d7c385e9242766bbed329230522902c75369d6b74d167",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "edgeonly_seed_101_holdout_probabilities.npy",
+      "sha256": "9e2c2511a90732342a36e15544df6c923337aacdf8e814c825ff2db7ffaa4192",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "edgeonly_seed_29_holdout_probabilities.npy",
+      "sha256": "1427d6cc4a2da3e7a68b896536f3e71cebcbde9fe83e096ccd9ad2ebcee5e929",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "edgeonly_seed_7_holdout_probabilities.npy",
+      "sha256": "6a5d8bea7d33efc32cb5f6cd2bbc82e6381b0d0412912b7cc324c2b33eb6a2fe",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "graph_holdout_ensemble_probabilities.npy",
+      "sha256": "abd16ce9e107e5ede47cb5f7aec8d7b0720f109c19c00191ef9bd239ab6c3385",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "graph_seed_101_holdout_probabilities.npy",
+      "sha256": "60995c74b18c15b81f990ad84bd9d24599d16e873e85b30c04b8b79dd72ec768",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "graph_seed_29_holdout_probabilities.npy",
+      "sha256": "646d6007ae2922e8fa559f5cf786bac6ca151240f6aad50de3d77fa982334a06",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "graph_seed_7_holdout_probabilities.npy",
+      "sha256": "bf917826e1f68061170c2e79f26b1bc69dd3916031676590c7366023de4d584c",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_binary_labels.npy",
+      "sha256": "f41d8a7b4bfbef70326cebed45b57c399b4081c009724c879c011bd0c4a0ddf7",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_both_hosts_seen_in_train.npy",
+      "sha256": "c7d3ca95236a54e054b397096230035afce10c93be627da423ce801106e54dce",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_directed_edge_seen_in_train.npy",
+      "sha256": "e08f0cc335012d37e908dca4a260712b7e7cb4913f931c8fe2511958a55a5277",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_dst_global_id.npy",
+      "sha256": "edf6bcb1b53714f4f0a3583a8ecbae3393c398ee3f12a6054f07b3269586bd54",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_edge_dst_local_index.npy",
+      "sha256": "2c60151edd9b87ec05da8767e57f10facff1d7f0c538a5bee504e341395f3956",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_edge_features.npy",
+      "sha256": "1fb540269827acf816903c268165dda961f6e1541732c6c0b4672edf36b18b4a",
+      "size_bytes": 480012248
+    },
+    {
+      "relative_path": "holdout_edge_snapshot_offsets.npy",
+      "sha256": "4342a2718d2b98d045d7dfdf2f9ff64602228f1653e6e278b4543cc3555efd4c",
+      "size_bytes": 1096
+    },
+    {
+      "relative_path": "holdout_edge_snapshot_order.npy",
+      "sha256": "441c175a65f14d5a69479bf56027513419d20dc68396a1bed04cc8bc8677e58d",
+      "size_bytes": 13714760
+    },
+    {
+      "relative_path": "holdout_edge_src_local_index.npy",
+      "sha256": "e0c45c2d94257eae4b439ae6e14f95c63c59b1a5cd0795529f856525a98f7d95",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "holdout_node_features.npy",
+      "sha256": "45a7e232d2d4fb11edd6fc669ad9a602c5ab5127c65d02cc196668a26a53912c",
+      "size_bytes": 4088668
+    },
+    {
+      "relative_path": "holdout_node_snapshot_offsets.npy",
+      "sha256": "7aabd5a6fafb31c6e0e7ab40357d773a0b5752cf76e583c7d87b7531ba90f7b9",
+      "size_bytes": 1096
+    },
+    {
+      "relative_path": "holdout_raw_row_index.npy",
+      "sha256": "8be56062aefdd072996ee694266c8275c681ae3ef2f888907801aabcf6aaab29",
+      "size_bytes": 13714760
+    },
+    {
+      "relative_path": "holdout_snapshot_global_id.npy",
+      "sha256": "1371a0799e6592356a9732ad5f682178427075124bd3efe3f56fefb28a0a5017",
+      "size_bytes": 608
+    },
+    {
+      "relative_path": "holdout_snapshot_id.npy",
+      "sha256": "06ff56741227214bc87349f562fd7ae8e7831395f142f6cba311701b626dd439",
+      "size_bytes": 1714457
+    },
+    {
+      "relative_path": "holdout_src_global_id.npy",
+      "sha256": "1c996bdd915c94480003b8b7394c45d552cee475ebb45458637e4f4e579af522",
+      "size_bytes": 6857444
+    },
+    {
+      "relative_path": "stage18_3l_IRREVERSIBLE_opening_lock.json",
+      "sha256": "c5188b4f2815d45aedb183f63224367bcd7ccca8676a503d40e5ff4a19d3c750",
+      "size_bytes": 926
+    },
+    {
+      "relative_path": "stage18_3l_edgeonly_generalization_slices.csv",
+      "sha256": "3c1d03514dcdab9b698f5ea136946a64448589c719e996c7456b26980c8dbfc9",
+      "size_bytes": 1760
+    },
+    {
+      "relative_path": "stage18_3l_edgeonly_holdout_metrics.json",
+      "sha256": "572cf2fa820d2d12de058828286a49a1fbc84aa12f5d142958d377ac1c59c0b4",
+      "size_bytes": 1192
+    },
+    {
+      "relative_path": "stage18_3l_final_graph_holdout_result.json",
+      "sha256": "041493b9305cd905b9301348c4589d6ef412507e5ce943d24875abc7d397b3aa",
+      "size_bytes": 12061
+    },
+    {
+      "relative_path": "stage18_3l_final_model_comparison.csv",
+      "sha256": "429e2bd66b5aa0a8482d0f3ba398a676b32bbe36b3bdc8e39fde3e4bb75a5173",
+      "size_bytes": 431
+    },
+    {
+      "relative_path": "stage18_3l_graph_transformer_generalization_slices.csv",
+      "sha256": "af3c2aeed00a2fad88916e75c89d1756009a06f52600260f9ccdd4b77e4ba6f8",
+      "size_bytes": 1524
+    },
+    {
+      "relative_path": "stage18_3l_graph_transformer_holdout_metrics.json",
+      "sha256": "5a5ec50beccb1bfd2e0ba4bd1ee47d3be37274d86ea396b9b1f858fcefc3e9df",
+      "size_bytes": 1128
+    },
+    {
+      "relative_path": "stage18_3l_holdout_materialization_result.json",
+      "sha256": "1ed28793904768f8040259f485a38fc60fd67d7b503ad946ab23c5c15153fd01",
+      "size_bytes": 1708
+    },
+    {
+      "relative_path": "stage18_3l_holdout_tensor_manifest.json",
+      "sha256": "ceb1290f2dfbce646875513cf08f5710ff8eda3af0c37866d7c2b2f2118b8c6e",
+      "size_bytes": 2820
+    }
+  ],
+  "opening_number": 1,
+  "scientific_boundary": {
+    "future_openings_permitted": 0,
+    "holdout_openings": 1,
+    "holdout_status": "PERMANENTLY_CLOSED"
+  },
+  "stage": "18.3L",
+  "status": "FINAL_GRAPH_HOLDOUT_ARTIFACTS_COMPLETE"
+}

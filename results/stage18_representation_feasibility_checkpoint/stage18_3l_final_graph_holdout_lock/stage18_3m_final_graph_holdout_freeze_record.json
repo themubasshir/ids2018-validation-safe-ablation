@@ -1,0 +1,109 @@
+{
+  "created_at_utc": "2026-08-08T09:06:26.012075+00:00",
+  "edgeonly_final_holdout": {
+    "brier": 0.0858074684803028,
+    "f1": 0.6559877841940602,
+    "f2": 0.7690912632184189,
+    "fn": 19886,
+    "fp": 118442,
+    "frozen_threshold": 0.01,
+    "log_loss": 0.39271739723659754,
+    "mcc": 0.6380549302244256,
+    "pr_auc": 0.42976973171668154,
+    "precision": 0.5268546592684028,
+    "recall": 0.8689753777022263,
+    "roc_auc": 0.9089809044929202,
+    "tn": 1444114,
+    "tp": 131887
+  },
+  "final_interpretation_boundaries": {
+    "comparison_type": "descriptive_not_causal",
+    "edgeonly_result": "The EdgeOnlyMLP had substantially weaker threshold-free ranking performance but retained useful detection at its frozen 0.01 threshold.",
+    "graph_operating_point_result": "At the frozen validation-selected threshold 0.01, the Graph Transformer produced zero true-positive holdout detections.",
+    "graph_ranking_result": "The frozen Graph Transformer retained very strong final-holdout ranking performance.",
+    "posthoc_lower_threshold_search_permitted": false,
+    "posthoc_recalibration_permitted": false,
+    "posthoc_retraining_permitted": false,
+    "unseen_topology_attack_generalization_estimable": false,
+    "unseen_topology_reason": "The final holdout contains zero attacks in both the any-unseen-host and unseen-directed-edge slices."
+  },
+  "freezes_stage": "18.3L",
+  "graph_transformer_final_holdout": {
+    "brier": 0.08796868174460235,
+    "f1": 0.0,
+    "f2": 0.0,
+    "fn": 151773,
+    "fp": 150,
+    "frozen_threshold": 0.01,
+    "log_loss": 0.5188151848560969,
+    "mcc": -0.002915392339135102,
+    "pr_auc": 0.9735953918848133,
+    "precision": 0.0,
+    "recall": 0.0,
+    "roc_auc": 0.9986766395630168,
+    "tn": 1562406,
+    "tp": 0
+  },
+  "holdout": {
+    "attack": 151773,
+    "attack_rate": 0.08853201456663219,
+    "authorized_openings": 1,
+    "benign": 1562556,
+    "future_openings_permitted": 0,
+    "node_snapshot_observations": 204427,
+    "openings_used": 1,
+    "period": "2018-02-20 11:00:00 through 12:59:59",
+    "rows": 1714329,
+    "snapshots": 120,
+    "source": "02-20-2018.csv",
+    "status": "PERMANENTLY_CLOSED",
+    "unique_directed_edges": 235213,
+    "unique_hosts": 15069
+  },
+  "large_runtime_artifact_policy": {
+    "all_runtime_artifacts_verified_before_freeze": true,
+    "final_runtime_manifest_sha256": "3ac848d8a234493c53205cd038d568f07f8ae40bd41fe7a147f0cd3f788a5338",
+    "holdout_probability_arrays_committed_to_git": false,
+    "holdout_tensors_committed_to_git": false,
+    "identity_anchor": "stage18_3l_final_artifact_manifest.json",
+    "runtime_artifact_count": 32
+  },
+  "next_authorized_action": "Perform Stage 18.3N scientific synthesis and graph-experiment closure using only frozen Stage 18.3M evidence. No further raw or materialized holdout inference is permitted.",
+  "paired_descriptive_comparison": {
+    "causal_graph_context_claim_permitted": false,
+    "graph_minus_edgeonly_frozen_threshold_f1": -0.6559877841940602,
+    "graph_minus_edgeonly_pr_auc": 0.5438256601681317,
+    "graph_minus_edgeonly_roc_auc": 0.08969573507009654
+  },
+  "parent_commit": "fcb560684601016f1d76dfd4f12af4dac003bbeb",
+  "scientific_closure": {
+    "authorized_graph_holdout_openings": 1,
+    "future_graph_holdout_openings": 0,
+    "graph_holdout_openings": 1,
+    "graph_holdout_status": "PERMANENTLY_CLOSED",
+    "holdout_used_for_architecture_change": false,
+    "holdout_used_for_model_selection": false,
+    "holdout_used_for_preprocessing_fit": false,
+    "holdout_used_for_recalibration": false,
+    "holdout_used_for_retraining": false,
+    "holdout_used_for_threshold_selection": false
+  },
+  "stage": "18.3M",
+  "status": "FINAL_GRAPH_HOLDOUT_RESULTS_FROZEN_AND_PERMANENTLY_CLOSED",
+  "topology_context": {
+    "attacks_on_unseen_directed_edge": 0,
+    "attacks_with_unseen_host": 0,
+    "flow_any_unseen_host": 44208,
+    "flow_both_hosts_seen": 1670121,
+    "flow_both_hosts_seen_rate": 0.974212651130559,
+    "flow_seen_directed_edge": 1377193,
+    "flow_seen_directed_edge_rate": 0.8033422989402851,
+    "flow_unseen_directed_edge": 337136
+  },
+  "upstream_frozen_chain": {
+    "edgeonly_control_freeze_sha256": "33f15f8d9fb050beb099498eccaa5dc8acc408bab4d4e447b74ca83ee64fe1ae",
+    "graph_transformer_freeze_sha256": "d4695ca89f284d37df63ae481e89cf9783def4bdc4be9d3eb37b08d705394e49",
+    "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+    "tensor_freeze_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32"
+  }
+}

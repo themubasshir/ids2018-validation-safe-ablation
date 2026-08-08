@@ -1,0 +1,40 @@
+{
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "relative_path": "stage19_1_file_temporal_audit.csv",
+      "sha256": "3a49b61833091dc7771dd08ecb528290bd35a6420fe1ba44dca70c27994c704f",
+      "size_bytes": 2446
+    },
+    {
+      "relative_path": "stage19_1_common_numeric_feature_schema.csv",
+      "sha256": "6b28cfb3e3af13e782b9e8c8d28126bcfca38b24659edc508f69c090faf69ea8",
+      "size_bytes": 5993
+    },
+    {
+      "relative_path": "stage19_1_development_label_distribution.csv",
+      "sha256": "f3b424677a97d17c8e0e90baa96dfd61a9d94f6331cdfad280a21a312669c9bd",
+      "size_bytes": 1528
+    },
+    {
+      "relative_path": "stage19_1_schema_availability_matrix.csv",
+      "sha256": "2249da20e8ec01b388cd35dd5bd94edac27f71ddf66b930db9376fb1d04600d8",
+      "size_bytes": 5089
+    },
+    {
+      "relative_path": "stage19_1_source_audit_result.json",
+      "sha256": "7191af24732a7a0d9a19650661b1338d97fe41dd857852784752e9c96856b735",
+      "size_bytes": 3977
+    },
+    {
+      "relative_path": "stage19_1_development_audit_freeze_record.json",
+      "sha256": "86168a955adcaac1e0dc7d706a70dc6b080381489c3c1516c6dc8ea1e2bc3bf0",
+      "size_bytes": 2900
+    }
+  ],
+  "embedded_header_rows_removed": 34,
+  "holdout_access": false,
+  "stage": "19.1",
+  "status": "MTEMPORAL_DEVELOPMENT_AUDIT_PACKAGE_COMPLETE",
+  "unexpected_timestamp_parse_failures": 0
+}

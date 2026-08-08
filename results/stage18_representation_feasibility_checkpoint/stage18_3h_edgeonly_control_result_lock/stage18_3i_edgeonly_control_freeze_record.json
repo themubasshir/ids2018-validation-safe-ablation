@@ -1,0 +1,113 @@
+{
+  "calibration_note": {
+    "brier": 0.18937341559665305,
+    "interpretation": "Ranking performance is useful, but probability calibration is affected by the extreme chronological prevalence shift and the training-only positive class weight. The validation-selected threshold is an operating point, not a universal calibrated probability cutoff.",
+    "log_loss": 0.8685630781754672,
+    "selected_threshold": 0.01,
+    "selected_threshold_is_grid_boundary": true,
+    "threshold_grid_minimum": 0.01
+  },
+  "created_at_utc": "2026-08-08T08:14:37.623605+00:00",
+  "freezes_stage": "18.3H",
+  "model": {
+    "hyperparameter_search": false,
+    "name": "EdgeOnlyMLPControl",
+    "parameter_count": 17409,
+    "seeds": [
+      7,
+      29,
+      101
+    ]
+  },
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "next_authorized_action": "Train the already-locked three-seed EdgeAwareDirectedGraphTransformer using the frozen Stage 18.3F graph tensors. No architecture, preprocessing, class-weight, snapshot, chronology or threshold-rule modification is permitted. Graph holdout remains closed.",
+  "parent_commit": "534a1430bf504fa139e83cbadc7b614f1f5ccc74",
+  "per_seed": [
+    {
+      "best_epoch": 4,
+      "checkpoint_sha256": "ade352e9239df7084c2a409489d355fa66333e517456769680ab922904eb3b40",
+      "seed": 7,
+      "validation_pr_auc": 0.62624363486439,
+      "validation_roc_auc": 0.9040435918955982
+    },
+    {
+      "best_epoch": 4,
+      "checkpoint_sha256": "2e6c178cfb4192797fcc4044fc1c8b213aa964bfe9d8ef7627b214faab07dfd0",
+      "seed": 29,
+      "validation_pr_auc": 0.6714496709848452,
+      "validation_roc_auc": 0.9099930452860838
+    },
+    {
+      "best_epoch": 5,
+      "checkpoint_sha256": "eb341f2306b2d4e568af3347d864291a09f608a5ce17d21d1de6376dc53b5352",
+      "seed": 101,
+      "validation_pr_auc": 0.7379943989126211,
+      "validation_roc_auc": 0.9203531969548453
+    }
+  ],
+  "probability_artifact_policy": {
+    "ensemble_probability_array_committed": false,
+    "ensemble_probability_sha256": "4a7425bea8ab1f30f45a0abf102e3fa4f21005846c89662972118df9bc901504",
+    "ensemble_probability_size_bytes": 8665144,
+    "reason": "Probability arrays remain runtime artifacts; their SHA-256 identities are frozen.",
+    "seed_probability_arrays_committed": false,
+    "seed_probability_identities": [
+      {
+        "seed": 7,
+        "sha256": "b4aadbfbc8cc6f02637e6231ce657b8d3813f4762241ec00e6cee7beb2363cca",
+        "size_bytes": 8665144
+      },
+      {
+        "seed": 29,
+        "sha256": "54c4f2db635792dc0b4bd5093af3b36317bfb80240c9310d06f1e545b60087b5",
+        "size_bytes": 8665144
+      },
+      {
+        "seed": 101,
+        "sha256": "ab931819c0a68892557fd8a0c2342621a87b21f1ff301ce105daae71a09ebf36",
+        "size_bytes": 8665144
+      }
+    ]
+  },
+  "scientific_boundary": {
+    "chronological_boundaries_changed": false,
+    "class_weight_changed": false,
+    "edge_only_models_trained": 3,
+    "graph_holdout_openings": 0,
+    "graph_holdout_status": "CLOSED",
+    "graph_transformer_models_trained": 0,
+    "graph_transformer_protocol_changed": false
+  },
+  "stage": "18.3I",
+  "status": "EDGE_ONLY_CONTROL_RESULTS_FROZEN",
+  "tensor_freeze_record_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32",
+  "validation_ensemble": {
+    "accuracy": 0.9207045895818311,
+    "balanced_accuracy": 0.8992887077189072,
+    "brier": 0.18937341559665305,
+    "f1": 0.8099613891070816,
+    "f2": 0.841608219416182,
+    "fn": 57563,
+    "fp": 114211,
+    "log_loss": 0.8685630781754672,
+    "mcc": 0.7624995654504897,
+    "pr_auc": 0.6741188649035655,
+    "precision": 0.7621936872877492,
+    "recall": 0.8641167458648178,
+    "roc_auc": 0.9113498945570639,
+    "selected_threshold": 0.01,
+    "specificity": 0.9344606695729967,
+    "tn": 1628422,
+    "tp": 366058
+  },
+  "validation_topology_context": {
+    "attacks_on_seen_directed_edge": 423621,
+    "attacks_on_unseen_directed_edge": 0,
+    "attacks_with_any_unseen_host": 0,
+    "attacks_with_both_hosts_seen": 423621,
+    "interpretation_limit": "This validation period contains no positive attack examples in the unseen-host or unseen-directed-edge slices. Therefore attack-detection generalization to unseen topology cannot be estimated from these validation slices.",
+    "total_validation_attacks": 423621,
+    "unseen_directed_edge_flow_rows": 350040,
+    "unseen_host_flow_rows": 50838
+  }
+}

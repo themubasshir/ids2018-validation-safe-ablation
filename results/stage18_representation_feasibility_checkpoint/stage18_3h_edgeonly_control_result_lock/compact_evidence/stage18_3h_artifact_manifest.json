@@ -1,0 +1,97 @@
+{
+  "artifact_count": 17,
+  "artifacts": [
+    {
+      "relative_path": "seed_101/best_checkpoint.pt",
+      "sha256": "eb341f2306b2d4e568af3347d864291a09f608a5ce17d21d1de6376dc53b5352",
+      "size_bytes": 73461
+    },
+    {
+      "relative_path": "seed_101/completion.json",
+      "sha256": "3776d8ad4b50facbfce2f08b707a35073bfb5165f9b2ce7e28e624989690f90f",
+      "size_bytes": 3260
+    },
+    {
+      "relative_path": "seed_101/validation_probabilities.npy",
+      "sha256": "ab931819c0a68892557fd8a0c2342621a87b21f1ff301ce105daae71a09ebf36",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "seed_29/best_checkpoint.pt",
+      "sha256": "2e6c178cfb4192797fcc4044fc1c8b213aa964bfe9d8ef7627b214faab07dfd0",
+      "size_bytes": 73461
+    },
+    {
+      "relative_path": "seed_29/completion.json",
+      "sha256": "9ed5cf93f1a6c4440d9c7616e0a8fbbeccae356f894b5dfb9aaea3020fe0dfed",
+      "size_bytes": 2959
+    },
+    {
+      "relative_path": "seed_29/validation_probabilities.npy",
+      "sha256": "54c4f2db635792dc0b4bd5093af3b36317bfb80240c9310d06f1e545b60087b5",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "seed_7/best_checkpoint.pt",
+      "sha256": "ade352e9239df7084c2a409489d355fa66333e517456769680ab922904eb3b40",
+      "size_bytes": 73461
+    },
+    {
+      "relative_path": "seed_7/completion.json",
+      "sha256": "02f546887fb918b5087a3992e2013a6e86872ed34cdc7bf4be5d55825bae1db3",
+      "size_bytes": 2946
+    },
+    {
+      "relative_path": "seed_7/validation_probabilities.npy",
+      "sha256": "b4aadbfbc8cc6f02637e6231ce657b8d3813f4762241ec00e6cee7beb2363cca",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "stage18_3h_edgeonly_ensemble_metrics.json",
+      "sha256": "6918eaffbe59b47cf23cbeb222c86f95cde7424ca18ccc4203f7112136d72a0f",
+      "size_bytes": 1291
+    },
+    {
+      "relative_path": "stage18_3h_edgeonly_training_result.json",
+      "sha256": "66800cd9d51ff36238a556e2b496e19a72581b247555d58416f46e72b1a217ae",
+      "size_bytes": 4070
+    },
+    {
+      "relative_path": "stage18_3h_per_seed_validation_metrics.csv",
+      "sha256": "d81ff220946d08f0dad99130afb6ff6bc320fdb7bb96bec5212609bd65920e13",
+      "size_bytes": 751
+    },
+    {
+      "relative_path": "stage18_3h_run_lock.json",
+      "sha256": "614358928f4db9b5f0b5d5fb2d2ee7c6027c07c61b47cd44bd73b29f153b8289",
+      "size_bytes": 552
+    },
+    {
+      "relative_path": "stage18_3h_training_history.csv",
+      "sha256": "541f31ad753168370e2bb6b290e7ac226b21d34ff4a9977201a7fe5a856a7966",
+      "size_bytes": 2329
+    },
+    {
+      "relative_path": "stage18_3h_validation_ensemble_probabilities.npy",
+      "sha256": "4a7425bea8ab1f30f45a0abf102e3fa4f21005846c89662972118df9bc901504",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "stage18_3h_validation_generalization_slices.csv",
+      "sha256": "49bbc7da3a0bcddd27dbbc7efcdef597e132f4501507ce10c0dfd4fad1a6a3c1",
+      "size_bytes": 1702
+    },
+    {
+      "relative_path": "stage18_3h_validation_threshold_sweep.csv",
+      "sha256": "f9b2831fab044827716e85c99814c5ac020f0009c3ee440405830b480e1ebc78",
+      "size_bytes": 11197
+    }
+  ],
+  "scientific_boundary": {
+    "edge_only_models_trained": 3,
+    "graph_holdout_openings": 0,
+    "graph_transformer_models_trained": 0
+  },
+  "stage": "18.3H",
+  "status": "EDGE_ONLY_CONTROL_ARTIFACTS_COMPLETE"
+}

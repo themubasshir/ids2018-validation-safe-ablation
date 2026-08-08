@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-08-08T07:12:48.321653+00:00",
+  "graph_holdout_access": false,
+  "hyperparameter_search": false,
+  "model_family": "EdgeOnlyMLPControl",
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "repository_head": "534a1430bf504fa139e83cbadc7b614f1f5ccc74",
+  "seeds": [
+    7,
+    29,
+    101
+  ],
+  "stage": "18.3H",
+  "tensor_freeze_record_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32",
+  "train_batch_size": 65536,
+  "validation_batch_size": 131072
+}

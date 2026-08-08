@@ -1,0 +1,127 @@
+{
+  "created_at_utc": "2026-08-08T07:39:00.414800+00:00",
+  "ensemble_validation": {
+    "brier": 0.18937341559665305,
+    "fixed_0_50_metrics": {
+      "accuracy": 0.8044453697488845,
+      "balanced_accuracy": 0.5,
+      "f1": 0.0,
+      "f2": 0.0,
+      "fn": 423621,
+      "fnr": 1.0,
+      "fp": 0,
+      "fpr": 0.0,
+      "mcc": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "threshold": 0.5,
+      "tn": 1742633,
+      "tp": 0
+    },
+    "log_loss": 0.8685630781754672,
+    "pr_auc": 0.6741188649035655,
+    "roc_auc": 0.9113498945570639,
+    "selected_threshold": 0.01,
+    "selected_threshold_metrics": {
+      "accuracy": 0.9207045895818311,
+      "balanced_accuracy": 0.8992887077189072,
+      "f1": 0.8099613891070816,
+      "f2": 0.841608219416182,
+      "fn": 57563,
+      "fnr": 0.13588325413518215,
+      "fp": 114211,
+      "fpr": 0.06553933042700327,
+      "mcc": 0.7624995654504897,
+      "precision": 0.7621936872877492,
+      "recall": 0.8641167458648178,
+      "specificity": 0.9344606695729967,
+      "threshold": 0.01,
+      "tn": 1628422,
+      "tp": 366058
+    }
+  },
+  "generalization_slices_reported": [
+    "both_hosts_seen",
+    "any_unseen_host",
+    "seen_directed_edge",
+    "unseen_directed_edge"
+  ],
+  "graph_holdout": {
+    "endpoints_read": 0,
+    "inference_performed": false,
+    "labels_read": 0,
+    "opened": false,
+    "predictors_read": 0,
+    "status": "CLOSED"
+  },
+  "model": {
+    "dropout": 0.1,
+    "hidden_dims": [
+      128,
+      64
+    ],
+    "hyperparameter_search": false,
+    "input_dim": 70,
+    "name": "EdgeOnlyMLPControl",
+    "parameter_count": 17409,
+    "seeds": [
+      7,
+      29,
+      101
+    ]
+  },
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "next_permitted_action": "Freeze the Stage 18.3H EdgeOnlyMLP development results and then train the already-locked three-seed EdgeAwareDirectedGraphTransformer using the frozen Stage 18.3F graph tensors. No Graph Transformer hyperparameter change is permitted and graph holdout remains closed.",
+  "per_seed": [
+    {
+      "best_epoch": 4,
+      "checkpoint_sha256": "ade352e9239df7084c2a409489d355fa66333e517456769680ab922904eb3b40",
+      "pr_auc": 0.62624363486439,
+      "roc_auc": 0.9040435918955982,
+      "seed": 7,
+      "validation_probabilities_sha256": "b4aadbfbc8cc6f02637e6231ce657b8d3813f4762241ec00e6cee7beb2363cca"
+    },
+    {
+      "best_epoch": 4,
+      "checkpoint_sha256": "2e6c178cfb4192797fcc4044fc1c8b213aa964bfe9d8ef7627b214faab07dfd0",
+      "pr_auc": 0.6714496709848452,
+      "roc_auc": 0.9099930452860838,
+      "seed": 29,
+      "validation_probabilities_sha256": "54c4f2db635792dc0b4bd5093af3b36317bfb80240c9310d06f1e545b60087b5"
+    },
+    {
+      "best_epoch": 5,
+      "checkpoint_sha256": "eb341f2306b2d4e568af3347d864291a09f608a5ce17d21d1de6376dc53b5352",
+      "pr_auc": 0.7379943989126211,
+      "roc_auc": 0.9203531969548453,
+      "seed": 101,
+      "validation_probabilities_sha256": "ab931819c0a68892557fd8a0c2342621a87b21f1ff301ce105daae71a09ebf36"
+    }
+  ],
+  "repository_head": "534a1430bf504fa139e83cbadc7b614f1f5ccc74",
+  "scientific_interpretation_boundary": {
+    "graph_context_used": false,
+    "may_be_used_to_change_chronological_boundaries": false,
+    "may_be_used_to_change_class_weighting": false,
+    "may_be_used_to_modify_graph_transformer_architecture": false,
+    "this_is_graph_transformer_result": false
+  },
+  "stage": "18.3H",
+  "status": "EDGE_ONLY_CONTROL_DEVELOPMENT_COMPLETE",
+  "tensor_freeze_record_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32",
+  "training": {
+    "early_stopping_min_delta": 0.0001,
+    "early_stopping_monitor": "validation PR-AUC",
+    "early_stopping_patience": 4,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0003,
+    "optimizer": "AdamW",
+    "positive_weight": 5103.347553324968,
+    "train_attacks": 797,
+    "train_batch_size": 65536,
+    "train_rows": 4068165,
+    "training_shuffle": false,
+    "weight_decay": 0.0001
+  }
+}

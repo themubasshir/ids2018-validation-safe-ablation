@@ -1,0 +1,76 @@
+{
+  "architecture": {
+    "activation": "GELU",
+    "attention_mask": "STRICT_CAUSAL_CURRENT_TOKEN_VISIBLE",
+    "classifier": "64_TO_64_GELU_DROPOUT_TO_1",
+    "d_model": 64,
+    "dropout": 0.1,
+    "ffn_dim": 128,
+    "heads": 4,
+    "input_dim": 80,
+    "layers": 2,
+    "name": "SingleScaleTemporalTransformer",
+    "position_encoding": "DETERMINISTIC_RELATIVE_SINUSOIDAL_LAGS_MINUS59_TO_0"
+  },
+  "created_at_utc": "2026-08-08T15:47:06.285404+00:00",
+  "early_stopping": {
+    "checkpoint_rule": "HIGHEST_VALIDATION_PR_AUC",
+    "metric": "PR_AUC",
+    "min_delta": 0.0001,
+    "partition": "VALIDATION",
+    "patience": 4
+  },
+  "ensemble": {
+    "members": [
+      7,
+      29,
+      101
+    ],
+    "method": "UNWEIGHTED_MEAN_PROBABILITY",
+    "seed_selection": false
+  },
+  "holdout": {
+    "03_01_rows_read": 0,
+    "03_02_rows_read": 0,
+    "openings": 0,
+    "status": "CLOSED"
+  },
+  "input": {
+    "context_seconds": 60,
+    "current_second_visible": true,
+    "future_information": false,
+    "same_second_order_assumed": false,
+    "shape": [
+      60,
+      80
+    ]
+  },
+  "parent_commit": "9183883ad1bf1e5dc45281f4492ee3d40ba377b2",
+  "stage": "19.3",
+  "status": "SINGLE_SCALE_TEMPORAL_CONTROL_CONFIGURATION_FROZEN",
+  "threshold_policy": {
+    "future_threshold_selection": "AFTER_DEVELOPMENT_PROBABILITIES_ARE_FROZEN",
+    "threshold_grid_run": false,
+    "threshold_metrics_reported": false,
+    "threshold_selected": false
+  },
+  "training": {
+    "amp_on_cuda": true,
+    "batch_size": 256,
+    "gradient_clip": 1.0,
+    "hyperparameter_search": false,
+    "learning_rate": 0.0003,
+    "loss": "BCEWithLogitsLoss",
+    "max_epochs": 20,
+    "optimizer": "AdamW",
+    "pos_weight": 10.739739698116345,
+    "scheduler": null,
+    "seed_selection": false,
+    "seeds": [
+      7,
+      29,
+      101
+    ],
+    "weight_decay": 0.0001
+  }
+}

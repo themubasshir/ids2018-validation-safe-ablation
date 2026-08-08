@@ -1,0 +1,28 @@
+{
+  "ensemble_validation_brier": 0.15756783094016316,
+  "ensemble_validation_logloss": 0.8107060227874884,
+  "ensemble_validation_pr_auc": 0.3108128771362852,
+  "ensemble_validation_roc_auc": 0.7042594098003927,
+  "holdout_openings": 0,
+  "holdout_status": "CLOSED",
+  "hyperparameter_search": false,
+  "model": "SingleScaleTemporalTransformer",
+  "next_authorized_step": "STAGE_19_4_MTEMPORAL_IDS_MULTISCALE_DEVELOPMENT_TRAINING",
+  "parameter_count": 76481,
+  "parent_commit": "9183883ad1bf1e5dc45281f4492ee3d40ba377b2",
+  "pos_weight": 10.739739698116345,
+  "seed_selection": false,
+  "seeds": [
+    7,
+    29,
+    101
+  ],
+  "stage": "19.3",
+  "status": "SINGLE_SCALE_TEMPORAL_CONTROL_DEVELOPMENT_PREDICTIONS_FROZEN",
+  "threshold_grid_evaluated": false,
+  "threshold_selected": false,
+  "train_negative": 258280,
+  "train_positive": 24049,
+  "train_samples": 282329,
+  "validation_samples": 42000
+}

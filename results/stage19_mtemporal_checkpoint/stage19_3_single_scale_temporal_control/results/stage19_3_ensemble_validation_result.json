@@ -1,0 +1,35 @@
+{
+  "ensemble_method": "UNWEIGHTED_MEAN_PROBABILITY",
+  "holdout": {
+    "03_01_rows_read": 0,
+    "03_02_rows_read": 0,
+    "labels_read": 0,
+    "openings": 0,
+    "predictors_read": 0,
+    "status": "CLOSED"
+  },
+  "members": [
+    7,
+    29,
+    101
+  ],
+  "model": "SingleScaleTemporalTransformer",
+  "seed_selection": false,
+  "stage": "19.3",
+  "status": "SINGLE_SCALE_TEMPORAL_CONTROL_DEVELOPMENT_ENSEMBLE_FROZEN",
+  "threshold_policy": {
+    "threshold": null,
+    "threshold_grid_evaluated": false,
+    "threshold_selected": false,
+    "thresholded_metrics_reported": false
+  },
+  "validation_metrics": {
+    "brier": 0.15756783094016316,
+    "logloss": 0.8107060227874884,
+    "pr_auc": 0.3108128771362852,
+    "roc_auc": 0.7042594098003927
+  },
+  "validation_negative": 34838,
+  "validation_positive": 7162,
+  "validation_samples": 42000
+}

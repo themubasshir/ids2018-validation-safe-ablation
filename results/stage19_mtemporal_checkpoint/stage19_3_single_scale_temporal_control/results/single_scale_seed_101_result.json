@@ -1,0 +1,28 @@
+{
+  "best_epoch": 4,
+  "checkpoint_sha256": "129f22c62bdf25ec6d09b9b7a73b3c141802d90678a2ba4b9a4cc502bc2cba5f",
+  "early_stopped": true,
+  "epochs_executed": 8,
+  "history_sha256": "415c964931374196f4db54be16a74fa80b3fe683b1263cce6aca9e591f0aa4e4",
+  "holdout_access": false,
+  "model": "SingleScaleTemporalTransformer",
+  "parameter_count": 76481,
+  "seed": 101,
+  "stage": "19.3",
+  "threshold_selection": {
+    "performed": false,
+    "selected_threshold": null,
+    "threshold_grid_evaluated": false
+  },
+  "validation_metrics": {
+    "brier": 0.16373756250414556,
+    "logloss": 1.1026960648794997,
+    "pr_auc": 0.30762362962498613,
+    "roc_auc": 0.7016434179030658,
+    "weighted_validation_loss": 11.755880861520767
+  },
+  "validation_negative": 34838,
+  "validation_positive": 7162,
+  "validation_probability_sha256": "6b9c9d009bb3c2135d57376118bbb7e04bc8efd4b2a9b1b313b9e5b726f23161",
+  "validation_samples": 42000
+}

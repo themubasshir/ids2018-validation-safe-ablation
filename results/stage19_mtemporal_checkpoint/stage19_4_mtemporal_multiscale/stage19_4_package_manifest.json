@@ -1,0 +1,134 @@
+{
+  "artifact_count": 25,
+  "artifacts": [
+    {
+      "relative_path": "stage19_4_mtemporal_model.py",
+      "sha256": "e38de7c08bb42672e76f87b1b20235b4e7f42c077423508d93ea8d27f7b6812f",
+      "size_bytes": 5373
+    },
+    {
+      "relative_path": "stage19_4_training_config.json",
+      "sha256": "3f7e427a7b4b100b36db18b18f8bde95e72cb16f2e4f625273004b681d1668c9",
+      "size_bytes": 3311
+    },
+    {
+      "relative_path": "predictions/validation_targets.npy",
+      "sha256": "bbd483befd5a789a3fad1e588a25394885ba227c2bbc3f1b2e5794f326cb21f6",
+      "size_bytes": 42128
+    },
+    {
+      "relative_path": "predictions/validation_target_unix_seconds.npy",
+      "sha256": "834a618ed65305516730c2b67650707ef143aa1805d44b2127e2774f178d9818",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "results/stage19_4_seed_validation_summary.csv",
+      "sha256": "b16c2488224bdc69fa755e14222218f7dd32bb864ab926ff68b7d022aac4c41d",
+      "size_bytes": 1219
+    },
+    {
+      "relative_path": "predictions/mtemporal_ensemble_validation_probabilities.npy",
+      "sha256": "ffce1c6e867d8f71c70a3a70791b19cb3a03ca31a19220b7fcb5f52492b73070",
+      "size_bytes": 168128
+    },
+    {
+      "relative_path": "predictions/mtemporal_ensemble_validation_gate_weights.npy",
+      "sha256": "ef2fba389c7ba08683cf99baa1da93b478dd7df906230c29c082a4f8952efe4d",
+      "size_bytes": 504128
+    },
+    {
+      "relative_path": "results/stage19_4_ensemble_validation_result.json",
+      "sha256": "061a8859f35c7d6cece8cb908cc128ee21a442b306441dd4811a838ee8d27981",
+      "size_bytes": 926
+    },
+    {
+      "relative_path": "results/stage19_4_vs_single_scale_validation_comparison.json",
+      "sha256": "a06fc106e34a7f8c77b1c7645eccf84117a7ac896509ee01e309ea11b5d3895b",
+      "size_bytes": 675
+    },
+    {
+      "relative_path": "stage19_4_development_freeze_record.json",
+      "sha256": "6588df2d0ee518399fe55a33756283326a0c2c63446c44f1daa7e974d589eeea",
+      "size_bytes": 853
+    },
+    {
+      "relative_path": "models/mtemporal_seed_101_best.pt",
+      "sha256": "2cbc992a20c156e0066935b416dc3624b9cd95ff0faffba0a438041a29f19552",
+      "size_bytes": 997373
+    },
+    {
+      "relative_path": "models/mtemporal_seed_29_best.pt",
+      "sha256": "695e0df216951a26546a46233e0f4163c48646403b8003a265287b6ae31a8fd8",
+      "size_bytes": 997269
+    },
+    {
+      "relative_path": "models/mtemporal_seed_7_best.pt",
+      "sha256": "c0df77d93ec7ebd3f6d0d31cc220114869ed3397dabcaae51849b9f44bf8aa56",
+      "size_bytes": 997101
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_101_validation_probabilities.npy",
+      "sha256": "a9d009b6d3c31a0d65703fb25ab8c892662aedde819208e925f7f144385d2eef",
+      "size_bytes": 168128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_29_validation_probabilities.npy",
+      "sha256": "cf97f1b21666908a3b4432742a48b430325e8574aee2fc1ad4cbabb815a9a60c",
+      "size_bytes": 168128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_7_validation_probabilities.npy",
+      "sha256": "f195708084e6d25072985e0ced0dbbb59b985dd21194ec5cdfaae96f2247d751",
+      "size_bytes": 168128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_101_validation_gate_weights.npy",
+      "sha256": "7d8dc3fe3d577b521d79c1021f38dac60c545a80ea50d121eb66d634e403c0a5",
+      "size_bytes": 504128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_29_validation_gate_weights.npy",
+      "sha256": "1796493dd16a16cd264e87bdb0f997583e6dfa0bca36a311850a5ba249478c77",
+      "size_bytes": 504128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_7_validation_gate_weights.npy",
+      "sha256": "d60d9df3c5090ae368168cb3dd5fd03a072dbd2fe7fb5212aeeba27cf49e3194",
+      "size_bytes": 504128
+    },
+    {
+      "relative_path": "history/mtemporal_seed_101_history.csv",
+      "sha256": "ffc189ea92da751959ce9f2937420a2fc90dd018465a54d8d18b54356a9fefcc",
+      "size_bytes": 1181
+    },
+    {
+      "relative_path": "history/mtemporal_seed_29_history.csv",
+      "sha256": "932b13534a6cd4d422430d1eead0306a4b01149c5836af6eee4fae58ac3b1f6e",
+      "size_bytes": 1176
+    },
+    {
+      "relative_path": "history/mtemporal_seed_7_history.csv",
+      "sha256": "b5d2c48d30507ee89b21342d32cb238f548b0857057fc0b13195ed266738573a",
+      "size_bytes": 1538
+    },
+    {
+      "relative_path": "results/mtemporal_seed_101_result.json",
+      "sha256": "3b54f6fd1008d7d889453c60c917d9e36409d560d4436d7eb0d9ec64b4037a15",
+      "size_bytes": 609
+    },
+    {
+      "relative_path": "results/mtemporal_seed_29_result.json",
+      "sha256": "4bb14a0a08f5c10064e6e28016b1c68ecf4fc63693b8cc3063bd7e3b374d032c",
+      "size_bytes": 611
+    },
+    {
+      "relative_path": "results/mtemporal_seed_7_result.json",
+      "sha256": "012067b2d1960870340e6f7f869829be7c3367d77da1a25dcd45a70916c34ed2",
+      "size_bytes": 609
+    }
+  ],
+  "holdout_access": false,
+  "stage": "19.4",
+  "status": "MTEMPORAL_IDS_DEVELOPMENT_PACKAGE_COMPLETE",
+  "threshold_selection": false
+}

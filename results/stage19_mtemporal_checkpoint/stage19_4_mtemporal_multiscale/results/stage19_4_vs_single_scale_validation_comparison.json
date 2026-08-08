@@ -1,0 +1,25 @@
+{
+  "causal_superiority_claim": false,
+  "comparison_scope": "VALIDATION_ONLY_DESCRIPTIVE",
+  "holdout_access": false,
+  "mtemporal": {
+    "brier": 0.1647523684589985,
+    "logloss": 0.902737300125687,
+    "pr_auc": 0.2856097446256688,
+    "roc_auc": 0.7302792701220068
+  },
+  "mtemporal_minus_single_scale": {
+    "brier": 0.007184537518835327,
+    "logloss": 0.0920312773381986,
+    "pr_auc": -0.0252031325106164,
+    "roc_auc": 0.026019860321614074
+  },
+  "single_scale": {
+    "brier": 0.15756783094016316,
+    "logloss": 0.8107060227874884,
+    "pr_auc": 0.3108128771362852,
+    "roc_auc": 0.7042594098003927
+  },
+  "stage": "19.4",
+  "thresholded_comparison": false
+}

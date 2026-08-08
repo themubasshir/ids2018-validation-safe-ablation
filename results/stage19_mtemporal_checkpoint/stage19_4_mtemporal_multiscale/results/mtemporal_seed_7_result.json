@@ -1,0 +1,25 @@
+{
+  "best_epoch": 3,
+  "epochs_executed": 7,
+  "holdout_access": false,
+  "mean_validation_gate": {
+    "coarse": 0.36803287267684937,
+    "fine": 0.5540280938148499,
+    "medium": 0.07794301211833954
+  },
+  "model": "MTemporalIDS",
+  "parameter_count": 233540,
+  "seed": 7,
+  "stage": "19.4",
+  "threshold_selection": {
+    "performed": false,
+    "threshold_grid_evaluated": false
+  },
+  "validation_metrics": {
+    "brier": 0.16669559573033046,
+    "logloss": 1.0362508882629964,
+    "pr_auc": 0.35973309823767546,
+    "roc_auc": 0.790532425112868,
+    "weighted_validation_loss": 10.857242849403903
+  }
+}

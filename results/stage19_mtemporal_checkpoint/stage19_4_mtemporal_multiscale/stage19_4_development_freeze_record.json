@@ -1,0 +1,26 @@
+{
+  "ensemble_validation_brier": 0.1647523684589985,
+  "ensemble_validation_logloss": 0.902737300125687,
+  "ensemble_validation_pr_auc": 0.2856097446256688,
+  "ensemble_validation_roc_auc": 0.7302792701220068,
+  "holdout_openings": 0,
+  "holdout_status": "CLOSED",
+  "hyperparameter_search": false,
+  "mean_gate_coarse": 0.4197995755940993,
+  "mean_gate_fine": 0.24275645389954895,
+  "mean_gate_medium": 0.3374439684528377,
+  "model": "MTemporalIDS",
+  "next_authorized_step": "STAGE_19_5_VALIDATION_THRESHOLD_SELECTION_AND_DEVELOPMENT_FREEZE",
+  "parameter_count": 233540,
+  "parent_commit": "ff93555f002d4a7dcfa53c8a45d4d76217c2915e",
+  "seed_selection": false,
+  "seeds": [
+    7,
+    29,
+    101
+  ],
+  "stage": "19.4",
+  "status": "MTEMPORAL_IDS_DEVELOPMENT_PREDICTIONS_FROZEN",
+  "threshold_grid_evaluated": false,
+  "threshold_selected": false
+}

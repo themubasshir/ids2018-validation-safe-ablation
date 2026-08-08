@@ -1,0 +1,39 @@
+{
+  "ensemble_method": "UNWEIGHTED_MEAN_PROBABILITY",
+  "holdout": {
+    "03_01_rows_read": 0,
+    "03_02_rows_read": 0,
+    "labels_read": 0,
+    "openings": 0,
+    "predictors_read": 0,
+    "status": "CLOSED"
+  },
+  "mean_validation_gate": {
+    "coarse": 0.4197995755940993,
+    "fine": 0.24275645389954895,
+    "medium": 0.3374439684528377
+  },
+  "members": [
+    7,
+    29,
+    101
+  ],
+  "model": "MTemporalIDS",
+  "seed_selection": false,
+  "stage": "19.4",
+  "status": "MTEMPORAL_IDS_DEVELOPMENT_ENSEMBLE_FROZEN",
+  "threshold_policy": {
+    "threshold_grid_evaluated": false,
+    "threshold_selected": false,
+    "thresholded_metrics_reported": false
+  },
+  "validation_metrics": {
+    "brier": 0.1647523684589985,
+    "logloss": 0.902737300125687,
+    "pr_auc": 0.2856097446256688,
+    "roc_auc": 0.7302792701220068
+  },
+  "validation_negative": 34838,
+  "validation_positive": 7162,
+  "validation_samples": 42000
+}

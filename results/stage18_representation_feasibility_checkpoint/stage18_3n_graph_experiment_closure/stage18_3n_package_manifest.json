@@ -1,0 +1,28 @@
+{
+  "artifact_count": 2,
+  "artifacts": [
+    {
+      "relative_path": "STAGE18_3N_GRAPH_SCIENTIFIC_SYNTHESIS.md",
+      "sha256": "062fe909731fbea259ff966aa8c6eca2deb6d155504febe2a9247e4eeec11610",
+      "size_bytes": 5712
+    },
+    {
+      "relative_path": "stage18_3n_graph_scientific_synthesis.json",
+      "sha256": "b51abe58015398c16a2de41fb18523ba3503abfbba08811d4fe9fb79b3275550",
+      "size_bytes": 7008
+    }
+  ],
+  "parent_commit": "f8e21624518724471db8bf2f07a2eda8171a0918",
+  "representation_decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "scientific_boundary": {
+    "calibration": false,
+    "future_holdout_openings": 0,
+    "holdout_inference": false,
+    "materialized_holdout_access": false,
+    "model_training": false,
+    "raw_holdout_access": false,
+    "threshold_search": false
+  },
+  "stage": "18.3N",
+  "status": "GRAPH_EXPERIMENT_CLOSURE_PACKAGE_COMPLETE"
+}

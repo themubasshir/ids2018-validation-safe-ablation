@@ -1,0 +1,128 @@
+{
+  "chronological_design": {
+    "future_holdout_openings": 0,
+    "holdout": "11:00:00-12:59:59",
+    "holdout_openings": 1,
+    "snapshot_seconds": 60,
+    "source": "02-20-2018.csv",
+    "train": "01:00:00-08:59:59",
+    "validation": "09:00:00-10:59:59"
+  },
+  "class_prior_shift": {
+    "holdout": {
+      "attack": 151773,
+      "attack_rate": 0.08853201456663219,
+      "rows": 1714329
+    },
+    "train": {
+      "attack": 797,
+      "attack_rate": 0.00019591142443829097,
+      "rows": 4068165
+    },
+    "validation": {
+      "attack": 423621,
+      "attack_rate": 0.19555463025111552,
+      "rows": 2166254
+    }
+  },
+  "core_findings": [
+    "An authentic directed temporal multigraph is scientifically supportable for the endpoint-rich 02-20 source because each raw flow has authenticated source and destination host identities.",
+    "The representation is source-restricted and must not be generalized as a native graph representation of the full ten-file CSE-CIC-IDS2018 benchmark.",
+    "The Graph Transformer retained exceptionally strong threshold-free ranking on the untouched chronological holdout.",
+    "The Graph Transformer did not provide a usable operating point under the precommitted threshold policy: the frozen 0.01 threshold produced zero true-positive holdout detections.",
+    "The ranking-versus-operating-point discrepancy is therefore a central experimental finding rather than a result that may be repaired post hoc.",
+    "The EdgeOnlyMLP produced substantially weaker threshold-free ranking but retained operational detection at its frozen validation-selected threshold.",
+    "The Graph Transformer versus EdgeOnlyMLP comparison is descriptive rather than causal because the model architectures differ in addition to the presence of graph context.",
+    "Attack generalization to unseen hosts or unseen directed edges cannot be estimated because both the validation and final holdout unseen-topology slices contained zero attack examples.",
+    "The chronological experiment contains a severe class-prior and concept shift: only 797 attacks occur during training, compared with 423,621 in validation and 151,773 in the final holdout."
+  ],
+  "created_at_utc": "2026-08-08T09:09:12.333153+00:00",
+  "edgeonly_control": {
+    "final_holdout": {
+      "f1": 0.6559877841940602,
+      "pr_auc": 0.42976973171668154,
+      "recall": 0.8689753777022263,
+      "roc_auc": 0.9089809044929202,
+      "threshold": 0.01
+    },
+    "validation": {
+      "f1": 0.8099613891070816,
+      "pr_auc": 0.6741188649035655,
+      "recall": 0.8641167458648178,
+      "roc_auc": 0.9113498945570639,
+      "threshold": 0.01
+    },
+    "validation_to_holdout_delta": {
+      "f1": -0.15397360491302137,
+      "pr_auc": -0.244349133186884,
+      "recall": 0.0048586318374085335,
+      "roc_auc": -0.0023689900641437056
+    }
+  },
+  "graph_transformer": {
+    "final_holdout": {
+      "f1": 0.0,
+      "false_negatives": 151773,
+      "pr_auc": 0.9735953918848133,
+      "recall": 0.0,
+      "roc_auc": 0.9986766395630168,
+      "threshold": 0.01,
+      "true_positives": 0
+    },
+    "frozen_operating_point_interpretation": "FAILED_TO_DETECT_HOLDOUT_ATTACKS",
+    "ranking_interpretation": "VERY_STRONG",
+    "validation": {
+      "f1": 0.0021736670375888797,
+      "pr_auc": 0.9838755704548996,
+      "recall": 0.0010882368909945447,
+      "roc_auc": 0.9982098579399756,
+      "threshold": 0.01
+    },
+    "validation_to_holdout_delta": {
+      "f1": -0.0021736670375888797,
+      "pr_auc": -0.01028017857008634,
+      "recall": -0.0010882368909945447,
+      "roc_auc": 0.0004667816230411459
+    }
+  },
+  "next_authorized_action": "Proceed to overall Stage 18 representation feasibility synthesis and manuscript integration using frozen evidence only.",
+  "paired_descriptive_final_holdout": {
+    "causal_interpretation_permitted": false,
+    "graph_minus_edgeonly_f1": -0.6559877841940602,
+    "graph_minus_edgeonly_pr_auc": 0.5438256601681317,
+    "graph_minus_edgeonly_roc_auc": 0.08969573507009654
+  },
+  "parent_commit": "f8e21624518724471db8bf2f07a2eda8171a0918",
+  "prohibited_claims": [
+    "The Graph Transformer is deployment-ready.",
+    "The Graph Transformer provides superior operational attack detection at its frozen threshold.",
+    "Graph context causally caused the PR-AUC improvement.",
+    "The experiment demonstrates attack generalization to unseen hosts.",
+    "The experiment demonstrates attack generalization to unseen directed edges.",
+    "The 02-20 graph experiment directly replaces the full ten-file Stage-15/16 benchmark.",
+    "A threshold below 0.01 would solve the Graph Transformer operating-point problem.",
+    "Post-hoc probability calibration would preserve the validity of the frozen holdout evaluation."
+  ],
+  "publication_safe_limitation": "This graph experiment is restricted to the 20 February capture because the remaining source files do not retain equivalent authenticated endpoint metadata. Furthermore, all positive examples in both validation and final holdout occurred on host identities and directed communication pairs already observed during training, so attack detection on unseen topology could not be estimated. The paired Graph Transformer/edge-only comparison is therefore descriptive and must not be interpreted as a causal estimate of graph context alone.",
+  "publication_safe_primary_conclusion": "For the endpoint-rich 20 February 2018 capture, an authentic host-communication graph representation was scientifically supportable and produced strong threshold-free discrimination under a separately frozen chronological protocol. The three-seed Graph Transformer achieved a validation PR-AUC of 0.9839 and retained a final-holdout PR-AUC of 0.9736, compared with 0.4298 for the edge-only control on the same final period. However, the Graph Transformer's frozen validation-selected operating threshold did not transfer operationally: at threshold 0.01 it detected none of the 151,773 holdout attacks. Accordingly, the experiment supports graph-based ranking utility but does not support a claim of deployment-ready thresholded superiority.",
+  "representation_decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "representation_scope": "Endpoint-rich 2018-02-20 capture only; not a dataset-wide replacement.",
+  "scientific_closure": {
+    "all_stage18_3_performance_evidence_frozen": true,
+    "further_graph_training_permitted": false,
+    "future_graph_holdout_access_permitted": false,
+    "graph_holdout_status": "PERMANENTLY_CLOSED",
+    "posthoc_architecture_change_permitted": false,
+    "posthoc_calibration_permitted": false,
+    "posthoc_threshold_search_permitted": false
+  },
+  "stage": "18.3N",
+  "status": "GRAPH_EXPERIMENT_SCIENTIFICALLY_CLOSED",
+  "topology_generalization": {
+    "attacks_on_unseen_directed_edge": 0,
+    "attacks_with_unseen_host": 0,
+    "holdout_flow_both_hosts_seen": 1670121,
+    "holdout_flow_seen_directed_edge": 1377193,
+    "unseen_topology_attack_generalization_estimable": false
+  }
+}

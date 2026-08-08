@@ -1,0 +1,71 @@
+{
+  "balanced_artifact": {
+    "column_count": 80,
+    "has_dst_ip": false,
+    "has_dst_port": true,
+    "has_flow_id": false,
+    "has_protocol": true,
+    "has_src_ip": false,
+    "has_src_port": false,
+    "has_timestamp": false,
+    "representation_type": "flow_level_tabular"
+  },
+  "bootstrap_record_sha256": "a9e5d7a1c824da3b26de30daac19017fc02c17114957e93786784f9f5b3952ef",
+  "created_at_utc": "2026-08-08T06:18:23.689460+00:00",
+  "key_restriction": {
+    "cross_dataset_endpoint_representation_supported": false,
+    "endpoint_rich_source": "02-20-2018.csv",
+    "endpoint_rich_source_files": 1,
+    "reason": "Nine of ten mounted raw CSVs do not retain source/destination IP identifiers."
+  },
+  "mounted_source_inventory": {
+    "array_or_matrix_files": 0,
+    "files_total": 10,
+    "native_2d_artifact_present": false,
+    "native_image_files": 0,
+    "pcap_files": 0,
+    "raw_packet_binary_candidates": 0
+  },
+  "next_permitted_action": "Stage 18.2B must audit the remaining genuine-2D candidates\u2014especially time\u00d7destination-port and the endpoint-rich 02-20 source\u2014for axis semantics, ordering invariance, locality, reproducibility, and leakage. No image may be constructed before that audit.",
+  "operational_repair": {
+    "original_failure": "UnicodeDecodeError during git-grep output decoding",
+    "repair": "Repository search output decoded explicitly with UTF-8 errors='replace'.",
+    "replacement_characters_observed": 432,
+    "scientific_search_terms_changed": false
+  },
+  "raw_csv_schema": {
+    "all_have_destination_port": true,
+    "all_have_protocol": true,
+    "all_have_timestamp": true,
+    "endpoint_rich_files": [
+      "02-20-2018.csv"
+    ],
+    "files_with_full_five_tuple_metadata": 1,
+    "files_with_packet_level_schema_fields": 0,
+    "files_with_src_dst_ip_pair": 1,
+    "files_with_timestamp_and_endpoint_pair": 1,
+    "source_files": 10
+  },
+  "repository_head": "9ec13a4c7207926b8e893179129c41c19339092d",
+  "representation_findings": {
+    "arbitrary_tabular_feature_grid": "PROHIBITED",
+    "native_network_image": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+    "native_packet_byte_image": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+    "source_host_by_destination_host_matrix": "REQUIRES_FURTHER_SEMANTIC_AUDIT",
+    "time_by_destination_port_matrix": "REQUIRES_FURTHER_SEMANTIC_AUDIT",
+    "time_by_endpoint_matrix": "REQUIRES_FURTHER_SEMANTIC_AUDIT",
+    "time_by_feature_matrix": "NOT_CURRENTLY_JUSTIFIED_FOR_VIT"
+  },
+  "scientific_interpretation": {
+    "70_or_78_feature_reshape_scientifically_allowed": false,
+    "current_artifacts_are_native_images": false,
+    "current_artifacts_are_packet_byte_tensors": false,
+    "feature_order_may_be_selected_using_xai_or_performance": false,
+    "final_decision_deferred": true,
+    "semantic_2d_candidate_exists": true,
+    "semantic_2d_candidate_is_dataset_wide": false,
+    "vit_feasibility_final_decision": "DEFERRED"
+  },
+  "stage": "18.2A",
+  "status": "NO_NATIVE_IMAGE_OR_PACKET_GRID_FOUND_RESTRICTED_2D_CANDIDATES_REMAIN"
+}

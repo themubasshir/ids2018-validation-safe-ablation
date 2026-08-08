@@ -1,0 +1,73 @@
+{
+  "architecture_distinction": {
+    "graph_transformer": "NOT_EVALUATED_HERE; ENDPOINT RELATIONS SHOULD BE CARRIED FORWARD TO STAGE18_3 GRAPH AUDIT",
+    "tabular_transformer": "SUPPORTED_ALREADY_BY_STAGE15_FEATURE_TOKEN REPRESENTATION",
+    "temporal_transformer": "SUPPORTED_WITH_CONSTRAINTS_BY_STAGE18_1",
+    "vit": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS"
+  },
+  "candidate_decisions": {
+    "native_network_image": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+    "packet_byte_image": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+    "source_host_by_destination_host_matrix": "NOT_JUSTIFIED_FOR_VIT",
+    "tabular_feature_grid": "PROHIBITED",
+    "time_by_destination_port_matrix": "NOT_JUSTIFIED_FOR_VIT",
+    "time_by_endpoint_matrix": "NOT_JUSTIFIED_FOR_VIT",
+    "time_by_feature_matrix": "NOT_JUSTIFIED_FOR_VIT"
+  },
+  "created_at_utc": "2026-08-08T06:21:11.564508+00:00",
+  "final_reason": "No mounted representation satisfies the complete ViT semantic-locality requirements. Native image/packet-byte artifacts are absent; tabular feature grids are artificial; the time\u00d7feature and time\u00d7port candidates lack a defensible second-axis spatial neighborhood; endpoint matrices are node-order dependent and available only for 02-20. Training a ViT would therefore require imposing an arbitrary geometry that is not present in the source data.",
+  "final_vit_feasibility_decision": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+  "hard_admissibility_criteria": {
+    "candidates_audited": 7,
+    "candidates_passing_all_hard_criteria": 0,
+    "criteria_count": 7,
+    "passing_candidates": []
+  },
+  "next_permitted_action": "Freeze and Git-anchor Stage 18.2 as NOT_SUPPORTED_BY_CURRENT_ARTIFACTS. Then proceed to Stage 18.3 graph representation feasibility, where the 02-20 endpoint structure can be evaluated using graph-appropriate permutation-invariant semantics.",
+  "prohibited_claims": [
+    "ViT was tested and performed poorly.",
+    "ViT is generally unsuitable for intrusion detection.",
+    "Network traffic can never be represented as images.",
+    "Endpoint matrices have no relational information.",
+    "The current artifacts prove that all image-based IDS methods are invalid."
+  ],
+  "publication_safe_claims": [
+    "The mounted IDS2018 artifacts do not contain native images, packet captures, packet-byte tensors, or previously authenticated 2D traffic representations.",
+    "Reshaping the 70/78 flow predictors into a rectangular grid would introduce artificial spatial adjacency.",
+    "Timestamp provides an authentic ordered dimension, but heterogeneous features and destination-port IDs do not provide a defensible spatial-neighborhood axis for ViT patch construction.",
+    "The 02-20 source retains source/destination endpoint metadata, but host-index ordering is permutation dependent and is not dataset-wide.",
+    "Consequently, a Vision Transformer experiment is not scientifically supported by the current artifacts."
+  ],
+  "repository_head": "9ec13a4c7207926b8e893179129c41c19339092d",
+  "scientific_boundary": {
+    "feature_grids_constructed": 0,
+    "holdout_arrays_opened": 0,
+    "images_constructed": 0,
+    "labels_read": 0,
+    "matrices_constructed": 0,
+    "model_performance_used_for_decision": false,
+    "raw_feature_values_read": 0,
+    "raw_rows_read": 0,
+    "vit_models_fit": 0
+  },
+  "scientific_interpretation": {
+    "artificial_feature_grid_allowed": false,
+    "destination_port_axis_spatial_locality_established": false,
+    "endpoint_linear_order_intrinsic": false,
+    "endpoint_relation_authentic": true,
+    "feature_axis_spatial_locality_established": false,
+    "native_2d_representation_available": false,
+    "node_permutation_changes_vit_patches": true,
+    "performance_comparison_required_for_rejection": false,
+    "time_axis_authentic": true,
+    "vit_training_scientifically_authorized": false
+  },
+  "stage": "18.2B",
+  "status": "VIT_REPRESENTATION_FEASIBILITY_DECIDED",
+  "upstream_stage18_2a": {
+    "candidate_assessment_sha256": "979a9f603a2e70f2e93b569e36ad29df5ef0858bd8fa429e8e66e143bbd3cb33",
+    "manifest_sha256": "899c3da038a91cbcf4dcd3ef133548a60011816976a2aab04694e6dd10981a89",
+    "result_sha256": "7722ff663fece6832ce273738a9b689fabfe90f90929610443b6bd0d60ed5644",
+    "schema_audit_sha256": "d7aa232da00978cf198f1af1af31fa83ffcfa0b5512b228c38cab68d1cd96723"
+  }
+}

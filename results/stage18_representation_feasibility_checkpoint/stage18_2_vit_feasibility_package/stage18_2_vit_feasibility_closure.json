@@ -1,0 +1,73 @@
+{
+  "architecture_distinction": {
+    "graph_transformer": "DEFERRED_TO_STAGE18_3",
+    "tabular_transformer": "SUPPORTED_AND_COMPLETED",
+    "temporal_mtemporal_transformer": "SUPPORTED_WITH_CONSTRAINTS",
+    "vision_transformer": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS"
+  },
+  "candidate": "Vision Transformer (ViT)",
+  "candidates_audited": {
+    "native_network_image": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+    "packet_byte_image": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+    "source_host_by_destination_host_matrix": "NOT_JUSTIFIED_FOR_VIT",
+    "tabular_feature_grid": "PROHIBITED",
+    "time_by_destination_port_matrix": "NOT_JUSTIFIED_FOR_VIT",
+    "time_by_endpoint_matrix": "NOT_JUSTIFIED_FOR_VIT",
+    "time_by_feature_matrix": "NOT_JUSTIFIED_FOR_VIT"
+  },
+  "closure_statement": "Stage 18.2 is scientifically closed. Vision Transformer training is not supported by the currently available artifacts because no representation passes the precommitted semantic 2D locality criteria. No artificial feature-image representation will be created.",
+  "core_reasoning": {
+    "arbitrary_tabular_reshape_allowed": false,
+    "destination_port_axis_has_spatial_locality": false,
+    "endpoint_linear_order_is_intrinsic": false,
+    "endpoint_metadata_dataset_wide": false,
+    "endpoint_relationship_is_authentic": true,
+    "endpoint_reordering_changes_vit_patch_geometry": true,
+    "heterogeneous_feature_axis_has_spatial_locality": false,
+    "native_image_structure_present": false,
+    "time_axis_has_authentic_order": true
+  },
+  "created_at_utc": "2026-08-08T06:22:47.470101+00:00",
+  "final_feasibility_decision": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+  "final_reason": "No currently mounted representation satisfies the complete semantic-locality requirements for Vision Transformer patch construction. Native image and packet-byte representations are absent. The tabular predictor space has no authentic 2D geometry. Time provides a valid ordered axis, but heterogeneous feature, destination-port, and endpoint axes do not provide intrinsic spatial neighborhoods. Endpoint matrices additionally depend on arbitrary node ordering and are available only in the 02-20 source.",
+  "hard_criteria": {
+    "candidate_count": 7,
+    "candidates_passing_all_hard_criteria": 0
+  },
+  "parent_commit": "9ec13a4c7207926b8e893179129c41c19339092d",
+  "prohibited_claims": [
+    "ViT was trained and performed poorly.",
+    "ViT is generally unsuitable for intrusion detection.",
+    "All traffic-image IDS methods are invalid.",
+    "Network traffic can never have a valid image representation.",
+    "Endpoint matrices contain no relational information."
+  ],
+  "publication_safe_claims": [
+    "The current IDS2018 artifacts contain no native image or packet-byte representation suitable for direct Vision Transformer input.",
+    "Artificial reshaping of heterogeneous flow features was rejected because it would introduce non-source spatial adjacency.",
+    "Time provides an authentic ordered dimension, but neither feature identity nor destination-port identity provides a defensible ViT spatial axis.",
+    "Endpoint relations retained in 02-20 are genuinely relational but node-order dependent, making them more appropriate for graph-based feasibility analysis.",
+    "Accordingly, ViT training was not performed because representation validity was not established."
+  ],
+  "scientific_boundary": {
+    "feature_grids_constructed": 0,
+    "holdout_arrays_opened": 0,
+    "images_constructed": 0,
+    "labels_used": false,
+    "matrices_constructed": 0,
+    "model_performance_used": false,
+    "raw_rows_read_during_stage18_2b": 0,
+    "vit_models_fit": 0
+  },
+  "source_audit": {
+    "endpoint_rich_source": "02-20-2018.csv",
+    "native_matrix_available": false,
+    "native_network_image_available": false,
+    "native_packet_byte_tensor_available": false,
+    "native_pcap_available": false,
+    "raw_files_with_authentic_time_axis": 10,
+    "raw_files_with_src_dst_endpoint_pair": 1
+  },
+  "stage": "18.2",
+  "status": "SCIENTIFICALLY_CLOSED"
+}

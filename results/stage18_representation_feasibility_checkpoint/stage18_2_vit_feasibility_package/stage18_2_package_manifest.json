@@ -1,0 +1,75 @@
+{
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "relative_path": "evidence/stage18_2a_genuine_2d_source_audit/stage18_2a_artifact_manifest.json",
+      "sha256": "899c3da038a91cbcf4dcd3ef133548a60011816976a2aab04694e6dd10981a89",
+      "size_bytes": 1365
+    },
+    {
+      "relative_path": "evidence/stage18_2a_genuine_2d_source_audit/stage18_2a_candidate_2d_structures.csv",
+      "sha256": "979a9f603a2e70f2e93b569e36ad29df5ef0858bd8fa429e8e66e143bbd3cb33",
+      "size_bytes": 2354
+    },
+    {
+      "relative_path": "evidence/stage18_2a_genuine_2d_source_audit/stage18_2a_raw_schema_2d_capability.csv",
+      "sha256": "d7aa232da00978cf198f1af1af31fa83ffcfa0b5512b228c38cab68d1cd96723",
+      "size_bytes": 1019
+    },
+    {
+      "relative_path": "evidence/stage18_2a_genuine_2d_source_audit/stage18_2a_repository_representation_hits.csv",
+      "sha256": "c14930959db3d918ea02c42679aa34431033fc87c6cc636d2b185047d0029f90",
+      "size_bytes": 250770
+    },
+    {
+      "relative_path": "evidence/stage18_2a_genuine_2d_source_audit/stage18_2a_source_audit_result.json",
+      "sha256": "7722ff663fece6832ce273738a9b689fabfe90f90929610443b6bd0d60ed5644",
+      "size_bytes": 3041
+    },
+    {
+      "relative_path": "evidence/stage18_2a_genuine_2d_source_audit/stage18_2a_source_file_inventory.csv",
+      "sha256": "b1b10234c6b53941a9ab21be16a02ec8574415503933904c8c9131a95065bcc2",
+      "size_bytes": 855
+    },
+    {
+      "relative_path": "evidence/stage18_2b_semantic_locality_audit/stage18_2b_artifact_manifest.json",
+      "sha256": "576c8583403a892bae80459372c97f3eec4a71ed7ee9cd72a8ff5c99be3b1da6",
+      "size_bytes": 964
+    },
+    {
+      "relative_path": "evidence/stage18_2b_semantic_locality_audit/stage18_2b_candidate_semantic_locality_audit.csv",
+      "sha256": "e31a5712b8adbb9a3ead5a5ef4f64c641f8ffd2e9f8c40200e272e70798950ca",
+      "size_bytes": 2943
+    },
+    {
+      "relative_path": "evidence/stage18_2b_semantic_locality_audit/stage18_2b_vit_feasibility_decision.json",
+      "sha256": "c98415cf87e9f617126b40c862bbe841b5f1adc475be4509b69417fceb61dcc6",
+      "size_bytes": 4347
+    },
+    {
+      "relative_path": "evidence/stage18_2b_semantic_locality_audit/stage18_2b_vit_representation_criteria.csv",
+      "sha256": "bca857b88925794c728989f029a05d94310b3171e347335aefe44e331491a69e",
+      "size_bytes": 1239
+    },
+    {
+      "relative_path": "stage18_2_vit_feasibility_closure.json",
+      "sha256": "dc1e7d04f1b50dda9817b94874c2c0bf41290634ce68906df1a44e91afc12b4e",
+      "size_bytes": 4054
+    },
+    {
+      "relative_path": "stage18_2_vit_feasibility_closure.md",
+      "sha256": "c96892daea26241254c631408059be75bca584c47515e29c5b9a257827b045e7",
+      "size_bytes": 4086
+    }
+  ],
+  "final_decision": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+  "parent_commit": "9ec13a4c7207926b8e893179129c41c19339092d",
+  "scientific_boundary": {
+    "holdout_artifacts": 0,
+    "images_constructed": 0,
+    "matrices_constructed": 0,
+    "vit_models_fit": 0
+  },
+  "stage": "18.2",
+  "status": "VIT_FEASIBILITY_PACKAGE_FROZEN"
+}

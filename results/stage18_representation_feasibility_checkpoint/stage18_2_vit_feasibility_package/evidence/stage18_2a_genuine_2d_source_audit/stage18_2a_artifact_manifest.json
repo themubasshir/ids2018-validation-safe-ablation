@@ -1,0 +1,43 @@
+{
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "relative_path": "stage18_2a_candidate_2d_structures.csv",
+      "sha256": "979a9f603a2e70f2e93b569e36ad29df5ef0858bd8fa429e8e66e143bbd3cb33",
+      "size_bytes": 2354
+    },
+    {
+      "relative_path": "stage18_2a_raw_schema_2d_capability.csv",
+      "sha256": "d7aa232da00978cf198f1af1af31fa83ffcfa0b5512b228c38cab68d1cd96723",
+      "size_bytes": 1019
+    },
+    {
+      "relative_path": "stage18_2a_repository_representation_hits.csv",
+      "sha256": "c14930959db3d918ea02c42679aa34431033fc87c6cc636d2b185047d0029f90",
+      "size_bytes": 250770
+    },
+    {
+      "relative_path": "stage18_2a_source_audit_result.json",
+      "sha256": "7722ff663fece6832ce273738a9b689fabfe90f90929610443b6bd0d60ed5644",
+      "size_bytes": 3041
+    },
+    {
+      "relative_path": "stage18_2a_source_file_inventory.csv",
+      "sha256": "b1b10234c6b53941a9ab21be16a02ec8574415503933904c8c9131a95065bcc2",
+      "size_bytes": 855
+    }
+  ],
+  "operational_repair_applied": true,
+  "scientific_boundary": {
+    "holdout_arrays_opened": 0,
+    "images_constructed": 0,
+    "labels_read": 0,
+    "matrices_constructed": 0,
+    "models_fit": 0,
+    "raw_data_rows_read": 0,
+    "raw_feature_values_read": 0,
+    "tabular_feature_grids_constructed": 0
+  },
+  "stage": "18.2A",
+  "status": "GENUINE_2D_SOURCE_AUDIT_COMPLETE"
+}

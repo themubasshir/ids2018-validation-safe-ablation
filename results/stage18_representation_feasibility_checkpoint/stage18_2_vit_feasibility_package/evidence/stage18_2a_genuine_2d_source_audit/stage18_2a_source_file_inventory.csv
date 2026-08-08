@@ -1,0 +1,11 @@
+relative_path,filename,extension,size_bytes,is_csv,is_pcap,is_image,is_array_or_matrix,is_packet_binary_candidate
+02-14-2018.csv,02-14-2018.csv,.csv,358223333,True,False,False,False,False
+02-15-2018.csv,02-15-2018.csv,.csv,375945899,True,False,False,False,False
+02-16-2018.csv,02-16-2018.csv,.csv,333723605,True,False,False,False,False
+02-20-2018.csv,02-20-2018.csv,.csv,4054925350,True,False,False,False,False
+02-21-2018.csv,02-21-2018.csv,.csv,328893673,True,False,False,False,False
+02-22-2018.csv,02-22-2018.csv,.csv,382636202,True,False,False,False,False
+02-23-2018.csv,02-23-2018.csv,.csv,382840456,True,False,False,False,False
+02-28-2018.csv,02-28-2018.csv,.csv,209249758,True,False,False,False,False
+03-01-2018.csv,03-01-2018.csv,.csv,107842858,True,False,False,False,False
+03-02-2018.csv,03-02-2018.csv,.csv,352368373,True,False,False,False,False

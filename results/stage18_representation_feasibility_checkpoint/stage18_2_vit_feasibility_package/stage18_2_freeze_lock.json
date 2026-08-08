@@ -1,0 +1,19 @@
+{
+  "closure_json_sha256": "dc1e7d04f1b50dda9817b94874c2c0bf41290634ce68906df1a44e91afc12b4e",
+  "closure_markdown_sha256": "c96892daea26241254c631408059be75bca584c47515e29c5b9a257827b045e7",
+  "final_decision": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+  "frozen_rules": {
+    "artificial_70_or_78_feature_image_allowed": false,
+    "destination_port_numeric_adjacency_assumed_spatial": false,
+    "endpoint_numeric_or_lexical_order_assumed_spatial": false,
+    "graph_feasibility_may_reuse_endpoint_semantics": true,
+    "performance_based_spatial_ordering_allowed": false,
+    "vit_training_authorized": false,
+    "xai_based_feature_ordering_allowed": false
+  },
+  "package_manifest_sha256": "74251ae4450c7a85a1766232e4f9cdc4ebb22552be5f0a5e6f020ddc274eae83",
+  "parent_commit": "9ec13a4c7207926b8e893179129c41c19339092d",
+  "post_closure_rule": "Stage 18.2 must not be reopened merely to force a Vision Transformer experiment. Reopening would require genuinely new source artifacts that provide independently justified 2D semantics.",
+  "stage": "18.2",
+  "status": "SCIENTIFICALLY_CLOSED"
+}

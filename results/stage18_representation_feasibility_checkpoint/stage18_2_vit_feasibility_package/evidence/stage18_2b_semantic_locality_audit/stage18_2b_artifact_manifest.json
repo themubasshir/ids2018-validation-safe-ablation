@@ -1,0 +1,31 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "stage18_2b_candidate_semantic_locality_audit.csv",
+      "sha256": "e31a5712b8adbb9a3ead5a5ef4f64c641f8ffd2e9f8c40200e272e70798950ca",
+      "size_bytes": 2943
+    },
+    {
+      "relative_path": "stage18_2b_vit_feasibility_decision.json",
+      "sha256": "c98415cf87e9f617126b40c862bbe841b5f1adc475be4509b69417fceb61dcc6",
+      "size_bytes": 4347
+    },
+    {
+      "relative_path": "stage18_2b_vit_representation_criteria.csv",
+      "sha256": "bca857b88925794c728989f029a05d94310b3171e347335aefe44e331491a69e",
+      "size_bytes": 1239
+    }
+  ],
+  "final_vit_feasibility_decision": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+  "scientific_boundary": {
+    "holdout_arrays_opened": 0,
+    "images_constructed": 0,
+    "labels_read": 0,
+    "matrices_constructed": 0,
+    "raw_rows_read": 0,
+    "vit_models_fit": 0
+  },
+  "stage": "18.2B",
+  "status": "VIT_SEMANTIC_LOCALITY_AUDIT_COMPLETE"
+}

@@ -1,0 +1,10 @@
+criterion_id,criterion,type,requirement
+H1,Genuine two-dimensional semantics,HARD,Both axes correspond to authentic source semantics rather than arbitrary reshaping.
+H2,Intrinsic ordering/topology on axis 1,HARD,Axis-1 position must have a defensible ordering or topology.
+H3,Intrinsic ordering/topology on axis 2,HARD,Axis-2 position must have a defensible ordering or topology.
+H4,Meaningful local neighborhoods,HARD,Nearby cells/patches must represent meaningfully related source observations.
+H5,No arbitrary-order dependence,HARD,Equivalent bookkeeping permutations must not arbitrarily redefine patch neighborhoods.
+H6,Label-independent construction,HARD,"Labels, attack categories, model outputs, XAI scores, or performance cannot define spatial layout."
+H7,Reproducible deterministic mapping,HARD,Construction must be deterministically reproducible from authenticated source fields.
+S1,Dataset-wide source support,SUPPORT,Representation should not depend on metadata available in only an isolated source file unless explicitly treated as a separate dataset experiment.
+S2,No artificial padding or duplication,SUPPORT,Representation should not need arbitrary feature duplication or filler values solely to satisfy image dimensions.

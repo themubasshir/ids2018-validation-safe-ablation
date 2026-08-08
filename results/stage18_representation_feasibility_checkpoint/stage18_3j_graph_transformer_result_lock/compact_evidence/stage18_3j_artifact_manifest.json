@@ -1,0 +1,96 @@
+{
+  "artifact_count": 17,
+  "artifacts": [
+    {
+      "relative_path": "seed_101/best_checkpoint.pt",
+      "sha256": "5b1a1e45d70f21ae21410bf2c14480e57b0c6dca420f7dd5a03825d9b3c7d695",
+      "size_bytes": 476119
+    },
+    {
+      "relative_path": "seed_101/completion.json",
+      "sha256": "3f899442613941e59c4fefc77e6be0575a73a8bc6d4447c6299d914ccbd41d23",
+      "size_bytes": 3185
+    },
+    {
+      "relative_path": "seed_101/validation_probabilities.npy",
+      "sha256": "4f22ba1c2ad2e08ac0180e16bde05a798afb1f7588470daa4bff78915b60fa83",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "seed_29/best_checkpoint.pt",
+      "sha256": "5be91ee407537f357782bf1080ac9d3594545c20d5b1142942eb4a832d786666",
+      "size_bytes": 476119
+    },
+    {
+      "relative_path": "seed_29/completion.json",
+      "sha256": "78fe3f2cfd4cda810fb5b388c5441806f8ae55ac7d10517c411f56067d39604d",
+      "size_bytes": 6374
+    },
+    {
+      "relative_path": "seed_29/validation_probabilities.npy",
+      "sha256": "088f20127cccab0ac0952fc872e08f51e4e32f6451ba90f809f5df5ffd43af78",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "seed_7/best_checkpoint.pt",
+      "sha256": "9bdd64a64c0bf5fe52280126a2cd23a7adc5e898687f9c3c9a96bcbfc7fb3dca",
+      "size_bytes": 476119
+    },
+    {
+      "relative_path": "seed_7/completion.json",
+      "sha256": "a7882dc5b458ef619fb2e7240468cb863b602cf28091928ce9f1d17e14c059ce",
+      "size_bytes": 3744
+    },
+    {
+      "relative_path": "seed_7/validation_probabilities.npy",
+      "sha256": "c9294e3df5809860840c17f7f1afae197bcfb1aa03101ca77757ac308eae4865",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "stage18_3j_graph_transformer_ensemble_metrics.json",
+      "sha256": "45f0ee6f8372cb93e371847e9741645de2121d78f71c0aabced29031a621565f",
+      "size_bytes": 1205
+    },
+    {
+      "relative_path": "stage18_3j_graph_transformer_training_result.json",
+      "sha256": "0e553dc8863104422c599805de7aa144802fdf2dd2b46eabd53f58799a68fa39",
+      "size_bytes": 4544
+    },
+    {
+      "relative_path": "stage18_3j_per_seed_validation_metrics.csv",
+      "sha256": "c32593adefc581908418457f0b287911d960002a35db5312b62dfaaaefec36b9",
+      "size_bytes": 745
+    },
+    {
+      "relative_path": "stage18_3j_run_lock.json",
+      "sha256": "814ea9bd13e0810cc7ea3304f1ea44599a81614917dce4fd031f04f0bb7a4707",
+      "size_bytes": 1281
+    },
+    {
+      "relative_path": "stage18_3j_training_history.csv",
+      "sha256": "6aebb5ec4e495116ab8c6a601d82ef810b33083492a9f412f671798980b7c589",
+      "size_bytes": 3713
+    },
+    {
+      "relative_path": "stage18_3j_validation_ensemble_probabilities.npy",
+      "sha256": "3e33f8ae5501c7cc0c43592bf9ac20b368cf4e542c288ad94e8cfa1184bd97dc",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "stage18_3j_validation_generalization_slices.csv",
+      "sha256": "fd49131d850624befcb6aeaa3851a140c4811a6257746579b1c4246594b57db4",
+      "size_bytes": 1723
+    },
+    {
+      "relative_path": "stage18_3j_validation_threshold_sweep.csv",
+      "sha256": "5ee12da9924cc5cd9895c4890e47235cd8eaa3925d10dc00bd95cc025b834f35",
+      "size_bytes": 8778
+    }
+  ],
+  "scientific_boundary": {
+    "graph_transformer_models_trained": 3,
+    "holdout_openings": 0
+  },
+  "stage": "18.3J",
+  "status": "GRAPH_TRANSFORMER_ARTIFACTS_COMPLETE"
+}

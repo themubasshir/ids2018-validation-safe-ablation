@@ -1,0 +1,47 @@
+{
+  "fixed_0_50_metrics": {
+    "accuracy": 0.8044453697488845,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "f2": 0.0,
+    "fn": 423621,
+    "fnr": 1.0,
+    "fp": 0,
+    "fpr": 0.0,
+    "mcc": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "threshold": 0.5,
+    "tn": 1742633,
+    "tp": 0
+  },
+  "holdout_openings": 0,
+  "model": "EdgeAwareDirectedGraphTransformer",
+  "selected_threshold": 0.01,
+  "selected_threshold_metrics": {
+    "accuracy": 0.8046184796427381,
+    "balanced_accuracy": 0.5005194431409438,
+    "f1": 0.0021736670375888797,
+    "f2": 0.0013598571353562266,
+    "fn": 423160,
+    "fnr": 0.9989117631090054,
+    "fp": 86,
+    "fpr": 4.935060910702368e-05,
+    "mcc": 0.025933802899640996,
+    "precision": 0.8427787934186471,
+    "recall": 0.0010882368909945447,
+    "specificity": 0.999950649390893,
+    "threshold": 0.01,
+    "tn": 1742547,
+    "tp": 461
+  },
+  "stage": "18.3J",
+  "threshold_selection_rule": "maximize validation F1; tie higher recall; tie lower threshold",
+  "validation_threshold_free": {
+    "brier": 0.1944110839241819,
+    "log_loss": 1.1592726266559135,
+    "pr_auc": 0.9838755704548996,
+    "roc_auc": 0.9982098579399756
+  }
+}

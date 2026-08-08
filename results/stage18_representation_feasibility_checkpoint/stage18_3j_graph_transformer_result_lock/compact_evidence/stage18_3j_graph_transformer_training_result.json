@@ -1,0 +1,135 @@
+{
+  "control_freeze_sha256": "33f15f8d9fb050beb099498eccaa5dc8acc408bab4d4e447b74ca83ee64fe1ae",
+  "created_at_utc": "2026-08-08T08:34:48.631046+00:00",
+  "ensemble_validation": {
+    "brier": 0.1944110839241819,
+    "fixed_0_50_metrics": {
+      "accuracy": 0.8044453697488845,
+      "balanced_accuracy": 0.5,
+      "f1": 0.0,
+      "f2": 0.0,
+      "fn": 423621,
+      "fnr": 1.0,
+      "fp": 0,
+      "fpr": 0.0,
+      "mcc": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "threshold": 0.5,
+      "tn": 1742633,
+      "tp": 0
+    },
+    "log_loss": 1.1592726266559135,
+    "pr_auc": 0.9838755704548996,
+    "roc_auc": 0.9982098579399756,
+    "selected_threshold": 0.01,
+    "selected_threshold_metrics": {
+      "accuracy": 0.8046184796427381,
+      "balanced_accuracy": 0.5005194431409438,
+      "f1": 0.0021736670375888797,
+      "f2": 0.0013598571353562266,
+      "fn": 423160,
+      "fnr": 0.9989117631090054,
+      "fp": 86,
+      "fpr": 4.935060910702368e-05,
+      "mcc": 0.025933802899640996,
+      "precision": 0.8427787934186471,
+      "recall": 0.0010882368909945447,
+      "specificity": 0.999950649390893,
+      "threshold": 0.01,
+      "tn": 1742547,
+      "tp": 461
+    }
+  },
+  "graph_holdout": {
+    "endpoints_read": 0,
+    "inference_performed": false,
+    "labels_read": 0,
+    "opened": false,
+    "predictors_read": 0,
+    "status": "CLOSED"
+  },
+  "implementation_details": {
+    "attention_dropout": 0.1,
+    "attention_key": "source_node",
+    "attention_normalization": "softmax_over_incoming_edges_per_destination_per_head",
+    "attention_output_dropout": 0.1,
+    "attention_query": "destination_node",
+    "attention_value": "source_node",
+    "cross_snapshot_message_passing": false,
+    "edge_attention_bias": "Linear(64,4)",
+    "edge_message_projection": "Linear(64,64)",
+    "ffn_dropout": 0.1,
+    "loss_reduction": "edge-weighted mean across each frozen 8-snapshot gradient accumulation block",
+    "normalization": "post_residual_LayerNorm",
+    "reverse_edges": false
+  },
+  "model": {
+    "d_model": 64,
+    "dropout": 0.1,
+    "edge_feature_dim": 70,
+    "ff_dim": 128,
+    "heads": 4,
+    "hyperparameter_search": false,
+    "layers": 2,
+    "name": "EdgeAwareDirectedGraphTransformer",
+    "node_feature_dim": 5,
+    "parameter_count": 113993,
+    "seeds": [
+      7,
+      29,
+      101
+    ]
+  },
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "next_permitted_action": "Freeze Stage 18.3J development results and three seed checkpoints in Git. Then perform the single authorized graph-specific holdout opening using the already-frozen Graph Transformer and EdgeOnlyMLP checkpoints and their respective validation-selected thresholds.",
+  "per_seed": [
+    {
+      "best_epoch": 7,
+      "checkpoint_sha256": "9bdd64a64c0bf5fe52280126a2cd23a7adc5e898687f9c3c9a96bcbfc7fb3dca",
+      "pr_auc": 0.9898614265351052,
+      "probabilities_sha256": "c9294e3df5809860840c17f7f1afae197bcfb1aa03101ca77757ac308eae4865",
+      "roc_auc": 0.9982677678962983,
+      "seed": 7
+    },
+    {
+      "best_epoch": 20,
+      "checkpoint_sha256": "5be91ee407537f357782bf1080ac9d3594545c20d5b1142942eb4a832d786666",
+      "pr_auc": 0.9852343921879876,
+      "probabilities_sha256": "088f20127cccab0ac0952fc872e08f51e4e32f6451ba90f809f5df5ffd43af78",
+      "roc_auc": 0.9976111298658614,
+      "seed": 29
+    },
+    {
+      "best_epoch": 5,
+      "checkpoint_sha256": "5b1a1e45d70f21ae21410bf2c14480e57b0c6dca420f7dd5a03825d9b3c7d695",
+      "pr_auc": 0.9763562013275432,
+      "probabilities_sha256": "4f22ba1c2ad2e08ac0180e16bde05a798afb1f7588470daa4bff78915b60fa83",
+      "roc_auc": 0.9976486577106566,
+      "seed": 101
+    }
+  ],
+  "repository_head": "653d3bdcc78c5416575ccddfb670bca9c829eed8",
+  "scientific_boundary": {
+    "chronological_boundaries_changed": false,
+    "class_weight_changed": false,
+    "edge_only_models_already_frozen": 3,
+    "graph_holdout_openings": 0,
+    "graph_protocol_changed_after_control": false,
+    "graph_transformer_models_trained": 3,
+    "hyperparameter_search": false
+  },
+  "stage": "18.3J",
+  "status": "GRAPH_TRANSFORMER_DEVELOPMENT_COMPLETE",
+  "tensor_freeze_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32",
+  "training": {
+    "attacks": 797,
+    "edges": 4068165,
+    "gradient_accumulation_snapshots": 8,
+    "positive_weight": 5103.347553324968,
+    "snapshot_order": "strict_chronological",
+    "snapshot_shuffle": false,
+    "snapshots": 480
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "created_at_utc": "2026-08-08T08:46:17.683151+00:00",
+  "edgeonly_control_freeze_sha256": "33f15f8d9fb050beb099498eccaa5dc8acc408bab4d4e447b74ca83ee64fe1ae",
+  "freezes_stage": "18.3J",
+  "graph_transformer": {
+    "hyperparameter_search": false,
+    "parameter_count": 113993,
+    "per_seed": [
+      {
+        "best_epoch": 7,
+        "checkpoint_sha256": "9bdd64a64c0bf5fe52280126a2cd23a7adc5e898687f9c3c9a96bcbfc7fb3dca",
+        "seed": 7,
+        "validation_pr_auc": 0.9898614265351052,
+        "validation_roc_auc": 0.9982677678962983
+      },
+      {
+        "best_epoch": 20,
+        "checkpoint_sha256": "5be91ee407537f357782bf1080ac9d3594545c20d5b1142942eb4a832d786666",
+        "seed": 29,
+        "validation_pr_auc": 0.9852343921879876,
+        "validation_roc_auc": 0.9976111298658614
+      },
+      {
+        "best_epoch": 5,
+        "checkpoint_sha256": "5b1a1e45d70f21ae21410bf2c14480e57b0c6dca420f7dd5a03825d9b3c7d695",
+        "seed": 101,
+        "validation_pr_auc": 0.9763562013275432,
+        "validation_roc_auc": 0.9976486577106566
+      }
+    ],
+    "seeds": [
+      7,
+      29,
+      101
+    ]
+  },
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "next_authorized_action": "After this freeze package is successfully Git-anchored, perform the single authorized graph-specific chronological holdout opening. Materialize the 11:00-12:59 holdout exactly once using frozen TRAIN preprocessing, evaluate both frozen three-seed model families at their frozen validation-selected thresholds, report threshold-free metrics and topology slices, and use the holdout for no model or threshold choice.",
+  "operating_point_limitation": {
+    "brier": 0.1944110839241819,
+    "frozen_threshold_grid": "0.01 through 0.99 inclusive",
+    "interpretation": "The model has very strong ranking ability, but its probability scale places nearly all positive predictions below the minimum precommitted threshold. This is retained as an operating-point/calibration limitation. The threshold grid may not be extended post hoc.",
+    "log_loss": 1.1592726266559135,
+    "selected_at_grid_boundary": true,
+    "selected_threshold": 0.01,
+    "thresholds_below_0_01_evaluated": false,
+    "validation_f1_at_0_01": 0.0021736670375888797,
+    "validation_pr_auc": 0.9838755704548996,
+    "validation_recall_at_0_01": 0.0010882368909945447,
+    "validation_roc_auc": 0.9982098579399756
+  },
+  "paired_control_comparison": {
+    "edgeonly_pr_auc": 0.6741188649035655,
+    "edgeonly_roc_auc": 0.9113498945570639,
+    "edgeonly_selected_f1": 0.8099613891070816,
+    "graph_pr_auc": 0.9838755704548996,
+    "graph_roc_auc": 0.9982098579399756,
+    "graph_selected_f1": 0.0021736670375888797,
+    "interpretation_boundary": "The paired comparison demonstrates a large difference in validation ranking performance, but must not be interpreted as a causal estimate of graph context alone because the model architectures also differ.",
+    "pr_auc_absolute_difference": 0.30975670555133406
+  },
+  "parent_commit": "653d3bdcc78c5416575ccddfb670bca9c829eed8",
+  "probability_artifact_policy": {
+    "ensemble_probability_array_in_git": false,
+    "ensemble_probability_sha256": "3e33f8ae5501c7cc0c43592bf9ac20b368cf4e542c288ad94e8cfa1184bd97dc",
+    "ensemble_probability_size_bytes": 8665144,
+    "seed_probability_arrays_in_git": false,
+    "seed_probability_identities": [
+      {
+        "seed": 7,
+        "sha256": "c9294e3df5809860840c17f7f1afae197bcfb1aa03101ca77757ac308eae4865",
+        "size_bytes": 8665144
+      },
+      {
+        "seed": 29,
+        "sha256": "088f20127cccab0ac0952fc872e08f51e4e32f6451ba90f809f5df5ffd43af78",
+        "size_bytes": 8665144
+      },
+      {
+        "seed": 101,
+        "sha256": "4f22ba1c2ad2e08ac0180e16bde05a798afb1f7588470daa4bff78915b60fa83",
+        "size_bytes": 8665144
+      }
+    ]
+  },
+  "scientific_boundary": {
+    "chronological_boundaries_changed": false,
+    "class_weight_changed": false,
+    "edgeonly_models_trained": 3,
+    "graph_holdout_openings": 0,
+    "graph_holdout_status": "CLOSED",
+    "graph_hyperparameter_search": false,
+    "graph_protocol_changed_after_control": false,
+    "graph_transformer_models_trained": 3,
+    "threshold_grid_changed": false
+  },
+  "single_holdout_opening_prerequisites": {
+    "development_metrics_frozen": true,
+    "edgeonly_seed_checkpoints_frozen": true,
+    "edgeonly_validation_threshold_frozen": true,
+    "graph_architecture_frozen": true,
+    "graph_preprocessing_frozen": true,
+    "graph_seed_checkpoints_frozen": true,
+    "graph_validation_threshold_frozen": true,
+    "repository_anchor": "PENDING_THIS_COMMIT"
+  },
+  "stage": "18.3K",
+  "status": "GRAPH_TRANSFORMER_DEVELOPMENT_RESULTS_FROZEN",
+  "tensor_freeze_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32",
+  "topology_slice_limitation": {
+    "attacks_on_unseen_directed_edge": 0,
+    "attacks_with_unseen_host": 0,
+    "unseen_topology_attack_detection_estimable": false,
+    "validation_attacks": 423621
+  },
+  "validation_ensemble": {
+    "brier": 0.1944110839241819,
+    "f1": 0.0021736670375888797,
+    "f2": 0.0013598571353562266,
+    "fn": 423160,
+    "fp": 86,
+    "log_loss": 1.1592726266559135,
+    "mcc": 0.025933802899640996,
+    "pr_auc": 0.9838755704548996,
+    "precision": 0.8427787934186471,
+    "recall": 0.0010882368909945447,
+    "roc_auc": 0.9982098579399756,
+    "selected_threshold": 0.01,
+    "selected_threshold_is_grid_minimum": true,
+    "tn": 1742547,
+    "tp": 461
+  }
+}

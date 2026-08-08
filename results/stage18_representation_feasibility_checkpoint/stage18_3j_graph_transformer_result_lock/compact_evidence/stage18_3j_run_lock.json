@@ -1,0 +1,33 @@
+{
+  "accumulation_snapshots": 8,
+  "control_freeze_sha256": "33f15f8d9fb050beb099498eccaa5dc8acc408bab4d4e447b74ca83ee64fe1ae",
+  "created_at_utc": "2026-08-08T08:20:11.535752+00:00",
+  "holdout_access": false,
+  "hyperparameter_search": false,
+  "implementation_details": {
+    "attention_dropout": 0.1,
+    "attention_key": "source_node",
+    "attention_normalization": "softmax_over_incoming_edges_per_destination_per_head",
+    "attention_output_dropout": 0.1,
+    "attention_query": "destination_node",
+    "attention_value": "source_node",
+    "cross_snapshot_message_passing": false,
+    "edge_attention_bias": "Linear(64,4)",
+    "edge_message_projection": "Linear(64,64)",
+    "ffn_dropout": 0.1,
+    "loss_reduction": "edge-weighted mean across each frozen 8-snapshot gradient accumulation block",
+    "normalization": "post_residual_LayerNorm",
+    "reverse_edges": false
+  },
+  "model": "EdgeAwareDirectedGraphTransformer",
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "parameter_count": 113993,
+  "repository_head": "653d3bdcc78c5416575ccddfb670bca9c829eed8",
+  "seeds": [
+    7,
+    29,
+    101
+  ],
+  "stage": "18.3J",
+  "tensor_freeze_sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32"
+}

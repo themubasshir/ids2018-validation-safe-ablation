@@ -1,0 +1,42 @@
+{
+  "holdout": {
+    "03_01_rows_read": 0,
+    "03_02_rows_read": 0,
+    "labels_read": 0,
+    "openings": 0,
+    "predictors_read": 0,
+    "status": "CLOSED"
+  },
+  "materialization": {
+    "1970_dates_corrected": 14,
+    "development_files": 8,
+    "embedded_headers_removed": 34,
+    "materialized_wall_clock_seconds": 333929,
+    "numeric_features": 78,
+    "traffic_rows": 14853268,
+    "traffic_rows_dropped": 0
+  },
+  "next_authorized_step": "STAGE_19_2B_TRAIN_ONLY_PREPROCESSING_AND_MULTISCALE_INDEX_FREEZE",
+  "parent_commit": "5887f2e966815781b27da64625af2933459595b5",
+  "scientific_boundary": {
+    "holdout_opened": false,
+    "models_trained": 0,
+    "preprocessing_fitted": false,
+    "thresholds_selected": 0,
+    "windows_constructed": false
+  },
+  "stage": "19.2A",
+  "status": "ONE_SECOND_DEVELOPMENT_MATERIALIZATION_FROZEN",
+  "train": {
+    "eligible_seconds": 282329,
+    "negative_seconds": 258280,
+    "positive_rate": 0.08518076428563838,
+    "positive_seconds": 24049
+  },
+  "validation": {
+    "eligible_seconds": 42000,
+    "negative_seconds": 34838,
+    "positive_rate": 0.17052380952380952,
+    "positive_seconds": 7162
+  }
+}

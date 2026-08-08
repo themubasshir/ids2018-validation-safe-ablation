@@ -1,0 +1,69 @@
+{
+  "created_at_utc": "2026-08-08T07:05:41.153587+00:00",
+  "edge_preprocessing": {
+    "feature_count": 70,
+    "fit_partition": "train_only",
+    "imputation": "training_feature_median",
+    "rows_dropped": 0,
+    "scaling": "training_only_StandardScaler",
+    "train_nonfinite_rows": 33462,
+    "validation_nonfinite_rows": 14100
+  },
+  "graph_holdout": {
+    "endpoints_read": 0,
+    "labels_read": 0,
+    "predictors_read": 0,
+    "row_indices_loaded": false,
+    "status": "CLOSED",
+    "tensors_materialized": false
+  },
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "next_permitted_action": "Freeze Stage 18.3F preprocessing/tensor identities and begin Graph Transformer plus paired edge-only control training under the locked three-seed protocol. Graph holdout remains closed.",
+  "node_preprocessing": {
+    "constant_feature_scaled": false,
+    "fit_partition": "train_only",
+    "structural_scaler_feature_count": 4,
+    "train_node_snapshot_observations": 505300
+  },
+  "protocol_conformance": {
+    "60_second_snapshots": true,
+    "chronological_partitions": true,
+    "cross_snapshot_edges_present": false,
+    "edge_direction_preserved": true,
+    "holdout_used_for_preprocessing_fit": false,
+    "node_identity_embeddings_present": false,
+    "parallel_edges_preserved": true,
+    "rows_dropped": false,
+    "validation_used_for_preprocessing_fit": false
+  },
+  "repository_head": "86c5af8cd2a3df9c4e5dbc5f823f4e584cf001e5",
+  "scientific_boundary": {
+    "edge_only_control_models_fit": 0,
+    "graph_holdout_openings": 0,
+    "graph_transformer_models_fit": 0,
+    "threshold_selection_performed": false,
+    "validation_model_performance_observed": false
+  },
+  "stage": "18.3F",
+  "status": "GRAPH_TENSORS_MATERIALIZED_AND_VERIFIED",
+  "train_tensor": {
+    "all_edge_features_finite": true,
+    "all_node_features_finite": true,
+    "attacks": 797,
+    "edges": 4068165,
+    "node_snapshot_observations": 505300,
+    "snapshot_local_node_indices_valid": true,
+    "snapshots": 480
+  },
+  "validation_tensor": {
+    "all_edge_features_finite": true,
+    "all_node_features_finite": true,
+    "attacks": 423621,
+    "both_hosts_seen_edges": 2115416,
+    "edges": 2166254,
+    "node_snapshot_observations": 211466,
+    "seen_directed_edges": 1816214,
+    "snapshot_local_node_indices_valid": true,
+    "snapshots": 120
+  }
+}

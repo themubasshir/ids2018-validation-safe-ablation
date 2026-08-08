@@ -1,0 +1,36 @@
+{
+  "edge_feature_dim": 70,
+  "holdout": {
+    "endpoints_read": 0,
+    "labels_read": 0,
+    "predictors_read": 0,
+    "status": "CLOSED",
+    "tensors_materialized": false
+  },
+  "node_feature_dim": 5,
+  "representation": "directed_temporal_multigraph_snapshots",
+  "stage": "18.3F-graph-tensors",
+  "storage_semantics": {
+    "cross_snapshot_edges_stored": false,
+    "edge_order_within_snapshot": "deterministic source-file storage order only; it has no temporal or graph semantic meaning",
+    "endpoint_identifiers_stored_as_model_inputs": false,
+    "node_index_scope": "snapshot_local",
+    "node_indices_reused_across_snapshots": false
+  },
+  "train": {
+    "attack_edges": 797,
+    "benign_edges": 4067368,
+    "edges": 4068165,
+    "node_snapshot_observations": 505300,
+    "snapshots": 480
+  },
+  "validation": {
+    "attack_edges": 423621,
+    "benign_edges": 1742633,
+    "both_hosts_seen_edges": 2115416,
+    "edges": 2166254,
+    "node_snapshot_observations": 211466,
+    "seen_directed_edge_edges": 1816214,
+    "snapshots": 120
+  }
+}

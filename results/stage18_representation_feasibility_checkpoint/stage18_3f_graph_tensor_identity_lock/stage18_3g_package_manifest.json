@@ -1,0 +1,49 @@
+{
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "relative_path": "compact_evidence/stage18_3f_artifact_manifest.json",
+      "sha256": "91b41457dc3817362d17f00411493cd39bd17e054d83d3efb6fd192f492cbb1e",
+      "size_bytes": 5244
+    },
+    {
+      "relative_path": "compact_evidence/stage18_3f_edge_preprocessing.npz",
+      "sha256": "c0f72527a2676f164ddc63cfe82663647f1bc02ad39a2c146cbc85451da60115",
+      "size_bytes": 2767
+    },
+    {
+      "relative_path": "compact_evidence/stage18_3f_graph_tensor_summary.json",
+      "sha256": "6ea1437e4948e4c836d51697fbd4736a6f882104e1b73e35a6beeb9015a880bc",
+      "size_bytes": 1052
+    },
+    {
+      "relative_path": "compact_evidence/stage18_3f_node_preprocessing.npz",
+      "sha256": "2a5081d9efd464f4756b06546c928e3b03b6560e861bf0df8a2fc9155a9c278a",
+      "size_bytes": 1022
+    },
+    {
+      "relative_path": "compact_evidence/stage18_3f_preprocessing_summary.json",
+      "sha256": "1e8a6cc8a2502b15386d89b5ff8f53864c2dca3d0d339d2549cb0af4e36f87b9",
+      "size_bytes": 933
+    },
+    {
+      "relative_path": "compact_evidence/stage18_3f_tensor_integrity_result.json",
+      "sha256": "81319ad66382e9d550045175cef1af3086a0ad4e882127c734d413724f38491a",
+      "size_bytes": 2396
+    },
+    {
+      "relative_path": "stage18_3g_graph_tensor_freeze_record.json",
+      "sha256": "d77e9eab7b30e8d6a1c5fc9397b4596dd300e125d6f17ce084db085d0441eb32",
+      "size_bytes": 6826
+    }
+  ],
+  "large_runtime_tensor_arrays_in_git": false,
+  "parent_commit": "86c5af8cd2a3df9c4e5dbc5f823f4e584cf001e5",
+  "scientific_boundary": {
+    "holdout_openings": 0,
+    "models_fit": 0,
+    "validation_performance_observed": false
+  },
+  "stage": "18.3G",
+  "status": "GRAPH_TENSOR_IDENTITY_PACKAGE_COMPLETE"
+}

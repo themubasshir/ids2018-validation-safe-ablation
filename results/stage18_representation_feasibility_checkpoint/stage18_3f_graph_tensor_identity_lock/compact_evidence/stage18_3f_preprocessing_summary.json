@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-08-08T07:05:40.343439+00:00",
+  "edge_preprocessing": {
+    "feature_count": 70,
+    "holdout_used_for_fit": false,
+    "median_fit_partition": "train_only",
+    "median_fit_rows": 4068165,
+    "rows_dropped": 0,
+    "scaler_fit_partition": "train_only",
+    "scaler_fit_rows": 4068165,
+    "train_nonfinite_rows_imputed": 33462,
+    "validation_nonfinite_rows_imputed": 14100,
+    "validation_used_for_fit": false
+  },
+  "model_protocol_sha256": "a0fea68121da6c7e32f51d08c7288714ee0ce3fa821e0a269062225c026781e9",
+  "node_preprocessing": {
+    "fit_partition": "train_only",
+    "holdout_used_for_fit": false,
+    "raw_node_feature_count": 5,
+    "scaled_structural_feature_count": 4,
+    "train_node_snapshot_observations": 505300,
+    "validation_used_for_fit": false
+  },
+  "stage": "18.3F-preprocessing",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1"
+  }
+}

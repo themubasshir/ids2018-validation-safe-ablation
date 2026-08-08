@@ -1,0 +1,138 @@
+{
+  "artifact_count": 25,
+  "artifacts": [
+    {
+      "relative_path": "stage18_3f_edge_preprocessing.npz",
+      "sha256": "c0f72527a2676f164ddc63cfe82663647f1bc02ad39a2c146cbc85451da60115",
+      "size_bytes": 2767
+    },
+    {
+      "relative_path": "stage18_3f_graph_tensor_summary.json",
+      "sha256": "6ea1437e4948e4c836d51697fbd4736a6f882104e1b73e35a6beeb9015a880bc",
+      "size_bytes": 1052
+    },
+    {
+      "relative_path": "stage18_3f_node_preprocessing.npz",
+      "sha256": "2a5081d9efd464f4756b06546c928e3b03b6560e861bf0df8a2fc9155a9c278a",
+      "size_bytes": 1022
+    },
+    {
+      "relative_path": "stage18_3f_preprocessing_summary.json",
+      "sha256": "1e8a6cc8a2502b15386d89b5ff8f53864c2dca3d0d339d2549cb0af4e36f87b9",
+      "size_bytes": 933
+    },
+    {
+      "relative_path": "stage18_3f_tensor_integrity_result.json",
+      "sha256": "81319ad66382e9d550045175cef1af3086a0ad4e882127c734d413724f38491a",
+      "size_bytes": 2396
+    },
+    {
+      "relative_path": "train_graph_tensors/edge_dst_local_index.npy",
+      "sha256": "aab9d95ce91ab4057c7b7939f9be2ae15db72b361958f7173583cc5f1f97997b",
+      "size_bytes": 16272788
+    },
+    {
+      "relative_path": "train_graph_tensors/edge_features.npy",
+      "sha256": "6a06acfa71e5b37d0d323eddec961f79c00d0e6c471eb9869aab869edfddfc6e",
+      "size_bytes": 1139086328
+    },
+    {
+      "relative_path": "train_graph_tensors/edge_labels.npy",
+      "sha256": "4bb17b389ac0307baecf6741f80127716a7eabede729ba3a0a814bf544d10f97",
+      "size_bytes": 4068293
+    },
+    {
+      "relative_path": "train_graph_tensors/edge_raw_row_index.npy",
+      "sha256": "8247b6b072bfa1f433edbd0eda5dca3888b412680c7f0ab5b91bfed6d5f46a6a",
+      "size_bytes": 32545448
+    },
+    {
+      "relative_path": "train_graph_tensors/edge_snapshot_offsets.npy",
+      "sha256": "5740ee380d4b33431041b6dce3b393e196c7cbbea56b2ea428b335473be6e026",
+      "size_bytes": 3976
+    },
+    {
+      "relative_path": "train_graph_tensors/edge_src_local_index.npy",
+      "sha256": "f2ac72190bc7efe2ff4b7ca46932c6b2802b04310876b60eac33d9d036734ff4",
+      "size_bytes": 16272788
+    },
+    {
+      "relative_path": "train_graph_tensors/node_features.npy",
+      "sha256": "d5b5e495a288324282fcef5f04bb66ab5fbda315dc39ac05044ce5dfa8b6f5b3",
+      "size_bytes": 10106128
+    },
+    {
+      "relative_path": "train_graph_tensors/node_snapshot_offsets.npy",
+      "sha256": "94ee77ba4bdee0205e7609bf48748b0dc3017bfdd66aa3d30346f0889aadca89",
+      "size_bytes": 3976
+    },
+    {
+      "relative_path": "train_graph_tensors/snapshot_global_id.npy",
+      "sha256": "a5aa3d86223eccd4a73001e398277739b4c8e6b8fd32fb11ec4ac2f5eba62b7c",
+      "size_bytes": 1088
+    },
+    {
+      "relative_path": "validation_graph_tensors/both_hosts_seen_in_train.npy",
+      "sha256": "e3e20337ce7096ba5dd1e83097fdf587321513d1c3137b44688890052db3ce83",
+      "size_bytes": 2166382
+    },
+    {
+      "relative_path": "validation_graph_tensors/directed_edge_seen_in_train.npy",
+      "sha256": "bd6f2fc7993feefb50fc39d4d29a92f634a54ca85d693cf6c012974310a8fadd",
+      "size_bytes": 2166382
+    },
+    {
+      "relative_path": "validation_graph_tensors/edge_dst_local_index.npy",
+      "sha256": "be9568c0ab7baf9aa5d7fad7bb153f3736b99b0d935608aab6a941c83fad6c41",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "validation_graph_tensors/edge_features.npy",
+      "sha256": "21fc9be7bdf42b74dd7ac471d1574f45e8b9a35a70d8515fb1c468cc9b6bfe40",
+      "size_bytes": 606551248
+    },
+    {
+      "relative_path": "validation_graph_tensors/edge_labels.npy",
+      "sha256": "a3255440db8664750e6a84515d6f0b50bc305b941a5c699a685ca60cab735caa",
+      "size_bytes": 2166382
+    },
+    {
+      "relative_path": "validation_graph_tensors/edge_raw_row_index.npy",
+      "sha256": "9a012901b5b9a74873aa3e5700681984ba3a6b4d905729781e828463965af2f9",
+      "size_bytes": 17330160
+    },
+    {
+      "relative_path": "validation_graph_tensors/edge_snapshot_offsets.npy",
+      "sha256": "7985c04ae62855be5645ffdcb6b918d31050589b669fe3a051df61589dc0ba4a",
+      "size_bytes": 1096
+    },
+    {
+      "relative_path": "validation_graph_tensors/edge_src_local_index.npy",
+      "sha256": "6dd9ce4c6ec6ca8c6da59df2e9ae16d7af38ed4ef81bb13706655a1c6d208f1c",
+      "size_bytes": 8665144
+    },
+    {
+      "relative_path": "validation_graph_tensors/node_features.npy",
+      "sha256": "c9ecec04dea832c16fec059c2855010daf187903cbfffdfed6957c97ca12bdab",
+      "size_bytes": 4229448
+    },
+    {
+      "relative_path": "validation_graph_tensors/node_snapshot_offsets.npy",
+      "sha256": "3e95b907efd5a8345b11cdeef64c43ac1b8d1a68f22a7d75a5c0f6c0557afcc8",
+      "size_bytes": 1096
+    },
+    {
+      "relative_path": "validation_graph_tensors/snapshot_global_id.npy",
+      "sha256": "13f7c2281be0e22c1fab78951ad3a41a04c06cdf5e685aae5ad0086f8c613d16",
+      "size_bytes": 368
+    }
+  ],
+  "git_policy": "Tensor arrays are runtime artifacts and are not authorized for Git commit. Only compact identity and preprocessing evidence may later be anchored.",
+  "large_runtime_artifacts": true,
+  "scientific_boundary": {
+    "holdout_openings": 0,
+    "models_fit": 0
+  },
+  "stage": "18.3F",
+  "status": "GRAPH_TENSOR_ARTIFACTS_COMPLETE"
+}

@@ -1,0 +1,59 @@
+{
+  "holdout": {
+    "maximum_raw_openings": 1,
+    "negative": 56498,
+    "performance_inspected": true,
+    "positive": 27502,
+    "raw_openings": 1,
+    "raw_reopen_permitted": false,
+    "samples": 84000
+  },
+  "mtemporal_ids": {
+    "brier": 0.2682234832340909,
+    "f1": 0.7176209461958979,
+    "fn": 10043,
+    "fp": 3697,
+    "logloss": 1.3517612042618803,
+    "mcc": 0.6155456836274932,
+    "mean_gate_coarse": 0.44069982357605314,
+    "mean_gate_fine": 0.2387994970180077,
+    "mean_gate_medium": 0.32050067715528935,
+    "pr_auc": 0.8013780402555105,
+    "precision": 0.8252505199470599,
+    "recall": 0.6348265580685041,
+    "roc_auc": 0.8502016529074419,
+    "threshold": 0.01,
+    "tn": 52801,
+    "tp": 17459
+  },
+  "next_authorized_step": "STAGE_19_7_TEMPORAL_EXPERIMENT_CLOSURE_AND_MANUSCRIPT_SYNTHESIS",
+  "parent_commit": "b4060e3893534dc7d05ed37fd8c5b8c6918e1934",
+  "post_holdout_prohibitions": [
+    "RAW_HOLDOUT_REREAD",
+    "MODEL_RETRAINING",
+    "SEED_SELECTION",
+    "MODEL_SELECTION",
+    "THRESHOLD_CHANGE",
+    "THRESHOLD_GRID_EXTENSION",
+    "CALIBRATION",
+    "PREPROCESSING_CHANGE",
+    "REPRESENTATION_CHANGE"
+  ],
+  "single_scale_temporal": {
+    "brier": 0.2553046598652256,
+    "f1": 0.6526175687666371,
+    "fn": 9850,
+    "fp": 8942,
+    "logloss": 1.1842744833092804,
+    "mcc": 0.48785456228263546,
+    "pr_auc": 0.7599570946733909,
+    "precision": 0.6637587425735129,
+    "recall": 0.6418442295105811,
+    "roc_auc": 0.845298213409374,
+    "threshold": 0.01,
+    "tn": 47556,
+    "tp": 17652
+  },
+  "stage": "19.6B",
+  "status": "STAGE19_TEMPORAL_HOLDOUT_PERFORMANCE_PERMANENTLY_FROZEN"
+}

@@ -1,0 +1,110 @@
+{
+  "artifact_count": 19,
+  "artifacts": [
+    {
+      "relative_path": "predictions/holdout_targets.npy",
+      "sha256": "4227c27a2855bd82866660bc17664b2d05a8ef71eb0e97794a2359f7a0a5b329",
+      "size_bytes": 84128
+    },
+    {
+      "relative_path": "predictions/holdout_target_unix_seconds.npy",
+      "sha256": "6ba7f354754d6c690957353dc174987dd8f9479d88bf2c1ee8892de43307fcb3",
+      "size_bytes": 672128
+    },
+    {
+      "relative_path": "results/stage19_6b_seed_holdout_summary.csv",
+      "sha256": "683d027ba2ca70a880f50008e10e30647e515b3126bf2c8a22de98d29f4ae2fa",
+      "size_bytes": 1268
+    },
+    {
+      "relative_path": "results/stage19_6b_ensemble_holdout_summary.csv",
+      "sha256": "ba42f8d0148ec6d9114b17928a421fa801f06e1a294984e4a711adb02b9566c3",
+      "size_bytes": 1216
+    },
+    {
+      "relative_path": "results/stage19_6b_per_day_holdout_summary.csv",
+      "sha256": "0ced6fde77f9d65dfd6deeb7dc1889a9faba902da9daf347f71b0901e4f536c0",
+      "size_bytes": 2231
+    },
+    {
+      "relative_path": "results/stage19_6b_temporal_holdout_comparison.json",
+      "sha256": "a23206a26aea20deb31841053b259ba4c6b0c71e24f27b48713003d8fb94d1b5",
+      "size_bytes": 3208
+    },
+    {
+      "relative_path": "stage19_6b_holdout_results_freeze.json",
+      "sha256": "b5c770fb248d6774ecbfefeb24c588b6533210b54b72622cb7713738bc740f8a",
+      "size_bytes": 1632
+    },
+    {
+      "relative_path": "predictions/single_scale_seed_101_holdout_probabilities.npy",
+      "sha256": "1a31564a8711b33b4fbc08f7abb3b15c200571b4e17c66b6176642b8d3b351c7",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/single_scale_seed_29_holdout_probabilities.npy",
+      "sha256": "7366336d792b6b65232d44c6662ee35bd9e2bce5f2eca327b40e1163865f6c10",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/single_scale_seed_7_holdout_probabilities.npy",
+      "sha256": "cccd787069f3a780e0a55d8a2f19448e0b28073445c8919f21718dc90768fd36",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_101_holdout_probabilities.npy",
+      "sha256": "a0ae1ca37fbe7e246a19da9ce02f0e7a729fc00e95d493a5dd8857af3babb15b",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_29_holdout_probabilities.npy",
+      "sha256": "b240aecb1540053494a7586a7bec7ea764411a1a602f760242faab98a1072c37",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_7_holdout_probabilities.npy",
+      "sha256": "0b3608ad6c94d9985c50788ab6c6fe1433377a551da221769e8b127e18d72d5a",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_101_holdout_gate_weights.npy",
+      "sha256": "891c29c727170b52cf7e6dd57e7916d84f961e6691fbeee14319a544d8d6d755",
+      "size_bytes": 1008128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_29_holdout_gate_weights.npy",
+      "sha256": "508f7fd5e1ea40269da4ad668308dbcee552f494c6a8502cbdce22b877de62d7",
+      "size_bytes": 1008128
+    },
+    {
+      "relative_path": "predictions/mtemporal_seed_7_holdout_gate_weights.npy",
+      "sha256": "c50476fd46aeb3e271e8800c76dd071e94ef3a8b960e847b604d147d50319414",
+      "size_bytes": 1008128
+    },
+    {
+      "relative_path": "predictions/single_scale_ensemble_holdout_probabilities.npy",
+      "sha256": "c5af7a3924199ed5bfa2eb44a096209f4d205d4ac9366e8cc0572f1de68e2801",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/mtemporal_ensemble_holdout_probabilities.npy",
+      "sha256": "f0086ae518979107a06f79ea1b4d757f67c55750526ca4b73299e37c81a4b736",
+      "size_bytes": 336128
+    },
+    {
+      "relative_path": "predictions/mtemporal_ensemble_holdout_gate_weights.npy",
+      "sha256": "ff331c05bade23afd74954e21f655ca7d302ffed1b31d7f51f2fa0b67aebb2bf",
+      "size_bytes": 1008128
+    }
+  ],
+  "calibration": false,
+  "models_evaluated": 6,
+  "models_trained": 0,
+  "raw_holdout_access": false,
+  "raw_holdout_openings": 1,
+  "raw_holdout_status": "PERMANENTLY_CLOSED",
+  "stage": "19.6B",
+  "status": "FROZEN_TEMPORAL_HOLDOUT_EVALUATION_PACKAGE_COMPLETE",
+  "threshold_changes": 0,
+  "threshold_search": false
+}

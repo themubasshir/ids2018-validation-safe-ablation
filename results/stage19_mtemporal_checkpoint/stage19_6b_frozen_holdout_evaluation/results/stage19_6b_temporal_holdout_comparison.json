@@ -1,0 +1,98 @@
+{
+  "holdout_mtemporal_minus_single_scale": {
+    "brier": 0.012918823368865295,
+    "f1": 0.06500337742926077,
+    "logloss": 0.16748672095259987,
+    "pr_auc": 0.04142094558211962,
+    "precision": 0.16149177737354703,
+    "recall": -0.007017671442076989,
+    "roc_auc": 0.004903439498067819
+  },
+  "holdout_population": {
+    "negative": 56498,
+    "positive": 27502,
+    "positive_rate": 0.3274047619047619,
+    "samples": 84000
+  },
+  "interpretation_boundaries": {
+    "causal_superiority_claim": false,
+    "comparison_is_descriptive": true,
+    "posthoc_calibration_permitted": false,
+    "posthoc_model_selection_permitted": false,
+    "posthoc_threshold_change_permitted": false
+  },
+  "mtemporal_ids": {
+    "holdout": {
+      "brier": 0.2682234832340909,
+      "logloss": 1.3517612042618803,
+      "mean_gate_coarse": 0.44069982357605314,
+      "mean_gate_fine": 0.2387994970180077,
+      "mean_gate_medium": 0.32050067715528935,
+      "pr_auc": 0.8013780402555105,
+      "roc_auc": 0.8502016529074419,
+      "selected_accuracy": 0.8364285714285714,
+      "selected_balanced_accuracy": 0.7846953067166479,
+      "selected_f1": 0.7176209461958979,
+      "selected_f2": 0.6655408496233722,
+      "selected_fn": 10043,
+      "selected_fnr": 0.36517344193149587,
+      "selected_fp": 3697,
+      "selected_fpr": 0.06543594463520833,
+      "selected_mcc": 0.6155456836274932,
+      "selected_precision": 0.8252505199470599,
+      "selected_recall": 0.6348265580685041,
+      "selected_specificity": 0.9345640553647917,
+      "selected_threshold": 0.01,
+      "selected_tn": 52801,
+      "selected_tp": 17459
+    },
+    "validation": {
+      "brier": 0.1647523684589985,
+      "f1": 0.30242395756395624,
+      "logloss": 0.902737300125687,
+      "pr_auc": 0.2856097446256688,
+      "precision": 0.29129478722028196,
+      "recall": 0.3144373080145211,
+      "roc_auc": 0.7302792701220068,
+      "threshold": 0.01
+    }
+  },
+  "raw_holdout_access": false,
+  "raw_holdout_openings": 1,
+  "raw_holdout_status": "PERMANENTLY_CLOSED",
+  "single_scale_temporal": {
+    "holdout": {
+      "brier": 0.2553046598652256,
+      "logloss": 1.1842744833092804,
+      "pr_auc": 0.7599570946733909,
+      "roc_auc": 0.845298213409374,
+      "selected_accuracy": 0.7762857142857142,
+      "selected_balanced_accuracy": 0.741786570134242,
+      "selected_f1": 0.6526175687666371,
+      "selected_f2": 0.6461105986735187,
+      "selected_fn": 9850,
+      "selected_fnr": 0.35815577048941893,
+      "selected_fp": 8942,
+      "selected_fpr": 0.15827108924209707,
+      "selected_mcc": 0.48785456228263546,
+      "selected_precision": 0.6637587425735129,
+      "selected_recall": 0.6418442295105811,
+      "selected_specificity": 0.8417289107579029,
+      "selected_threshold": 0.01,
+      "selected_tn": 47556,
+      "selected_tp": 17652
+    },
+    "validation": {
+      "brier": 0.15756783094016316,
+      "f1": 0.3370329478761113,
+      "logloss": 0.8107060227874884,
+      "pr_auc": 0.3108128771362852,
+      "precision": 0.2886433761321788,
+      "recall": 0.4049148282602625,
+      "roc_auc": 0.7042594098003927,
+      "threshold": 0.01
+    }
+  },
+  "stage": "19.6B",
+  "status": "FROZEN_TEMPORAL_HOLDOUT_RESULTS"
+}

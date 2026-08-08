@@ -1,0 +1,75 @@
+{
+  "canonical_outputs": [
+    {
+      "file": "monday_canonical_flow_metadata.parquet",
+      "rows": 529918,
+      "sha256": "2ab16b8d851e002c1b149ede2b952777cedae6e57f815441ad4c6090ea96ac70",
+      "source": "MONDAY"
+    },
+    {
+      "file": "tuesday_canonical_flow_metadata.parquet",
+      "rows": 445909,
+      "sha256": "28ca517d154a672dd9dd5a61e34e663e968b15f9d28b43a79076cf67854366c6",
+      "source": "TUESDAY"
+    },
+    {
+      "file": "wednesday_canonical_flow_metadata.parquet",
+      "rows": 692703,
+      "sha256": "898c16c2bf6eef3e757a25bad7e56c531cc1de1ecb65e538679ef34d9a400b22",
+      "source": "WEDNESDAY"
+    },
+    {
+      "file": "thursday_morning_canonical_flow_metadata.parquet",
+      "rows": 170366,
+      "sha256": "a183fb9a4f569e694ec6f296d2c396db436999bd55813fc2443597b3462e2b4f",
+      "source": "THURSDAY_MORNING"
+    },
+    {
+      "file": "thursday_afternoon_canonical_flow_metadata.parquet",
+      "rows": 288602,
+      "sha256": "1dd0b69281b8ddb6cf53c00a0391c81424b513b1f69709e7c89d6b540c3c3c56",
+      "source": "THURSDAY_AFTERNOON"
+    }
+  ],
+  "canonical_schema": {
+    "Destination IP": "UTF8",
+    "Destination Port": "INT64",
+    "Flow ID": "UTF8",
+    "Label": "UTF8",
+    "Protocol": "INT64",
+    "Source IP": "UTF8",
+    "Source Port": "INT64",
+    "Timestamp": "TIMESTAMP_NS_UTC"
+  },
+  "created_at_utc": "2026-08-08T17:17:44.637572+00:00",
+  "holdout": {
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "maximum": 1,
+    "openings": 0,
+    "status": "CLOSED"
+  },
+  "next_authorized_step": "STAGE_20_1C_MONDAY_ALIGNMENT_PILOT",
+  "packet_alignment": false,
+  "parent_commit": "675c445f9d371416779aa0f7eee39adfa0d35d42",
+  "pcap_downloads": 0,
+  "repair_revision": "SCHEMA_SAFE_R1",
+  "representation_dimensions_frozen": false,
+  "sanitation_rule": {
+    "attack_based_deletion": false,
+    "drop_only_if": "ALL_85_SOURCE_FIELDS_ARE_NULL_NAN_OR_EMPTY_WHITESPACE",
+    "label_based_deletion": false,
+    "partially_populated_missing_alignment_metadata": "ABORT",
+    "partially_populated_missing_label": "ABORT"
+  },
+  "stage": "20.1B3",
+  "status": "DEVELOPMENT_LABEL_HYGIENE_FROZEN",
+  "thursday_morning": {
+    "attack": 2180,
+    "benign": 168186,
+    "retained": 170366,
+    "source_rows": 458968,
+    "structural_empty": 288602
+  },
+  "vit_training": false
+}

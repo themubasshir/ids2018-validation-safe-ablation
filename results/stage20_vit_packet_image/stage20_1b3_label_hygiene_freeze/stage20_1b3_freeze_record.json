@@ -1,0 +1,14 @@
+{
+  "canonical_rows": 2127498,
+  "holdout_openings": 0,
+  "holdout_status": "CLOSED",
+  "next_authorized_step": "STAGE_20_1C_MONDAY_ALIGNMENT_PILOT",
+  "parent_commit": "675c445f9d371416779aa0f7eee39adfa0d35d42",
+  "partial_rows_removed": 0,
+  "pcap_downloads": 0,
+  "repair": "EXPLICIT_CANONICAL_ARROW_SCHEMA",
+  "source_rows": 2416100,
+  "stage": "20.1B3",
+  "status": "DEVELOPMENT_LABEL_SOURCE_HYGIENE_FROZEN",
+  "structural_empty_removed": 288602
+}

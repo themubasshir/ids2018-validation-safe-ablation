@@ -1,0 +1,61 @@
+{
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "relative_path": "stage20_1b3_source_hygiene_audit.csv",
+      "sha256": "a6ff1f5ad385f4f1fbaf85783a91d665cbc926cf48172aa9a3e84f9a8615191e",
+      "size_bytes": 1848
+    },
+    {
+      "relative_path": "stage20_1b3_label_hygiene_policy.json",
+      "sha256": "b3bd4cc36cf5aa427d4548db9afb639076b7b921c97cb0bfe49e4c80e544ac40",
+      "size_bytes": 2317
+    },
+    {
+      "relative_path": "STAGE20_LABEL_HYGIENE_POLICY.md",
+      "sha256": "54847bc5dde088e7632251dfd6da25dbfc3906146736ec08db59d3c1eb19b90a",
+      "size_bytes": 1834
+    },
+    {
+      "relative_path": "stage20_1b3_freeze_record.json",
+      "sha256": "728c53d6677de3fdbfa86d63d919a1514139a4fca94b7134823e6d0225677f97",
+      "size_bytes": 453
+    }
+  ],
+  "external_canonical_artifacts": [
+    {
+      "file": "monday_canonical_flow_metadata.parquet",
+      "rows": 529918,
+      "sha256": "2ab16b8d851e002c1b149ede2b952777cedae6e57f815441ad4c6090ea96ac70",
+      "source": "MONDAY"
+    },
+    {
+      "file": "tuesday_canonical_flow_metadata.parquet",
+      "rows": 445909,
+      "sha256": "28ca517d154a672dd9dd5a61e34e663e968b15f9d28b43a79076cf67854366c6",
+      "source": "TUESDAY"
+    },
+    {
+      "file": "wednesday_canonical_flow_metadata.parquet",
+      "rows": 692703,
+      "sha256": "898c16c2bf6eef3e757a25bad7e56c531cc1de1ecb65e538679ef34d9a400b22",
+      "source": "WEDNESDAY"
+    },
+    {
+      "file": "thursday_morning_canonical_flow_metadata.parquet",
+      "rows": 170366,
+      "sha256": "a183fb9a4f569e694ec6f296d2c396db436999bd55813fc2443597b3462e2b4f",
+      "source": "THURSDAY_MORNING"
+    },
+    {
+      "file": "thursday_afternoon_canonical_flow_metadata.parquet",
+      "rows": 288602,
+      "sha256": "1dd0b69281b8ddb6cf53c00a0391c81424b513b1f69709e7c89d6b540c3c3c56",
+      "source": "THURSDAY_AFTERNOON"
+    }
+  ],
+  "friday_access": false,
+  "pcap_access": false,
+  "stage": "20.1B3",
+  "status": "LABEL_HYGIENE_FREEZE_PACKAGE_COMPLETE"
+}

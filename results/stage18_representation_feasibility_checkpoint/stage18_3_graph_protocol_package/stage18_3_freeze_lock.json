@@ -1,0 +1,24 @@
+{
+  "feasibility_closure_sha256": "cbc28b7f510fdc30610b82ac66a86f7c1f93f032b633695aa96a53946b3fe53f",
+  "frozen_choices": {
+    "cross_snapshot_message_passing": false,
+    "graph_holdout_period": "11:00:00-12:59:59",
+    "graph_type": "directed_temporal_multigraph",
+    "node_definition": "host_ip",
+    "node_identity_embeddings": false,
+    "prediction_unit": "individual_flow_edge",
+    "snapshot_seconds": 60,
+    "source_file": "02-20-2018.csv",
+    "stage15_membership_reused": false,
+    "train_period": "01:00:00-08:59:59",
+    "validation_period": "09:00:00-10:59:59",
+    "window_length_tuning": false
+  },
+  "package_manifest_sha256": "86dc499ecbb6720322ee4f1604d7f9abe333fb161dfc01eceae28379f7c190ca",
+  "parent_commit": "d3eb755b34d1a4d77d1573b60c5c1cc4be06b232",
+  "post_lock_rule": "These representation and temporal-partition choices may not be changed in response to class distribution, validation performance, or graph model performance.",
+  "protocol_json_sha256": "15d4098a5360e18f30995d5dd52b348b4797a47bb72f028a2afe3a1606e03acf",
+  "protocol_markdown_sha256": "7d3b62995fc618752bdc7b46c1c8b8ee17b540f4f1aa408772c45e904be4577e",
+  "stage": "18.3C",
+  "status": "PROTOCOL_LOCKED"
+}

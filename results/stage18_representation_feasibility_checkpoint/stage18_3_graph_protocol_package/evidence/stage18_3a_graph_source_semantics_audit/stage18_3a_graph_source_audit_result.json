@@ -1,0 +1,72 @@
+{
+  "balanced_artifact": {
+    "direct_graph_topology_recoverable_from_balanced_artifact": false,
+    "has_dst_ip": false,
+    "has_dst_port": true,
+    "has_flow_id": false,
+    "has_protocol": true,
+    "has_src_ip": false,
+    "has_src_port": false,
+    "has_timestamp": false
+  },
+  "candidate_summary": {
+    "authentic_direct_graph_candidates": [
+      "host_communication_graph",
+      "five_tuple_communication_multigraph",
+      "timestamped_host_graph_snapshots"
+    ],
+    "derived_candidate_requiring_more_audit": [
+      "flow_node_shared_endpoint_graph"
+    ],
+    "prohibited_candidates": [
+      "feature_similarity_knn_graph",
+      "fully_connected_flow_graph",
+      "numeric_feature_node_graph"
+    ]
+  },
+  "created_at_utc": "2026-08-08T06:25:25.673499+00:00",
+  "graph_feasibility_decision": "SUPPORTED_WITH_CONSTRAINTS_PENDING_LEAKAGE_AUDIT",
+  "next_permitted_action": "Stage 18.3B \u2014 restricted-source graph topology and leakage-feasibility audit on 02-20-2018.csv using endpoint and timestamp metadata only. No labels and no holdout.",
+  "next_required_audits": [
+    "Inspect 02-20 endpoint cardinality and actual observed graph sparsity without labels.",
+    "Measure repeated SrcIP/DstIP and edge reuse across time.",
+    "Determine whether a leakage-safe chronological graph-development split can be defined.",
+    "Audit whether train/validation graph contexts would share nodes or edges under the existing research membership.",
+    "Determine whether Graph Transformer should be a separate 02-20 experiment rather than a direct replacement for the dataset-wide benchmark."
+  ],
+  "repository_head": "d3eb755b34d1a4d77d1573b60c5c1cc4be06b232",
+  "scientific_boundary": {
+    "edges_materialized": 0,
+    "graphs_constructed": 0,
+    "holdout_arrays_opened": 0,
+    "labels_read": 0,
+    "models_fit": 0,
+    "nodes_materialized": 0,
+    "raw_feature_values_read": 0,
+    "raw_rows_read": 0
+  },
+  "scientific_interpretation": {
+    "authentic_nodes_exist": true,
+    "authentic_observed_edges_exist": true,
+    "feature_node_graph_allowed": false,
+    "fully_connected_graph_allowed": false,
+    "graph_structure_is_dataset_wide": false,
+    "graph_structure_source": "02-20-2018.csv",
+    "graph_structure_source_file_count": 1,
+    "graph_training_authorized": false,
+    "knn_feature_graph_allowed": false,
+    "node_ordering_problem_like_vit": false,
+    "reason": "Graph models are permutation-compatible; renumbering hosts does not redefine graph semantics.",
+    "why_not_yet": "Shared-node, shared-edge, temporal, and train/validation leakage properties have not yet been audited."
+  },
+  "source_schema": {
+    "files_with_authentic_src_dst_host_edges": 1,
+    "files_with_complete_five_tuple": 1,
+    "files_with_timestamp": 10,
+    "files_with_timestamped_host_edges": 1,
+    "graph_rich_source": "02-20-2018.csv",
+    "raw_source_files": 10
+  },
+  "stage": "18.3A",
+  "status": "AUTHENTIC_GRAPH_STRUCTURE_FOUND_IN_RESTRICTED_SOURCE"
+}

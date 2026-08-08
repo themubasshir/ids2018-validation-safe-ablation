@@ -1,0 +1,61 @@
+{
+  "architecture_interpretation": {
+    "feature_similarity_knn_graph": "PROHIBITED",
+    "five_tuple_multigraph": "SUPPORTED_WITH_CONSTRAINTS",
+    "flow_node_shared_endpoint_graph": "NOT_NEEDED_FOR_PRIMARY_GRAPH_ROUTE",
+    "fully_connected_graph": "PROHIBITED",
+    "host_communication_graph": "SUPPORTED_WITH_CONSTRAINTS",
+    "numeric_feature_node_graph": "PROHIBITED",
+    "timestamped_host_graph_snapshots": "SUPPORTED_WITH_CONSTRAINTS"
+  },
+  "created_at_utc": "2026-08-08T06:34:02.405781+00:00",
+  "existing_stage15_membership": {
+    "direct_reuse_for_graph_training_authorized": false,
+    "projection_ambiguity_present": true,
+    "same_edge_same_time_context_present": true,
+    "shared_edge_context_present": true,
+    "shared_node_context_present": true,
+    "status": "NOT_DIRECTLY_REUSABLE_FOR_GRAPH_TRAINING"
+  },
+  "graph_feasibility_decision": "SUPPORTED_WITH_CONSTRAINTS_REQUIRES_SEPARATE_GRAPH_PROTOCOL",
+  "next_permitted_action": "Stage 18.3C \u2014 define and audit a precommitted chronological graph-development protocol for the separate 02-20 experiment. The protocol must specify snapshot boundaries, train/validation chronology, node/edge context isolation, and message-passing leakage controls before any Graph Transformer training.",
+  "repository_head": "d3eb755b34d1a4d77d1573b60c5c1cc4be06b232",
+  "scientific_boundary": {
+    "attack_categories_read": 0,
+    "graph_models_fit": 0,
+    "graphs_constructed": 0,
+    "holdout_feature_hashes_accessed": 0,
+    "holdout_indices_accessed": 0,
+    "holdout_values_materialized": 0,
+    "model_performance_used": false,
+    "raw_labels_read": 0,
+    "raw_rows_read": 7948748,
+    "raw_source": "02-20-2018.csv",
+    "train_feature_hashes_accessed": true,
+    "train_indices_accessed": true,
+    "validation_feature_hashes_accessed": true,
+    "validation_indices_accessed": true
+  },
+  "separate_0220_graph_experiment": {
+    "dataset_wide_replacement": false,
+    "requires_graph_context_isolation": true,
+    "requires_node_edge_leakage_policy": true,
+    "requires_precommitted_chronological_split": true,
+    "scientifically_supported": true,
+    "scope": "Separate endpoint-rich 02-20 graph-specific experiment",
+    "training_authorized_yet": false
+  },
+  "stage": "18.3B",
+  "status": "GRAPH_TOPOLOGY_AND_LEAKAGE_FEASIBILITY_AUDITED",
+  "topology_findings": {
+    "authentic_host_nodes_confirmed": true,
+    "complete_five_tuple_confirmed": true,
+    "graph_is_permutation_compatible": true,
+    "observed_directed_edges_confirmed": true,
+    "occupied_timestamp_seconds": 38478,
+    "timestamped_graph_structure_confirmed": true,
+    "unique_directed_edges": 706262,
+    "unique_five_tuples": 6067285,
+    "unique_hosts": 33176
+  }
+}

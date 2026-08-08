@@ -1,0 +1,9 @@
+criterion_id,criterion,type,requirement
+G1,Authentic node semantics,HARD,"Nodes must correspond to real entities such as hosts/endpoints/flows, not arbitrary numeric-feature rows."
+G2,Observed relational edges,HARD,Edges must arise from observed source relationships such as SrcIP→DstIP traffic.
+G3,Label-independent topology,HARD,"Labels, attack categories, predictions, SHAP/LIME/IG values, or performance cannot define graph edges."
+G4,Permutation-compatible semantics,HARD,Renaming/reindexing nodes must not change the underlying graph relation.
+G5,Reproducible construction,HARD,Node and edge construction must be deterministically reproducible from source fields.
+G6,Split-isolation auditable,HARD,"A future experiment must be able to prevent train/validation/test leakage through shared edges, graph context, or future observations."
+S1,Dataset-wide support,SUPPORT,Prefer relational metadata available across the complete source universe.
+S2,Temporal information available,SUPPORT,Timestamp availability allows time-local graph snapshots if needed.

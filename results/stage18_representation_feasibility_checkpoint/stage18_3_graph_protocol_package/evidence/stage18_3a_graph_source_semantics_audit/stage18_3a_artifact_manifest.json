@@ -1,0 +1,36 @@
+{
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "relative_path": "stage18_3a_graph_admissibility_criteria.csv",
+      "sha256": "804736c90bbd1ac55b4db354f3bee37fb7154e982d70dec4bc1416341f517744",
+      "size_bytes": 1059
+    },
+    {
+      "relative_path": "stage18_3a_graph_candidate_assessment.csv",
+      "sha256": "c9244dc35ed5d1d9f18c9455374e4d7d4184b681c7e598c9b1c40ceb45b4a577",
+      "size_bytes": 2968
+    },
+    {
+      "relative_path": "stage18_3a_graph_source_audit_result.json",
+      "sha256": "353574f36e1ba05538ff4e9c83e2ce541f08039133e3ffed88b26a5a339d4ca2",
+      "size_bytes": 2983
+    },
+    {
+      "relative_path": "stage18_3a_graph_source_schema.csv",
+      "sha256": "4b4ff9405e356ccb15268189d0393cf9965f291d0003a675585aa2f039822aa0",
+      "size_bytes": 1005
+    }
+  ],
+  "scientific_boundary": {
+    "edges_materialized": 0,
+    "graphs_constructed": 0,
+    "holdout_arrays_opened": 0,
+    "labels_read": 0,
+    "models_fit": 0,
+    "nodes_materialized": 0,
+    "raw_rows_read": 0
+  },
+  "stage": "18.3A",
+  "status": "GRAPH_SOURCE_SEMANTICS_AUDIT_COMPLETE"
+}

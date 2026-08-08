@@ -1,0 +1,176 @@
+{
+  "chronological_partition": {
+    "existing_stage15_membership_reused": false,
+    "graph_holdout": {
+      "duration_hours": 2,
+      "end_inclusive": "2018-02-20 12:59:59",
+      "start": "2018-02-20 11:00:00"
+    },
+    "label_stratification_used": false,
+    "partition_basis": "source time only",
+    "performance_based_boundary_selection": false,
+    "train": {
+      "duration_hours": 8,
+      "end_inclusive": "2018-02-20 08:59:59",
+      "start": "2018-02-20 01:00:00"
+    },
+    "validation": {
+      "duration_hours": 2,
+      "end_inclusive": "2018-02-20 10:59:59",
+      "start": "2018-02-20 09:00:00"
+    }
+  },
+  "created_at_utc": "2026-08-08T06:37:47.850121+00:00",
+  "cross_partition_identity_policy": {
+    "must_report": [
+      "seen-host vs unseen-host validation performance",
+      "seen-edge vs unseen-edge validation performance",
+      "seen-host vs unseen-host final holdout performance",
+      "seen-edge vs unseen-edge final holdout performance"
+    ],
+    "reason": "Hosts and communication pairs are persistent real-world entities. Their recurrence in future chronological partitions is legitimate temporal continuity provided no future features, labels, or messages are propagated backward.",
+    "same_host_may_reappear_later": true,
+    "same_host_pair_may_reappear_later": true,
+    "treated_as_automatic_leakage": false
+  },
+  "development_policy": {
+    "cross_partition_snapshot_shuffle": false,
+    "final_graph_holdout": "11:00-12:59",
+    "holdout_may_select_anything": false,
+    "random_temporal_shuffle": false,
+    "training_partition": "01:00-08:59",
+    "validation_may_select_hyperparameters": true,
+    "validation_may_select_threshold": true,
+    "validation_partition": "09:00-10:59"
+  },
+  "duplicate_flow_policy": {
+    "feature_fingerprint_deduplication": false,
+    "parallel_host_edges": "PRESERVE",
+    "raw_observed_flow_events": "PRESERVE",
+    "reason": "Repeated raw flows are authentic graph events. The Stage-15 duplicate-safe fingerprint split is not reused for this separate chronological graph experiment."
+  },
+  "edge_feature_protocol": {
+    "attack_category_as_feature": false,
+    "dst_ip_as_numeric_feature": false,
+    "feature_source": "raw 02-20 flow record",
+    "flow_id_as_predictive_feature": false,
+    "holdout_preprocessing_fit": false,
+    "performance_based_feature_selection": false,
+    "preprocessing": "Fit numeric preprocessing/scaling on chronological training partition only.",
+    "primary_predictor_schema": "Frozen Stage-15 retained 70 numeric predictors.",
+    "src_ip_as_numeric_feature": false,
+    "target_label_as_feature": false,
+    "validation_preprocessing_fit": false,
+    "xai_based_feature_selection": false
+  },
+  "experiment_scope": {
+    "dataset_wide_replacement": false,
+    "experiment_type": "separate_graph_specific_experiment",
+    "reason": "Only 02-20 retains authenticated SrcIP, DstIP, SrcPort, DstPort, Protocol, Flow ID, and Timestamp metadata.",
+    "source_file": "02-20-2018.csv"
+  },
+  "graph_holdout_policy": {
+    "authorized_openings": 1,
+    "opening_condition": "Only after graph representation, architecture, training procedure, threshold policy, and validation-selected configuration are frozen.",
+    "status": "CLOSED_UNTIL_FINAL_GRAPH_EVALUATION",
+    "used_for_early_stopping": false,
+    "used_for_hyperparameter_selection": false,
+    "used_for_representation_design": false,
+    "used_for_threshold_selection": false
+  },
+  "graph_representation": {
+    "edge_definition": "Each observed raw flow is one directed SrcIP -> DstIP edge event.",
+    "edge_direction": "PRESERVED",
+    "graph_type": "directed temporal multigraph snapshots",
+    "node_definition": "Unique network hosts identified by authenticated Src IP / Dst IP.",
+    "node_ordering": "Arbitrary implementation index only; must not carry semantic meaning.",
+    "parallel_edges": "PRESERVED",
+    "permutation_requirement": "model must be node-permutation compatible",
+    "prohibited_graphs": [
+      "feature_similarity_knn_graph",
+      "fully_connected_flow_graph",
+      "numeric_feature_node_graph",
+      "label_defined_graph",
+      "prediction_defined_graph"
+    ],
+    "self_loops": "Preserve if authentically observed; Stage18.3B observed zero."
+  },
+  "message_passing_policy": {
+    "cross_snapshot_message_passing": false,
+    "cross_split_message_passing": false,
+    "future_to_past_message_passing": false,
+    "global_full_day_degree_statistics": false,
+    "global_full_day_graph_construction": false,
+    "holdout_to_training_messages": false,
+    "holdout_to_validation_messages": false,
+    "primary_scope": "within_current_60_second_snapshot_only",
+    "reason": "Each snapshot must be an independent graph context so future or cross-partition traffic cannot influence earlier representations.",
+    "validation_to_training_messages": false
+  },
+  "model_family_constraints": {
+    "edge_attributes_required": true,
+    "feature_similarity_edges_prohibited": true,
+    "graph_topology_must_remain_observed": true,
+    "node_id_embedding_prohibited": true,
+    "parallel_edge_support_required": true,
+    "required": "Permutation-compatible Graph Transformer or graph-attention/message-passing model supporting directed edges and edge attributes."
+  },
+  "next_permitted_action": "Stage 18.3D may materialize the precommitted 60-second chronological graph partitions and audit protocol conformance. Representation choices and temporal boundaries may not change in response to the resulting class distribution or graph statistics.",
+  "node_feature_protocol": {
+    "allowed_primary_node_features": [
+      "constant bias feature",
+      "snapshot-local in-degree",
+      "snapshot-local out-degree",
+      "snapshot-local incident-flow count",
+      "snapshot-local unique-peer count"
+    ],
+    "full_day_degree_features_allowed": false,
+    "future_snapshot_degree_features_allowed": false,
+    "ip_address_numeric_encoding": false,
+    "learned_node_identity_embedding": false,
+    "node_features_label_independent": true,
+    "reason": "Prevent memorization of arbitrary IP identity and preserve permutation-compatible semantics."
+  },
+  "parent_commit": "d3eb755b34d1a4d77d1573b60c5c1cc4be06b232",
+  "prediction_task": {
+    "labels_accessed_during_protocol_lock": false,
+    "target_source": "existing binary flow label",
+    "target_used_for_graph_topology": false,
+    "task": "binary intrusion edge classification",
+    "unit": "individual_observed_flow_edge"
+  },
+  "required_reporting": [
+    "number of snapshots per partition",
+    "flow-edge count per partition",
+    "unique host count per partition",
+    "unique directed host-pair count per partition",
+    "class distribution per partition after protocol lock",
+    "seen/unseen host proportions",
+    "seen/unseen edge proportions",
+    "snapshot size distribution",
+    "isolated-node count if any",
+    "parallel-edge distribution",
+    "validation metrics",
+    "single final graph-holdout metrics"
+  ],
+  "scientific_boundary": {
+    "class_distribution_inspected": false,
+    "graph_holdout_opened": 0,
+    "graphs_constructed": 0,
+    "labels_read": 0,
+    "models_fit": 0,
+    "snapshots_materialized": 0
+  },
+  "snapshot_protocol": {
+    "alignment": "recorded clock-minute boundaries",
+    "primary_snapshot_duration_seconds": 60,
+    "raw_csv_row_order_used": false,
+    "snapshot_type": "non_overlapping_wall_clock_bins",
+    "timestamp_timezone_assumption": "NONE; use timestamps exactly as recorded by the source dataset.",
+    "why_60_seconds": "A fixed one-minute operational snapshot is precommitted before labels/performance and does not require inventing within-second ordering.",
+    "window_length_tuning_allowed": false,
+    "within_same_second_order": "UNDEFINED_AND_NOT_INVENTED"
+  },
+  "stage": "18.3C",
+  "status": "PRECOMMITTED_GRAPH_DEVELOPMENT_PROTOCOL"
+}

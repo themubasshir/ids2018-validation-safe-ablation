@@ -1,0 +1,41 @@
+{
+  "authorized_membership": {
+    "hashes_with_multiple_raw_occurrences": 253,
+    "hashes_with_multiple_temporal_bins": 253,
+    "matched_rows_invalid_graph_metadata": 0,
+    "train_raw_match_rows": 7774,
+    "train_valid_graph_rows": 7774,
+    "unique_train_hashes_recovered": 395,
+    "unique_validation_hashes_recovered": 81,
+    "validation_raw_match_rows": 416,
+    "validation_valid_graph_rows": 416
+  },
+  "existing_stage15_graph_status": "NOT_DIRECTLY_REUSABLE_FOR_GRAPH_TRAINING",
+  "interpretation": {
+    "existing_stage15_membership_can_be_assumed_graph_safe": false,
+    "reason": "Existing feature-pattern membership may map to repeated raw graph occurrences and/or train and validation may share graph context. A graph-specific split protocol must be defined independently before training."
+  },
+  "same_time_context": {
+    "shared_directed_edge_timestamp_bins": 4,
+    "shared_node_timestamp_bins": 17
+  },
+  "shared_edges": {
+    "shared_directed_edges": 97,
+    "train_directed_edges": 2852,
+    "validation_directed_edges": 401,
+    "validation_shared_edge_rate": 0.24189526184538654
+  },
+  "shared_five_tuples": {
+    "shared_five_tuples": 0,
+    "train_five_tuples": 7772,
+    "validation_five_tuples": 416,
+    "validation_shared_five_tuple_rate": 0.0
+  },
+  "shared_nodes": {
+    "shared_nodes": 365,
+    "train_nodes": 1031,
+    "validation_nodes": 433,
+    "validation_shared_node_rate": 0.8429561200923787
+  },
+  "stage": "18.3B-membership-leakage"
+}

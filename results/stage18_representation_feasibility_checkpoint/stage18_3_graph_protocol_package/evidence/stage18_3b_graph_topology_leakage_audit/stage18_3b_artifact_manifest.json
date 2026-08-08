@@ -1,0 +1,38 @@
+{
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "relative_path": "stage18_3b_authorized_hash_0220_mapping.csv",
+      "sha256": "4d21f5a905d71e370c368a3db672f131b6f1d6aa8247f2ca3b7e75d1987f12f1",
+      "size_bytes": 38387
+    },
+    {
+      "relative_path": "stage18_3b_graph_feasibility_result.json",
+      "sha256": "2ecb8cfb335f781f7d2513d83d549ef556d6053f7e8425bf6d9e953dcda51b06",
+      "size_bytes": 2721
+    },
+    {
+      "relative_path": "stage18_3b_graph_membership_leakage_summary.json",
+      "sha256": "680cecefbe4ee5d35eaafd0e3331df6c3ed2b1c704f37a8aed99b85c5522b27e",
+      "size_bytes": 1480
+    },
+    {
+      "relative_path": "stage18_3b_graph_topology_summary.json",
+      "sha256": "4ae3d1b3d717aaaa18d90e7dda681eec2e87100727923d5958ccac81cda396d5",
+      "size_bytes": 1230
+    },
+    {
+      "relative_path": "stage18_3b_hourly_graph_activity.csv",
+      "sha256": "100f8fa075ff78f7ca9dc17876aafc6877946d2f514c3383396684f0fda16a68",
+      "size_bytes": 313
+    }
+  ],
+  "scientific_boundary": {
+    "graphs_constructed": 0,
+    "holdout_members_accessed": 0,
+    "labels_read": 0,
+    "models_fit": 0
+  },
+  "stage": "18.3B",
+  "status": "GRAPH_TOPOLOGY_LEAKAGE_EVIDENCE_COMPLETE"
+}

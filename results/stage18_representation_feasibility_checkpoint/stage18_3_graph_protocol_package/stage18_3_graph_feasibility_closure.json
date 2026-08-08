@@ -1,0 +1,19 @@
+{
+  "authentic_topology": {
+    "edge_reuse_rate": 0.91114801979,
+    "edges_persistent_across_multiple_seconds": 467601,
+    "unique_directed_host_edges": 706262,
+    "unique_five_tuples": 6067285,
+    "unique_hosts": 33176
+  },
+  "candidate": "Graph / Graph Transformer",
+  "dataset_wide_replacement": false,
+  "existing_stage15_split": "NOT_DIRECTLY_REUSABLE_FOR_GRAPH_TRAINING",
+  "final_feasibility_decision": "SUPPORTED_WITH_CONSTRAINTS",
+  "future_experiment": "Separate chronological 60-second snapshot Graph Transformer edge-classification experiment.",
+  "next_stage": "18.3D protocol-conformance materialization audit",
+  "source_scope": "02-20-2018.csv only",
+  "stage": "18.3",
+  "status": "REPRESENTATION_FEASIBILITY_CLOSED",
+  "training_authorized_by_feasibility_closure": false
+}

@@ -1,0 +1,11 @@
+source_file,column_count,has_timestamp,has_flow_id,has_src_ip,has_dst_ip,has_src_port,has_dst_port,has_protocol,has_host_edge,has_directed_five_tuple,has_timestamped_host_edge,has_timestamped_five_tuple
+02-14-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+02-15-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+02-16-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+02-20-2018.csv,84,True,True,True,True,True,True,True,True,True,True,True
+02-21-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+02-22-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+02-23-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+02-28-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+03-01-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False
+03-02-2018.csv,80,True,False,False,False,False,True,True,False,False,False,False

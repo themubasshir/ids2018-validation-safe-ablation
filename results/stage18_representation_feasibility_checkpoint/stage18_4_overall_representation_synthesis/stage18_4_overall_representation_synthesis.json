@@ -1,0 +1,89 @@
+{
+  "created_at_utc": "2026-08-08T09:12:57.700430+00:00",
+  "frozen_evidence": {
+    "stage18_1_temporal_closure_sha256": "fda8ed17c8565622ed91b734fd5a0a2ddbefa67e101f96a6f6187cac11dc99fa",
+    "stage18_2_vit_closure_sha256": "dc1e7d04f1b50dda9817b94874c2c0bf41290634ce68906df1a44e91afc12b4e",
+    "stage18_3_graph_synthesis_sha256": "b51abe58015398c16a2de41fb18523ba3503abfbba08811d4fe9fb79b3275550"
+  },
+  "graph_summary": {
+    "causal_graph_context_superiority": "NOT_SUPPORTED",
+    "deployment_ready_thresholding": "NOT_SUPPORTED",
+    "edgeonly_final_holdout_f1": 0.6559877841940602,
+    "edgeonly_final_holdout_pr_auc": 0.42976973171668154,
+    "final_holdout_attacks": 151773,
+    "final_holdout_f1_at_frozen_threshold": 0.0,
+    "final_holdout_pr_auc": 0.9735953918848133,
+    "final_holdout_recall_at_frozen_threshold": 0.0,
+    "final_holdout_roc_auc": 0.9986766395630168,
+    "final_holdout_true_positives": 0,
+    "future_holdout_openings": 0,
+    "graph_holdout_status": "PERMANENTLY_CLOSED",
+    "ranking_utility": "STRONGLY_SUPPORTED",
+    "scope": "Endpoint-rich 2018-02-20 capture only; not a dataset-wide replacement.",
+    "unseen_topology_attack_generalization": "NOT_ESTIMABLE",
+    "validation_pr_auc": 0.9838755704548996
+  },
+  "next_authorized_action": "Proceed to Stage 18.5 manuscript integration using only frozen Stage 18.4 synthesis evidence. No representation decision or Stage 18.3 performance result may be changed.",
+  "overall_findings": [
+    "Representation validity must be established from source semantics before model performance is considered.",
+    "The same IDS2018 corpus does not justify every modern architecture merely because its tabular predictors can be numerically rearranged.",
+    "Authentic temporal information exists, but the frozen Stage-15 random membership cannot be reused for temporal-window modeling because train and validation observations are strongly chronologically interleaved.",
+    "Vision Transformer training was correctly rejected because none of the audited candidate representations provided defensible native two-dimensional locality.",
+    "Authentic endpoint relationships in the 02-20 capture support graph modeling without inventing graph edges.",
+    "The source-restricted Graph Transformer demonstrated exceptionally strong chronological ranking stability, but its frozen probability operating point failed to provide usable final attack detection.",
+    "A high PR-AUC or ROC-AUC must not be conflated with a deployment-ready classification threshold.",
+    "Rejected architectures and constrained representations are valid scientific outcomes when representation assumptions cannot be justified."
+  ],
+  "parent_commit": "6cc2535d45702b243d27a31b22290eb68c58267f",
+  "prohibited_claims": [
+    "The existing Stage-15 split is safe for MTemporal sequence training.",
+    "Temporal/MTemporal predictive performance was established in Stage 18.",
+    "ViT was trained and performed poorly.",
+    "Vision Transformers are generally unsuitable for intrusion detection.",
+    "Artificial feature grids are valid images because they can be processed by ViT.",
+    "The Graph Transformer is deployment-ready.",
+    "Graph context causally caused the observed PR-AUC difference.",
+    "The graph experiment demonstrates attack generalization to unseen topology.",
+    "The source-restricted graph experiment replaces the full IDS2018 tabular benchmark.",
+    "Ranking superiority implies thresholded operational superiority."
+  ],
+  "publication_safe_limitation": "The temporal feasibility result does not constitute a temporal-model benchmark because Stage 18.1 intentionally performed no model fitting. The ViT result is likewise a representation-feasibility rejection rather than evidence that Vision Transformers generally perform poorly for intrusion detection. The graph experiment is restricted to the 20 February source and is not directly interchangeable with the full ten-file tabular benchmark. In addition, positive examples on unseen hosts or unseen directed edges were absent from the graph validation and final holdout, preventing estimation of attack generalization to unseen topology.",
+  "publication_safe_methods_conclusion": "Candidate representation families were evaluated before performance-based experimentation. A representation was authorized only when its temporal, spatial or relational structure could be traced to authentic source semantics. Artificial tabular-to-image reshaping, invented endpoint ordering, feature-similarity graphs and leakage-prone temporal reuse were prohibited. This representation-first procedure allowed architectures to be accepted, constrained or rejected without using predictive performance to justify the representation itself.",
+  "publication_safe_primary_conclusion": "The representation-feasibility study showed that modern IDS architectures must be matched to structure genuinely present in the source data rather than imposed through arbitrary transformation. Temporal modeling was supported with constraints because authentic second-resolution timestamps exist, although a new chronological leakage-safe development split is required. Vision Transformer training was not supported because no available artifact provided defensible two-dimensional patch locality. Graph modeling was supported with constraints for the endpoint-rich 20 February capture, where a frozen Graph Transformer retained very strong final-holdout ranking (PR-AUC=0.9736, ROC-AUC=0.9987) but failed at its precommitted threshold, producing zero true-positive holdout detections. These results demonstrate why representation validity, ranking discrimination and operational threshold performance should be evaluated as distinct scientific questions.",
+  "representation_decisions": {
+    "graph_transformer": "SUPPORTED_WITH_CONSTRAINTS",
+    "temporal_mtemporal": "SUPPORTED_WITH_CONSTRAINTS",
+    "vision_transformer": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS"
+  },
+  "scientific_boundary": {
+    "graph_holdout_permanently_closed": true,
+    "holdout_access": false,
+    "model_inference": false,
+    "model_training": false,
+    "raw_dataset_access": false,
+    "recalibration": false,
+    "representation_decisions_frozen": true,
+    "tensor_access": false,
+    "threshold_search": false
+  },
+  "stage": "18.4",
+  "status": "OVERALL_REPRESENTATION_FEASIBILITY_SYNTHESIS_COMPLETE",
+  "temporal_summary": {
+    "authentic_timestamp_metadata": true,
+    "existing_stage15_split_safe_for_temporal_windows": false,
+    "performance_claim_permitted": false,
+    "stage15_mixed_temporal_bin_rate": 0.15552008596984734,
+    "stage18_temporal_models_trained": 0,
+    "timestamp_resolution": "1 second",
+    "unique_temporal_provenance_rate": 0.8536783000296072,
+    "validation_bins_within_30s_of_train_rate": 0.9976558337773042
+  },
+  "vit_summary": {
+    "arbitrary_tabular_reshape_permitted": false,
+    "candidate_representations_audited": 7,
+    "candidates_passing_all_hard_criteria": 0,
+    "native_image_structure_present": false,
+    "performance_claim_permitted": false,
+    "vit_models_trained": 0
+  }
+}

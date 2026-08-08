@@ -1,0 +1,42 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "relative_path": "STAGE18_4_OVERALL_REPRESENTATION_SYNTHESIS.md",
+      "sha256": "07492d4ed00f887b3ac7f457cbeee58c923f01f3effdd8386f6f8ef2cede203d",
+      "size_bytes": 7805
+    },
+    {
+      "relative_path": "stage18_4_overall_representation_synthesis.json",
+      "sha256": "df440cdaa2d88c79465fb225bda9bed9f0a5cab4d680e01b90a8ca48ccf1af17",
+      "size_bytes": 7122
+    },
+    {
+      "relative_path": "stage18_4_representation_decision_matrix.csv",
+      "sha256": "e922e6ca980b9672468cfbf35bca7f64b314855de8faf25fd5395b490642311e",
+      "size_bytes": 1229
+    }
+  ],
+  "final_decisions": {
+    "graph_transformer": "SUPPORTED_WITH_CONSTRAINTS",
+    "temporal_mtemporal": "SUPPORTED_WITH_CONSTRAINTS",
+    "vision_transformer": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS"
+  },
+  "frozen_input_identities": {
+    "graph_synthesis_sha256": "b51abe58015398c16a2de41fb18523ba3503abfbba08811d4fe9fb79b3275550",
+    "temporal_closure_sha256": "fda8ed17c8565622ed91b734fd5a0a2ddbefa67e101f96a6f6187cac11dc99fa",
+    "vit_closure_sha256": "dc1e7d04f1b50dda9817b94874c2c0bf41290634ce68906df1a44e91afc12b4e"
+  },
+  "parent_commit": "6cc2535d45702b243d27a31b22290eb68c58267f",
+  "scientific_boundary": {
+    "calibration": false,
+    "dataset_read": false,
+    "holdout_read": false,
+    "inference": false,
+    "tensor_read": false,
+    "threshold_search": false,
+    "training": false
+  },
+  "stage": "18.4",
+  "status": "OVERALL_REPRESENTATION_SYNTHESIS_PACKAGE_COMPLETE"
+}

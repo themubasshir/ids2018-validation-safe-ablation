@@ -1,0 +1,42 @@
+{
+  "development_status": "FROZEN",
+  "holdout": {
+    "maximum_authorized": 1,
+    "model_changes_after_opening": "PROHIBITED",
+    "openings": 0,
+    "preprocessing_changes_after_opening": "PROHIBITED",
+    "status": "CLOSED",
+    "threshold_changes_after_opening": "PROHIBITED"
+  },
+  "mtemporal_ids": {
+    "ensemble_probability_sha256": "ffce1c6e867d8f71c70a3a70791b19cb3a03ca31a19220b7fcb5f52492b73070",
+    "selected_threshold": 0.01,
+    "validation_f1": 0.30242395756395624,
+    "validation_mcc": 0.15252296093249013,
+    "validation_precision": 0.29129478722028196,
+    "validation_recall": 0.3144373080145211
+  },
+  "next_authorized_step": "STAGE_19_6_ONE_TIME_CHRONOLOGICAL_HOLDOUT_OPEN_FOR_BOTH_FROZEN_TEMPORAL_FAMILIES",
+  "parent_commit": "008bdc79b835894fa65800395fa99968b1a0008d",
+  "single_scale_temporal": {
+    "ensemble_probability_sha256": "5363abae3579022513bc965706ec2a9099f7ed662b0ac9955f56ec15f33d51c5",
+    "selected_threshold": 0.01,
+    "validation_f1": 0.3370329478761113,
+    "validation_mcc": 0.17611232512980776,
+    "validation_precision": 0.2886433761321788,
+    "validation_recall": 0.4049148282602625
+  },
+  "stage": "19.5",
+  "status": "STAGE19_DEVELOPMENT_OPERATING_POINTS_FULLY_FROZEN_BEFORE_HOLDOUT",
+  "threshold_selection": {
+    "calibration": false,
+    "grid": "0.01_TO_0.99_STEP_0.01",
+    "objective": "MAX_F1",
+    "partition": "VALIDATION_ONLY",
+    "performed": true,
+    "posthoc_extension_above_0_99": false,
+    "posthoc_extension_below_0_01": false,
+    "probability_modification": false,
+    "tie_break": "HIGHER_RECALL_THEN_LOWER_THRESHOLD"
+  }
+}

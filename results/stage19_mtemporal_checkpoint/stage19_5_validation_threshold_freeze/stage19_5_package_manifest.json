@@ -1,0 +1,37 @@
+{
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "relative_path": "results/stage19_5_validation_threshold_grid.csv",
+      "sha256": "0b2b419e315eb5dca25f6e791a795e0f76e615d408d98f6a84d2b91dc23e6405",
+      "size_bytes": 46998
+    },
+    {
+      "relative_path": "results/stage19_5_frozen_operating_points.csv",
+      "sha256": "4ef8c3e65362627772f058b818030885f2a6278aa3e261a25759f2f8251468c3",
+      "size_bytes": 1151
+    },
+    {
+      "relative_path": "results/stage19_5_frozen_operating_points.json",
+      "sha256": "6d9a612e762400c419a8eeb874dc576ec831904e6f2b57315f7bf86d2415daa4",
+      "size_bytes": 3538
+    },
+    {
+      "relative_path": "results/stage19_5_operating_point_comparison.json",
+      "sha256": "dadc3e7404677d62f6cf3b9b956f325535a1fed7e0a3e6d19c2c7fae3b144bc2",
+      "size_bytes": 1039
+    },
+    {
+      "relative_path": "stage19_5_development_freeze_record.json",
+      "sha256": "56eeba4991fd85b9f430bd24dc4de7fd051162fa2cdc40e02c0cef237f9d6feb",
+      "size_bytes": 1604
+    }
+  ],
+  "calibration_fitted": false,
+  "holdout_access": false,
+  "models_trained": 0,
+  "probabilities_modified": false,
+  "stage": "19.5",
+  "status": "VALIDATION_THRESHOLD_SELECTION_PACKAGE_COMPLETE",
+  "threshold_selection": true
+}

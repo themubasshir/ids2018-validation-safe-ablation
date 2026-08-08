@@ -1,0 +1,36 @@
+{
+  "causal_superiority_claim": false,
+  "comparison_type": "EACH_FAMILY_AT_ITS_OWN_PREAUTHORIZED_MAX_F1_VALIDATION_THRESHOLD",
+  "holdout_access": false,
+  "mtemporal_ids": {
+    "f1": 0.30242395756395624,
+    "f2": 0.3095192281261167,
+    "fnr": 0.6855626919854789,
+    "fpr": 0.15727079625696078,
+    "mcc": 0.15252296093249013,
+    "precision": 0.29129478722028196,
+    "recall": 0.3144373080145211,
+    "threshold": 0.01
+  },
+  "mtemporal_minus_single_scale": {
+    "f1": -0.034608990312155086,
+    "f2": -0.06520618859438981,
+    "fnr": 0.0904775202457414,
+    "fpr": -0.04787875308571102,
+    "mcc": -0.023589364197317636,
+    "precision": 0.002651411088103184,
+    "recall": -0.0904775202457414
+  },
+  "scope": "VALIDATION_ONLY",
+  "single_scale_temporal": {
+    "f1": 0.3370329478761113,
+    "f2": 0.3747254167205065,
+    "fnr": 0.5950851717397375,
+    "fpr": 0.2051495493426718,
+    "mcc": 0.17611232512980776,
+    "precision": 0.2886433761321788,
+    "recall": 0.4049148282602625,
+    "threshold": 0.01
+  },
+  "stage": "19.5"
+}

@@ -1,0 +1,68 @@
+{
+  "bound_packets": 50000,
+  "decision": "SOURCE_FAITHFUL_BASELINE_FROZEN_AT_635_OF_675_WITH_37_TCP_LENGTH_RESIDUALS_2_DURATION_EXPORT_INCONSISTENCIES_AND_1_PROTOCOL0_ANCHOR_INCONSISTENCY",
+  "duration_cases": {
+    "1112": {
+      "first_short_flow_duration_us": 262,
+      "first_short_flow_packet_indices": [
+        38278,
+        38279
+      ],
+      "later_fin_first_duration_us": 26,
+      "later_fin_first_packet_indices": [
+        38289,
+        38290
+      ],
+      "published_label_duration_us": 26
+    },
+    "1113": {
+      "first_short_flow_duration_us": 224,
+      "first_short_flow_packet_indices": [
+        38276,
+        38277
+      ],
+      "later_fin_first_duration_us": 58,
+      "later_fin_first_packet_indices": [
+        38287,
+        38288
+      ],
+      "published_label_duration_us": 58
+    }
+  },
+  "duration_label_substitution": false,
+  "duration_rule_changed": false,
+  "formula_fitted": false,
+  "friday_openings": 0,
+  "friday_reads": 0,
+  "friday_requests": 0,
+  "friday_status": "CLOSED",
+  "full_monday": false,
+  "historical_flowgenerator_interpretation": {
+    "duration_is_last_seen_minus_start": true,
+    "fin_as_first_packet_creates_flow_without_immediate_close": true,
+    "fin_closes_only_when_flow_already_exists": true,
+    "timeout_replaces_existing_flow_with_current_packet": true
+  },
+  "images_generated": 0,
+  "models_trained": 0,
+  "nearest_neighbor": false,
+  "parent_commit": "bbf3f9ffe4d49ea32a29342a987fa3de254a7a49",
+  "payload_rule_changed": false,
+  "payload_rule_evaluated": false,
+  "prior_c9_c10_status": "PRESERVED_AS_HISTORICAL_CHECKPOINTS_BUT_637_EXACTNESS_NOT_USED_AS_SOURCE_FAITHFUL_BASELINE_AFTER_D2_D4",
+  "source_faithful_baseline": {
+    "duration_export_inconsistencies": 2,
+    "exact_rate": 0.9407407407407408,
+    "length_only_tcp_residuals": 37,
+    "membership_exact": 635,
+    "multiset_exact": 635,
+    "population": 675,
+    "protocol0_anchor_inconsistencies": 1
+  },
+  "stage": "20.1C15-R-D5",
+  "thursday": false,
+  "timestamp_tolerance": false,
+  "tuesday": false,
+  "type": "SOURCE_FAITHFUL_BASELINE_ERRATUM_BEFORE_TCP_RESIDUAL_VALIDATION",
+  "wednesday": false
+}

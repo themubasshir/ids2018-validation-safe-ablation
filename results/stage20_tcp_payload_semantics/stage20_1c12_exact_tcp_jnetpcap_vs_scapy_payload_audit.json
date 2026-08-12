@@ -1,0 +1,74 @@
+{
+  "alternative_payload_formula_adopted": false,
+  "alternative_payload_formula_tested": false,
+  "decision": "TCP_PAYLOAD_LENGTH_SEMANTICS_DIFFER_JNETPCAP_SCAPY_WITHIN_BOUND",
+  "development_bound_packets": 50000,
+  "different_tcp_packet_characteristics": {
+    "both_nonzero": 626,
+    "count": 8551,
+    "jnet_payload_zero": 7925,
+    "scapy_payload_zero": 0
+  },
+  "friday_openings": 0,
+  "friday_reads": 0,
+  "friday_requests": 0,
+  "friday_status": "CLOSED",
+  "full_monday": false,
+  "icmp_included": false,
+  "images_generated": 0,
+  "label_guided_formula_search": false,
+  "label_values_used": false,
+  "labels_read": false,
+  "lifecycle_changed": false,
+  "models_trained": 0,
+  "nearest_neighbor": false,
+  "payload_rule_changed": false,
+  "prior_jnet_only_rows_included": false,
+  "repository_head": "4c991338ccdae8669d3a4b0461c4406fbc6bf3d3",
+  "s4_changed": false,
+  "shared_identity_exactness": {
+    "dport": 45952,
+    "dst": 45952,
+    "protocol": 45952,
+    "sport": 45952,
+    "src": 45952,
+    "timestamp_us": 45952
+  },
+  "shared_transport_packet_indices": 45952,
+  "stage": "20.1C12",
+  "tcp_header_comparison": {
+    "delta_jnet_minus_scapy": {
+      "0": 31618
+    },
+    "different": 0,
+    "exact": 31618
+  },
+  "tcp_payload_comparison": {
+    "delta_jnet_minus_scapy": {
+      "-1": 9,
+      "-2": 31,
+      "-3": 1,
+      "-5": 344,
+      "-6": 7899,
+      "0": 23067,
+      "122": 5,
+      "178": 7,
+      "185": 13,
+      "28": 42,
+      "6": 44,
+      "7": 72,
+      "8": 84
+    },
+    "different": 8551,
+    "exact": 23067,
+    "exact_rate": 0.7295527863875008
+  },
+  "tcp_population": 31618,
+  "thursday": false,
+  "timeout_changed": false,
+  "timestamp_tolerance": false,
+  "tuesday": false,
+  "type": "EXACT_TCP_ONLY_JNETPCAP_VS_SCAPY_PAYLOAD_SEMANTICS_AUDIT",
+  "udp_included": false,
+  "wednesday": false
+}

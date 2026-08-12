@@ -1,0 +1,143 @@
+{
+  "corrected_result": {
+    "absent": 357,
+    "classification": {
+      "ANCHOR_ABSENT": 1,
+      "FULL_S4_EXACT_CANDIDATE_PRESENT": 318,
+      "LENGTH_ONLY_RESIDUAL": 354,
+      "LIFECYCLE_ABSENT": 2
+    },
+    "membership_exact": 318,
+    "membership_improvement": -317,
+    "membership_rate": 0.4711111111111111,
+    "multiset_exact": 318,
+    "multiset_improvement": -317
+  },
+  "correction_scope": {
+    "allowed_s4_positions": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "changed_flow_count": 379,
+    "changed_position_counts": {
+      "10": 204,
+      "11": 151,
+      "12": 135,
+      "13": 46,
+      "14": 64,
+      "9": 352
+    },
+    "non_length_field_changes": 0,
+    "non_tcp_changed_flows": 0
+  },
+  "decision": "PRE_FROZEN_TCP_PAYLOAD_SEMANTICS_INTRODUCE_EXACT_S4_REGRESSIONS",
+  "duration_values_substituted": false,
+  "flags_changed": false,
+  "formula_fitted": false,
+  "formula_modified_after_result": false,
+  "friday_openings": 0,
+  "friday_reads": 0,
+  "friday_requests": 0,
+  "friday_status": "CLOSED",
+  "frozen_37_length_residuals": {
+    "count": 37,
+    "remaining": 14,
+    "remaining_indices": [
+      14,
+      25,
+      35,
+      36,
+      52,
+      123,
+      307,
+      309,
+      324,
+      327,
+      333,
+      334,
+      336,
+      337
+    ],
+    "remaining_termination_distribution": {
+      "FIN": 14
+    },
+    "resolved": 23,
+    "resolved_indices": [
+      40,
+      43,
+      45,
+      50,
+      54,
+      57,
+      59,
+      63,
+      66,
+      68,
+      71,
+      119,
+      124,
+      147,
+      148,
+      197,
+      198,
+      277,
+      279,
+      281,
+      445,
+      448,
+      454
+    ],
+    "termination_distribution": {
+      "FIN": 33,
+      "FLOW_TIMEOUT": 4
+    }
+  },
+  "frozen_tcp_payload_rule": "IPv4.total_length - IPv4.header_length - TCP.header_length",
+  "full_monday": false,
+  "git_changed": false,
+  "images_generated": 0,
+  "independent_non_length_inconsistencies": {
+    "duration_export": 2,
+    "duration_export_repaired": 0,
+    "protocol0_anchor": 1,
+    "protocol0_anchor_repaired": 0
+  },
+  "label_file_reread": false,
+  "labels_used_as_post_freeze_validation_reference": true,
+  "labels_used_for_payload_rule_derivation": false,
+  "lifecycle_changed": false,
+  "models_trained": 0,
+  "nearest_neighbor": false,
+  "payload_rule_frozen_before_validation": true,
+  "pcap_reread": false,
+  "repository_head": "692dbf35a61724f0d2d4f8eede3e6b50dcaaa32a",
+  "source_faithful_baseline": {
+    "classification": {
+      "ANCHOR_ABSENT": 1,
+      "FULL_S4_EXACT_CANDIDATE_PRESENT": 635,
+      "LENGTH_ONLY_RESIDUAL": 37,
+      "LIFECYCLE_ABSENT": 2
+    },
+    "membership_exact": 635,
+    "multiset_exact": 635,
+    "population": 675
+  },
+  "source_faithful_baseline_frozen_before_validation": true,
+  "stage": "20.1C15-R-V1",
+  "thursday": false,
+  "timeout_changed": false,
+  "timestamp_tolerance": false,
+  "transition_matrix": {
+    "absent_to_absent": 17,
+    "absent_to_exact": 23,
+    "exact_to_absent": 340,
+    "exact_to_exact": 295
+  },
+  "tuesday": false,
+  "type": "PRE_FROZEN_TCP_PAYLOAD_S4_RESIDUAL_VALIDATION",
+  "wednesday": false
+}

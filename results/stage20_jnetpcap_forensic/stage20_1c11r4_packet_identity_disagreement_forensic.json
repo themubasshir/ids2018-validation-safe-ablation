@@ -1,0 +1,58 @@
+{
+  "classification": "DECODER_ROW_PRESENCE_DISAGREEMENT",
+  "component_difference_counts": {
+    "dport": 0,
+    "dst": 0,
+    "protocol": 0,
+    "sport": 0,
+    "src": 0
+  },
+  "decoder_substitution": false,
+  "friday_openings": 0,
+  "friday_reads": 0,
+  "friday_requests": 0,
+  "friday_status": "CLOSED",
+  "full_monday": false,
+  "images_generated": 0,
+  "labels_read": false,
+  "lifecycle_changed": false,
+  "mismatch_patterns": [],
+  "models_trained": 0,
+  "nearest_neighbor_used": false,
+  "payload_columns_inspected": false,
+  "payload_comparison_executed": false,
+  "payload_rule_changed": false,
+  "pcap_reread": false,
+  "previous_compound_identity": {
+    "intersection": 45952,
+    "jnet_only": 29,
+    "scapy_only": 0
+  },
+  "raw_packet_index_alignment": {
+    "intersection": 45952,
+    "jnet_indices": 45981,
+    "jnet_only": 29,
+    "scapy_indices": 45952,
+    "scapy_only": 0
+  },
+  "repository_head": "8b34b13b39738e7ae16626a65b2de586af088c46",
+  "s4_changed": false,
+  "shared_index_all_identity_exact": 45952,
+  "shared_index_component_exactness": {
+    "dport": 45952,
+    "dst": 45952,
+    "protocol": 45952,
+    "sport": 45952,
+    "src": 45952,
+    "timestamp_us": 45952
+  },
+  "shared_index_identity_different": 0,
+  "stage": "20.1C11R4",
+  "thursday": false,
+  "timeout_changed": false,
+  "timestamp_delta_jnet_minus_scapy_us": {},
+  "timestamp_tolerance_used": false,
+  "tuesday": false,
+  "type": "JNETPCAP_SCAPY_PACKET_IDENTITY_DISAGREEMENT_FORENSIC",
+  "wednesday": false
+}

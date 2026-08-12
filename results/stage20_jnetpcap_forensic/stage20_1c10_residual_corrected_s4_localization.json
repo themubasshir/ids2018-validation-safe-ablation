@@ -1,0 +1,204 @@
+{
+  "alternative_payload_formula_tested": false,
+  "anchor_absent": {
+    "cases": [
+      {
+        "anchor": [
+          "192.168.10.12",
+          0,
+          "192.168.10.3",
+          0,
+          0,
+          1499083043
+        ],
+        "protocol": 0,
+        "termination": "FLOW_TIMEOUT"
+      }
+    ],
+    "count": 1
+  },
+  "classification": {
+    "ANCHOR_ABSENT": 1,
+    "FULL_S4_EXACT_CANDIDATE_PRESENT": 637,
+    "LENGTH_ONLY_RESIDUAL": 37
+  },
+  "closest_candidate_selection": false,
+  "decision": "PRE_RESET_RESULT_REPRODUCED_EXACTLY",
+  "diagnostic_row_selection": false,
+  "friday_openings": 0,
+  "friday_reads": 0,
+  "friday_requests": 0,
+  "friday_status": "CLOSED",
+  "full_monday": false,
+  "images_generated": 0,
+  "length_only": {
+    "ambiguous_vectors": 0,
+    "anchor_multiplicity": {
+      "1": 15,
+      "2": 22
+    },
+    "by_protocol": {
+      "6": 37
+    },
+    "by_termination": {
+      "FIN": 33,
+      "FLOW_TIMEOUT": 4
+    },
+    "candidate_multiplicity": {
+      "1": 37
+    },
+    "count": 37,
+    "field_exactness": {
+      "Bwd Packet Length Max": 3,
+      "Bwd Packet Length Min": 37,
+      "Fwd Packet Length Max": 25,
+      "Fwd Packet Length Min": 37,
+      "Total Length of Bwd Packets": 2,
+      "Total Length of Fwd Packets": 25
+    },
+    "unambiguous_delta_vectors": [
+      {
+        "count": 11,
+        "delta_reconstructed_minus_label": [
+          0,
+          -56,
+          0,
+          0,
+          0,
+          -28
+        ]
+      },
+      {
+        "count": 8,
+        "delta_reconstructed_minus_label": [
+          0,
+          -231,
+          0,
+          0,
+          0,
+          -185
+        ]
+      },
+      {
+        "count": 4,
+        "delta_reconstructed_minus_label": [
+          -24,
+          -136,
+          0,
+          -6,
+          0,
+          -122
+        ]
+      },
+      {
+        "count": 3,
+        "delta_reconstructed_minus_label": [
+          -12,
+          -14,
+          0,
+          -6,
+          0,
+          -7
+        ]
+      },
+      {
+        "count": 3,
+        "delta_reconstructed_minus_label": [
+          0,
+          -138,
+          0,
+          0,
+          0,
+          -7
+        ]
+      },
+      {
+        "count": 2,
+        "delta_reconstructed_minus_label": [
+          0,
+          -124,
+          0,
+          0,
+          0,
+          -6
+        ]
+      },
+      {
+        "count": 2,
+        "delta_reconstructed_minus_label": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "delta_reconstructed_minus_label": [
+          -12,
+          -14,
+          0,
+          -6,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "delta_reconstructed_minus_label": [
+          0,
+          -178,
+          0,
+          0,
+          0,
+          -178
+        ]
+      },
+      {
+        "count": 1,
+        "delta_reconstructed_minus_label": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 1,
+        "delta_reconstructed_minus_label": [
+          -12,
+          -14,
+          0,
+          -6,
+          0,
+          -4
+        ]
+      }
+    ],
+    "unambiguous_vectors": 37
+  },
+  "lifecycle_changed": false,
+  "models_trained": 0,
+  "nearest_neighbor": false,
+  "packet_length_rule_changed": false,
+  "population": 675,
+  "record_status": "SESSION_RESET_REPRODUCED",
+  "repository_head": "8b34b13b39738e7ae16626a65b2de586af088c46",
+  "residual_exclusively_length": false,
+  "s4_changed": false,
+  "session_reset_reproduction": {
+    "pcap_reread": false,
+    "pre_reset_result_reproduced_exactly": true
+  },
+  "stage": "20.1C10",
+  "stage20_1c9_exact": 637,
+  "stage20_1c9_unmatched": 38,
+  "timeout_changed": false,
+  "timestamp_tolerance": false,
+  "tuesday": false,
+  "type": "RESIDUAL_CORRECTED_S4_LOCALIZATION_FORENSIC"
+}

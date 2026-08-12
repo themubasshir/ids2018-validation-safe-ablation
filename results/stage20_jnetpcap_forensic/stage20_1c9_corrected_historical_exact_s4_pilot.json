@@ -1,0 +1,61 @@
+{
+  "active_exportable_states_excluded": 2250,
+  "active_states_excluded": 2326,
+  "bound": {
+    "flow_timeout_us": 120000000,
+    "packets": 50000,
+    "population": "COMPLETED_EXPORTABLE_FLOWS_ONLY"
+  },
+  "decision": "PRE_RESET_RESULT_REPRODUCED_EXACTLY",
+  "diagnostic_by_termination": {
+    "FIN": {
+      "flows": 432,
+      "membership_exact": 399,
+      "membership_rate": 0.9236111111111112
+    },
+    "FLOW_TIMEOUT": {
+      "flows": 243,
+      "membership_exact": 238,
+      "membership_rate": 0.9794238683127572
+    }
+  },
+  "exact_matching": {
+    "absent_signature_flows": 38,
+    "capacity_overflow_flows": 38,
+    "membership_match_flows": 637,
+    "membership_match_rate": 0.9437037037037037,
+    "multiset_match_rate": 0.9437037037037037,
+    "multiset_matched_flows": 637
+  },
+  "finished_exportable_flows": 675,
+  "friday_openings": 0,
+  "friday_reads": 0,
+  "friday_requests": 0,
+  "friday_status": "CLOSED",
+  "full_monday_scan": false,
+  "images_generated": 0,
+  "models_trained": 0,
+  "parser_counts": {
+    "IPv4_OTHER_PROTOCOL_0": 84,
+    "IPv4_TCP": 31618,
+    "IPv4_UDP": 14334,
+    "NON_IPV4": 3964
+  },
+  "record_status": "SESSION_RESET_REPRODUCED",
+  "repository_head": "8b34b13b39738e7ae16626a65b2de586af088c46",
+  "s4_changed_this_cell": false,
+  "scientific_change_this_cell": false,
+  "session_reset_reproduction": {
+    "expected_exact": 637,
+    "expected_population": 675,
+    "expected_unmatched": 38,
+    "reproduced_exactly": true
+  },
+  "stage": "20.1C9",
+  "termination_counts": {
+    "FIN": 432,
+    "FLOW_TIMEOUT": 243
+  },
+  "tuesday_acquisition": false,
+  "type": "CORRECTED_HISTORICAL_EXACT_S4_REPLICATION_PILOT"
+}

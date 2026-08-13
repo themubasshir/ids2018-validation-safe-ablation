@@ -1,0 +1,184 @@
+{
+  "byte_origin_policy": {
+    "captured_ipv4_bytes_used": true,
+    "declared_length_synthetic_padding_before_representation": false,
+    "ethernet_header_included": false,
+    "pcap_record_metadata_included": false,
+    "representation_starts_at": "IPv4_HEADER_BYTE_0",
+    "timestamp_metadata_included": false,
+    "vlan_header_included": false
+  },
+  "channel_policy": {
+    "channel_semantics": "RAW_BYTE_VALUE",
+    "channels": 1,
+    "dataset_mean_std_normalization": false,
+    "learned_preprocessing_before_freeze": false,
+    "model_input_scaling": "byte_value_divided_by_255",
+    "rgb_replication": false,
+    "sample_specific_normalization": false,
+    "storage_type_before_model": "uint8"
+  },
+  "checkpoint": "Stage20-1D0",
+  "dimension_selection": {
+    "bytes_per_packet": {
+      "if_p95_exceeds_maximum": "USE_MAXIMUM_AND_REPORT_TRUNCATION_RATE",
+      "maximum": 256,
+      "minimum": 64,
+      "raw_target": "TRAIN_CAPTURED_IPV4_LENGTH_P95",
+      "rounding_rule": "SMALLEST_MULTIPLE_OF_32_GREATER_OR_EQUAL"
+    },
+    "dimension_changes_after_holdout": false,
+    "dimension_changes_after_training": false,
+    "dimension_changes_after_validation": false,
+    "maximum_image_area": 16384,
+    "packet_count_statistic": "EMPIRICAL_95TH_PERCENTILE",
+    "packet_length_statistic": "EMPIRICAL_95TH_PERCENTILE",
+    "packets_per_flow": {
+      "if_p95_exceeds_maximum": "USE_MAXIMUM_AND_REPORT_TRUNCATION_RATE",
+      "maximum": 64,
+      "minimum": 16,
+      "raw_target": "TRAIN_FLOW_PACKET_COUNT_P95",
+      "rounding_rule": "SMALLEST_POWER_OF_TWO_GREATER_OR_EQUAL"
+    },
+    "quantile": 0.95,
+    "quantile_definition": "NEAREST_RANK",
+    "selection_data": "TRAIN_ONLY"
+  },
+  "final_numeric_dimensions_frozen": false,
+  "geometry_population": {
+    "attack_identity_used_for_sizing": false,
+    "class_balance_used_for_sizing": false,
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "label_value_used_for_sizing": false,
+    "published_label_membership_required_for_sizing": false,
+    "reason": "Image dimensions describe packet geometry and must not be conditioned on label match or attack outcome.",
+    "scope": "ALL_EXPORTABLE_SOURCE_FAITHFUL_TRAIN_FLOWS"
+  },
+  "header_policy": {
+    "ipv4": {
+      "keep_fragmentation_fields": true,
+      "keep_protocol": true,
+      "keep_ttl": true,
+      "mask_destination_address": true,
+      "mask_header_checksum": true,
+      "mask_identification": true,
+      "mask_source_address": true
+    },
+    "mask_value": 0,
+    "payload": {
+      "keep_payload_bytes": true,
+      "payload_anonymization": false
+    },
+    "preserve_header_positions": true,
+    "preserve_packet_length": true,
+    "reason": "Mask high-risk endpoint and connection-identity fields without replacing authentic packet geometry with engineered tabular features.",
+    "tcp": {
+      "keep_destination_port": true,
+      "keep_flags": true,
+      "keep_options": true,
+      "keep_source_port": true,
+      "keep_window": true,
+      "mask_acknowledgement_number": true,
+      "mask_checksum": true,
+      "mask_sequence_number": true
+    },
+    "udp": {
+      "keep_destination_port": true,
+      "keep_source_port": true,
+      "mask_checksum": true
+    }
+  },
+  "holdout_integrity": {
+    "friday_openings": "0/1",
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "friday_status": "CLOSED"
+  },
+  "image_topology": {
+    "authentic_packet_geometry_only": true,
+    "columns": "BYTE_OFFSET_WITHIN_PACKET",
+    "cross_day_context": false,
+    "cross_flow_concatenation": false,
+    "future_packet_context": false,
+    "packet_order": "ORIGINAL_CAPTURE_ORDER",
+    "rows": "PACKET_ORDER_WITHIN_FLOW",
+    "synthetic_image_features": false,
+    "tabular_features_rendered_as_pixels": false
+  },
+  "leakage_policy": {
+    "SHAP_features_used_as_pixels": false,
+    "attack_specific_representation": false,
+    "class_specific_representation": false,
+    "day_specific_representation": false,
+    "holdout_distribution_used_to_select_dimensions": false,
+    "labels_used_to_construct_pixels": false,
+    "labels_used_to_select_dimensions": false,
+    "predictions_used_to_construct_pixels": false,
+    "published_flow_features_used_as_pixels": false,
+    "same_fixed_representation_for_all_splits": true,
+    "threshold_used_to_construct_pixels": false,
+    "validation_distribution_used_to_select_dimensions": false
+  },
+  "mechanism_search": {
+    "closed": true,
+    "closure_checkpoint": "Stage20-1C16-D3",
+    "further_mechanism_search_allowed": false,
+    "published_label_reconstruction_rule_changed": false
+  },
+  "padding_policy": {
+    "flow_packet_padding": "BOTTOM_ZERO_PACKET_ROWS",
+    "packet_byte_padding": "RIGHT_ZERO_PADDING",
+    "padding_is_distinguishable_from_real_zero_bytes": false,
+    "padding_mask_contains_label_information": false,
+    "padding_mask_required_for_model": true,
+    "padding_mask_semantics": "Boolean mask derived only from authentic pre-padding packet and byte lengths.",
+    "padding_value_uint8": 0
+  },
+  "parent_commit": "9d531d5c6bb7f0bde05a07cdae247af319affed1",
+  "split_policy": {
+    "friday_status": "CLOSED",
+    "holdout_days": [
+      "Friday"
+    ],
+    "holdout_used_for_dimension_selection": false,
+    "principle": "Representation geometry must be determined without observing validation or holdout distribution statistics.",
+    "representation_dimension_statistics_source": "TRAIN_ONLY",
+    "training_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "validation_days": [
+      "Thursday"
+    ],
+    "validation_used_for_dimension_selection": false
+  },
+  "status": "REPRESENTATION_SELECTION_PROTOCOL_FROZEN_BEFORE_TRAIN_PROFILING",
+  "training_boundary": {
+    "architecture_selection_allowed_now": false,
+    "model_training_allowed_now": false,
+    "remaining_representation_freeze_steps": [
+      "VERIFY_FULL_TRAIN_RAW_SOURCES",
+      "PROFILE_TRAIN_GEOMETRY_ONCE",
+      "APPLY_FROZEN_DIMENSION_RULE",
+      "FREEZE_NUMERIC_PACKETS_PER_FLOW",
+      "FREEZE_NUMERIC_BYTES_PER_PACKET",
+      "VERIFY_FIXED_ENCODER_ON_SAMPLE_FLOWS"
+    ],
+    "training_allowed_after_stage20_1d0": false
+  },
+  "truncation_policy": {
+    "byte_truncation": "KEEP_EARLIEST_IPV4_BYTES",
+    "center_crop": false,
+    "label_guided_crop": false,
+    "packet_reordering": false,
+    "packet_sampling": false,
+    "packet_truncation": "KEEP_EARLIEST_PACKETS",
+    "random_crop": false,
+    "validation_guided_crop": false
+  }
+}

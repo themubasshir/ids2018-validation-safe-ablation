@@ -1,0 +1,51 @@
+{
+  "cache_release": {
+    "blob_exists_after_release": false,
+    "empty_directories_removed": [
+      "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap",
+      "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343"
+    ],
+    "remaining_tuesday_size_objects": [],
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Tuesday-WorkingHours.pcap",
+    "snapshot_was_symlink": true,
+    "xet_cache_existed": true,
+    "xet_cache_exists_after_release": false
+  },
+  "checkpoint": "Stage20-1D2-T-DELETE",
+  "next_checkpoint": "Stage20-1D2-W",
+  "scientific_profile_artifact": "results/stage20_1d_representation/stage20_1d2t_tuesday_exact_geometry_profile.json",
+  "scientific_profile_commit": "fc13d96f7949715dd2cd10552f9f2e5c53efa402",
+  "scientific_profile_sha256": "5ee3c4fdfbc9d0be8112bdc636f02efae7fb6e476bf0092f6e5909e17e7adaeb",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "Tuesday_daily_p95_computed": false,
+    "combined_train_p95_computed": false,
+    "labels_read": false,
+    "model_training": false,
+    "numeric_dimensions_selected": false
+  },
+  "source_identity": {
+    "remote_filename": "pcap/Tuesday-WorkingHours.pcap",
+    "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+    "sha256": "080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+    "size_bytes": 11048283608,
+    "verified_before_profile": true
+  },
+  "status": "TUESDAY_RAW_CACHE_RELEASED_AFTER_REMOTE_PROFILE_DURABILITY",
+  "wednesday_space_gate": {
+    "available_free_bytes": 20006940672,
+    "download_safe_now": true,
+    "required_free_bytes": 14494531436,
+    "safety_headroom_bytes": 1073741824,
+    "wednesday_expected_size_bytes": 13420789612
+  },
+  "workspace": {
+    "disk_values_used_for_scientific_selection": false,
+    "free_bytes_after_release": 20006940672,
+    "free_bytes_before_release": 8958627840,
+    "free_space_delta_bytes": 11048312832
+  }
+}

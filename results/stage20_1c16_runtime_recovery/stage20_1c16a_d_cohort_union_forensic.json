@@ -1,0 +1,465 @@
+{
+  "checkpoint": "Stage20-1C16-A-DU1",
+  "d_cohort": {
+    "actual_changed_position_union": [
+      9,
+      10,
+      11,
+      12,
+      14
+    ],
+    "changed_count": 16,
+    "changed_position_counts": {
+      "10": 12,
+      "11": 2,
+      "12": 12,
+      "14": 11,
+      "9": 14
+    },
+    "count": 17,
+    "flows": [
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 18378,
+        "index": 14,
+        "packet_count": 26,
+        "protocol": 6,
+        "src_ip": "192.168.10.9",
+        "src_port": 1035,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 77033,
+        "index": 25,
+        "packet_count": 24,
+        "protocol": 6,
+        "src_ip": "192.168.10.9",
+        "src_port": 1051,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 3536,
+        "index": 35,
+        "packet_count": 24,
+        "protocol": 6,
+        "src_ip": "192.168.10.9",
+        "src_port": 1060,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 519267,
+        "index": 36,
+        "packet_count": 25,
+        "protocol": 6,
+        "src_ip": "192.168.10.9",
+        "src_port": 1059,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          10,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 15745,
+        "index": 52,
+        "packet_count": 30,
+        "protocol": 6,
+        "src_ip": "192.168.10.17",
+        "src_port": 42096,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          10,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 2489,
+        "index": 123,
+        "packet_count": 31,
+        "protocol": 6,
+        "src_ip": "192.168.10.25",
+        "src_port": 49159,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 0,
+        "duration_us": 114364596,
+        "index": 199,
+        "packet_count": 18,
+        "protocol": 0,
+        "src_ip": "192.168.10.12",
+        "src_port": 0,
+        "termination": "FLOW_TIMEOUT",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          12
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 88,
+        "duration_us": 862,
+        "index": 307,
+        "packet_count": 13,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49425,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 3312046,
+        "index": 309,
+        "packet_count": 26,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49410,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 1340800,
+        "index": 324,
+        "packet_count": 25,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49432,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 7681758,
+        "index": 327,
+        "packet_count": 38,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49430,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 88,
+        "duration_us": 570,
+        "index": 333,
+        "packet_count": 11,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49440,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          12
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 88,
+        "duration_us": 846,
+        "index": 334,
+        "packet_count": 13,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49441,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 78550,
+        "index": 336,
+        "packet_count": 25,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49439,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          10,
+          12,
+          14
+        ],
+        "dst_ip": "192.168.10.3",
+        "dst_port": 389,
+        "duration_us": 3594274,
+        "index": 337,
+        "packet_count": 45,
+        "protocol": 6,
+        "src_ip": "192.168.10.14",
+        "src_port": 49436,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          11
+        ],
+        "dst_ip": "54.148.59.150",
+        "dst_port": 443,
+        "duration_us": 224,
+        "index": 471,
+        "packet_count": 2,
+        "protocol": 6,
+        "src_ip": "192.168.10.9",
+        "src_port": 1113,
+        "termination": "FIN",
+        "v1_exact": false
+      },
+      {
+        "baseline_exact": false,
+        "changed_positions": [
+          9,
+          11
+        ],
+        "dst_ip": "54.148.59.150",
+        "dst_port": 443,
+        "duration_us": 262,
+        "index": 473,
+        "packet_count": 2,
+        "protocol": 6,
+        "src_ip": "192.168.10.9",
+        "src_port": 1112,
+        "termination": "FIN",
+        "v1_exact": false
+      }
+    ],
+    "historical_internal_union": [
+      9,
+      10,
+      12,
+      13,
+      14
+    ],
+    "historical_union_matches_current": false,
+    "indices": [
+      14,
+      25,
+      35,
+      36,
+      52,
+      123,
+      199,
+      307,
+      309,
+      324,
+      327,
+      333,
+      334,
+      336,
+      337,
+      471,
+      473
+    ],
+    "patterns": [
+      {
+        "count": 1,
+        "indices": [
+          199
+        ],
+        "positions": []
+      },
+      {
+        "count": 2,
+        "indices": [
+          52,
+          123
+        ],
+        "positions": [
+          10,
+          14
+        ]
+      },
+      {
+        "count": 1,
+        "indices": [
+          36
+        ],
+        "positions": [
+          9,
+          10,
+          12
+        ]
+      },
+      {
+        "count": 9,
+        "indices": [
+          14,
+          25,
+          35,
+          309,
+          324,
+          327,
+          333,
+          336,
+          337
+        ],
+        "positions": [
+          9,
+          10,
+          12,
+          14
+        ]
+      },
+      {
+        "count": 2,
+        "indices": [
+          471,
+          473
+        ],
+        "positions": [
+          9,
+          11
+        ]
+      },
+      {
+        "count": 2,
+        "indices": [
+          307,
+          334
+        ],
+        "positions": [
+          9,
+          12
+        ]
+      }
+    ],
+    "protocol_counts": {
+      "0": 1,
+      "6": 16
+    },
+    "termination_counts": {
+      "FIN": 16,
+      "FLOW_TIMEOUT": 1
+    },
+    "unchanged_indices": [
+      199
+    ]
+  },
+  "holdout_integrity": {
+    "friday_openings": "0/1",
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "friday_status": "CLOSED"
+  },
+  "interpretation_boundary": {
+    "diagnostic_only": true,
+    "lifecycle_changed": false,
+    "matching_changed": false,
+    "membership_changed": false,
+    "v1_rule_changed": false
+  },
+  "parent_commit": "b0ebf4bf7b89ebf6569c56f1b027a2b0128e0297",
+  "scientific_state": {
+    "d5_exact": 635,
+    "population": 675,
+    "transition_counts": {
+      "absent_to_absent": 17,
+      "absent_to_exact": 23,
+      "exact_to_absent": 340,
+      "exact_to_exact": 295
+    },
+    "v1_exact": 318
+  },
+  "status": "DIAGNOSTIC_ONLY_NO_RULE_CHANGE"
+}

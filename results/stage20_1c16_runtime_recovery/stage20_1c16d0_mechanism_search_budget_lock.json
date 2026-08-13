@@ -1,0 +1,95 @@
+{
+  "basis": {
+    "flow_phenotype_partition": {
+      "GT_ONLY": 345,
+      "LT_ONLY": 23,
+      "MIXED": 11,
+      "NONE": 88
+    },
+    "geometry_affected_flows": 379,
+    "geometry_disagreement_packets": 5093,
+    "packet_sign_partition": {
+      "capture_gt_declared": 4930,
+      "capture_lt_declared": 163
+    },
+    "partition_is_exhaustive": true,
+    "source_checkpoint": "Stage20-1C16-C",
+    "tcp_flows": 467
+  },
+  "checkpoint": "Stage20-1C16-D0",
+  "holdout_integrity": {
+    "friday_openings": "0/1",
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "friday_status": "CLOSED"
+  },
+  "parent_commit": "6d1c0189f0ff53304a6d2abe2c70a87b6d76edee",
+  "remaining_candidates": [
+    {
+      "acceptance_criterion": {
+        "fail_condition": "At least one frozen GT packet fails an exact requirement.",
+        "pass_condition": "Every one of the frozen 4930 GT packets satisfies all requirements exactly.",
+        "required_exactness": "ALL_PACKETS",
+        "requirements": [
+          "captured IPv4 byte extent is strictly greater than the declared IPv4 total length",
+          "the excess captured IPv4-byte count exactly equals baseline_payload_length minus V1_payload_length",
+          "the explanation requires no label value, tolerance, nearest match, cohort membership, or flow outcome"
+        ],
+        "scope": "ALL_GT_DISAGREEMENT_PACKETS"
+      },
+      "candidate_id": "M1_GT_CAPTURE_BEYOND_DECLARED_IPV4",
+      "frozen_packet_count": 4930,
+      "hypothesis": "For each GT disagreement packet, the positive baseline-minus-V1 payload difference is caused by captured IPv4 bytes extending beyond the packet's declared IPv4 total length.",
+      "packet_local_only": true,
+      "sign_population": "capture_gt_declared"
+    },
+    {
+      "acceptance_criterion": {
+        "fail_condition": "At least one frozen LT packet fails an exact requirement.",
+        "pass_condition": "Every one of the frozen 163 LT packets satisfies all requirements exactly.",
+        "required_exactness": "ALL_PACKETS",
+        "requirements": [
+          "captured IPv4 byte extent is strictly smaller than the declared IPv4 total length",
+          "the missing captured IPv4-byte count exactly equals V1_payload_length minus baseline_payload_length",
+          "the explanation requires no label value, tolerance, nearest match, cohort membership, or flow outcome"
+        ],
+        "scope": "ALL_LT_DISAGREEMENT_PACKETS"
+      },
+      "candidate_id": "M2_LT_CAPTURE_SHORTER_THAN_DECLARED_IPV4",
+      "frozen_packet_count": 163,
+      "hypothesis": "For each LT disagreement packet, the negative baseline-minus-V1 payload difference is caused by the captured IPv4 byte extent ending before the packet's declared IPv4 total length.",
+      "packet_local_only": true,
+      "sign_population": "capture_lt_declared"
+    }
+  ],
+  "scientific_boundary": {
+    "duration_substitution_allowed": false,
+    "friday_access_allowed": false,
+    "fuzzy_matching_allowed": false,
+    "label_exactness_may_be_used_as_acceptance_test": false,
+    "mechanism_confirmation_is_rule_adoption": false,
+    "model_training_allowed": false,
+    "nearest_matching_allowed": false,
+    "residual_only_rule_allowed": false,
+    "selective_capture_vs_declared_hybrid_allowed": false,
+    "sign_may_select_packet_semantics": false,
+    "transition_cohort_may_select_packet_semantics": false
+  },
+  "status": "PRE_TEST_MECHANISM_SEARCH_BUDGET_FROZEN",
+  "stopping_rule": {
+    "candidate_expansion_allowed": false,
+    "candidate_order": [
+      "M1_GT_CAPTURE_BEYOND_DECLARED_IPV4",
+      "M2_LT_CAPTURE_SHORTER_THAN_DECLARED_IPV4"
+    ],
+    "candidate_substitution_allowed": false,
+    "if_both_candidates_pass": "Record mechanism explanation as complete for the bounded packet-geometry disagreement population; do not automatically adopt V1 as the published-label reconstruction rule.",
+    "if_one_or_both_candidates_fail": "Record partial or failed representability and stop. Do not introduce another candidate.",
+    "if_unexplained_packets_remain": "Record the unresolved remainder explicitly and terminate the Stage 20 reconstruction-mechanism branch.",
+    "post_stop_next_phase": "Return to frozen packet-image representation design: packets-per-flow, bytes-per-packet, channels, padding/truncation, header policy, and leakage controls must be locked before model training.",
+    "remaining_candidate_budget": 2,
+    "stop_after_candidate_count": 2,
+    "stop_regardless_of_results": true,
+    "third_candidate_allowed": false
+  }
+}

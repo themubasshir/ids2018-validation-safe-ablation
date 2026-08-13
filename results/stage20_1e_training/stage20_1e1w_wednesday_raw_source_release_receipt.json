@@ -1,0 +1,42 @@
+{
+  "checkpoint": "Stage20-1E1-W-DELETE",
+  "label_release": {
+    "blob_exists_after_release": false,
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+    "snapshot_was_symlink": true
+  },
+  "local_compact_corpus_directory": "/kaggle/working/stage20_compact_corpus/Wednesday",
+  "local_compact_corpus_preserved": true,
+  "manifest_sha256": "42a8f3813a786751999c209dce323ba701d9c29cd19add09aaadbd3297921d62",
+  "next_checkpoint": "Stage20-1E1-V",
+  "pcap_release": {
+    "blob_exists_after_release": false,
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/cd2674db7559a53f24bc03be3239b315700174ccaef72d10f5edc4c1a08f6186",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Wednesday-workingHours.pcap",
+    "snapshot_was_symlink": true
+  },
+  "remaining_exact_source_size_objects": [],
+  "science_commit": "f79c19f131323ec70be6abbb7aebfbc90a9f512a",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Friday_status": "CLOSED",
+    "Monday_corpus_complete": true,
+    "Thursday_accessed": false,
+    "Tuesday_corpus_complete": true,
+    "Wednesday_corpus_complete": true,
+    "model_training": false,
+    "optimizer_steps": 0
+  },
+  "status": "WEDNESDAY_RAW_PCAP_AND_LABEL_CACHE_RELEASED_AFTER_CORPUS_SCIENCE_DURABILITY",
+  "workspace": {
+    "free_bytes_after_release": 19390152704,
+    "free_bytes_before_release": 5892820992,
+    "space_reclaimed_bytes": 13497331712,
+    "storage_values_used_for_scientific_selection": false
+  },
+  "xet_cache_existed": true,
+  "xet_cache_exists_after_release": false
+}

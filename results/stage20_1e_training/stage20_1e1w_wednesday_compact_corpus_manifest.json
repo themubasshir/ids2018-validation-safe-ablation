@@ -1,0 +1,211 @@
+{
+  "checkpoint": "Stage20-1E1-W",
+  "compact_corpus": {
+    "dense_padding_persisted": false,
+    "directory": "/kaggle/working/stage20_compact_corpus/Wednesday",
+    "encoded_authentic_bytes": 13824937,
+    "encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 13824937,
+        "sha256": "b4ba9a059a2df6a1b85546b4d92c1fdf5b80feb61de6c3e56eae458c628f8889"
+      },
+      "flow_offsets.npy": {
+        "bytes": 103744,
+        "sha256": "9ef83af5b03f9284beed50cbe2587bbbb8cac1ac524aa5505e44d262a8d8cf0a"
+      },
+      "labels.npy": {
+        "bytes": 13079,
+        "sha256": "9d10b0264487ab4689a77f0101f22496786a7eb453236c2fb8bfe53d33f9ca7c"
+      },
+      "packet_lengths.npy": {
+        "bytes": 1657856,
+        "sha256": "9bba88e143d4c5c5388c450b1f7d7c9aa1cd83592c4c6e1a153651e70131d2ab"
+      }
+    },
+    "flow_count": 12951,
+    "format": "STAGE20_1E0_COMPACT_VARIABLE_AUTHENTIC_BYTES",
+    "loader_module_path": "scripts/stage20_compact_corpus.py",
+    "loader_module_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "padding_mask_persisted": false,
+    "padding_mask_reconstructed_from_lengths": true,
+    "roundtrip_all_pass": true,
+    "roundtrip_first_n": 128,
+    "roundtrip_summary_sha256": "63218f8ed7ab01671bcf419bffc8b97f832a2fa955bec6891cd3a4a9011b3da1"
+  },
+  "day": "Wednesday",
+  "exact_join": {
+    "fuzzy": false,
+    "index_specific_exclusions": [],
+    "label_guided_repair": false,
+    "matched_binary_counts": {
+      "0": 8657,
+      "1": 4294
+    },
+    "matched_export_reasons": {
+      "EOF_CURRENT": 3062,
+      "FIN": 7017,
+      "FLOW_TIMEOUT": 2872
+    },
+    "matching": "EXACT_ONLY",
+    "nearest": false,
+    "supervised_matched_flows": 12951,
+    "tolerance": false,
+    "unmatched_reconstructed_flows": 679438,
+    "unused_published_occurrences": 679752
+  },
+  "first_50000_frozen_snapshot": {
+    "FIN": 129,
+    "FLOW_TIMEOUT": 55,
+    "active_flow_count": 750,
+    "all_preexisting_d2w_snapshot_anchors_pass": true,
+    "completed_flows": 184,
+    "descriptive_join_values_used_for_selection": false,
+    "exact_s4_multiset_membership_descriptive": 1,
+    "exact_s4_set_membership_descriptive": 1,
+    "matched_binary_counts_descriptive": {
+      "0": 1
+    },
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 15,
+      "IPv4_TCP": 44782,
+      "IPv4_UDP": 4172,
+      "NON_IPV4": 1031
+    },
+    "protocol_counts": {
+      "17": 51,
+      "6": 133
+    }
+  },
+  "full_reconstruction": {
+    "all_preexisting_d2w_anchors_pass": true,
+    "eof_singleton_discarded": 44799,
+    "export_reasons": {
+      "EOF_CURRENT": 177389,
+      "FIN": 391925,
+      "FLOW_TIMEOUT": 123075
+    },
+    "exportable_flow_protocol_counts": {
+      "0": 96,
+      "6": 489442,
+      "17": 202851
+    },
+    "exportable_flows": 692389,
+    "flow_packet_count_histogram_exact_d2w_match": true,
+    "max_active_flows": 222188,
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 600,
+      "IPv4_TCP": 12943316,
+      "IPv4_UDP": 761639,
+      "NON_IPV4": 83323
+    },
+    "raw_packets": 13788878,
+    "retained_packet_protocol_counts": {
+      "0": 590,
+      "6": 12896496,
+      "17": 761611
+    },
+    "retained_packets": 13658697,
+    "timeout_singleton_discarded": 2059,
+    "valid_ipv4_packets": 13705555
+  },
+  "label_schema": {
+    "physical_columns": {
+      "ack": "ACK Flag Count",
+      "bwd_len_max": "Bwd Packet Length Max",
+      "bwd_len_min": "Bwd Packet Length Min",
+      "destination_ip": "Destination IP",
+      "destination_port": "Destination Port",
+      "fin": "FIN Flag Count",
+      "flow_duration": "Flow Duration",
+      "fwd_len_max": "Fwd Packet Length Max",
+      "fwd_len_min": "Fwd Packet Length Min",
+      "label": "Label",
+      "protocol": "Protocol",
+      "psh": "PSH Flag Count",
+      "rst": "RST Flag Count",
+      "source_ip": "Source IP",
+      "source_port": "Source Port",
+      "syn": "SYN Flag Count",
+      "timestamp": "Timestamp",
+      "total_bwd_packets": "Total Backward Packets",
+      "total_fwd_packets": "Total Fwd Packets",
+      "total_len_bwd": "Total Length of Bwd Packets",
+      "total_len_fwd": "Total Length of Fwd Packets",
+      "urg": "URG Flag Count"
+    },
+    "raw_frame_extent_used_for_s4_payload": false,
+    "s4_reference_decoder": "SCAPY_2_6_1_OUTER_IPV4_PAYLOAD_LAYER",
+    "s4_tcp_baseline_payload": "LEN_BYTES_TCP_PAYLOAD",
+    "s4_timestamp_canonicalization": "INTEGER_UNIX_EPOCH_SECOND",
+    "s4_udp_baseline_payload": "LEN_BYTES_UDP_PAYLOAD",
+    "timestamp_type": "TIMESTAMP"
+  },
+  "next_checkpoint": "Stage20-1E1-V",
+  "operational": {
+    "materialization_elapsed_seconds": 3713.854,
+    "timing_used_for_selection": false,
+    "wednesday_compact_upper_bound_bytes": 1702719061
+  },
+  "parent_commit": "a01365bcc0fb0e142802b542697fa717199ae012",
+  "parser_optimization": {
+    "equivalence_fast_path_packets": 0,
+    "equivalence_ipv4_packets": 0,
+    "equivalence_packet_limit": 0,
+    "equivalence_path_counts": {},
+    "equivalence_scapy_fallback_packets": 0,
+    "equivalence_semantic_digest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "full_fast_path_packets": 0,
+    "full_materialization_mode": "SCAPY_REFERENCE_ONLY_SAME_AS_SUCCESSFUL_MONDAY",
+    "full_path_counts": {
+      "scapy_fallback_reference_only": 13788878
+    },
+    "full_scapy_fallback_packets": 13788878,
+    "optimized_decoder": "NOT_EXERCISED__FULL_SCAPY_REFERENCE_ONLY",
+    "packet_by_packet_equivalence": null,
+    "reference_decoder": "SCAPY_2_6_1",
+    "scientific_semantics_changed": false,
+    "timing_or_fast_path_share_used_for_scientific_selection": false
+  },
+  "published_label_multiset": {
+    "ambiguous_binary_signatures": 0,
+    "binary_row_counts": {
+      "0": 440031,
+      "1": 252672
+    },
+    "duplicate_occurrences": 18,
+    "rows": 692703,
+    "unique_signatures": 692685
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Friday_status": "CLOSED",
+    "Monday_corpus_complete": true,
+    "Thursday_accessed": false,
+    "Tuesday_corpus_complete": true,
+    "Wednesday_corpus_complete": true,
+    "architecture_changed": false,
+    "join_rule_changed": false,
+    "model_training": false,
+    "new_forensic_exclusions_inferred": false,
+    "optimizer_steps": 0,
+    "representation_changed": false
+  },
+  "source": {
+    "pcap": {
+      "remote": "pcap/Wednesday-workingHours.pcap",
+      "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+      "sha256": "cd2674db7559a53f24bc03be3239b315700174ccaef72d10f5edc4c1a08f6186",
+      "size_bytes": 13420789612
+    },
+    "traffic_labels": {
+      "remote": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "rows": 692703,
+      "sha256": "d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140",
+      "size_bytes": 76512727
+    }
+  },
+  "split": "TRAIN",
+  "status": "WEDNESDAY_SUPERVISED_COMPACT_CORPUS_MATERIALIZED_AND_AUDITED"
+}

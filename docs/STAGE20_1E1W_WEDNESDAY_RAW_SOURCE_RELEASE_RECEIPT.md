@@ -13,7 +13,7 @@ Manifest SHA256: `42a8f3813a786751999c209dce323ba701d9c29cd19add09aaadbd3297921d
 The Wednesday raw PCAP and traffic-label parquet remained present until:
 
 1. pinned source hashes passed;
-2. 250k packet fast-vs-Scapy equivalence passed;
+2. full-Scapy reference-only execution was used; optimized parser was not exercised;
 3. frozen first-50k Wednesday snapshot passed;
 4. full Wednesday D2-W lifecycle/geometry anchors passed;
 5. exact supervised S4 join completed;
@@ -41,8 +41,8 @@ Supervised flows: **12951**
 ## Scientific state
 
 - Monday corpus: **COMPLETE**
+- Tuesday corpus: **COMPLETE**
 - Wednesday corpus: **COMPLETE**
-- Wednesday corpus: **PENDING**
 - Thursday accessed: **NO**
 - Friday accessed: **NO**
 - Friday status: **CLOSED**

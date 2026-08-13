@@ -1,0 +1,49 @@
+{
+  "checkpoint": "Stage20-1E1-T-DELETE",
+  "label_release": {
+    "blob_exists_after_release": false,
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+    "snapshot_was_symlink": true
+  },
+  "local_compact_corpus_directory": "/kaggle/working/stage20_compact_corpus/Tuesday",
+  "local_compact_corpus_preserved": true,
+  "manifest_sha256": "20f920b576b49a36131fb271e963ef2bd7900f3c7bfc5458b24991676b5515af",
+  "next_checkpoint": "Stage20-1E1-W",
+  "pcap_release": {
+    "blob_exists_after_release": false,
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Tuesday-WorkingHours.pcap",
+    "snapshot_was_symlink": true
+  },
+  "recovery": {
+    "finalized_corpus_rehashed_before_commit": true,
+    "label_rematched": false,
+    "rematerialized": false,
+    "scientific_manifest_changed": false,
+    "source_failure": "R3_STALE_POST_RENAME_ENCODED_PATH_IN_REPORTING_ONLY"
+  },
+  "remaining_exact_source_size_objects": [],
+  "science_commit": "ad70187d1a58ff55fdd36543333b5880dc7e3478",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Friday_status": "CLOSED",
+    "Monday_corpus_complete": true,
+    "Thursday_accessed": false,
+    "Tuesday_corpus_complete": true,
+    "Wednesday_corpus_complete": false,
+    "model_training": false,
+    "optimizer_steps": 0
+  },
+  "status": "TUESDAY_RAW_PCAP_AND_LABEL_CACHE_RELEASED_AFTER_CORPUS_SCIENCE_DURABILITY",
+  "workspace": {
+    "free_bytes_after_release": 19405881344,
+    "free_bytes_before_release": 8304869376,
+    "space_reclaimed_bytes": 11101011968,
+    "storage_values_used_for_scientific_selection": false
+  },
+  "xet_cache_existed": true,
+  "xet_cache_exists_after_release": false
+}

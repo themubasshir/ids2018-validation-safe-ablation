@@ -1,0 +1,59 @@
+{
+  "checkpoint": "Stage20-1C16-A-R2",
+  "current_manifest": {
+    "path": "results/stage20_1c16_runtime_recovery/stage20_1c16a_transition_cohort_manifest_source_faithful_recovered.json",
+    "sha256": "be965c1b4be3b5e535925bf2fbad4a8f9bdc84000c83e4232fabdfda6a7343fc"
+  },
+  "historical_lost_artifact": {
+    "byte_exact_recovered": false,
+    "expected_sha256": "06082ffa231c105618c3702549edcbb68b91b8164361640d5c27a4fb5e73dcf3"
+  },
+  "holdout_integrity": {
+    "friday_openings": "0/1",
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "friday_status": "CLOSED"
+  },
+  "parent_commit": "9dd5e663caade7d4fa92e3222387edc82c23cc43",
+  "policy": {
+    "canonical_historical_name_requires_exact_hash": true,
+    "hash_preimage_search_performed": false,
+    "historical_union_forced": false,
+    "label_guided_adjustment": false
+  },
+  "recovery_status": "SCIENTIFICALLY_RECOVERED_HISTORICAL_BYTES_NOT_RECOVERED",
+  "scientific_state": {
+    "current_D_union": [
+      9,
+      10,
+      11,
+      12,
+      14
+    ],
+    "d5_exact": 635,
+    "global_changed_position_vector": {
+      "9": 354,
+      "10": 202,
+      "11": 153,
+      "12": 135,
+      "13": 44,
+      "14": 62
+    },
+    "historical_internal_D_union": [
+      9,
+      10,
+      12,
+      13,
+      14
+    ],
+    "population": 675,
+    "raw_exact": 637,
+    "transition_counts": {
+      "absent_to_absent": 17,
+      "absent_to_exact": 23,
+      "exact_to_absent": 340,
+      "exact_to_exact": 295
+    },
+    "v1_exact": 318
+  }
+}

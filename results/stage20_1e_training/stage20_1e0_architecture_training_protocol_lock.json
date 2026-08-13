@@ -1,0 +1,464 @@
+{
+  "anti_adaptation": {
+    "additional_architecture_candidate_after_lock": false,
+    "batch_size_search": false,
+    "change_compact_format_based_on_class_balance": false,
+    "change_training_population_based_on_validation_result": false,
+    "class_weight_search": false,
+    "dropout_search": false,
+    "epoch_search": false,
+    "holdout_guided_change_of_any_kind": false,
+    "learning_rate_search": false,
+    "optimizer_search": false,
+    "relax_exact_label_join_if_coverage_is_low": false,
+    "validation_guided_architecture_change": false,
+    "validation_guided_encoder_change": false,
+    "validation_guided_epoch_selection": false
+  },
+  "checkpoint": "Stage20-1E0",
+  "compact_corpus": {
+    "TRAIN_core_storage_upper_bound_bytes_before_unmatched_exclusion": 4116102319,
+    "compression_required": false,
+    "files": {
+      "encoded_bytes.bin": {
+        "bottom_padding_stored": false,
+        "contents": "CONCATENATED_MASKED_AUTHENTIC_BYTES_OF_EARLIEST_UP_TO_64_PACKETS_EACH_TRUNCATED_TO_256_BYTES",
+        "dtype": "uint8",
+        "right_padding_stored": false
+      },
+      "flow_offsets.npy": {
+        "dtype": "uint64",
+        "shape": "[N+1]",
+        "value": "BYTE_OFFSETS_INTO_encoded_bytes.bin"
+      },
+      "labels.npy": {
+        "dtype": "uint8",
+        "shape": "[N]",
+        "values": {
+          "0": "BENIGN",
+          "1": "ATTACK"
+        }
+      },
+      "manifest.json": {
+        "contains": "SOURCE_HASHES_COUNTS_JOIN_COUNTS_CLASS_COUNTS_FILE_HASHES_ENCODER_SHA"
+      },
+      "packet_lengths.npy": {
+        "dtype": "uint16",
+        "shape": "[N,64]",
+        "value": "RETAINED_AUTHENTIC_BYTE_LENGTH_PER_PACKET_ROW_ZERO_FOR_MISSING_ROWS"
+      }
+    },
+    "if_storage_gate_fails": "ABORT_WITHOUT_CHANGING_SCIENTIFIC_PROTOCOL",
+    "loader_reconstruction": {
+      "dense_image": "ZERO_64x256_UINT8_THEN_COPY_EACH_PACKET_PAYLOAD_TO_ROW_PREFIX",
+      "must_match_verified_encoder": true,
+      "padding_mask": "FALSE_64x256_BOOL_THEN_SET_ROW_PREFIX_TRUE_USING_packet_lengths",
+      "roundtrip_failure": "ABORT",
+      "roundtrip_verification_sample": "FIRST_128_SUPERVISED_FLOWS_IN_EXPORT_ORDER_PER_MATERIALIZED_SOURCE_DAY"
+    },
+    "one_directory_per_source_day": true,
+    "raw_source_policy": "ONE_FULL_PCAP_AT_A_TIME_WITH_1_GIB_OPERATIONAL_HEADROOM",
+    "raw_source_release": "ONLY_AFTER_DAY_CORPUS_MANIFEST_AND_SCIENTIFIC_AUDIT_ARE_COMMITTED_PUSHED_REMOTE_VERIFIED",
+    "upper_bound_is_operational_not_selection_metric": true
+  },
+  "execution_sequence": [
+    {
+      "action": "MATERIALIZE_AND_AUDIT_MONDAY_SUPERVISED_COMPACT_CORPUS",
+      "checkpoint": "Stage20-1E1-M"
+    },
+    {
+      "action": "MATERIALIZE_AND_AUDIT_TUESDAY_SUPERVISED_COMPACT_CORPUS",
+      "checkpoint": "Stage20-1E1-T"
+    },
+    {
+      "action": "MATERIALIZE_AND_AUDIT_WEDNESDAY_SUPERVISED_COMPACT_CORPUS",
+      "checkpoint": "Stage20-1E1-W"
+    },
+    {
+      "action": "MATERIALIZE_AND_AUDIT_THURSDAY_VALIDATION_COMPACT_CORPUS",
+      "checkpoint": "Stage20-1E1-V"
+    },
+    {
+      "action": "TRAIN_SINGLE_FROZEN_MASKED_CNN_FOR_EXACTLY_10_EPOCHS",
+      "checkpoint": "Stage20-1E2"
+    },
+    {
+      "action": "EVALUATE_THURSDAY_ONCE_AND_FREEZE_STANDARD_BALANCED_SECURITY_THRESHOLDS",
+      "checkpoint": "Stage20-1E3"
+    },
+    {
+      "action": "OPEN_FRIDAY_ONCE_AND_REPORT_FROZEN_MODEL_OPERATING_POINTS",
+      "checkpoint": "Stage20-1E4"
+    }
+  ],
+  "holdout": {
+    "day": "Friday",
+    "holdout_evaluation": "ONE_FINAL_DESCRIPTIVE_PASS",
+    "may_open_only_after": [
+      "TRAIN_COMPACT_CORPUS_COMPLETE_AND_AUDITED",
+      "THURSDAY_VALIDATION_CORPUS_COMPLETE_AND_AUDITED",
+      "EPOCH_10_MODEL_CHECKPOINT_HASH_COMMITTED_AND_REMOTE_VERIFIED",
+      "THURSDAY_PROBABILITY_HASH_COMMITTED_AND_REMOTE_VERIFIED",
+      "STANDARD_THRESHOLD_FROZEN",
+      "BALANCED_THRESHOLD_FROZEN",
+      "SECURITY_THRESHOLD_FROZEN_OR_EXPLICITLY_UNAVAILABLE",
+      "WORKTREE_CLEAN"
+    ],
+    "no_architecture_change": true,
+    "no_holdout_guided_debugging": true,
+    "no_model_retraining": true,
+    "no_representation_change": true,
+    "no_threshold_reselection": true,
+    "operating_points_evaluated": [
+      "STANDARD_0_50",
+      "BALANCED_VALIDATION_SELECTED",
+      "SECURITY_VALIDATION_SELECTED_IF_AVAILABLE"
+    ],
+    "status_now": "CLOSED"
+  },
+  "inherits": {
+    "D0": "results/stage20_1d_representation/stage20_1d0_packet_image_representation_selection_lock.json",
+    "D3": "results/stage20_1d_representation/stage20_1d3_combined_train_geometry_numeric_dimension_freeze.json",
+    "D4B": "results/stage20_1d_representation/stage20_1d4b_fixed_encoder_verification.json",
+    "encoder_path": "scripts/stage20_packet_image_encoder.py",
+    "encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222"
+  },
+  "model": {
+    "dummy_forward_output_shape": [
+      2
+    ],
+    "module_path": "scripts/stage20_masked_cnn.py",
+    "module_sha256": "3638ae622017a36e6eeb33f227135829695ff2f3581c9b43787a02c1a440b9d4",
+    "real_data_used_for_architecture_verification": false,
+    "spec": {
+      "aggregation": "MASKED_GLOBAL_AVERAGE_POOLING",
+      "architecture_candidates": 1,
+      "architecture_search": false,
+      "blocks": [
+        {
+          "activation": "ReLU",
+          "conv": "Conv2d(1,32,kernel=3,stride=1,padding=1,bias=False)",
+          "mask_update": "MaxPool2d(mask,2,2)",
+          "norm": "GroupNorm(8,32)",
+          "pool": "MaxPool2d(2,2)",
+          "post_pool_gate": true
+        },
+        {
+          "activation": "ReLU",
+          "conv": "Conv2d(32,64,kernel=3,stride=1,padding=1,bias=False)",
+          "mask_update": "MaxPool2d(mask,2,2)",
+          "norm": "GroupNorm(8,64)",
+          "pool": "MaxPool2d(2,2)",
+          "post_pool_gate": true
+        },
+        {
+          "activation": "ReLU",
+          "conv": "Conv2d(64,128,kernel=3,stride=1,padding=1,bias=False)",
+          "mask_update": "MaxPool2d(mask,2,2)",
+          "norm": "GroupNorm(8,128)",
+          "pool": "MaxPool2d(2,2)",
+          "post_pool_gate": true
+        }
+      ],
+      "classifier": "Linear(128,1)",
+      "dropout": 0.25,
+      "expected_trainable_parameters": 93025,
+      "image_input": {
+        "dtype_on_storage": "uint8",
+        "scaling": "float32_divide_255",
+        "shape": "[B,1,64,256]"
+      },
+      "initialization": {
+        "conv": "KAIMING_NORMAL_FAN_OUT_RELU",
+        "groupnorm_bias": 0.0,
+        "groupnorm_weight": 1.0,
+        "linear": "XAVIER_UNIFORM",
+        "linear_bias": 0.0
+      },
+      "name": "Stage20MaskedCNNv1",
+      "output": "ONE_LOGIT_ATTACK_POSITIVE",
+      "padding_mask_input": {
+        "concatenated_as_second_byte_channel": false,
+        "dtype": "bool",
+        "role": "AUXILIARY_GATING_AND_MASKED_POOLING_ONLY",
+        "shape": "[B,1,64,256]"
+      }
+    },
+    "verified_trainable_parameters": 93025
+  },
+  "next_checkpoint": "Stage20-1E1-M",
+  "parent_commit": "3777fdfa60543d601a41074f0ef93c7cd46876d4",
+  "pcap_source": {
+    "files": {
+      "Friday": "pcap/Friday-WorkingHours.pcap",
+      "Monday": "pcap/Monday-WorkingHours.pcap",
+      "Thursday": "pcap/Thursday-WorkingHours.pcap",
+      "Tuesday": "pcap/Tuesday-WorkingHours.pcap",
+      "Wednesday": "pcap/Wednesday-workingHours.pcap"
+    },
+    "repo_type": "dataset",
+    "repository": "bvsam/cic-ids-2017",
+    "revision": "e810c1cc98270ec271a1df917b9de0786c33f343"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "PCAP_files_opened": 0,
+    "Thursday_accessed": false,
+    "architecture_frozen": true,
+    "class_balance_observed": false,
+    "downloads_started": 0,
+    "model_forward_on_real_data": false,
+    "model_training": false,
+    "optimizer_steps": 0,
+    "source_packet_bytes_read": 0,
+    "supervised_flow_counts_observed": false,
+    "traffic_label_files_opened": 0,
+    "training_protocol_frozen": true
+  },
+  "split_policy": {
+    "HOLDOUT": [
+      "Friday"
+    ],
+    "TRAIN": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "VALIDATION": [
+      "Thursday"
+    ],
+    "architecture_selection_source": "NONE_AFTER_THIS_LOCK",
+    "holdout_role": "FINAL_DESCRIPTIVE_EVALUATION_ONLY",
+    "retrain_on_train_plus_validation_after_threshold_selection": false,
+    "threshold_selection_source": "VALIDATION_ONLY",
+    "training_source": "TRAIN_ONLY"
+  },
+  "status": "ARCHITECTURE_AND_TRAINING_PROTOCOL_FROZEN_BEFORE_LABEL_ACCESS_AND_MODEL_TRAINING",
+  "supervised_join": {
+    "attack_category_used_for_training": false,
+    "duplicate_signature_rule": {
+      "binary_label_must_be_unique_within_signature": true,
+      "excess_published_occurrences": "REPORTED_BUT_NEVER_SYNTHESIZE_A_FLOW",
+      "excess_reconstructed_occurrences": "UNLABELED_AND_EXCLUDED",
+      "if_signature_contains_both_binary_labels": "FAIL_CHECKPOINT",
+      "published_signature_multiplicity": "EXACT_COUNT",
+      "reconstructed_flow_consumption": "ONE_PUBLISHED_OCCURRENCE_PER_EXACT_MATCH"
+    },
+    "fields": [
+      "Source IP",
+      "Source Port",
+      "Destination IP",
+      "Destination Port",
+      "Protocol",
+      "Timestamp",
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length Fwd",
+      "Total Length Bwd",
+      "Fwd Len Min",
+      "Fwd Len Max",
+      "Bwd Len Min",
+      "Bwd Len Max",
+      "FIN",
+      "SYN",
+      "RST",
+      "PSH",
+      "ACK",
+      "URG"
+    ],
+    "fuzzy_matching": false,
+    "label_guided_repair": false,
+    "label_library": "DUCKDB_NATIVE_PARQUET_NO_PANDAS_REQUIRED",
+    "matching": "EXACT_ONLY",
+    "nearest_matching": false,
+    "null_or_empty_label": "FAIL",
+    "posthoc_signature_modification": false,
+    "published_label_binary_mapping": {
+      "ANY_NON_BENIGN_NONEMPTY_LABEL": 1,
+      "BENIGN": 0
+    },
+    "signature": "FROZEN_DIRECTED_S4_EXACT_21_FIELD_SIGNATURE",
+    "supervised_population": "ONLY_SOURCE_FAITHFUL_EXPORTABLE_FLOWS_WITH_AVAILABLE_EXACT_S4_PUBLISHED_LABEL_OCCURRENCE",
+    "tolerance_matching": false
+  },
+  "traffic_label_source": {
+    "HOLDOUT": {
+      "Friday": [
+        {
+          "path": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+          "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+          "size_bytes": 21999571
+        },
+        {
+          "path": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+          "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+          "size_bytes": 23048086
+        },
+        {
+          "path": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+          "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+          "size_bytes": 18632427
+        }
+      ]
+    },
+    "TRAIN": {
+      "Monday": [
+        {
+          "path": "traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+          "sha256": "dfdcef4b8670e52af54dc4f82174834365a393473e877174cca46d17b12dfd02",
+          "size_bytes": 65465382
+        }
+      ],
+      "Tuesday": [
+        {
+          "path": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+          "sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+          "size_bytes": 52701751
+        }
+      ],
+      "Wednesday": [
+        {
+          "path": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+          "sha256": "d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140",
+          "size_bytes": 76512727
+        }
+      ]
+    },
+    "VALIDATION": {
+      "Thursday": [
+        {
+          "path": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+          "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+          "size_bytes": 19674280
+        },
+        {
+          "path": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+          "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+          "size_bytes": 27901448
+        }
+      ]
+    },
+    "repo_type": "dataset",
+    "repository": "bvsam/cic-ids-2017",
+    "revision": "b7e532345512edcd530cb1770dc76636aeb52802"
+  },
+  "training": {
+    "architecture_search": false,
+    "augmentation": "NONE",
+    "automatic_mixed_precision": false,
+    "batch_size": 256,
+    "determinism": {
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "numpy_seed": 42,
+      "python_seed": 42,
+      "torch_cuda_seed_all": 42,
+      "torch_seed": 42,
+      "torch_use_deterministic_algorithms": true
+    },
+    "drop_last": false,
+    "early_stopping": false,
+    "epoch_count_is_fixed": true,
+    "epoch_shuffle": {
+      "epoch_seed": "42_PLUS_ZERO_BASED_EPOCH_INDEX",
+      "permutation": "NUMPY_DEFAULT_RNG_PCG64_PERMUTATION",
+      "sampling": "WITHOUT_REPLACEMENT_EACH_EPOCH",
+      "scope": "VIRTUAL_CONCATENATION_MONDAY_THEN_TUESDAY_THEN_WEDNESDAY"
+    },
+    "epochs": 10,
+    "final_model_weights": "EPOCH_10",
+    "framework": "PYTORCH",
+    "gradient_clipping": {
+      "max_norm": 5.0,
+      "norm_type": 2.0
+    },
+    "hyperparameter_search": false,
+    "loss": {
+      "if_either_class_count_zero": "ABORT",
+      "name": "BCEWithLogitsLoss",
+      "pos_weight_formula": "TRAIN_BENIGN_COUNT_DIVIDED_BY_TRAIN_ATTACK_COUNT",
+      "pos_weight_statistics_source": "TRAIN_LABELS_ONLY"
+    },
+    "negative_class": "BENIGN",
+    "num_workers": 0,
+    "optimizer": {
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "learning_rate": 0.001,
+      "name": "AdamW",
+      "weight_decay": 0.0001
+    },
+    "positive_class": "ATTACK",
+    "precision": "FLOAT32",
+    "restarts_selected_by_validation": false,
+    "scheduler": "NONE",
+    "seed": 42,
+    "training_fail_conditions": [
+      "NONFINITE_LOSS",
+      "NONFINITE_GRADIENT_NORM",
+      "NONFINITE_MODEL_PARAMETER"
+    ],
+    "validation_during_training_epochs": false
+  },
+  "validation": {
+    "architecture_changes_after_validation": false,
+    "balanced_operating_point": {
+      "objective": "MAXIMUM_VALIDATION_F1",
+      "tie_break_order": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "CLOSER_TO_0_50",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "dimension_changes_after_validation": false,
+    "masking_changes_after_validation": false,
+    "metrics": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1",
+      "F2",
+      "FPR",
+      "FNR",
+      "TP",
+      "TN",
+      "FP",
+      "FN",
+      "ROC_AUC",
+      "PR_AUC"
+    ],
+    "model_checkpoint": "FIXED_EPOCH_10_WEIGHTS",
+    "probability": "SIGMOID_LOGIT",
+    "requires_both_binary_classes": true,
+    "security_operating_point": {
+      "constraint": "FPR_LE_0_05",
+      "if_no_threshold_satisfies_constraint": "SECURITY_OPERATING_POINT_UNAVAILABLE_NO_RELAXATION",
+      "objective": "MAXIMUM_VALIDATION_F2",
+      "tie_break_order": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "standard_operating_point": {
+      "selection": "FIXED_DESCRIPTIVE",
+      "threshold": 0.5
+    },
+    "threshold_grid": {
+      "count": 91,
+      "exact_generation": "INTEGER_5_THROUGH_95_DIVIDED_BY_100",
+      "start": 0.05,
+      "step": 0.01,
+      "stop": 0.95
+    },
+    "training_hyperparameter_changes_after_validation": false,
+    "validation_source": "THURSDAY_ONLY",
+    "validation_used_during_training": false,
+    "zero_division_for_precision_recall_f_scores": 0
+  }
+}

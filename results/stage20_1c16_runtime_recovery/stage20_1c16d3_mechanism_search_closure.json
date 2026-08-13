@@ -1,0 +1,60 @@
+{
+  "candidate_results": {
+    "M1_GT_CAPTURE_BEYOND_DECLARED_IPV4": {
+      "candidate_consumed": true,
+      "decision": "PASS_COMPLETE_MECHANISM",
+      "population": 4930,
+      "requirement_1_pass": true,
+      "requirement_2_pass": true
+    },
+    "M2_LT_CAPTURE_SHORTER_THAN_DECLARED_IPV4": {
+      "candidate_consumed": true,
+      "decision": "PASS_COMPLETE_MECHANISM",
+      "population": 163,
+      "requirement_1_pass": true,
+      "requirement_2_pass": true
+    }
+  },
+  "checkpoint": "Stage20-1C16-D3",
+  "closure_outcome": "BOTH_PRE_REGISTERED_MECHANISMS_PASS",
+  "frozen_stopping_rule_source": "results/stage20_1c16_runtime_recovery/stage20_1c16d0_mechanism_search_budget_lock.json",
+  "holdout_integrity": {
+    "friday_openings": "0/1",
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "friday_status": "CLOSED"
+  },
+  "important_boundary": {
+    "further_mechanism_candidates_allowed": false,
+    "hybrid_capture_declared_rule_adopted": false,
+    "label_guided_selection_allowed": false,
+    "mechanism_search_complete": true,
+    "model_training_allowed_now": false,
+    "published_label_reconstruction_rule_adopted": false,
+    "residual_only_rule_allowed": false,
+    "v1_adopted": false
+  },
+  "mechanism_budget": {
+    "candidate_expansion_allowed": false,
+    "candidate_substitution_allowed": false,
+    "consumed": 2,
+    "frozen_total": 2,
+    "remaining": 0,
+    "third_candidate_allowed": false
+  },
+  "next_phase": {
+    "must_freeze_before_training": [
+      "packets_per_flow",
+      "bytes_per_packet",
+      "channels",
+      "padding_policy",
+      "truncation_policy",
+      "header_policy",
+      "leakage_controls"
+    ],
+    "name": "PACKET_IMAGE_REPRESENTATION_FREEZE"
+  },
+  "parent_commit": "8a6e6320bc8420124cbf79e2c87b0e58ab8d605e",
+  "representability_statement": "Within the bounded first-50,000-packet Monday development reconstruction, every packet-level baseline/V1 TCP payload disagreement is exactly accounted for by captured IPv4 extent being either beyond or shorter than the declared IPv4 total length.",
+  "status": "MECHANISM_SEARCH_CLOSED"
+}

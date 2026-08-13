@@ -1,0 +1,51 @@
+{
+  "cache_release": {
+    "blob_exists_after_release": false,
+    "empty_directories_removed": [
+      "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap",
+      "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343"
+    ],
+    "remaining_monday_size_objects": [],
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Monday-WorkingHours.pcap",
+    "snapshot_was_symlink": true,
+    "xet_cache_existed": true,
+    "xet_cache_exists_after_release": false
+  },
+  "checkpoint": "Stage20-1D4-B-DELETE",
+  "encoder_module": {
+    "path": "scripts/stage20_packet_image_encoder.py",
+    "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222"
+  },
+  "next_phase": "ARCHITECTURE_AND_TRAINING_PROTOCOL_FREEZE_BEFORE_ANY_MODEL_TRAINING",
+  "representation_state": {
+    "architecture_selected": false,
+    "encoder_implementation_committed": true,
+    "encoder_verified": true,
+    "model_training": false,
+    "numeric_geometry_frozen": true
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "labels_read": false
+  },
+  "source_identity": {
+    "remote_filename": "pcap/Monday-WorkingHours.pcap",
+    "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+    "sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "size_bytes": 10822507416,
+    "verified_before_verification": true
+  },
+  "status": "MONDAY_RAW_CACHE_RELEASED_AFTER_ENCODER_VERIFICATION_DURABILITY",
+  "verification_artifact": "results/stage20_1d_representation/stage20_1d4b_fixed_encoder_verification.json",
+  "verification_artifact_sha256": "2f7463648acccef54c440b0c33970665cc4728a3b92326cfa926776895efef28",
+  "verification_commit": "5f12a66e3bb70d26a201d465a0cf08f1032053b6",
+  "workspace": {
+    "disk_values_used_for_scientific_selection": false,
+    "free_bytes_after_release": 20006191104,
+    "free_bytes_before_release": 9183653888,
+    "free_space_delta_bytes": 10822537216
+  }
+}

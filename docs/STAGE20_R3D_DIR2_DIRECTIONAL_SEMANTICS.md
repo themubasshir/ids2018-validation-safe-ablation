@@ -4,71 +4,70 @@
 
 **DIAGNOSTIC ONLY — NO SCIENTIFIC RULE CHANGE**
 
-Parent HEAD before this checkpoint:
+## Persistence correction
 
-`88f2c182764795785b29fb02b80056f9157b211c`
+Commit `8c531ae8da941e2dc928689215bfbeb225544dce` correctly preserved the DIR2 directional
+diagnostic, but its generated population summary incorrectly recorded
+D5 source-faithful accepted membership as 637/675.
 
-## Current runtime result
+That persistence-layer statement is corrected here.
 
-The source-faithful reconstruction currently produces the following
-zero-based S4 changed-position counts under frozen TCP payload V1:
+The scientific distinction is:
 
-| S4 position | Current | Earlier internal vector | Delta |
-|---:|---:|---:|---:|
-| 9  | 354 | 352 | +2 |
-| 10 | 202 | 204 | -2 |
-| 11 | 153 | 151 | +2 |
-| 12 | 135 | 135 | 0 |
-| 13 | 44  | 46  | -2 |
-| 14 | 62  | 64  | -2 |
+- raw historical C9/C11 exact S4 membership: **637/675**
+- D5 source-faithful accepted membership: **635/675**
+- V1 exact S4 membership: **318/675**
 
-Current changed-field total: **950**
+D5 reclassifies reconstructed flow indices **471** and **473** as
+duration/export inconsistencies. Their reconstructed signatures are not
+modified and no label duration is substituted.
 
-Earlier internal-vector total: **952**
+## D5 -> V1 transition matrix
 
-## Pattern diagnostic
+- exact -> exact: **295**
+- exact -> absent: **340**
+- absent -> exact: **23**
+- absent -> absent: **17**
 
-Changed-position pattern `(9, 11, 12)`:
+## Directional diagnostic
 
-- count: **90**
-- indices: `[0, 1, 2, 3, 4, 5, 6, 7, 30, 33, 80, 81, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 206, 242, 312, 313, 330, 371, 373, 383, 386, 388, 390, 440, 479, 482, 496, 509, 536, 537, 539, 542, 553, 554, 556, 567, 578, 604, 607, 609, 611, 613, 615, 626, 627, 637, 638, 653, 659, 664, 665, 666, 668, 670, 672]`
+Current zero-based S4 changed-position counts:
 
-Changed-position pattern `(10, 12, 13, 14)`:
+| Position | Count |
+|---:|---:|
+| 9 | 354 |
+| 10 | 202 |
+| 11 | 153 |
+| 12 | 135 |
+| 13 | 44 |
+| 14 | 62 |
 
-- count: **0**
+Changed signatures: **379**
 
-## Historical timeout-constructor orientation diagnostic
+Changed-field total: **950**
 
-Changed flows whose first retained packet source differs from the
-final stored BasicFlow source orientation:
+The `(9, 11, 12)` pattern occurs in **90** flows.
+
+Changed flows whose first retained packet source differs from final
+stored BasicFlow source orientation:
 
 `[471, 473]`
 
-Count: **2**
+Their intersection with the `(9, 11, 12)` population is empty.
 
-Intersection with the `(9, 11, 12)` population:
+Therefore the earlier two-flow directional hypothesis remains
+**unsupported**.
 
-`[]`
+No payload rule, lifecycle rule, matching rule, or label value is
+changed by this diagnostic.
 
-Therefore the earlier hypothesis that exactly two timeout-replacement
-flows explain the aggregate changed-position discrepancy is **not
-supported**.
-
-No reconstruction rule is changed at this checkpoint.
-
-## Major runtime checkpoints
-
-- raw historical exact S4: **637/675**
-- D5 source-faithful accepted: **637/675**
-- V1 exact S4: **318/675**
-
-## Artifact
+## Machine-readable artifact
 
 `results/stage20_1c16_runtime_recovery/stage20_r3d_dir2_directional_semantics.json`
 
 SHA256:
 
-`e8631b7eb82b60b028d7bb22218d673c0d209501b2f4dd55eaa54c785ed5823d`
+`a6e528bd7b4643d66699e104ad7ba6144ba4bd642e18b47f5c031a169946054e`
 
 ## Holdout integrity
 

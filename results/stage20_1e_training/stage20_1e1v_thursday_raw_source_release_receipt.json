@@ -1,0 +1,85 @@
+{
+  "checkpoint": "Stage20-1E1-V-DELETE",
+  "label_releases": [
+    {
+      "blob_exists_after_release": false,
+      "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+      "snapshot_exists_after_release": false,
+      "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    },
+    {
+      "blob_exists_after_release": false,
+      "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+      "snapshot_exists_after_release": false,
+      "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    }
+  ],
+  "local_compact_corpus_directory": "/kaggle/working/stage20_compact_corpus/Thursday",
+  "local_compact_corpus_preserved": true,
+  "manifest_sha256": "93419837e38a7fea5ef9e183bdd78ceb9d719588c725bd2d1a3d91355cfffb04",
+  "next_checkpoint": "Stage20-1E2",
+  "pcap_release": {
+    "blob_exists_after_release": false,
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/38f8b1bb276849bf1721f7c4de22bebfa7f59a74e52286d4c0a37edbb118fe01",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Thursday-WorkingHours.pcap",
+    "snapshot_was_symlink": true
+  },
+  "release_source_reverification": {
+    "pcap": {
+      "sha256": "38f8b1bb276849bf1721f7c4de22bebfa7f59a74e52286d4c0a37edbb118fe01",
+      "size_bytes": 8302500180,
+      "verified": true
+    },
+    "traffic_labels": [
+      {
+        "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+        "size_bytes": 19674280,
+        "verified": true
+      },
+      {
+        "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+        "size_bytes": 27901448,
+        "verified": true
+      }
+    ]
+  },
+  "remaining_exact_source_size_objects": [],
+  "science_commit": "313f881319fab75a42c28cf271e042d26bb6f898",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Friday_status": "CLOSED",
+    "Monday_corpus_complete": true,
+    "Thursday_accessed": true,
+    "Thursday_corpus_complete": true,
+    "Thursday_model_evaluation_performed": false,
+    "Thursday_threshold_selection_performed": false,
+    "Tuesday_corpus_complete": true,
+    "Wednesday_corpus_complete": true,
+    "model_training": false,
+    "optimizer_steps": 0
+  },
+  "source_ingestion_erratum": {
+    "actual_record_null_rule_changed": false,
+    "afternoon_effective_records": 288602,
+    "applied": true,
+    "artifact_path": "results/stage20_1e_training/stage20_1e1v_thursday_label_source_ingestion_erratum.json",
+    "effective_thursday_label_records": 458968,
+    "join_rule_changed": false,
+    "morning_effective_records": 170366,
+    "morning_structural_null_padding_rows": 288602
+  },
+  "status": "THURSDAY_RAW_PCAP_AND_LABEL_CACHE_RELEASED_AFTER_VALIDATION_CORPUS_SCIENCE_DURABILITY",
+  "workspace": {
+    "free_bytes_after_release": 19381186560,
+    "free_bytes_before_release": 11031076864,
+    "space_reclaimed_bytes": 8350109696,
+    "storage_values_used_for_scientific_selection": false
+  },
+  "xet_cache_existed": true,
+  "xet_cache_exists_after_release": false
+}

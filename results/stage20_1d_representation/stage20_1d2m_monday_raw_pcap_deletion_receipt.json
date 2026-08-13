@@ -1,0 +1,37 @@
+{
+  "checkpoint": "Stage20-1D2-M-DELETE",
+  "deleted_source": {
+    "existed_immediately_before_delete": true,
+    "exists_after_delete": false,
+    "expected_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "expected_size_bytes": 10822507416,
+    "path": "/kaggle/working/stage20_development_sources/pcap/Monday-WorkingHours.pcap",
+    "verified_before_profile": true,
+    "was_symlink": false
+  },
+  "deletion_safety": {
+    "profile_committed_before_delete": true,
+    "profile_pushed_before_delete": true,
+    "profile_remote_sha_verified_before_delete": true,
+    "worktree_clean_before_delete": true
+  },
+  "next_checkpoint": "Stage20-1D2-T",
+  "scientific_profile_artifact": "results/stage20_1d_representation/stage20_1d2m_monday_exact_geometry_profile.json",
+  "scientific_profile_commit": "b07153c7107a9dd0f875a88290ac418e9081d368",
+  "scientific_profile_sha256": "3a26d6499334c12ea4e9272aef4250761c6cf4399e7fb4d33ef236f12d0b7272",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "daily_p95_computed": false,
+    "labels_read": false,
+    "model_training": false,
+    "numeric_dimensions_selected": false
+  },
+  "status": "MONDAY_RAW_PCAP_DELETED_AFTER_REMOTE_PROFILE_DURABILITY",
+  "workspace": {
+    "disk_values_used_for_scientific_selection": false,
+    "free_bytes_after_delete": 9184768000,
+    "free_bytes_before_delete": 9184768000,
+    "free_space_delta_bytes": 0
+  }
+}

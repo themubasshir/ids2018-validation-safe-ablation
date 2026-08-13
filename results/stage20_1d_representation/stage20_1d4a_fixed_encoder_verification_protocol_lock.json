@@ -1,0 +1,255 @@
+{
+  "acceptance_criteria": {
+    "failure_behavior": "STOP_ENCODER_FREEZE_NO_ARCHITECTURE_NO_TRAINING",
+    "real_train_sample": {
+      "encode_each_flow_twice": true,
+      "exact_sample_count": 16,
+      "image_byte_identity_between_repeats": true,
+      "padding_audit": "ALL_NONAUTHENTIC_OUTPUT_POSITIONS_ZERO_WITH_MASK_FALSE",
+      "padding_mask_identity_between_repeats": true,
+      "per_flow_image_sha256_identity_between_repeats": true,
+      "per_flow_padding_mask_sha256_identity_between_repeats": true,
+      "real_sample_mask_audit": "ALL_EXPECTED_MASKED_RETAINED_POSITIONS_ZERO_AND_AUTHENTIC",
+      "real_sample_unmasked_audit": "ALL_RETAINED_UNMASKED_POSITIONS_EQUAL_SOURCE_BYTES"
+    },
+    "synthetic_tests": {
+      "all_fixtures_must_pass": true,
+      "authentic_padding_mask_exact": true,
+      "earliest_byte_truncation_exact": true,
+      "earliest_packet_truncation_exact": true,
+      "image_dtype_exact": "uint8",
+      "image_shape_exact": [
+        64,
+        256
+      ],
+      "masked_fields_exactly_zero": true,
+      "padding_mask_dtype_exact": "bool",
+      "padding_mask_shape_exact": [
+        64,
+        256
+      ],
+      "unmasked_retained_bytes_exactly_unchanged": true
+    }
+  },
+  "anti_adaptation": {
+    "change_dimensions_after_test_failure": false,
+    "change_masking_after_test_failure": false,
+    "change_padding_after_test_failure": false,
+    "change_real_sample_after_observing_pixels": false,
+    "change_sample_size_after_observing_pixels": false,
+    "change_truncation_after_test_failure": false,
+    "select_only_convenient_protocols": false,
+    "select_only_nontruncated_flows": false,
+    "select_only_truncated_flows": false,
+    "use_holdout_to_debug_encoder": false,
+    "use_validation_to_debug_encoder": false
+  },
+  "checkpoint": "Stage20-1D4-A",
+  "encoder_algorithm": {
+    "input": {
+      "packet_bytes": "CAPTURED_IPV4_BYTES_BEGINNING_AT_IPV4_BYTE_0",
+      "packet_order": "ORIGINAL_CAPTURE_ORDER",
+      "unit": "ONE_SOURCE_FAITHFUL_EXPORTABLE_FLOW"
+    },
+    "masking": {
+      "direct_tcp_offsets_relative_to_transport_start": {
+        "acknowledgement_number": [
+          8,
+          12
+        ],
+        "checksum": [
+          16,
+          18
+        ],
+        "sequence_number": [
+          4,
+          8
+        ]
+      },
+      "direct_transport_definition": {
+        "TCP": "IPv4 raw protocol 6 AND fragment_offset == 0 AND captured bytes contain at least 20 transport bytes",
+        "UDP": "IPv4 raw protocol 17 AND fragment_offset == 0 AND captured bytes contain at least 8 transport bytes",
+        "otherwise": "NO_TRANSPORT_HEADER_MASK_BEYOND_IPV4_FIXED_MASKS"
+      },
+      "direct_udp_offsets_relative_to_transport_start": {
+        "checksum": [
+          6,
+          8
+        ]
+      },
+      "ipv4_fixed_offsets": {
+        "destination_address": [
+          16,
+          20
+        ],
+        "header_checksum": [
+          10,
+          12
+        ],
+        "identification": [
+          4,
+          6
+        ],
+        "source_address": [
+          12,
+          16
+        ]
+      },
+      "mask_before_truncation": true,
+      "mask_value_uint8": 0,
+      "masked_positions_remain_authentic_in_padding_mask": true,
+      "transport_start": "IPV4_IHL_WORDS_TIMES_4"
+    },
+    "model_boundary": {
+      "model_scaling": "float(image) / 255.0",
+      "scaling_part_of_storage_encoder": false,
+      "stored_image": "uint8"
+    },
+    "operation_order": [
+      "TAKE_EARLIEST_UP_TO_64_PACKETS",
+      "FOR_EACH_RETAINED_PACKET_COPY_AUTHENTIC_CAPTURED_IPV4_BYTES",
+      "APPLY_FROZEN_HEADER_MASKS_TO_AUTHENTIC_PACKET_BYTES",
+      "KEEP_EARLIEST_UP_TO_256_IPV4_BYTES",
+      "MARK_AUTHENTIC_RETAINED_BYTE_POSITIONS_TRUE_IN_PADDING_MASK",
+      "RIGHT_ZERO_PAD_REMAINDER_OF_EACH_PACKET_ROW",
+      "BOTTOM_ZERO_PAD_MISSING_PACKET_ROWS"
+    ],
+    "output": {
+      "channels": 1,
+      "image_dtype": "uint8",
+      "image_shape": [
+        64,
+        256
+      ],
+      "padding_mask_dtype": "bool",
+      "padding_mask_shape": [
+        64,
+        256
+      ]
+    },
+    "padding_mask": {
+      "authentic_zero_byte_is_true": true,
+      "false": "RIGHT_PADDING_OR_BOTTOM_FLOW_PADDING",
+      "independent_of_byte_value": true,
+      "masked_authentic_byte_is_true": true,
+      "true": "AUTHENTIC_CAPTURED_IPV4_BYTE_POSITION_RETAINED_IN_OUTPUT"
+    },
+    "truncation": {
+      "byte_columns": 256,
+      "byte_policy": "KEEP_EARLIEST_IPV4_BYTES",
+      "packet_policy": "KEEP_EARLIEST_PACKETS",
+      "packet_rows": 64
+    }
+  },
+  "execution_policy": {
+    "acquire_only": "Monday",
+    "create_second_full_working_copy": false,
+    "delete_scientific_artifacts": false,
+    "disable_xet_chunk_cache": true,
+    "release_monday_snapshot_and_blob_after_remote_verification": true,
+    "scientific_verification_artifacts_must_be_remotely_durable_before_raw_cache_release": true,
+    "stop_packet_scan_after": "FIRST_16_EXPORTABLE_FLOWS_HAVE_BEEN_COLLECTED",
+    "use_hf_cache_object_directly": true,
+    "verify_source_sha256_before_use": true,
+    "verify_source_size_before_use": true
+  },
+  "frozen_numeric_geometry": {
+    "area": 16384,
+    "channels": 1,
+    "columns": 256,
+    "rows": 64
+  },
+  "inherits": {
+    "numeric_dimension_freeze": "results/stage20_1d_representation/stage20_1d3_combined_train_geometry_numeric_dimension_freeze.json",
+    "representation_selection_lock": "results/stage20_1d_representation/stage20_1d0_packet_image_representation_selection_lock.json"
+  },
+  "next_checkpoint": "Stage20-1D4-B",
+  "parent_commit": "314c128a0fe2091bd0784a8e904efe6435af925c",
+  "real_train_sample_plan": {
+    "day": "Monday",
+    "flow_id_semantics": "BASICPACKETINFO_JAVA_SIGNED_IPV4_FIRST_DIFFERING_BYTE_SWAP_IPS_AND_PORTS_TOGETHER",
+    "flow_population": "SOURCE_FAITHFUL_EXPORTABLE_FLOWS",
+    "historical_lifecycle": {
+      "eof_current_flow_export": "EXPORT_IFF_PACKET_COUNT_GT_1",
+      "existing_flow_fin": "ADD_PACKET_EXPORT_REMOVE",
+      "flow_timeout_us": 120000000,
+      "new_fin_first": "CREATE_FLOW_WITHOUT_IMMEDIATE_EXPORT",
+      "rst_termination": false,
+      "timeout_current_packet": "SEEDS_REPLACEMENT_FLOW",
+      "timeout_old_flow_export": "EXPORT_IFF_PACKET_COUNT_GT_1"
+    },
+    "parser_semantics": "STAGE20_FROZEN_IPV4_DIRECT_TRANSPORT_TCP6_UDP17_OTHER0",
+    "sample_size": 16,
+    "selection_independent_of": [
+      "label",
+      "attack_identity",
+      "protocol",
+      "flow_size",
+      "packet_size",
+      "encoder_output",
+      "padding_amount",
+      "truncation_amount",
+      "pixel_hash",
+      "model_performance"
+    ],
+    "selection_rule": "FIRST_16_EXPORTABLE_FLOWS_IN_HISTORICAL_EXPORT_ORDER",
+    "source": {
+      "remote_filename": "pcap/Monday-WorkingHours.pcap",
+      "repo_id": "bvsam/cic-ids-2017",
+      "repo_type": "dataset",
+      "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+      "sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+      "size_bytes": 10822507416
+    },
+    "split": "TRAIN"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "architecture_selected": false,
+    "downloads_started": 0,
+    "labels_read": false,
+    "model_training": false,
+    "numeric_dimensions_changed": false,
+    "pcap_files_opened": 0,
+    "pcap_packet_bytes_read": 0,
+    "real_encoder_tests_executed": false,
+    "real_sample_flows_observed": 0,
+    "synthetic_encoder_tests_executed": false
+  },
+  "status": "FIXED_PACKET_IMAGE_ENCODER_VERIFICATION_PROTOCOL_FROZEN",
+  "synthetic_fixture_plan": [
+    {
+      "id": "SYN_TCP_STANDARD_IHL",
+      "purpose": "Verify IPv4 ID/checksum/address masks plus TCP seq/ack/checksum masks while ports/flags/window/payload remain unchanged."
+    },
+    {
+      "id": "SYN_UDP_STANDARD_IHL",
+      "purpose": "Verify IPv4 masks plus UDP checksum mask while ports and payload remain unchanged."
+    },
+    {
+      "id": "SYN_IPV4_OTHER_PROTOCOL",
+      "purpose": "Verify only IPv4 fixed masks apply when there is no direct TCP/UDP transport."
+    },
+    {
+      "id": "SYN_NONINITIAL_TCP_FRAGMENT",
+      "purpose": "Verify IPv4 protocol 6 in a non-initial fragment does not trigger TCP transport masking."
+    },
+    {
+      "id": "SYN_TCP_IPV4_OPTIONS_IHL24",
+      "purpose": "Verify TCP mask offsets are derived dynamically from IPv4 IHL."
+    },
+    {
+      "id": "SYN_AUTHENTIC_ZERO_VS_PADDING",
+      "purpose": "Verify an authentic zero-valued byte has mask=True while right/bottom padding has mask=False."
+    },
+    {
+      "id": "SYN_BYTE_TRUNCATION_300_TO_256",
+      "purpose": "Verify earliest 256 IPv4 bytes are retained and later bytes are excluded."
+    },
+    {
+      "id": "SYN_ROW_TRUNCATION_70_TO_64",
+      "purpose": "Verify earliest 64 packets are retained in original order and final six are excluded."
+    }
+  ]
+}

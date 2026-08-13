@@ -1,0 +1,87 @@
+{
+  "checkpoint": "Stage20-1D2-M-S1",
+  "deleted_open_files": [],
+  "df_working": "Filesystem       1B-blocks        Used  Available Use% Mounted on\n/dev/loop1     20957446144 11755958272 9184710656  57% /kaggle/working",
+  "diagnosis": "MONDAY_SIZED_OBJECT_STILL_PRESENT_ELSEWHERE",
+  "du_working": "11752614137\t/kaggle/working",
+  "exact_monday_size_candidates": [
+    {
+      "device": 1793,
+      "hardlink_count": 1,
+      "inode": 786458,
+      "path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+      "size_bytes": 10822507416,
+      "size_gib": 10.079
+    },
+    {
+      "device": 1793,
+      "hardlink_count": 1,
+      "inode": 786458,
+      "path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Monday-WorkingHours.pcap",
+      "size_bytes": 10822507416,
+      "size_gib": 10.079
+    }
+  ],
+  "huggingface_cache_summary": [
+    {
+      "apparent_bytes": 28002989,
+      "apparent_gib": 0.026,
+      "file_count": 1,
+      "path": "/root/.cache/huggingface"
+    }
+  ],
+  "large_files": [
+    {
+      "device": 1793,
+      "hardlink_count": 1,
+      "inode": 786458,
+      "path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+      "size_bytes": 10822507416,
+      "size_gib": 10.079
+    },
+    {
+      "device": 1793,
+      "hardlink_count": 1,
+      "inode": 786458,
+      "path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Monday-WorkingHours.pcap",
+      "size_bytes": 10822507416,
+      "size_gib": 10.079
+    }
+  ],
+  "matching_monday_size_open_deleted": [],
+  "monday_profile": {
+    "frozen_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "frozen_size_bytes": 10822507416,
+    "original_path_exists": false,
+    "profile_commit": "b07153c7107a9dd0f875a88290ac418e9081d368",
+    "profile_sha256": "3a26d6499334c12ea4e9272aef4250761c6cf4399e7fb4d33ef236f12d0b7272",
+    "scientifically_durable": true
+  },
+  "next_step": "Resolve storage retention only if Tuesday space gate is false; do not alter Monday scientific profile.",
+  "parent_commit": "8b680b4c98173bd0a64dc3ec5daa267c341f9f7e",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "downloads_started": 0,
+    "files_deleted": 0,
+    "geometry_profiled": false,
+    "labels_read": false,
+    "model_training": false,
+    "numeric_dimensions_selected": false,
+    "p95_computed": false,
+    "pcap_packet_bytes_read": 0
+  },
+  "status": "MONDAY_STORAGE_RELEASE_DIAGNOSED",
+  "tuesday_space_gate": {
+    "current_free_bytes": 9184710656,
+    "download_safe_now": false,
+    "required_free_bytes": 12122025432,
+    "safety_headroom_bytes": 1073741824,
+    "tuesday_expected_size_bytes": 11048283608
+  },
+  "workspace": {
+    "free_bytes": 9184710656,
+    "total_bytes": 20957446144,
+    "used_bytes": 11755958272
+  }
+}

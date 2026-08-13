@@ -1,0 +1,209 @@
+{
+  "aggregation_policy": {
+    "all_daily_profiles_must_be_durable_before_aggregation": true,
+    "daily_dimensions_averaged": false,
+    "daily_quantiles_averaged": false,
+    "daily_quantiles_combined": false,
+    "equivalence_statement": "The elementwise sum of exact daily frequency histograms is mathematically identical, for empirical quantile calculation, to concatenating all underlying TRAIN observations before calculating the quantile.",
+    "flow_histogram_formula": "H_train_flow[k] = H_monday_flow[k] + H_tuesday_flow[k] + H_wednesday_flow[k]",
+    "flow_histogram_operation": "ELEMENTWISE_EXACT_INTEGER_SUM",
+    "lossless_for_empirical_quantile": true,
+    "packet_length_histogram_formula": "H_train_packet[b] = H_monday_packet[b] + H_tuesday_packet[b] + H_wednesday_packet[b]",
+    "packet_length_histogram_operation": "ELEMENTWISE_EXACT_INTEGER_SUM",
+    "quantile_computed_only_after_histogram_sum": true,
+    "required_daily_profiles": 3,
+    "required_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ]
+  },
+  "anti_adaptation": {
+    "average_daily_dimensions": false,
+    "average_daily_p95": false,
+    "change_caps_after_daily_profiles": false,
+    "change_header_policy_after_daily_profiles": false,
+    "change_padding_policy_after_daily_profiles": false,
+    "change_quantile_after_monday": false,
+    "change_quantile_after_tuesday": false,
+    "change_quantile_after_wednesday": false,
+    "change_rounding_after_daily_profiles": false,
+    "change_truncation_policy_after_daily_profiles": false,
+    "choose_best_daily_geometry": false,
+    "holdout_guided_dimension_selection": false,
+    "train_before_final_representation_freeze": false,
+    "validation_guided_dimension_selection": false,
+    "weighted_average_daily_p95": false
+  },
+  "checkpoint": "Stage20-1D1-S",
+  "checkpoint_plan": {
+    "Stage20-1D2-M": {
+      "action": "PROFILE_EXISTING_MONDAY_PCAP_AND_PERSIST_EXACT_HISTOGRAMS",
+      "day": "Monday",
+      "delete_raw_after_remote_verification": true
+    },
+    "Stage20-1D2-T": {
+      "action": "DOWNLOAD_VERIFY_PROFILE_PERSIST_TUESDAY_EXACT_HISTOGRAMS",
+      "day": "Tuesday",
+      "delete_raw_after_remote_verification": true
+    },
+    "Stage20-1D2-W": {
+      "action": "DOWNLOAD_VERIFY_PROFILE_PERSIST_WEDNESDAY_EXACT_HISTOGRAMS",
+      "day": "Wednesday",
+      "delete_raw_after_remote_verification": true
+    },
+    "Stage20-1D3": {
+      "action": "SUM_EXACT_THREE_DAY_HISTOGRAMS_COMPUTE_SINGLE_TRAIN_P95_AND_FREEZE_NUMERIC_DIMENSIONS"
+    }
+  },
+  "daily_profile_schema": {
+    "captured_ipv4_length_histogram_definition": "captured_ipv4_length_bytes -> exact number of retained packets having that captured IPv4 length",
+    "daily_numeric_dimensions_required": false,
+    "daily_p95_required": false,
+    "exact_geometry_fields": [
+      "exportable_flow_count",
+      "retained_packet_count",
+      "flow_packet_count_histogram",
+      "captured_ipv4_length_histogram"
+    ],
+    "flow_packet_count_histogram_definition": "packet_count -> exact number of exportable source-faithful flows having that packet count",
+    "histogram_frequencies_are_exact_integers": true,
+    "labels_required_for_geometry_profile": false,
+    "reconstruction_fields": [
+      "parser_semantics_identifier",
+      "flow_lifecycle_semantics_identifier",
+      "exportable_flow_definition",
+      "packet_population_definition"
+    ],
+    "source_provenance_fields": [
+      "day",
+      "source_filename",
+      "source_size_bytes",
+      "source_sha256",
+      "source_revision_or_frozen_identity",
+      "source_verified"
+    ]
+  },
+  "daily_workflow": {
+    "compute_daily_p95_for_dimension_selection": false,
+    "ordered_steps": [
+      "ACQUIRE_OR_REUSE_CURRENT_DAY_RAW_PCAP",
+      "VERIFY_FROZEN_SOURCE_IDENTITY",
+      "RUN_SOURCE_FAITHFUL_FLOW_RECONSTRUCTION",
+      "COMPUTE_EXACT_FLOW_PACKET_COUNT_HISTOGRAM",
+      "COMPUTE_EXACT_CAPTURED_IPV4_LENGTH_HISTOGRAM",
+      "PERSIST_MACHINE_READABLE_DAILY_PROFILE",
+      "PERSIST_HUMAN_READABLE_DAILY_PROFILE",
+      "COMMIT_DAILY_PROFILE",
+      "TOKEN_PUSH_DAILY_PROFILE",
+      "VERIFY_REMOTE_SHA_EQUALS_LOCAL_HEAD",
+      "VERIFY_CLEAN_WORKTREE",
+      "DELETE_CURRENT_DAY_RAW_PCAP",
+      "VERIFY_RAW_PCAP_DELETED",
+      "ADVANCE_TO_NEXT_TRAIN_DAY"
+    ],
+    "profile_unverified_source": false,
+    "select_daily_dimensions": false,
+    "source_must_verify_before_profile": true,
+    "train_daily_model": false
+  },
+  "deletion_policy": {
+    "delete_before_artifact_write": false,
+    "delete_before_commit": false,
+    "delete_before_profile": false,
+    "delete_before_push": false,
+    "delete_before_remote_sha_verification": false,
+    "delete_if_worktree_dirty": false,
+    "delete_only_after_remote_durability": true,
+    "remote_durability_definition": "daily artifacts committed, pushed, remote SHA verified, and worktree clean"
+  },
+  "dimension_policy": {
+    "bytes_per_packet": {
+      "maximum": 256,
+      "minimum": 64,
+      "rounding": "SMALLEST_MULTIPLE_OF_32_GREATER_OR_EQUAL",
+      "statistic": "COMBINED_TRAIN_NEAREST_RANK_P95"
+    },
+    "changed_from_stage20_1d0": false,
+    "maximum_image_area": 16384,
+    "numeric_dimensions_frozen_now": false,
+    "packets_per_flow": {
+      "maximum": 64,
+      "minimum": 16,
+      "rounding": "SMALLEST_POWER_OF_TWO_GREATER_OR_EQUAL",
+      "statistic": "COMBINED_TRAIN_NEAREST_RANK_P95"
+    }
+  },
+  "holdout_integrity": {
+    "friday_openings": "0/1",
+    "friday_reads": 0,
+    "friday_requests": 0,
+    "friday_status": "CLOSED",
+    "thursday_reads": 0,
+    "thursday_requests": 0
+  },
+  "inherits": "results/stage20_1d_representation/stage20_1d0_packet_image_representation_selection_lock.json",
+  "next_checkpoint": "Stage20-1D2-M",
+  "parent_commit": "89c9742a0a62d6d754dcc1a3d4f7810002079fd3",
+  "profile_population": {
+    "Friday_used": false,
+    "Thursday_used": false,
+    "attack_identity_used": false,
+    "class_balance_used": false,
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "labels_used": false,
+    "published_label_membership_required": false,
+    "scope": "ALL_EXPORTABLE_SOURCE_FAITHFUL_TRAIN_FLOWS"
+  },
+  "quantile_policy": {
+    "compute_before_all_three_daily_profiles_exist": false,
+    "definition": "NEAREST_RANK",
+    "flow_population_size": "sum of frequencies in combined flow-packet-count histogram",
+    "histogram_evaluation_rule": "Choose the smallest integer value whose cumulative frequency in the combined TRAIN histogram reaches or exceeds ceil(0.95 * N).",
+    "inherited_from": "Stage20-1D0",
+    "packet_population_size": "sum of frequencies in combined captured-IPv4-length histogram",
+    "quantile": 0.95,
+    "rank_formula": "ceil(0.95 * N)"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "combined_p95_computed": false,
+    "daily_p95_computed": false,
+    "downloads_started": 0,
+    "flow_histograms_computed": false,
+    "flows_reconstructed": false,
+    "geometry_profiled": false,
+    "labels_read": false,
+    "model_training": false,
+    "numeric_dimensions_selected": false,
+    "packet_length_histograms_computed": false,
+    "pcap_files_opened": 0,
+    "pcap_packet_bytes_read": 0,
+    "raw_pcaps_deleted": 0
+  },
+  "status": "STORAGE_AWARE_SEQUENTIAL_TRAIN_PROTOCOL_FROZEN",
+  "storage_policy": {
+    "delete_current_pcap_if_commit_fails": false,
+    "delete_current_pcap_if_profile_fails": false,
+    "delete_current_pcap_if_push_fails": false,
+    "delete_current_pcap_if_remote_verification_fails": false,
+    "execution_mode": "ONE_FULL_TRAIN_PCAP_AT_A_TIME",
+    "maximum_full_train_pcaps_required_resident_simultaneously": 1,
+    "processing_order": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "raw_pcap_deletion_allowed": true,
+    "raw_pcap_deletion_condition": "Delete the current day's raw PCAP only after its exact daily geometry profile has been committed, token-pushed, remote-SHA verified, and the repository worktree is clean.",
+    "raw_pcaps_are_repository_artifacts": false,
+    "reason": "KAGGLE_WORKSPACE_STORAGE_CONSTRAINT",
+    "scientific_protocol_changed": false,
+    "train_population_changed": false
+  }
+}

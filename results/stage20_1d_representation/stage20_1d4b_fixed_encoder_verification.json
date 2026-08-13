@@ -1,0 +1,770 @@
+{
+  "acceptance": {
+    "decision": "PASS_FIXED_ENCODER_VERIFICATION",
+    "encoder_determinism": "PASS",
+    "masking": "PASS",
+    "model_scaling_boundary": "PASS",
+    "padding": "PASS",
+    "real_16_of_16": true,
+    "source_preservation": "PASS",
+    "synthetic_8_of_8": true,
+    "truncation": "PASS"
+  },
+  "checkpoint": "Stage20-1D4-B",
+  "encoder_implementation": {
+    "repository_path": "scripts/stage20_packet_image_encoder.py",
+    "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "temporary_tested_copy_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "tested_copy_identical_to_committed_copy": true
+  },
+  "frozen_geometry": {
+    "area": 16384,
+    "channels": 1,
+    "columns": 256,
+    "rows": 64
+  },
+  "next_phase": "ARCHITECTURE_AND_TRAINING_PROTOCOL_FREEZE_BEFORE_ANY_MODEL_TRAINING",
+  "operational": {
+    "real_sample_scan_elapsed_seconds": 0.007,
+    "timing_used_for_scientific_selection": false
+  },
+  "parent_commit": "1924769e13d0cc229729b77d40c67d17fe17e944",
+  "protocol_lock": {
+    "artifact": "results/stage20_1d_representation/stage20_1d4a_fixed_encoder_verification_protocol_lock.json",
+    "sha256": "3401ffe0d63c27ce3fb4b4535a64a8f4e3194da177cbd34798c39cb7c0615cdb"
+  },
+  "raw_cache_release_authorized_only_after_remote_durability": true,
+  "real_encoder_verification": {
+    "aggregate_authentic_retained_positions": 12586,
+    "aggregate_masked_retained_positions": 2640,
+    "aggregate_output_sha256": "401180d7ad29d399b649bb43f5c26b5c41a73df25ac72fcef8ca31a6d756a058",
+    "aggregate_padding_positions": 249558,
+    "aggregate_unmasked_retained_positions": 9946,
+    "all_masked_retained_positions_zero_and_authentic": true,
+    "all_padding_positions_zero_and_mask_false": true,
+    "all_repeat_images_identical": true,
+    "all_repeat_masks_identical": true,
+    "all_unmasked_retained_positions_equal_source": true,
+    "encode_each_flow_twice": true,
+    "flow_count": 16,
+    "flows": [
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "37e2e3106f42feb525cfeed1f0fc8d2696298a973a1e1d34a7ff2a7584fe48f8",
+        "image_sha256": "04091583ac23cc7df63cc3045f513b55de521f72197eadb405bb063cdd6a2f9f",
+        "mask_audit": "PASS",
+        "ordinal": 1,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "e2a31289bd71ba846947541ceac0244bfc4f359f9acdc04f68abdbd0e74b474c",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "37e2e3106f42feb525cfeed1f0fc8d2696298a973a1e1d34a7ff2a7584fe48f8",
+        "image_sha256": "04091583ac23cc7df63cc3045f513b55de521f72197eadb405bb063cdd6a2f9f",
+        "mask_audit": "PASS",
+        "ordinal": 2,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "e2a31289bd71ba846947541ceac0244bfc4f359f9acdc04f68abdbd0e74b474c",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "37e2e3106f42feb525cfeed1f0fc8d2696298a973a1e1d34a7ff2a7584fe48f8",
+        "image_sha256": "04091583ac23cc7df63cc3045f513b55de521f72197eadb405bb063cdd6a2f9f",
+        "mask_audit": "PASS",
+        "ordinal": 3,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "e2a31289bd71ba846947541ceac0244bfc4f359f9acdc04f68abdbd0e74b474c",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "37e2e3106f42feb525cfeed1f0fc8d2696298a973a1e1d34a7ff2a7584fe48f8",
+        "image_sha256": "04091583ac23cc7df63cc3045f513b55de521f72197eadb405bb063cdd6a2f9f",
+        "mask_audit": "PASS",
+        "ordinal": 4,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "e2a31289bd71ba846947541ceac0244bfc4f359f9acdc04f68abdbd0e74b474c",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "82c836849f162d29b0b7b1c72d5651e39a1c9c76396bd6b9dfa68f68f792a4f3",
+        "image_sha256": "4ff109a61bac8da530a01a4541899f0982fe5f6a3ede7a57d3170170942d14b4",
+        "mask_audit": "PASS",
+        "ordinal": 5,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "8b27d9bc50c9954f625f858bd2e87f1727d78a54e4ed548504eff20a1f87ce2b",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "82c836849f162d29b0b7b1c72d5651e39a1c9c76396bd6b9dfa68f68f792a4f3",
+        "image_sha256": "4ff109a61bac8da530a01a4541899f0982fe5f6a3ede7a57d3170170942d14b4",
+        "mask_audit": "PASS",
+        "ordinal": 6,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "8b27d9bc50c9954f625f858bd2e87f1727d78a54e4ed548504eff20a1f87ce2b",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "82c836849f162d29b0b7b1c72d5651e39a1c9c76396bd6b9dfa68f68f792a4f3",
+        "image_sha256": "4ff109a61bac8da530a01a4541899f0982fe5f6a3ede7a57d3170170942d14b4",
+        "mask_audit": "PASS",
+        "ordinal": 7,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "8b27d9bc50c9954f625f858bd2e87f1727d78a54e4ed548504eff20a1f87ce2b",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "82c836849f162d29b0b7b1c72d5651e39a1c9c76396bd6b9dfa68f68f792a4f3",
+        "image_sha256": "4ff109a61bac8da530a01a4541899f0982fe5f6a3ede7a57d3170170942d14b4",
+        "mask_audit": "PASS",
+        "ordinal": 8,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "8b27d9bc50c9954f625f858bd2e87f1727d78a54e4ed548504eff20a1f87ce2b",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 1352,
+          "byte_truncation_packet_count": 2,
+          "masked_retained_positions": 242,
+          "padding_positions": 15032,
+          "retained_packet_count": 11,
+          "row_truncation": false,
+          "source_packet_count": 11,
+          "unmasked_retained_positions": 1110
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "4addf4db127c7a22ee7b62994de1ea32e95bd0219010bb247e84c0a8989fe7f0",
+        "image_sha256": "3174ac1014185ff926390cbec0c03500b2bf20cf2dc21857254f59dc35f18f90",
+        "mask_audit": "PASS",
+        "ordinal": 9,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "9dd5b62a0d749f5a0f15b1bf42bda02feb43d9646cc187704b13e44b1afce42b",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          273,
+          273,
+          247,
+          247,
+          46
+        ],
+        "source_flow_sha256": "2aa6b7796f7bc26a2df873356c25228b2d4dd22d236868d6cb9a7dd3a7ce4339",
+        "source_packet_count": 11,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 1462,
+          "byte_truncation_packet_count": 4,
+          "masked_retained_positions": 286,
+          "padding_positions": 14922,
+          "retained_packet_count": 13,
+          "row_truncation": false,
+          "source_packet_count": 13,
+          "unmasked_retained_positions": 1176
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "8a67b3c99b3a9b49cddb25a491c3b2e4ec2b975b704870723748c0feff784d67",
+        "image_sha256": "814b5ec3075bfe0c5268dc4e5aea662115af88324c82e89fc9538f289813fe8c",
+        "mask_audit": "PASS",
+        "ordinal": 10,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "77ee509940ed1e8dccf393483c50b1f56bdac9cc3c8be66212768a6f2f4098b2",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          353,
+          353,
+          1572,
+          1572,
+          46,
+          46,
+          46
+        ],
+        "source_flow_sha256": "0243a0eab5b539605eb898a00f3758706a96d2a07edadad934903f2cc3a6f039",
+        "source_packet_count": 13,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 1554,
+          "byte_truncation_packet_count": 4,
+          "masked_retained_positions": 330,
+          "padding_positions": 14830,
+          "retained_packet_count": 15,
+          "row_truncation": false,
+          "source_packet_count": 15,
+          "unmasked_retained_positions": 1224
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "d9cf36800b3ec90be7b58dd47924ed5c353a410eb438358ff81f34ce489d0a15",
+        "image_sha256": "a49cb9c0f6269c94a156630729d41314db62e273090befe90e414311537f7548",
+        "mask_audit": "PASS",
+        "ordinal": 11,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "f4de10576a57c3bd322a588d721f8f2482c2aa7dac57ee5f9d0109af76beda2f",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          1592,
+          1592,
+          46,
+          46,
+          1558,
+          1558,
+          46,
+          46,
+          46
+        ],
+        "source_flow_sha256": "de63b618e6e40bf7c1dbcd54fe503cb2b9bd2ecd52e7c506d8318e68426c7fd7",
+        "source_packet_count": 15,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 1370,
+          "byte_truncation_packet_count": 4,
+          "masked_retained_positions": 242,
+          "padding_positions": 15014,
+          "retained_packet_count": 11,
+          "row_truncation": false,
+          "source_packet_count": 11,
+          "unmasked_retained_positions": 1128
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "3b9f6ea68b3b9a4a2b6002a2258ea80df25ec8eefbf21b7c07a87c00f341b3bf",
+        "image_sha256": "d5af8be86f4a6b13ddb82a6355fd2c35d4cbf16cd678a7aff7082b597aba21a0",
+        "mask_audit": "PASS",
+        "ordinal": 12,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "4271bf8f6e1f1db1674d9fc9dfda4944e5211f138bdf4032b2eb9bdfa25c8277",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          1437,
+          1437,
+          1450,
+          1450,
+          46
+        ],
+        "source_flow_sha256": "9aeb4c903bef258859453befec99fcdd638b8c2e4f25df56c13270053e4a1cd5",
+        "source_packet_count": 11,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 92,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 44,
+          "padding_positions": 16292,
+          "retained_packet_count": 2,
+          "row_truncation": false,
+          "source_packet_count": 2,
+          "unmasked_retained_positions": 48
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "3b9f6ea68b3b9a4a2b6002a2258ea80df25ec8eefbf21b7c07a87c00f341b3bf",
+        "image_sha256": "472454a1f7825dbde4f15472e4e9ffb8a9f1d8599c698e58eee9794522e0c5aa",
+        "mask_audit": "PASS",
+        "ordinal": 13,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "065886063e17ce630d37dfe6ed8cbaec0a4ef64c6e63b937ed9d1cf4e3990122",
+        "source_captured_ipv4_lengths": [
+          46,
+          46
+        ],
+        "source_flow_sha256": "03a68dc8ac19d453d6b16e2382d3deb95530be416161e4ee48a52c8d3abc52ee",
+        "source_packet_count": 2,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 1554,
+          "byte_truncation_packet_count": 4,
+          "masked_retained_positions": 330,
+          "padding_positions": 14830,
+          "retained_packet_count": 15,
+          "row_truncation": false,
+          "source_packet_count": 15,
+          "unmasked_retained_positions": 1224
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "57298bed2c8e709745a5a26ecd70d04700bd61cfb35d510b6f2e928f4cef7636",
+        "image_sha256": "24ae77151dac095e53df0664f09789275b1e2a345969543133b71cd323b8d99a",
+        "mask_audit": "PASS",
+        "ordinal": 14,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "f4de10576a57c3bd322a588d721f8f2482c2aa7dac57ee5f9d0109af76beda2f",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          1605,
+          1605,
+          46,
+          46,
+          1564,
+          1564,
+          46,
+          46,
+          46
+        ],
+        "source_flow_sha256": "9ad9a8a3890b87cf4172ee9f490b1f99c9bdc89897341ebb12bc190c51541575",
+        "source_packet_count": 15,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 3172,
+          "byte_truncation_packet_count": 7,
+          "masked_retained_positions": 572,
+          "padding_positions": 13212,
+          "retained_packet_count": 26,
+          "row_truncation": false,
+          "source_packet_count": 26,
+          "unmasked_retained_positions": 2600
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "6789210c4f4ae05ee5f71c741542170306539ed1e7716d785dfa07a9547f0ae8",
+        "image_sha256": "a9dfa72b7529f0c5332e17cfd1e1025076630401bea44abef6c1515645ff16c1",
+        "mask_audit": "PASS",
+        "ordinal": 15,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "f78e3554497473b83cfbaa3b4e1cc0c775199b6207a82ebfc1b8d0fcaacce110",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          390,
+          390,
+          1500,
+          2674,
+          1214,
+          46,
+          46,
+          1712,
+          1712,
+          46,
+          46,
+          250,
+          250,
+          83,
+          83,
+          46,
+          46,
+          46,
+          46,
+          46
+        ],
+        "source_flow_sha256": "6f8140f5f140217db57d4ae6a140e9174891d7c02f1582a4abf85fc700cb75b5",
+        "source_packet_count": 26,
+        "unmasked_source_equality_audit": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 1294,
+          "byte_truncation_packet_count": 2,
+          "masked_retained_positions": 242,
+          "padding_positions": 15090,
+          "retained_packet_count": 11,
+          "row_truncation": false,
+          "source_packet_count": 11,
+          "unmasked_retained_positions": 1052
+        },
+        "deterministic_repeat_image": true,
+        "deterministic_repeat_padding_mask": true,
+        "export_reason": "FIN",
+        "flow_key_sha256": "3e8cdad3dea71ada580c3de6c958f1a5035c2f8a2a2f69be1acf566c233b76d8",
+        "image_sha256": "520f3462d8d2575b53c52ee95b4d05f5e5e1ede32b3ed18db5853e3444bfad7f",
+        "mask_audit": "PASS",
+        "ordinal": 16,
+        "padding_audit": "PASS",
+        "padding_mask_sha256": "5b9c7d22ace38e2762ad629e3506aa47b31a75d49c455d3cc160c39db3eb4c23",
+        "source_captured_ipv4_lengths": [
+          52,
+          52,
+          52,
+          52,
+          46,
+          46,
+          260,
+          260,
+          218,
+          218,
+          46
+        ],
+        "source_flow_sha256": "09b061bcb05c0b6bd7e703eff636941cd7fcb16dfc34f11c3cd55a9835e1b380",
+        "source_packet_count": 11,
+        "unmasked_source_equality_audit": "PASS"
+      }
+    ],
+    "flows_with_row_truncation": 0,
+    "retained_packets_with_byte_truncation": 27
+  },
+  "real_sample_selection": {
+    "active_flows_at_stop": 34,
+    "discarded_singleton_timeout_flows_before_stop": 0,
+    "flow_endpoints_persisted": false,
+    "ipv4_packets_scanned": 420,
+    "labels_used": false,
+    "parser_population_until_stop": {
+      "IPv4_OTHER_PROTOCOL_0": 7,
+      "IPv4_TCP": 226,
+      "IPv4_UDP": 187,
+      "NON_IPV4": 193
+    },
+    "raw_packets_scanned": 613,
+    "rule": "FIRST_16_EXPORTABLE_FLOWS_IN_HISTORICAL_EXPORT_ORDER",
+    "sample_export_reason_counts": {
+      "FIN": 16
+    },
+    "sample_identity_sha256": "6a37c080eb0e0ff7b20e95d888c36f1ef80f3fc728fd32749073b1e3c8b92946",
+    "sample_size": 16
+  },
+  "real_train_source": {
+    "actual_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "actual_size_bytes": 10822507416,
+    "day": "Monday",
+    "expected_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "expected_size_bytes": 10822507416,
+    "huggingface_hub_version": "1.10.1",
+    "remote_filename": "pcap/Monday-WorkingHours.pcap",
+    "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+    "second_full_working_copy_created": false,
+    "source_verified": true
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "architecture_selected": false,
+    "labels_read": false,
+    "masking_rules_changed": false,
+    "model_training": false,
+    "numeric_dimensions_changed": false,
+    "padding_rules_changed": false,
+    "truncation_rules_changed": false
+  },
+  "status": "FIXED_PACKET_IMAGE_ENCODER_VERIFIED_AND_FROZEN",
+  "synthetic_verification": {
+    "all_passed": true,
+    "expected_fixture_count": 8,
+    "fixture_count": 8,
+    "results": [
+      {
+        "audit": {
+          "authentic_retained_positions": 72,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 22,
+          "padding_positions": 16312,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 50
+        },
+        "id": "SYN_TCP_STANDARD_IHL",
+        "image_sha256": "695ee24089f7e3bfa12484794ef72e2f06d830898e05846d3d06e2d3b2972575",
+        "mask_sha256": "1468cfd4cb7aa0a79e868329da15fe5025f78d856dfcfe8a23946e903a36f373",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 52,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 14,
+          "padding_positions": 16332,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 38
+        },
+        "id": "SYN_UDP_STANDARD_IHL",
+        "image_sha256": "619bc0fe8f8f262b6f8286898f74494cf8182fa98b59a3f46bf043a91aaa4062",
+        "mask_sha256": "10404204f224f4f8523474984922dcc49d915d2adb8df094b647c9291782cf0e",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 64,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 12,
+          "padding_positions": 16320,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 52
+        },
+        "id": "SYN_IPV4_OTHER_PROTOCOL",
+        "image_sha256": "dda8db4642a5d46f43ea19f6a32fd0ccd4fd50fc676a86a5aae37e3cc86a0a80",
+        "mask_sha256": "ec375bd6c258d4933b0cf68867f4c2acb9c76f6d816a0bd8859c3093dcd33298",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 72,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 12,
+          "padding_positions": 16312,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 60
+        },
+        "id": "SYN_NONINITIAL_TCP_FRAGMENT",
+        "image_sha256": "c918cff0dc18d224366ab129b51de28c7552a9c906f60d66d0353817066d28cc",
+        "mask_sha256": "1468cfd4cb7aa0a79e868329da15fe5025f78d856dfcfe8a23946e903a36f373",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 84,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 22,
+          "padding_positions": 16300,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 62
+        },
+        "id": "SYN_TCP_IPV4_OPTIONS_IHL24",
+        "image_sha256": "2082df95813e39754e6434ee27baea8dd1b066c14d04b5f638cd97af3b78f34f",
+        "mask_sha256": "2c14c1baf9a042b6c6dfc21c2d7ca210eaed4d0485169a394552d07653d92cd3",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 30,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 12,
+          "padding_positions": 16354,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 18
+        },
+        "id": "SYN_AUTHENTIC_ZERO_VS_PADDING",
+        "image_sha256": "25446123f29e188c10beb6f34c174273c4bc806baff37055ee94e1e2a734829b",
+        "mask_sha256": "23a03ee2388b2f02116df4918c1b3c28730557c2d99fe2d9db605beee9408360",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 256,
+          "byte_truncation_packet_count": 1,
+          "masked_retained_positions": 12,
+          "padding_positions": 16128,
+          "retained_packet_count": 1,
+          "row_truncation": false,
+          "source_packet_count": 1,
+          "unmasked_retained_positions": 244
+        },
+        "id": "SYN_BYTE_TRUNCATION_300_TO_256",
+        "image_sha256": "81120e2c1fc7fdd992bfeed6b6cdf077624c17ce7a2fc26513229e30eaee4775",
+        "mask_sha256": "d9e05b4654ca760749d06a9ac23b3a5f9c0b02fd822bbbfe52f2a2e6e2005892",
+        "status": "PASS"
+      },
+      {
+        "audit": {
+          "authentic_retained_positions": 2048,
+          "byte_truncation_packet_count": 0,
+          "masked_retained_positions": 768,
+          "padding_positions": 14336,
+          "retained_packet_count": 64,
+          "row_truncation": true,
+          "source_packet_count": 70,
+          "unmasked_retained_positions": 1280
+        },
+        "id": "SYN_ROW_TRUNCATION_70_TO_64",
+        "image_sha256": "8b227f5c8d7111f29f038db4a10f45af660adedf3d50bd9ab55a4510ebbf31b7",
+        "mask_sha256": "042d700228c19828f33e2847133af6f046f0e03b38ee091763a5f266393784e2",
+        "status": "PASS"
+      }
+    ]
+  }
+}

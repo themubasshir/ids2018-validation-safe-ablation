@@ -1,0 +1,74 @@
+{
+  "checkpoint": "Stage20-1E1-V-PRE",
+  "frozen_ingestion_rule": {
+    "class_balance_used_for_rule": false,
+    "effective_morning_record_ordinals": "1..170366",
+    "effective_thursday_label_records": 458968,
+    "excluded_morning_physical_ordinals": "170367..458968",
+    "fuzzy_matching": false,
+    "generalized_to_other_days_or_files": false,
+    "imputation": false,
+    "join_success_used_for_rule": false,
+    "label_guided_selection": false,
+    "nearest_matching": false,
+    "null_or_empty_label_rule_for_actual_records": "FAIL_UNCHANGED",
+    "null_s4_field_rule_for_actual_records": "FAIL",
+    "pcap_guided_selection": false,
+    "repair": false,
+    "rule": "FOR_THE_PINNED_THURSDAY_MORNING_PARQUET_ONLY, PHYSICAL ROWS THAT BELONG_TO_THE_VERIFIED_ALL_85_COLUMN_NULL_CONTIGUOUS_EOF_SUFFIX 170367_THROUGH_458968_ARE_NON_RECORD_STRUCTURAL_NULL_PADDING_AND ARE_EXCLUDED_BEFORE_E0_LABEL_RECORD_VALIDATION_AND_S4_SIGNATURE CONSTRUCTION",
+    "tolerance_matching": false
+  },
+  "next_checkpoint": "Stage20-1E1-V",
+  "parent_commit": "0b8a7c9048ea84e7ddce99a5f23b9040204726e0",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Friday_status": "CLOSED",
+    "Thursday_PCAP_accessed": false,
+    "Thursday_join_run": false,
+    "Thursday_model_inference": false,
+    "model_training": false,
+    "optimizer_steps": 0,
+    "threshold_selection": false
+  },
+  "scope": "PINNED_THURSDAY_VALIDATION_LABEL_SOURCE_ONLY",
+  "source_revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+  "sources": {
+    "afternoon_infilteration": {
+      "effective_label_records": 288602,
+      "physical_rows": 288602,
+      "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+      "size_bytes": 27901448
+    },
+    "morning_webattacks": {
+      "all_null_suffix_classification": "NON_RECORD_STRUCTURAL_NULL_PADDING",
+      "effective_label_records": 170366,
+      "null_suffix_first_ordinal": 170367,
+      "null_suffix_last_ordinal": 458968,
+      "null_suffix_rows": 288602,
+      "physical_columns": 85,
+      "physical_rows": 458968,
+      "record_prefix_rows": 170366,
+      "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+      "size_bytes": 19674280
+    }
+  },
+  "split": "VALIDATION",
+  "status": "THURSDAY_LABEL_SOURCE_INGESTION_ERRATUM_FROZEN_BEFORE_PCAP_OR_JOIN",
+  "structural_proof": {
+    "afternoon_e0_null_rows": 0,
+    "morning_all_85_column_null_rows": 288602,
+    "morning_all_null_rows_before_suffix": 0,
+    "morning_first_all_null_ordinal": 170367,
+    "morning_first_nonnull_ordinal": 1,
+    "morning_last_all_null_ordinal": 458968,
+    "morning_last_nonnull_ordinal": 170366,
+    "morning_nonnull_rows_inside_suffix": 0,
+    "morning_null_suffix_count_equals_afternoon_physical_rows": true,
+    "morning_populated_prefix_e0_null_rows": 0,
+    "morning_single_contiguous_all_null_eof_suffix": true,
+    "physical_columns": 85,
+    "schema_column_sequence_identical": true
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "anti_adaptation": {
+    "Friday_architecture_change": false,
+    "Friday_holdout_guided_debugging": false,
+    "Friday_join_change": false,
+    "Friday_model_retraining": false,
+    "Friday_representation_change": false,
+    "Friday_source_ingestion_change_after_observation": false,
+    "Friday_threshold_reselection": false
+  },
+  "checkpoint": "Stage20-1E4-PRE",
+  "friday_source_identity": {
+    "pcap": {
+      "remote": "pcap/Friday-WorkingHours.pcap",
+      "repository": "bvsam/cic-ids-2017",
+      "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+      "sha256": "beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0",
+      "size_bytes": 8839309056
+    },
+    "traffic_labels": [
+      {
+        "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+        "repository": "bvsam/cic-ids-2017",
+        "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+        "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+        "size_bytes": 21999571
+      },
+      {
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+        "repository": "bvsam/cic-ids-2017",
+        "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+        "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+        "size_bytes": 23048086
+      },
+      {
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+        "repository": "bvsam/cic-ids-2017",
+        "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+        "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+        "size_bytes": 18632427
+      }
+    ]
+  },
+  "model_evaluation": {
+    "PR_AUC": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+    "ROC_AUC": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+    "autograd": "INFERENCE_MODE_NO_GRAD",
+    "batch_size_operational": 256,
+    "model": "Stage20MaskedCNNv1_FIXED_EPOCH10",
+    "model_canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+    "model_checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+    "model_inference_passes": 1,
+    "model_mode": "EVAL",
+    "operating_points": {
+      "balanced": 0.17,
+      "security": 0.17,
+      "standard": 0.5
+    },
+    "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_FROZEN_THRESHOLD",
+    "probability": "FLOAT32_SIGMOID_ATTACK_POSITIVE_LOGIT",
+    "threshold_grid": null,
+    "threshold_search": false
+  },
+  "parent_commit": "0719cae777c82627b507ad52b0598dbac811a580",
+  "prerequisites": {
+    "E0_sha256": "d3bba4d9d9df4432383a7f4239a8562f484cb5805b66d52794873bfaca837b3b",
+    "E1_Monday_manifest_sha256": "a726d87e044e56171282e9be2fc6220c47de0cd09b153624062713f1c3116892",
+    "E1_Thursday_manifest_sha256": "93419837e38a7fea5ef9e183bdd78ceb9d719588c725bd2d1a3d91355cfffb04",
+    "E1_Tuesday_manifest_sha256": "20f920b576b49a36131fb271e963ef2bd7900f3c7bfc5458b24991676b5515af",
+    "E1_Wednesday_manifest_sha256": "42a8f3813a786751999c209dce323ba701d9c29cd19add09aaadbd3297921d62",
+    "E2_manifest_sha256": "42ad8bb776972e03c716c2e41d7faca2ef7b4aa9d1ed0787c84c693284bc16a1",
+    "E3_evaluation_sha256": "86160777383f5bac25c85df7df6934f4713a3100208a168a4ccee7d36b63170c",
+    "E3_probability_sha256": "d74c2c4abc52fc9b85b21db865390c4562e95b5153cbf35620c061d47719a42c",
+    "epoch10_canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+    "epoch10_checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+    "worktree_clean": true
+  },
+  "raw_source_release": "ONLY_AFTER_E4_SCIENCE_COMMIT_PUSHED_AND_REMOTE_VERIFIED",
+  "reconstruction": {
+    "bounded_first50k_pilot": false,
+    "compact_roundtrip_first_n": 128,
+    "decoder": "SCAPY_2_6_1_REFERENCE_ONLY",
+    "join": "FROZEN_DIRECTED_S4_EXACT_21_FIELD_SIGNATURE",
+    "pcap_passes": 1,
+    "representation": "64x256x1_FROZEN_STAGE20_PACKET_IMAGE"
+  },
+  "scientific_boundary_at_freeze": {
+    "Friday_accessed": false,
+    "Friday_bytes_read": 0,
+    "Friday_class_balance_observed": false,
+    "Friday_join_coverage_observed": false,
+    "Friday_label_rows_observed": false,
+    "Friday_model_inference": false,
+    "Friday_model_outputs_observed": false
+  },
+  "source_ingestion": {
+    "all_physical_parquet_rows_are_records": true,
+    "fuzzy_matching": false,
+    "imputation": false,
+    "nearest_matching": false,
+    "null_or_empty_label": "FAIL",
+    "null_s4_field": "FAIL",
+    "repair": false,
+    "source_specific_structural_null_exclusion": false,
+    "tolerance_matching": false
+  },
+  "status": "FRIDAY_FINAL_HOLDOUT_EXECUTION_FROZEN_BEFORE_ANY_FRIDAY_ACCESS"
+}

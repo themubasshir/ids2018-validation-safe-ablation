@@ -1,0 +1,220 @@
+{
+  "checkpoint": "Stage20-1E1-T",
+  "compact_corpus": {
+    "dense_padding_persisted": false,
+    "directory": "/kaggle/working/stage20_compact_corpus/Tuesday",
+    "encoded_authentic_bytes": 4078271,
+    "encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 4078271,
+        "sha256": "cbfe435fe612e1a5e6f8dc44e5a6694cf1ce6efbe0dc6e89c5c62e4dc5da4f48"
+      },
+      "flow_offsets.npy": {
+        "bytes": 33496,
+        "sha256": "4b9334dc876362b8937d21de276a03654e275b94a2c6fc4b23e0881d4d518be9"
+      },
+      "labels.npy": {
+        "bytes": 4298,
+        "sha256": "e8891a80aea004b84cffb3fa4c53a71d32ae96796ac052e7073530a1b0cc9fff"
+      },
+      "packet_lengths.npy": {
+        "bytes": 533888,
+        "sha256": "058641aa2e24aa9a308fd553ecae571867c478063dfe1261551285d81965808c"
+      }
+    },
+    "flow_count": 4170,
+    "format": "STAGE20_1E0_COMPACT_VARIABLE_AUTHENTIC_BYTES",
+    "loader_module_path": "scripts/stage20_compact_corpus.py",
+    "loader_module_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "padding_mask_persisted": false,
+    "padding_mask_reconstructed_from_lengths": true,
+    "roundtrip_all_pass": true,
+    "roundtrip_first_n": 128,
+    "roundtrip_summary_sha256": "b3e88088844b63b33f06cccca960ca6c760939e5d8825ec684572214a169387f"
+  },
+  "day": "Tuesday",
+  "exact_join": {
+    "fuzzy": false,
+    "index_specific_exclusions": [],
+    "label_guided_repair": false,
+    "matched_binary_counts": {
+      "0": 4008,
+      "1": 162
+    },
+    "matched_export_reasons": {
+      "EOF_CURRENT": 1721,
+      "FIN": 1088,
+      "FLOW_TIMEOUT": 1361
+    },
+    "matching": "EXACT_ONLY",
+    "nearest": false,
+    "supervised_matched_flows": 4170,
+    "tolerance": false,
+    "unmatched_reconstructed_flows": 441599,
+    "unused_published_occurrences": 441739
+  },
+  "first_50000_frozen_snapshot": {
+    "FIN": 792,
+    "FLOW_TIMEOUT": 136,
+    "active_flow_count": 3370,
+    "all_preexisting_d2t_snapshot_anchors_pass": true,
+    "completed_flows": 928,
+    "descriptive_join_values_used_for_selection": false,
+    "exact_s4_multiset_membership_descriptive": 2,
+    "exact_s4_set_membership_descriptive": 2,
+    "matched_binary_counts_descriptive": {
+      "0": 2
+    },
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 80,
+      "IPv4_TCP": 30626,
+      "IPv4_UDP": 15412,
+      "NON_IPV4": 3882
+    },
+    "protocol_counts": {
+      "0": 3,
+      "17": 118,
+      "6": 807
+    }
+  },
+  "full_reconstruction": {
+    "all_preexisting_d2t_anchors_pass": true,
+    "eof_singleton_discarded": 40139,
+    "export_reasons": {
+      "EOF_CURRENT": 168661,
+      "FIN": 168634,
+      "FLOW_TIMEOUT": 108474
+    },
+    "exportable_flow_protocol_counts": {
+      "0": 197,
+      "6": 245769,
+      "17": 199803
+    },
+    "exportable_flows": 445769,
+    "flow_packet_count_histogram_exact_d2t_match": true,
+    "max_active_flows": 208800,
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 750,
+      "IPv4_TCP": 10710230,
+      "IPv4_UDP": 758756,
+      "NON_IPV4": 82218
+    },
+    "raw_packets": 11551954,
+    "retained_packet_protocol_counts": {
+      "0": 739,
+      "6": 10670059,
+      "17": 758734
+    },
+    "retained_packets": 11429532,
+    "timeout_singleton_discarded": 65,
+    "valid_ipv4_packets": 11469736
+  },
+  "label_schema": {
+    "physical_columns": {
+      "ack": "ACK Flag Count",
+      "bwd_len_max": "Bwd Packet Length Max",
+      "bwd_len_min": "Bwd Packet Length Min",
+      "destination_ip": "Destination IP",
+      "destination_port": "Destination Port",
+      "fin": "FIN Flag Count",
+      "flow_duration": "Flow Duration",
+      "fwd_len_max": "Fwd Packet Length Max",
+      "fwd_len_min": "Fwd Packet Length Min",
+      "label": "Label",
+      "protocol": "Protocol",
+      "psh": "PSH Flag Count",
+      "rst": "RST Flag Count",
+      "source_ip": "Source IP",
+      "source_port": "Source Port",
+      "syn": "SYN Flag Count",
+      "timestamp": "Timestamp",
+      "total_bwd_packets": "Total Backward Packets",
+      "total_fwd_packets": "Total Fwd Packets",
+      "total_len_bwd": "Total Length of Bwd Packets",
+      "total_len_fwd": "Total Length of Fwd Packets",
+      "urg": "URG Flag Count"
+    },
+    "raw_frame_extent_used_for_s4_payload": false,
+    "s4_reference_decoder": "SCAPY_2_6_1_OUTER_IPV4_PAYLOAD_LAYER",
+    "s4_tcp_baseline_payload": "LEN_BYTES_TCP_PAYLOAD",
+    "s4_timestamp_canonicalization": "INTEGER_UNIX_EPOCH_SECOND",
+    "s4_udp_baseline_payload": "LEN_BYTES_UDP_PAYLOAD",
+    "timestamp_type": "TIMESTAMP"
+  },
+  "next_checkpoint": "Stage20-1E1-W",
+  "operational": {
+    "materialization_elapsed_seconds": 3188.103,
+    "timing_used_for_selection": false,
+    "tuesday_compact_upper_bound_bytes": 1153178649
+  },
+  "parent_commit": "4dfbed195bf98e2dc2f28c218728f4fc3d77670a",
+  "parser_optimization": {
+    "equivalence_fast_path_packets": 185730,
+    "equivalence_ipv4_packets": 244430,
+    "equivalence_packet_limit": 250000,
+    "equivalence_path_counts": {
+      "fast_transport_only_tcp": 155942,
+      "fast_transport_only_udp": 29788,
+      "scapy_fallback_fragmented_ipv4": 84,
+      "scapy_fallback_ipv4_geometry": 58558,
+      "scapy_fallback_ipv4_options": 31,
+      "scapy_fallback_ipv4_other_protocol": 27,
+      "scapy_fallback_non_direct_ipv4": 5570
+    },
+    "equivalence_scapy_fallback_packets": 64270,
+    "equivalence_semantic_digest_sha256": "6420d690048a7cd8448ec4c9a909df0454e3fd193640bdb24520823b3fe28939",
+    "full_fast_path_packets": 0,
+    "full_materialization_mode": "SCAPY_REFERENCE_ONLY_SAME_AS_SUCCESSFUL_MONDAY",
+    "full_path_counts": {
+      "scapy_fallback_reference_only": 11551954
+    },
+    "full_scapy_fallback_packets": 11551954,
+    "optimized_decoder": "DISABLED_FOR_FULL_RUN__FULL_SCAPY_REFERENCE_ONLY",
+    "packet_by_packet_equivalence": true,
+    "reference_decoder": "SCAPY_2_6_1",
+    "scientific_semantics_changed": false,
+    "timing_or_fast_path_share_used_for_scientific_selection": false
+  },
+  "published_label_multiset": {
+    "ambiguous_binary_signatures": 0,
+    "binary_row_counts": {
+      "0": 432074,
+      "1": 13835
+    },
+    "duplicate_occurrences": 4,
+    "rows": 445909,
+    "unique_signatures": 445905
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Friday_status": "CLOSED",
+    "Monday_corpus_complete": true,
+    "Thursday_accessed": false,
+    "Tuesday_corpus_complete": true,
+    "Wednesday_corpus_complete": false,
+    "architecture_changed": false,
+    "join_rule_changed": false,
+    "model_training": false,
+    "new_forensic_exclusions_inferred": false,
+    "optimizer_steps": 0,
+    "representation_changed": false
+  },
+  "source": {
+    "pcap": {
+      "remote": "pcap/Tuesday-WorkingHours.pcap",
+      "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+      "sha256": "080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+      "size_bytes": 11048283608
+    },
+    "traffic_labels": {
+      "remote": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "rows": 445909,
+      "sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+      "size_bytes": 52701751
+    }
+  },
+  "split": "TRAIN",
+  "status": "TUESDAY_SUPERVISED_COMPACT_CORPUS_MATERIALIZED_AND_AUDITED"
+}

@@ -1,0 +1,53 @@
+{
+  "cache_release": {
+    "blob_exists_after_release": false,
+    "empty_directories_removed": [
+      "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap",
+      "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343"
+    ],
+    "remaining_wednesday_size_objects": [],
+    "resolved_blob_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/cd2674db7559a53f24bc03be3239b315700174ccaef72d10f5edc4c1a08f6186",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/kaggle/working/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Wednesday-workingHours.pcap",
+    "snapshot_was_symlink": true,
+    "xet_cache_existed": true,
+    "xet_cache_exists_after_release": false
+  },
+  "checkpoint": "Stage20-1D2-W-DELETE",
+  "next_checkpoint": "Stage20-1D3",
+  "scientific_profile_artifact": "results/stage20_1d_representation/stage20_1d2w_wednesday_exact_geometry_profile.json",
+  "scientific_profile_commit": "ff03dbce080c5e51bd9e859f7098080727c1ef09",
+  "scientific_profile_sha256": "57cda832e0b329a4f5ec108949ed979662ed762b7d82c9049d68eba0ea3506f0",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "Wednesday_daily_p95_computed": false,
+    "combined_train_p95_computed": false,
+    "labels_read": false,
+    "model_training": false,
+    "numeric_dimensions_selected": false
+  },
+  "source_identity": {
+    "remote_filename": "pcap/Wednesday-workingHours.pcap",
+    "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+    "sha256": "cd2674db7559a53f24bc03be3239b315700174ccaef72d10f5edc4c1a08f6186",
+    "size_bytes": 13420789612,
+    "verified_before_profile": true
+  },
+  "status": "WEDNESDAY_RAW_CACHE_RELEASED_AFTER_REMOTE_PROFILE_DURABILITY",
+  "three_day_train_profile_state": {
+    "all_three_present": true,
+    "combined_histogram_built": false,
+    "combined_train_p95_computed": false,
+    "monday_profile_present": true,
+    "numeric_dimensions_frozen": false,
+    "tuesday_profile_present": true,
+    "wednesday_profile_present": true
+  },
+  "workspace": {
+    "disk_values_used_for_scientific_selection": false,
+    "free_bytes_after_release": 20006690816,
+    "free_bytes_before_release": 6585872384,
+    "free_space_delta_bytes": 13420818432
+  }
+}

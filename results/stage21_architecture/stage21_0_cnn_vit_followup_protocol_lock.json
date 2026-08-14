@@ -1,0 +1,476 @@
+{
+  "anti_adaptation": {
+    "Friday_guided_debugging_of_scientific_spec": false,
+    "add_second_ViT_after_Friday": false,
+    "add_second_ViT_after_Thursday": false,
+    "change_ViT_after_Friday": false,
+    "change_ViT_after_Thursday": false,
+    "change_mask_semantics": false,
+    "change_representation": false,
+    "change_supervised_join": false,
+    "change_threshold_grid": false,
+    "change_training_hyperparameters_after_Friday": false,
+    "change_training_hyperparameters_after_Thursday": false,
+    "posthoc_threshold": false
+  },
+  "architecture_comparison": {
+    "Friday_is_nonconfirmatory": true,
+    "classification": {
+      "BOTH_NONPOSITIVE": "NO_BENCHMARK_RANKING_IMPROVEMENT",
+      "BOTH_POSITIVE": "DESCRIPTIVE_BENCHMARK_IMPROVEMENT_ON_BOTH_RANKING_METRICS",
+      "ONE_POSITIVE_ONE_NONPOSITIVE": "MIXED_BENCHMARK_RESULT"
+    },
+    "co_primary_descriptive_deltas": [
+      "ViT_MINUS_CNN_FRIDAY_ROC_AUC",
+      "ViT_MINUS_CNN_FRIDAY_PR_AUC"
+    ],
+    "paired_bootstrap": {
+      "descriptive_not_confirmatory": true,
+      "enabled": true,
+      "interval": "PERCENTILE_95_PERCENT",
+      "no_resampling_based_model_selection": true,
+      "replicates": 10000,
+      "seed": 21042,
+      "targets": [
+        "DELTA_ROC_AUC",
+        "DELTA_PR_AUC"
+      ],
+      "unit": "FLOW"
+    },
+    "secondary_deltas": [
+      "STANDARD_0_50_F1",
+      "STANDARD_0_50_RECALL",
+      "VALIDATION_SELECTED_BALANCED_F1",
+      "VALIDATION_SELECTED_BALANCED_RECALL",
+      "VALIDATION_SELECTED_SECURITY_F2",
+      "VALIDATION_SELECTED_SECURITY_RECALL"
+    ]
+  },
+  "candidate_budget": {
+    "MLP_dimension_search": false,
+    "architecture_search": false,
+    "candidate": "Stage21MaskedViTv1",
+    "candidate_substitution_after_lock": false,
+    "depth_search": false,
+    "dropout_search": false,
+    "embedding_dimension_search": false,
+    "head_count_search": false,
+    "new_architecture_candidates_in_Stage21": 1,
+    "patch_size_search": false,
+    "pretraining_search": false,
+    "second_ViT_if_result_is_poor": false
+  },
+  "checkpoint": "Stage21-0",
+  "comparator": {
+    "Friday_probabilities_reuse": "PERSISTED_STAGE20_SOURCE_OF_TRUTH",
+    "Thursday_probabilities_reuse": "PERSISTED_STAGE20_SOURCE_OF_TRUTH",
+    "canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+    "checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+    "immutable": true,
+    "name": "Stage20MaskedCNNv1",
+    "retrain_in_Stage21": false,
+    "trainable_parameters": 93025
+  },
+  "execution_sequence": [
+    {
+      "action": "RESTORE_OR_RECONSTITUTE_STAGE20_MTW_THURSDAY COMPACT_CORPORA_WITH_HASH_AND_ORDER_EQUIVALENCE",
+      "checkpoint": "Stage21-1R"
+    },
+    {
+      "action": "TRAIN_SINGLE_FROZEN_STAGE21_MASKED_VIT_FOR_EXACTLY_10_EPOCHS",
+      "checkpoint": "Stage21-2"
+    },
+    {
+      "action": "EVALUATE_THURSDAY_ONCE_AND_FREEZE_VIT STANDARD_BALANCED_SECURITY_OPERATING_POINTS",
+      "checkpoint": "Stage21-3"
+    },
+    {
+      "action": "RUN_ONE_VIT_INFERENCE_PASS_ON_LOCKED_FRIDAY REUSE_BENCHMARK_WITH_NO_SELECTION",
+      "checkpoint": "Stage21-4"
+    },
+    {
+      "action": "COMPARE_PERSISTED_STAGE20_CNN_AND_STAGE21_VIT PROBABILITIES_USING_PREDECLARED_DESCRIPTIVE_ANALYSIS",
+      "checkpoint": "Stage21-5"
+    }
+  ],
+  "hypothesis": {
+    "directional": "The single frozen ViT candidate may improve the Friday reuse-benchmark ROC-AUC and/or PR-AUC relative to the sealed Stage20 CNN.",
+    "failure_is_valid_result": true,
+    "not_assumed_true": true
+  },
+  "known_Stage20_Friday_before_lock": {
+    "PR_AUC": 0.48945269459245255,
+    "ROC_AUC": 0.43921400808023464,
+    "attack": 5602,
+    "balanced_and_security_0_17": {
+      "F1": 0.06281105199931354,
+      "F2": 0.040427694075023196,
+      "FN": 5419,
+      "FNR": 0.9673330953230989,
+      "FP": 42,
+      "FPR": 0.0064754856614246065,
+      "Precision": 0.8133333333333334,
+      "Recall": 0.03266690467690111,
+      "TN": 6444,
+      "TP": 183
+    },
+    "benign": 6486,
+    "flows": 12088,
+    "fresh_blind_holdout_for_Stage21": false,
+    "known_before_Stage21_lock": true,
+    "role": "PRIOR_OBSERVED_RESULT_AND_LATER_LOCKED_REUSE_BENCHMARK",
+    "standard_0_50": {
+      "F1": 0.06294067067927774,
+      "FN": 5419,
+      "FNR": 0.9673330953230989,
+      "FP": 30,
+      "FPR": 0.004625346901017576,
+      "Precision": 0.8591549295774648,
+      "Recall": 0.03266690467690111,
+      "TN": 6456,
+      "TP": 183
+    }
+  },
+  "metrics": {
+    "PR_AUC_definition": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION",
+    "ROC_AUC_definition": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA",
+    "operating_point_metrics": [
+      "TP",
+      "TN",
+      "FP",
+      "FN",
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1",
+      "F2",
+      "FPR",
+      "FNR"
+    ],
+    "score_metrics": [
+      "ROC_AUC",
+      "PR_AUC"
+    ]
+  },
+  "next_checkpoint": "Stage21-1R",
+  "parent_stage20_seal_commit": "166d2a13020c0961fe703fa3103f9b29a9cdf340",
+  "representation_and_supervision": {
+    "attack_category_used_for_training": false,
+    "binary_mapping": {
+      "ANY_NONEMPTY_NON_BENIGN": 1,
+      "BENIGN": 0
+    },
+    "compact_corpus_format": "EXACT_STAGE20_COMPACT_CORPUS_FORMAT",
+    "corpus_rematerialization_if_needed": "ONLY_SOURCE_FAITHFUL_RECONSTITUTION_WITH_STAGE20 FILE_HASH_AND_ORDER_EQUIVALENCE; NO NEW REPRESENTATION",
+    "encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "fuzzy_matching": false,
+    "inherit_exactly_from_Stage20": true,
+    "label_guided_repair": false,
+    "nearest_matching": false,
+    "representation": "64x256x1_FROZEN_STAGE20_PACKET_IMAGE",
+    "source_specific_repair": false,
+    "supervised_join": "FROZEN_DIRECTED_S4_EXACT_21_FIELD_SIGNATURE",
+    "tolerance_matching": false
+  },
+  "research_question": "Under the exact frozen Stage20 packet-image representation, supervision, temporal split, masking rules, and optimization budget, does a near-parameter-matched masked Vision Transformer show better cross-day benchmark ranking/generalization than the immutable Stage20MaskedCNNv1?",
+  "scientific_boundary_at_lock": {
+    "Friday_blind_for_Stage21": false,
+    "Stage20_results_known": true,
+    "Stage21_Friday_probabilities_observed": false,
+    "Stage21_Thursday_probabilities_observed": false,
+    "Stage21_optimizer_steps": 0,
+    "Stage21_threshold_selection_performed": false,
+    "Stage21_training_started": false,
+    "new_ViT_candidates_frozen": 1,
+    "real_data_forward_passes_by_Stage21_model": 0
+  },
+  "split_roles": {
+    "FRIDAY": {
+      "known_before_lock": true,
+      "may_select_architecture": false,
+      "may_select_epoch": false,
+      "may_select_optimizer": false,
+      "may_select_threshold": false,
+      "may_trigger_join_change": false,
+      "may_trigger_model_change": false,
+      "may_trigger_representation_change": false,
+      "role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY"
+    },
+    "TRAIN": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "VALIDATION": [
+      "Thursday"
+    ],
+    "fresh_confirmatory_holdout_in_Stage21": null
+  },
+  "stage20_scientific_state": {
+    "Stage20_E0_sha256": "d3bba4d9d9df4432383a7f4239a8562f484cb5805b66d52794873bfaca837b3b",
+    "Stage20_E3_validation_lock_sha256": "1cde2759aa0e99c1c399c16a2ee01cbdc732b07c930d0ecf9d83a98699694120",
+    "Stage20_Friday_compact_manifest_sha256": "8f2ddcaac7a3209f8875155c083707981bd58aecf4bec143ace19b6975c125ff",
+    "Stage20_Friday_evaluation_sha256": "39693543a1cf139d144742c43593c78b6cb9e9ca0123b8390dbd6781cb92363d",
+    "Stage20_Friday_release_receipt_sha256": "c4395828a50bd7e6a922f13723e5b04602206d6f1b916bc6f749d4d571bd5b10",
+    "may_modify_Stage20": false,
+    "science_commit": "f6fb3591f6db7c6d452b123dfdb8e4ea00b23b03",
+    "seal_commit": "166d2a13020c0961fe703fa3103f9b29a9cdf340",
+    "sealed": true
+  },
+  "status": "POST_STAGE20_CNN_VIT_FOLLOWUP_FROZEN_BEFORE_VIT_TRAINING",
+  "study_classification": {
+    "Friday_role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+    "claim_boundary": "Stage21 may support a controlled same-corpus architecture comparison but may not claim independent confirmation of architecture superiority.",
+    "external_confirmation_required_for_general_superiority_claim": true,
+    "future_external_confirmation_stage": "NEW_PREREGISTERED_STAGE_ON_UNSEEN_DATA",
+    "type": "PREREGISTERED_POST_STAGE20_ARCHITECTURE_FOLLOWUP",
+    "why_not_fresh_confirmation": "Stage20 Friday outcomes are already known and the ViT follow-up is motivated by the observed CNN cross-day failure."
+  },
+  "training_protocol": {
+    "applies_to": "Stage21MaskedViTv1_ONLY",
+    "augmentation": "NONE",
+    "automatic_mixed_precision": false,
+    "batch_size": 256,
+    "drop_last": false,
+    "dtype": "FLOAT32",
+    "early_stopping": false,
+    "epoch_selection": false,
+    "epochs": 10,
+    "final_epoch": 10,
+    "gradient_clip_norm": 5.0,
+    "hyperparameter_search": false,
+    "loss": "BCEWithLogitsLoss",
+    "num_workers": 0,
+    "optimizer": {
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "learning_rate": 0.001,
+      "name": "AdamW",
+      "search": false,
+      "weight_decay": 0.0001
+    },
+    "positive_class_weight": {
+      "formula": "TRAIN_BENIGN_COUNT_DIVIDED_BY_TRAIN_ATTACK_COUNT",
+      "frozen_train_attack": 4456,
+      "frozen_train_benign": 541174,
+      "frozen_value": 121.448384201077,
+      "search": false
+    },
+    "same_budget_as_Stage20_CNN": true,
+    "scheduler": null,
+    "seed": 42,
+    "shuffle": "PCG64_SEED_42_PLUS_EPOCH",
+    "software_target": {
+      "CUDA_build": "12.6",
+      "TF32": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "deterministic_algorithms": true,
+      "exact_hardware_to_be_durably_recorded_before_training": true,
+      "torch": "2.10.0+cu126"
+    },
+    "train_plus_validation_retrain": false,
+    "training_population_change": false,
+    "validation_during_training_epochs": false
+  },
+  "validation_and_threshold_selection": {
+    "Friday_threshold_grid": false,
+    "Friday_threshold_reselection": false,
+    "Stage20_E3_lock_sha256": "1cde2759aa0e99c1c399c16a2ee01cbdc732b07c930d0ecf9d83a98699694120",
+    "balanced": {
+      "objective": "MAXIMUM_VALIDATION_F1",
+      "tie_break": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "CLOSER_TO_0_50",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "inherit_Stage20_E3_semantics": true,
+    "prediction_rule": "ATTACK_IF_PROBABILITY_GTE_THRESHOLD",
+    "probability": "FLOAT32_SIGMOID_ATTACK_POSITIVE_LOGIT",
+    "security": {
+      "constraint": "FPR_LE_0_05",
+      "if_none": "UNAVAILABLE_NO_RELAXATION",
+      "objective": "MAXIMUM_VALIDATION_F2",
+      "tie_break": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "source": "THURSDAY_ONLY",
+    "standard_threshold": 0.5,
+    "threshold_grid_integer_percent": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ]
+  },
+  "vit": {
+    "Stage20_CNN_parameters": 93025,
+    "external_pretraining": false,
+    "initialization": {
+      "MLP_linears": "XAVIER_UNIFORM_BIAS_ZERO",
+      "QKV": "XAVIER_UNIFORM_BIAS_ZERO",
+      "attention_output": "XAVIER_UNIFORM_BIAS_ZERO",
+      "class_token": "NORMAL_MEAN_0_STD_0_02",
+      "classifier": "XAVIER_UNIFORM_BIAS_ZERO",
+      "layer_norm": "WEIGHT_1_BIAS_0",
+      "patch_projection": "XAVIER_UNIFORM_BIAS_ZERO",
+      "positional_embedding": "NORMAL_MEAN_0_STD_0_02"
+    },
+    "input": {
+      "dtype": "float32",
+      "scaling": "BYTE_DIVIDE_255",
+      "shape": "[B,1,64,256]"
+    },
+    "mask_semantics": {
+      "invalid_patch_tokens_excluded_as_attention_keys": true,
+      "invalid_patch_tokens_zero_gated": true,
+      "mask_as_second_feature_channel": false,
+      "padded_pixel_values_forced_zero_before_projection": true,
+      "padding_values_irrelevant_given_same_mask": "SYNTHETIC_EXACT_VERIFIED",
+      "partial_patch_authentic_pixels_retained": true,
+      "patch_valid_if_any_authentic_pixel": true
+    },
+    "module_path": "scripts/stage21_masked_vit.py",
+    "module_sha256": "3af99e4ea7061c68a676dc8fa7e485a7d13278f8947e4f8a8fbf2069dc31e3cb",
+    "name": "Stage21MaskedViTv1",
+    "parameter_delta": -1056,
+    "parameter_match_pass": true,
+    "parameter_match_rule": "ABS_PERCENT_DELTA_LT_5_PERCENT",
+    "parameter_percent_delta": -1.1351787153990878,
+    "parameter_ratio_ViT_over_CNN": 0.9886482128460091,
+    "patching": {
+      "grid_columns": 16,
+      "grid_rows": 8,
+      "patch_columns": 16,
+      "patch_pixels": 128,
+      "patch_rows": 8,
+      "patch_tokens": 128,
+      "rationale_frozen_before_training": "Exact divisibility of 64x256 while retaining an anisotropic local packet-row/byte-column grid with a tractable 128-token sequence.",
+      "remainder_or_patch_padding": false
+    },
+    "synthetic_verification": {
+      "output_shape": [
+        2
+      ],
+      "padding_value_invariance_exact": true,
+      "real_data_used": false,
+      "seed": 42,
+      "synthetic_logits": [
+        0.07093805074691772,
+        0.12072749435901642
+      ]
+    },
+    "trainable_parameters": 91969,
+    "transformer": {
+      "MLP_dimension": 160,
+      "MLP_dropout": 0.0,
+      "activation": "GELU_EXACT_APPROXIMATE_NONE",
+      "attention_dropout": 0.0,
+      "attention_heads": 4,
+      "class_token": true,
+      "classifier_dropout": 0.25,
+      "depth": 2,
+      "embedding_dimension": 64,
+      "head_dimension": 16,
+      "normalization": "PRE_LAYER_NORM_EPS_1E_5",
+      "positional_embedding": "TRAINABLE_129x64",
+      "stochastic_depth": false
+    },
+    "weights_initialization_only": "FROM_SCRATCH_FROZEN_INITIALIZATION"
+  }
+}

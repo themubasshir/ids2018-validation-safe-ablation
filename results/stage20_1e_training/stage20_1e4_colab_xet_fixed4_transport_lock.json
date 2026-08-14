@@ -1,0 +1,67 @@
+{
+  "authorized_transport_configuration": {
+    "HF_HUB_DISABLE_XET": null,
+    "HF_TOKEN_REQUIRED": true,
+    "HF_XET_CHUNK_CACHE_SIZE_BYTES": "0",
+    "HF_XET_FIXED_DOWNLOAD_CONCURRENCY": "4",
+    "HF_XET_HIGH_PERFORMANCE": null,
+    "HF_XET_NUM_CONCURRENT_RANGE_GETS": "4",
+    "HF_XET_RECONSTRUCT_WRITE_SEQUENTIALLY": null
+  },
+  "boundary_before_transport_change": {
+    "Friday_RawPcapReader_scientific_pass_started": false,
+    "Friday_compact_corpus_exists": false,
+    "Friday_label_contents_parsed": false,
+    "Friday_metrics_observed": false,
+    "Friday_model_inference_started": false,
+    "Friday_pcap_full_size_materialized": false,
+    "Friday_pcap_sha256_verified": false,
+    "Friday_probabilities_exist": false,
+    "Friday_source_access_started": true,
+    "Friday_staging_apparent_bytes": 0,
+    "Friday_staging_file_count": 0
+  },
+  "checkpoint": "Stage20-1E4-COLAB-XET-FIXED4-PRE",
+  "disk_free_bytes_at_lock": 61200650240,
+  "frozen_source_identity": {
+    "Friday_pcap_sha256": "beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0",
+    "Friday_pcap_size_bytes": 8839309056
+  },
+  "hf_authentication": {
+    "credential_present": true,
+    "credential_value_persisted": false,
+    "credential_value_printed": false
+  },
+  "hf_xet_runtime": {
+    "module_available": true,
+    "module_version_if_exposed": null
+  },
+  "parent_commit": "1c15d614e2f79f9bb209cc607f93c0da5249be64",
+  "partial_cache_metadata_only": {
+    "Friday_pcap_complete_size_match_count": 0,
+    "cache_apparent_bytes": 130685545,
+    "cache_file_count": 8,
+    "large_partial_file_count": 0,
+    "large_partial_files": []
+  },
+  "previous_recovery_lock_sha256": "634ec686e421aa9638e07e4d8e47fe0095bb7df3d92c855eb67218dd148f72eb",
+  "reason": "The authenticated non-XET HTTP recovery path remained operationally impractical for the 8.84 GB pinned Friday PCAP. Before any Friday source SHA verification, label parsing, RawPcapReader reconstruction, compact-corpus creation, or inference, transport is changed back to authenticated hf-xet with fixed download concurrency 4.",
+  "scientific_invariants_remaining": {
+    "Friday_first50k_pilot": false,
+    "Friday_model_inference_passes_remaining": 1,
+    "Friday_pcap_scientific_reconstruction_passes_remaining": 1,
+    "Friday_threshold_search": false,
+    "architecture_change": false,
+    "balanced_threshold": 0.17,
+    "holdout_guided_scientific_debugging": false,
+    "join_change": false,
+    "model_retraining": false,
+    "representation_change": false,
+    "security_threshold": 0.17,
+    "source_ingestion_semantics_change": false,
+    "standard_threshold": 0.5
+  },
+  "scientific_protocol_change": false,
+  "scientific_state_change": false,
+  "status": "AUTHENTICATED_XET_FIXED_CONCURRENCY_TRANSPORT_FROZEN_BEFORE_RESUME"
+}

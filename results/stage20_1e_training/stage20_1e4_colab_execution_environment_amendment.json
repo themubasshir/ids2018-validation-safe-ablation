@@ -1,0 +1,101 @@
+{
+  "checkpoint": "Stage20-1E4-COLAB-PRE",
+  "execution_host_change_only": true,
+  "frozen_scientific_invariants": {
+    "Friday_first50k_pilot": false,
+    "Friday_model_inference_passes": 1,
+    "Friday_pcap_passes": 1,
+    "Friday_threshold_search": false,
+    "architecture_change": false,
+    "balanced_threshold": 0.17,
+    "checkpoint_canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+    "checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+    "decoder": "SCAPY_2_6_1_REFERENCE_ONLY",
+    "holdout_guided_debugging": false,
+    "join": "FROZEN_DIRECTED_S4_EXACT_21_FIELD_SIGNATURE",
+    "join_change": false,
+    "model": "Stage20MaskedCNNv1_FIXED_EPOCH10",
+    "model_retraining": false,
+    "representation": "64x256x1_FROZEN_STAGE20_PACKET_IMAGE",
+    "representation_change": false,
+    "security_threshold": 0.17,
+    "source_ingestion_change": false,
+    "standard_threshold": 0.5
+  },
+  "operational_dependencies": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "scapy_required": "2.6.1",
+    "torch_install": "torch==2.10.0 from official PyTorch CUDA 12.6 wheel index",
+    "torch_isolated_target": "/content/stage20_torch_cu126_target"
+  },
+  "original_E4_PRE_lock_sha256": "5050a61c9c69c70c66aa10e7c84dc0aaebf1a1f7925a274d7b8f5f186a22c7ef",
+  "parent_commit": "df6a13158651c2b5e7d1f69b7341ac15af01394e",
+  "reason": "Kaggle GPU quota unavailable before Friday execution; final holdout execution migrated to Google Colab before any Friday source access.",
+  "runtime": {
+    "Friday_accessed": false,
+    "Friday_bytes_read": 0,
+    "Friday_model_inference": false,
+    "checkpoint_canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": true,
+    "gpu_capability": [
+      7,
+      5
+    ],
+    "gpu_name": "Tesla T4",
+    "model_trainable_parameters": 93025,
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "synthetic_logits_float32": [
+      -9.110215187072754,
+      -0.4171772003173828,
+      -2.5934996604919434
+    ],
+    "synthetic_probabilities_float32": [
+      0.00011051870387746021,
+      0.3971923887729645,
+      0.06955794245004654
+    ],
+    "synthetic_probe_count": 3,
+    "synthetic_probe_repeatability_exact": true,
+    "torch_compiled_arches": [
+      "sm_50",
+      "sm_60",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90"
+    ],
+    "torch_cuda_build": "12.6",
+    "torch_file": "/content/stage20_torch_cu126_target/torch/__init__.py",
+    "torch_version": "2.10.0+cu126"
+  },
+  "scientific_boundary_at_amendment": {
+    "Friday_accessed": false,
+    "Friday_bytes_read": 0,
+    "Friday_class_balance_observed": false,
+    "Friday_join_coverage_observed": false,
+    "Friday_label_rows_observed": false,
+    "Friday_model_inference": false,
+    "Friday_model_outputs_observed": false
+  },
+  "scientific_protocol_change": false,
+  "scientific_state_change": false,
+  "status": "EXECUTION_PLATFORM_MIGRATION_FROZEN_AND_REMOTE_DURABLE_BEFORE_ANY_FRIDAY_ACCESS",
+  "storage_gate": {
+    "Friday_label_bytes": 63680084,
+    "Friday_pcap_bytes": 8839309056,
+    "compact_operational_reserve_bytes": 4116102319,
+    "free_bytes_before_Friday": 61274988544,
+    "margin_bytes": 47182155261,
+    "required_free_bytes_original_E4_rule": 14092833283,
+    "safety_headroom_bytes": 1073741824,
+    "storage_values_used_for_scientific_selection": false
+  }
+}

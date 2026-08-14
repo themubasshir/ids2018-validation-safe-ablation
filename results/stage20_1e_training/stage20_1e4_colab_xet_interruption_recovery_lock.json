@@ -1,0 +1,68 @@
+{
+  "Colab_PRE_amendment_sha256": "8fd22f9a71c649a5f443b137b096e0f36fd06bea2beb1cbb10ef8c7b784cfc1a",
+  "authorized_operational_recovery_only": {
+    "Friday_first50k_pilot": false,
+    "Friday_model_inference_passes_remaining": 1,
+    "Friday_pcap_scientific_reconstruction_passes_remaining": 1,
+    "Friday_threshold_search": false,
+    "architecture_change": false,
+    "balanced_threshold": 0.17,
+    "empty_staging_removal_condition": "EXACTLY_ZERO_FILES_AND_ZERO_BYTES_ONLY",
+    "holdout_guided_scientific_debugging": false,
+    "join_change": false,
+    "label_source_hash_verification_still_required_before_parsing": true,
+    "model_retraining": false,
+    "pcap_source_hash_verification_still_required_before_RawPcapReader": true,
+    "remove_interrupted_empty_staging_directory_before_recreate": true,
+    "representation_change": false,
+    "reuse_already_materialized_label_cache_entries": true,
+    "scientific_reason": "NONE_OPERATIONAL_TRANSPORT_ONLY",
+    "security_threshold": 0.17,
+    "source_ingestion_semantics_change": false,
+    "standard_threshold": 0.5,
+    "transport_change": "SET_HF_HUB_DISABLE_XET_1"
+  },
+  "checkpoint": "Stage20-1E4-COLAB-XET-RECOVERY-PRE",
+  "disk_free_bytes_at_recovery_lock": 61203308544,
+  "frozen_source_identities": {
+    "ddos": {
+      "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+      "size": 23048086
+    },
+    "morning": {
+      "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+      "size": 21999571
+    },
+    "pcap": {
+      "sha256": "beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0",
+      "size": 8839309056
+    },
+    "portscan": {
+      "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+      "size": 18632427
+    }
+  },
+  "observed_boundary_metadata_only": {
+    "Friday_RawPcapReader_scientific_pass_started": false,
+    "Friday_final_compact_corpus_exists": false,
+    "Friday_label_contents_parsed": false,
+    "Friday_metrics_observed": false,
+    "Friday_model_inference_started": false,
+    "Friday_pcap_full_size_materialized": false,
+    "Friday_pcap_sha256_verified": false,
+    "Friday_probabilities_exist": false,
+    "Friday_science_commit_exists": false,
+    "Friday_source_access_started": true,
+    "Friday_source_sha256_verification_completed": false,
+    "Friday_staging_apparent_bytes": 0,
+    "Friday_staging_directory_exists": true,
+    "Friday_staging_file_count": 0,
+    "Friday_three_label_files_full_size_materialized": true
+  },
+  "original_E4_PRE_sha256": "5050a61c9c69c70c66aa10e7c84dc0aaebf1a1f7925a274d7b8f5f186a22c7ef",
+  "parent_commit": "b70ef87fddafae4803531a617d2e074cac988ad5",
+  "reason": "The first Colab Friday source-materialization attempt stalled inside Hugging Face XET while materializing the pinned Friday PCAP and was manually stopped before source SHA verification, label parsing, the Stage20 RawPcapReader reconstruction pass, compact corpus creation, or model inference.",
+  "scientific_protocol_change": false,
+  "scientific_state_change": false,
+  "status": "OPERATIONAL_DOWNLOAD_INTERRUPTION_RECOVERY_FROZEN_BEFORE_RESUME"
+}

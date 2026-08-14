@@ -1,0 +1,128 @@
+{
+  "checkpoint": "Stage20-1E4",
+  "execution_environment_amendment_commit": "b70ef87fddafae4803531a617d2e074cac988ad5",
+  "holdout_population": {
+    "binary_counts": {
+      "0": 6486,
+      "1": 5602
+    },
+    "compact_manifest_sha256": "8f2ddcaac7a3209f8875155c083707981bd58aecf4bec143ace19b6975c125ff",
+    "flows": 12088,
+    "source": "Friday"
+  },
+  "model": {
+    "canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+    "checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+    "epoch": 10,
+    "retrained_after_holdout": false,
+    "retrained_after_validation": false
+  },
+  "operating_points": {
+    "balanced": {
+      "metrics": {
+        "Accuracy": 0.5482296492389146,
+        "F1": 0.06281105199931354,
+        "F2": 0.040427694075023196,
+        "FN": 5419,
+        "FNR": 0.9673330953230989,
+        "FP": 42,
+        "FPR": 0.0064754856614246065,
+        "Precision": 0.8133333333333334,
+        "Recall": 0.03266690467690111,
+        "TN": 6444,
+        "TP": 183,
+        "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+        "threshold": 0.17,
+        "threshold_integer_percent": 17
+      },
+      "selection": "FROZEN_0_17",
+      "source": "THURSDAY_VALIDATION_SELECTED_AND_FROZEN_BEFORE_FRIDAY"
+    },
+    "security": {
+      "available": true,
+      "constraint_was_selected_on": "THURSDAY_VALIDATION_ONLY",
+      "metrics": {
+        "Accuracy": 0.5482296492389146,
+        "F1": 0.06281105199931354,
+        "F2": 0.040427694075023196,
+        "FN": 5419,
+        "FNR": 0.9673330953230989,
+        "FP": 42,
+        "FPR": 0.0064754856614246065,
+        "Precision": 0.8133333333333334,
+        "Recall": 0.03266690467690111,
+        "TN": 6444,
+        "TP": 183,
+        "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+        "threshold": 0.17,
+        "threshold_integer_percent": 17
+      },
+      "selection": "FROZEN_0_17",
+      "source": "THURSDAY_VALIDATION_SELECTED_AND_FROZEN_BEFORE_FRIDAY"
+    },
+    "standard": {
+      "metrics": {
+        "Accuracy": 0.5492223692918597,
+        "F1": 0.06294067067927774,
+        "F2": 0.040449140179479245,
+        "FN": 5419,
+        "FNR": 0.9673330953230989,
+        "FP": 30,
+        "FPR": 0.004625346901017576,
+        "Precision": 0.8591549295774648,
+        "Recall": 0.03266690467690111,
+        "TN": 6456,
+        "TP": 183,
+        "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+        "threshold": 0.5,
+        "threshold_integer_percent": 50
+      },
+      "selection": "FIXED_0_50",
+      "source": "FROZEN_BEFORE_FRIDAY"
+    }
+  },
+  "parent_prelock_commit": "df6a13158651c2b5e7d1f69b7341ac15af01394e",
+  "probabilities": {
+    "bytes": 48480,
+    "dtype": "float32",
+    "maximum": 0.9997990727424622,
+    "mean": 0.015957560555085216,
+    "minimum": 8.66553864275051e-32,
+    "order": "FRIDAY_COMPACT_CORPUS_EXPORT_ORDER",
+    "path": "results/stage20_1e_training/stage20_1e4_friday_probabilities.npy",
+    "sha256": "e46a112e1e0320f645ec9d9502f0b3c0d8bdcf3987b50b2cd2352ef7484e2124",
+    "shape": [
+      12088
+    ],
+    "source_of_truth_for_metrics": true
+  },
+  "scientific_boundary": {
+    "Friday_accessed": true,
+    "Friday_holdout_guided_change": false,
+    "Friday_model_inference_passes": 1,
+    "Friday_pcap_reconstruction_passes": 1,
+    "Friday_threshold_reselection": false,
+    "Stage20_scientific_execution_complete": true,
+    "architecture_changed": false,
+    "join_rule_changed": false,
+    "model_retrained": false,
+    "optimizer_steps_after_E2": 0,
+    "representation_changed": false
+  },
+  "score_metrics": {
+    "PR_AUC": 0.48945269459245255,
+    "PR_AUC_definition": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+    "ROC_AUC": 0.43921400808023464,
+    "ROC_AUC_definition": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA_FROM_PERSISTED_FLOAT32_PROBABILITIES"
+  },
+  "status": "FINAL_FRIDAY_HOLDOUT_EVALUATION_COMPLETE_WITH_FROZEN_MODEL_AND_THRESHOLDS",
+  "threshold_search": {
+    "candidate_thresholds_tested_for_selection_on_Friday": 0,
+    "performed_on_Friday": false,
+    "threshold_grid_computed_on_Friday": false
+  },
+  "xet_fixed4_transport_lock_commit": "035f5972bea9fdd65efeeb6d2e2ba0251bbe6732",
+  "xet_fixed4_transport_lock_sha256": "ea7f8501681fe9271fcb2524d1467317f2d3814269e1a967ecb7489e399da2e8",
+  "xet_interruption_recovery_lock_commit": "1c15d614e2f79f9bb209cc607f93c0da5249be64",
+  "xet_interruption_recovery_lock_sha256": "634ec686e421aa9638e07e4d8e47fe0095bb7df3d92c855eb67218dd148f72eb"
+}

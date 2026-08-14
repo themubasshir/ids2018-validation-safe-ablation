@@ -1,0 +1,110 @@
+{
+  "Friday_role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+  "Stage21_0_protocol_sha256": "1a60a0e6b12e88e9c8ceefb83278b71011b4fa396e821c22a093b69fcdb364f5",
+  "Stage21_ViT_module_sha256": "3af99e4ea7061c68a676dc8fa7e485a7d13278f8947e4f8a8fbf2069dc31e3cb",
+  "auxiliary_file_policy": {
+    "allowed": [
+      "manifest.json"
+    ],
+    "manifest_json_role": "AUXILIARY_NOT_ONE_OF_FOUR_FROZEN_SCIENTIFIC_PAYLOAD_FILES",
+    "other_extra_files": "FAIL"
+  },
+  "checkpoint": "Stage21-1R0",
+  "compact_root": "/content/stage20_compact_corpus",
+  "days": {
+    "Friday": {
+      "auxiliary_files": {
+        "manifest.json": {
+          "bytes": 24043,
+          "consistency_checks": "PASS",
+          "json_parse": true,
+          "role": "AUXILIARY_LOCAL_MANIFEST_NOT_FROZEN_SCIENTIFIC_PAYLOAD",
+          "sha256": "8f2ddcaac7a3209f8875155c083707981bd58aecf4bec143ace19b6975c125ff"
+        }
+      },
+      "day": "Friday",
+      "directory": "/content/stage20_compact_corpus/Friday",
+      "exists": true,
+      "expected_encoded_authentic_bytes": 8679226,
+      "expected_flow_count": 12088,
+      "files": {
+        "encoded_bytes.bin": {
+          "bytes": 8679226,
+          "sha256": "f6dd1900f2767edc20a112b9f9875b3410667c3dace1dd2ff729cb3ce37952d2",
+          "verified": true
+        },
+        "flow_offsets.npy": {
+          "bytes": 96840,
+          "sha256": "5e66ab4e85eb21eca8c7ea36c45461e1ac1f21d25acb0fb812c2221db02917aa",
+          "verified": true
+        },
+        "labels.npy": {
+          "bytes": 12216,
+          "sha256": "239b124119824fac23cff9fdcfbc24bc46227a0b6d4b1ad2201e955c263347d8",
+          "verified": true
+        },
+        "packet_lengths.npy": {
+          "bytes": 1547392,
+          "sha256": "f1790f6e9ddc9f24954cf72eb72359c7052e8736cdb97516afff74b7805ba878",
+          "verified": true
+        }
+      },
+      "status": "PRESENT_EXACT_STAGE20_BYTE_IDENTITY"
+    },
+    "Monday": {
+      "day": "Monday",
+      "directory": "/content/stage20_compact_corpus/Monday",
+      "exists": false,
+      "expected_encoded_authentic_bytes": 522845159,
+      "expected_flow_count": 528509,
+      "files": {},
+      "status": "MISSING_REQUIRES_RECONSTITUTION"
+    },
+    "Thursday": {
+      "day": "Thursday",
+      "directory": "/content/stage20_compact_corpus/Thursday",
+      "exists": false,
+      "expected_encoded_authentic_bytes": 7586531,
+      "expected_flow_count": 8197,
+      "files": {},
+      "status": "MISSING_REQUIRES_RECONSTITUTION"
+    },
+    "Tuesday": {
+      "day": "Tuesday",
+      "directory": "/content/stage20_compact_corpus/Tuesday",
+      "exists": false,
+      "expected_encoded_authentic_bytes": 4078271,
+      "expected_flow_count": 4170,
+      "files": {},
+      "status": "MISSING_REQUIRES_RECONSTITUTION"
+    },
+    "Wednesday": {
+      "day": "Wednesday",
+      "directory": "/content/stage20_compact_corpus/Wednesday",
+      "exists": false,
+      "expected_encoded_authentic_bytes": 13824937,
+      "expected_flow_count": 12951,
+      "files": {},
+      "status": "MISSING_REQUIRES_RECONSTITUTION"
+    }
+  },
+  "missing_days_requiring_source_faithful_reconstitution": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+  ],
+  "model_training": false,
+  "next": "RECONSTITUTE_ONLY_MISSING_MTW_THURSDAY_DAYS_ONE_AT_A_TIME; NO_STAGE21_MODEL_FORWARD_OR_TRAINING_UNTIL_ALL_REQUIRED_CORPORA ARE_EXACTLY_RESTORED",
+  "optimizer_steps": 0,
+  "parent_Stage21_0_commit": "ad0b38ec908686fe46616c4a8ee0a3ec36092492",
+  "present_exact_days": [
+    "Friday"
+  ],
+  "purpose": "COMPACT_CORPUS_RESTORATION_INVENTORY_ONLY",
+  "raw_source_access": false,
+  "raw_source_download": false,
+  "real_data_model_forward": false,
+  "restoration_rule": "Any present corpus must match every frozen Stage20 compact file size and SHA256 exactly. Missing corpora may only be recreated source-faithfully under the frozen Stage20 representation, exact S4 join, encoder, ordering, and compact format. No alternative representation or label repair is permitted.",
+  "scientific_protocol_change": false
+}

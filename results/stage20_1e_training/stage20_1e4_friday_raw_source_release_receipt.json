@@ -1,0 +1,100 @@
+{
+  "checkpoint": "Stage20-1E4-DELETE",
+  "compact_manifest_sha256": "8f2ddcaac7a3209f8875155c083707981bd58aecf4bec143ace19b6975c125ff",
+  "evaluation_json_sha256": "39693543a1cf139d144742c43593c78b6cb9e9ca0123b8390dbd6781cb92363d",
+  "execution_environment_amendment_commit": "b70ef87fddafae4803531a617d2e074cac988ad5",
+  "final_scientific_state": {
+    "Friday_HOLDOUT_accessed": true,
+    "Friday_PCAP_reconstruction_passes": 1,
+    "Friday_model_inference_passes": 1,
+    "Friday_threshold_reselection": false,
+    "Friday_threshold_search": false,
+    "Monday_TRAIN_corpus_complete": true,
+    "Stage20_complete": true,
+    "Thursday_VALIDATION_corpus_complete": true,
+    "Thursday_evaluation_complete_and_thresholds_frozen": true,
+    "Tuesday_TRAIN_corpus_complete": true,
+    "Wednesday_TRAIN_corpus_complete": true,
+    "holdout_guided_change": false,
+    "model_retraining_after_holdout": false,
+    "model_retraining_after_validation": false,
+    "optimizer_steps_after_E2": 0
+  },
+  "label_releases": [
+    {
+      "blob_exists_after_release": false,
+      "resolved_blob_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+      "snapshot_exists_after_release": false,
+      "snapshot_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    },
+    {
+      "blob_exists_after_release": false,
+      "resolved_blob_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+      "snapshot_exists_after_release": false,
+      "snapshot_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    },
+    {
+      "blob_exists_after_release": false,
+      "resolved_blob_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+      "snapshot_exists_after_release": false,
+      "snapshot_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    }
+  ],
+  "local_compact_corpus_directory": "/content/stage20_compact_corpus/Friday",
+  "local_compact_corpus_preserved": true,
+  "next": "STAGE20_SEALED__ANY_NEW_ARCHITECTURE_REQUIRES_NEW_PREREGISTERED_STAGE",
+  "pcap_release": {
+    "blob_exists_after_release": false,
+    "resolved_blob_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/blobs/beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0",
+    "snapshot_exists_after_release": false,
+    "snapshot_path": "/content/stage20_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Friday-WorkingHours.pcap",
+    "snapshot_was_symlink": true
+  },
+  "prelock_commit": "df6a13158651c2b5e7d1f69b7341ac15af01394e",
+  "probability_sha256": "e46a112e1e0320f645ec9d9502f0b3c0d8bdcf3987b50b2cd2352ef7484e2124",
+  "release_source_reverification": {
+    "pcap": {
+      "sha256": "beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0",
+      "size_bytes": 8839309056,
+      "verified": true
+    },
+    "traffic_labels": [
+      {
+        "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+        "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+        "size_bytes": 21999571,
+        "verified": true
+      },
+      {
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+        "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+        "size_bytes": 23048086,
+        "verified": true
+      },
+      {
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+        "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+        "size_bytes": 18632427,
+        "verified": true
+      }
+    ]
+  },
+  "remaining_exact_source_size_objects": [],
+  "science_commit": "f6fb3591f6db7c6d452b123dfdb8e4ea00b23b03",
+  "status": "FRIDAY_RAW_HOLDOUT_SOURCES_RELEASED_ONLY_AFTER_FINAL_E4_SCIENCE_REMOTE_DURABILITY",
+  "workspace": {
+    "free_bytes_after_release": 61246136320,
+    "free_bytes_before_release": 52343115776,
+    "space_reclaimed_bytes": 8903020544,
+    "storage_values_used_for_scientific_selection": false
+  },
+  "xet_cache_existed": true,
+  "xet_cache_exists_after_release": false,
+  "xet_fixed4_transport_lock_commit": "035f5972bea9fdd65efeeb6d2e2ba0251bbe6732",
+  "xet_fixed4_transport_lock_sha256": "ea7f8501681fe9271fcb2524d1467317f2d3814269e1a967ecb7489e399da2e8",
+  "xet_interruption_recovery_lock_commit": "1c15d614e2f79f9bb209cc607f93c0da5249be64",
+  "xet_interruption_recovery_lock_sha256": "634ec686e421aa9638e07e4d8e47fe0095bb7df3d92c855eb67218dd148f72eb"
+}

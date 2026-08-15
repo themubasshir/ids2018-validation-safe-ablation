@@ -1,0 +1,81 @@
+{
+  "checkpoint": "Stage21-1R1-M-EXACT-RESTORATION",
+  "compact_corpus": {
+    "all_four_exact_stage20_file_identities": true,
+    "directory": "/kaggle/working/stage20_compact_corpus/Monday",
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 522845159,
+        "exact": true,
+        "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+        "sha_match": true,
+        "size_match": true
+      },
+      "flow_offsets.npy": {
+        "bytes": 4228208,
+        "exact": true,
+        "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+        "sha_match": true,
+        "size_match": true
+      },
+      "labels.npy": {
+        "bytes": 528637,
+        "exact": true,
+        "sha256": "48792b8d6a127b35342cb0789baa6c54396f1100a60ce7225daf08d1c3530424",
+        "sha_match": true,
+        "size_match": true
+      },
+      "packet_lengths.npy": {
+        "bytes": 67649280,
+        "exact": true,
+        "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+        "sha_match": true,
+        "size_match": true
+      }
+    },
+    "first_128_loader_structural_audit": "PASS",
+    "flow_count": 528509,
+    "loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0"
+  },
+  "day": "Monday",
+  "decision": "MONDAY_EXACT_STAGE20_BYTE_IDENTITY_RESTORED",
+  "elapsed_seconds_for_tail_recovery": 6.631550550460815,
+  "forensic_preservation": {
+    "failed_python_order_staging_preserved": true,
+    "failed_staging_path": "/kaggle/working/stage20_compact_corpus/.Monday.stage21_staging",
+    "label_source_reread_for_correction": false,
+    "pcap_reread_for_correction": false
+  },
+  "next": "SEAL_COMMIT_PUSH_AND_ARCHIVE_MONDAY_BEFORE_TUESDAY",
+  "ordering_recovery": {
+    "basis": "EXACT_FROZEN_STAGE20_THREE_FILE_HASH_IDENTITY;CONSISTENT_WITH_PINNED_CICFLOWMETER_HASHMAP_EOF_ITERATION",
+    "failed_order": "PYTHON_CURRENT",
+    "labels_already_exact_before_order_recovery": true,
+    "recovered_candidate_matches_frozen_encoded_bytes_sha256": true,
+    "recovered_candidate_matches_frozen_flow_offsets_sha256": true,
+    "recovered_candidate_matches_frozen_packet_lengths_sha256": true,
+    "recovered_exact_candidate": "JAVA_HASHMAP_BUCKET_START",
+    "scientific_rule_changed": false,
+    "upstream_cicflowmeter_revision": "eaa853dd82f08ba5288bb7f295b471de7313f883"
+  },
+  "repository_parent": "969eaf81c10fb8cf1e311c103b0bf5301500bbec",
+  "scientific_boundary": {
+    "fuzzy_matching": false,
+    "join_rule_changed": false,
+    "label_repair": false,
+    "model_forward": false,
+    "nearest_matching": false,
+    "new_forensic_exclusion_inferred": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "tolerance_matching": false,
+    "training": false
+  },
+  "scientific_population": {
+    "eof_supervised_flows": 192520,
+    "eof_unmatched_flows": 676,
+    "finished_prefix_supervised_flows": 335989,
+    "supervised_flows": 528509
+  },
+  "status": "PASS_EXACT_STAGE20_BYTE_IDENTITY"
+}

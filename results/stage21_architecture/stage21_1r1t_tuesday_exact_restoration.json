@@ -1,0 +1,148 @@
+{
+  "checkpoint": "Stage21-1R1-T-EXACT-RESTORATION",
+  "compact_corpus": {
+    "all_four_exact_stage20_file_identities": true,
+    "directory": "/kaggle/working/stage20_compact_corpus/Tuesday",
+    "encoded_authentic_bytes": 4078271,
+    "encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 4078271,
+        "exact": true,
+        "sha256": "cbfe435fe612e1a5e6f8dc44e5a6694cf1ce6efbe0dc6e89c5c62e4dc5da4f48"
+      },
+      "flow_offsets.npy": {
+        "bytes": 33496,
+        "exact": true,
+        "sha256": "4b9334dc876362b8937d21de276a03654e275b94a2c6fc4b23e0881d4d518be9"
+      },
+      "labels.npy": {
+        "bytes": 4298,
+        "exact": true,
+        "sha256": "e8891a80aea004b84cffb3fa4c53a71d32ae96796ac052e7073530a1b0cc9fff"
+      },
+      "packet_lengths.npy": {
+        "bytes": 533888,
+        "exact": true,
+        "sha256": "058641aa2e24aa9a308fd553ecae571867c478063dfe1261551285d81965808c"
+      }
+    },
+    "first_128_loader_structural_audit": "PASS",
+    "flow_count": 4170,
+    "loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0"
+  },
+  "day": "Tuesday",
+  "decision": "TUESDAY_EXACT_STAGE20_BYTE_IDENTITY_RESTORED",
+  "elapsed_seconds": 3302.4786756038666,
+  "eof_ordering": {
+    "basis": "MONDAY_EXACT_FROZEN_THREE_FILE_HASH_RECOVERY",
+    "java_capacity": 524288,
+    "max_final_bucket_occupancy": 6,
+    "rule": "JAVA_HASHMAP_BUCKET_START"
+  },
+  "exact_join": {
+    "matched_binary_counts": {
+      "0": 4008,
+      "1": 162
+    },
+    "matched_export_reasons": {
+      "EOF_CURRENT": 1721,
+      "FIN": 1088,
+      "FLOW_TIMEOUT": 1361
+    },
+    "supervised_matched_flows": 4170,
+    "unmatched_reconstructed_flows": 441599,
+    "unused_published_occurrences": 441739
+  },
+  "first_50000_in_pass": {
+    "active_flow_count": 3370,
+    "completed_flows": 928,
+    "decision": "PASS",
+    "exact_s4_multiset_membership": 2,
+    "exact_s4_set_membership": 2,
+    "export_reasons": {
+      "FIN": 792,
+      "FLOW_TIMEOUT": 136
+    },
+    "matched_binary_counts": {
+      "0": 2
+    },
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 80,
+      "IPv4_TCP": 30626,
+      "IPv4_UDP": 15412,
+      "NON_IPV4": 3882
+    },
+    "protocol_counts": {
+      "0": 3,
+      "6": 807,
+      "17": 118
+    }
+  },
+  "full_reconstruction": {
+    "eof_singleton_discarded": 40139,
+    "export_reasons": {
+      "EOF_CURRENT": 168661,
+      "FIN": 168634,
+      "FLOW_TIMEOUT": 108474
+    },
+    "exportable_flow_protocol_counts": {
+      "0": 197,
+      "6": 245769,
+      "17": 199803
+    },
+    "exportable_flows": 445769,
+    "max_active_flows": 208800,
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 750,
+      "IPv4_TCP": 10710230,
+      "IPv4_UDP": 758756,
+      "NON_IPV4": 82218
+    },
+    "raw_packets": 11551954,
+    "retained_packet_protocol_counts": {
+      "0": 739,
+      "6": 10670059,
+      "17": 758734
+    },
+    "retained_packets": 11429532,
+    "timeout_singleton_discarded": 65,
+    "valid_ipv4_packets": 11469736
+  },
+  "next": "SEAL_PUSH_AND_ARCHIVE_TUESDAY_BEFORE_SOURCE_RELEASE",
+  "repository_parent": "30f73ad7bdfd8e49270e7bdc33254c634e3c8c0e",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "fuzzy_matching": false,
+    "join_rule_changed": false,
+    "label_repair": false,
+    "model_forward": false,
+    "nearest_matching": false,
+    "new_exclusions": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "tolerance_matching": false,
+    "training": false
+  },
+  "source_identity": {
+    "labels": {
+      "bytes": 52701751,
+      "duplicate_occurrences": 4,
+      "rows": 445909,
+      "sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+      "unique_s4_signatures": 445905
+    },
+    "pcap": {
+      "bytes": 11048283608,
+      "sha256": "080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57"
+    }
+  },
+  "status": "PASS_EXACT_STAGE20_BYTE_IDENTITY",
+  "timestamp_normalization": {
+    "frozen_rule": "INTEGER_UNIX_EPOCH_SECOND",
+    "implementation": "astype(datetime64[s]).astype(int64)",
+    "parquet_dtype": "datetime64[us]",
+    "scientific_rule_changed": false
+  }
+}

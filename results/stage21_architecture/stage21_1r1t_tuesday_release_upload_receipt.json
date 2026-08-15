@@ -1,0 +1,54 @@
+{
+  "checkpoint": "Stage21-1R1-T-GITHUB-RELEASE-DURABILITY",
+  "compact_payloads": {
+    "encoded_bytes.bin": {
+      "bytes": 4078271,
+      "sha256": "cbfe435fe612e1a5e6f8dc44e5a6694cf1ce6efbe0dc6e89c5c62e4dc5da4f48"
+    },
+    "flow_offsets.npy": {
+      "bytes": 33496,
+      "sha256": "4b9334dc876362b8937d21de276a03654e275b94a2c6fc4b23e0881d4d518be9"
+    },
+    "labels.npy": {
+      "bytes": 4298,
+      "sha256": "e8891a80aea004b84cffb3fa4c53a71d32ae96796ac052e7073530a1b0cc9fff"
+    },
+    "packet_lengths.npy": {
+      "bytes": 533888,
+      "sha256": "058641aa2e24aa9a308fd553ecae571867c478063dfe1261551285d81965808c"
+    }
+  },
+  "day": "Tuesday",
+  "github_release": {
+    "archive_asset": {
+      "asset_id": 515912550,
+      "browser_download_url": "https://github.com/themubasshir/ids2018-validation-safe-ablation/releases/download/stage20-compact-corpora-v1/stage20-Tuesday-compact-corpus-v1.tar",
+      "byte_identity_verified": true,
+      "bytes": 4659200,
+      "local_sha256": "8c5f431885e95aa10a623ddfaf59913924e5b54af2ea9444dca2d4729e71ed69",
+      "name": "stage20-Tuesday-compact-corpus-v1.tar",
+      "remote_stream_bytes": 4659200,
+      "remote_stream_sha256": "8c5f431885e95aa10a623ddfaf59913924e5b54af2ea9444dca2d4729e71ed69"
+    },
+    "release_id": 371092195,
+    "sha256_asset": {
+      "asset_id": 515912586,
+      "bytes": 104,
+      "name": "stage20-Tuesday-compact-corpus-v1.tar.sha256"
+    },
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "PCAP_read": false,
+    "Thursday_accessed": false,
+    "join_rule_changed": false,
+    "label_source_read": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "training": false
+  },
+  "seal_commit": "f50cb8bdeb3285b87df55210f4b351d615b0026b",
+  "status": "TUESDAY_COMPACT_CORPUS_DURABLE_ON_GITHUB_RELEASE_AND_REMOTE_SHA_VERIFIED"
+}

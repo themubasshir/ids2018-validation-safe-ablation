@@ -1,0 +1,55 @@
+{
+  "checkpoint": "Stage21-1R1-T-STORAGE-RELEASE",
+  "day": "Tuesday",
+  "disk": {
+    "free_bytes_after": 18795204608,
+    "free_bytes_before": 7746908160,
+    "free_bytes_delta": 11048296448
+  },
+  "next": "STAGE21_1R1_W_WEDNESDAY_EXACT_RESTORATION",
+  "parent_commit": "53bce81415b6f5e45928aed2818e2709eecab0ca",
+  "preconditions": {
+    "frozen_label_sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+    "frozen_pcap_sha256": "080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+    "github_release_asset_bytes": 4659200,
+    "github_release_asset_digest": "sha256:8c5f431885e95aa10a623ddfaf59913924e5b54af2ea9444dca2d4729e71ed69",
+    "github_release_asset_verified": true,
+    "local_exact_corpus_reverified": true,
+    "remote_main_verified": true
+  },
+  "released": {
+    "labels": {
+      "blob_deleted": true,
+      "frozen_sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+      "logical_bytes": 52701751,
+      "resolved_blob": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+      "snapshot_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    },
+    "pcap": {
+      "blob_deleted": true,
+      "frozen_sha256": "080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+      "logical_bytes": 11048283608,
+      "resolved_blob": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+      "snapshot_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Tuesday-WorkingHours.pcap",
+      "snapshot_was_symlink": true
+    }
+  },
+  "retained": {
+    "encoded_authentic_bytes": 4078271,
+    "exact_compact_corpus": "/kaggle/working/stage20_compact_corpus/Tuesday",
+    "flow_count": 4170
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "compact_corpus_deleted": false,
+    "join_rule_changed": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "scientific_evidence_deleted": false,
+    "training": false
+  },
+  "status": "TUESDAY_OBSOLETE_RAW_SOURCE_STORAGE_RELEASED"
+}

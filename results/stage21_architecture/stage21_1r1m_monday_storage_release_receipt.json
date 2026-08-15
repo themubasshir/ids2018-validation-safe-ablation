@@ -1,0 +1,53 @@
+{
+  "checkpoint": "Stage21-1R1-M-STORAGE-RELEASE",
+  "day": "Monday",
+  "disk": {
+    "free_bytes_after": 18807959552,
+    "free_bytes_before": 7985438720,
+    "free_bytes_delta": 10822520832
+  },
+  "next": "STAGE21_1R1_T_TUESDAY_EXACT_RESTORATION",
+  "parent_commit": "aa0edd64db077d46f0ab6093795184f8a277cce5",
+  "preconditions": {
+    "github_release_asset_bytes": 595261440,
+    "github_release_asset_digest": "sha256:4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "github_release_asset_verified": true,
+    "local_exact_corpus_reverified": true,
+    "remote_main_verified": true
+  },
+  "released": {
+    "failed_python_order_staging": {
+      "deleted": true,
+      "logical_bytes": 595251284,
+      "path": "/kaggle/working/stage20_compact_corpus/.Monday.stage21_staging"
+    },
+    "labels": {
+      "blob_deleted": true,
+      "logical_bytes": 65465382,
+      "resolved_blob": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/dfdcef4b8670e52af54dc4f82174834365a393473e877174cca46d17b12dfd02",
+      "snapshot_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+      "snapshot_was_symlink": true
+    },
+    "pcap": {
+      "blob_deleted": true,
+      "logical_bytes": 10822507416,
+      "resolved_blob": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+      "snapshot_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Monday-WorkingHours.pcap",
+      "snapshot_was_symlink": true
+    }
+  },
+  "retained": {
+    "exact_compact_corpus": "/kaggle/working/stage20_compact_corpus/Monday",
+    "flow_count": 528509
+  },
+  "scientific_boundary": {
+    "compact_corpus_deleted": false,
+    "join_rule_changed": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "scientific_evidence_deleted": false,
+    "training": false
+  },
+  "status": "MONDAY_OBSOLETE_RAW_AND_FORENSIC_STORAGE_RELEASED"
+}

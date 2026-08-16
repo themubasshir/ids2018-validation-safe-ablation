@@ -1,0 +1,47 @@
+{
+  "archive": {
+    "bytes": 8714240,
+    "filename": "stage20-Thursday-compact-corpus-v1.tar",
+    "format": "DETERMINISTIC_USTAR_UNCOMPRESSED",
+    "internal_root": "Thursday/",
+    "sha256": "63cfb6d9dc4aa22317e4f847a43e6d1c72490ee8a3aab50e2e47ce6a437bdd4f"
+  },
+  "checkpoint": "Stage21-1R1-V-DURABLE-ARCHIVE",
+  "compact_payloads": {
+    "encoded_bytes.bin": {
+      "bytes": 7586531,
+      "sha256": "2593b328839ecf28d901242b6850474fa028484656c7235ff78ef2b437c01ca0"
+    },
+    "flow_offsets.npy": {
+      "bytes": 65712,
+      "sha256": "137d38b8bfdcd22986e954f7b39ae4383da33b6194998ebb8fc8b63b3259e522"
+    },
+    "labels.npy": {
+      "bytes": 8325,
+      "sha256": "cb1c6b3bf716ed9244029b5866ac3d0ca8da8b9bc152f8e89d5b1d6c78e5ec6e"
+    },
+    "packet_lengths.npy": {
+      "bytes": 1049344,
+      "sha256": "db195558d0a12f74e8d4ba8c1ccd7ee4b322993b42575793761c6991fdb1f21c"
+    }
+  },
+  "day": "Thursday",
+  "exact_restoration_receipt_sha256": "3f0404832eec581b45452fc0716110c32ca02e2530bac7c21b71fd4755799767",
+  "flow_count": 8197,
+  "github_release": {
+    "asset_name": "stage20-Thursday-compact-corpus-v1.tar",
+    "sha256_asset_name": "stage20-Thursday-compact-corpus-v1.tar.sha256",
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "hybrid_equivalence_receipt_sha256": "910533898258bc8295635f92eadc781055efa51b97708fc3ab6d54b16c9add7b",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "join_rule_changed": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "training": false
+  },
+  "source_reacquisition_receipt_sha256": "18e4114ebe72f7790ee1767c60e43059732082110145adb72d5cf2d9b400d7a1",
+  "status": "ARCHIVE_CONSTRUCTED_FROM_EXACT_STAGE20_THURSDAY_PAYLOADS"
+}

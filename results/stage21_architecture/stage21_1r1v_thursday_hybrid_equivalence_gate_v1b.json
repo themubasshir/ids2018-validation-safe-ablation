@@ -1,0 +1,62 @@
+{
+  "checkpoint": "Stage21-1R1-V1B-HYBRID-EQUIVALENCE",
+  "day": "Thursday",
+  "elapsed_seconds": 31.528934478759766,
+  "equivalent": true,
+  "execution_paths": {
+    "FAST_TCP": 33725,
+    "FAST_UDP": 1259,
+    "IP_FRAGMENT": 28,
+    "IP_OPTIONS": 23,
+    "NON_DIRECT_ETHERNET_IPV4": 2345,
+    "OTHER_IP_PROTOCOL": 12,
+    "TCP_APPLICATION_BINDING": 4915,
+    "UDP_APPLICATION_BINDING": 7693
+  },
+  "fast_path_packets": 34984,
+  "field_mismatches": {},
+  "frozen_reference_parser_counts": {
+    "IPv4_OTHER_PROTOCOL_0": 49,
+    "IPv4_TCP": 38640,
+    "IPv4_UDP": 8966,
+    "NON_IPV4": 2345
+  },
+  "hybrid_parser_counts": {
+    "IPv4_OTHER_PROTOCOL_0": 49,
+    "IPv4_TCP": 38640,
+    "IPv4_UDP": 8966,
+    "NON_IPV4": 2345
+  },
+  "implementation_recovery": {
+    "action": "ADD_TCP_3268_TO_SCAPY_APPLICATION_BINDING_FALLBACK",
+    "all_observed_mismatch_samples_scapy_payload_class": "LDAP",
+    "all_observed_mismatch_samples_tcp_source_port": 3268,
+    "join_rule_changed": false,
+    "previous_gate_result": "35_PAYLOAD_LENGTH_MISMATCHES",
+    "representation_changed": false,
+    "scientific_rule_changed": false
+  },
+  "packet_count": 50000,
+  "reference_parser_counts": {
+    "IPv4_OTHER_PROTOCOL_0": 49,
+    "IPv4_TCP": 38640,
+    "IPv4_UDP": 8966,
+    "NON_IPV4": 2345
+  },
+  "repository_head": "ea60c4425db47752cb0a5ce00eb33334123c2445",
+  "scapy_fallback_packets": 15016,
+  "scapy_fallback_share": 0.30032,
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "S4_join_executed": false,
+    "flow_reconstruction": false,
+    "full_pcap_traversal": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "packets_read": 50000,
+    "training": false
+  },
+  "source_reacquisition_receipt_sha256": "18e4114ebe72f7790ee1767c60e43059732082110145adb72d5cf2d9b400d7a1",
+  "status": "THURSDAY_FIRST50000_HYBRID_DECODER_EXACTLY_EQUIVALENT_AFTER_TCP3268_FALLBACK",
+  "total_field_mismatches": 0
+}

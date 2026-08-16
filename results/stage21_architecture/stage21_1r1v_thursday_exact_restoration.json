@@ -1,0 +1,128 @@
+{
+  "checkpoint": "Stage21-1R1-V-FULL-EXACT-RESTORATION",
+  "compact_corpus": {
+    "all_four_exact_stage20_file_identities": true,
+    "directory": "/kaggle/working/stage20_compact_corpus/Thursday",
+    "encoded_authentic_bytes": 7586531,
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 7586531,
+        "exact": true,
+        "sha256": "2593b328839ecf28d901242b6850474fa028484656c7235ff78ef2b437c01ca0"
+      },
+      "flow_offsets.npy": {
+        "bytes": 65712,
+        "exact": true,
+        "sha256": "137d38b8bfdcd22986e954f7b39ae4383da33b6194998ebb8fc8b63b3259e522"
+      },
+      "labels.npy": {
+        "bytes": 8325,
+        "exact": true,
+        "sha256": "cb1c6b3bf716ed9244029b5866ac3d0ca8da8b9bc152f8e89d5b1d6c78e5ec6e"
+      },
+      "packet_lengths.npy": {
+        "bytes": 1049344,
+        "exact": true,
+        "sha256": "db195558d0a12f74e8d4ba8c1ccd7ee4b322993b42575793761c6991fdb1f21c"
+      }
+    },
+    "first_128_roundtrip": "PASS",
+    "flow_count": 8197
+  },
+  "day": "Thursday",
+  "decoder": {
+    "mode": "CONSERVATIVE_RAW_FAST_PATH_PLUS_SCAPY_2_6_1_FALLBACK",
+    "parser_execution_paths": {
+      "FAST_TCP": 8486609,
+      "FAST_UDP": 5560,
+      "IP_FRAGMENT": 188,
+      "IP_OPTIONS": 130,
+      "NON_DIRECT_ETHERNET_IPV4": 81302,
+      "OTHER_IP_PROTOCOL": 1429,
+      "TCP_APPLICATION_BINDING": 51539,
+      "UDP_APPLICATION_BINDING": 695268
+    },
+    "tcp_application_fallback_ports": [
+      53,
+      88,
+      135,
+      139,
+      389,
+      3268
+    ],
+    "udp_application_fallback_ports": [
+      53,
+      88,
+      123,
+      137,
+      138,
+      389,
+      5355
+    ]
+  },
+  "elapsed_seconds": 777.9798045158386,
+  "exact_join": {
+    "fuzzy": false,
+    "index_specific_exclusions": [],
+    "label_guided_repair": false,
+    "matched": 8197,
+    "matched_binary_counts": {
+      "0": 8155,
+      "1": 42
+    },
+    "matched_export_reasons": {
+      "EOF_CURRENT": 4226,
+      "FIN": 2395,
+      "FLOW_TIMEOUT": 1576
+    },
+    "matching": "EXACT_ONLY",
+    "nearest": false,
+    "tolerance": false,
+    "unmatched_reconstructed": 450399,
+    "unused_published_occurrences": 450771
+  },
+  "full_reconstruction": {
+    "eof_singleton_discarded": 35539,
+    "export_protocols": {
+      "0": 150,
+      "17": 183758,
+      "6": 274688
+    },
+    "export_reasons": {
+      "EOF_CURRENT": 220260,
+      "FIN": 142952,
+      "FLOW_TIMEOUT": 95384
+    },
+    "exportable_flows": 458596,
+    "java_hashmap_capacity": 524288,
+    "max_active_flows": 255800,
+    "max_final_bucket_occupancy": 6,
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 1653,
+      "IPv4_TCP": 8538148,
+      "IPv4_UDP": 700922,
+      "NON_IPV4": 81302
+    },
+    "raw_packets": 9322025,
+    "retained_packets": 9205108,
+    "retained_protocols": {
+      "0": 1644,
+      "17": 700900,
+      "6": 8502564
+    },
+    "timeout_singleton_discarded": 76,
+    "valid_ipv4": 9240723
+  },
+  "hybrid_equivalence_receipt_sha256": "910533898258bc8295635f92eadc781055efa51b97708fc3ab6d54b16c9add7b",
+  "repository_head": "ea60c4425db47752cb0a5ce00eb33334123c2445",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "join_rule_changed": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "training": false
+  },
+  "source_reacquisition_receipt_sha256": "18e4114ebe72f7790ee1767c60e43059732082110145adb72d5cf2d9b400d7a1",
+  "status": "THURSDAY_EXACT_STAGE20_BYTE_IDENTITY_RESTORED"
+}

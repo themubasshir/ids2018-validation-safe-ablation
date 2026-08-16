@@ -1,0 +1,45 @@
+{
+  "checkpoint": "Stage21-1R1-V0-SOURCE-REACQUISITION",
+  "day": "Thursday",
+  "effective_label_records": 458968,
+  "repository": {
+    "erratum_git_blob": "0f49765244bbdcd24dca96193b969d1fd85cbd93",
+    "head": "ea60c4425db47752cb0a5ce00eb33334123c2445",
+    "manifest_git_blob": "bcad75bcb0cbf749b634a532542a9d95c8af2a71"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "PCAP_parsed": false,
+    "S4_join_executed": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "training": false
+  },
+  "sources": {
+    "afternoon_labels": {
+      "bytes": 27901448,
+      "effective_rows": 288602,
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "physical_rows": 288602,
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7"
+    },
+    "morning_labels": {
+      "bytes": 19674280,
+      "effective_rows": 170366,
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "physical_rows": 458968,
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+      "structural_null_suffix_all_85_columns": true,
+      "structural_null_suffix_rows": 288602
+    },
+    "pcap": {
+      "bytes": 8302500180,
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Thursday-WorkingHours.pcap",
+      "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+      "sha256": "38f8b1bb276849bf1721f7c4de22bebfa7f59a74e52286d4c0a37edbb118fe01"
+    }
+  },
+  "status": "EXACT_PINNED_THURSDAY_SOURCES_REACQUIRED"
+}

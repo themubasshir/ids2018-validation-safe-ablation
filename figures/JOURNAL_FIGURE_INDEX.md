@@ -60,3 +60,18 @@ representations. Stage 20 subsequently constructed an authentic packet-image
 representation, which enabled the separate Stage 21 CNN-versus-ViT experiment.
 
 <!-- END STAGES 14-21 PUBLICATION ASSETS -->
+
+<!-- BEGIN STAGE22R PUBLICATION ASSETS -->
+
+## Stage22R Publication Assets
+
+| Filename | Stage | Recommended manuscript section | Proposed caption |
+| --- | --- | --- | --- |
+| `figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.png` | Stage22R | Temporal validation / ranking transfer | PR-AUC transfer from each frozen development-validation cell to the common forward Mar1--Mar2 holdout; validation prevalence differs by split regime. |
+| `figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.png` | Stage22R | Temporal validation / ranking transfer | ROC-AUC transfer from development validation to the common forward holdout, with chance ROC-AUC shown for reference. |
+| `figures/stage22r_temporal_validation/fig22r_3_final_frozen_operating_points.png` | Stage22R | Deployment-threshold transfer | Recall-versus-FPR behavior of all 12 frozen cell/operating-point combinations on the shared final holdout. |
+| `figures/stage22r_temporal_validation/fig22r_4_k79_final_holdout_cleaning.png` | Stage22R | Supplementary / reproducibility | Exact-K79 final-holdout exclusions and resulting common evaluation universe. |
+
+Vector PDF versions are committed beside each PNG.
+
+<!-- END STAGE22R PUBLICATION ASSETS -->

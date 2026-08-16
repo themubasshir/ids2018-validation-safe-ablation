@@ -141,39 +141,61 @@ Publication tables are under `tables/lime/`, figures under
 `figures/lime/`, detailed results under `results/lime/`, and
 reproducibility artifacts under `metadata/lime/`.
 <!-- END STAGE 13 LOCAL EXPLANATION RELIABILITY -->
-<!-- BEGIN STAGES 14-21 RESEARCH EXTENSION STATUS -->
+<!-- BEGIN STAGES 14-22R RESEARCH EXTENSION STATUS -->
 
-## Stages 14–21 Research Extension Status
+## Stages 14–22R Research Extension Status
 
-The validation-safe journal extension continued beyond the original Stage 13
-local-explanation checkpoint.
+The validation-safe journal extension now includes the later representation,
+architecture, explainability, and source-faithful temporal-validation studies.
 
-- **Stage 14:** neural Integrated Gradients reliability analysis with committed
-  publication assets.
-- **Stage 15:** duplicate-safe five-checkpoint Transformer ensemble feasibility
-  experiment.
-- **Stage 16:** frozen classical benchmark, multi-seed confirmation, ensemble
-  strategy lock, and one-time same-holdout comparison against the Transformer.
-- **Stage 17:** post-result Transformer attention analysis with cross-seed and
-  layer/head stability diagnostics.
-- **Stage 18:** representation-feasibility audit plus a graph experiment whose
-  strong threshold-free ranking did not translate to useful detection at its
-  independently frozen threshold.
-- **Stage 19:** authentic multiscale causal temporal experiment
-  (MTemporal-IDS), supporting conditional rather than uniform temporal benefit.
-- **Stage 20:** authentic packet-image representation construction and frozen
-  masked-CNN comparator.
-- **Stage 21:** parameter-matched CNN-versus-ViT architectural ablation,
-  preregistered post-result Integrated Gradients analysis, and publication
-  figures.
+- **Stage 14:** neural Integrated Gradients reliability analysis.
+- **Stage 15:** duplicate-safe Transformer ensemble feasibility experiment.
+- **Stage 16:** frozen classical benchmark and same-holdout Transformer comparison.
+- **Stage 17:** post-result Transformer attention stability analysis.
+- **Stage 18:** representation-feasibility audit and source-restricted graph experiment.
+- **Stage 19:** authentic multiscale causal temporal experiment.
+- **Stage 20:** authentic packet-image construction and frozen masked-CNN comparator.
+- **Stage 21:** parameter-matched CNN-versus-ViT ablation with preregistered post-result XAI.
+- **Stage 22R:** Kaggle-faithful `{RANDOM, CHRONOLOGICAL} × {NATURAL, REBALANCED}`
+  temporal-validation ablation under exact K79 identity control.
 
-Stage 21 is scientifically closed. Its publication figures are durably sealed,
-and no Stage 21 holdout/benchmark selection, threshold reselection, retraining,
-or post-result XAI-method substitution is permitted.
+### Stage22R final status
 
-The next research phase is **Stage 22 — temporal/session-safe flagship rerun**.
+Stage22R is scientifically closed at commit
+`b5e44615269198426cc8a9aa3b3e701c2ca9e48e` and tag `stage22r-final-single-holdout-v1`.
 
-Later-stage manuscript assets are indexed in
+The single Mar1–Mar2 final holdout opening is **1 / 1** and
+**PERMANENTLY CLOSED**. The common K79-clean final evaluation set contains
+**1,374,133** rows (998,788 benign; 375,345 attack). No retained-development
+K79 signature exactly overlapped the final holdout.
+
+On the shared final holdout, observed ranking performance was:
+
+| Cell | PR-AUC | ROC-AUC |
+|---|---:|---:|
+| Random / Natural | 0.2630 | 0.5205 |
+| Random / Rebalanced | 0.2733 | 0.5420 |
+| Chronological / Natural | 0.6107 | 0.8064 |
+| Chronological / Rebalanced | 0.6926 | 0.8322 |
+
+These values are reported for all four frozen cells; **no post-holdout winner
+was selected**. Frozen operating thresholds transferred poorly, demonstrating
+a sharp distinction between ranking discrimination and deployment-threshold
+behavior under forward temporal shift.
+
+![Stage22R PR-AUC transfer](figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.png)
+
+![Stage22R ROC-AUC transfer](figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.png)
+
+![Stage22R frozen operating points](figures/stage22r_temporal_validation/fig22r_3_final_frozen_operating_points.png)
+
+Manuscript-ready Stage22R text is in
+[`docs/STAGE22R_MANUSCRIPT_INTEGRATION.md`](docs/STAGE22R_MANUSCRIPT_INTEGRATION.md),
+with figure captions and the formal publication boundary in
+[`docs/STAGE22R_PUBLICATION_FIGURES_AND_CLOSEOUT.md`](docs/STAGE22R_PUBLICATION_FIGURES_AND_CLOSEOUT.md).
+
+The historical publication archive through Stage21 remains in
+`docs/PUBLICATION_ARCHIVE_THROUGH_STAGE21.md`; the current figure index is
 `figures/JOURNAL_FIGURE_INDEX.md`.
 
-<!-- END STAGES 14-21 RESEARCH EXTENSION STATUS -->
+<!-- END STAGES 14-22R RESEARCH EXTENSION STATUS -->

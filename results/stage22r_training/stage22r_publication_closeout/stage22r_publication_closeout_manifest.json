@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-08-16T21:08:11.437675+00:00",
+  "publication_assets": [
+    "README.md",
+    "docs/JOURNAL_EXTENSION_SUMMARY.md",
+    "figures/JOURNAL_FIGURE_INDEX.md",
+    "docs/STAGE22R_MANUSCRIPT_INTEGRATION.md",
+    "docs/STAGE22R_PUBLICATION_FIGURES_AND_CLOSEOUT.md",
+    "figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.png",
+    "figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.pdf",
+    "figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.png",
+    "figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.pdf",
+    "figures/stage22r_temporal_validation/fig22r_3_final_frozen_operating_points.png",
+    "figures/stage22r_temporal_validation/fig22r_3_final_frozen_operating_points.pdf",
+    "figures/stage22r_temporal_validation/fig22r_4_k79_final_holdout_cleaning.png",
+    "figures/stage22r_temporal_validation/fig22r_4_k79_final_holdout_cleaning.pdf"
+  ],
+  "publication_closeout": {
+    "commit_message": "Stage22R: add publication figures and manuscript closeout",
+    "tag": "stage22r-publication-closeout-v1"
+  },
+  "scientific_operations": {
+    "calibration": 0,
+    "model_inference": 0,
+    "model_selection": 0,
+    "raw_holdout_reads": 0,
+    "resampling": 0,
+    "threshold_search": 0,
+    "training": 0
+  },
+  "scientific_result": {
+    "commit": "b5e44615269198426cc8a9aa3b3e701c2ca9e48e",
+    "holdout_openings_consumed": 1,
+    "holdout_status": "PERMANENTLY_CLOSED",
+    "maximum_authorized_openings": 1,
+    "tag": "stage22r-final-single-holdout-v1"
+  },
+  "source_artifacts": {
+    "results/stage22r_training/stage22r_2e_development_matrix_audit/stage22r_2e_development_matrix.csv": "cc58c90563aafab75a93cae68bc2fea3db16120e3dcc4a0fd08513dedaf2709e",
+    "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_k79_summary.json": "f7f8c85fd34e8ca14c2b35aa057ea071ec30bb15d93f51e723c123fb414f56e7",
+    "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_metrics.csv": "5b85e67e3ea42bf43d8b92da64f3c640c1c52a7fd5cabcb6b9a34fea2d89caa4",
+    "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_result.json": "1461d7f93244ef322d19598b8fe4605c3595a7cbade0a69d827d384e8468951a"
+  },
+  "stage": "Stage22R-PUBLICATION-CLOSEOUT",
+  "status": "PUBLICATION_ASSETS_GENERATED_FROM_FROZEN_SUMMARIES_ONLY"
+}

@@ -27,3 +27,38 @@ The fixed-hyperparameter multi-seed study repeated splitting, fitting, validatio
 ## Remaining Limitation
 
 All analyses remain single-dataset evaluations on the processed CSE-CIC-IDS2018 binary dataset. The extension improves uncertainty accounting and deployment interpretation, but cross-dataset generalization remains future work.
+
+<!-- BEGIN STAGE22R JOURNAL EXTENSION SUMMARY -->
+
+## Stage22R — Source-Faithful Temporal Validation Stress Test
+
+Stage22R adds a precommitted four-cell ablation over development split
+(`RANDOM` versus `CHRONOLOGICAL`) and training prevalence (`NATURAL` versus
+training-only `REBALANCED`) while evaluating every frozen cell on one common
+forward Mar1--Mar2 holdout.
+
+After exact K79 cleaning, the final evaluation set contains **1,374,133** rows
+with attack prevalence **0.273150**. Exact
+development-to-final K79 overlap is **zero**.
+
+The random cells are nearly perfect on their development validation membership
+but fall to final ROC-AUC **0.5205** and
+**0.5420**. The chronological cells are near chance on
+Feb28 validation yet reach final ROC-AUC **0.8064** and
+**0.8322**. The largest observed final PR-AUC is
+**0.6926** for Chronological/Rebalanced, but no
+post-holdout model selection is permitted.
+
+Frozen operating thresholds transfer poorly. Chronological thresholds almost
+never fire despite substantially better final ranking, whereas the random
+security operating points reach final FPR **0.2870** and
+**0.2685**, violating the development-era 5% FPR constraint.
+
+The result supports strong temporal/distribution heterogeneity and a need to
+separate ranking generalization from operating-point transfer. It does not
+prove session independence or a specific mechanism such as concept drift.
+
+See `docs/STAGE22R_MANUSCRIPT_INTEGRATION.md` and
+`docs/STAGE22R_PUBLICATION_FIGURES_AND_CLOSEOUT.md`.
+
+<!-- END STAGE22R JOURNAL EXTENSION SUMMARY -->

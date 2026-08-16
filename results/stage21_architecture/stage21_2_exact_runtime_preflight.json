@@ -1,0 +1,63 @@
+{
+  "checkpoint": "Stage21-2R1B",
+  "execution_strategy": {
+    "PYTHONNOUSERSITE": true,
+    "PYTHONPATH": "/kaggle/working/stage21_exact_site",
+    "private_package_target": "/kaggle/working/stage21_exact_site",
+    "python": "/usr/bin/python3",
+    "reason_venv_not_used": "KAGGLE_ENSUREPIP_FAILURE",
+    "venv_used": false
+  },
+  "frozen_requirements": {
+    "TF32": false,
+    "automatic_mixed_precision": false,
+    "cublas_workspace_config": ":4096:8",
+    "cuda_build": "12.6",
+    "deterministic_algorithms": true,
+    "numpy": "2.4.6",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu126"
+  },
+  "hardware": {
+    "cuda_capability": [
+      7,
+      5
+    ],
+    "gpu_observed_before_training": "Tesla T4",
+    "hardware_recorded_before_training": true
+  },
+  "repository_head": "de15ff09907c5a0fdecbd51cc457a28adb80bb3f",
+  "runtime": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_available": true,
+    "cuda_build": "12.6",
+    "cuda_capability": [
+      7,
+      5
+    ],
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_version": 91002,
+    "deterministic_algorithms": true,
+    "gpu": "Tesla T4",
+    "numpy_from_private_target": true,
+    "numpy_path": "/kaggle/working/stage21_exact_site/numpy/__init__.py",
+    "numpy_version": "2.4.6",
+    "python_executable": "/usr/bin/python3.12",
+    "python_version": "3.12.13",
+    "torch_from_private_target": true,
+    "torch_path": "/kaggle/working/stage21_exact_site/torch/__init__.py",
+    "torch_version": "2.10.0+cu126"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "model_constructed": false,
+    "optimizer_steps": 0,
+    "real_data_model_forward": false,
+    "training_started": false
+  },
+  "status": "EXACT_FROZEN_RUNTIME_READY_WITH_PRIVATE_PYTHONPATH_TARGET"
+}

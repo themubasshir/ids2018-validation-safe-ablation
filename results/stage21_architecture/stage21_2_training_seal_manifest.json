@@ -1,0 +1,127 @@
+{
+  "artifacts": {
+    "epoch10_model": {
+      "bytes": 378999,
+      "canonical_tensor_state_sha256": "9da47df6cd5c821eef3d2c8a501296cd6070b835c719999f572f3dec2d560771",
+      "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8"
+    },
+    "executed_training_harness": {
+      "sha256": "fd56d6e89527e542618e37168a7df658540c324384bb22e722f9a82ef9eb7cf3"
+    },
+    "runtime_preflight": {
+      "sha256": "b730b0b16175828ce299f1b5021048516e436c032532c55ccd68827141817d81"
+    },
+    "training_manifest": {
+      "sha256": "e6e92f961052d1900539b5a5cefb90eaac335e73deecf6ae7af22fd0e25211b8"
+    }
+  },
+  "candidate": "Stage21MaskedViTv1",
+  "checkpoint": "Stage21-2-SEAL",
+  "operational_recovery_release": {
+    "epoch10_recovery_sha256": "38a3c75c4c46d3758f6a3a3c38190b68a23037947dff03fea5a7fac6162a4ff2",
+    "epochs": {
+      "epoch_01": {
+        "asset_id": 516641039,
+        "bytes": 1150463,
+        "digest": "sha256:4df22b505830bf61573f4352c3d5e89480c8d0a74ad3887bf625fb2270044b24",
+        "name": "stage21-2-recovery-epoch01.pt"
+      },
+      "epoch_02": {
+        "asset_id": 516642189,
+        "bytes": 1150783,
+        "digest": "sha256:50be254fb954b1bf48ede0282ca995ee046e72c2b8aa30f624291121351705eb",
+        "name": "stage21-2-recovery-epoch02.pt"
+      },
+      "epoch_03": {
+        "asset_id": 516643512,
+        "bytes": 1151039,
+        "digest": "sha256:ed75970736b81a4d38da9375f7f4c56cfbc714b8e90f00cacdd865a85a8d268c",
+        "name": "stage21-2-recovery-epoch03.pt"
+      },
+      "epoch_04": {
+        "asset_id": 516644902,
+        "bytes": 1151359,
+        "digest": "sha256:8b7693c818da4cb46a671c7d46f5e461e81f000b6e756c1fb2b9c76b358c5f60",
+        "name": "stage21-2-recovery-epoch04.pt"
+      },
+      "epoch_05": {
+        "asset_id": 516645991,
+        "bytes": 1151615,
+        "digest": "sha256:9df39b7c68408c8485ca40a287f83f1665893d273815e412cbefa39e5ce776ab",
+        "name": "stage21-2-recovery-epoch05.pt"
+      },
+      "epoch_06": {
+        "asset_id": 516647517,
+        "bytes": 1151871,
+        "digest": "sha256:1806acb69842c37e42c2c3f6f57ec1965289dc2ea8bb9cf7a07249bd4d8cc722",
+        "name": "stage21-2-recovery-epoch06.pt"
+      },
+      "epoch_07": {
+        "asset_id": 516648779,
+        "bytes": 1152191,
+        "digest": "sha256:68def96c6c2110103acbbb57a6bf9b59cf635d05f5542b2160dc1c3264db9e2f",
+        "name": "stage21-2-recovery-epoch07.pt"
+      },
+      "epoch_08": {
+        "asset_id": 516650183,
+        "bytes": 1152447,
+        "digest": "sha256:e9ea47290c7804dc7df612ad45b9bf1ac8591d9a653300f3fd9e0ab2c688845e",
+        "name": "stage21-2-recovery-epoch08.pt"
+      },
+      "epoch_09": {
+        "asset_id": 516651709,
+        "bytes": 1152703,
+        "digest": "sha256:693837446a0f8eefbc90cbbe1b23b628748d4fea53c7ff20046bd4471eef9cc6",
+        "name": "stage21-2-recovery-epoch09.pt"
+      },
+      "epoch_10": {
+        "asset_id": 516652935,
+        "bytes": 1153023,
+        "digest": "sha256:38a3c75c4c46d3758f6a3a3c38190b68a23037947dff03fea5a7fac6162a4ff2",
+        "name": "stage21-2-recovery-epoch10.pt"
+      }
+    },
+    "release_id": 371280600,
+    "tag": "stage21-2-training-recovery-v1"
+  },
+  "parent_commit": "de15ff09907c5a0fdecbd51cc457a28adb80bb3f",
+  "runtime": {
+    "AMP": false,
+    "TF32": false,
+    "cuda_build": "12.6",
+    "deterministic_algorithms": true,
+    "gpu": "Tesla T4",
+    "numpy": "2.4.6",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu126"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_model_forward": false,
+    "Thursday_probability_generation": false,
+    "Thursday_threshold_selection": false,
+    "new_candidate_added": false,
+    "representation_changed": false,
+    "training_protocol_changed": false
+  },
+  "status": "FROZEN_EPOCH10_VIT_TRAINING_READY_FOR_REMOTE_SEAL",
+  "train_population": {
+    "attack": 4456,
+    "benign": 541174,
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "flows": 545630
+  },
+  "trainable_parameters": 91969,
+  "training": {
+    "epoch_selection": false,
+    "epochs": 10,
+    "final_epoch": 10,
+    "final_epoch_reason": "PREREGISTERED_FIXED_EPOCH_10",
+    "optimizer_steps": 21320,
+    "validation_during_training": false
+  }
+}

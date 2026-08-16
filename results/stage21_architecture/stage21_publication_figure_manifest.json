@@ -71,13 +71,15 @@
       "sha256": "7958d9bf8b3892b83f60e3dbce9fc1961c369474c42e0d451ec400a03088efac"
     }
   },
+  "figures_added_after_scientific_closure": true,
   "generation_script": {
     "bytes": 17651,
     "path": "scripts/stage21_generate_publication_figures.py",
     "sha256": "384fe153165bc76fe72e51158370710335f7cd74593568d9d27de30010ce00dd"
   },
-  "next": "STAGE21_FINAL_CLOSE_AFTER_PUBLICATION_FIGURES",
+  "next": "STAGE22_TEMPORAL_SESSION_SAFE_FLAGSHIP_RERUN",
   "parent_commit": "3994cfd4b8cc757f0f5821146b0023ebed2a45f7",
+  "publication_figure_commit": "be06759ec27b0f922ae36b2c18a7b4219f6a2c2b",
   "scientific_boundary": {
     "architecture_selection": false,
     "new_IG_runs": 0,
@@ -91,5 +93,7 @@
     "scientific_results_changed": false,
     "training": false
   },
+  "scientific_closure_commit": "3994cfd4b8cc757f0f5821146b0023ebed2a45f7",
+  "scientific_closure_reopened": false,
   "status": "STAGE21_FOUR_PUBLICATION_FIGURES_GENERATED_FROM_FROZEN_ARTIFACTS"
 }

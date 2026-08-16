@@ -1,0 +1,97 @@
+{
+  "artifacts": {
+    "docs/STAGE21_4_FRIDAY_LOCKED_REUSE_EVALUATION.md": {
+      "bytes": 1318,
+      "remote_byte_identity": true,
+      "sha256": "61c5747078c32c2730eeaadd134c305053a1d63f822b1d2645cf03bcbc7ac86e"
+    },
+    "results/stage21_architecture/stage21_4_friday_eval_executed.py": {
+      "bytes": 22998,
+      "remote_byte_identity": true,
+      "sha256": "2b560a0d4f84dc00301a7a7bf864f37478a181d2601a04f3cafb114fc2351db5"
+    },
+    "results/stage21_architecture/stage21_4_friday_probabilities.npy": {
+      "bytes": 48480,
+      "remote_byte_identity": true,
+      "sha256": "aeb24de4d40a56b7d69b2a8bedcca995e248f680f2e50b3fa3ee3db2a06f16ad"
+    },
+    "results/stage21_architecture/stage21_4_friday_reuse_evaluation.json": {
+      "bytes": 3518,
+      "remote_byte_identity": true,
+      "sha256": "930c682b264b7d270af0901d77d056c5f49fa64aac26da7a07b4bd8e3577d3ea"
+    }
+  },
+  "checkpoint": "Stage21-4-REMOTE-SEAL",
+  "model": {
+    "canonical_state_sha256": "9da47df6cd5c821eef3d2c8a501296cd6070b835c719999f572f3dec2d560771",
+    "checkpoint_sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8"
+  },
+  "operating_points": {
+    "balanced": {
+      "Accuracy": 0.5709794837855725,
+      "F1": 0.13968148639681485,
+      "F2": 0.09218708942804589,
+      "FN": 5181,
+      "FNR": 0.9248482684755445,
+      "FP": 5,
+      "FPR": 0.000770891150169596,
+      "Precision": 0.9882629107981221,
+      "Recall": 0.07515173152445555,
+      "TN": 6481,
+      "TP": 421,
+      "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+      "threshold": 0.42,
+      "threshold_integer_percent": 42
+    },
+    "security": {
+      "Accuracy": 0.5712276637988087,
+      "F1": 0.14089176197579978,
+      "F2": 0.09304260256578659,
+      "FN": 5177,
+      "FNR": 0.9241342377722243,
+      "FP": 6,
+      "FPR": 0.0009250693802035153,
+      "Precision": 0.9860788863109049,
+      "Recall": 0.07586576222777579,
+      "TN": 6480,
+      "TP": 425,
+      "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+      "threshold": 0.24,
+      "threshold_integer_percent": 24
+    },
+    "standard": {
+      "Accuracy": 0.5709794837855725,
+      "F1": 0.13939595087952208,
+      "F2": 0.09197617379117029,
+      "FN": 5182,
+      "FNR": 0.9250267761513745,
+      "FP": 4,
+      "FPR": 0.0006167129201356768,
+      "Precision": 0.9905660377358491,
+      "Recall": 0.0749732238486255,
+      "TN": 6482,
+      "TP": 420,
+      "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+      "threshold": 0.5,
+      "threshold_integer_percent": 50
+    }
+  },
+  "parent_commit": "f35fb3cf259b6bab34c8f622f59266e24cb2b32e",
+  "science_commit": "ba2db6a70e195ef97b05f2e51e5d27dae0e26c73",
+  "scientific_boundary": {
+    "Friday_model_inference_passes": 1,
+    "Friday_role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+    "Friday_threshold_grid_evaluated": false,
+    "Friday_threshold_reselection": false,
+    "Friday_threshold_search": false,
+    "model_retrained": false,
+    "optimizer_steps": 0
+  },
+  "score_metrics": {
+    "PR_AUC": 0.606536911289453,
+    "PR_AUC_definition": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+    "ROC_AUC": 0.5686939700294255,
+    "ROC_AUC_definition": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA_FROM_PERSISTED_FLOAT32_PROBABILITIES"
+  },
+  "status": "FRIDAY_VIT_LOCKED_REUSE_EVALUATION_DURABLE"
+}

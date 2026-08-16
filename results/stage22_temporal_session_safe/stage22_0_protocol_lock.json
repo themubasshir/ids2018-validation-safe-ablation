@@ -1,0 +1,251 @@
+{
+  "analysis_universe": {
+    "ambiguous_source_day_policy": "A row whose provenance maps to more than one distinct source capture day is excluded from all Stage22 roles and counted.",
+    "corpus": "The exact processed IDS2018 corpus underlying the established 300,928-row flagship experiment.",
+    "expected_rows_before_provenance_or_duplicate_exclusions": 300928,
+    "no_attack_family_or_class_balance_based_day_selection": true,
+    "no_new_dataset_days_added_for_performance_reasons": true,
+    "no_new_rows": true,
+    "provenance_requirement": "Before model fitting, Stage22 must deterministically recover the original source capture day/file provenance for the flagship corpus.",
+    "role_assignment_must_not_use": [
+      "model scores",
+      "validation performance",
+      "final-test performance",
+      "attack-family performance",
+      "class balance optimization"
+    ],
+    "unmapped_row_policy": "Any corpus row that cannot be deterministically accounted for by the frozen Stage22 provenance-recovery procedure causes a hard stop before model fitting. No fuzzy/post-hoc assignment is permitted."
+  },
+  "created_utc": "2026-08-16T15:27:37+00:00",
+  "duplicate_leakage_protocol": {
+    "cross_role_policy": "If an exact feature fingerprint appears in more than one chronological role, retain occurrences only in the earliest role and exclude occurrences from every later role.",
+    "duplicate_rule_may_not_be_changed_after_model_results": true,
+    "final_label_not_required_for_duplicate_sanitization": true,
+    "fingerprint_feature_space": "The exact frozen Stage15/Stage16 70-predictor input vector after inherited deterministic numeric coercion and before model-specific scaling.",
+    "label_excluded_from_duplicate_fingerprint": true,
+    "provenance_excluded_from_duplicate_fingerprint": true,
+    "required_post_sanitization_cross_role_overlap": 0,
+    "within_role_duplicates": "Retain but count and report them; they do not constitute cross-role leakage."
+  },
+  "evaluation_metrics": {
+    "bootstrap_inference": null,
+    "final_reporting_levels": [
+      "pooled latest-two-day final test",
+      "each final capture day separately"
+    ],
+    "formal_significance_test": null,
+    "interpretation": "Stage22 results are descriptive internal temporal re-evaluation evidence.",
+    "operating_point": [
+      "TP",
+      "FP",
+      "TN",
+      "FN",
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1",
+      "F2",
+      "MCC",
+      "FPR",
+      "FNR"
+    ],
+    "ranking": [
+      "PR-AUC",
+      "ROC-AUC"
+    ],
+    "undefined_metric_policy": "Return/report undefined or NaN transparently. Do not smooth denominators to manufacture a value."
+  },
+  "execution_order": [
+    "STAGE22-0: freeze and push this protocol.",
+    "STAGE22-1: recover/inventory exact source-day provenance without model fitting.",
+    "Freeze deterministic provenance mapping and duplicate sanitization artifacts.",
+    "Construct chronological development/validation/final roles.",
+    "Keep final labels sealed.",
+    "Train both mandatory inherited model families from scratch using Stage22 development only.",
+    "Select each model's balanced/security thresholds using Stage22 validation only.",
+    "Freeze/push partition, preprocessing, model, threshold, code, and execution hashes.",
+    "Authorize exactly one final outcome evaluation opening.",
+    "Evaluate both mandatory models at all frozen operating points and report pooled plus per-day metrics.",
+    "Close Stage22 with no post-final tuning."
+  ],
+  "final_test_governance": {
+    "all_frozen_operating_points_evaluated_in_same_opening": true,
+    "all_mandatory_models_evaluated_in_same_opening": true,
+    "authorized_final_outcome_openings": 1,
+    "explicit_nonclaim": "NOT_EXTERNAL_OR_INDEPENDENT_CONFIRMATION",
+    "final_labels_must_remain_unread_until": "A later Stage22 pre-final-test lock has frozen and pushed partition hashes, exclusion hashes, preprocessing hashes, trained-model hashes, validation-selected thresholds, evaluation code hashes, and execution authorization.",
+    "final_result_claim": "PREREGISTERED_TEMPORAL_REPARTITION_INTERNAL_FINAL_TEST",
+    "final_test_definition": "The latest two chronologically ordered usable capture days.",
+    "forbidden_after_final_outcome_opening": [
+      "threshold reselection",
+      "hyperparameter tuning",
+      "architecture selection",
+      "feature selection",
+      "feature exclusion based on final performance",
+      "preprocessing changes",
+      "duplicate-rule changes",
+      "capture-day reassignment",
+      "model retraining motivated by final scores"
+    ],
+    "future_selection_openings": 0
+  },
+  "frozen_feature_policy": {
+    "feature_addition_allowed": false,
+    "feature_count": 70,
+    "feature_identity_source": "Stage15 frozen feature configuration and Stage16 inherited classical benchmark locks.",
+    "feature_removal_allowed": false,
+    "feature_search_allowed": false,
+    "shortcut_feature_removal_deferred_to": "Stage23 — shortcut-feature audit"
+  },
+  "hard_prohibitions": [
+    "No Stage22 data read during STAGE22-0.",
+    "No Stage22 source-day inspection during STAGE22-0.",
+    "No Stage22 partition construction during STAGE22-0.",
+    "No model fitting during STAGE22-0.",
+    "No model forward pass during STAGE22-0.",
+    "No validation score during STAGE22-0.",
+    "No final-test score during STAGE22-0.",
+    "No threshold search during STAGE22-0.",
+    "No new architecture search in Stage22.",
+    "No new hyperparameter search in Stage22.",
+    "No new feature selection in Stage22.",
+    "No final-test-driven correction of the frozen protocol."
+  ],
+  "immutable_reference_artifact_sha256": {
+    "docs/EXPERIMENT_PROTOCOL.md": "0501fc6e12208a7d34374ef50444a2fb5dd5ac9f788229e1848b6c244087cd78",
+    "docs/PUBLICATION_ARCHIVE_THROUGH_STAGE21.md": "67e5bc9ae0a870b48d3ed8981096a76cea77ed28b981dc2686e626eb6d539eab",
+    "metadata/feature_names.json": "bbe392324367669d47364ebf1bebf11bf9b814f1035c557176815980ef0b36c4",
+    "results/publication_archive_through_stage21/publication_archive_through_stage21_final_seal.json": "fc91b2648fa8e38a8d27c6a2228ffd74cfa93e0440c1aa881825b30a62df5ba7",
+    "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872",
+    "results/stage15_transformer_checkpoint/stage15_4c_final_seed_configuration.json": "12a09e9e3b72808c588ae486549c7d48d1ea3695b623458836d775218fae3c9b",
+    "results/stage15_transformer_checkpoint/stage15_4c_frozen_architecture.json": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa",
+    "results/stage15_transformer_checkpoint/stage15_5a_frozen_operating_threshold.json": "45cb0008b313cdc027ff08a5910efa04c3a74661e4e9e09ff28d6035c24e5adb",
+    "results/stage15_transformer_checkpoint/stage15_5b_preholdout_decision_lock.json": "eceeb4f7d5df4bfce554fa7b8a56d87fcba626e6bfd1c77bfbe87cb36979f6ae",
+    "results/stage16_classical_benchmark_checkpoint/stage16_5a_ensemble_protocol_lock.json": "da1c2d9376ff7c6ee39b5e49ee4c9a44fa594c5dc65713b9b3db1921d20cb4c8",
+    "results/stage16_classical_benchmark_checkpoint/stage16_5c_final_classical_strategy_lock.json": "1c119dc730f29e9d673eb1ef7d8bc714a82822a3a12c3d7212030e2050d23256",
+    "results/stage16_classical_benchmark_checkpoint/stage16_6a_one_time_holdout_authorization_lock.json": "370c5ba2fa23698712f696e5dd496b64984ab5ae230b1db929cf348811519b40",
+    "results/stage16_classical_benchmark_checkpoint/stage16_6c_final_classical_holdout_lock.json": "8eafe1bedb8c5fed5f0236aa8df5e4a8d4f0e1b3313d4b96dac47eca9fa25857"
+  },
+  "mandatory_model_families": {
+    "classical": {
+      "components": [
+        "Frozen Stage16 LightGBM component",
+        "Frozen Stage16 XGBoost component"
+      ],
+      "configuration_policy": "Component model/hyperparameter identities are inherited exactly from the Stage16 locks hashed by this protocol.",
+      "ensemble_rule": "Arithmetic mean of component attack probabilities, exactly as frozen in Stage16.",
+      "hyperparameter_search_allowed": false,
+      "identity": "ENS_LGBM_XGB_EQUAL",
+      "model_substitution_allowed": false,
+      "retrain_on_stage22_development": true
+    },
+    "comparison_policy": "Both mandatory families are evaluated and reported. Stage22 does not select a winner for replacement of the other family.",
+    "transformer": {
+      "architecture": "FT_BALANCED",
+      "architecture_search_allowed": false,
+      "configuration_policy": "Architecture/training/checkpoint rules are inherited exactly from the Stage15 locks hashed by this protocol.",
+      "ensemble_rule": "Arithmetic mean of the five frozen-recipe seed probabilities.",
+      "hyperparameter_search_allowed": false,
+      "identity": "FT_BALANCED_5_CHECKPOINT_ENSEMBLE",
+      "retrain_on_stage22_development": true,
+      "seed_search_allowed": false,
+      "seeds": [
+        7,
+        29,
+        101,
+        313,
+        997
+      ]
+    }
+  },
+  "next_authorized_step": {
+    "allowed": [
+      "locate original source daily files",
+      "hash source files",
+      "inventory schemas",
+      "recover deterministic row-to-day provenance",
+      "count ambiguous/unmapped provenance cases",
+      "prepare leakage-audit inputs"
+    ],
+    "forbidden": [
+      "model fitting",
+      "validation threshold selection",
+      "final-test metric computation",
+      "final-test-driven day reassignment"
+    ],
+    "name": "SOURCE PROVENANCE INVENTORY",
+    "stage": "STAGE22-1"
+  },
+  "partition_protocol": {
+    "development_role": "All chronologically ordered usable capture days except the latest three.",
+    "final_test_role": "Exactly the latest two usable capture days, pooled as one Stage22 final test and also reported separately by day.",
+    "group_definition": "All source files belonging to the same calendar capture day form one indivisible group and must receive the same role.",
+    "indivisible_group_unit": "ORIGINAL_SOURCE_CAPTURE_DAY",
+    "insufficient_day_policy": "Hard stop. Do not invent a replacement split.",
+    "minimum_usable_capture_days": 5,
+    "ordering": "Sort all deterministically recovered usable capture days in strict ascending chronological order.",
+    "reassignment_after_observation": false,
+    "reassignment_for_attack_coverage": false,
+    "reassignment_for_class_balance": false,
+    "reassignment_for_model_performance": false,
+    "session_isolation_interpretation": "Capture-day grouping is intentionally coarser than an individual flow/session. Therefore no within-day session can be divided across development, validation, and final-test roles. Stage22 does not invent unavailable five-tuple session identifiers.",
+    "single_class_partition_policy": "Report the limitation and undefined metrics transparently. Do not alter chronological roles.",
+    "validation_role": "Exactly the third-from-last usable capture day."
+  },
+  "preprocessing_policy": {
+    "final_test_fit_allowed": false,
+    "final_test_information_may_not_change_preprocessing": true,
+    "fit_scope": "Any learned preprocessing statistic must be fit using Stage22 development data only.",
+    "rule": "Use the corresponding inherited Stage15/Stage16 model-specific preprocessing recipe.",
+    "validation_fit_allowed": false
+  },
+  "protocol_version": 1,
+  "repository_boundary": {
+    "branch": "main",
+    "repository": "themubasshir/ids2018-validation-safe-ablation",
+    "sealed_parent_commit": "93944ea30d941abe055b7ad6ef261225fd61b175",
+    "stage21_publication_archive_tag": "publication-through-stage21-v1",
+    "stage21_tag_peeled_commit": "93944ea30d941abe055b7ad6ef261225fd61b175"
+  },
+  "scientific_scope": {
+    "claim_boundary": [
+      "Stage22 may support a stronger internal validation claim about temporal/capture isolation.",
+      "Stage22 must not be described as external validation.",
+      "Stage22 must not be described as an untouched independent confirmation because model-family choices originate from earlier IDS2018 analyses.",
+      "Any comparison against historical Stage15/Stage16 results is descriptive because the evaluation partition changes."
+    ],
+    "classification": "STRICTER_INTERNAL_TEMPORAL_REEVALUATION_NOT_INDEPENDENT_CONFIRMATION",
+    "primary_methodological_question": "How do the already-selected classical and Transformer flagship recipes behave when development, validation, and final evaluation are isolated by original source capture day?",
+    "purpose": "Re-evaluate the established IDS2018 flagship flow-feature model recipes under a strictly chronological, capture-day-isolated partition rather than the historical row-level stratified split.",
+    "single_intended_change": "Partition/provenance regime. Existing model families, feature family, and model recipes remain inherited/frozen."
+  },
+  "stage": "STAGE22-0",
+  "status": "PREREGISTERED_BEFORE_STAGE22_SOURCE_PROVENANCE_RECOVERY_PARTITION_CONSTRUCTION_MODEL_EXECUTION_OR_FINAL_EVALUATION",
+  "title": "Stage22 — Temporal / Session-Isolated Flagship Rerun",
+  "validation_threshold_protocol": {
+    "balanced_threshold": {
+      "objective": "MAXIMIZE_F1",
+      "tie_break_1": "MINIMIZE_FPR",
+      "tie_break_2": "CHOOSE_HIGHER_THRESHOLD"
+    },
+    "candidate_grid": {
+      "inclusive": true,
+      "start": 0.01,
+      "step": 0.01,
+      "stop": 0.99
+    },
+    "final_test_threshold_search_allowed": false,
+    "historical_stage15_stage16_numeric_thresholds_are_primary": false,
+    "post_final_threshold_adjustment_allowed": false,
+    "security_threshold": {
+      "eligibility_constraint": "FPR <= 0.05",
+      "no_feasible_threshold_policy": "Report SECURITY_THRESHOLD_INFEASIBLE. Do not relax the FPR constraint.",
+      "objective": "MAXIMIZE_F2",
+      "tie_break_1": "MINIMIZE_FPR",
+      "tie_break_2": "CHOOSE_HIGHER_THRESHOLD"
+    },
+    "standard_reference_threshold": 0.5,
+    "threshold_selected_separately_per_model_family": true,
+    "threshold_selection_dataset": "Stage22 validation partition only"
+  }
+}

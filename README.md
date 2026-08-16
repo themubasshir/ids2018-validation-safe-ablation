@@ -141,3 +141,39 @@ Publication tables are under `tables/lime/`, figures under
 `figures/lime/`, detailed results under `results/lime/`, and
 reproducibility artifacts under `metadata/lime/`.
 <!-- END STAGE 13 LOCAL EXPLANATION RELIABILITY -->
+<!-- BEGIN STAGES 14-21 RESEARCH EXTENSION STATUS -->
+
+## Stages 14–21 Research Extension Status
+
+The validation-safe journal extension continued beyond the original Stage 13
+local-explanation checkpoint.
+
+- **Stage 14:** neural Integrated Gradients reliability analysis with committed
+  publication assets.
+- **Stage 15:** duplicate-safe five-checkpoint Transformer ensemble feasibility
+  experiment.
+- **Stage 16:** frozen classical benchmark, multi-seed confirmation, ensemble
+  strategy lock, and one-time same-holdout comparison against the Transformer.
+- **Stage 17:** post-result Transformer attention analysis with cross-seed and
+  layer/head stability diagnostics.
+- **Stage 18:** representation-feasibility audit plus a graph experiment whose
+  strong threshold-free ranking did not translate to useful detection at its
+  independently frozen threshold.
+- **Stage 19:** authentic multiscale causal temporal experiment
+  (MTemporal-IDS), supporting conditional rather than uniform temporal benefit.
+- **Stage 20:** authentic packet-image representation construction and frozen
+  masked-CNN comparator.
+- **Stage 21:** parameter-matched CNN-versus-ViT architectural ablation,
+  preregistered post-result Integrated Gradients analysis, and publication
+  figures.
+
+Stage 21 is scientifically closed. Its publication figures are durably sealed,
+and no Stage 21 holdout/benchmark selection, threshold reselection, retraining,
+or post-result XAI-method substitution is permitted.
+
+The next research phase is **Stage 22 — temporal/session-safe flagship rerun**.
+
+Later-stage manuscript assets are indexed in
+`figures/JOURNAL_FIGURE_INDEX.md`.
+
+<!-- END STAGES 14-21 RESEARCH EXTENSION STATUS -->

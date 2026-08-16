@@ -1,0 +1,70 @@
+{
+  "artifacts": {
+    "README.md": {
+      "bytes": 10076,
+      "sha256": "f861d4c4b7197fb017622e141b54bb606924cbc1fd04e8f00cce8fe2809cfedf"
+    },
+    "figures/JOURNAL_FIGURE_INDEX.md": {
+      "bytes": 7080,
+      "sha256": "e79781774ffc1fcaccdea74983ede72ee0707b79407b8c6c15bb1bae32623c1e"
+    },
+    "figures/stage16_classical_transformer/fig16_1_classical_vs_transformer_holdout_tradeoff.pdf": {
+      "bytes": 65539,
+      "sha256": "45eb02f990b387573fdb9389b78ec2706ae87813d86ffc88a3285a8949a8c908"
+    },
+    "figures/stage16_classical_transformer/fig16_1_classical_vs_transformer_holdout_tradeoff.png": {
+      "bytes": 509433,
+      "sha256": "d35c383431b256f860990f028b0eda5c11963af201956a5a25511a950edd3339"
+    },
+    "figures/stage18_graph/fig18_1_graph_ranking_vs_frozen_operating_point.pdf": {
+      "bytes": 78104,
+      "sha256": "da3c6bdec20114a3f3db8c5b82f457950c17ae08580a3dba5c63acb385b63731"
+    },
+    "figures/stage18_graph/fig18_1_graph_ranking_vs_frozen_operating_point.png": {
+      "bytes": 324651,
+      "sha256": "ae80fe34498d77bbb9ae60ec5870408cfd45770a1a10c3d04c190354290bd862"
+    },
+    "figures/stage19_temporal/fig19_1_mtemporal_pooled_and_daily_heterogeneity.pdf": {
+      "bytes": 65925,
+      "sha256": "9dfde72d820ce3be238488598f8cfb2df6c687e9675eb5dbe8262c33325c47ea"
+    },
+    "figures/stage19_temporal/fig19_1_mtemporal_pooled_and_daily_heterogeneity.png": {
+      "bytes": 343994,
+      "sha256": "88adaf6be11c02935fc5f9c545d309f2b35a363f663fef161409857e967f6899"
+    },
+    "scripts/generate_publication_gap_figures_through_stage21.py": {
+      "bytes": 17165,
+      "sha256": "fe24f8f1a1e1d64aa020cca334cd7bf3d105d457555a94d9a2800359d4cdfed4"
+    }
+  },
+  "checkpoint": "Publication-Figure-Gap-Completion-Through-Stage21",
+  "deliberate_nonduplication": {
+    "Stage15": "DIRECTLY_REPRESENTED_BY_STAGE16_SAME_HOLDOUT_COMPARISON",
+    "Stage20": "CNN_COMPARATOR_ALREADY_REPRESENTED_IN_STAGE21_FIGURES",
+    "additional_Stage21_figures": false,
+    "comparative_Stage21_XAI_heatmaps": false
+  },
+  "existing_figure_packages_reused": {
+    "Stage14": "INTEGRATED_GRADIENTS_PUBLICATION_ASSETS",
+    "Stage17": "ATTENTION_ANALYSIS_FIGURE_PACKAGE"
+  },
+  "new_figures": {
+    "Stage16": "SAME_HOLDOUT_CLASSICAL_VS_TRANSFORMER_TRADEOFF",
+    "Stage18": "GRAPH_RANKING_VS_FROZEN_OPERATING_POINT_DIVERGENCE",
+    "Stage19": "MTEMPORAL_POOLED_AND_DAILY_HETEROGENEITY"
+  },
+  "next": "FINAL_PUBLICATION_ARCHIVE_SEAL_THROUGH_STAGE21",
+  "parent_stage21_final_seal": "429650d6856bb0f6fad987d50bae0e83107a15a3",
+  "scientific_boundary": {
+    "new_XAI": false,
+    "new_bootstrap": false,
+    "new_holdout_openings": 0,
+    "new_model_fits": 0,
+    "new_model_forwards": 0,
+    "new_probability_computation": 0,
+    "new_threshold_reselection": false,
+    "new_threshold_search": false,
+    "scientific_result_change": false
+  },
+  "status": "MISSING_HIGH_VALUE_PUBLICATION_FIGURES_THROUGH_STAGE21_COMPLETED"
+}

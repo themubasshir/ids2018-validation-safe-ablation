@@ -1,0 +1,51 @@
+{
+  "checkpoint": "Stage21-XAI1A-R1",
+  "cohort": {
+    "flows": 512,
+    "sha256": "ba29cf4611db82fa3c72b84f99ee537425c61c087c96ba96f02091f1156f83d8"
+  },
+  "identity_verification": {
+    "CNN": {
+      "canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+      "canonicalization": "HISTORICAL_STAGE20_1E2",
+      "canonicalization_definition": "SORTED_KEYS; pieces=[UTF8_NAME,ASCII_DTYPE,COMPACT_JSON_SHAPE,TENSOR_C_BYTES]; each piece prefixed with UINT64_BIG_ENDIAN byte length",
+      "checkpoint_bytes": 376879,
+      "checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+      "name": "Stage20MaskedCNNv1",
+      "strict_state_dict_load": true,
+      "trainable_parameters": 93025
+    },
+    "ViT": {
+      "canonical_state_sha256": "9da47df6cd5c821eef3d2c8a501296cd6070b835c719999f572f3dec2d560771",
+      "canonicalization": "STAGE21",
+      "checkpoint_bytes": 378999,
+      "checkpoint_sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8",
+      "name": "Stage21MaskedViTv1",
+      "strict_state_dict_load": true,
+      "trainable_parameters": 91969
+    }
+  },
+  "next": "Stage21-XAI1B_LOCKED_INTEGRATED_GRADIENTS_EXECUTION",
+  "parent_commit": "ebc1ad1a9a4c884f0066a0181db2f1e3d6503eee",
+  "recovery_reason": "Initial XAI1A used the Stage21 canonical-state serialization for both architectures. Stage20 CNN historically used a different canonical-state serialization. Exact checkpoint byte identities and strict state loading had already passed.",
+  "runtime": {
+    "CUDA_build": "12.6",
+    "GPU": "Tesla T4",
+    "numpy": "2.4.6",
+    "torch": "2.10.0+cu126"
+  },
+  "scientific_boundary": {
+    "XAI0_protocol_changed": false,
+    "architecture_result_changed": false,
+    "attributions_observed": false,
+    "gradient_passes": 0,
+    "integrated_gradient_runs": 0,
+    "model_forward_calls": 0,
+    "model_retraining": false,
+    "model_weights_changed": false,
+    "optimizer_steps": 0,
+    "threshold_reselection": false,
+    "threshold_search": false
+  },
+  "status": "EXACT_XAI_PREFLIGHT_DURABLE_BEFORE_ANY_ATTRIBUTION"
+}

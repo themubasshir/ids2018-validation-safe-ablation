@@ -1,0 +1,164 @@
+{
+  "anti_adaptation": {
+    "add_attribution_method_after_attribution": false,
+    "architecture_result_already_frozen": true,
+    "change_IG_steps_after_attribution": false,
+    "change_baseline_after_attribution": false,
+    "change_cohort_after_attribution": false,
+    "drop_unfavorable_examples": false,
+    "inspect_attribution_before_this_lock": false,
+    "select_examples_for_figures_by_visual_appeal": false,
+    "use_explainability_for_model_selection": false
+  },
+  "attribution": {
+    "alternative_baseline": false,
+    "attention_rollout": false,
+    "baseline": "ALL_ZERO_NORMALIZED_IMAGE",
+    "baseline_count": 1,
+    "gradcam": false,
+    "integration_path": "STRAIGHT_LINE_FROM_ZERO_BASELINE_TO_INPUT",
+    "integration_rule": "RIEMANN_MIDPOINT",
+    "integration_steps": 64,
+    "method": "INTEGRATED_GRADIENTS",
+    "methods_permitted": 1,
+    "second_attribution_method_if_result_unhelpful": false,
+    "shap": false,
+    "smoothgrad": false,
+    "steps_may_be_tuned_after_attribution": false,
+    "target": "ATTACK_LOGIT_PRE_SIGMOID",
+    "validity_mask_during_integration": "FIXED_TO_ORIGINAL_FLOW_MASK"
+  },
+  "checkpoint": "Stage21-XAI0",
+  "cohort": {
+    "Friday_labels_sha256": "239b124119824fac23cff9fdcfbc24bc46227a0b6d4b1ad2201e955c263347d8",
+    "attack": 256,
+    "benign": 256,
+    "error_category_used_for_selection": false,
+    "indices_dtype": "int64",
+    "indices_path": "results/stage21_architecture/stage21_xai0_friday_cohort_indices.npy",
+    "indices_sha256": "ba29cf4611db82fa3c72b84f99ee537425c61c087c96ba96f02091f1156f83d8",
+    "model_disagreement_used_for_selection": false,
+    "prediction_used_for_selection": false,
+    "sampling": "WITHOUT_REPLACEMENT_WITHIN_TRUE_CLASS",
+    "score_used_for_selection": false,
+    "seed": 21100,
+    "selection_basis": "TRUE_BINARY_LABEL_ONLY",
+    "total": 512
+  },
+  "common_spatial_comparison": {
+    "patch_count": 128,
+    "patch_grid": [
+      8,
+      16
+    ],
+    "patch_height_rows": 8,
+    "patch_width_bytes": 16,
+    "reason": "SAME_8x16_SPATIAL_AGGREGATION_FOR_BOTH_MODELS"
+  },
+  "descriptive_outputs": {
+    "attribution_quantity": "ABSOLUTE_INTEGRATED_GRADIENT_MASS",
+    "error_conditioned_strata": false,
+    "per_flow": [
+      "LOGIT_INPUT",
+      "LOGIT_ZERO_BASELINE",
+      "IG_COMPLETENESS_RESIDUAL",
+      "IG_RELATIVE_COMPLETENESS_ERROR",
+      "PADDED_PIXEL_ATTRIBUTION_MASS_FRACTION",
+      "NORMALIZED_VALID_PATCH_ENTROPY",
+      "TOP1_PATCH_MASS_FRACTION",
+      "TOP5_PATCH_MASS_FRACTION",
+      "FIRST_16_PACKET_ROWS_MASS_FRACTION",
+      "MIDDLE_32_PACKET_ROWS_MASS_FRACTION",
+      "LAST_16_PACKET_ROWS_MASS_FRACTION"
+    ],
+    "persisted_aggregates": [
+      "PER_FLOW_PATCH_8x16_ATTRIBUTION_MASS",
+      "PER_FLOW_ROW_ATTRIBUTION_MASS",
+      "PER_FLOW_BYTE_POSITION_ATTRIBUTION_MASS",
+      "CLASS_CONDITIONAL_MEAN_NORMALIZED_64x256_HEATMAP",
+      "PAIRED_CNN_VIT_PER_FLOW_SUMMARIES"
+    ],
+    "prediction_conditioned_strata": false,
+    "score_conditioned_strata": false,
+    "strata": [
+      "TRUE_BENIGN",
+      "TRUE_ATTACK"
+    ]
+  },
+  "execution_sequence": [
+    "RESTORE_EXACT_FROZEN_RUNTIME",
+    "VERIFY_BOTH_MODEL_IDENTITIES",
+    "VERIFY_COHORT_AND_FRIDAY_CORPUS_IDENTITIES",
+    "RUN_CNN_INTEGRATED_GRADIENTS_ON_LOCKED_512_FLOW_COHORT",
+    "RUN_VIT_INTEGRATED_GRADIENTS_ON_SAME_LOCKED_512_FLOW_COHORT",
+    "PERSIST_PREDECLARED_AGGREGATES",
+    "COMPUTE_PREDECLARED_DESCRIPTIVE_SUMMARIES",
+    "DURABLY_SEAL_POSTRESULT_EXPLAINABILITY"
+  ],
+  "interpretation_limits": {
+    "allowed": "DESCRIPTIVE_DIFFERENCES_IN_SPATIAL_ATTRIBUTION_DISTRIBUTION",
+    "causal_feature_claim": false,
+    "general_ViT_superiority_claim": false,
+    "independent_confirmation_claim": false,
+    "network_field_semantic_claim_from_image_position_alone": false
+  },
+  "models": {
+    "CNN": {
+      "canonical_state_sha256": "ae9c913b13db62ab933198dd7721f0d1826b26a55773e3b560dc735cbb8c8092",
+      "checkpoint_path": "results/stage20_1e_training/stage20_1e2_epoch10_model_state_dict.pt",
+      "checkpoint_sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+      "name": "Stage20MaskedCNNv1",
+      "trainable_parameters": 93025
+    },
+    "ViT": {
+      "canonical_state_sha256": "9da47df6cd5c821eef3d2c8a501296cd6070b835c719999f572f3dec2d560771",
+      "checkpoint_path": "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt",
+      "checkpoint_sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8",
+      "name": "Stage21MaskedViTv1",
+      "trainable_parameters": 91969
+    }
+  },
+  "parent_architecture_seal_commit": "aa227c77d68eee2970d95c27c8b234c70cf56da6",
+  "quality_reporting": {
+    "completeness": "REPORT_DISTRIBUTION_DO_NOT_TUNE_METHOD",
+    "if_quality_is_poor": "REPORT_LIMITATION_AND_STOP_NO_METHOD_SUBSTITUTION",
+    "padded_attribution": "REPORT_DISTRIBUTION_DO_NOT_TUNE_METHOD"
+  },
+  "representation": {
+    "input": "FROZEN_STAGE20_64x256x1_PACKET_IMAGE",
+    "mask": "FROZEN_AUTHENTIC_PIXEL_MASK",
+    "normalization": "UINT8_DIVIDED_BY_255_FLOAT32",
+    "representation_change": false
+  },
+  "runtime": {
+    "CUDA_build": "12.6",
+    "TF32": false,
+    "automatic_mixed_precision": false,
+    "deterministic_algorithms": true,
+    "dtype": "FLOAT32",
+    "numpy": "2.4.6",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu126"
+  },
+  "scientific_boundary_at_lock": {
+    "Stage21_architecture_result_frozen": true,
+    "architecture_search": false,
+    "model_retraining": false,
+    "optimizer_steps": 0,
+    "post_result_attribution_runs": 0,
+    "post_result_gradient_passes": 0,
+    "post_result_model_forward_passes": 0,
+    "threshold_reselection": false,
+    "threshold_search": false
+  },
+  "status": "POSTRESULT_EXPLAINABILITY_PROTOCOL_FROZEN_BEFORE_ATTRIBUTION_EXECUTION",
+  "study_role": {
+    "Friday": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+    "explainability": "POSTRESULT_DESCRIPTIVE_ONLY",
+    "may_change_architecture_result": false,
+    "may_create_new_candidate": false,
+    "may_select_model": false,
+    "may_select_threshold": false,
+    "may_support_independent_confirmation": false
+  }
+}

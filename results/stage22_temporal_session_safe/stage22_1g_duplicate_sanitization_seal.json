@@ -1,0 +1,44 @@
+{
+  "chronology_immutability": {
+    "empty_day_repaired": false,
+    "roles_changed": false,
+    "usable_days_changed": false
+  },
+  "created_utc": "2026-08-16T16:10:39+00:00",
+  "duplicate_group_identity": {
+    "feature_space": "FROZEN_STAGE15_STAGE16_70_FEATURE_VECTOR",
+    "path": "results/stage22_temporal_session_safe/stage22_1e_70_feature_duplicate_groups.parquet",
+    "sha256": "44b6ec8393998e6c843e8943e6a12a0940a183c6e6a9eed2de2bb1274f73fc08"
+  },
+  "outcome_governance": {
+    "final_metrics_computed": false,
+    "final_outcome_openings_consumed": 0,
+    "labels_read": false,
+    "model_scores_generated": false,
+    "validation_metrics_computed": false
+  },
+  "partition_lock": {
+    "path": "results/stage22_temporal_session_safe/stage22_1f_chronological_partition_lock.json",
+    "sha256": "f80e74a6d0a67152fe4eac9f6acb33e80096f7f9ae3d59c2f5cde0d07ad428f6",
+    "tag": "stage22-1f-chronological-partition-v1"
+  },
+  "post_sanitization_invariant": {
+    "development_final_test_exact_overlap": 0,
+    "development_validation_exact_overlap": 0,
+    "validation_final_test_exact_overlap": 0,
+    "within_role_duplicates_allowed": true
+  },
+  "sanitized_partition": {
+    "path": "results/stage22_temporal_session_safe/stage22_1g_sanitized_chronological_partition.parquet",
+    "rows": 300928,
+    "sha256": "d1c4b3536ab317b11e9288e0f2eb9b4883635eddb06f77e8e4cc9c4ae964cc9c"
+  },
+  "scientific_parent_commit": "d25fb074b8967d1c653934bb55ec6eece3e4b191",
+  "stage": "STAGE22-1G",
+  "status": "SEALED_AFTER_FROZEN_DUPLICATE_SANITIZATION_BEFORE_LABEL_READING_OR_MODEL_EXECUTION",
+  "summary": {
+    "path": "results/stage22_temporal_session_safe/stage22_1g_duplicate_sanitization_summary.json",
+    "sha256": "fa27a742141a144780fcc90cbec2d103eec69f71397cfaba3daa97a11651cb1d"
+  },
+  "title": "Stage22 Cross-Role Exact Duplicate Sanitization Seal"
+}

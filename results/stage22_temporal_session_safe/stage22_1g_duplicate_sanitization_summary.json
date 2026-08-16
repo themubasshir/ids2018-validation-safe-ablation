@@ -1,0 +1,136 @@
+{
+  "anchors": {
+    "stage22_1e_duplicate_groups_sha256": "44b6ec8393998e6c843e8943e6a12a0940a183c6e6a9eed2de2bb1274f73fc08",
+    "stage22_1e_duplicate_seal_sha256": "1db4e574b1b6c858152b9977c0dcb206dac46cd8110ef465ff332803a9b3bc00",
+    "stage22_1e_duplicate_summary_sha256": "590989f18525ed0b8f4450c616c75b85c04d6bf1ce3a4388b7ee9011bda26b7d",
+    "stage22_1f_partition_lock_sha256": "f80e74a6d0a67152fe4eac9f6acb33e80096f7f9ae3d59c2f5cde0d07ad428f6",
+    "stage22_1f_preduplicate_partition_sha256": "d208d6f4b817bd9463aaec198af8a9568d444faf68c32b92511fd20ae0e57471"
+  },
+  "artifact": {
+    "path": "results/stage22_temporal_session_safe/stage22_1g_sanitized_chronological_partition.parquet",
+    "rows": 300928,
+    "sha256": "d1c4b3536ab317b11e9288e0f2eb9b4883635eddb06f77e8e4cc9c4ae964cc9c"
+  },
+  "created_utc": "2026-08-16T16:10:39+00:00",
+  "cross_role_group_audit_before_sanitization": {
+    "cross_role_exact_groups": 0,
+    "cross_role_pattern_counts": {},
+    "eligible_exact_groups": 217071,
+    "single_role_exact_groups": 217071
+  },
+  "frozen_chronology": {
+    "chronology_modified_after_sanitization": false,
+    "development_days": [
+      "2018-02-14",
+      "2018-02-15",
+      "2018-02-16",
+      "2018-02-21",
+      "2018-02-22",
+      "2018-02-23"
+    ],
+    "empty_days_after_duplicate_sanitization": [],
+    "final_test_days": [
+      "2018-03-01",
+      "2018-03-02"
+    ],
+    "usable_days": [
+      "2018-02-14",
+      "2018-02-15",
+      "2018-02-16",
+      "2018-02-21",
+      "2018-02-22",
+      "2018-02-23",
+      "2018-02-28",
+      "2018-03-01",
+      "2018-03-02"
+    ],
+    "validation_days": [
+      "2018-02-28"
+    ]
+  },
+  "frozen_rule": {
+    "already_excluded_provenance_rows_participate_in_earliest_role": false,
+    "day_reassignment_allowed": false,
+    "empty_day_repair_allowed": false,
+    "policy": "For an exact frozen 70-feature fingerprint represented in more than one eligible chronological role, retain every occurrence in the earliest eligible role and exclude every occurrence from all later roles.",
+    "role_order": [
+      "DEVELOPMENT",
+      "VALIDATION",
+      "FINAL_TEST"
+    ],
+    "role_reassignment_allowed": false,
+    "within_role_duplicates_remain": true
+  },
+  "governance": {
+    "authorized_final_outcome_openings_consumed": 0,
+    "binary_label_read": false,
+    "final_test_metrics": false,
+    "flagship_predictors_read": false,
+    "label_read": false,
+    "model_inference": false,
+    "model_training": false,
+    "preprocessing_fit": false,
+    "threshold_selection": false,
+    "validation_metrics": false
+  },
+  "next_boundary": {
+    "final_test_labels_remain_sealed": true,
+    "model_training_authorized_here": false,
+    "state": "SANITIZED_ROW_MEMBERSHIP_MAY_NOW_BE_USED_AS_THE_ONLY_STAGE22_PARTITION_MEMBERSHIP_SOURCE"
+  },
+  "post_sanitization_exact_overlap": {
+    "development_final_test_groups": 0,
+    "development_validation_groups": 0,
+    "required_zero_overlap_pass": true,
+    "validation_final_test_groups": 0
+  },
+  "row_counts": {
+    "new_duplicate_exclusions": {
+      "by_capture_day": {
+        "2018-02-14": 0,
+        "2018-02-15": 0,
+        "2018-02-16": 0,
+        "2018-02-21": 0,
+        "2018-02-22": 0,
+        "2018-02-23": 0,
+        "2018-02-28": 0,
+        "2018-03-01": 0,
+        "2018-03-02": 0
+      },
+      "by_original_role": {
+        "DEVELOPMENT": 0,
+        "FINAL_TEST": 0,
+        "VALIDATION": 0
+      },
+      "total": 0
+    },
+    "post_duplicate": {
+      "DEVELOPMENT": 156821,
+      "EXCLUDED": 59995,
+      "FINAL_TEST": 68867,
+      "VALIDATION": 15245
+    },
+    "pre_duplicate": {
+      "DEVELOPMENT": 156821,
+      "EXCLUDED": 59995,
+      "FINAL_TEST": 68867,
+      "VALIDATION": 15245
+    },
+    "retained_rows_by_capture_day": {
+      "2018-02-14": 18813,
+      "2018-02-15": 35664,
+      "2018-02-16": 29783,
+      "2018-02-21": 39962,
+      "2018-02-22": 15721,
+      "2018-02-23": 16878,
+      "2018-02-28": 15245,
+      "2018-03-01": 30737,
+      "2018-03-02": 38130
+    },
+    "total_flagship_rows": 300928
+  },
+  "scientific_parent_commit": "d25fb074b8967d1c653934bb55ec6eece3e4b191",
+  "stage": "STAGE22-1G",
+  "status": "SANITIZED_AND_VERIFIED_BEFORE_LABEL_READING_OR_MODEL_EXECUTION",
+  "title": "Stage22 Frozen Cross-Role Exact Duplicate Sanitization"
+}

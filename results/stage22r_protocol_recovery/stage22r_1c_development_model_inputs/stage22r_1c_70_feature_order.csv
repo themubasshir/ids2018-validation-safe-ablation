@@ -1,0 +1,71 @@
+feature_position,feature_name
+0,Dst Port
+1,Protocol
+2,Flow Duration
+3,Tot Fwd Pkts
+4,Tot Bwd Pkts
+5,TotLen Fwd Pkts
+6,TotLen Bwd Pkts
+7,Fwd Pkt Len Max
+8,Fwd Pkt Len Min
+9,Fwd Pkt Len Mean
+10,Fwd Pkt Len Std
+11,Bwd Pkt Len Max
+12,Bwd Pkt Len Min
+13,Bwd Pkt Len Mean
+14,Bwd Pkt Len Std
+15,Flow Byts/s
+16,Flow Pkts/s
+17,Flow IAT Mean
+18,Flow IAT Std
+19,Flow IAT Max
+20,Flow IAT Min
+21,Fwd IAT Tot
+22,Fwd IAT Mean
+23,Fwd IAT Std
+24,Fwd IAT Max
+25,Fwd IAT Min
+26,Bwd IAT Tot
+27,Bwd IAT Mean
+28,Bwd IAT Std
+29,Bwd IAT Max
+30,Bwd IAT Min
+31,Fwd PSH Flags
+32,Fwd URG Flags
+33,Fwd Header Len
+34,Bwd Header Len
+35,Fwd Pkts/s
+36,Bwd Pkts/s
+37,Pkt Len Min
+38,Pkt Len Max
+39,Pkt Len Mean
+40,Pkt Len Std
+41,Pkt Len Var
+42,FIN Flag Cnt
+43,SYN Flag Cnt
+44,RST Flag Cnt
+45,PSH Flag Cnt
+46,ACK Flag Cnt
+47,URG Flag Cnt
+48,CWE Flag Count
+49,ECE Flag Cnt
+50,Down/Up Ratio
+51,Pkt Size Avg
+52,Fwd Seg Size Avg
+53,Bwd Seg Size Avg
+54,Subflow Fwd Pkts
+55,Subflow Fwd Byts
+56,Subflow Bwd Pkts
+57,Subflow Bwd Byts
+58,Init Fwd Win Byts
+59,Init Bwd Win Byts
+60,Fwd Act Data Pkts
+61,Fwd Seg Size Min
+62,Active Mean
+63,Active Std
+64,Active Max
+65,Active Min
+66,Idle Mean
+67,Idle Std
+68,Idle Max
+69,Idle Min

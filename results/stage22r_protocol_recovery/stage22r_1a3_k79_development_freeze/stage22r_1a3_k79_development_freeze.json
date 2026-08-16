@@ -1,0 +1,109 @@
+{
+  "clean_development": {
+    "attack": 1972299,
+    "benign": 12440104,
+    "rows": 14412403
+  },
+  "committed_artifacts": {
+    "exact_summary": {
+      "bytes": 2485,
+      "file": "stage22r_1a2b_exact_k79_summary.json",
+      "sha256": "e1c2d48ac17d9774ed4f8f50aebd34fc00271f60bf099ae1c48ae64a816b7ba1"
+    },
+    "exclusion_membership": {
+      "bytes": 3114215,
+      "file": "stage22r_k79_development_exclusions.parquet",
+      "rows": 440865,
+      "sha256": "3e979841468f9d42a8de7049ed50063d5907c0753fe5b1179dac948163d93134"
+    },
+    "per_day_table": {
+      "bytes": 1067,
+      "file": "stage22r_k79_cleaning_by_day.csv",
+      "rows": 8,
+      "sha256": "cc05861abc7b0acb8891122ea2579235f31cdc9d238c5a268219cf25305c35ea"
+    }
+  },
+  "definition_of_clean_development_universe": "All 14,853,268 frozen effective development traffic rows from 02-14 through 02-28 MINUS the exact source-row locators in stage22r_k79_development_exclusions.parquet.",
+  "exact_k79": {
+    "chronological_train_to_feb28_overlap_groups": 0,
+    "conflicting_label_groups": 6601,
+    "cross_day_groups": 0,
+    "observed_blake2b128_collision_groups": 0,
+    "repeated_groups": 128070,
+    "same_label_duplicate_groups": 121469
+  },
+  "exclusions": {
+    "conflicting_rows": 13204,
+    "same_label_duplicate_rows": 427661,
+    "total": 440865
+  },
+  "final_holdout": {
+    "files": [
+      "03-01-2018.csv",
+      "03-02-2018.csv"
+    ],
+    "files_opened": 0,
+    "labels_read": 0,
+    "maximum_authorized_openings": 1,
+    "openings_consumed": 0,
+    "predictors_read": 0,
+    "rows_read": 0
+  },
+  "models": {
+    "fits": 0,
+    "inference": 0,
+    "threshold_selection": 0
+  },
+  "next_authorized_step": "Stage22R-1B \u2014 construct and freeze RANDOM and CHRONOLOGICAL train/validation memberships from this single exact-K79-clean development universe; then construct training-only rebalanced memberships. Final holdout remains closed.",
+  "parent_commit": "c094a5559b1c290f29bc2861ca4ade08878cd04f",
+  "scientific_interpretation": {
+    "attacker_source_ip_group_disjoint_claim": false,
+    "chronological_k79_train_validation_overlap": "NONE",
+    "five_tuple_group_disjoint_claim": false,
+    "random_split_requirement": "Random train/validation membership must be created only after applying this frozen K79 exclusion membership, so within-day exact duplicates cannot straddle random partitions.",
+    "s4_claim": false
+  },
+  "scratch_evidence": {
+    "candidate_exact_records": {
+      "bytes": 10908981,
+      "committed": false,
+      "reason": "Reconstructible scratch evidence; exact compact exclusion membership is committed.",
+      "sha256": "88e3244fa5876abc32caed8710d1e62f55ccebb0df30657da732fc4bb5a3e8f5"
+    },
+    "duplicate_representatives": {
+      "bytes": 2142091,
+      "committed": false,
+      "sha256": "7a849e0f850484ce6ac30eb80719e1f9088fa44e51b1162191341c5ceb3eb0ea"
+    },
+    "exact_k79_groups": {
+      "bytes": 5471747,
+      "committed": false,
+      "sha256": "b5ce8d70ee7de79388a78f23f770535b39176e273ac4847776c98a03b821980c"
+    },
+    "stage22r_1a1_manifest": {
+      "bytes": 4077,
+      "sha256": "ee815c63e21ba7bcf14aa17483383fbd4ab25db7091e27bc07223ade1bb62b2f"
+    },
+    "stage22r_1a2a_summary": {
+      "bytes": 1867,
+      "sha256": "9941852ab7c93b31d85fe86e4c59b8fe59ec363beafe32cfb6222ccc14fa8742"
+    }
+  },
+  "source_universe": {
+    "attack": 2368981,
+    "benign": 12484287,
+    "days": [
+      "02-14-2018.csv",
+      "02-15-2018.csv",
+      "02-16-2018.csv",
+      "02-20-2018.csv",
+      "02-21-2018.csv",
+      "02-22-2018.csv",
+      "02-23-2018.csv",
+      "02-28-2018.csv"
+    ],
+    "effective_rows": 14853268
+  },
+  "stage": "Stage22R-1A3",
+  "status": "EXACT_K79_DEVELOPMENT_CLEANING_GIT_FROZEN"
+}

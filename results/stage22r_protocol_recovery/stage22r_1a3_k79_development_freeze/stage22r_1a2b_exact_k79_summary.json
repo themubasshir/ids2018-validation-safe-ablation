@@ -1,0 +1,78 @@
+{
+  "artifacts": {
+    "candidate_exact_records": {
+      "bytes": 10908981,
+      "file": "candidate_exact_records.parquet",
+      "sha256": "88e3244fa5876abc32caed8710d1e62f55ccebb0df30657da732fc4bb5a3e8f5"
+    },
+    "duplicate_representatives": {
+      "bytes": 2142091,
+      "file": "k79_duplicate_representatives.parquet",
+      "sha256": "7a849e0f850484ce6ac30eb80719e1f9088fa44e51b1162191341c5ceb3eb0ea"
+    },
+    "exact_groups": {
+      "bytes": 5471747,
+      "file": "exact_k79_groups.parquet",
+      "sha256": "b5ce8d70ee7de79388a78f23f770535b39176e273ac4847776c98a03b821980c"
+    },
+    "exclusions": {
+      "bytes": 3114215,
+      "file": "k79_exclusions.parquet",
+      "rows": 440865,
+      "sha256": "3e979841468f9d42a8de7049ed50063d5907c0753fe5b1179dac948163d93134"
+    },
+    "per_day_counts": {
+      "bytes": 1684,
+      "file": "k79_exclusion_counts_by_day.parquet",
+      "sha256": "bf26e707cbd7298925273d488cad6e84f6306c667440897d390044383fa854f3"
+    }
+  },
+  "clean_development": {
+    "attack": 1972299,
+    "benign": 12440104,
+    "rows": 14412403
+  },
+  "exact_verification": {
+    "candidate_rows_reconstructed": 562334,
+    "canonical_record_bytes": 632,
+    "conflicting_label_exact_groups": 6601,
+    "cross_day_exact_groups": 0,
+    "digest_groups_with_multiple_exact_records": 0,
+    "maximum_exact_multiplicity": 56,
+    "repeated_exact_k79_groups": 128070,
+    "rows_in_digest_collision_groups": 0,
+    "same_label_exact_groups": 121469
+  },
+  "exclusions": {
+    "attack": 396682,
+    "benign": 44183,
+    "conflicting_rows": 13204,
+    "same_label_duplicate_rows": 427661,
+    "total_rows": 440865
+  },
+  "holdout": {
+    "03-01_opened": false,
+    "03-02_opened": false,
+    "labels_read": 0,
+    "openings_consumed": 0,
+    "predictors_read": 0,
+    "rows_read": 0
+  },
+  "input": {
+    "candidate_rows": 562334,
+    "chronological_train_validation_digest_groups": 0,
+    "cross_day_digest_groups": 0,
+    "development_rows": 14853268,
+    "mixed_label_digest_groups": 6601,
+    "repeated_digest_groups": 128070
+  },
+  "models": {
+    "fits": 0,
+    "inference": 0,
+    "threshold_selection": 0
+  },
+  "next_authorized_step": "Stage22R-1A3 \u2014 freeze the compact exact-K79 evidence and cleaned development membership before constructing RANDOM and CHRONOLOGICAL split memberships.",
+  "scientific_parent": "c094a5559b1c290f29bc2861ca4ade08878cd04f",
+  "stage": "Stage22R-1A2B",
+  "status": "EXACT_K79_DEVELOPMENT_VERIFICATION_COMPLETE"
+}

@@ -1,0 +1,52 @@
+{
+  "IG_steps_per_flow": 64,
+  "artifacts": {
+    "byte": {
+      "bytes": 524416,
+      "sha256": "ccbcaad63d2de89995cba871cb9b1e821fd3abaf3e39851600d8d330ab78b74d"
+    },
+    "heatmap": {
+      "bytes": 262272,
+      "sha256": "05d84b88a7cedd1eeffb12d4609def56bd6696e7b0202a82f4560842fae8ff99"
+    },
+    "patch": {
+      "bytes": 262272,
+      "sha256": "5c4109fd57f5e204ed457cbcbedc45dbf023f34adb3c299d5e0cbcafb598aadf"
+    },
+    "row": {
+      "bytes": 131200,
+      "sha256": "e9067b68874bb88dc052c777a8cdf5be94a1652bef147ec566f15310ab691349"
+    },
+    "summary": {
+      "bytes": 45184,
+      "sha256": "ba0cc98d6613fee6e1762080fd84579cad0e25e8e86778c83f7800b018764055"
+    }
+  },
+  "baseline": "ALL_ZERO_NORMALIZED_IMAGE",
+  "batched_forward_invocations": 640,
+  "cohort_flows": 512,
+  "elapsed_seconds_operational": 5.353859901428223,
+  "endpoint_flow_evaluations": 1024,
+  "endpoint_probability_gate": {
+    "absolute_tolerance": 1e-05,
+    "maximum_absolute_difference": 1.7881393432617188e-07,
+    "mean_absolute_difference": 2.7086759502026325e-09,
+    "passed": true
+  },
+  "execution_script_sha256": "c9fcfa53c24009da51843a93da9bb0f9e4216c03856bf68cebbaf34ce461dfa2",
+  "gradient_autograd_calls": 512,
+  "gradient_flow_alpha_evaluations": 32768,
+  "harness_commit": "9c429ff250f19918a19cddc0091c10676be4486d",
+  "integration_rule": "RIEMANN_MIDPOINT",
+  "model": "ViT",
+  "scientific_boundary": {
+    "alternative_baseline": false,
+    "attribution_method_search": false,
+    "model_retraining": false,
+    "optimizer_steps": 0,
+    "threshold_reselection": false,
+    "threshold_search": false
+  },
+  "status": "MODEL_LOCKED_IG_COMPLETE",
+  "validity_mask": "FIXED_ORIGINAL_MASK"
+}

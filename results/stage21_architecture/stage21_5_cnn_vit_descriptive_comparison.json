@@ -1,0 +1,163 @@
+{
+  "checkpoint": "Stage21-5",
+  "claim_boundary": {
+    "architecture_selection_from_Friday": false,
+    "confirmatory": false,
+    "general_architecture_superiority_claim": false,
+    "model_selection_from_bootstrap": false,
+    "threshold_selection_from_Friday": false
+  },
+  "co_primary_descriptive": {
+    "CNN_PR_AUC": 0.48945269459245255,
+    "CNN_ROC_AUC": 0.43921400808023464,
+    "ViT_MINUS_CNN_PR_AUC": 0.11708421669700042,
+    "ViT_MINUS_CNN_ROC_AUC": 0.1294799619491908,
+    "ViT_PR_AUC": 0.606536911289453,
+    "ViT_ROC_AUC": 0.5686939700294255,
+    "classification": "DESCRIPTIVE_BENCHMARK_IMPROVEMENT_ON_BOTH_RANKING_METRICS"
+  },
+  "inputs": {
+    "CNN_probabilities_sha256": "e46a112e1e0320f645ec9d9502f0b3c0d8bdcf3987b50b2cd2352ef7484e2124",
+    "ViT_probabilities_sha256": "aeb24de4d40a56b7d69b2a8bedcca995e248f680f2e50b3fa3ee3db2a06f16ad",
+    "labels_sha256": "239b124119824fac23cff9fdcfbc24bc46227a0b6d4b1ad2201e955c263347d8"
+  },
+  "numerical_reproduction_gate": {
+    "CNN": {
+      "PR_AUC": {
+        "absolute_difference": 7.771561172376096e-16,
+        "recomputed": 0.48945269459245333,
+        "sealed": 0.48945269459245255
+      },
+      "ROC_AUC": {
+        "absolute_difference": 3.6637359812630166e-15,
+        "recomputed": 0.4392140080802383,
+        "sealed": 0.43921400808023464
+      }
+    },
+    "ViT": {
+      "PR_AUC": {
+        "absolute_difference": 1.2212453270876722e-15,
+        "recomputed": 0.6065369112894542,
+        "sealed": 0.606536911289453
+      },
+      "ROC_AUC": {
+        "absolute_difference": 0.0,
+        "recomputed": 0.5686939700294255,
+        "sealed": 0.5686939700294255
+      }
+    },
+    "bootstrap_specification_changed": false,
+    "gate_pass": true,
+    "observed_source_of_truth": "SEALED_STAGE20_AND_STAGE21_4_SCORE_METRICS",
+    "purpose": "VERIFY_PERSISTED_SCORE_METRIC_RECONSTRUCTION_BEFORE_BOOTSTRAP",
+    "reproduction_tolerance_abs": 1e-12,
+    "scientific_specification_changed": false
+  },
+  "paired_bootstrap": {
+    "artifact": {
+      "columns": [
+        "ViT_MINUS_CNN_ROC_AUC",
+        "ViT_MINUS_CNN_PR_AUC"
+      ],
+      "dtype": "float64",
+      "path": "results/stage21_architecture/stage21_5_paired_bootstrap_deltas.npy",
+      "sha256": "3189edae91a1e040b498d7fe2f8c8dab5fdd2af47125a86d48c100767ca5dc14",
+      "shape": [
+        10000,
+        2
+      ]
+    },
+    "delta_definition": "ViT_MINUS_CNN",
+    "descriptive_not_confirmatory": true,
+    "interval": "PERCENTILE_95_PERCENT",
+    "numpy_version": "2.0.2",
+    "paired": true,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "quantile_method": "linear",
+    "replicates": 10000,
+    "rng": "numpy.random.default_rng_PCG64",
+    "seed": 21042,
+    "targets": {
+      "DELTA_PR_AUC": {
+        "bootstrap_median": 0.11707332964741424,
+        "observed": 0.11708421669700042,
+        "percentile_95_CI": [
+          0.10292121582022004,
+          0.1315036442879295
+        ]
+      },
+      "DELTA_ROC_AUC": {
+        "bootstrap_median": 0.12949235816551743,
+        "observed": 0.1294799619491908,
+        "percentile_95_CI": [
+          0.11450416392517783,
+          0.1445674150992717
+        ]
+      }
+    },
+    "unit": "FLOW"
+  },
+  "parent_commit": "6497229a2c8ff3c4bc3b4b9d9185e95b2336e56e",
+  "population": {
+    "attack": 5602,
+    "benign": 6486,
+    "flows": 12088,
+    "pairing": "EXACT_SAME_FRIDAY_COMPACT_CORPUS_EXPORT_ORDER"
+  },
+  "role": "LOCKED_FRIDAY_REUSE_BENCHMARK_NON_CONFIRMATORY",
+  "scientific_boundary": {
+    "CNN_retrained": false,
+    "Friday_threshold_reselection": false,
+    "Friday_threshold_search": false,
+    "ViT_retrained": false,
+    "architecture_search": false,
+    "bootstrap_used_for_selection": false,
+    "new_candidate_added": false,
+    "new_model_forward_passes": 0,
+    "optimizer_steps": 0
+  },
+  "secondary_descriptive_deltas": {
+    "STANDARD_0_50_F1": {
+      "CNN": 0.06294067067927774,
+      "ViT": 0.13939595087952208,
+      "ViT_MINUS_CNN": 0.07645528020024435
+    },
+    "STANDARD_0_50_RECALL": {
+      "CNN": 0.03266690467690111,
+      "ViT": 0.0749732238486255,
+      "ViT_MINUS_CNN": 0.04230631917172439
+    },
+    "VALIDATION_SELECTED_BALANCED_F1": {
+      "CNN": 0.06281105199931354,
+      "CNN_threshold": 0.17,
+      "ViT": 0.13968148639681485,
+      "ViT_MINUS_CNN": 0.07687043439750131,
+      "ViT_threshold": 0.42
+    },
+    "VALIDATION_SELECTED_BALANCED_RECALL": {
+      "CNN": 0.03266690467690111,
+      "CNN_threshold": 0.17,
+      "ViT": 0.07515173152445555,
+      "ViT_MINUS_CNN": 0.04248482684755444,
+      "ViT_threshold": 0.42
+    },
+    "VALIDATION_SELECTED_SECURITY_F2": {
+      "CNN": 0.040427694075023196,
+      "CNN_threshold": 0.17,
+      "ViT": 0.09304260256578659,
+      "ViT_MINUS_CNN": 0.05261490849076339,
+      "ViT_threshold": 0.24
+    },
+    "VALIDATION_SELECTED_SECURITY_RECALL": {
+      "CNN": 0.03266690467690111,
+      "CNN_threshold": 0.17,
+      "ViT": 0.07586576222777579,
+      "ViT_MINUS_CNN": 0.04319885755087468,
+      "ViT_threshold": 0.24
+    }
+  },
+  "status": "PREREGISTERED_DESCRIPTIVE_CNN_VIT_COMPARISON_COMPLETE"
+}

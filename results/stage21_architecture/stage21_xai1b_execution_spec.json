@@ -1,0 +1,48 @@
+{
+  "alpha_chunk": 8,
+  "baseline": "ALL_ZERO_NORMALIZED_IMAGE",
+  "checkpoint": "Stage21-XAI1B-EXECUTION-SPEC",
+  "cohort_flows": 512,
+  "endpoint_probability_absolute_tolerance": 1e-05,
+  "entropy": {
+    "normalization": "DIVIDE_BY_LOG(NUM_VALID_PATCHES)",
+    "patch": "8_ROWS_X_16_BYTES",
+    "valid_patch": "ANY_AUTHENTIC_PIXEL",
+    "zero_case": "ZERO_IF_K_LE_1_OR_TOTAL_ATTRIBUTION_MASS_ZERO"
+  },
+  "execution_script": "scripts/stage21_xai1b_locked_ig.py",
+  "execution_script_bytes": 62959,
+  "execution_script_sha256": "140b8f61d702a1e79a18768b2c5e3ad10a22ef48d39af4fcc865781e67a2c8fe",
+  "flow_batch": 8,
+  "integration_rule": "RIEMANN_MIDPOINT",
+  "mask": "FIXED_ORIGINAL_FLOW_MASK",
+  "method": "INTEGRATED_GRADIENTS",
+  "model_order": [
+    "CNN",
+    "ViT"
+  ],
+  "models": [
+    "Stage20MaskedCNNv1",
+    "Stage21MaskedViTv1"
+  ],
+  "normalization": {
+    "CNN": "EXECUTE_FROM_IMMEDIATELY_AFTER_THE_FROZEN_INTERNAL_DIV255;REMAINING_STAGE20_CNN_FORWARD_IS_IDENTICAL",
+    "ViT": "DIRECT_FROZEN_NORMALIZED_FORWARD",
+    "common_attribution_domain": "FLOAT32_UINT8_DIVIDED_BY_255"
+  },
+  "parent_preflight_commit": "b26af9b8c54fda46f8b10c796d8bedbe8fca362f",
+  "recovery": "PER_MODEL_OPERATIONAL_OUTPUTS_REUSED_ONLY_IF_COMPLETION_RECEIPT,ARTIFACT_HASHES_AND_EXECUTION_SCRIPT_SHA_MATCH",
+  "relative_completeness_denominator_floor": 1e-12,
+  "scientific_boundary": {
+    "attributions_observed_before_harness_freeze": false,
+    "baseline_search": false,
+    "cohort_change": false,
+    "method_search": false,
+    "step_search": false,
+    "threshold_search": false,
+    "training": false
+  },
+  "status": "EXECUTION_HARNESS_FROZEN_BEFORE_FIRST_ATTRIBUTION",
+  "steps": 64,
+  "target": "ATTACK_LOGIT_PRE_SIGMOID"
+}

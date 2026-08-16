@@ -1,0 +1,193 @@
+{
+  "artifacts": {
+    "docs/STAGE21_XAI1B_INTEGRATED_GRADIENTS.md": {
+      "bytes": 2753,
+      "remote_byte_identity": true,
+      "sha256": "5446f9b0889a8b64c58fe954ab991d3437ffe98509f7714a626dc710a1fd84ad"
+    },
+    "results/stage21_architecture/stage21_xai1b_byte_mass.npy": {
+      "bytes": 1048704,
+      "remote_byte_identity": true,
+      "sha256": "c20c5bcc7925a5ded6bef8c3b7a1bd2f8ea7ce43a5239f156ce63db84f043ac4"
+    },
+    "results/stage21_architecture/stage21_xai1b_class_mean_normalized_heatmap.npy": {
+      "bytes": 524416,
+      "remote_byte_identity": true,
+      "sha256": "e9f88024a47deaae8ab29ed3131f271163847b15f8412d99ce70886e15b127c0"
+    },
+    "results/stage21_architecture/stage21_xai1b_cnn_execution_receipt.json": {
+      "bytes": 1700,
+      "remote_byte_identity": true,
+      "sha256": "d37c58810a492eb4b07d6bfbc9e3e75595bafefb560eb77852a8104401120829"
+    },
+    "results/stage21_architecture/stage21_xai1b_integrated_gradients_result.json": {
+      "bytes": 25672,
+      "remote_byte_identity": true,
+      "sha256": "c0577ce6d5416b0a2617c00016240f32f00c9de5a7121fe302f1c29a7fcf044e"
+    },
+    "results/stage21_architecture/stage21_xai1b_patch_mass.npy": {
+      "bytes": 524416,
+      "remote_byte_identity": true,
+      "sha256": "b8dedca9805fa2ad778e9c6d54edf5828977b28bb15b208ece2eadcc80c5fd43"
+    },
+    "results/stage21_architecture/stage21_xai1b_per_flow_summaries.npy": {
+      "bytes": 90240,
+      "remote_byte_identity": true,
+      "sha256": "c59fa74bf4aae052c8d3a30e32f24b782c74ec50206f13fb4b5e63f0fe03d7d3"
+    },
+    "results/stage21_architecture/stage21_xai1b_row_mass.npy": {
+      "bytes": 262272,
+      "remote_byte_identity": true,
+      "sha256": "dc0ca753bf304221af1f554058532c45684fbc166d1feddcb11125776f24eb81"
+    },
+    "results/stage21_architecture/stage21_xai1b_vit_execution_receipt.json": {
+      "bytes": 1700,
+      "remote_byte_identity": true,
+      "sha256": "96b8a4ed115bf02e5f16fa04079092801766d46299375bd5feeb5abe36b064a6"
+    }
+  },
+  "attribution": {
+    "baseline": "ALL_ZERO_NORMALIZED_IMAGE",
+    "integration_rule": "RIEMANN_MIDPOINT",
+    "method": "INTEGRATED_GRADIENTS",
+    "steps": 64,
+    "target": "ATTACK_LOGIT_PRE_SIGMOID",
+    "validity_mask": "FIXED_ORIGINAL_FLOW_MASK"
+  },
+  "checkpoint": "Stage21-XAI1B-REMOTE-SEAL",
+  "cohort": {
+    "flows": 512,
+    "indices_sha256": "ba29cf4611db82fa3c72b84f99ee537425c61c087c96ba96f02091f1156f83d8",
+    "true_attack": 256,
+    "true_benign": 256
+  },
+  "corrected_execution_harness_sha256": "c9fcfa53c24009da51843a93da9bb0f9e4216c03856bf68cebbaf34ce461dfa2",
+  "model_execution": {
+    "CNN": {
+      "IG_steps_per_flow": 64,
+      "artifacts": {
+        "byte": {
+          "bytes": 524416,
+          "sha256": "d2c5d64eb26ffdc341a2006db90e1e79258960c62d0ba901ad747658fb32dacb"
+        },
+        "heatmap": {
+          "bytes": 262272,
+          "sha256": "580dbef872b731cffbaf203f68c7f80c5cc24da44896d6342ae326db74d14ca7"
+        },
+        "patch": {
+          "bytes": 262272,
+          "sha256": "59be129ff64756f0f4b59347f3091a2493567eb6881ae005a0f41fad261e4283"
+        },
+        "row": {
+          "bytes": 131200,
+          "sha256": "5d2cf38c3f3a1af394804750961c84f542de22800b45775d6f9c2d6bd45be09c"
+        },
+        "summary": {
+          "bytes": 45184,
+          "sha256": "d304c4beddebb981a2f02a605ab33da41bbbd54fc42ea2433f52a3b96a07b5a0"
+        }
+      },
+      "baseline": "ALL_ZERO_NORMALIZED_IMAGE",
+      "batched_forward_invocations": 640,
+      "cohort_flows": 512,
+      "elapsed_seconds_operational": 18.147273302078247,
+      "endpoint_flow_evaluations": 1024,
+      "endpoint_probability_gate": {
+        "absolute_tolerance": 1e-05,
+        "maximum_absolute_difference": 1.1324882507324219e-06,
+        "mean_absolute_difference": 8.593951901687892e-09,
+        "passed": true
+      },
+      "execution_script_sha256": "c9fcfa53c24009da51843a93da9bb0f9e4216c03856bf68cebbaf34ce461dfa2",
+      "gradient_autograd_calls": 512,
+      "gradient_flow_alpha_evaluations": 32768,
+      "harness_commit": "9c429ff250f19918a19cddc0091c10676be4486d",
+      "integration_rule": "RIEMANN_MIDPOINT",
+      "model": "CNN",
+      "scientific_boundary": {
+        "alternative_baseline": false,
+        "attribution_method_search": false,
+        "model_retraining": false,
+        "optimizer_steps": 0,
+        "threshold_reselection": false,
+        "threshold_search": false
+      },
+      "status": "MODEL_LOCKED_IG_COMPLETE",
+      "validity_mask": "FIXED_ORIGINAL_MASK"
+    },
+    "ViT": {
+      "IG_steps_per_flow": 64,
+      "artifacts": {
+        "byte": {
+          "bytes": 524416,
+          "sha256": "ccbcaad63d2de89995cba871cb9b1e821fd3abaf3e39851600d8d330ab78b74d"
+        },
+        "heatmap": {
+          "bytes": 262272,
+          "sha256": "05d84b88a7cedd1eeffb12d4609def56bd6696e7b0202a82f4560842fae8ff99"
+        },
+        "patch": {
+          "bytes": 262272,
+          "sha256": "5c4109fd57f5e204ed457cbcbedc45dbf023f34adb3c299d5e0cbcafb598aadf"
+        },
+        "row": {
+          "bytes": 131200,
+          "sha256": "e9067b68874bb88dc052c777a8cdf5be94a1652bef147ec566f15310ab691349"
+        },
+        "summary": {
+          "bytes": 45184,
+          "sha256": "ba0cc98d6613fee6e1762080fd84579cad0e25e8e86778c83f7800b018764055"
+        }
+      },
+      "baseline": "ALL_ZERO_NORMALIZED_IMAGE",
+      "batched_forward_invocations": 640,
+      "cohort_flows": 512,
+      "elapsed_seconds_operational": 5.353859901428223,
+      "endpoint_flow_evaluations": 1024,
+      "endpoint_probability_gate": {
+        "absolute_tolerance": 1e-05,
+        "maximum_absolute_difference": 1.7881393432617188e-07,
+        "mean_absolute_difference": 2.7086759502026325e-09,
+        "passed": true
+      },
+      "execution_script_sha256": "c9fcfa53c24009da51843a93da9bb0f9e4216c03856bf68cebbaf34ce461dfa2",
+      "gradient_autograd_calls": 512,
+      "gradient_flow_alpha_evaluations": 32768,
+      "harness_commit": "9c429ff250f19918a19cddc0091c10676be4486d",
+      "integration_rule": "RIEMANN_MIDPOINT",
+      "model": "ViT",
+      "scientific_boundary": {
+        "alternative_baseline": false,
+        "attribution_method_search": false,
+        "model_retraining": false,
+        "optimizer_steps": 0,
+        "threshold_reselection": false,
+        "threshold_search": false
+      },
+      "status": "MODEL_LOCKED_IG_COMPLETE",
+      "validity_mask": "FIXED_ORIGINAL_MASK"
+    }
+  },
+  "next": "STAGE21_XAI2_AGGREGATE_FIGURES_FROM_FROZEN_XAI1B_ARTIFACTS_ONLY",
+  "original_execution_harness_commit": "46c12a9e26cc2d51370ec209aa41ad89e7dcbdc0",
+  "pre_attribution_preflight_commit": "b26af9b8c54fda46f8b10c796d8bedbe8fca362f",
+  "provenance_correction_commit": "9c429ff250f19918a19cddc0091c10676be4486d",
+  "science_commit": "e524e5f3bbd3e2384dad999351ebe5795a0e6c0d",
+  "scientific_boundary": {
+    "Friday_role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+    "alternative_baseline": false,
+    "architecture_result_changed": false,
+    "architecture_search": false,
+    "attribution_method_search": false,
+    "causal_claim": false,
+    "cohort_changed": false,
+    "general_ViT_superiority_claim": false,
+    "independent_confirmation_claim": false,
+    "model_retraining": false,
+    "optimizer_steps": 0,
+    "post_result_descriptive_only": true,
+    "threshold_reselection": false,
+    "threshold_search": false
+  },
+  "status": "STAGE21_POSTRESULT_INTEGRATED_GRADIENTS_DURABLE_AND_FROZEN"
+}

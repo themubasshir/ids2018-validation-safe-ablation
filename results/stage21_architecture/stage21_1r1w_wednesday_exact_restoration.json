@@ -1,0 +1,142 @@
+{
+  "checkpoint": "Stage21-1R1-WFULL-RECOVERY",
+  "compact_corpus": {
+    "atomic_staging_to_final": true,
+    "directory": "/kaggle/working/stage20_compact_corpus/Wednesday",
+    "encoded_authentic_bytes": 13824937,
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 13824937,
+        "sha256": "b4ba9a059a2df6a1b85546b4d92c1fdf5b80feb61de6c3e56eae458c628f8889"
+      },
+      "flow_offsets.npy": {
+        "bytes": 103744,
+        "sha256": "9ef83af5b03f9284beed50cbe2587bbbb8cac1ac524aa5505e44d262a8d8cf0a"
+      },
+      "labels.npy": {
+        "bytes": 13079,
+        "sha256": "9d10b0264487ab4689a77f0101f22496786a7eb453236c2fb8bfe53d33f9ca7c"
+      },
+      "packet_lengths.npy": {
+        "bytes": 1657856,
+        "sha256": "9bba88e143d4c5c5388c450b1f7d7c9aa1cd83592c4c6e1a153651e70131d2ab"
+      }
+    },
+    "first128_encoder_loader_roundtrip": true,
+    "flow_count": 12951
+  },
+  "exact_join": {
+    "fuzzy": false,
+    "index_specific_exclusions": [],
+    "label_guided_repair": false,
+    "matched_binary_counts": {
+      "0": 8657,
+      "1": 4294
+    },
+    "matched_export_reasons": {
+      "EOF_CURRENT": 3062,
+      "FIN": 7017,
+      "FLOW_TIMEOUT": 2872
+    },
+    "matched_flows": 12951,
+    "matching": "EXACT_ONLY",
+    "nearest": false,
+    "tolerance": false,
+    "unmatched_reconstructed_flows": 679438,
+    "unused_published_occurrences": 679752
+  },
+  "frozen_code": {
+    "encoder": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/scripts/stage20_packet_image_encoder.py",
+      "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222"
+    },
+    "loader": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/scripts/stage20_compact_corpus.py",
+      "sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0"
+    }
+  },
+  "full_reconstruction": {
+    "eof_singleton_discarded": 44799,
+    "export_reasons": {
+      "EOF_CURRENT": 177389,
+      "FIN": 391925,
+      "FLOW_TIMEOUT": 123075
+    },
+    "exportable_flow_protocol_counts": {
+      "0": 96,
+      "17": 202851,
+      "6": 489442
+    },
+    "exportable_flows": 692389,
+    "max_active_flows": 222188,
+    "parser_counts": {
+      "IPv4_OTHER_PROTOCOL_0": 600,
+      "IPv4_TCP": 12943316,
+      "IPv4_UDP": 761639,
+      "NON_IPV4": 83323
+    },
+    "raw_packets": 13788878,
+    "retained_packet_protocol_counts": {
+      "0": 590,
+      "17": 761611,
+      "6": 12896496
+    },
+    "retained_packets": 13658697,
+    "timeout_singleton_discarded": 2059,
+    "valid_ipv4_packets": 13705555
+  },
+  "java_hashmap_eof_order": {
+    "derived_capacity": 524288,
+    "final_active_entries": 222188,
+    "max_final_bucket_occupancy": 7,
+    "order_key": [
+      "java_bucket",
+      "flow_start_us",
+      "surviving_key_insertion_sequence"
+    ]
+  },
+  "published_label_multiset": {
+    "ambiguous_binary_signatures": 0,
+    "binary_counts": {
+      "0": 440031,
+      "1": 252672
+    },
+    "duplicate_occurrences": 18,
+    "rows": 692703,
+    "unique_signatures": 692685
+  },
+  "repository": {
+    "clean_before_run": true,
+    "head": "20ad127e1cf4fd43804160de74386abbe1f0e04d",
+    "wednesday_manifest_git_blob": "cc3a5e56cfc28a6a70829963ee177e490f9787d0"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Monday_corpus_preserved": true,
+    "Thursday_accessed": false,
+    "Tuesday_corpus_preserved": true,
+    "Wednesday_corpus_complete": true,
+    "archive_uploaded": false,
+    "join_rule_changed": false,
+    "model_forward": false,
+    "model_training": false,
+    "new_forensic_exclusions": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "source_deleted": false
+  },
+  "source_identity": {
+    "labels": {
+      "bytes": 76512727,
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "rows": 692703,
+      "sha256": "d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140"
+    },
+    "pcap": {
+      "bytes": 13420789612,
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Wednesday-workingHours.pcap",
+      "sha256": "cd2674db7559a53f24bc03be3239b315700174ccaef72d10f5edc4c1a08f6186"
+    }
+  },
+  "status": "PASS"
+}

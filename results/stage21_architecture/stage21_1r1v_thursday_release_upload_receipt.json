@@ -1,0 +1,62 @@
+{
+  "checkpoint": "Stage21-1R1-V-GITHUB-RELEASE-DURABILITY",
+  "compact_payloads": {
+    "encoded_bytes.bin": {
+      "bytes": 7586531,
+      "sha256": "2593b328839ecf28d901242b6850474fa028484656c7235ff78ef2b437c01ca0"
+    },
+    "flow_offsets.npy": {
+      "bytes": 65712,
+      "sha256": "137d38b8bfdcd22986e954f7b39ae4383da33b6194998ebb8fc8b63b3259e522"
+    },
+    "labels.npy": {
+      "bytes": 8325,
+      "sha256": "cb1c6b3bf716ed9244029b5866ac3d0ca8da8b9bc152f8e89d5b1d6c78e5ec6e"
+    },
+    "packet_lengths.npy": {
+      "bytes": 1049344,
+      "sha256": "db195558d0a12f74e8d4ba8c1ccd7ee4b322993b42575793761c6991fdb1f21c"
+    }
+  },
+  "day": "Thursday",
+  "github_release": {
+    "archive_asset": {
+      "asset_id": 516622576,
+      "browser_download_url": "https://github.com/themubasshir/ids2018-validation-safe-ablation/releases/download/stage20-compact-corpora-v1/stage20-Thursday-compact-corpus-v1.tar",
+      "byte_identity_verified": true,
+      "bytes": 8714240,
+      "local_sha256": "63cfb6d9dc4aa22317e4f847a43e6d1c72490ee8a3aab50e2e47ce6a437bdd4f",
+      "name": "stage20-Thursday-compact-corpus-v1.tar",
+      "remote_stream_bytes": 8714240,
+      "remote_stream_sha256": "63cfb6d9dc4aa22317e4f847a43e6d1c72490ee8a3aab50e2e47ce6a437bdd4f"
+    },
+    "release_id": 371092195,
+    "sha256_asset": {
+      "asset_id": 516622604,
+      "byte_identity_verified": true,
+      "bytes": 105,
+      "local_sha256": "07cc157475117f2e68c03175fe9740b4ea038fe062fb3121f46b77a030717401",
+      "name": "stage20-Thursday-compact-corpus-v1.tar.sha256",
+      "remote_stream_bytes": 105,
+      "remote_stream_sha256": "07cc157475117f2e68c03175fe9740b4ea038fe062fb3121f46b77a030717401"
+    },
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "PCAP_read_during_seal": false,
+    "join_rule_changed": false,
+    "label_source_read_during_seal": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "training": false
+  },
+  "seal_commit": "9969832d0792c8dc118beb2bc108dd0834651b43",
+  "source_receipts": {
+    "exact_restoration_sha256": "3f0404832eec581b45452fc0716110c32ca02e2530bac7c21b71fd4755799767",
+    "hybrid_equivalence_sha256": "910533898258bc8295635f92eadc781055efa51b97708fc3ab6d54b16c9add7b",
+    "source_reacquisition_sha256": "18e4114ebe72f7790ee1767c60e43059732082110145adb72d5cf2d9b400d7a1"
+  },
+  "status": "THURSDAY_COMPACT_CORPUS_DURABLE_ON_GITHUB_RELEASE_AND_REMOTE_SHA_VERIFIED"
+}

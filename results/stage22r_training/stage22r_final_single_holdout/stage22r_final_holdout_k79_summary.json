@@ -1,0 +1,84 @@
+{
+  "clean_holdout": {
+    "attack": 375345,
+    "attack_prevalence": 0.2731504155711274,
+    "benign": 998788,
+    "rows": 1374133
+  },
+  "development_priority": {
+    "candidate_digest_groups": 0,
+    "candidate_digest_match_rows": 0,
+    "digest_candidate_rows_with_unequal_exact_bytes": 0,
+    "exact_overlap_groups": 0,
+    "exact_overlap_rows_excluded": 0
+  },
+  "initial_holdout": {
+    "attack": 379254,
+    "benign": 1000421,
+    "rows": 1379675
+  },
+  "model_input": {
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "feature_count": 70,
+    "negative_infinity_to_nan": 0,
+    "output_nan_cells": 13922,
+    "positive_infinity_to_nan": 9530,
+    "scaling": "NONE"
+  },
+  "opening": {
+    "consumed": 1,
+    "maximum_authorized": 1,
+    "raw_files_permanently_closed_after_materialization": true,
+    "raw_files_read_once": [
+      "03-01-2018.csv",
+      "03-02-2018.csv"
+    ]
+  },
+  "per_day": [
+    {
+      "day_id": 8,
+      "effective_rows": 331100,
+      "embedded_header_rows": 25,
+      "excluded_conflicting_label": 10,
+      "excluded_development_overlap": 0,
+      "excluded_same_label_duplicate": 73,
+      "file": "03-01-2018.csv",
+      "initial_attack": 93063,
+      "initial_benign": 238037,
+      "physical_rows": 331125,
+      "retained_attack": 93035,
+      "retained_benign": 237982,
+      "retained_rows": 331017,
+      "year_1970_date_corrections": 0
+    },
+    {
+      "day_id": 9,
+      "effective_rows": 1048575,
+      "embedded_header_rows": 0,
+      "excluded_conflicting_label": 0,
+      "excluded_development_overlap": 0,
+      "excluded_same_label_duplicate": 5459,
+      "file": "03-02-2018.csv",
+      "initial_attack": 286191,
+      "initial_benign": 762384,
+      "physical_rows": 1048575,
+      "retained_attack": 282310,
+      "retained_benign": 760806,
+      "retained_rows": 1043116,
+      "year_1970_date_corrections": 0
+    }
+  ],
+  "stage": "Stage22R-FINAL",
+  "status": "FINAL_HOLDOUT_K79_CLEANING_COMPLETE",
+  "within_holdout": {
+    "conflicting_label_exact_groups": 5,
+    "conflicting_rows_excluded": 10,
+    "digest_groups_split_by_exact_bytes": 0,
+    "repeated_digest_groups": 5238,
+    "repeated_exact_k79_groups": 5238,
+    "rows_in_digest_collision_groups": 0,
+    "same_label_duplicate_rows_excluded": 5532,
+    "same_label_exact_groups": 5233
+  }
+}

@@ -1,0 +1,3 @@
+day_id,file,physical_rows,embedded_header_rows,effective_rows,initial_benign,initial_attack,year_1970_date_corrections,excluded_development_overlap,excluded_conflicting_label,excluded_same_label_duplicate,retained_rows,retained_benign,retained_attack
+8,03-01-2018.csv,331125,25,331100,238037,93063,0,0,10,73,331017,237982,93035
+9,03-02-2018.csv,1048575,0,1048575,762384,286191,0,0,0,5459,1043116,760806,282310

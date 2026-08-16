@@ -1,0 +1,56 @@
+{
+  "artifacts": {
+    "STAGE22R_0I_KAGGLE_FAITHFUL_PROTOCOL.md": {
+      "bytes": 3230,
+      "sha256": "2d9abc3ea64c36c27d23373d6ca96728a3879d45a7e4c509906a5e764b5c3e14"
+    },
+    "stage22r_0i_kaggle_faithful_protocol_lock.json": {
+      "bytes": 16400,
+      "sha256": "2d57ba826bd441bdbfe197aa7b0b5da91291d4879215341fe3ccdbc72a66fdf0"
+    }
+  },
+  "inherited_artifacts": {
+    "stage15_feature_configuration": {
+      "bytes": 2814,
+      "path": "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+      "sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872"
+    },
+    "stage16_final_classical_strategy": {
+      "bytes": 6417,
+      "path": "results/stage16_classical_benchmark_checkpoint/stage16_5c_final_classical_strategy_lock.json",
+      "sha256": "1c119dc730f29e9d673eb1ef7d8bc714a82822a3a12c3d7212030e2050d23256"
+    },
+    "stage19_common_numeric_schema": {
+      "bytes": 5993,
+      "path": "results/stage19_mtemporal_checkpoint/stage19_1_development_source_audit/stage19_1_common_numeric_feature_schema.csv",
+      "sha256": "6b28cfb3e3af13e782b9e8c8d28126bcfca38b24659edc508f69c090faf69ea8"
+    },
+    "stage19_corrected_chronology": {
+      "bytes": 2027,
+      "path": "results/stage19_mtemporal_checkpoint/stage19_1c_corrected_chronology_audit/stage19_1c_corrected_audit_result.json",
+      "sha256": "4bd62e38cd394ac37f0e874113aebec6aa52fbb70af5201429b1b8206e72cbba"
+    },
+    "stage19_protocol": {
+      "bytes": 9820,
+      "path": "results/stage19_mtemporal_checkpoint/stage19_0_mtemporal_protocol_lock.json",
+      "sha256": "bc07366ed6e2c90625203838dc30b822d2efc1275f11c4772fed7b12202f6b45"
+    },
+    "stage20_1e3_threshold_semantics": {
+      "bytes": 3661,
+      "path": "results/stage20_1e_training/stage20_1e3_validation_execution_semantics_lock.json",
+      "sha256": "1cde2759aa0e99c1c399c16a2ee01cbdc732b07c930d0ecf9d83a98699694120"
+    }
+  },
+  "parent_commit": "5f8062935f67ca509a97101d126c0b6f3db39268",
+  "scientific_access": {
+    "dataset_rows_read": 0,
+    "final_holdout_openings": 0,
+    "inference": 0,
+    "labels_read": 0,
+    "models_fit": 0,
+    "predictors_read": 0,
+    "threshold_selection": 0
+  },
+  "stage": "Stage22R-0I",
+  "tag": "stage22r-0i-kaggle-faithful-protocol-v1"
+}

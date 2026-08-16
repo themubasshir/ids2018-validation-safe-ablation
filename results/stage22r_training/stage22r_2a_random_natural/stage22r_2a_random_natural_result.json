@@ -1,0 +1,297 @@
+{
+  "artifacts": {
+    "hashes_before_result_json": {
+      "random_natural_lightgbm_model.txt": "9a92f4b8cd26738a470a7ff6fb72f51422a803e10b36bb32ac4bfc91373e6e50",
+      "random_natural_validation_ensemble_probabilities.npz": "9dc64ccdb6580dad727668ff3e511e0a8572cbb1de49b9ffe8999b0c3d190394",
+      "random_natural_validation_threshold_grid.csv": "4ad606b9edcb5a04c373bc4389632640d8d2aa8997a3a0028a2c8e6cec161ead",
+      "random_natural_xgboost_model.json": "ac9e630c8a479f073953b7f05eccf8bc94d24eaf0d8bc6bf77f5954979235b4e"
+    }
+  },
+  "cell": "RANDOM_NATURAL",
+  "data": {
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "feature_count": 70,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "scaling": "NONE",
+    "train": {
+      "attack": 1577839,
+      "benign": 9952083,
+      "rows": 11529922
+    },
+    "validation": {
+      "attack": 394460,
+      "benign": 2488021,
+      "rows": 2882481
+    }
+  },
+  "execution_history": {
+    "prior_completed_lightgbm_fits": 0,
+    "prior_completed_xgboost_fits": 0,
+    "prior_lightgbm_gpu_attempt": "FAILED_AND_FROZEN_IN_STAGE22R_2A_EX1",
+    "this_cell_completed_lightgbm_fits": 1,
+    "this_cell_completed_xgboost_fits": 1,
+    "threshold_selection_completed": true,
+    "validation_probability_vectors_frozen": 1
+  },
+  "final_holdout": {
+    "03-01_opened": false,
+    "03-02_opened": false,
+    "labels_read": 0,
+    "maximum_authorized_openings": 1,
+    "openings_consumed": 0,
+    "predictors_read": 0,
+    "rows_read": 0
+  },
+  "frozen_inputs": {
+    "random_validation_membership": {
+      "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/random_validation.packbits",
+      "sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad"
+    },
+    "stage20_1e3_threshold_lock": {
+      "path": "results/stage20_1e_training/stage20_1e3_validation_execution_semantics_lock.json",
+      "sha256": "1cde2759aa0e99c1c399c16a2ee01cbdc732b07c930d0ecf9d83a98699694120"
+    },
+    "stage22r_0i_protocol": {
+      "path": "results/stage22r_protocol_recovery/stage22r_0i_kaggle_faithful_protocol_amendment/stage22r_0i_kaggle_faithful_protocol_lock.json",
+      "sha256": "2d57ba826bd441bdbfe197aa7b0b5da91291d4879215341fe3ccdbc72a66fdf0"
+    },
+    "stage22r_1b1_membership_summary": {
+      "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/stage22r_1b1_membership_summary.json",
+      "sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d"
+    },
+    "stage22r_1c_model_input_manifest": {
+      "path": "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_development_model_input_manifest.json",
+      "sha256": "05fe6226afd37c3ab434140e1164643eecc7abc75c295a2d6fb0280d4f42127e"
+    },
+    "stage22r_2a_ex1_backend_amendment": {
+      "path": "results/stage22r_protocol_recovery/stage22r_2a_ex1_lightgbm_backend_amendment/stage22r_2a_ex1_lightgbm_backend_amendment.json",
+      "sha256": "1fe97479e4af21045fdae585c405f6e8d5b1a994ad8f6eb05dac19164d428ea3"
+    }
+  },
+  "models": {
+    "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "lightgbm": {
+      "algorithmic_hyperparameters_changed": false,
+      "backend_amendment": "device_type GPU -> CPU ONLY",
+      "completed": true,
+      "configuration": "LGBM_11",
+      "executed_parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "cpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      },
+      "fit_seconds": 421.24999809265137,
+      "frozen_original_parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "gpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      },
+      "library_version": "4.6.0",
+      "trees": 400
+    },
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "xgboost": {
+      "backend": "cuda",
+      "boosted_rounds": 400,
+      "completed": true,
+      "configuration": "XGB_11",
+      "fit_seconds": 110.77224493026733,
+      "library_version": "3.2.0",
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      },
+      "parameters_changed": false
+    }
+  },
+  "next_authorized_step": "Stage22R-2B \u2014 RANDOM_REBALANCED using the same Stage22R-2A-EX1 backend amendment and frozen Stage20-1E3 threshold semantics. Final holdout remains closed.",
+  "operating_points": {
+    "balanced": {
+      "accuracy": 0.9956568664286078,
+      "f1": 0.983881786895567,
+      "f2": 0.974680102179555,
+      "fn": 12370,
+      "fp": 149,
+      "fpr": 5.98869543303694e-05,
+      "precision": 0.9996101915293835,
+      "recall": 0.968640673325559,
+      "threshold": 0.46,
+      "threshold_float32_runtime": 0.46000000834465027,
+      "threshold_integer_percent": 46,
+      "tn": 2487872,
+      "tp": 382090
+    },
+    "security": {
+      "result": {
+        "accuracy": 0.9920221503628298,
+        "f1": 0.971249465522113,
+        "f2": 0.9792756851715336,
+        "fn": 6035,
+        "fp": 16961,
+        "fpr": 0.006817064646962385,
+        "precision": 0.9581608639666885,
+        "recall": 0.9847006033564873,
+        "threshold": 0.1,
+        "threshold_float32_runtime": 0.10000000149011612,
+        "threshold_integer_percent": 10,
+        "tn": 2471060,
+        "tp": 388425
+      },
+      "status": "AVAILABLE"
+    },
+    "standard": {
+      "accuracy": 0.9956537441183481,
+      "f1": 0.983867395346681,
+      "f2": 0.9745635589588274,
+      "fn": 12442,
+      "fp": 86,
+      "fpr": 3.456562464705885e-05,
+      "precision": 0.9997749303854448,
+      "recall": 0.9684581453125792,
+      "threshold": 0.5,
+      "threshold_float32_runtime": 0.5,
+      "threshold_integer_percent": 50,
+      "tn": 2487935,
+      "tp": 382018
+    }
+  },
+  "parent_commit": "595d2b7145c41bba8166de0952ba25dbc14632d7",
+  "scientific_design": {
+    "prevalence": "NATURAL",
+    "split": "RANDOM",
+    "train_resampling": "NONE",
+    "validation_resampling": "NONE"
+  },
+  "stage": "Stage22R-2A",
+  "status": "RANDOM_NATURAL_VALIDATION_RESULT_FROZEN",
+  "threshold_selection": {
+    "balanced": "MAX_F1; TIES LOWER_FPR, HIGHER_RECALL, CLOSER_TO_0_50, LOWER_THRESHOLD",
+    "grid_integer_percent": [
+      5,
+      95
+    ],
+    "grid_points": 91,
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_THRESHOLD",
+    "security": "FPR<=0.05 EXACT; MAX_F2; TIES LOWER_FPR, HIGHER_RECALL, LOWER_THRESHOLD; NO_RELAXATION",
+    "standard": "FIXED_0_50"
+  },
+  "validation_probability": {
+    "component_combination_dtype": "float64",
+    "ensemble_storage_dtype": "float32",
+    "pr_auc": 0.9955900418992819,
+    "roc_auc": 0.9986245647735994,
+    "rows": 2882481,
+    "rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST"
+  }
+}

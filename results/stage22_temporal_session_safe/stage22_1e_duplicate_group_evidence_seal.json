@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-08-16T16:04:08+00:00",
+  "duplicate_group_summary": {
+    "path": "results/stage22_temporal_session_safe/stage22_1e_70_feature_duplicate_group_summary.json",
+    "sha256": "590989f18525ed0b8f4450c616c75b85c04d6bf1ce3a4388b7ee9011bda26b7d"
+  },
+  "exact_duplicate_group_mapping": {
+    "distinct_groups": 240546,
+    "path": "results/stage22_temporal_session_safe/stage22_1e_70_feature_duplicate_groups.parquet",
+    "rows": 300928,
+    "sha256": "44b6ec8393998e6c843e8943e6a12a0940a183c6e6a9eed2de2bb1274f73fc08"
+  },
+  "flagship": {
+    "rows": 300928,
+    "sha256": "cca1121da5542ef58029acbd4ceafb741734f9c38b815f9ce2625fe2a4479a7d"
+  },
+  "frozen_70_feature_configuration": {
+    "feature_count": 70,
+    "path": "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+    "sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872"
+  },
+  "governance": {
+    "duplicate_exclusions_applied": false,
+    "final_labels_opened": false,
+    "model_outcomes_opened": false,
+    "roles_assigned": false
+  },
+  "scientific_identity": {
+    "group_membership_established_by": "COMPLETE_EXACT_70_FEATURE_FLOAT64_VECTOR_EQUALITY",
+    "label_part_of_group_identity": false,
+    "pandas_64bit_hash_role": "ACCELERATOR_ONLY",
+    "provenance_part_of_group_identity": false,
+    "sha256_vector_digest_role": "AUDIT_IDENTITY_ONLY"
+  },
+  "scientific_parent_commit": "e8ba6e6f990e187cca2d2f7a428c6186a9c115bc",
+  "stage": "STAGE22-1E",
+  "stage22_1d_provenance_evidence_seal": {
+    "path": "results/stage22_temporal_session_safe/stage22_1d_provenance_evidence_seal.json",
+    "sha256": "6d2f40d1915e131ceffca723848f5270a9ee8887acb13fe035a0d8c86d27b8b8",
+    "tag": "stage22-1d-provenance-evidence-v1"
+  },
+  "status": "SEALED_BEFORE_ROLE_ASSIGNMENT_AND_BEFORE_DUPLICATE_EXCLUSION",
+  "title": "Stage22 70-Feature Exact Duplicate Group Evidence Seal"
+}

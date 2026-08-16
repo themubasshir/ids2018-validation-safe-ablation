@@ -1,0 +1,305 @@
+{
+  "anchors": {
+    "flagship_dataset": {
+      "path_used": "/kaggle/input/datasets/jmmubasshirrahman/ai-ids-research-kaggle/data/processed/merged_balanced_ids2018_safe.csv",
+      "rows": 300928,
+      "sha256": "cca1121da5542ef58029acbd4ceafb741734f9c38b815f9ce2625fe2a4479a7d"
+    },
+    "sanitized_partition": {
+      "path": "results/stage22_temporal_session_safe/stage22_1g_sanitized_chronological_partition.parquet",
+      "sha256": "d1c4b3536ab317b11e9288e0f2eb9b4883635eddb06f77e8e4cc9c4ae964cc9c"
+    },
+    "stage22_2a_recipe_lock": {
+      "path": "results/stage22_temporal_session_safe/stage22_2a_inherited_model_execution_recipe_lock.json",
+      "sha256": "6c0a733d75735fe10c5ed90621f79157577c055cdab14bc981e6f161a1749a0a"
+    }
+  },
+  "cache": {
+    "files": {
+      "X_development_raw_float32": {
+        "bytes": 43910008,
+        "dtype": "float32",
+        "filename": "X_development_raw_float32.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/X_development_raw_float32.npy",
+        "sha256": "49ec0992f2dbd7248e810b341f6de9c74031434841a721cc0a374414f87f789a",
+        "shape": [
+          156821,
+          70
+        ]
+      },
+      "X_development_scaled_float32": {
+        "bytes": 43910008,
+        "dtype": "float32",
+        "filename": "X_development_scaled_float32.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/X_development_scaled_float32.npy",
+        "sha256": "afa37c433fd099e9c532d3860e2c2238843a58c866274202b0b0c23704b0a3fb",
+        "shape": [
+          156821,
+          70
+        ]
+      },
+      "X_validation_raw_float32": {
+        "bytes": 4268728,
+        "dtype": "float32",
+        "filename": "X_validation_raw_float32.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/X_validation_raw_float32.npy",
+        "sha256": "60bef1bb8b28d6f4ac2996cdc172763de274512dc0d242c12bcfb719ae9aeee0",
+        "shape": [
+          15245,
+          70
+        ]
+      },
+      "X_validation_scaled_float32": {
+        "bytes": 4268728,
+        "dtype": "float32",
+        "filename": "X_validation_scaled_float32.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/X_validation_scaled_float32.npy",
+        "sha256": "e240be68ba3fcca3fdd23d192fe8f1510ed54cb2bafb97b6cba02305ca18e71b",
+        "shape": [
+          15245,
+          70
+        ]
+      },
+      "development_row_ids": {
+        "bytes": 1254696,
+        "dtype": "int64",
+        "filename": "development_row_ids_int64.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/development_row_ids_int64.npy",
+        "sha256": "e714e7a0a817b14dfe2e9049a89829cc85cfb704e9c6c1f81cc10adc9f29e3ff",
+        "shape": [
+          156821
+        ]
+      },
+      "validation_row_ids": {
+        "bytes": 122088,
+        "dtype": "int64",
+        "filename": "validation_row_ids_int64.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/validation_row_ids_int64.npy",
+        "sha256": "ff5746166ffdb42848b5d52aaf0502b6c2148977ecc969f818234bd8492a664e",
+        "shape": [
+          15245
+        ]
+      },
+      "y_development_int8": {
+        "bytes": 156949,
+        "dtype": "int8",
+        "filename": "y_development_int8.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/y_development_int8.npy",
+        "sha256": "a4e1269d2400d5b8b5803204465e4e296d762ec5b34ed8c95de1439bbe66b615",
+        "shape": [
+          156821
+        ]
+      },
+      "y_validation_int8": {
+        "bytes": 15373,
+        "dtype": "int8",
+        "filename": "y_validation_int8.npy",
+        "path": "/kaggle/working/stage22_model_cache/stage22_2b/y_validation_int8.npy",
+        "sha256": "a7c2acfdee6c4fcdffcce91aa6e846c60822dd28a2f0e70f99dfdc95b18da09b",
+        "shape": [
+          15245
+        ]
+      }
+    },
+    "location": "/kaggle/working/stage22_model_cache/stage22_2b",
+    "policy": "Model execution must consume these exact cache bytes or deterministically rematerialize and reproduce every sealed SHA256 before model fitting.",
+    "repository_tracked": false
+  },
+  "classical_preprocessing": {
+    "learned_preprocessing": false,
+    "representation": "RAW_FLOAT32_70_FEATURE_VECTOR",
+    "scaler": null
+  },
+  "created_utc": "2026-08-16T16:40:57.023688+00:00",
+  "features": {
+    "clipping": false,
+    "count": 70,
+    "imputation": false,
+    "infinity_policy": "replace +/-inf with NaN then HARD STOP",
+    "numeric_coercion": "pandas.to_numeric(errors='coerce')",
+    "order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ]
+  },
+  "final_test_governance": {
+    "binary_label_semantically_read": false,
+    "future_authorized_outcome_openings": 1,
+    "metrics_generated": false,
+    "outcome_openings_consumed": 0,
+    "predictors_semantically_read": false,
+    "probabilities_generated": false,
+    "remains_sealed": true
+  },
+  "model_execution": {
+    "authorization_condition": "DEVELOPMENT contains both classes and VALIDATION contains both classes required for inherited validation-PR-AUC checkpointing.",
+    "inference_performed": false,
+    "model_fit_performed": false,
+    "optimizer_step_performed": false,
+    "threshold_selection_performed": false,
+    "training_authorized_next": false,
+    "validation_model_metric_generated": false
+  },
+  "next_authorized_step": {
+    "allowed_if_authorized": [
+      "fit LGBM_11 on sealed DEVELOPMENT raw float32 cache",
+      "fit XGB_11 on sealed DEVELOPMENT raw float32 cache",
+      "train FT_BALANCED seeds 7,29,101,313,997 on sealed DEVELOPMENT scaled float32 cache",
+      "use sealed VALIDATION scaled cache only for inherited Transformer validation-PR-AUC scheduler/checkpoint/early stop",
+      "generate VALIDATION probabilities after/between frozen model training as required by the frozen recipe",
+      "seal trained model hashes and validation probability hashes"
+    ],
+    "forbidden": [
+      "read FINAL_TEST predictors",
+      "read FINAL_TEST binary_label",
+      "change model hyperparameters",
+      "change feature set",
+      "change role membership",
+      "refit scaler using validation",
+      "select threshold before frozen validation probabilities exist",
+      "compute final-test metrics"
+    ],
+    "name": "REPORT FROZEN CLASS-LIMITATION INFEASIBILITY",
+    "stage": "HARD_STOP_BEFORE_MODEL_TRAINING"
+  },
+  "row_membership": {
+    "day_or_role_reassignment": false,
+    "development": 156821,
+    "excluded": 59995,
+    "final_test_sealed": 68867,
+    "selected_semantic_rows": 172066,
+    "validation": 15245
+  },
+  "scientific_parent_commit": "f22fb0d931be6c3ca0e4314939d4b584a0161116",
+  "semantic_access": {
+    "Label_column_parsed": false,
+    "development_binary_label_parsed": true,
+    "development_predictors_parsed": true,
+    "final_outcome_openings_consumed": 0,
+    "final_test_binary_label_fields_parsed": 0,
+    "final_test_lines_decoded": 0,
+    "final_test_predictor_fields_parsed": 0,
+    "final_test_rows_traversed_as_opaque_bytes_for_physical_ordinal": 68867,
+    "final_test_semantic_access": false,
+    "validation_binary_label_parsed": true,
+    "validation_predictors_parsed": true
+  },
+  "stage": "STAGE22-2B",
+  "status": "SEALED_AFTER_NONFINAL_LABEL_OPENING_AND_PREPROCESSING_FIT_BEFORE_ANY_MODEL_FIT_OR_INFERENCE",
+  "target": {
+    "allowed_values": [
+      0,
+      1
+    ],
+    "development": {
+      "attack": 53769,
+      "attack_rate": 0.34286862091174014,
+      "benign": 103052,
+      "rows": 156821
+    },
+    "name": "binary_label",
+    "validation": {
+      "attack": 0,
+      "attack_rate": 0.0,
+      "benign": 15245,
+      "contains_both_classes": false,
+      "rows": 15245
+    }
+  },
+  "title": "Sanitized Development/Validation Model Input and Development-Only Scaler Seal",
+  "transformer_preprocessing": {
+    "canonical_stat_hashes": {
+      "mean_float64_le_sha256": "b379e81a9c2905cd18f90eba9918128981c8986671b46df55af8d09d955347c0",
+      "scale_float64_le_sha256": "6d313eaa24efc0a8fd56f03888abffbc02db67bc0b2fabc18a67147f107f60b6",
+      "var_float64_le_sha256": "6380db428723f944ffb14741fe3130412ecd789cc6b436fabf4bad5115e2dc35"
+    },
+    "final_test_rows_in_fit": 0,
+    "fit_population": "SANITIZED_STAGE22_DEVELOPMENT_ONLY",
+    "fit_rows": 156821,
+    "historical_stage15_scaler_reused": false,
+    "joblib": {
+      "path": "results/stage22_temporal_session_safe/stage22_2b_development_standard_scaler.joblib",
+      "sha256": "06509ba01d930f3bbbe2682c584812df5a8e1f68014532d81eaa7551d026c995"
+    },
+    "parameters": {
+      "copy": true,
+      "with_mean": true,
+      "with_std": true
+    },
+    "positive_class_weight": {
+      "formula": "development_benign / development_attack",
+      "statistics_source": "SANITIZED_STAGE22_DEVELOPMENT_LABELS_ONLY",
+      "value": 1.9165690267626327
+    },
+    "scaler": "StandardScaler",
+    "validation_rows_in_fit": 0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "checkpoint": "Stage21-1R1-V-STORAGE-RELEASE",
+  "day": "Thursday",
+  "durability_precondition": {
+    "archive_asset": "stage20-Thursday-compact-corpus-v1.tar",
+    "archive_bytes": 8714240,
+    "archive_digest": "sha256:63cfb6d9dc4aa22317e4f847a43e6d1c72490ee8a3aab50e2e47ce6a437bdd4f",
+    "exact_compact_corpus_preserved": true,
+    "github_release_id": 371092195,
+    "release_asset_live_gate": true,
+    "sha256_asset": "stage20-Thursday-compact-corpus-v1.tar.sha256",
+    "sha256_asset_digest": "sha256:07cc157475117f2e68c03175fe9740b4ea038fe062fb3121f46b77a030717401"
+  },
+  "logical_bytes_released": 8358790253,
+  "parent_commit": "3139d4f6cd92bfe7f00352992be2c13fbd9ce50a",
+  "preserved": {
+    "compact_directory": "/kaggle/working/stage20_compact_corpus/Thursday",
+    "flow_count": 8197,
+    "payloads": {
+      "encoded_bytes.bin": {
+        "bytes": 7586531,
+        "sha256": "2593b328839ecf28d901242b6850474fa028484656c7235ff78ef2b437c01ca0"
+      },
+      "flow_offsets.npy": {
+        "bytes": 65712,
+        "sha256": "137d38b8bfdcd22986e954f7b39ae4383da33b6194998ebb8fc8b63b3259e522"
+      },
+      "labels.npy": {
+        "bytes": 8325,
+        "sha256": "cb1c6b3bf716ed9244029b5866ac3d0ca8da8b9bc152f8e89d5b1d6c78e5ec6e"
+      },
+      "packet_lengths.npy": {
+        "bytes": 1049344,
+        "sha256": "db195558d0a12f74e8d4ba8c1ccd7ee4b322993b42575793761c6991fdb1f21c"
+      }
+    }
+  },
+  "released_storage": [
+    {
+      "bytes": 8302500180,
+      "category": "THURSDAY_RAW_PCAP",
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Thursday-WorkingHours.pcap",
+      "resolved_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/38f8b1bb276849bf1721f7c4de22bebfa7f59a74e52286d4c0a37edbb118fe01"
+    },
+    {
+      "bytes": 19674280,
+      "category": "THURSDAY_MORNING_LABEL_SOURCE",
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350"
+    },
+    {
+      "bytes": 27901448,
+      "category": "THURSDAY_AFTERNOON_LABEL_SOURCE",
+      "path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage21_hf_cache/datasets--bvsam--cic-ids-2017/blobs/5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7"
+    },
+    {
+      "bytes": 8714240,
+      "category": "LOCAL_TRANSPORT_ARCHIVE_ALREADY_REMOTE",
+      "path": "/kaggle/working/stage20-Thursday-compact-corpus-v1.tar",
+      "resolved_path": "/kaggle/working/stage20-Thursday-compact-corpus-v1.tar"
+    },
+    {
+      "bytes": 105,
+      "category": "LOCAL_TRANSPORT_CHECKSUM_ALREADY_REMOTE",
+      "path": "/kaggle/working/stage20-Thursday-compact-corpus-v1.tar.sha256",
+      "resolved_path": "/kaggle/working/stage20-Thursday-compact-corpus-v1.tar.sha256"
+    }
+  ],
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "join_rule_changed": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "training": false
+  },
+  "status": "OBSOLETE_THURSDAY_RESTORATION_STORAGE_RELEASED"
+}

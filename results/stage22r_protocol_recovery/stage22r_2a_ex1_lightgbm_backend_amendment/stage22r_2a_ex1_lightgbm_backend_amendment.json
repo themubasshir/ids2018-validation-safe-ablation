@@ -1,0 +1,98 @@
+{
+  "corrective_execution_rule": {
+    "cells": [
+      "RANDOM_NATURAL",
+      "RANDOM_REBALANCED",
+      "CHRONOLOGICAL_NATURAL",
+      "CHRONOLOGICAL_REBALANCED"
+    ],
+    "data_membership": "UNCHANGED",
+    "ensemble": {
+      "changes": "NONE",
+      "rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST"
+    },
+    "feature_set": "UNCHANGED_70_STAGE15_FEATURES",
+    "lightgbm": {
+      "algorithmic_hyperparameters": "UNCHANGED",
+      "colsample_bytree": 1.0,
+      "configuration": "LGBM_11",
+      "learning_rate": 0.06,
+      "max_depth": 12,
+      "min_child_samples": 20,
+      "n_estimators": 400,
+      "n_jobs": -1,
+      "num_leaves": 127,
+      "objective": "binary",
+      "only_change": {
+        "from": "gpu",
+        "parameter": "device_type",
+        "to": "cpu"
+      },
+      "random_state": 42,
+      "reg_alpha": 0.0,
+      "reg_lambda": 3.0,
+      "subsample": 0.9,
+      "subsample_freq": 1
+    },
+    "numeric_input_policy": "UNCHANGED_FLOAT64_INPUT",
+    "scientific_interpretation": "Implementation-backend correction forced by an upstream GPU learner defect; not a model-selection or performance-tuning decision.",
+    "scope": "ALL_FOUR_STAGE22R_EXPERIMENTAL_CELLS",
+    "threshold_semantics": {
+      "changes": "NONE",
+      "source": "Stage20-1E3"
+    },
+    "xgboost": {
+      "backend": "cuda",
+      "changes": "NONE",
+      "configuration": "XGB_11"
+    }
+  },
+  "execution_counters_after_failed_attempt": {
+    "completed_lightgbm_fits": 0,
+    "completed_xgboost_fits": 0,
+    "ensemble_probability_vectors": 0,
+    "lightgbm_fit_attempts": 1,
+    "threshold_selection": 0,
+    "validation_inference": 0
+  },
+  "final_holdout": {
+    "03-01_opened": false,
+    "03-02_opened": false,
+    "maximum_authorized_openings": 1,
+    "openings_consumed": 0
+  },
+  "next_authorized_step": "Re-execute Stage22R-2A RANDOM_NATURAL using the frozen LGBM_11 algorithmic parameters with device_type=cpu and frozen XGB_11 with device=cuda.",
+  "parent_commit": "d1d7b60c5aafdd9de090163f163e60af4b2516c9",
+  "stage": "Stage22R-2A-EX1",
+  "status": "LIGHTGBM_GPU_BACKEND_FAILURE_FROZEN_CPU_FALLBACK",
+  "timing": {
+    "frozen_before_any_stage22r_threshold_selected": true,
+    "frozen_before_any_stage22r_validation_probability_observed": true,
+    "frozen_before_any_successful_stage22r_cell": true,
+    "frozen_before_final_holdout_opening": true
+  },
+  "trigger": {
+    "cell": "RANDOM_NATURAL",
+    "completed_lightgbm_fit": false,
+    "component": "LIGHTGBM_LGBM_11",
+    "ensemble_probability_observed": false,
+    "failure": "Check failed: (best_split_info.left_count) > (0) at /__w/1/s/lightgbm-python/src/treelearner/serial_tree_learner.cpp, line 852",
+    "failure_location": "during LGBMClassifier.fit after development cache/membership/matrix assertions passed",
+    "lightgbm_model_serialized": false,
+    "lightgbm_validation_inference": false,
+    "requested_backend": "gpu",
+    "runtime_lightgbm_version": "4.6.0",
+    "stage": "Stage22R-2A",
+    "threshold_selection_performed": false,
+    "xgboost_training_started": false
+  },
+  "upstream_defect_evidence": {
+    "failure_class": "documented LightGBM GPU split-count failure best_split_info.left_count/right_count > 0",
+    "lightgbm_issue_ids": [
+      6469,
+      7063,
+      4946
+    ],
+    "reason_for_not_tuning": "Changing num_leaves, max_depth, max_bin, min_child_samples, sampling fractions or other algorithmic hyperparameters after observing an execution failure would alter the preregistered model."
+  }
+}

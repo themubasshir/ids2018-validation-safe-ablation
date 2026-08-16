@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "docs/STAGE21_2_FROZEN_VIT_TRAINING.md": {
+      "bytes": 3616,
+      "remote_byte_identity": true,
+      "sha256": "587540ce37d87132a388677819bd719f8c4b06d9803561b8199081c2bfe10b1a"
+    },
+    "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt": {
+      "bytes": 378999,
+      "remote_byte_identity": true,
+      "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8"
+    },
+    "results/stage21_architecture/stage21_2_exact_runtime_preflight.json": {
+      "bytes": 1885,
+      "remote_byte_identity": true,
+      "sha256": "b730b0b16175828ce299f1b5021048516e436c032532c55ccd68827141817d81"
+    },
+    "results/stage21_architecture/stage21_2_train_fast_executed.py": {
+      "bytes": 40688,
+      "remote_byte_identity": true,
+      "sha256": "fd56d6e89527e542618e37168a7df658540c324384bb22e722f9a82ef9eb7cf3"
+    },
+    "results/stage21_architecture/stage21_2_training_manifest.json": {
+      "bytes": 8781,
+      "remote_byte_identity": true,
+      "sha256": "e6e92f961052d1900539b5a5cefb90eaac335e73deecf6ae7af22fd0e25211b8"
+    },
+    "results/stage21_architecture/stage21_2_training_seal_manifest.json": {
+      "bytes": 4263,
+      "remote_byte_identity": true,
+      "sha256": "838e6df59531deb6ff0444f91d68dbfffe032b0522dbf59d795dfcd26b0e18f7"
+    }
+  },
+  "checkpoint": "Stage21-2-REMOTE-SEAL",
+  "epoch10": {
+    "canonical_tensor_state_sha256": "9da47df6cd5c821eef3d2c8a501296cd6070b835c719999f572f3dec2d560771",
+    "checkpoint_sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8",
+    "fixed_final_epoch": 10,
+    "optimizer_steps": 21320
+  },
+  "parent_commit": "de15ff09907c5a0fdecbd51cc457a28adb80bb3f",
+  "recovery_release": {
+    "all_10_epoch_assets_present": true,
+    "epoch10_asset_id": 516652935,
+    "epoch10_recovery_sha256": "38a3c75c4c46d3758f6a3a3c38190b68a23037947dff03fea5a7fac6162a4ff2",
+    "release_id": 371280600,
+    "tag": "stage21-2-training-recovery-v1"
+  },
+  "remote_branch": "origin/main",
+  "remote_branch_verified_at_seal": true,
+  "science_seal_commit": "57ce1530559fadae3126ef6adfb2ecc097c1a4c6",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_accessed_during_seal": false,
+    "model_forward_during_seal": false,
+    "optimizer_steps_during_seal": 0,
+    "threshold_selection": false,
+    "training_during_seal": false
+  },
+  "status": "STAGE21_2_EPOCH10_TRAINING_DURABLE_AND_REMOTE_BYTE_VERIFIED"
+}

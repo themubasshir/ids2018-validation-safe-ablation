@@ -1,0 +1,379 @@
+{
+  "capture_date_resolution": {
+    "filename_pattern": "NN-NN-YYYY.csv",
+    "forced_sibling_evidence": [
+      {
+        "basename": "02-14-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-15-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-16-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-20-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-21-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-22-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-23-2018.csv",
+        "forced_convention": "MDY"
+      },
+      {
+        "basename": "02-28-2018.csv",
+        "forced_convention": "MDY"
+      }
+    ],
+    "frozen_directory_convention": "MDY",
+    "human_readable_convention": "MM-DD-YYYY",
+    "label_information_used": false,
+    "performance_information_used": false,
+    "procedure": "Infer a directory-wide numeric date convention only from sibling filenames for which one of MDY/DMY is impossible because one numeric component exceeds 12. Require at least two such siblings, require all forced siblings to agree, then apply that convention to otherwise ambiguous sibling filenames in the same source directory.",
+    "resolved_previously_ambiguous_files": {
+      "03-01-2018.csv": "2018-03-01",
+      "03-02-2018.csv": "2018-03-02"
+    },
+    "unit": "ORIGINAL_SOURCE_CAPTURE_DAY"
+  },
+  "created_utc": "2026-08-16T15:47:35+00:00",
+  "exact_row_to_day_matching_algorithm": {
+    "hash_collision_policy": "Hash collision without complete 78-vector equality is rejected and counted as an accelerator collision.",
+    "matching_uses_labels": false,
+    "source_row_multiplicity_same_day": "Multiple exact source rows on the same capture day do not create provenance ambiguity because Stage22 provenance is capture-day level.",
+    "step_1": "Load the flagship using only the frozen 78 predictors. Do not parse Label or binary_label.",
+    "step_2": "Apply the frozen numeric representation procedure to all 300,928 flagship rows.",
+    "step_3": "For every candidate source file, stream only the same 78 predictors in bounded chunks. Do not request Label, binary_label, or other non-predictor columns.",
+    "step_4": "Apply the identical frozen numeric representation procedure to each source chunk.",
+    "step_5": "A deterministic 64-bit pandas row hash may be used ONLY as a lookup accelerator to avoid comparing every raw row with every flagship row.",
+    "step_6": "Every accelerator candidate MUST be confirmed by exact equality of the complete canonical 78-value float64 vector. A hash match alone NEVER establishes provenance.",
+    "step_7": "For each distinct exact flagship feature vector, collect the SET of source capture dates containing at least one exactly equal source row.",
+    "step_8": "Propagate that source-day set to every flagship row having that exact 78-value feature vector."
+  },
+  "flagship_analysis_universe": {
+    "basename": "merged_balanced_ids2018_safe.csv",
+    "no_new_rows": true,
+    "original_predictor_count": 78,
+    "row_identity": "ZERO_BASED_PHYSICAL_ROW_ORDINAL_IN_FLAGSHIP_CSV",
+    "rows": 300928,
+    "runtime_path": "/kaggle/input/datasets/jmmubasshirrahman/ai-ids-research-kaggle/data/processed/merged_balanced_ids2018_safe.csv",
+    "sha256": "cca1121da5542ef58029acbd4ceafb741734f9c38b815f9ce2625fe2a4479a7d",
+    "stage15_model_predictor_count": 70
+  },
+  "label_governance": {
+    "final_test_labels_must_remain_sealed": true,
+    "flagship_Label_column_parsed_during_stage22_1c": false,
+    "flagship_binary_label_column_parsed_during_stage22_1c": false,
+    "source_Label_column_parsed_during_stage22_1c": false,
+    "source_nonpredictor_columns_used_for_matching": false
+  },
+  "next_authorized_step": {
+    "allowed": [
+      "read the 78 frozen predictor columns",
+      "execute exact row-to-day provenance matching",
+      "count unique provenance rows",
+      "count ambiguous provenance rows",
+      "count unmapped provenance rows",
+      "write runtime provenance evidence outside Git for inspection"
+    ],
+    "forbidden": [
+      "label parsing",
+      "development/validation/final role construction",
+      "duplicate sanitization",
+      "preprocessing fitting",
+      "model fitting",
+      "model inference",
+      "threshold selection",
+      "validation metrics",
+      "final-test metrics"
+    ],
+    "name": "EXECUTE_FROZEN_EXACT_ROW_TO_CAPTURE_DAY_PROVENANCE_RECOVERY",
+    "stage": "STAGE22-1C"
+  },
+  "numeric_representation": {
+    "canonical_byte_order_for_audit": "LITTLE_ENDIAN_FLOAT64",
+    "comparison_dtype": "IEEE754_FLOAT64",
+    "decimal_rounding_allowed": false,
+    "feature_names_sha256": "bbe392324367669d47364ebf1bebf11bf9b814f1035c557176815980ef0b36c4",
+    "feature_order_source": "metadata/feature_names.json",
+    "flagship_invalid_vector_policy": "HARD_STOP if any of the 300,928 flagship rows has any NaN or nonfinite value after inherited numeric coercion.",
+    "missing_value_imputation_allowed": false,
+    "nonfinite_handling": "Replace +inf and -inf with NaN before match eligibility.",
+    "numeric_coercion": "pandas.to_numeric(errors='coerce')",
+    "provenance_matching_feature_space": "ALL_78_ORIGINAL_FROZEN_NUMERIC_PREDICTORS",
+    "signed_zero_policy": "Canonicalize every numeric zero to +0.0 before exact byte comparison so IEEE signed-zero representation cannot create a false mismatch between numerically equal zero values.",
+    "source_invalid_vector_policy": "A source row with any NaN or nonfinite value after numeric coercion is not eligible to match a valid flagship vector; count such source rows but do not alter them.",
+    "string_fuzzy_matching_allowed": false,
+    "tolerance_matching_allowed": false
+  },
+  "provenance_classification_rules": {
+    "ambiguous": "More than one distinct source capture day contains an exact match for the complete 78-feature vector. Mark AMBIGUOUS and exclude that flagship row from every later Stage22 role.",
+    "ambiguous_policy": "Ambiguous rows are permitted only as explicitly excluded rows. They must be counted and auditable.",
+    "candidate_day_with_zero_flagship_matches": "Report it. Do not add source rows from that day and do not remove the day from the source scan retroactively.",
+    "unique": "Exactly one distinct exact source capture day matches the flagship row's complete 78-feature vector. Assign that day.",
+    "unmapped": "No candidate source capture day contains an exact match for the complete 78-feature vector.",
+    "unmapped_policy": "HARD_STOP Stage22 before model fitting if even one flagship row is UNMAPPED. No fuzzy, rounded, nearest-neighbor, label-assisted, or post-hoc mapping repair is permitted."
+  },
+  "role_governance": {
+    "chronological_role_construction_occurs_only_after": "The provenance mapping and duplicate-sanitization evidence have been frozen according to Stage22 execution order.",
+    "no_day_reassignment_for_attack_coverage": true,
+    "no_day_reassignment_for_class_balance": true,
+    "no_day_reassignment_for_model_performance": true,
+    "role_assignment_during_stage22_1b": false,
+    "role_assignment_during_stage22_1c": false
+  },
+  "row_level_audit_identity": {
+    "digest_role": "Audit identity only. Exact full-vector equality, not the digest alone, establishes provenance during recovery.",
+    "feature_vector_audit_digest": "SHA256 of the canonical complete 78-value little-endian float64 byte vector",
+    "flagship_row_id": "0-based physical row ordinal"
+  },
+  "scientific_failure_policy": {
+    "filename_convention_conflict": "HARD_STOP",
+    "flagship_hash_mismatch": "HARD_STOP",
+    "matching_rule_change_after_recovery_result": "FORBIDDEN",
+    "numeric_representation_change": "FORBIDDEN_AFTER_THIS_LOCK",
+    "source_hash_mismatch": "HARD_STOP",
+    "unexpected_source_candidate_change": "HARD_STOP",
+    "unmapped_flagship_rows_gt_0": "HARD_STOP_BEFORE_MODEL_FITTING"
+  },
+  "scientific_parent_commit": "77beddbd7ae82aa53f703fe9441cc473d064ca2b",
+  "source_candidate_universe": {
+    "all_candidate_files_sha256_frozen": true,
+    "candidate_count": 10,
+    "files": [
+      {
+        "basename": "02-14-2018.csv",
+        "bytes": 358223333,
+        "capture_date": "2018-02-14",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-14-2018.csv",
+        "sha256": "acff8bc61376ee031d80878ee6099e0b1a87a1bd711d8068298421418c9f8147"
+      },
+      {
+        "basename": "02-15-2018.csv",
+        "bytes": 375945899,
+        "capture_date": "2018-02-15",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-15-2018.csv",
+        "sha256": "fa2947a8256d81ee9103ae16139d62d0e17aa23e696ee80d9e76fb51c01c9c4b"
+      },
+      {
+        "basename": "02-16-2018.csv",
+        "bytes": 333723605,
+        "capture_date": "2018-02-16",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-16-2018.csv",
+        "sha256": "1a4919faa0c49c7af97230b0c2d076eba23ee6dd81103a3801d51ac316355d8b"
+      },
+      {
+        "basename": "02-20-2018.csv",
+        "bytes": 4054925350,
+        "capture_date": "2018-02-20",
+        "column_count": 84,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Flow ID",
+          "Src IP",
+          "Src Port",
+          "Dst IP",
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 7948748,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-20-2018.csv",
+        "sha256": "7287a4d7740a1dddbf330ceb2beb6a4889d33ba63674558a68b5eb50d16711df"
+      },
+      {
+        "basename": "02-21-2018.csv",
+        "bytes": 328893673,
+        "capture_date": "2018-02-21",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-21-2018.csv",
+        "sha256": "a5f4a1c2689e0aa6566c03a58466de9c407c0be0cbd3cc69306544026611be04"
+      },
+      {
+        "basename": "02-22-2018.csv",
+        "bytes": 382636202,
+        "capture_date": "2018-02-22",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-22-2018.csv",
+        "sha256": "da33c927018274f9d49b145baa00e4ce0526c25b3b890b34c489e247b5e24544"
+      },
+      {
+        "basename": "02-23-2018.csv",
+        "bytes": 382840456,
+        "capture_date": "2018-02-23",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-23-2018.csv",
+        "sha256": "d0a7f5059d9823b6e9b392b759e306481a3502d190dea7a1b5502ae079ea069b"
+      },
+      {
+        "basename": "02-28-2018.csv",
+        "bytes": 209249758,
+        "capture_date": "2018-02-28",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "STAGE22_1A_UNAMBIGUOUS_AND_DIRECTORY_CONVENTION_CONFIRMED",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 613104,
+        "row_count_source": "STAGE22_1A_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-28-2018.csv",
+        "sha256": "f15e2a12304446058a0186c8ad67de2bd15735a9ba5c70c9a1f4c4242ab06771"
+      },
+      {
+        "basename": "03-01-2018.csv",
+        "bytes": 107842858,
+        "capture_date": "2018-03-01",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "DIRECTORY_WIDE_MDY_CONVENTION_FROM_UNAMBIGUOUS_SIBLINGS",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 331125,
+        "row_count_source": "STAGE22_1B_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/03-01-2018.csv",
+        "sha256": "b0534c5d7d8b41e03df71c6966c995d116a8ed28e61f377c8b14cdf5d28f4edf"
+      },
+      {
+        "basename": "03-02-2018.csv",
+        "bytes": 352368373,
+        "capture_date": "2018-03-02",
+        "column_count": 80,
+        "csv_encoding": "utf-8-sig",
+        "date_resolution": "DIRECTORY_WIDE_MDY_CONVENTION_FROM_UNAMBIGUOUS_SIBLINGS",
+        "extra_header_columns": [
+          "Timestamp",
+          "Label"
+        ],
+        "required_predictor_count": 78,
+        "row_count": 1048575,
+        "row_count_source": "STAGE22_1B_ONE_PREDICTOR_COUNT",
+        "runtime_path": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/03-02-2018.csv",
+        "sha256": "d96f38e7496aba83475031e6fb8c6fdf1abf6aa1b71325a917798f3c7de93de1"
+      }
+    ],
+    "selection_rule": "Use every non-flagship Stage22-1A tabular file that contained all frozen 78 original predictors. No candidate source day may be removed because of labels, class balance, attack composition, ambiguity rate, model performance, or downstream usefulness.",
+    "source_directory_runtime": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv"
+  },
+  "source_file_integrity": {
+    "algorithm": "SHA256",
+    "interpretation": "Opaque integrity operation; labels contained in the source file are not parsed or scientifically inspected.",
+    "scope": "Entire source file bytes"
+  },
+  "stage": "STAGE22-1B",
+  "stage22_0_protocol": {
+    "path": "results/stage22_temporal_session_safe/stage22_0_protocol_lock.json",
+    "sha256": "df9654a1bcff9ff02404e6b2cf6dde5d1ac1bf679d6a5884509427ef1b0fc062"
+  },
+  "stage22_1a_discovery_anchor": {
+    "previously_ambiguous_candidate_count": 2,
+    "resolved_candidate_count": 8,
+    "runtime_inventory_path": "/kaggle/working/stage22_1a_runtime_source_inventory.json",
+    "runtime_inventory_sha256": "792a05cde245d35579eb6153546de75f795451c5171128859aa41f830bbe69c8",
+    "status": "RUNTIME_DISCOVERY_OUTPUT_HASHED_AS_INPUT_TO_THIS_LOCK",
+    "total_candidate_count": 10
+  },
+  "stage22_1c_execution_requirements": {
+    "must_not": [
+      "parse labels",
+      "construct development/validation/final roles",
+      "perform duplicate sanitization",
+      "fit preprocessing",
+      "train models",
+      "run inference",
+      "select thresholds",
+      "compute model metrics"
+    ],
+    "must_report": [
+      "all 300,928 flagship rows",
+      "unique provenance row count",
+      "ambiguous provenance row count",
+      "unmapped provenance row count",
+      "unique provenance counts by capture day",
+      "ambiguous day-set patterns",
+      "candidate source days with zero exact flagship matches",
+      "source invalid-vector counts",
+      "accelerator collision counts"
+    ],
+    "must_use_exact_frozen_78_feature_order": true,
+    "must_verify_all_source_sha256": true,
+    "must_verify_flagship_sha256": true,
+    "must_verify_parent_commit": "THE_COMMIT_CREATED_BY_THIS_STAGE22_1B_LOCK"
+  },
+  "status": "FROZEN_BEFORE_ROW_LEVEL_PROVENANCE_MATCHING",
+  "title": "Stage22 Frozen Source Provenance Recovery Procedure"
+}

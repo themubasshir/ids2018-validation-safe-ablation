@@ -1,0 +1,54 @@
+{
+  "checkpoint": "Stage21-4R0",
+  "repository_parent": "18f4399e71e6823bd96f56fe9ada1b9c01f66405",
+  "scientific_boundary": {
+    "Friday_ViT_constructed": false,
+    "Friday_ViT_forward": false,
+    "Friday_compact_materialized": false,
+    "Friday_flow_reconstruction": false,
+    "Friday_probabilities": false,
+    "Friday_source_accessed": true,
+    "Friday_threshold_reselection": false,
+    "Friday_threshold_search": false,
+    "optimizer_steps": 0,
+    "training": false
+  },
+  "sources": {
+    "DDOS_LABELS": {
+      "bytes": 23048086,
+      "path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/blobs/7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66"
+    },
+    "MORNING_LABELS": {
+      "bytes": 21999571,
+      "path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/blobs/2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774"
+    },
+    "PCAP": {
+      "bytes": 8839309056,
+      "path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/e810c1cc98270ec271a1df917b9de0786c33f343/pcap/Friday-WorkingHours.pcap",
+      "resolved_path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/blobs/beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0",
+      "revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+      "sha256": "beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0"
+    },
+    "PORTSCAN_LABELS": {
+      "bytes": 18632427,
+      "path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/snapshots/b7e532345512edcd530cb1770dc76636aeb52802/traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage21_friday_hf_cache/datasets--bvsam--cic-ids-2017/blobs/4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+      "revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+      "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a"
+    }
+  },
+  "status": "EXACT_PINNED_FRIDAY_SOURCES_REACQUIRED",
+  "transport": {
+    "authenticated": true,
+    "chunk_cache_size_bytes": 0,
+    "concurrent_range_gets": 4,
+    "fixed_download_concurrency": 4,
+    "hf_xet": true
+  }
+}

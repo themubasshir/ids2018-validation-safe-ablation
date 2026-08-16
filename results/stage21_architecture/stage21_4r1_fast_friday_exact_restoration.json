@@ -1,0 +1,57 @@
+{
+  "checkpoint": "Stage21-4R1-FAST",
+  "corpus": {
+    "attack": 5602,
+    "benign": 6486,
+    "files": {
+      "encoded_bytes.bin": {
+        "bytes": 8679226,
+        "sha256": "f6dd1900f2767edc20a112b9f9875b3410667c3dace1dd2ff729cb3ce37952d2"
+      },
+      "flow_offsets.npy": {
+        "bytes": 96840,
+        "sha256": "5e66ab4e85eb21eca8c7ea36c45461e1ac1f21d25acb0fb812c2221db02917aa"
+      },
+      "labels.npy": {
+        "bytes": 12216,
+        "sha256": "239b124119824fac23cff9fdcfbc24bc46227a0b6d4b1ad2201e955c263347d8"
+      },
+      "packet_lengths.npy": {
+        "bytes": 1547392,
+        "sha256": "f1790f6e9ddc9f24954cf72eb72359c7052e8736cdb97516afff74b7805ba878"
+      }
+    },
+    "flows": 12088
+  },
+  "method": {
+    "acceptance_authority": "FROZEN_HISTORICAL_GEOMETRY_AND_FOUR_EXACT_STAGE20_COMPACT_SHA256",
+    "anomaly_decoder": "SCAPY_2_6_1_REFERENCE_FALLBACK",
+    "container_format": "PCAPNG",
+    "direct_reader": "FAST_PCAPNG_READER",
+    "ordinary_decoder": "DIRECT_ETHERNET_IPV4_TCP_UDP",
+    "pcapng_precheck_packets": 20000,
+    "pcapng_precheck_raw_byte_identity": true,
+    "pcapng_precheck_timestamp_identity": true,
+    "pcapng_precheck_wire_length_identity": true,
+    "semantic_scapy_gate_packets": 20000,
+    "semantic_scapy_gate_pass": true
+  },
+  "operational": {
+    "full_reconstruction_elapsed_seconds": 100.462,
+    "timing_used_for_scientific_selection": false
+  },
+  "parent_commit": "18f4399e71e6823bd96f56fe9ada1b9c01f66405",
+  "scientific_boundary": {
+    "Friday_ViT_constructed": false,
+    "Friday_ViT_forward": false,
+    "Friday_compact_corpus_restored": true,
+    "Friday_probabilities": false,
+    "Friday_source_accessed": true,
+    "Friday_threshold_reselection": false,
+    "Friday_threshold_search": false,
+    "optimizer_steps": 0,
+    "training": false
+  },
+  "source_receipt_sha256": "8a9c4bf04cf68478050def0116d319edfa511a87a29d3a9fd55794b947a501bf",
+  "status": "EXACT_STAGE20_FRIDAY_COMPACT_CORPUS_RESTORED_BY_VERIFIED_FAST_PCAPNG_PATH"
+}

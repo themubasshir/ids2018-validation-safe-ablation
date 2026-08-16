@@ -1,0 +1,45 @@
+{
+  "checkpoint": "Stage21-4R1-RELEASE",
+  "compact_files": {
+    "encoded_bytes.bin": {
+      "bytes": 8679226,
+      "sha256": "f6dd1900f2767edc20a112b9f9875b3410667c3dace1dd2ff729cb3ce37952d2"
+    },
+    "flow_offsets.npy": {
+      "bytes": 96840,
+      "sha256": "5e66ab4e85eb21eca8c7ea36c45461e1ac1f21d25acb0fb812c2221db02917aa"
+    },
+    "labels.npy": {
+      "bytes": 12216,
+      "sha256": "239b124119824fac23cff9fdcfbc24bc46227a0b6d4b1ad2201e955c263347d8"
+    },
+    "packet_lengths.npy": {
+      "bytes": 1547392,
+      "sha256": "f1790f6e9ddc9f24954cf72eb72359c7052e8736cdb97516afff74b7805ba878"
+    }
+  },
+  "release": {
+    "archive_asset_id": 516711485,
+    "archive_asset_name": "stage20-Friday-compact-corpus-v1.tar",
+    "archive_bytes": 10342400,
+    "archive_sha256": "f69f09c096dc92e1c467a9f72873f54b1ddb9af739ff517d047ba6ee2c4402c8",
+    "checksum_asset_id": 516711511,
+    "checksum_asset_name": "stage20-Friday-compact-corpus-v1.tar.sha256",
+    "checksum_sha256": "acfc5a185f16fa40151e78539f22061b7d719a13bd2738fe54b3692d9a798b96",
+    "release_id": 371092195,
+    "remote_archive_byte_identity": true,
+    "remote_archive_bytes": 10342400,
+    "remote_archive_sha256": "f69f09c096dc92e1c467a9f72873f54b1ddb9af739ff517d047ba6ee2c4402c8",
+    "remote_checksum_byte_identity": true,
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "scientific_boundary": {
+    "Friday_ViT_forward": false,
+    "Friday_probabilities": false,
+    "Friday_threshold_reselection": false,
+    "Friday_threshold_search": false,
+    "optimizer_steps": 0,
+    "training": false
+  },
+  "status": "FRIDAY_COMPACT_CORPUS_DURABLE_AND_REMOTE_BYTE_VERIFIED"
+}

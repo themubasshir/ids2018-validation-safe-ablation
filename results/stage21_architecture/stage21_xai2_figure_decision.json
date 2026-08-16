@@ -1,0 +1,76 @@
+{
+  "XAI2_comparative_figures_produced": false,
+  "checkpoint": "Stage21-XAI2-DECISION",
+  "decision": "STOP_AFTER_XAI1B_QUALITY_REPORT",
+  "frozen_quality": {
+    "CNN": {
+      "TRUE_ATTACK": {
+        "maximum": 2.7579431533813477,
+        "mean": 0.33547656903965617,
+        "median": 0.142135888338089,
+        "minimum": 0.00148133491165936,
+        "q25": 0.056350707076489925,
+        "q75": 0.38798315078020096
+      },
+      "TRUE_BENIGN": {
+        "maximum": 122.83952331542969,
+        "mean": 1.765380151012323,
+        "median": 0.32261674106121063,
+        "minimum": 0.0017538287211209536,
+        "q25": 0.13604601100087166,
+        "q75": 0.7459021359682083
+      }
+    },
+    "ViT": {
+      "TRUE_ATTACK": {
+        "maximum": 0.6701158881187439,
+        "mean": 0.012830219557481648,
+        "median": 0.0011896076030097902,
+        "minimum": 2.5957986053981585e-06,
+        "q25": 0.0002499874317436479,
+        "q75": 0.004368151654489338
+      },
+      "TRUE_BENIGN": {
+        "maximum": 279.9985046386719,
+        "mean": 1.1563880100139627,
+        "median": 0.022718177177011967,
+        "minimum": 2.084534389723558e-05,
+        "q25": 0.004968373570591211,
+        "q75": 0.06674273498356342
+      }
+    }
+  },
+  "next": "STAGE22_TEMPORAL_SESSION_SAFE_FLAGSHIP_RERUN",
+  "parent_XAI1B_seal_commit": "9726ec87c4931ce3d8dec8bdbe932e741bc3cc1c",
+  "quality_threshold": {
+    "decision_type": "CONSERVATIVE_QUALITY_LIMITATION_REPORT_AND_STOP_WITHOUT_METHOD_OR_PARAMETER_SUBSTITUTION",
+    "new_numeric_threshold_introduced_post_result": false,
+    "numeric_accept_reject_threshold_preregistered": false
+  },
+  "reason": "The preregistered Integrated Gradients quality diagnostic shows materially weak numerical completeness for the CNN under the frozen 64-step midpoint approximation. Comparative spatial figures could therefore imply stronger cross-architecture attribution comparability than the quality diagnostics support.",
+  "scientific_boundary": {
+    "additional_integration_steps": false,
+    "alternate_XAI_method": false,
+    "alternate_baseline": false,
+    "architecture_change": false,
+    "causal_claim": false,
+    "cohort_change": false,
+    "general_ViT_superiority_claim": false,
+    "independent_confirmation_claim": false,
+    "new_IG_runs": 0,
+    "new_gradient_passes": 0,
+    "new_model_forwards": 0,
+    "optimizer_steps": 0,
+    "threshold_reselection": false,
+    "threshold_search": false,
+    "training": false
+  },
+  "stage21_final_status": "COMPLETE_ARCHITECTURE_RESULT_FROZEN_POSTRESULT_XAI_REPORTED_WITH_NUMERICAL_COMPLETENESS_LIMITATION",
+  "status": "XAI2_COMPARATIVE_FIGURES_NOT_PRODUCED_STAGE21_CLOSED",
+  "valid_findings_retained": {
+    "XAI1B_numeric_artifacts": "RETAINED_AS_DURABLE_AUDIT_ARTIFACTS",
+    "endpoint_probability_reproduction": "PASS",
+    "padded_pixel_attribution_mass": "ZERO_IN_REPORTED_MEDIANS_AND_FROZEN_OUTPUTS",
+    "spatial_attribution_differences": "DESCRIPTIVE_ONLY_AND_NOT_PROMOTED_TO_COMPARATIVE_FIGURE_EVIDENCE"
+  }
+}

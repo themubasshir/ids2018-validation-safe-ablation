@@ -1,0 +1,146 @@
+{
+  "artifacts": {
+    "chronological_rebalanced_selected_benign.packbits": {
+      "bit_order": "little",
+      "bytes": 1801551,
+      "logical_length": 14412403,
+      "population": 2843078,
+      "sha256": "4f14eb2516cb7e55443bd8591fb0159b494afb0af2625e5a0ced31be8b033ef7"
+    },
+    "random_rebalanced_selected_benign.packbits": {
+      "bit_order": "little",
+      "bytes": 1801551,
+      "logical_length": 14412403,
+      "population": 2348596,
+      "sha256": "43a8afe934dd971d2bb37f04db5ef289b2aafc4223e14cfad51d59ed4b180d03"
+    },
+    "random_validation.packbits": {
+      "bit_order": "little",
+      "bytes": 1801551,
+      "logical_length": 14412403,
+      "population": 2882481,
+      "sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad"
+    },
+    "stage22r_1b1_day_offsets.csv": {
+      "bytes": 524,
+      "rows": 8,
+      "sha256": "22a1c2b9b208596d53d1e860a2ec426542a22f23de2a8236baa4dae2583e0d5a"
+    },
+    "stage22r_1b1_membership_counts_by_day.csv": {
+      "bytes": 1227,
+      "rows": 8,
+      "sha256": "1d47f56d1bfaaacd603b238133292aa96e6b695c86889ec044ec8634e98ff418"
+    }
+  },
+  "cells": {
+    "CHRONOLOGICAL_NATURAL": {
+      "train": {
+        "attack": 1910043,
+        "benign": 11908580,
+        "rows": 13818623
+      },
+      "validation": {
+        "attack": 62256,
+        "benign": 531524,
+        "rows": 593780
+      }
+    },
+    "CHRONOLOGICAL_REBALANCED": {
+      "train": {
+        "attack": 1910043,
+        "benign": 2843078,
+        "rows": 4753121
+      },
+      "validation": {
+        "attack": 62256,
+        "benign": 531524,
+        "rows": 593780
+      }
+    },
+    "RANDOM_NATURAL": {
+      "train": {
+        "attack": 1577839,
+        "benign": 9952083,
+        "rows": 11529922
+      },
+      "validation": {
+        "attack": 394460,
+        "benign": 2488021,
+        "rows": 2882481
+      }
+    },
+    "RANDOM_REBALANCED": {
+      "train": {
+        "attack": 1577839,
+        "benign": 2348596,
+        "rows": 3926435
+      },
+      "validation": {
+        "attack": 394460,
+        "benign": 2488021,
+        "rows": 2882481
+      }
+    }
+  },
+  "clean_development": {
+    "attack": 1972299,
+    "benign": 12440104,
+    "canonical_order": "(day_id ASC, original_zero_based_row_index ASC) after frozen K79 exclusions",
+    "rows": 14412403
+  },
+  "execution_lock": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1b0_membership_execution_lock/stage22r_1b0_membership_execution_lock.json",
+    "sha256": "d6ddfb03e53bd3e65d8c78559768c5786f3970efc533e875914f1a265e2a87f7"
+  },
+  "final_holdout": {
+    "03-01_opened": false,
+    "03-02_opened": false,
+    "labels_read": 0,
+    "maximum_authorized_openings": 1,
+    "openings_consumed": 0,
+    "predictors_read": 0,
+    "rows_read": 0
+  },
+  "membership_derivation": {
+    "CHRONOLOGICAL_NATURAL_train": "day_id 0..6",
+    "CHRONOLOGICAL_NATURAL_validation": "day_id 7",
+    "CHRONOLOGICAL_REBALANCED_train_attacks": "all attack rows with day_id 0..6",
+    "CHRONOLOGICAL_REBALANCED_train_benign": "chronological_rebalanced_selected_benign bitset",
+    "CHRONOLOGICAL_REBALANCED_validation": "identical to CHRONOLOGICAL_NATURAL validation",
+    "RANDOM_NATURAL_train": "logical complement of random_validation bitset",
+    "RANDOM_NATURAL_validation": "random_validation bitset",
+    "RANDOM_REBALANCED_train_attacks": "all attack rows in RANDOM_NATURAL training",
+    "RANDOM_REBALANCED_train_benign": "random_rebalanced_selected_benign bitset",
+    "RANDOM_REBALANCED_validation": "identical to RANDOM_NATURAL validation"
+  },
+  "next_authorized_step": "Stage22R-1C \u2014 materialize the frozen 70-feature development model inputs for the four memberships, with Mar1-Mar2 still closed.",
+  "parent_commit": "809c512bc5ec0f9272d64dd0d66f5a5ef174523f",
+  "random_operator": {
+    "implementation": "sklearn.model_selection.train_test_split",
+    "random_state": 42,
+    "shuffle": true,
+    "sklearn_version": "1.6.1",
+    "stratify": "binary_label",
+    "test_size": 0.2
+  },
+  "rebalancing_operator": {
+    "attack_rows": "ALL_RETAINED",
+    "benign": "UNDERSAMPLE_WITHOUT_REPLACEMENT",
+    "numpy_version": "2.0.2",
+    "restart_rng_independently_per_split": true,
+    "rng": "numpy.random.RandomState",
+    "seed": 42,
+    "target_formula": "floor(n_training_attack * 5625 / 3779)",
+    "validation_resampling": false
+  },
+  "scientific_access": {
+    "development_physical_rows_scanned": 14853302,
+    "development_predictor_values_read": 0,
+    "development_traffic_labels_read": 14853268,
+    "inference": 0,
+    "models_fit": 0,
+    "threshold_selection": 0
+  },
+  "stage": "Stage22R-1B1",
+  "status": "FOUR_DEVELOPMENT_MEMBERSHIPS_GENERATED_AND_FROZEN"
+}

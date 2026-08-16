@@ -1,0 +1,59 @@
+{
+  "checkpoint": "Stage21-1R1-W-GITHUB-RELEASE-DURABILITY",
+  "compact_payloads": {
+    "encoded_bytes.bin": {
+      "bytes": 13824937,
+      "sha256": "b4ba9a059a2df6a1b85546b4d92c1fdf5b80feb61de6c3e56eae458c628f8889"
+    },
+    "flow_offsets.npy": {
+      "bytes": 103744,
+      "sha256": "9ef83af5b03f9284beed50cbe2587bbbb8cac1ac524aa5505e44d262a8d8cf0a"
+    },
+    "labels.npy": {
+      "bytes": 13079,
+      "sha256": "9d10b0264487ab4689a77f0101f22496786a7eb453236c2fb8bfe53d33f9ca7c"
+    },
+    "packet_lengths.npy": {
+      "bytes": 1657856,
+      "sha256": "9bba88e143d4c5c5388c450b1f7d7c9aa1cd83592c4c6e1a153651e70131d2ab"
+    }
+  },
+  "day": "Wednesday",
+  "github_release": {
+    "archive_asset": {
+      "asset_id": 516592283,
+      "browser_download_url": "https://github.com/themubasshir/ids2018-validation-safe-ablation/releases/download/stage20-compact-corpora-v1/stage20-Wednesday-compact-corpus-v1.tar",
+      "byte_identity_verified": true,
+      "bytes": 15605760,
+      "local_sha256": "4e89c85fbb537795ff93472b52fb7ceb21407111b1adceb0df9117d2c3d13a74",
+      "name": "stage20-Wednesday-compact-corpus-v1.tar",
+      "remote_stream_bytes": 15605760,
+      "remote_stream_sha256": "4e89c85fbb537795ff93472b52fb7ceb21407111b1adceb0df9117d2c3d13a74"
+    },
+    "release_id": 371092195,
+    "sha256_asset": {
+      "asset_id": 516592287,
+      "bytes": 106,
+      "name": "stage20-Wednesday-compact-corpus-v1.tar.sha256",
+      "remote_stream_sha256": "969e670abfef415a3e81ad0308ea863f9e3a20e1cac2f46a4728b9877c42be5a"
+    },
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "PCAP_read": false,
+    "Thursday_accessed": false,
+    "join_rule_changed": false,
+    "label_source_read": false,
+    "model_forward": false,
+    "optimizer_steps": 0,
+    "representation_changed": false,
+    "training": false
+  },
+  "seal_commit": "a4ceb3c4c59f431b2869c0a9768f0a53dc00f61c",
+  "source_receipts": {
+    "exact_restoration_sha256": "f335dcc7f8ddb381befb6061e4378dcb48ca60b0db080599b6d99238a9b82c43",
+    "hybrid_execution_sha256": "015967ab55e94b6c49a7dec0857aa6b1fa4339866a584460e7b0bc96ff62fce5"
+  },
+  "status": "WEDNESDAY_COMPACT_CORPUS_DURABLE_ON_GITHUB_RELEASE_AND_REMOTE_SHA_VERIFIED"
+}

@@ -1,0 +1,43 @@
+{
+  "checkpoint": "Stage21-XAI1B-PROVENANCE-R1",
+  "corrected_harness_sha256": "c9fcfa53c24009da51843a93da9bb0f9e4216c03856bf68cebbaf34ce461dfa2",
+  "correction": {
+    "correct": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "correct_character": "4",
+    "field": "EXPECTED_LOADER_SHA",
+    "incorrect": "a1ba15881afeb1cf6de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "incorrect_character": "6",
+    "total_harness_character_changes": 1,
+    "zero_based_character_index": 16
+  },
+  "harness_bytes": 62959,
+  "loader": {
+    "HEAD_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "all_byte_identical": true,
+    "bytes": 6036,
+    "origin_main_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "path": "scripts/stage20_compact_corpus.py",
+    "worktree_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0"
+  },
+  "next": "RESTORE_EXACT_RUNTIME_AND_EXECUTE_CORRECTED_FROZEN_XAI1B_HARNESS",
+  "parent_commit": "46c12a9e26cc2d51370ec209aa41ad89e7dcbdc0",
+  "previous_harness_sha256": "140b8f61d702a1e79a18768b2c5e3ad10a22ef48d39af4fcc865781e67a2c8fe",
+  "scientific_boundary": {
+    "IG_method_changed": false,
+    "IG_runs_before_correction": 0,
+    "IG_steps_changed": false,
+    "XAI0_protocol_changed": false,
+    "attributions_observed_before_correction": false,
+    "baseline_changed": false,
+    "cohort_changed": false,
+    "gradient_passes_before_correction": 0,
+    "integration_rule_changed": false,
+    "model_forwards_before_correction": 0,
+    "model_weights_changed": false,
+    "optimizer_steps": 0,
+    "threshold_reselection": false,
+    "threshold_search": false,
+    "training": false
+  },
+  "status": "ONE_CHARACTER_LOADER_SHA_PROVENANCE_TYPO_CORRECTED_BEFORE_ATTRIBUTION"
+}

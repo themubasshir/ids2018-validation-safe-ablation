@@ -12,7 +12,7 @@
   },
   "execution_script": "scripts/stage21_xai1b_locked_ig.py",
   "execution_script_bytes": 62959,
-  "execution_script_sha256": "140b8f61d702a1e79a18768b2c5e3ad10a22ef48d39af4fcc865781e67a2c8fe",
+  "execution_script_sha256": "c9fcfa53c24009da51843a93da9bb0f9e4216c03856bf68cebbaf34ce461dfa2",
   "flow_batch": 8,
   "integration_rule": "RIEMANN_MIDPOINT",
   "mask": "FIXED_ORIGINAL_FLOW_MASK",
@@ -31,6 +31,26 @@
     "common_attribution_domain": "FLOAT32_UINT8_DIVIDED_BY_255"
   },
   "parent_preflight_commit": "b26af9b8c54fda46f8b10c796d8bedbe8fca362f",
+  "previous_execution_harness_commit": "46c12a9e26cc2d51370ec209aa41ad89e7dcbdc0",
+  "previous_execution_script_sha256": "140b8f61d702a1e79a18768b2c5e3ad10a22ef48d39af4fcc865781e67a2c8fe",
+  "provenance_correction": {
+    "IG_runs_before_correction": 0,
+    "attributions_observed_before_correction": false,
+    "basis": "EXACT_WORKTREE_HEAD_AND_ORIGIN_MAIN_LOADER_BYTES_ALL_SHA256_IDENTICAL",
+    "cohort_changed": false,
+    "correct_value": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "difference": {
+      "correct_character": "4",
+      "incorrect_character": "6",
+      "zero_based_character_index": 16
+    },
+    "field": "EXPECTED_LOADER_SHA",
+    "gradient_passes_before_correction": 0,
+    "incorrect_value": "a1ba15881afeb1cf6de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "model_forwards_before_correction": 0,
+    "model_weights_changed": false,
+    "scientific_protocol_changed": false
+  },
   "recovery": "PER_MODEL_OPERATIONAL_OUTPUTS_REUSED_ONLY_IF_COMPLETION_RECEIPT,ARTIFACT_HASHES_AND_EXECUTION_SCRIPT_SHA_MATCH",
   "relative_completeness_denominator_floor": 1e-12,
   "scientific_boundary": {
@@ -42,7 +62,7 @@
     "threshold_search": false,
     "training": false
   },
-  "status": "EXECUTION_HARNESS_FROZEN_BEFORE_FIRST_ATTRIBUTION",
+  "status": "EXECUTION_HARNESS_PROVENANCE_CORRECTED_BEFORE_FIRST_ATTRIBUTION",
   "steps": 64,
   "target": "ATTACK_LOGIT_PRE_SIGMOID"
 }

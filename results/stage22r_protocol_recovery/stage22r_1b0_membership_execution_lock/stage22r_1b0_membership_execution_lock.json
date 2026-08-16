@@ -1,0 +1,114 @@
+{
+  "canonical_clean_row_order": {
+    "clean_position": "Zero-based position in the above canonical clean row order.",
+    "day_id_mapping": {
+      "0": "02-14-2018.csv",
+      "1": "02-15-2018.csv",
+      "2": "02-16-2018.csv",
+      "3": "02-20-2018.csv",
+      "4": "02-21-2018.csv",
+      "5": "02-22-2018.csv",
+      "6": "02-23-2018.csv",
+      "7": "02-28-2018.csv"
+    },
+    "definition": "All K79-retained development rows sorted by (day_id ASC, original_zero_based_row_index ASC)."
+  },
+  "chronological_split": {
+    "expected_k79_cross_boundary_overlap_groups": 0,
+    "shuffle": false,
+    "train_rule": "day_id in {0,1,2,3,4,5,6}",
+    "validation_rule": "day_id == 7"
+  },
+  "clean_development_parent": {
+    "attack": 1972299,
+    "benign": 12440104,
+    "exclusion_membership_sha256": "3e979841468f9d42a8de7049ed50063d5907c0753fe5b1179dac948163d93134",
+    "freeze_path": "results/stage22r_protocol_recovery/stage22r_1a3_k79_development_freeze/stage22r_1a3_k79_development_freeze.json",
+    "freeze_sha256": "a6f46aa38447d43b2300c67f68b9fb2828adce56a533c607d99074bf97df8b07",
+    "rows": 14412403
+  },
+  "four_cells": {
+    "CHRONOLOGICAL_NATURAL": {
+      "prevalence": "NATURAL",
+      "split": "CHRONOLOGICAL"
+    },
+    "CHRONOLOGICAL_REBALANCED": {
+      "prevalence": "REBALANCED",
+      "split": "CHRONOLOGICAL"
+    },
+    "RANDOM_NATURAL": {
+      "prevalence": "NATURAL",
+      "split": "RANDOM"
+    },
+    "RANDOM_REBALANCED": {
+      "prevalence": "REBALANCED",
+      "split": "RANDOM"
+    }
+  },
+  "membership_storage": {
+    "basis": "canonical clean_position",
+    "bit_order": "numpy.packbits bitorder='little'",
+    "chronological_membership": "derived exactly from day_id; no redundant full bitset required.",
+    "chronological_rebalanced_selected_benign": "bit-packed boolean vector length 14,412,403; 1 means benign row retained in CHRONOLOGICAL_REBALANCED training.",
+    "integrity": "Every membership bitset receives SHA256 and exact population-count assertions before Git freeze.",
+    "random_rebalanced_selected_benign": "bit-packed boolean vector length 14,412,403; 1 means benign row retained in RANDOM_REBALANCED training.",
+    "random_training": "logical complement of random_validation over clean universe; not redundantly stored.",
+    "random_validation": "bit-packed boolean vector length 14,412,403; 1 means RANDOM validation."
+  },
+  "natural": {
+    "resampling": "NONE",
+    "training_membership": "all rows assigned to that split's training partition",
+    "validation_membership": "all rows assigned to that split's validation partition"
+  },
+  "next_authorized_step": "Stage22R-1B1 \u2014 generate and freeze RANDOM, CHRONOLOGICAL, NATURAL and REBALANCED development memberships according to these exact semantics.",
+  "parent_commit": "0b1bd35df921abaa64a3c842a762aaaeddef65fb",
+  "random_split": {
+    "implementation": "sklearn.model_selection.train_test_split",
+    "input": "clean_position integers in canonical clean row order",
+    "library": {
+      "sklearn_version": "1.6.1"
+    },
+    "membership_post_sort": "After sklearn returns memberships, each membership is sorted ascending by clean_position solely for storage. Sorting does not alter membership.",
+    "random_state": 42,
+    "shuffle": true,
+    "stratify": "binary_label",
+    "target": "binary_label",
+    "test_size": 0.2,
+    "train_size": null,
+    "training_output": "returned train clean_position membership",
+    "validation_output": "returned test clean_position membership"
+  },
+  "rebalanced": {
+    "attack_rows": "RETAIN_ALL_TRAINING_ATTACK_ROWS",
+    "benign_candidate_order": "Ascending clean_position among benign rows belonging to the relevant training partition.",
+    "benign_target_formula": "floor(n_training_attack * 5625 / 3779)",
+    "fail_closed_rule": "If available benign training rows are fewer than target_benign_count, abort without oversampling.",
+    "final_holdout_resampling": "FORBIDDEN",
+    "independent_rng_restart_per_split": true,
+    "library": {
+      "numpy_version": "2.0.2"
+    },
+    "operator": "For EACH split independently instantiate numpy.random.RandomState(42), call permutation() on the ascending benign training clean_position array, and retain the first target_benign_count positions.",
+    "oversampling": false,
+    "random_generator": "numpy.random.RandomState",
+    "replacement": false,
+    "scope": "TRAINING_ONLY",
+    "seed": 42,
+    "selected_membership_post_sort": "Selected benign clean_positions are sorted ascending after selection solely for storage.",
+    "validation_resampling": "FORBIDDEN"
+  },
+  "scientific_boundary": {
+    "final_holdout_files_opened": 0,
+    "final_holdout_openings_consumed": 0,
+    "final_holdout_rows_read": 0,
+    "inference": 0,
+    "models_fit": 0,
+    "new_labels_read": 0,
+    "random_memberships_generated": false,
+    "rebalanced_memberships_generated": false,
+    "source_rows_read": 0,
+    "threshold_selection": 0
+  },
+  "stage": "Stage22R-1B0",
+  "status": "MEMBERSHIP_EXECUTION_SEMANTICS_LOCKED_BEFORE_RANDOMIZATION"
+}

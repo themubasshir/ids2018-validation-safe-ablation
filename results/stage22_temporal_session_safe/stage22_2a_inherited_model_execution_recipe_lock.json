@@ -1,0 +1,423 @@
+{
+  "classical": {
+    "early_stopping": false,
+    "feature_representation": "RAW_FLOAT32_70_FEATURE_VECTOR",
+    "final_test_rows_in_model_fit": false,
+    "fit_population": "SANITIZED_STAGE22_DEVELOPMENT_ONLY",
+    "hyperparameter_search": false,
+    "identity": "ENS_LGBM_XGB_EQUAL",
+    "members": [
+      {
+        "candidate_id": "LIGHTGBM",
+        "configuration_id": "LGBM_11",
+        "parameters": {
+          "boosting_type": "gbdt",
+          "colsample_bytree": 1.0,
+          "device_type": "gpu",
+          "learning_rate": 0.06,
+          "max_depth": 12,
+          "min_child_samples": 20,
+          "n_estimators": 400,
+          "n_jobs": -1,
+          "num_leaves": 127,
+          "objective": "binary",
+          "random_state": 42,
+          "reg_alpha": 0.0,
+          "reg_lambda": 3.0,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "verbosity": -1
+        },
+        "weight": 0.5
+      },
+      {
+        "candidate_id": "XGBOOST",
+        "configuration_id": "XGB_11",
+        "parameters": {
+          "colsample_bytree": 1.0,
+          "device": "cuda",
+          "eval_metric": "logloss",
+          "gamma": 0.0,
+          "learning_rate": 0.06,
+          "max_depth": 7,
+          "min_child_weight": 1,
+          "n_estimators": 400,
+          "n_jobs": -1,
+          "objective": "binary:logistic",
+          "random_state": 42,
+          "reg_alpha": 0.0,
+          "reg_lambda": 3.0,
+          "subsample": 0.9,
+          "tree_method": "hist"
+        },
+        "weight": 0.5
+      }
+    ],
+    "model_substitution": false,
+    "preprocessing_fit": false,
+    "probability_combination": "P_FINAL_EQUALS_0.5_P_LIGHTGBM_PLUS_0.5_P_XGBOOST",
+    "reweighting": false,
+    "scaler": null,
+    "validation_during_fit": false,
+    "validation_rows_in_model_fit": false
+  },
+  "created_utc": "2026-08-16T16:36:29.592869+00:00",
+  "environment_policy": {
+    "environment_values_used_for_model_selection": false,
+    "environment_values_used_for_threshold_selection": false,
+    "later_stage22_execution_should_assert_this_locked_environment": true
+  },
+  "execution_environment_at_lock": {
+    "packages": {
+      "joblib": "1.5.3",
+      "lightgbm": "4.6.0",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.6.1",
+      "torch": "2.10.0+cu128",
+      "xgboost": "3.2.0"
+    },
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13"
+  },
+  "feature_policy": {
+    "count": 70,
+    "feature_addition_in_stage22": false,
+    "feature_removal_in_stage22": false,
+    "feature_selection_in_stage22": false,
+    "order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "source": "results/stage15_transformer_checkpoint/stage15_2_preprocessing_and_compatibility_metadata.json",
+    "source_sha256": "c9438fd0dec9f5207a492b85e9231224aa64825ffea45ff8a4ab718b78972c00"
+  },
+  "final_test_governance": {
+    "final_outcome_openings_consumed": 0,
+    "final_test_features_read_in_stage22_2a": false,
+    "final_test_labels_read_in_stage22_2a": false,
+    "final_test_metrics_computed_in_stage22_2a": false,
+    "final_test_remains_sealed": true,
+    "future_final_outcome_openings": 1
+  },
+  "historical_reference_artifacts": {
+    "results/stage15_transformer_checkpoint/ft_transformer_numeric.py": "8233a7b62e7045d7c920c15fd8ec974ed8b3db6f2f131dc4c64ba0ce0133dcfc",
+    "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872",
+    "results/stage15_transformer_checkpoint/stage15_2_preprocessing_and_compatibility_metadata.json": "c9438fd0dec9f5207a492b85e9231224aa64825ffea45ff8a4ab718b78972c00",
+    "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5",
+    "results/stage15_transformer_checkpoint/stage15_4c_final_seed_configuration.json": "12a09e9e3b72808c588ae486549c7d48d1ea3695b623458836d775218fae3c9b",
+    "results/stage15_transformer_checkpoint/stage15_4c_final_seed_confirmation.py": "f55cd9ab4e51008c051adfdcd36e50b0a8cf89a8647184874e399a81863beb35",
+    "results/stage15_transformer_checkpoint/stage15_4c_frozen_architecture.json": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa",
+    "results/stage16_classical_benchmark_checkpoint/stage16_1_data_cache_manifest.json": "e6e48e1b6e4a4f0c143b2d07125a3c66e28f835cf71f0b87cb221a904d095ce4",
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_trial_runs/LIGHTGBM/LGBM_11.json": "4ef357aa730275e231a6a85131a94faf70889408931f35177340ac1783dd47e7",
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_trial_runs/XGBOOST/XGB_11.json": "6ff88ec74cf446dfd4147202f3068aec7c5fa6f8f510392b138beb9b1ad87831",
+    "results/stage16_classical_benchmark_checkpoint/stage16_3a_tuning_protocol_lock.json": "91475641392a52755dd40875693db0ad8b32d8b917c530e4333134395ed19781",
+    "results/stage16_classical_benchmark_checkpoint/stage16_3b_tuned_model_manifest.json": "d1e6f385c0fb10b589940bb034f00c10b8f977db75be264585f43560ec745a87",
+    "results/stage16_classical_benchmark_checkpoint/stage16_5a_ensemble_protocol_lock.json": "da1c2d9376ff7c6ee39b5e49ee4c9a44fa594c5dc65713b9b3db1921d20cb4c8",
+    "results/stage16_classical_benchmark_checkpoint/stage16_5c_final_classical_strategy_lock.json": "1c119dc730f29e9d673eb1ef7d8bc714a82822a3a12c3d7212030e2050d23256"
+  },
+  "next_authorized_step": {
+    "allowed": [
+      "read only the frozen 70 predictors plus binary_label for sanitized DEVELOPMENT and VALIDATION row IDs",
+      "fit the fresh Transformer StandardScaler on DEVELOPMENT predictors only",
+      "derive Transformer positive-class weight from DEVELOPMENT labels only",
+      "materialize raw float32 classical DEVELOPMENT and VALIDATION matrices",
+      "materialize scaled float32 Transformer DEVELOPMENT and VALIDATION matrices",
+      "seal all resulting hashes/counts before model fitting"
+    ],
+    "forbidden": [
+      "read FINAL_TEST predictors",
+      "read FINAL_TEST binary_label",
+      "fit any model",
+      "perform any optimizer step",
+      "generate any model score",
+      "select any threshold",
+      "compute any final-test metric",
+      "change chronological roles",
+      "change feature set",
+      "change model recipe"
+    ],
+    "name": "MATERIALIZE SANITIZED DEVELOPMENT_AND_VALIDATION LABELED MATRICES AND FIT DEVELOPMENT_ONLY TRANSFORMER STANDARD_SCALER",
+    "stage": "STAGE22-2B"
+  },
+  "pre_label_failure_rules": {
+    "development_single_class": "HARD_SCIENTIFIC_INFEASIBILITY_BEFORE_MODEL_FIT; DO_NOT_REASSIGN_DAYS_CHANGE_CLASS_WEIGHTING SUBSTITUTE_MODELS_OR_RELAX_PROTOCOL",
+    "nonfinite_model_feature": "HARD_STOP",
+    "target_outside_binary_0_1": "HARD_STOP",
+    "validation_single_class": "DO_NOT_REASSIGN_DAYS; REPORT CHECKPOINT_OR_METRIC LIMITATIONS_EXACTLY_AS_ENCOUNTERED_AND_FOLLOW FROZEN_UNDEFINED_METRIC_POLICY"
+  },
+  "scientific_actions_not_performed": [
+    "flagship CSV read",
+    "Label read",
+    "binary_label read",
+    "development feature read",
+    "validation feature read",
+    "final-test feature read",
+    "StandardScaler fit",
+    "class-balance observation",
+    "model fitting",
+    "optimizer step",
+    "model inference",
+    "validation probability generation",
+    "validation metric generation",
+    "threshold selection",
+    "final-test outcome opening"
+  ],
+  "scientific_parent_commit": "966d8eae2c7eb6ae4fbc362f2dbc8afddabd46d4",
+  "stage": "STAGE22-2A",
+  "stage22_protocol": {
+    "path": "results/stage22_temporal_session_safe/stage22_0_protocol_lock.json",
+    "sha256": "df9654a1bcff9ff02404e6b2cf6dde5d1ac1bf679d6a5884509427ef1b0fc062"
+  },
+  "stage22_sanitized_partition": {
+    "cross_role_exact_duplicate_overlap": 0,
+    "development_rows": 156821,
+    "final_test_rows": 68867,
+    "path": "results/stage22_temporal_session_safe/stage22_1g_sanitized_chronological_partition.parquet",
+    "sha256": "d1c4b3536ab317b11e9288e0f2eb9b4883635eddb06f77e8e4cc9c4ae964cc9c",
+    "validation_rows": 15245
+  },
+  "stage22_validation_use": {
+    "classical_fit_control": "NONE",
+    "threshold_selection_after_training": true,
+    "threshold_selection_population": "SANITIZED_STAGE22_VALIDATION_ONLY",
+    "transformer_checkpoint_control": "VALIDATION_PR_AUC_ONLY_UNDER_INHERITED_STAGE15 SCHEDULER_CHECKPOINT_AND_EARLY_STOPPING_RULE",
+    "validation_rows_may_enter_gradient_updates": false,
+    "validation_rows_may_enter_scaler_fit": false
+  },
+  "status": "FROZEN_BEFORE_ANY_STAGE22_LABEL_ACCESS_PREPROCESSING_FIT_MODEL_TRAINING_INFERENCE_OR_VALIDATION_OUTCOME",
+  "target_policy": {
+    "Label_column_used_for_modeling": false,
+    "allowed_values": [
+      0,
+      1
+    ],
+    "final_test_target_read_before_authorization": false,
+    "negative_class": 0,
+    "positive_class": 1,
+    "target": "binary_label"
+  },
+  "threshold_protocol": {
+    "balanced": {
+      "objective": "MAXIMIZE_F1",
+      "tie_break_1": "MINIMIZE_FPR",
+      "tie_break_2": "CHOOSE_HIGHER_THRESHOLD"
+    },
+    "final_test_threshold_search": false,
+    "grid": {
+      "inclusive": true,
+      "start": 0.01,
+      "step": 0.01,
+      "stop": 0.99
+    },
+    "historical_stage15_threshold_protocol_inherited": false,
+    "historical_stage16_operating_threshold_0_46_inherited": false,
+    "historical_thresholds_reference_only": true,
+    "security": {
+      "constraint": "FPR <= 0.05",
+      "if_no_feasible_threshold": "SECURITY_THRESHOLD_INFEASIBLE_NO_RELAXATION",
+      "objective": "MAXIMIZE_F2",
+      "tie_break_1": "MINIMIZE_FPR",
+      "tie_break_2": "CHOOSE_HIGHER_THRESHOLD"
+    },
+    "selected_separately_per_model_family": true,
+    "standard": 0.5
+  },
+  "title": "Inherited Model Execution Recipe Lock",
+  "transformer": {
+    "architecture": {
+      "activation": "gelu",
+      "d_ff": 256,
+      "d_token": 64,
+      "dropout": 0.1,
+      "input_semantics": "FEATURE_SPECIFIC_NUMERICAL_TOKENIZER_WITH_CLS",
+      "n_features": 70,
+      "n_heads": 8,
+      "n_layers": 3,
+      "positional_encoding": false
+    },
+    "ensemble": {
+      "member_count": 5,
+      "members": [
+        "BEST_CHECKPOINT_SEED_7",
+        "BEST_CHECKPOINT_SEED_29",
+        "BEST_CHECKPOINT_SEED_101",
+        "BEST_CHECKPOINT_SEED_313",
+        "BEST_CHECKPOINT_SEED_997"
+      ],
+      "probability_combination": "ARITHMETIC_MEAN_OF_FIVE_ATTACK_PROBABILITY_VECTORS",
+      "weight_search": false,
+      "weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    "identity": "FT_BALANCED_5_CHECKPOINT_ENSEMBLE",
+    "loss": {
+      "class_weight_search": false,
+      "name": "BCEWithLogitsLoss",
+      "positive_class_weight": "DEVELOPMENT_BENIGN_COUNT_DIVIDED_BY_DEVELOPMENT_ATTACK_COUNT",
+      "statistics_source": "SANITIZED_STAGE22_DEVELOPMENT_LABELS_ONLY"
+    },
+    "member_architecture": "FT_BALANCED",
+    "model_class": "NumericFTTransformer",
+    "module": {
+      "path": "results/stage15_transformer_checkpoint/ft_transformer_numeric.py",
+      "sha256": "8233a7b62e7045d7c920c15fd8ec974ed8b3db6f2f131dc4c64ba0ce0133dcfc"
+    },
+    "preprocessing": {
+      "clipping": false,
+      "final_test_in_scaler_fit": false,
+      "fit_population": "SANITIZED_STAGE22_DEVELOPMENT_ONLY",
+      "historical_scaler_role": "STRUCTURAL_REFERENCE_ONLY; STAGE22 MUST FIT A FRESH STANDARD_SCALER ON DEVELOPMENT",
+      "historical_scaler_sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5",
+      "historical_stage15_scaler_reused": false,
+      "imputation": false,
+      "nonfinite_output_policy": "HARD_STOP",
+      "numeric_coercion": "NUMERIC_VALUES_ONLY_NO_IMPUTATION",
+      "raw_numeric_dtype_before_scaler": "float64",
+      "scaler": "sklearn.preprocessing.StandardScaler",
+      "scaler_parameters": {
+        "copy": true,
+        "with_mean": true,
+        "with_std": true
+      },
+      "transformed_dtype": "float32",
+      "validation_in_scaler_fit": false
+    },
+    "seed_policy": {
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "numpy_random": "seed",
+      "python_random": "seed",
+      "seed_search": false,
+      "torch_cuda_manual_seed_all": "seed_if_cuda_available",
+      "torch_manual_seed": "seed",
+      "training_dataloader_generator_seed": "seed"
+    },
+    "seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "training": {
+      "architecture_search": false,
+      "batch_size": 1024,
+      "checkpoint_selection": {
+        "best_checkpoint_only_for_final_ensemble": true,
+        "direction": "MAXIMIZE",
+        "improvement_tolerance": 1e-07,
+        "metric": "STAGE22_VALIDATION_PR_AUC"
+      },
+      "drop_last": false,
+      "early_stopping": {
+        "maximum_epochs": 70,
+        "metric": "STAGE22_VALIDATION_PR_AUC",
+        "patience": 6
+      },
+      "final_test_rows_in_gradient_updates": false,
+      "gradient_clip_norm": 1.0,
+      "gradient_update_population": "SANITIZED_STAGE22_DEVELOPMENT_ONLY",
+      "hyperparameter_search": false,
+      "maximum_epochs": 70,
+      "optimizer": {
+        "learning_rate": 0.0005,
+        "name": "AdamW",
+        "weight_decay": 1e-05
+      },
+      "precision": "float32",
+      "scheduler": {
+        "factor": 0.5,
+        "metric": "STAGE22_VALIDATION_PR_AUC",
+        "minimum_learning_rate": 1e-05,
+        "mode": "max",
+        "name": "ReduceLROnPlateau",
+        "patience": 2
+      },
+      "seed_search": false,
+      "training_dataloader_num_workers": 2,
+      "training_persistent_workers": true,
+      "training_pin_memory": true,
+      "training_shuffle": true,
+      "validation_dataloader_num_workers": 2,
+      "validation_persistent_workers": true,
+      "validation_pin_memory": true,
+      "validation_rows_in_gradient_updates": false,
+      "validation_shuffle": false,
+      "validation_use_interpretation": "VALIDATION MAY CONTROL THE INHERITED STAGE15 SCHEDULER_BEST_CHECKPOINT_AND_EARLY_STOPPING RULE; VALIDATION NEVER ENTERS GRADIENT UPDATES OR PREPROCESSING FIT"
+    }
+  }
+}

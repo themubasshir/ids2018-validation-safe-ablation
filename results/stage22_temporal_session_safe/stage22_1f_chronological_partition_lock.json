@@ -1,0 +1,161 @@
+{
+  "anchors": {
+    "stage22_0_protocol_sha256": "df9654a1bcff9ff02404e6b2cf6dde5d1ac1bf679d6a5884509427ef1b0fc062",
+    "stage22_1c_provenance_mapping_sha256": "b00ae439254a7aa5f6e1a0fb715339be26df229ad65af26dc102c28b25b0ce6e",
+    "stage22_1d_provenance_evidence_seal_sha256": "6d2f40d1915e131ceffca723848f5270a9ee8887acb13fe035a0d8c86d27b8b8",
+    "stage22_1e_duplicate_evidence_seal_sha256": "1db4e574b1b6c858152b9977c0dcb206dac46cd8110ef465ff332803a9b3bc00",
+    "stage22_1e_duplicate_mapping_sha256": "44b6ec8393998e6c843e8943e6a12a0940a183c6e6a9eed2de2bb1274f73fc08"
+  },
+  "chronological_partition": {
+    "development_days": [
+      "2018-02-14",
+      "2018-02-15",
+      "2018-02-16",
+      "2018-02-21",
+      "2018-02-22",
+      "2018-02-23"
+    ],
+    "final_test_days": [
+      "2018-03-01",
+      "2018-03-02"
+    ],
+    "final_test_pooling": "POOL_LATEST_TWO_DAYS_AND_REPORT_EACH_DAY_SEPARATELY",
+    "minimum_required_usable_day_count": 5,
+    "ordering": "STRICT_ASCENDING_CAPTURE_DATE",
+    "usable_day_count": 9,
+    "validation_days": [
+      "2018-02-28"
+    ]
+  },
+  "created_utc": "2026-08-16T16:07:34+00:00",
+  "duplicate_governance": {
+    "duplicate_exclusion_performed_here": false,
+    "duplicate_group_mapping_sha256": "44b6ec8393998e6c843e8943e6a12a0940a183c6e6a9eed2de2bb1274f73fc08",
+    "duplicate_groups_already_frozen": true,
+    "future_duplicate_exclusion_may_change_role_assignment": false,
+    "future_duplicate_exclusion_may_change_usable_day_list": false,
+    "future_empty_day_repair_allowed": false,
+    "future_rule": "If an exact frozen 70-feature fingerprint occurs in more than one chronological role, retain all occurrences in the earliest chronological role and exclude every occurrence from later roles. Within-role duplicates remain.",
+    "role_order": [
+      "DEVELOPMENT",
+      "VALIDATION",
+      "FINAL_TEST"
+    ]
+  },
+  "final_test_governance": {
+    "authorized_final_outcome_openings_consumed": 0,
+    "final_class_labels_read": false,
+    "final_metrics_computed": false,
+    "final_model_scores_generated": false,
+    "final_test_days_now_identified": true
+  },
+  "next_boundary": {
+    "allowed": [
+      "join frozen partition roles to frozen duplicate groups",
+      "identify exact groups crossing chronological roles",
+      "retain occurrences in earliest role",
+      "exclude occurrences from later roles",
+      "verify zero cross-role exact duplicate overlap after sanitization",
+      "seal sanitized row membership"
+    ],
+    "forbidden": [
+      "label reading",
+      "class-balance-driven corrections",
+      "day reassignment",
+      "role reassignment",
+      "preprocessing fitting",
+      "model fitting",
+      "model inference",
+      "threshold selection",
+      "validation metrics",
+      "final-test metrics"
+    ],
+    "name": "APPLY_FROZEN_CROSS_ROLE_EXACT_DUPLICATE_SANITIZATION",
+    "stage": "STAGE22-1G"
+  },
+  "partition_mapping": {
+    "path": "results/stage22_temporal_session_safe/stage22_1f_preduplicate_chronological_partition.parquet",
+    "rows": 300928,
+    "sha256": "d208d6f4b817bd9463aaec198af8a9568d444faf68c32b92511fd20ae0e57471",
+    "state": "PRE_DUPLICATE_SANITIZATION"
+  },
+  "row_counts_before_duplicate_sanitization": {
+    "ambiguous_provenance_excluded": 59995,
+    "development": 156821,
+    "eligible_unique_rows": 240933,
+    "final_test": 68867,
+    "total_flagship_rows": 300928,
+    "validation": 15245
+  },
+  "scientific_actions_not_performed": [
+    "Label read",
+    "binary_label read",
+    "duplicate exclusion",
+    "preprocessing fit",
+    "model training",
+    "model inference",
+    "threshold selection",
+    "validation metrics",
+    "final-test metrics"
+  ],
+  "scientific_parent_commit": "f53c2872024456d8d93b94c149a34cfe81f3f333",
+  "source_day_universe": {
+    "all_source_candidate_days": [
+      "2018-02-14",
+      "2018-02-15",
+      "2018-02-16",
+      "2018-02-20",
+      "2018-02-21",
+      "2018-02-22",
+      "2018-02-23",
+      "2018-02-28",
+      "2018-03-01",
+      "2018-03-02"
+    ],
+    "non_usable_reason": {
+      "2018-02-20": "ZERO_UNIQUELY_ATTRIBUTABLE_FLAGSHIP_ROWS_AFTER_FROZEN_PROVENANCE_ADMISSIBILITY"
+    },
+    "non_usable_source_days": [
+      "2018-02-20"
+    ],
+    "source_evidence_removed": false,
+    "unique_rows_by_day": {
+      "2018-02-14": 18813,
+      "2018-02-15": 35664,
+      "2018-02-16": 29783,
+      "2018-02-20": 0,
+      "2018-02-21": 39962,
+      "2018-02-22": 15721,
+      "2018-02-23": 16878,
+      "2018-02-28": 15245,
+      "2018-03-01": 30737,
+      "2018-03-02": 38130
+    },
+    "usable_days": [
+      "2018-02-14",
+      "2018-02-15",
+      "2018-02-16",
+      "2018-02-21",
+      "2018-02-22",
+      "2018-02-23",
+      "2018-02-28",
+      "2018-03-01",
+      "2018-03-02"
+    ]
+  },
+  "stage": "STAGE22-1F",
+  "status": "FROZEN_AFTER_PROVENANCE_AND_DUPLICATE_GROUP_EVIDENCE_BEFORE_DUPLICATE_EXCLUSION_OR_MODEL_EXECUTION",
+  "title": "Stage22 Usable-Capture-Day Semantics and Chronological Partition Lock",
+  "usable_capture_day_operationalization": {
+    "ambiguous_rows_count_as_day_membership": false,
+    "attack_family_information_used": false,
+    "class_balance_used": false,
+    "definition": "A source capture day is Stage22-usable iff at least one flagship row remains uniquely attributable to that capture day after the frozen provenance admissibility rules.",
+    "determined_before_duplicate_sanitization": true,
+    "label_information_used": false,
+    "minimum_unique_rows_required": 1,
+    "model_information_used": false,
+    "performance_information_used": false,
+    "unmapped_rows_allowed": false
+  }
+}

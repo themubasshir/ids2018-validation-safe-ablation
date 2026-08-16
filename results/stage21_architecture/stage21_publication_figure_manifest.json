@@ -1,0 +1,95 @@
+{
+  "checkpoint": "Stage21-Publication-Figures",
+  "figure_definitions": {
+    "Fig21-1": {
+      "Friday_role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+      "Thursday_role": "VALIDATION",
+      "purpose": "CNN_VS_VIT_RANKING_PERFORMANCE"
+    },
+    "Fig21-2": {
+      "new_bootstrap_run": false,
+      "purpose": "PAIRED_FLOW_BOOTSTRAP_AUC_DELTA_DISTRIBUTIONS",
+      "replicates": 10000,
+      "source": "FROZEN_STAGE21_5_BOOTSTRAP_ARRAY"
+    },
+    "Fig21-3": {
+      "purpose": "FRIDAY_FROZEN_OPERATING_POINT_BEHAVIOR",
+      "threshold_search": false,
+      "thresholds": {
+        "balanced": {
+          "CNN": 0.17,
+          "ViT": 0.42
+        },
+        "security": {
+          "CNN": 0.17,
+          "ViT": 0.24
+        },
+        "standard": {
+          "CNN": 0.5,
+          "ViT": 0.5
+        }
+      }
+    },
+    "Fig21-4": {
+      "new_XAI_execution": false,
+      "new_quality_threshold": false,
+      "purpose": "INTEGRATED_GRADIENTS_NUMERICAL_COMPLETENESS_QUALITY",
+      "visualized_statistics": "FROZEN_MEDIAN_AND_IQR"
+    }
+  },
+  "figures": {
+    "figures/stage21_architecture/fig21_1_cnn_vit_ranking_comparison.pdf": {
+      "bytes": 68462,
+      "sha256": "2598fba69b01da02aa61167d052da1e2e25a38a798ca17ecd04b3e210d24bbd7"
+    },
+    "figures/stage21_architecture/fig21_1_cnn_vit_ranking_comparison.png": {
+      "bytes": 299760,
+      "sha256": "22306bd7c97ce88e15e5f2771820e0eec976fead9ce7ff7cedfd40b40beda3ad"
+    },
+    "figures/stage21_architecture/fig21_2_paired_bootstrap_auc_deltas.pdf": {
+      "bytes": 24398,
+      "sha256": "2f2ffaeee3b955967a6c9b87818005d1fcc005c90fd27a893da76b4448886b4b"
+    },
+    "figures/stage21_architecture/fig21_2_paired_bootstrap_auc_deltas.png": {
+      "bytes": 222705,
+      "sha256": "d09c994fbc9161df6b0578a8cbd4b73191b9b88242243a2b3c99f20cf6e5cbeb"
+    },
+    "figures/stage21_architecture/fig21_3_friday_frozen_operating_points.pdf": {
+      "bytes": 69887,
+      "sha256": "605d06e0f75977a52aa24382334b06c203e5a02deea68f9e511f523a86c479f1"
+    },
+    "figures/stage21_architecture/fig21_3_friday_frozen_operating_points.png": {
+      "bytes": 240843,
+      "sha256": "9d522cb68e7aad8591f008c906aa9d65f8bd456dc26fe2691864d76d628f9d7a"
+    },
+    "figures/stage21_architecture/fig21_4_ig_completeness_quality.pdf": {
+      "bytes": 21464,
+      "sha256": "64d8f300b1da221458462664e70579c5d5b74ad7ec92dab77455a2e2da78690b"
+    },
+    "figures/stage21_architecture/fig21_4_ig_completeness_quality.png": {
+      "bytes": 230766,
+      "sha256": "7958d9bf8b3892b83f60e3dbce9fc1961c369474c42e0d451ec400a03088efac"
+    }
+  },
+  "generation_script": {
+    "bytes": 17651,
+    "path": "scripts/stage21_generate_publication_figures.py",
+    "sha256": "384fe153165bc76fe72e51158370710335f7cd74593568d9d27de30010ce00dd"
+  },
+  "next": "STAGE21_FINAL_CLOSE_AFTER_PUBLICATION_FIGURES",
+  "parent_commit": "3994cfd4b8cc757f0f5821146b0023ebed2a45f7",
+  "scientific_boundary": {
+    "architecture_selection": false,
+    "new_IG_runs": 0,
+    "new_bootstrap_replicates": 0,
+    "new_gradient_passes": 0,
+    "new_model_forwards": 0,
+    "new_threshold_reselection": false,
+    "new_threshold_search": false,
+    "optimizer_steps": 0,
+    "post_result_method_selection": false,
+    "scientific_results_changed": false,
+    "training": false
+  },
+  "status": "STAGE21_FOUR_PUBLICATION_FIGURES_GENERATED_FROM_FROZEN_ARTIFACTS"
+}

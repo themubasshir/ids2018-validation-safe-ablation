@@ -1,0 +1,422 @@
+{
+  "created_at_utc": "2026-08-16T15:09:34.794341+00:00",
+  "immutability_policy": {
+    "correction_policy": "Any future correction to sealed through-Stage21 evidence must be explicit, provenance-preserving, and documented as an erratum rather than silently rewriting this seal.",
+    "future_research_may_modify_this_archive": false,
+    "permitted_future_research_stage": "Stage22",
+    "stage21_scientific_closure_reopened": false,
+    "stages_through_21_publication_evidence_frozen": true
+  },
+  "next_stage": "STAGE22_TEMPORAL_SESSION_SAFE_FLAGSHIP_RERUN",
+  "publication_evidence": {
+    "complete_archive_aggregate_sha256": "1c9a9ef29cf47d4de66703b8195ce191a7db4f182249d40feb4528970787ab63",
+    "stage_inventories": {
+      "Stage14_Integrated_Gradients": {
+        "aggregate_sha256": "1fe0f0d412fd876ebf6265fdcf0aed3b0ecc70e54eb386e51037e91d7ab9e2ce",
+        "files": [
+          {
+            "bytes": 167390,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_cnn_global_top15_features.png",
+            "sha256": "f9792f2916246cf5b766ff8544273e05218dec84f71cfba9f64fd6bf21557b2e"
+          },
+          {
+            "bytes": 120119,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_disagreement_baseline_sensitivity.png",
+            "sha256": "64ec56c957e7abc5e3ec333ef880b8d742e34dfdde117cc591c626901fcd9ea2"
+          },
+          {
+            "bytes": 167657,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_mlp_global_top15_features.png",
+            "sha256": "981afab33f5b9523fad7583fc10e9d046946e69841e24f0a4d91aefcf3e43d92"
+          },
+          {
+            "bytes": 154637,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_numerical_convergence_primary_baseline.png",
+            "sha256": "aa8ca1cc9031bcfd1050b60fb015b864e0a070f9821430311155471ca93ddb77"
+          },
+          {
+            "bytes": 143433,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_reference_sensitivity_by_outcome.png",
+            "sha256": "eb66ca302e74bda5b4002d3adf2a21fd8a62d68cbe9311be3b071cada3f0a77a"
+          },
+          {
+            "bytes": 102221,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_reliability_classes_by_model_outcome.png",
+            "sha256": "8e3f13d49fb3f44d5a3bf0511ee4c8870d43d5be2c17466aa491ac0431f877bf"
+          },
+          {
+            "bytes": 126704,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_robust_case_cnn_fp_05.png",
+            "sha256": "74e3b232f4fbcf2f0fce34495b2cde7c2efe2ef0a6bf19235fda26d9b5d25e5c"
+          },
+          {
+            "bytes": 126161,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_robust_case_cnn_tn_06.png",
+            "sha256": "b71ea11db8365b15374dd1475d9d65c8ea490d83253615ce9e653716dfa36257"
+          },
+          {
+            "bytes": 126007,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_robust_case_cnn_tp_08.png",
+            "sha256": "062d293dd1d3a153668aa6bbb9c8a7f4f0ce9b22124072ae6de87d1ddcc51ba4"
+          },
+          {
+            "bytes": 137889,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_robust_case_mlp_fp_04.png",
+            "sha256": "ca3dc5d836072ce5b439b00d76dd3ffb6a791801e4c232381bf7e1c62aa47dc5"
+          },
+          {
+            "bytes": 125123,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_robust_case_mlp_tn_08.png",
+            "sha256": "d881a1b21554727e512660c7405d8801928e698bc84f622648b13f5a86d8652a"
+          },
+          {
+            "bytes": 141447,
+            "path": "results/stage14_integrated_gradients/publication_assets/figures/ig_robust_case_mlp_tp_06.png",
+            "sha256": "d60621b73fe334d36f91f809ce13076ae5aaf84ba6d809d327099ce8a9c049df"
+          },
+          {
+            "bytes": 7222,
+            "path": "results/stage14_integrated_gradients/publication_assets/stage14_publication_asset_manifest.json",
+            "sha256": "bd1ca9ef5c2b9d0e323945193bc0dd9cf21a0d706a04cf6191dfa6803394eb16"
+          },
+          {
+            "bytes": 680,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_baseline_sensitivity.csv",
+            "sha256": "46794b4e95ad13e1fa96b90dca7d898e536e547a3cf8be2c74f3558cf9b7628d"
+          },
+          {
+            "bytes": 785,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_baseline_sensitivity.tex",
+            "sha256": "618473244375de00682919fae94dc63ad108dc5e4e198884653dc13f3fac96a3"
+          },
+          {
+            "bytes": 2789,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_global_top15_features.csv",
+            "sha256": "7c98ac7438ce026c6c95fbc7a0310d4439f4958e50c0b6eee64f19ac207576b6"
+          },
+          {
+            "bytes": 2741,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_global_top15_features.tex",
+            "sha256": "0c9024d9adc34758af3504d9b616685b4f3a84af1044a264c5fb42da1694ca4a"
+          },
+          {
+            "bytes": 1228,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_numerical_convergence.csv",
+            "sha256": "c6054b29d102d1d2350f81b1673c63a0f7f3ddcd9300f30ca71b1b811e4d76ab"
+          },
+          {
+            "bytes": 1162,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_numerical_convergence.tex",
+            "sha256": "e0eb9474e5ea3a4e9295027a0cdeb98a8d865fe646f64d6b2e8bf8672e8e6a50"
+          },
+          {
+            "bytes": 1225,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_recurring_reference_stable_features.csv",
+            "sha256": "c2d1b9e25789822793109ec413e716a57fcb412fe2460655512f3dd7429d859f"
+          },
+          {
+            "bytes": 1345,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_recurring_reference_stable_features.tex",
+            "sha256": "8584e0a354b28f2b6be9daaa4c695dfb6b0e8b2196db6abf9c1f9cccd497f526"
+          },
+          {
+            "bytes": 1723,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_reference_robust_cases.csv",
+            "sha256": "ad0679d0202a9fcb232b337df47ea38309d2141500d6a2bb1412d57a426ea1c2"
+          },
+          {
+            "bytes": 1515,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_reference_robust_cases.tex",
+            "sha256": "c7cb21c3b8390fa199283ad6d9bc8053e5ec8a82484e5c9ad804578436898b2c"
+          },
+          {
+            "bytes": 885,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_reliability_by_outcome.csv",
+            "sha256": "fd2b900a11209b951c6a43b97e5887db78eb2f90ff23d435b3d506f4b62e0c82"
+          },
+          {
+            "bytes": 1403,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_reliability_by_outcome.tex",
+            "sha256": "e5c2086595ca4c11a8499c77503675bbe63382f25747a1998b7c7dd4be177601"
+          },
+          {
+            "bytes": 138,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_reliability_distribution.csv",
+            "sha256": "e011c2be342a58aaa75a135a722195d6f113355f5c74c7c7b892997c43f4d93b"
+          },
+          {
+            "bytes": 403,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_reliability_distribution.tex",
+            "sha256": "cd1a9b482254e301e93cfe8f1f65029fd89984195eb3706d245bfbd574296bfc"
+          },
+          {
+            "bytes": 4656,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_ig_selected_robust_exemplars.csv",
+            "sha256": "e1429f0ea96c3d4391b8afe48774261a27cb16862c161578b26fb033d739e35c"
+          },
+          {
+            "bytes": 481,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_neural_holdout_performance.csv",
+            "sha256": "0e69d87c84250eb9ea7c36170a84e4449e31a9a4456060cdbf07c64c0a4dbf11"
+          },
+          {
+            "bytes": 590,
+            "path": "results/stage14_integrated_gradients/publication_assets/tables/table_neural_holdout_performance.tex",
+            "sha256": "ac891384115651e638ab9810a5eb8bf2a4868e879e0b57740db08655f0047c4e"
+          },
+          {
+            "bytes": 3347,
+            "path": "results/stage14_integrated_gradients/publication_assets/text/stage14_formal_findings.md",
+            "sha256": "8d13bcbceb0969f5d8164f35cf193a3dc6a57065c0edcdab5bddbd1f438952f3"
+          },
+          {
+            "bytes": 744,
+            "path": "results/stage14_integrated_gradients/publication_assets/text/stage14_manuscript_paragraph.txt",
+            "sha256": "f494fc5fe99a3dbf8f8aed4501ee96315b0cb83be8e631265195214915f44cf2"
+          },
+          {
+            "bytes": 731,
+            "path": "results/stage14_integrated_gradients/publication_assets/text/stage14_methods_paragraph.txt",
+            "sha256": "69e2e4ab500cb1a30b66c0fde07cdf6bf2ec30b5274d53ebe557343886fa22d2"
+          },
+          {
+            "bytes": 1042,
+            "path": "results/stage14_integrated_gradients/publication_assets/text/stage14_recommended_claims.json",
+            "sha256": "06d4ee8b66fbdf0a7ce3ef42ac9ca80b9f10130df13661681590b8619e37d0ce"
+          }
+        ],
+        "root": "results/stage14_integrated_gradients/publication_assets",
+        "tracked_file_count": 34
+      },
+      "Stage16_Classical_vs_Transformer": {
+        "aggregate_sha256": "3ce62220a038cd21878259142353667476010c894b6edbd73e190e5492bd329c",
+        "files": [
+          {
+            "bytes": 65539,
+            "path": "figures/stage16_classical_transformer/fig16_1_classical_vs_transformer_holdout_tradeoff.pdf",
+            "sha256": "45eb02f990b387573fdb9389b78ec2706ae87813d86ffc88a3285a8949a8c908"
+          },
+          {
+            "bytes": 509433,
+            "path": "figures/stage16_classical_transformer/fig16_1_classical_vs_transformer_holdout_tradeoff.png",
+            "sha256": "d35c383431b256f860990f028b0eda5c11963af201956a5a25511a950edd3339"
+          }
+        ],
+        "root": "figures/stage16_classical_transformer",
+        "tracked_file_count": 2
+      },
+      "Stage17_Attention_Explainability": {
+        "aggregate_sha256": "5aff29e3d7a93af3abdccf9c12a8e229d8e1ccc9288016e9cb70181d909008d8",
+        "files": [
+          {
+            "bytes": 238466,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_confusion_state_rollout_top20_heatmap.png",
+            "sha256": "10145493f88f68912de2cb2d421dade145f7d4f792545791c9d2ded95cefe3be"
+          },
+          {
+            "bytes": 65197,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_cross_seed_rollout_spearman.png",
+            "sha256": "1016d36581a5c8d211f4839a6d600c2deac7d3b71e203eea534762a2aaaba1b6"
+          },
+          {
+            "bytes": 43620,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_cross_seed_rollout_top10_jaccard.png",
+            "sha256": "dea32dd23115b38d2c111048a18ef036004ac816b494470f3e9fc07fbd856997"
+          },
+          {
+            "bytes": 148670,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_global_rollout_top20.png",
+            "sha256": "8a99784ba90c8d366b22034a36384e4edb6d04ae236b92283b83e864e977ea6f"
+          },
+          {
+            "bytes": 53985,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_layer_head_entropy_heatmap.png",
+            "sha256": "4cd22b48be0f95134c822db9375c833ec34f209b3073010253c21c5f20139f2c"
+          },
+          {
+            "bytes": 238303,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_layerwise_cls_feature_attention_top20.png",
+            "sha256": "b18a1dc6189f470baa13a107789e0cd70d93ef26e07098b6de708f6a48d97ebd"
+          },
+          {
+            "bytes": 255244,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_true_attack_vs_benign_top20.png",
+            "sha256": "068128a9a10baf0f1f347c9a3d525f39c84b7409aefbb423e7bd7ab9c7b58625"
+          },
+          {
+            "bytes": 60937,
+            "path": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures/stage17_2_within_layer_head_similarity_heatmaps.png",
+            "sha256": "b35ae1c939a7035d298bad68921ad4d634b4599b0e1b5c38152770c0326e5dcc"
+          }
+        ],
+        "root": "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/figures",
+        "tracked_file_count": 8
+      },
+      "Stage18_Graph": {
+        "aggregate_sha256": "46954c3638b7328e68a37c077401b1cb9ec6d7b03101da6cbe259d684280ad06",
+        "files": [
+          {
+            "bytes": 78104,
+            "path": "figures/stage18_graph/fig18_1_graph_ranking_vs_frozen_operating_point.pdf",
+            "sha256": "da3c6bdec20114a3f3db8c5b82f457950c17ae08580a3dba5c63acb385b63731"
+          },
+          {
+            "bytes": 324651,
+            "path": "figures/stage18_graph/fig18_1_graph_ranking_vs_frozen_operating_point.png",
+            "sha256": "ae80fe34498d77bbb9ae60ec5870408cfd45770a1a10c3d04c190354290bd862"
+          }
+        ],
+        "root": "figures/stage18_graph",
+        "tracked_file_count": 2
+      },
+      "Stage19_MTemporal": {
+        "aggregate_sha256": "3930c95b83265d4af46eb8ea54d2c504e99a917381b8d5bf0c0f92e084e706b8",
+        "files": [
+          {
+            "bytes": 65925,
+            "path": "figures/stage19_temporal/fig19_1_mtemporal_pooled_and_daily_heterogeneity.pdf",
+            "sha256": "9dfde72d820ce3be238488598f8cfb2df6c687e9675eb5dbe8262c33325c47ea"
+          },
+          {
+            "bytes": 343994,
+            "path": "figures/stage19_temporal/fig19_1_mtemporal_pooled_and_daily_heterogeneity.png",
+            "sha256": "88adaf6be11c02935fc5f9c545d309f2b35a363f663fef161409857e967f6899"
+          }
+        ],
+        "root": "figures/stage19_temporal",
+        "tracked_file_count": 2
+      },
+      "Stage21_CNN_vs_ViT": {
+        "aggregate_sha256": "85c7a6ba548e9e42ff76587a5df33e26424db3d0eb35fe71f4e40cac8386e042",
+        "files": [
+          {
+            "bytes": 68462,
+            "path": "figures/stage21_architecture/fig21_1_cnn_vit_ranking_comparison.pdf",
+            "sha256": "2598fba69b01da02aa61167d052da1e2e25a38a798ca17ecd04b3e210d24bbd7"
+          },
+          {
+            "bytes": 299760,
+            "path": "figures/stage21_architecture/fig21_1_cnn_vit_ranking_comparison.png",
+            "sha256": "22306bd7c97ce88e15e5f2771820e0eec976fead9ce7ff7cedfd40b40beda3ad"
+          },
+          {
+            "bytes": 24398,
+            "path": "figures/stage21_architecture/fig21_2_paired_bootstrap_auc_deltas.pdf",
+            "sha256": "2f2ffaeee3b955967a6c9b87818005d1fcc005c90fd27a893da76b4448886b4b"
+          },
+          {
+            "bytes": 222705,
+            "path": "figures/stage21_architecture/fig21_2_paired_bootstrap_auc_deltas.png",
+            "sha256": "d09c994fbc9161df6b0578a8cbd4b73191b9b88242243a2b3c99f20cf6e5cbeb"
+          },
+          {
+            "bytes": 69887,
+            "path": "figures/stage21_architecture/fig21_3_friday_frozen_operating_points.pdf",
+            "sha256": "605d06e0f75977a52aa24382334b06c203e5a02deea68f9e511f523a86c479f1"
+          },
+          {
+            "bytes": 240843,
+            "path": "figures/stage21_architecture/fig21_3_friday_frozen_operating_points.png",
+            "sha256": "9d522cb68e7aad8591f008c906aa9d65f8bd456dc26fe2691864d76d628f9d7a"
+          },
+          {
+            "bytes": 21464,
+            "path": "figures/stage21_architecture/fig21_4_ig_completeness_quality.pdf",
+            "sha256": "64d8f300b1da221458462664e70579c5d5b74ad7ec92dab77455a2e2da78690b"
+          },
+          {
+            "bytes": 230766,
+            "path": "figures/stage21_architecture/fig21_4_ig_completeness_quality.png",
+            "sha256": "7958d9bf8b3892b83f60e3dbce9fc1961c369474c42e0d451ec400a03088efac"
+          }
+        ],
+        "root": "figures/stage21_architecture",
+        "tracked_file_count": 8
+      }
+    },
+    "supporting_documents": [
+      {
+        "bytes": 10076,
+        "path": "README.md",
+        "sha256": "f861d4c4b7197fb017622e141b54bb606924cbc1fd04e8f00cce8fe2809cfedf"
+      },
+      {
+        "bytes": 7080,
+        "path": "figures/JOURNAL_FIGURE_INDEX.md",
+        "sha256": "e79781774ffc1fcaccdea74983ede72ee0707b79407b8c6c15bb1bae32623c1e"
+      },
+      {
+        "bytes": 2947,
+        "path": "results/publication_figures_through_stage21_gap_completion.json",
+        "sha256": "0735b8aaae5588c92801a1e035ad8ee08cc7d7f2dbaa9ca253f3c09eb6117da5"
+      },
+      {
+        "bytes": 3124,
+        "path": "results/stage21_architecture/stage21_publication_figure_postclosure_seal.json",
+        "sha256": "db1ff1c4ce8320ace8d9d853c4c1c55c70f71e865e116d3f6161ffc07bd2cec2"
+      }
+    ],
+    "supporting_documents_aggregate_sha256": "a673bde234291db08337770b08b9e3205ce96361c57b4d9d11e901e87c9cefe9",
+    "total_unique_inventory_records": 60
+  },
+  "scientific_boundary": {
+    "architecture_selection": false,
+    "bootstrap_replicates": 0,
+    "gradients": 0,
+    "holdout_openings": 0,
+    "integrated_gradients_runs": 0,
+    "model_fits": 0,
+    "model_forwards": 0,
+    "model_selection": false,
+    "probability_inference": 0,
+    "scientific_result_changes": 0,
+    "threshold_reselection": false,
+    "threshold_searches": 0
+  },
+  "seal": "FINAL_PUBLICATION_ARCHIVE_THROUGH_STAGE21",
+  "sealed_parent_commit": "fd4d42eb41c4ec0011af5affd5ddf9c1af14d70d",
+  "stage21_scientific_closure": {
+    "record": "results/stage21_architecture/stage21_publication_figure_postclosure_seal.json",
+    "status": "STAGE21_SCIENTIFICALLY_CLOSED_AND_PUBLICATION_FIGURES_DURABLY_SEALED"
+  },
+  "stage_coverage": {
+    "Stage14": {
+      "role": "NEURAL_INTEGRATED_GRADIENTS_PUBLICATION_EVIDENCE",
+      "status": "SEALED_EXISTING_PACKAGE"
+    },
+    "Stage15": {
+      "new_dedicated_figure": false,
+      "reason": "DIRECT_SAME_HOLDOUT_TRANSFORMER_COMPARISON_IS_VISUALIZED_IN_STAGE16",
+      "role": "FROZEN_TRANSFORMER_EXPERIMENT"
+    },
+    "Stage16": {
+      "role": "CLASSICAL_VS_TRANSFORMER_SAME_HOLDOUT_COMPARISON",
+      "status": "SEALED_PUBLICATION_FIGURE"
+    },
+    "Stage17": {
+      "role": "TRANSFORMER_ATTENTION_EXPLAINABILITY",
+      "status": "SEALED_EXISTING_FIGURE_PACKAGE"
+    },
+    "Stage18": {
+      "role": "GRAPH_REPRESENTATION_FEASIBILITY",
+      "status": "SEALED_PUBLICATION_FIGURE"
+    },
+    "Stage19": {
+      "role": "MULTISCALE_CAUSAL_TEMPORAL_MODELING",
+      "status": "SEALED_PUBLICATION_FIGURE"
+    },
+    "Stage20": {
+      "new_dedicated_figure": false,
+      "reason": "STAGE20_CNN_IS_DIRECTLY_VISUALIZED_AS_THE_FROZEN_COMPARATOR_IN_STAGE21",
+      "role": "AUTHENTIC_PACKET_IMAGE_CNN_COMPARATOR"
+    },
+    "Stage21": {
+      "additional_stage21_figures_required": false,
+      "additional_stage21_xai_methods_permitted": false,
+      "publication_figure_files": 8,
+      "role": "PARAMETER_MATCHED_CNN_VS_VIT_ARCHITECTURAL_ABLATION",
+      "status": "SCIENTIFICALLY_CLOSED_AND_PUBLICATION_FIGURES_SEALED"
+    }
+  },
+  "status": "PUBLICATION_ARCHIVE_THROUGH_STAGE21_DURABLY_FROZEN"
+}

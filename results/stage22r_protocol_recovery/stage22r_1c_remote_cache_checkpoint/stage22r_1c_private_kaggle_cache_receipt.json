@@ -1,0 +1,114 @@
+{
+  "cache": {
+    "bytes": 1541208291,
+    "file_count": 8,
+    "files": [
+      {
+        "attack": 156674,
+        "benign": 666273,
+        "bytes": 87229572,
+        "filename": "day_00_02-14-2018.parquet",
+        "rows": 822947,
+        "sha256": "a542ad551f5aab59c9ad27958d6bb065e3336b3ca4f040da21e49ad71936f990"
+      },
+      {
+        "attack": 51740,
+        "benign": 994414,
+        "bytes": 116709416,
+        "filename": "day_01_02-15-2018.parquet",
+        "rows": 1046154,
+        "sha256": "48b4173ac1d2711047be9284b73247537da9db3ade3e8bf63bc7ed878424ff72"
+      },
+      {
+        "attack": 454335,
+        "benign": 446653,
+        "bytes": 81039407,
+        "filename": "day_02_02-16-2018.parquet",
+        "rows": 900988,
+        "sha256": "26c259c777fbb59faecbabc00071a601ff7d1546a1c4bbca87b62f60e285bb43"
+      },
+      {
+        "attack": 576175,
+        "benign": 7350083,
+        "bytes": 882400309,
+        "filename": "day_03_02-20-2018.parquet",
+        "rows": 7926258,
+        "sha256": "f3d30949dc85b978409438a1ca1077223d54bd8d24ea1689c03b976a938f5280"
+      },
+      {
+        "attack": 670191,
+        "benign": 360827,
+        "bytes": 73395331,
+        "filename": "day_04_02-21-2018.parquet",
+        "rows": 1031018,
+        "sha256": "66a0a25777f1aa13b2f3d24e49227250b23351dfc13a0940b79af585306d26dd"
+      },
+      {
+        "attack": 362,
+        "benign": 1044935,
+        "bytes": 118325921,
+        "filename": "day_05_02-22-2018.parquet",
+        "rows": 1045297,
+        "sha256": "02d5f4bb82ce2e308ada9335ad1a7901b2aba069bd4e4ea9bfa33a28a57f9504"
+      },
+      {
+        "attack": 566,
+        "benign": 1045395,
+        "bytes": 118058441,
+        "filename": "day_06_02-23-2018.parquet",
+        "rows": 1045961,
+        "sha256": "4f727c8ff65f3af7881f5efeb18f6c0e310c20a3569fc644040f877d1a0ed9d3"
+      },
+      {
+        "attack": 62256,
+        "benign": 531524,
+        "bytes": 64049894,
+        "filename": "day_07_02-28-2018.parquet",
+        "rows": 593780,
+        "sha256": "3ab933a7988af562f49f63b8975882b7c66e843e9c4b967a38d5d875d062f62b"
+      }
+    ],
+    "rows": 14412403
+  },
+  "final_holdout": {
+    "03-01_opened": false,
+    "03-02_opened": false,
+    "labels_read": 0,
+    "maximum_authorized_openings": 1,
+    "openings_consumed": 0,
+    "predictors_read": 0,
+    "rows_read": 0
+  },
+  "gpu_reset_recovery": {
+    "dataset_to_attach": "jmmubasshirrahman/stage22r-1c-70f-cache-3cd41c5f",
+    "expected_runtime_cache_path": "/kaggle/working/stage22r_1c_70f_development_cache",
+    "required_post_reset_verification": "Verify the eight mounted Parquet files against the SHA256 values in this receipt before Stage22R-2A.",
+    "scientific_state_reconstruction": "Clone/pull Git, attach the private Kaggle dataset, verify exact file hashes, then create the expected runtime cache path using verified symlinks or direct verified files."
+  },
+  "kaggle_dataset": {
+    "dataset_id": "jmmubasshirrahman/stage22r-1c-70f-cache-3cd41c5f",
+    "owner": "jmmubasshirrahman",
+    "privacy": "PRIVATE_BY_CREATE_DEFAULT",
+    "remote_file_count": 8,
+    "slug": "stage22r-1c-70f-cache-3cd41c5f",
+    "status_endpoint_note": "The Kaggle CLI 2.0.2 `datasets status` call returned HTTP 403 after successful upload. No second creation or version operation was attempted. Remote verification was therefore completed using the non-mutating documented `datasets files` endpoint.",
+    "verification_method": "kaggle datasets files"
+  },
+  "next_authorized_action": "Enable Kaggle GPU and allow reset. After reset, restore Git plus the private Stage22R-1C cache and verify hashes before executing Stage22R-2A RANDOM_NATURAL.",
+  "scientific_access": {
+    "inference": 0,
+    "labels_recomputed": 0,
+    "models_fit": 0,
+    "predictor_values_recomputed": 0,
+    "source_ids_csv_files_opened": 0,
+    "source_rows_read": 0,
+    "threshold_selection": 0
+  },
+  "scientific_input_manifest": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_development_model_input_manifest.json",
+    "sha256": "05fe6226afd37c3ab434140e1164643eecc7abc75c295a2d6fb0280d4f42127e"
+  },
+  "scientific_parent_commit": "3cd41c5fa96a8993cc9d77e7ead503c99fdb0f42",
+  "stage": "Stage22R-1C-RC1",
+  "status": "PRIVATE_KAGGLE_RESET_SAFE_CACHE_CHECKPOINT_VERIFIED"
+}

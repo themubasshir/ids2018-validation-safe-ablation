@@ -1,0 +1,116 @@
+{
+  "artifacts": {
+    "docs/STAGE21_3_THURSDAY_VALIDATION.md": {
+      "bytes": 1454,
+      "remote_byte_identity": true,
+      "sha256": "ff9fd6571d57e3a314b916b61cbbb30f765642e485f7377c491a3aed41138527"
+    },
+    "results/stage21_architecture/stage21_3_thursday_eval_executed.py": {
+      "bytes": 19634,
+      "remote_byte_identity": true,
+      "sha256": "bdbc2d14122914c4316f0e08e8c3ae81122dee1daa0a0d7620612a3fd2c4234e"
+    },
+    "results/stage21_architecture/stage21_3_thursday_probabilities.npy": {
+      "bytes": 32916,
+      "remote_byte_identity": true,
+      "sha256": "db73defd588de532ee1bd29e941ddc55989620c7ef63d340b7109a947981826f"
+    },
+    "results/stage21_architecture/stage21_3_thursday_validation_evaluation.json": {
+      "bytes": 46693,
+      "remote_byte_identity": true,
+      "sha256": "fe7ad124558630cb820e24049b96cc6edba5ac1e14e18e89c239ce0f074e8a75"
+    }
+  },
+  "checkpoint": "Stage21-3-REMOTE-SEAL",
+  "model": {
+    "canonical_state_sha256": "9da47df6cd5c821eef3d2c8a501296cd6070b835c719999f572f3dec2d560771",
+    "checkpoint_sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8"
+  },
+  "operating_points": {
+    "balanced": {
+      "metrics": {
+        "Accuracy": 0.9934122239843846,
+        "F1": 0.03571428571428571,
+        "F2": 0.027472527472527472,
+        "FN": 41,
+        "FNR": 0.9761904761904762,
+        "FP": 13,
+        "FPR": 0.0015941140404659717,
+        "Precision": 0.07142857142857142,
+        "Recall": 0.023809523809523808,
+        "TN": 8142,
+        "TP": 1,
+        "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+        "threshold": 0.42,
+        "threshold_integer_percent": 42
+      },
+      "selection": "MAXIMUM_VALIDATION_F1_WITH_FROZEN_TIE_BREAKS"
+    },
+    "security": {
+      "available": true,
+      "constraint": "FPR_LE_0_05",
+      "metrics": {
+        "Accuracy": 0.9934122239843846,
+        "F1": 0.03571428571428571,
+        "F2": 0.027472527472527472,
+        "FN": 41,
+        "FNR": 0.9761904761904762,
+        "FP": 13,
+        "FPR": 0.0015941140404659717,
+        "Precision": 0.07142857142857142,
+        "Recall": 0.023809523809523808,
+        "TN": 8142,
+        "TP": 1,
+        "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+        "threshold": 0.24,
+        "threshold_integer_percent": 24
+      },
+      "selection": "MAXIMUM_VALIDATION_F2_WITH_FROZEN_TIE_BREAKS"
+    },
+    "standard": {
+      "metrics": {
+        "Accuracy": 0.9935342198365256,
+        "F1": 0.0,
+        "F2": 0.0,
+        "FN": 42,
+        "FNR": 1.0,
+        "FP": 11,
+        "FPR": 0.00134886572654813,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "TN": 8144,
+        "TP": 0,
+        "prediction_rule": "ATTACK_IF_FLOAT32_SIGMOID_PROBABILITY_GTE_THRESHOLD",
+        "threshold": 0.5,
+        "threshold_integer_percent": 50
+      },
+      "selection": "FIXED_0_50"
+    }
+  },
+  "operational_recovery": {
+    "failure_reason": "STAGE21_3_PROBABILITY_NPY_MATCHED_EXISTING_GITIGNORE_RULE",
+    "initial_git_add_failed_before_commit": true,
+    "initial_scientific_execution_succeeded": true,
+    "model_inference_repeated": false,
+    "partial_nonignored_staging_observed": true,
+    "probability_sha256": "db73defd588de532ee1bd29e941ddc55989620c7ef63d340b7109a947981826f",
+    "probability_source_reused": true,
+    "recovery_action": "FORCE_ADD_EXACT_PERSISTED_PROBABILITY_ARTIFACT_ONLY",
+    "threshold_selection_repeated": false
+  },
+  "parent_commit": "7f63e836609aa63939d01929b33fd4ccfa897a44",
+  "science_commit": "297c45aa7bc82a724e9f83a88042c6f9aa002e4d",
+  "scientific_boundary": {
+    "Friday_accessed": false,
+    "Thursday_inference_passes": 1,
+    "model_retrained": false,
+    "optimizer_steps": 0,
+    "threshold_selection_passes": 1,
+    "thresholds_frozen": true
+  },
+  "score_metrics": {
+    "PR_AUC": 0.23477059852366194,
+    "ROC_AUC": 0.973370120580421
+  },
+  "status": "THURSDAY_VIT_VALIDATION_DURABLE_THRESHOLDS_FROZEN"
+}

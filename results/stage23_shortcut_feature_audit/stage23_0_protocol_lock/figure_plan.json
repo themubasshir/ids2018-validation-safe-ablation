@@ -1,0 +1,24 @@
+{
+  "Figure_23_A": {
+    "content": "Seven primary subsets; RANDOM_NATURAL vs CHRONOLOGICAL_NATURAL PR-AUC and ROC-AUC.",
+    "title": "Subset \u00d7 split interaction"
+  },
+  "Figure_23_B": {
+    "content": "FULL minus ablated penalties by split with frozen bootstrap uncertainty and random-minus-chronological interaction.",
+    "title": "Removal penalties and shortcut interaction"
+  },
+  "Figure_23_C": {
+    "content": "Dst Port, Init Fwd Win Byts, Fwd Seg Size Min; random versus chronological.",
+    "title": "Single-feature stump degradation"
+  },
+  "Figure_23_D": {
+    "content": "Top-rank changes and normalized importance redistribution after removal of shortcut-prone information.",
+    "title": "SHAP proxy absorption"
+  },
+  "supplementary": [
+    "matched-size placebo ablations",
+    "attack-family-conditioned degradation",
+    "complete component-specific SHAP top-20 tables",
+    "behavior-restricted operating metrics"
+  ]
+}

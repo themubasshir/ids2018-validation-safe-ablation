@@ -1,0 +1,38 @@
+{
+  "headline_interaction_metrics": [
+    "PR_AUC",
+    "ROC_AUC"
+  ],
+  "primary_ranking_metric": "PR_AUC",
+  "primary_removal_penalty": {
+    "chronological": "M_FULL_CHRONOLOGICAL - M_SUBSET_CHRONOLOGICAL",
+    "random": "M_FULL_RANDOM - M_SUBSET_RANDOM",
+    "shortcut_interaction": "(M_FULL_RANDOM - M_SUBSET_RANDOM) - (M_FULL_CHRONOLOGICAL - M_SUBSET_CHRONOLOGICAL)"
+  },
+  "secondary_fixed_operating_point": {
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "fpr",
+      "fnr",
+      "tn",
+      "fp",
+      "fn",
+      "tp"
+    ],
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_0_50",
+    "threshold": 0.5
+  },
+  "secondary_ranking_metrics": [
+    "ROC_AUC",
+    "PR_AUC_MINUS_ATTACK_PREVALENCE"
+  ],
+  "supplementary_interaction_metrics": [
+    "f1_at_0_50",
+    "recall_at_0_50",
+    "fpr_at_0_50"
+  ],
+  "threshold_optimization_policy": "NO_PER_SUBSET_THRESHOLD_OPTIMIZATION_FOR_PRIMARY_STAGE23_EVIDENCE"
+}

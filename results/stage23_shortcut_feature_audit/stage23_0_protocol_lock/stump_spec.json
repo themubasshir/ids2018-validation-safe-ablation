@@ -1,0 +1,56 @@
+{
+  "expected_fits": 6,
+  "features": [
+    "Dst Port",
+    "Init Fwd Win Byts",
+    "Fwd Seg Size Min"
+  ],
+  "implementation": "sklearn.tree.DecisionTreeClassifier",
+  "library_version": "1.6.1",
+  "metrics": [
+    "PR_AUC",
+    "PR_AUC_MINUS_ATTACK_PREVALENCE",
+    "ROC_AUC",
+    "accuracy",
+    "precision",
+    "recall",
+    "f1",
+    "fpr",
+    "fnr"
+  ],
+  "missing_value_policy": {
+    "fit_scope": "fit on the stump training membership only; apply unchanged to validation",
+    "implementation": "sklearn.impute.SimpleImputer(strategy='median')",
+    "method": "TRAINING_MEDIAN_IMPUTATION_FOR_STUMP_ONLY",
+    "reason": "Tree stump control requires a deterministic explicit missing-value rule while the boosted Stage23 models retain the inherited no-explicit-imputation policy."
+  },
+  "operating_threshold": 0.5,
+  "parameters": {
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": 1,
+    "max_features": null,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "random_state": 42,
+    "splitter": "best"
+  },
+  "report_tree_structure": [
+    "selected_feature",
+    "split_threshold",
+    "missing_imputation_median",
+    "left_leaf_class_distribution",
+    "right_leaf_class_distribution",
+    "left_leaf_support",
+    "right_leaf_support",
+    "branch_predicting_attack"
+  ],
+  "splits": [
+    "RANDOM_NATURAL",
+    "CHRONOLOGICAL_NATURAL"
+  ]
+}

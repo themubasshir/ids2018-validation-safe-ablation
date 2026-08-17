@@ -1,0 +1,19 @@
+{
+  "candidate_directory": "/kaggle/working/stage23_0_protocol_candidate",
+  "immutability_rule": "Stage23-0B must commit these candidate artifact bytes without modifying scientific definitions.",
+  "intended_tag": "stage23-0-protocol-lock-v1",
+  "manual_inspection_required_before_commit": true,
+  "models_fit_during_protocol_construction": 0,
+  "parent_commit": "324ee4fc0c0940912bda412d40fb28ea879a5977",
+  "predictor_values_read": 0,
+  "raw_mar1_opened": false,
+  "raw_mar2_opened": false,
+  "stage": "Stage23-0",
+  "stage23_metrics_calculated": 0,
+  "status": "LOCKED_ON_UNMODIFIED_GIT_COMMIT_AND_TAG",
+  "support_columns_read": [
+    "clean_position",
+    "day_id",
+    "binary_label"
+  ]
+}

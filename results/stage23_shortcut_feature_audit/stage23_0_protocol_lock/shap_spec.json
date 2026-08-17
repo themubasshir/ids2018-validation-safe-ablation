@@ -1,0 +1,39 @@
+{
+  "aggregation": {
+    "descriptive_consensus": "For each component, divide mean_abs_SHAP(feature) by the sum of mean_abs_SHAP across retained features; then average the two normalized shares with weights 0.5/0.5.",
+    "primary_component_reporting": "LightGBM and XGBoost reported separately",
+    "warning": "Consensus normalized importance is descriptive and must not be called exact SHAP for the probability-averaged ensemble."
+  },
+  "cohort": {
+    "attack_per_split": 2500,
+    "benign_per_split": 2500,
+    "locator": "clean_position",
+    "rng": "numpy.random.RandomState",
+    "rows_per_split": 5000,
+    "same_rows_reused_for_every_subset_within_split": true,
+    "sampling": "without replacement from frozen validation membership",
+    "seed": 42
+  },
+  "components": [
+    "LightGBM",
+    "XGBoost"
+  ],
+  "method": "TreeSHAP computed separately for each component model.",
+  "per_model_importance": "mean absolute SHAP over the frozen cohort",
+  "proxy_absorption_measures": [
+    "top_10_features",
+    "top_20_features",
+    "Jaccard_at_10_vs_FULL",
+    "Jaccard_at_20_vs_FULL",
+    "Spearman_rank_on_common_retained_features",
+    "new_top_10_entrants",
+    "new_top_20_entrants",
+    "features_leaving_top_10",
+    "features_leaving_top_20",
+    "rank_displacement",
+    "normalized_importance_share_change",
+    "top_importance_gainers_after_removal"
+  ],
+  "purpose": "Quantify proxy absorption after removal of shortcut-prone features.",
+  "retraining": "NONE; use frozen models from Stage23 primary/placebo runs"
+}

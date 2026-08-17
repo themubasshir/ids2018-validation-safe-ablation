@@ -1,0 +1,9 @@
+{
+  "features": [
+    "Dst Port",
+    "Init Fwd Win Byts",
+    "Fwd Seg Size Min"
+  ],
+  "k": 3,
+  "selection_basis": "Prospective semantic shortcut-prone candidates inherited from pre-Stage23 research design; not selected from Stage23 results."
+}

@@ -1,0 +1,49 @@
+{
+  "prohibited_claims": [
+    "Dst Port is leakage",
+    "Init Fwd Win Byts is leakage",
+    "Fwd Seg Size Min is leakage",
+    "Random splitting is universally invalid",
+    "Chronological splitting completely eliminates leakage",
+    "K79 provides session independence",
+    "K79 provides endpoint/IP/5-tuple disjointness",
+    "Removing suspicious features proves causal reliance",
+    "SHAP importance proves causation",
+    "Behavior-only performance equals real-world deployment performance",
+    "Stage23 has a new untouched final holdout"
+  ],
+  "rules": [
+    {
+      "pattern": "Removal penalties near zero under both split regimes",
+      "permitted": "Little evidence that the tested feature/group materially drives ranking performance under these frozen validations."
+    },
+    {
+      "pattern": "Positive shortcut interaction with 95% CI excluding zero",
+      "permitted": "Random validation benefits disproportionately from the tested feature/group relative to chronological validation."
+    },
+    {
+      "pattern": "Negative shortcut interaction with 95% CI excluding zero",
+      "permitted": "Chronological validation depends more strongly on the tested feature/group than random validation."
+    },
+    {
+      "pattern": "Large positive removal penalties under both regimes",
+      "permitted": "The tested information carries predictive information across both evaluation protocols."
+    },
+    {
+      "pattern": "Chronological removal penalty below zero",
+      "permitted": "Removal is consistent with improved forward-temporal generalization; causal claims are not permitted."
+    },
+    {
+      "pattern": "SHAP importance moves toward semantically related retained features",
+      "permitted": "Evidence consistent with proxy absorption."
+    },
+    {
+      "pattern": "BEHAVIOR_ONLY retains strong chronological discrimination",
+      "permitted": "Substantial behavior-restricted capability survives under the frozen Stage23 development protocol."
+    },
+    {
+      "pattern": "BEHAVIOR_ONLY strongly degrades",
+      "permitted": "Performance under this protocol depends substantially on information excluded by the behavior-restricted definition."
+    }
+  ]
+}

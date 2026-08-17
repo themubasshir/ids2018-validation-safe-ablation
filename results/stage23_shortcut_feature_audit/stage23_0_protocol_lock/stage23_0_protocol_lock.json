@@ -1,0 +1,43 @@
+{
+  "bootstrap_replicates": 1000,
+  "constructed_utc": "2026-08-17T07:33:19.566062+00:00",
+  "environment": {
+    "lightgbm": "4.6.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "shap": "0.51.0",
+    "xgboost": "3.2.0"
+  },
+  "expected_new_model_fits": 50,
+  "fixed_operating_threshold": 0.5,
+  "intended_tag": "stage23-0-protocol-lock-v1",
+  "matched_placebo_count": 5,
+  "parent_commit": "324ee4fc0c0940912bda412d40fb28ea879a5977",
+  "post_result_protocol_changes": "FORBIDDEN",
+  "primary_metric": "PR_AUC",
+  "primary_splits": [
+    "RANDOM_NATURAL",
+    "CHRONOLOGICAL_NATURAL"
+  ],
+  "primary_subsets": [
+    "FULL",
+    "NO_DST_PORT",
+    "NO_PORTS",
+    "NO_INIT_FWD_WIN_BYTS",
+    "NO_FWD_SEG_SIZE_MIN",
+    "NO_SUSPICIOUS_GROUP",
+    "BEHAVIOR_ONLY"
+  ],
+  "raw_mar1_access": "PERMANENTLY_FORBIDDEN",
+  "raw_mar2_access": "PERMANENTLY_FORBIDDEN",
+  "scientific_question": "To what extent does IDS performance depend on shortcut-prone contextual or TCP-stack features, and does that dependence change between random and chronologically separated evaluation?",
+  "secondary_ranking_metric": "ROC_AUC",
+  "shap_cohort_rows_per_split": 5000,
+  "stage": "Stage23-0",
+  "stage23_final_holdout": "NONE",
+  "status": "PROSPECTIVE_CANDIDATE_READY_FOR_GIT_SEAL",
+  "stump_count": 6,
+  "title": "Shortcut-Feature Audit Prospective Protocol Lock",
+  "uncertainty_cohort_rows_per_split": 50000
+}

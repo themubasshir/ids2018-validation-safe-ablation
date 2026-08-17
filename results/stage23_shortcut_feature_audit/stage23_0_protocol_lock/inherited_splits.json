@@ -1,0 +1,47 @@
+{
+  "CHRONOLOGICAL_NATURAL": {
+    "train": {
+      "attack": 1910043,
+      "benign": 11908580,
+      "rows": 13818623
+    },
+    "train_days": [
+      "02-14-2018",
+      "02-15-2018",
+      "02-16-2018",
+      "02-20-2018",
+      "02-21-2018",
+      "02-22-2018",
+      "02-23-2018"
+    ],
+    "validation": {
+      "attack": 62256,
+      "benign": 531524,
+      "rows": 593780
+    },
+    "validation_days": [
+      "02-28-2018"
+    ]
+  },
+  "RANDOM_NATURAL": {
+    "derivation": "logical complement / membership of frozen random_validation.packbits",
+    "random_operator": {
+      "implementation": "sklearn.model_selection.train_test_split",
+      "random_state": 42,
+      "shuffle": true,
+      "sklearn_version": "1.6.1",
+      "stratify": "binary_label",
+      "test_size": 0.2
+    },
+    "train": {
+      "attack": 1577839,
+      "benign": 9952083,
+      "rows": 11529922
+    },
+    "validation": {
+      "attack": 394460,
+      "benign": 2488021,
+      "rows": 2882481
+    }
+  }
+}

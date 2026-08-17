@@ -1,0 +1,14 @@
+{
+  "FULL_new_ensemble_fits": 0,
+  "FULL_reference": "Reuse Stage22R RANDOM_NATURAL and CHRONOLOGICAL_NATURAL.",
+  "attack_family_model_fits": 0,
+  "new_boosted_component_fits_total": 44,
+  "new_placebo_boosted_component_fits": 20,
+  "new_primary_boosted_component_fits": 24,
+  "new_stump_fits_total": 6,
+  "placebo_subset_split_cells": 10,
+  "primary_reduced_subset_split_cells": 12,
+  "shap_model_fits": 0,
+  "stump_fits": 6,
+  "total_new_model_fits": 50
+}

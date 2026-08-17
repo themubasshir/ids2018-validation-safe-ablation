@@ -1,0 +1,36 @@
+{
+  "chronological_natural_full_result": {
+    "path": "results/stage22r_training/stage22r_2c_chronological_natural/stage22r_2c_chronological_natural_result.json",
+    "sha256": "f43b5fa5031946029d8bf58ad153a838efaa2dcffcccd98111f694984a8c2d51"
+  },
+  "prefreeze_verifications": {
+    "eight_cache_sha256": "8_OF_8_EXACT",
+    "mar1_raw_read": false,
+    "mar2_raw_read": false,
+    "natural_memberships": "RANDOM_NATURAL_AND_CHRONOLOGICAL_NATURAL_EXACT",
+    "repository_provenance": "PASSED"
+  },
+  "random_natural_full_result": {
+    "path": "results/stage22r_training/stage22r_2a_random_natural/stage22r_2a_random_natural_result.json",
+    "sha256": "dd7951f6d9c92538944a04357bab14fcc28f82ade748d37ad710fff2051abf73"
+  },
+  "random_validation_packbits": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/random_validation.packbits",
+    "sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad"
+  },
+  "stage22r_1b1_membership_summary": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/stage22r_1b1_membership_summary.json",
+    "sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d"
+  },
+  "stage22r_1c_feature_order": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_70_feature_order.csv",
+    "sha256": "6685e672584353f95062416b61e6ab8fd4d114f3397589047ae71c63ec81994c"
+  },
+  "stage22r_1c_model_input_manifest": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_development_model_input_manifest.json",
+    "sha256": "05fe6226afd37c3ab434140e1164643eecc7abc75c295a2d6fb0280d4f42127e"
+  },
+  "stage22r_publication_closeout_commit": "fafb131981b6e15e47bdf35fd8c18ea228680fe3",
+  "stage22r_scientific_commit": "b5e44615269198426cc8a9aa3b3e701c2ca9e48e",
+  "stage23_0_parent_commit": "324ee4fc0c0940912bda412d40fb28ea879a5977"
+}

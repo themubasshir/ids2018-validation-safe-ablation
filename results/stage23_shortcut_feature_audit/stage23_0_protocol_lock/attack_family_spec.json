@@ -1,0 +1,22 @@
+{
+  "evaluation_definition": "For attack family A, form a validation evaluation set containing all benign rows from that split plus attack rows belonging to A.",
+  "family_set_policy": "Do not add/drop attack families because of Stage23 results.",
+  "interpretation_minimum_attack_support": 100,
+  "low_support_policy": "Families with fewer than 100 validation attacks are listed descriptively but excluded from inferential interpretation.",
+  "metrics": [
+    "support_attack",
+    "support_benign",
+    "PR_AUC",
+    "ROC_AUC",
+    "precision_at_0_50",
+    "recall_at_0_50",
+    "f1_at_0_50",
+    "fpr_at_0_50",
+    "fnr_at_0_50",
+    "delta_f1_FULL_minus_ablated",
+    "delta_recall_FULL_minus_ablated"
+  ],
+  "no_retraining": true,
+  "scope": "development-only; never Mar1/Mar2",
+  "source_alignment": "Use day_id + original_row_index to recover development attack family labels from authorized Feb14-Feb28 source labels or existing repository attack-category infrastructure."
+}

@@ -1,0 +1,27 @@
+{
+  "complete_when": [
+    "all 7 primary subsets have frozen results under both natural splits",
+    "all 6 stump controls are complete",
+    "all 5 matched-size placebo subsets have results under both splits",
+    "all planned SHAP proxy-absorption analyses are complete",
+    "attack-family analysis is complete under frozen support rules",
+    "consolidated scientific audit is generated",
+    "publication figures and manuscript integration are complete"
+  ],
+  "final_holdout": "Raw Mar1 and Mar2 permanently forbidden.",
+  "no_post_result_adaptation": [
+    "no new primary subset",
+    "no feature migration between subsets",
+    "no change to suspicious group",
+    "no behavior-only whitelist change",
+    "no placebo membership change",
+    "no model hyperparameter change per subset",
+    "no split change",
+    "no stump specification change",
+    "no SHAP cohort change",
+    "no uncertainty cohort/method change",
+    "no primary metric change",
+    "no favorable metric addition after results"
+  ],
+  "rolling_forward_analysis": "NOT_INCLUDED_IN_FINAL_STAGE23_PROTOCOL"
+}

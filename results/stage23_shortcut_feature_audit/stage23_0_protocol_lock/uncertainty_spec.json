@@ -1,0 +1,35 @@
+{
+  "bootstrap_replicates": 1000,
+  "bootstrap_rng": "numpy.random.RandomState(seed=42), restarted independently per split",
+  "bootstrap_sampling": "Within each frozen cohort, benign and attack rows are resampled with replacement separately while preserving the cohort's fixed class counts.",
+  "chronological_cohort": {
+    "attack": 5242,
+    "attack_prevalence": 0.10484,
+    "benign": 44758,
+    "rows": 50000,
+    "source_validation_prevalence": 0.10484691299808009
+  },
+  "ci_role": "Supplementary uncertainty for removal penalties and split-by-ablation interactions.",
+  "cohort_sampling": "without replacement; attack/benign counts selected to approximate the source validation prevalence as closely as possible",
+  "cohort_seed": 42,
+  "cohort_size_per_split": 50000,
+  "confidence_interval": "percentile 95% interval [2.5th, 97.5th]",
+  "headline_ci_metrics": [
+    "PR_AUC_removal_penalty",
+    "ROC_AUC_removal_penalty",
+    "PR_AUC_shortcut_interaction",
+    "ROC_AUC_shortcut_interaction"
+  ],
+  "important_limitation": "Confidence intervals are based on the frozen uncertainty cohort; full-validation metrics remain the primary point estimates.",
+  "interaction_bootstrap": "For replicate b: (FULL_R_b - ABLATED_R_b) - (FULL_C_b - ABLATED_C_b).",
+  "method": "paired stratified bootstrap on a frozen natural-prevalence validation cohort",
+  "pairing": "Within a split and bootstrap replicate, exactly the same sampled rows are used for FULL and the compared ablated model.",
+  "point_estimates": "Always computed on the complete frozen validation membership.",
+  "random_cohort": {
+    "attack": 6842,
+    "attack_prevalence": 0.13684,
+    "benign": 43158,
+    "rows": 50000,
+    "source_validation_prevalence": 0.13684738945373795
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "cell": {
+    "feature_count": 69,
+    "removed_features": [
+      "Init Fwd Win Byts"
+    ],
+    "semantic_label": "initial_forward_window_ablation",
+    "split": "RANDOM_NATURAL",
+    "subset": "NO_INIT_FWD_WIN_BYTS"
+  },
+  "core_artifact_sha256": {
+    "no_init_fwd_win_byts_random_natural_lightgbm_model.txt": "a2a5168a8b0bcb2b06946c77aa62d528a60a74d5ebe3547e9016da49f8ca744c",
+    "no_init_fwd_win_byts_random_natural_validation_probabilities.npz": "720fa25d788b65b880396daffff60ef2776548a7a48745bdd653dc6765f0c593",
+    "no_init_fwd_win_byts_random_natural_xgboost_model.json": "658bdda25fb2b08f2290ba73c81e98582c0114fc4e03a2f55ab3610e460e3500",
+    "stage23_1e_no_init_fwd_win_byts_random_natural_result.json": "bae6f10594df955857ba8653fca886c2e861cd6687e718da80d3dffadf65db7f"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1F NO_INIT_FWD_WIN_BYTS \u00d7 CHRONOLOGICAL_NATURAL",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.9934174488313721,
+    "pr_auc_removal_penalty": 0.002172593067909845,
+    "roc_auc": 0.9981920140389745,
+    "roc_auc_removal_penalty": 0.00043255073462489246
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "required_predecessor": {
+    "commit": "8b3ddc6cda51d5fba68db50f476829152d0b4ad4",
+    "tag": "stage23-1d-no-ports-chronological-natural-v1"
+  },
+  "result_tag": "stage23-1e-no-init-fwd-win-byts-random-natural-v1",
+  "sealed_utc": "2026-08-17T09:22:59.976765+00:00",
+  "shortcut_interaction_status": "PENDING_MATCHED_CHRONOLOGICAL_CELL",
+  "source_checksum_manifest_sha256": "9eefe10eaaf5118403bbf0d00a790b0bebd3f932ee9be12b32711c7aabe43424",
+  "stage": "Stage23-1E",
+  "stage23_models_fit_total": 10,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

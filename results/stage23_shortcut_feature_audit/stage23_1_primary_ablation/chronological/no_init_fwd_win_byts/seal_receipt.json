@@ -1,0 +1,51 @@
+{
+  "cell": {
+    "feature_count": 69,
+    "removed_features": [
+      "Init Fwd Win Byts"
+    ],
+    "semantic_label": "initial_forward_window_ablation",
+    "split": "CHRONOLOGICAL_NATURAL",
+    "subset": "NO_INIT_FWD_WIN_BYTS"
+  },
+  "core_artifact_sha256": {
+    "no_init_fwd_win_byts_chronological_natural_lightgbm_model.txt": "465af8a3a8a957a08583f8b5c9da5f8e8d3f3642998cda684326ad6bdc74848c",
+    "no_init_fwd_win_byts_chronological_natural_validation_probabilities.npz": "8cadb355ee2e99f83e3e0040c6082b895e2a4137b05a98e45cf2739340e9515c",
+    "no_init_fwd_win_byts_chronological_natural_xgboost_model.json": "d0fbfff87872e9fc37005ece5465e62056a9a121d9e43f738d88f1bf2b7ecf3a",
+    "stage23_1f_no_init_fwd_win_byts_chronological_natural_result.json": "161989fae61fcfdba9c5c854e2876187905575d501b74eaf1ed2a857cbc936d7"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1G NO_FWD_SEG_SIZE_MIN \u00d7 RANDOM_NATURAL",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.10603168460405868,
+    "pr_auc_removal_penalty": 0.00018347052991359025,
+    "roc_auc": 0.5092116827910099,
+    "roc_auc_removal_penalty": 0.0057067436027592455
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "required_predecessor": {
+    "commit": "1e8f8bb3b204a445efd4f8ab629daa8a33d5c215",
+    "tag": "stage23-1e-no-init-fwd-win-byts-random-natural-v1"
+  },
+  "result_tag": "stage23-1f-no-init-fwd-win-byts-chronological-natural-v1",
+  "sealed_utc": "2026-08-17T09:38:18.360060+00:00",
+  "shortcut_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_STAGE23_UNCERTAINTY_ANALYSIS",
+    "f1_at_0_50": 0.012250129142466183,
+    "fpr_at_0_50": -0.0019460605880146438,
+    "interpretation_status": "POINT_ESTIMATE_ONLY",
+    "pr_auc": 0.0019891225379962546,
+    "recall_at_0_50": 0.0029463456302324114,
+    "roc_auc": -0.005274192868134353
+  },
+  "source_checksum_manifest_sha256": "da8c3d5671df1b7fb41814e9e62105d7a4ea17e3f09a68f461fc1e2463049160",
+  "stage": "Stage23-1F",
+  "stage23_models_fit_total": 12,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

@@ -1,0 +1,46 @@
+{
+  "cell": {
+    "feature_count": 67,
+    "removed_features": [
+      "Dst Port",
+      "Init Fwd Win Byts",
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "joint_shortcut_prone_group_ablation",
+    "split": "RANDOM_NATURAL",
+    "subset": "NO_SUSPICIOUS_GROUP"
+  },
+  "core_artifact_sha256": {
+    "no_suspicious_group_random_natural_lightgbm_model.txt": "e787b53dfb5a34b8a6fdd50143dbd729ee11fae101fd5a1360cb26726003b1e8",
+    "no_suspicious_group_random_natural_validation_probabilities.npz": "f820304ca76f038d562d7b1de38ecfc6b34b6d43a764e68b601f83bfdfb21207",
+    "no_suspicious_group_random_natural_xgboost_model.json": "0233b02f34d8afd8a248244e720b6419bfeccc932264ae2b1e5aa4825e618b16",
+    "stage23_1i_no_suspicious_group_random_natural_result.json": "20b2b6491d4e85738d4ab6a52579233ce3bc660164a3742ca9ccb3a84a005fde"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1J NO_SUSPICIOUS_GROUP \u00d7 CHRONOLOGICAL_NATURAL",
+  "next_authorized_nonfit_action": "Stage23 deterministic execution-cache optimization",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.9896012454413095,
+    "pr_auc_removal_penalty": 0.005988796457972456,
+    "roc_auc": 0.997408519130376,
+    "roc_auc_removal_penalty": 0.001216045643223418
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "required_predecessor": {
+    "commit": "3cc239339ad24b697d87ad9d9cc9c29cdfb55979",
+    "tag": "stage23-1h-no-fwd-seg-size-min-chronological-natural-v1"
+  },
+  "result_tag": "stage23-1i-no-suspicious-group-random-natural-v1",
+  "sealed_utc": "2026-08-17T10:20:24.968663+00:00",
+  "shortcut_interaction_status": "PENDING_MATCHED_CHRONOLOGICAL_CELL",
+  "source_checksum_manifest_sha256": "2a4a38884964f9ec851eada0b0a2f8e736baf095482ee645df68ea1ef596deab",
+  "stage": "Stage23-1I",
+  "stage23_models_fit_total": 18,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

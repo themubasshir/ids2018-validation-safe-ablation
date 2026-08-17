@@ -1,0 +1,53 @@
+{
+  "CHRONOLOGICAL_NATURAL": {
+    "train": {
+      "attack": 1910043,
+      "benign": 11908580,
+      "rows": 13818623
+    },
+    "train_derivation": "day_id 0..6",
+    "validation": {
+      "attack": 62256,
+      "benign": 531524,
+      "rows": 593780
+    },
+    "validation_derivation": "day_id 7"
+  },
+  "RANDOM_NATURAL": {
+    "derivation": "logical complement of random_validation bitset",
+    "train": {
+      "attack": 1577839,
+      "benign": 9952083,
+      "rows": 11529922
+    },
+    "validation": {
+      "attack": 394460,
+      "benign": 2488021,
+      "rows": 2882481
+    }
+  },
+  "audit_type": "stage23_prefreeze_inherited_natural_memberships",
+  "canonical_order": "(day_id ASC, original_zero_based_row_index ASC) after frozen K79 exclusions",
+  "development_rows": 14412403,
+  "random_operator": {
+    "implementation": "sklearn.model_selection.train_test_split",
+    "random_state": 42,
+    "shuffle": true,
+    "sklearn_version": "1.6.1",
+    "stratify": "binary_label",
+    "test_size": 0.2
+  },
+  "random_validation_bitset": {
+    "bit_order": "little",
+    "bytes": 1801551,
+    "file": "/kaggle/working/ids2018-validation-safe-ablation/results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/random_validation.packbits",
+    "logical_length": 14412403,
+    "population": 2882481,
+    "sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad"
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "stage23_0_frozen": false,
+  "stage23_metrics_calculated": 0,
+  "stage23_models_fit": 0
+}

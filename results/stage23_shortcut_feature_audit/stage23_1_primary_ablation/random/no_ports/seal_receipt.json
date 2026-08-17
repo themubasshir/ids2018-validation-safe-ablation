@@ -1,0 +1,45 @@
+{
+  "cell": {
+    "feature_count": 68,
+    "operational_semantics": "transport_identifier_restriction",
+    "removed_features": [
+      "Dst Port",
+      "Protocol"
+    ],
+    "split": "RANDOM_NATURAL",
+    "src_port_present_in_frozen_70f": false,
+    "subset": "NO_PORTS"
+  },
+  "core_artifact_sha256": {
+    "no_ports_random_natural_lightgbm_model.txt": "934a80bcca2f5691742dd584875a57fd2a9f8e4237c220361301b060286aa1c6",
+    "no_ports_random_natural_validation_probabilities.npz": "e518c928281e5c123c73467bca02b7c4317bcb3279d4fd8c21561a5f532e346e",
+    "no_ports_random_natural_xgboost_model.json": "d6d4a45de5baa53a7ce94c067827c3f8df9483ed13daff502bc5e443e26b4f2f",
+    "stage23_1c_no_ports_random_natural_result.json": "e36087d6387b936712ce302a56f6aa10fee6675d3b314f2e9ecc512b1b0e48d4"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1D NO_PORTS \u00d7 CHRONOLOGICAL_NATURAL",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.9952674376454212,
+    "pr_auc_removal_penalty": 0.00032260425386065883,
+    "roc_auc": 0.998475655105827,
+    "roc_auc_removal_penalty": 0.0001489096677723678
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "required_predecessor": {
+    "commit": "f7aa59008b757e1fc074737a46cbcffbf7ed6f59",
+    "tag": "stage23-1b-no-dst-port-chronological-natural-v1"
+  },
+  "result_tag": "stage23-1c-no-ports-random-natural-v1",
+  "sealed_utc": "2026-08-17T08:41:10.515809+00:00",
+  "shortcut_interaction_status": "PENDING_MATCHED_CHRONOLOGICAL_CELL",
+  "source_checksum_manifest_sha256": "88a2547b2cd223526c3a86db75847afb855572ffa6e9a9a7fd119aed3f2c6a76",
+  "stage": "Stage23-1C",
+  "stage23_models_fit_total": 6,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

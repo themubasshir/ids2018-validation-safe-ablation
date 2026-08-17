@@ -1,0 +1,17 @@
+{
+  "completed_splits": [
+    "RANDOM_NATURAL",
+    "CHRONOLOGICAL_NATURAL"
+  ],
+  "completed_utc": "2026-08-17T15:03:35.022315+00:00",
+  "created_utc": "2026-08-17T15:02:44.508240+00:00",
+  "model_fits": 0,
+  "next_action": "FROZEN_TREESHAP_EXECUTION",
+  "parquet_files_read": 9,
+  "parquet_row_groups_read": 204,
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "shap_values_computed": 0,
+  "stage": "Stage23-5A SHAP cohort materialization",
+  "status": "BOTH_FROZEN_SHAP_COHORTS_MATERIALIZED_UNSEALED"
+}

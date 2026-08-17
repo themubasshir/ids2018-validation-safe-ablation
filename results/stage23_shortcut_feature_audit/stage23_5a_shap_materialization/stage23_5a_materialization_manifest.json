@@ -1,0 +1,190 @@
+{
+  "authorized_source": {
+    "files": [
+      {
+        "canonical_end_exclusive": 822947,
+        "canonical_start": 0,
+        "filename": "day_00_02-14-2018.parquet",
+        "row_groups": 12,
+        "rows": 822947
+      },
+      {
+        "canonical_end_exclusive": 1869101,
+        "canonical_start": 822947,
+        "filename": "day_01_02-15-2018.parquet",
+        "row_groups": 14,
+        "rows": 1046154
+      },
+      {
+        "canonical_end_exclusive": 2770089,
+        "canonical_start": 1869101,
+        "filename": "day_02_02-16-2018.parquet",
+        "row_groups": 12,
+        "rows": 900988
+      },
+      {
+        "canonical_end_exclusive": 10696347,
+        "canonical_start": 2770089,
+        "filename": "day_03_02-20-2018.parquet",
+        "row_groups": 106,
+        "rows": 7926258
+      },
+      {
+        "canonical_end_exclusive": 11727365,
+        "canonical_start": 10696347,
+        "filename": "day_04_02-21-2018.parquet",
+        "row_groups": 14,
+        "rows": 1031018
+      },
+      {
+        "canonical_end_exclusive": 12772662,
+        "canonical_start": 11727365,
+        "filename": "day_05_02-22-2018.parquet",
+        "row_groups": 14,
+        "rows": 1045297
+      },
+      {
+        "canonical_end_exclusive": 13818623,
+        "canonical_start": 12772662,
+        "filename": "day_06_02-23-2018.parquet",
+        "row_groups": 14,
+        "rows": 1045961
+      },
+      {
+        "canonical_end_exclusive": 14412403,
+        "canonical_start": 13818623,
+        "filename": "day_07_02-28-2018.parquet",
+        "row_groups": 9,
+        "rows": 593780
+      }
+    ],
+    "root": "/kaggle/input/datasets/jmmubasshirrahman/stage22r-1c-70f-cache-3cd41c5f",
+    "total_rows": 14412403
+  },
+  "cohorts": [
+    {
+      "attack": 2500,
+      "benign": 2500,
+      "clean_position_max": 14410054,
+      "clean_position_min": 221,
+      "dtype": "float64",
+      "features": 70,
+      "output_file": "random_natural_shap_cohort_full70.npz",
+      "output_sha256": "5cd9ab402e4d1773c8f5e92fe927834dc1601661060857c82283c8d4bb223b85",
+      "parquet_files_read": 8,
+      "parquet_row_groups_read": 195,
+      "rows": 5000,
+      "split": "RANDOM_NATURAL"
+    },
+    {
+      "attack": 2500,
+      "benign": 2500,
+      "clean_position_max": 14412323,
+      "clean_position_min": 13818625,
+      "dtype": "float64",
+      "features": 70,
+      "output_file": "chronological_natural_shap_cohort_full70.npz",
+      "output_sha256": "2e6ebccfcc6b5321de41f96326a0645e56fedcc4cea792df746c04edc1e389a4",
+      "parquet_files_read": 1,
+      "parquet_row_groups_read": 9,
+      "rows": 5000,
+      "split": "CHRONOLOGICAL_NATURAL"
+    }
+  ],
+  "completed_utc": "2026-08-17T15:03:35.021780+00:00",
+  "execution_parent": {
+    "commit": "1e687d964aa5247a3e5d0678223dc8de92cc5ade",
+    "tag": "stage23-4-uncertainty-analysis-complete-v1"
+  },
+  "feature_space": {
+    "count": 70,
+    "dtype": "float64",
+    "imputation": "NONE",
+    "order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "scaling": "NONE",
+    "transformations": "NONE"
+  },
+  "governance": {
+    "additional_model_fits_authorized": 0,
+    "model_fits": 0,
+    "only_authorized_february_source_read": true,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "shap_values_computed": 0,
+    "stage23_model_fit_state": "50 / 50 SEALED"
+  },
+  "next_action": "Execute frozen component-wise TreeSHAP on these two materialized 5,000-row cohorts using only the 48 sealed component models.",
+  "stage": "Stage23-5A frozen SHAP cohort materialization",
+  "status": "BOTH_FROZEN_SHAP_COHORTS_MATERIALIZED_UNSEALED"
+}

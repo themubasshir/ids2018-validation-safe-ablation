@@ -1,0 +1,24 @@
+{
+  "chronological_materialized_sha256": "2e6ebccfcc6b5321de41f96326a0645e56fedcc4cea792df746c04edc1e389a4",
+  "completed_utc": "2026-08-17T15:27:07.010439+00:00",
+  "component_explanations_completed": 48,
+  "component_explanations_expected": 48,
+  "created_utc": "2026-08-17T15:07:06.709907+00:00",
+  "execution_parent_commit": "1e687d964aa5247a3e5d0678223dc8de92cc5ade",
+  "execution_parent_tag": "stage23-4-uncertainty-analysis-complete-v1",
+  "last_completed": {
+    "component": "XGBoost",
+    "split": "RANDOM_NATURAL",
+    "subset": "NO_SUSPICIOUS_GROUP"
+  },
+  "model_fits": 0,
+  "next_action": "ZERO_FIT_SEAL_STAGE23_5A_AND_5B_SHAP_BLOCK",
+  "parquet_files_read": 0,
+  "proxy_absorption_split_comparisons": 22,
+  "random_materialized_sha256": "5cd9ab402e4d1773c8f5e92fe927834dc1601661060857c82283c8d4bb223b85",
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "retraining": false,
+  "stage": "Stage23-5B frozen TreeSHAP proxy-absorption",
+  "status": "TREESHAP_PROXY_ABSORPTION_COMPLETE_UNSEALED"
+}

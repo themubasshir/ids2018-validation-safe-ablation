@@ -1,0 +1,51 @@
+{
+  "accounting": {
+    "component_treeshap_completed": 48,
+    "component_treeshap_expected": 48,
+    "model_fits": 0,
+    "proxy_absorption_split_comparisons": 22,
+    "stage23_model_fit_state": "50 / 50 SEALED"
+  },
+  "completed_utc": "2026-08-17T15:27:07.010111+00:00",
+  "execution_parent": {
+    "commit": "1e687d964aa5247a3e5d0678223dc8de92cc5ade",
+    "tag": "stage23-4-uncertainty-analysis-complete-v1"
+  },
+  "frozen_design": {
+    "attack_per_split": 2500,
+    "benign_per_split": 2500,
+    "cohort_rows_per_split": 5000,
+    "component_importance": "mean absolute TreeSHAP",
+    "component_models": 48,
+    "components": [
+      "LightGBM",
+      "XGBoost"
+    ],
+    "descriptive_consensus_weights": {
+      "LightGBM": 0.5,
+      "XGBoost": 0.5
+    },
+    "model_pairs": 24,
+    "same_rows_reused_within_split": true,
+    "splits": 2,
+    "subsets_per_split": 12,
+    "tie_break_for_top_k": "frozen canonical 70-feature order",
+    "top_importance_gainers_handling": "All positive normalized-share gainers retained and sorted descending because the frozen protocol did not specify a truncation K for this measure."
+  },
+  "governance": {
+    "new_model_fits": 0,
+    "new_subset": false,
+    "parquet_files_read": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "retraining": false,
+    "shap_cohort_changed": false
+  },
+  "interpretation_boundary": "SHAP proxy-shift patterns are descriptive evidence consistent with proxy absorption after feature removal. SHAP does not establish causation.",
+  "materialized_cohorts": {
+    "CHRONOLOGICAL_NATURAL": "2e6ebccfcc6b5321de41f96326a0645e56fedcc4cea792df746c04edc1e389a4",
+    "RANDOM_NATURAL": "5cd9ab402e4d1773c8f5e92fe927834dc1601661060857c82283c8d4bb223b85"
+  },
+  "stage": "Stage23-5B frozen TreeSHAP proxy-absorption",
+  "status": "TREESHAP_PROXY_ABSORPTION_COMPLETE_UNSEALED"
+}

@@ -1,0 +1,50 @@
+{
+  "execution_parent": {
+    "commit": "1e687d964aa5247a3e5d0678223dc8de92cc5ade",
+    "tag": "stage23-4-uncertainty-analysis-complete-v1"
+  },
+  "governance": {
+    "additional_stage23_model_fits_authorized": 0,
+    "model_fits_during_seal": 0,
+    "parquet_reads_during_seal": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "retraining": false,
+    "shap_recomputed_during_seal": false,
+    "stage23_model_fit_budget": "50 / 50 SEALED"
+  },
+  "interpretation_boundary": "Component TreeSHAP is reported separately for LightGBM and XGBoost. The 0.5/0.5 normalized importance consensus is descriptive only and is not exact SHAP for the probability-averaged ensemble. Observed proxy shifts do not establish causality.",
+  "sealed_utc": "2026-08-17T15:27:08.550247+00:00",
+  "stage": "Stage23-5 frozen SHAP proxy-absorption",
+  "stage23_5a": {
+    "features": 70,
+    "model_fits": 0,
+    "rows_per_split": 5000,
+    "shap_values_computed": 0,
+    "source_sha256": {
+      "checksums": "03e8013746e650183082c2504976b7f407c13a8c1f2dbf6576e6c33f4ae39f3d",
+      "chronological_cohort": "2e6ebccfcc6b5321de41f96326a0645e56fedcc4cea792df746c04edc1e389a4",
+      "materialization_manifest": "ae7cc8c5bbffa8e8ff54e04fbb2efe698023999400df703d080683d94be685d4",
+      "random_cohort": "5cd9ab402e4d1773c8f5e92fe927834dc1601661060857c82283c8d4bb223b85"
+    },
+    "status": "BOTH_FROZEN_SHAP_COHORTS_MATERIALIZED"
+  },
+  "stage23_5b": {
+    "component_treeshap": "48 / 48",
+    "model_fits": 0,
+    "model_pairs": "24 / 24",
+    "proxy_absorption_split_comparisons": "22 / 22",
+    "source_sha256": {
+      "checksums": "fa37b1f7551821ac0b06e729bd606fff5b739df4e236981d602d550dc9130a58",
+      "component_importance_csv": "72db28133441e256ffd8f96a6e68776977ca568225ddf31c58f0b5fa3772b337",
+      "descriptive_consensus_importance_csv": "03d8edd3414f78e5dfe838ba821f01246cf9ca543fe92c5242e76dd07d044ffd",
+      "descriptive_consensus_json": "19f2998b9a780967978b9e4577a3ea0085b9d824f9ca9ddf3d7f16aa82a223e2",
+      "proxy_absorption_csv": "a557a43ab946070fc366f7e7938b45b4faa7b6070a4518602ae0da45b208d4d6",
+      "proxy_absorption_json": "5d7c3077cce7fb105a3d2e45779b561361f93322df42f77a82faeda1a385e322",
+      "treeshap_summary": "85ea2da694f837c8d303dd2caa73fb778b8ee715840624dc620000d8af87a2d3"
+    },
+    "status": "TREESHAP_PROXY_ABSORPTION_COMPLETE"
+  },
+  "status": "SEALED",
+  "tag": "stage23-5-shap-proxy-absorption-complete-v1"
+}

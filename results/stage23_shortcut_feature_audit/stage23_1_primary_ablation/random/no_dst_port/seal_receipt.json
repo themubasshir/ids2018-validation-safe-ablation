@@ -1,0 +1,28 @@
+{
+  "cell": {
+    "split": "RANDOM_NATURAL",
+    "subset": "NO_DST_PORT"
+  },
+  "core_artifact_sha256": {
+    "no_dst_port_random_natural_lightgbm_model.txt": "b5ad1dd5e225bdbc6ea3cf7d61e6cf2556c5211a93cc354f25d9ddc775ebf870",
+    "no_dst_port_random_natural_validation_probabilities.npz": "08cc16772c8aca26642a593a3ce15689993fa1f1c147b8ad21be6d2d015653f9",
+    "no_dst_port_random_natural_xgboost_model.json": "413e931f0dfcdc77c6ef233ed677bc7d3941b3ac3b32b1927d087e18c897eb70",
+    "stage23_1a_no_dst_port_random_natural_result.json": "eabc9fd3ab70990f5cfbca49619ef5e22613345542c4ea16de202c640ec7a6ef"
+  },
+  "models_fit": 2,
+  "next_authorized_model_cell": "Stage23-1B NO_DST_PORT \u00d7 CHRONOLOGICAL_NATURAL",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "result_tag": "stage23-1a-no-dst-port-random-natural-v1",
+  "scientific_interpretation_status": "PENDING_MATCHED_CHRONOLOGICAL_CELL",
+  "sealed_utc": "2026-08-17T07:55:22.276409+00:00",
+  "shortcut_interaction_status": "NOT_YET_AVAILABLE",
+  "source_checksum_manifest_sha256": "2a7b597fb7e7011543e8817468858a06eaa82f1f8c4d97288553cd6f151151a3",
+  "stage": "Stage23-1A",
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

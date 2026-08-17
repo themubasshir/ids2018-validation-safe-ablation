@@ -1,0 +1,37 @@
+{
+  "cell": {
+    "split": "CHRONOLOGICAL_NATURAL",
+    "subset": "NO_DST_PORT"
+  },
+  "core_artifact_sha256": {
+    "no_dst_port_chronological_natural_lightgbm_model.txt": "6b32caaac0e945f1341f011b8e346791dd3850bf045de7c654f96dbeb273c074",
+    "no_dst_port_chronological_natural_validation_probabilities.npz": "47e681c10b97879c6f9ef171fb667f753258f717d13cb30e895024b232d6bcd5",
+    "no_dst_port_chronological_natural_xgboost_model.json": "a540c326dfd30e588bc6361030709eb7cc8c86e7933681158d75668a0554b564",
+    "stage23_1b_no_dst_port_chronological_natural_result.json": "9101d521fa2791eacbb6c6626289aedf1f102e13d146c5da78a3b0a898b4c022"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1C NO_PORTS \u00d7 RANDOM_NATURAL",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "required_predecessor": {
+    "commit": "b83ff3bd5014a87b256d82507f4dd2475df0b39f",
+    "tag": "stage23-1a-no-dst-port-random-natural-v1"
+  },
+  "result_tag": "stage23-1b-no-dst-port-chronological-natural-v1",
+  "sealed_utc": "2026-08-17T08:27:27.628909+00:00",
+  "shortcut_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_STAGE23_UNCERTAINTY_ANALYSIS",
+    "interpretation_status": "POINT_ESTIMATE_ONLY",
+    "pr_auc": -0.003411625576458799,
+    "roc_auc": -0.025902681372348246
+  },
+  "source_checksum_manifest_sha256": "05b1164a14e3f6248405c35977e1571df9235a34979020e9c60a218e988cd52e",
+  "stage": "Stage23-1B",
+  "stage23_models_fit_total": 4,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

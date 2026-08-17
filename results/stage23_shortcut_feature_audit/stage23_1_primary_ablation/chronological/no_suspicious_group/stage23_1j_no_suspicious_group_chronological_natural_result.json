@@ -1,0 +1,308 @@
+{
+  "artifacts": {
+    "lightgbm_model": {
+      "path": "no_suspicious_group_chronological_natural_lightgbm_model.txt",
+      "sha256": "243cb59d498973e4c4313b8d03aafa14ac2149b0e5aa70ce1dabc2d4155298d3"
+    },
+    "validation_probabilities": {
+      "path": "no_suspicious_group_chronological_natural_validation_probabilities.npz",
+      "sha256": "8bd661093859cb0e6c2b6248cc99eddc278e55e95d2b68f4ffee9939a8cba22a"
+    },
+    "xgboost_model": {
+      "path": "no_suspicious_group_chronological_natural_xgboost_model.json",
+      "sha256": "c70f60058ad6bf3bf01cb335d7ceb0a9994c2c0dae4dc3cfb624b003c589eae3"
+    }
+  },
+  "cache": {
+    "data_manifest_sha256": "063c7263017936b18dd8cb5d508b0a9ed4e68326f8b31e97ac602651d789517b",
+    "identifier": "stage23_execution_cache_v1",
+    "materialization_seconds": 41.67048921599962,
+    "metadata_sha256": "e810d19f04a60233c85894205d29de718e91ac28cad42065fd258c0e0f966439",
+    "parquet_files_read": 0,
+    "runtime_path": "/kaggle/working/stage23_execution_cache_v1",
+    "seal_commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "seal_tag": "stage23-execution-cache-v1",
+    "sealed": true,
+    "semantic_70f_sha256": "8c43ab0e36a65de1c095acb1ebf9e7d029a9e2b1cc353455a66617db8a899bb2",
+    "temporary_row_major_matrix_bytes": 7725048008
+  },
+  "cell": {
+    "feature_count": 67,
+    "feature_order": [
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "removed_features": [
+      "Dst Port",
+      "Init Fwd Win Byts",
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "joint_shortcut_prone_group_ablation",
+    "split": "CHRONOLOGICAL_NATURAL",
+    "subset": "NO_SUSPICIOUS_GROUP"
+  },
+  "created_utc": "2026-08-17T10:47:28.984359+00:00",
+  "data": {
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "row_randomization": false,
+    "scaling": "NONE",
+    "train": {
+      "attack": 1910043,
+      "benign": 11908580,
+      "days": [
+        "02-14-2018",
+        "02-15-2018",
+        "02-16-2018",
+        "02-20-2018",
+        "02-21-2018",
+        "02-22-2018",
+        "02-23-2018"
+      ],
+      "rows": 13818623
+    },
+    "validation": {
+      "attack": 62256,
+      "attack_prevalence": 0.10484691299808009,
+      "benign": 531524,
+      "days": [
+        "02-28-2018"
+      ],
+      "rows": 593780
+    }
+  },
+  "environment": {
+    "lightgbm": "4.6.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "shap": "0.51.0",
+    "xgboost": "3.2.0"
+  },
+  "execution_parent": {
+    "commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "tag": "stage23-execution-cache-v1",
+    "type": "SEALED_DETERMINISTIC_EXECUTION_CACHE"
+  },
+  "fixed_threshold_0_50": {
+    "accuracy": 0.8904072215298595,
+    "f1": 0.019142650428071867,
+    "fn": 61621,
+    "fnr": 0.9898001799023387,
+    "fp": 3453,
+    "fpr": 0.006496414084782625,
+    "precision": 0.15533268101761252,
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_0_50",
+    "recall": 0.01019982009766127,
+    "threshold": 0.5,
+    "tn": 528071,
+    "tp": 635
+  },
+  "full_reference": {
+    "f1_at_0_50": 6.421679590296842e-05,
+    "fpr_at_0_50": 5.8322860303579896e-05,
+    "pr_auc": 0.10621515513397227,
+    "recall_at_0_50": 3.2125417630429196e-05,
+    "retrained": false,
+    "roc_auc": 0.5149184263937692,
+    "source": "Frozen Stage22R CHRONOLOGICAL_NATURAL FULL"
+  },
+  "governance": {
+    "execution_cache_optimization": true,
+    "execution_cache_scientifically_sealed": true,
+    "feature_definition_changed": false,
+    "input_dtype_changed": false,
+    "model_specification_changed": false,
+    "new_lightgbm_fits": 1,
+    "new_model_fits_this_cell": 2,
+    "new_xgboost_fits": 1,
+    "parquet_files_read": 0,
+    "placebo_executed": false,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "shap_executed": false,
+    "split_definition_changed": false,
+    "stage23_0_modified": false,
+    "stage23_total_authorized_model_fits": 50,
+    "stage23_total_model_fits_after_cell": 20,
+    "stage23_total_model_fits_before_cell": 18,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "matched_random_reference": {
+    "f1_at_0_50_removal_penalty": 0.02085992774039236,
+    "fpr_at_0_50_change": -0.00548588617218263,
+    "pr_auc_removal_penalty": 0.005988796457972456,
+    "recall_at_0_50_removal_penalty": 0.007468437864422306,
+    "result_sha256": "20b2b6491d4e85738d4ab6a52579233ce3bc660164a3742ca9ccb3a84a005fde",
+    "roc_auc_removal_penalty": 0.001216045643223418,
+    "source": "Sealed Stage23-1I"
+  },
+  "models": {
+    "component_combination_dtype": "float64",
+    "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "ensemble_storage_dtype": "float32",
+    "lightgbm": {
+      "completed_fits": 1,
+      "configuration": "LGBM_11",
+      "fit_seconds": 488.75914468299925,
+      "library_version": "4.6.0",
+      "model_path": "no_suspicious_group_chronological_natural_lightgbm_model.txt",
+      "model_sha256": "243cb59d498973e4c4313b8d03aafa14ac2149b0e5aa70ce1dabc2d4155298d3",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "cpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      }
+    },
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "xgboost": {
+      "completed_fits": 1,
+      "configuration": "XGB_11",
+      "fit_seconds": 144.95893984800023,
+      "library_version": "3.2.0",
+      "model_path": "no_suspicious_group_chronological_natural_xgboost_model.json",
+      "model_sha256": "c70f60058ad6bf3bf01cb335d7ceb0a9994c2c0dae4dc3cfb624b003c589eae3",
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      }
+    }
+  },
+  "next_authorized_action": "Seal Stage23-1J before executing another Stage23 model cell.",
+  "protocol": {
+    "checksum_manifest_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking_metrics": {
+    "pr_auc": 0.10466692608841616,
+    "pr_auc_minus_attack_prevalence": -0.0001799869096639345,
+    "primary_metric": "PR_AUC",
+    "roc_auc": 0.48939250766117265
+  },
+  "removal_penalty_full_minus_ablated": {
+    "f1_at_0_50": -0.0190784336321689,
+    "fpr_at_0_50": -0.0064380912244790455,
+    "pr_auc": 0.0015482290455561126,
+    "recall_at_0_50": -0.01016769468003084,
+    "roc_auc": 0.02552591873259652
+  },
+  "runtime": {
+    "lightgbm_fit_seconds": 488.75914468299925,
+    "optimized_cache_materialization_seconds": 41.67048921599962,
+    "parquet_files_read": 0,
+    "xgboost_fit_seconds": 144.95893984800023
+  },
+  "scientific_random_partner": {
+    "commit": "a68ed8da15972c9fa9ee7efb80c8f86bf263cdd0",
+    "result_sha256": "20b2b6491d4e85738d4ab6a52579233ce3bc660164a3742ca9ccb3a84a005fde",
+    "stage": "Stage23-1I",
+    "tag": "stage23-1i-no-suspicious-group-random-natural-v1"
+  },
+  "shortcut_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_STAGE23_UNCERTAINTY_ANALYSIS",
+    "definition": "I(S) = DELTA_RANDOM(S) - DELTA_CHRONOLOGICAL(S)",
+    "f1_at_0_50": 0.03993836137256126,
+    "fpr_at_0_50": 0.0009522050522964157,
+    "interpretation_status": "POINT_ESTIMATE_ONLY_UNTIL_UNCERTAINTY_STAGE",
+    "point_estimate_available": true,
+    "pr_auc": 0.0044405674124163436,
+    "recall_at_0_50": 0.017636132544453148,
+    "roc_auc": -0.024309873089373102
+  },
+  "stage": "Stage23-1J",
+  "status": "NO_SUSPICIOUS_GROUP_CHRONOLOGICAL_NATURAL_RESULT_COMPLETE_UNSEALED"
+}

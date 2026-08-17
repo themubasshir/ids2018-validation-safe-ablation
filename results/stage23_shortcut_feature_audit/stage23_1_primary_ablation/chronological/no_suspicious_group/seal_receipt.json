@@ -1,0 +1,60 @@
+{
+  "cell": {
+    "feature_count": 67,
+    "removed_features": [
+      "Dst Port",
+      "Init Fwd Win Byts",
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "joint_shortcut_prone_group_ablation",
+    "split": "CHRONOLOGICAL_NATURAL",
+    "subset": "NO_SUSPICIOUS_GROUP"
+  },
+  "core_artifact_sha256": {
+    "no_suspicious_group_chronological_natural_lightgbm_model.txt": "243cb59d498973e4c4313b8d03aafa14ac2149b0e5aa70ce1dabc2d4155298d3",
+    "no_suspicious_group_chronological_natural_validation_probabilities.npz": "8bd661093859cb0e6c2b6248cc99eddc278e55e95d2b68f4ffee9939a8cba22a",
+    "no_suspicious_group_chronological_natural_xgboost_model.json": "c70f60058ad6bf3bf01cb335d7ceb0a9994c2c0dae4dc3cfb624b003c589eae3",
+    "stage23_1j_no_suspicious_group_chronological_natural_result.json": "49913686033cdd2ab946803d3ac3def3bed09eb7fca9592a079a13c55f36a621"
+  },
+  "execution_parent": {
+    "commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "tag": "stage23-execution-cache-v1",
+    "type": "SEALED_DETERMINISTIC_EXECUTION_CACHE"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1K BEHAVIOR_ONLY \u00d7 RANDOM_NATURAL",
+  "optimized_cache_used": true,
+  "parquet_files_read": 0,
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.10466692608841616,
+    "pr_auc_removal_penalty": 0.0015482290455561126,
+    "roc_auc": 0.48939250766117265,
+    "roc_auc_removal_penalty": 0.02552591873259652
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "result_tag": "stage23-1j-no-suspicious-group-chronological-natural-v1",
+  "scientific_random_partner": {
+    "commit": "a68ed8da15972c9fa9ee7efb80c8f86bf263cdd0",
+    "tag": "stage23-1i-no-suspicious-group-random-natural-v1"
+  },
+  "sealed_utc": "2026-08-17T10:49:49.737761+00:00",
+  "shortcut_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_STAGE23_UNCERTAINTY_ANALYSIS",
+    "f1_at_0_50": 0.03993836137256126,
+    "fpr_at_0_50": 0.0009522050522964157,
+    "interpretation_status": "POINT_ESTIMATE_ONLY",
+    "pr_auc": 0.0044405674124163436,
+    "recall_at_0_50": 0.017636132544453148,
+    "roc_auc": -0.024309873089373102
+  },
+  "source_checksum_manifest_sha256": "974cb32c20360e82c1481544ed58f4592d5c8fd5527bb776911c676b95243843",
+  "stage": "Stage23-1J",
+  "stage23_models_fit_total": 20,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

@@ -1,0 +1,317 @@
+{
+  "artifacts": {
+    "lightgbm_model": {
+      "path": "behavior_only_chronological_natural_lightgbm_model.txt",
+      "sha256": "65af6dcf849230508f4ffa738a93ad4c1cc6eed80c67083793085d6319d78d7c"
+    },
+    "validation_probabilities": {
+      "path": "behavior_only_chronological_natural_validation_probabilities.npz",
+      "sha256": "6b084ca96d8474dbaf6c20c52957ecea38ff2729b7facf158981e78840eb94b5"
+    },
+    "xgboost_model": {
+      "path": "behavior_only_chronological_natural_xgboost_model.json",
+      "sha256": "2816b36504a717b87bf3bd2c761ef7d7df0f23988f8f377f6a63a0b45cfb5310"
+    }
+  },
+  "cache": {
+    "data_manifest_sha256": "063c7263017936b18dd8cb5d508b0a9ed4e68326f8b31e97ac602651d789517b",
+    "identifier": "stage23_execution_cache_v1",
+    "materialization_seconds": 58.790749642001174,
+    "metadata_sha256": "e810d19f04a60233c85894205d29de718e91ac28cad42065fd258c0e0f966439",
+    "parquet_files_read": 0,
+    "seal_commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "seal_tag": "stage23-execution-cache-v1",
+    "sealed": true,
+    "selected_physical_feature_digests_verified": 63,
+    "semantic_70f_sha256": "8c43ab0e36a65de1c095acb1ebf9e7d029a9e2b1cc353455a66617db8a899bb2",
+    "temporary_row_major_matrix_bytes": 7263851112
+  },
+  "cell": {
+    "feature_count": 63,
+    "feature_order": [
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Fwd Act Data Pkts",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "interpretation_term": "behavior-restricted performance",
+    "removed_features": [
+      "Dst Port",
+      "Protocol",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "behavior_restricted_feature_set",
+    "split": "CHRONOLOGICAL_NATURAL",
+    "subset": "BEHAVIOR_ONLY"
+  },
+  "created_utc": "2026-08-17T11:22:51.785889+00:00",
+  "data": {
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "row_randomization": false,
+    "scaling": "NONE",
+    "train": {
+      "attack": 1910043,
+      "benign": 11908580,
+      "days": [
+        "02-14-2018",
+        "02-15-2018",
+        "02-16-2018",
+        "02-20-2018",
+        "02-21-2018",
+        "02-22-2018",
+        "02-23-2018"
+      ],
+      "rows": 13818623
+    },
+    "validation": {
+      "attack": 62256,
+      "attack_prevalence": 0.10484691299808009,
+      "benign": 531524,
+      "days": [
+        "02-28-2018"
+      ],
+      "rows": 593780
+    }
+  },
+  "environment": {
+    "lightgbm": "4.6.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "shap": "0.51.0",
+    "xgboost": "3.2.0"
+  },
+  "execution_parent": {
+    "commit": "eae3a7c409687f086924cce84be65bca5e7b10ba",
+    "tag": "stage23-1k-behavior-only-random-natural-v1"
+  },
+  "fixed_threshold_0_50": {
+    "accuracy": 0.8563878877698811,
+    "f1": 0.029455282147003256,
+    "fn": 60962,
+    "fnr": 0.9792148547931123,
+    "fp": 24312,
+    "fpr": 0.04574017353873014,
+    "precision": 0.05053503085214403,
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_0_50",
+    "recall": 0.02078514520688769,
+    "threshold": 0.5,
+    "tn": 507212,
+    "tp": 1294
+  },
+  "full_reference": {
+    "f1_at_0_50": 6.421679590296842e-05,
+    "fpr_at_0_50": 5.8322860303579896e-05,
+    "pr_auc": 0.10621515513397227,
+    "recall_at_0_50": 3.2125417630429196e-05,
+    "retrained": false,
+    "roc_auc": 0.5149184263937692,
+    "source": "Frozen Stage22R CHRONOLOGICAL_NATURAL FULL"
+  },
+  "governance": {
+    "execution_cache_optimization": true,
+    "execution_cache_scientifically_sealed": true,
+    "feature_definition_changed": false,
+    "input_dtype_changed": false,
+    "model_specification_changed": false,
+    "new_lightgbm_fits": 1,
+    "new_model_fits_this_cell": 2,
+    "new_xgboost_fits": 1,
+    "parquet_files_read": 0,
+    "placebo_executed": false,
+    "primary_boosted_model_fits_complete": true,
+    "primary_boosted_model_fits_total": 24,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "shap_executed": false,
+    "split_definition_changed": false,
+    "stage23_0_modified": false,
+    "stage23_total_authorized_model_fits": 50,
+    "stage23_total_model_fits_after_cell": 24,
+    "stage23_total_model_fits_before_cell": 22,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "matched_random_reference": {
+    "f1_at_0_50_removal_penalty": 0.037320894672020266,
+    "fpr_at_0_50_change": -0.007733053700109444,
+    "pr_auc_removal_penalty": 0.014002038041909803,
+    "recall_at_0_50_removal_penalty": 0.025918977843127355,
+    "result_sha256": "de40919dfced8471a48cbef06b1816b05a8e3b797eec10e35d2fade2effa0d61",
+    "roc_auc_removal_penalty": 0.002483324721613167,
+    "source": "Sealed Stage23-1K"
+  },
+  "models": {
+    "component_combination_dtype": "float64",
+    "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "ensemble_storage_dtype": "float32",
+    "lightgbm": {
+      "completed_fits": 1,
+      "configuration": "LGBM_11",
+      "fit_seconds": 487.91139262199977,
+      "library_version": "4.6.0",
+      "model_path": "behavior_only_chronological_natural_lightgbm_model.txt",
+      "model_sha256": "65af6dcf849230508f4ffa738a93ad4c1cc6eed80c67083793085d6319d78d7c",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "cpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      }
+    },
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "xgboost": {
+      "completed_fits": 1,
+      "configuration": "XGB_11",
+      "fit_seconds": 136.0640856629998,
+      "library_version": "3.2.0",
+      "model_path": "behavior_only_chronological_natural_xgboost_model.json",
+      "model_sha256": "2816b36504a717b87bf3bd2c761ef7d7df0f23988f8f377f6a63a0b45cfb5310",
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      }
+    }
+  },
+  "next_authorized_action": "Seal Stage23-1L before any further Stage23 execution.",
+  "primary_boosted_ablation_status": {
+    "all_primary_subsets_have_both_splits": true,
+    "boosted_primary_fits_completed": 24,
+    "boosted_primary_fits_expected": 24,
+    "fits_complete_after_this_cell": true,
+    "seal_pending": true
+  },
+  "protocol": {
+    "checksum_manifest_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking_metrics": {
+    "pr_auc": 0.09553980786517301,
+    "pr_auc_minus_attack_prevalence": -0.009307105132907084,
+    "primary_metric": "PR_AUC",
+    "roc_auc": 0.47648177846945416
+  },
+  "removal_penalty_full_minus_ablated": {
+    "f1_at_0_50": -0.02939106535110029,
+    "fpr_at_0_50": -0.04568185067842656,
+    "pr_auc": 0.010675347268799262,
+    "recall_at_0_50": -0.02075301978925726,
+    "roc_auc": 0.038436647924315004
+  },
+  "runtime": {
+    "lightgbm_fit_seconds": 487.91139262199977,
+    "optimized_cache_materialization_seconds": 58.790749642001174,
+    "parquet_files_read": 0,
+    "xgboost_fit_seconds": 136.0640856629998
+  },
+  "scientific_random_partner": {
+    "commit": "eae3a7c409687f086924cce84be65bca5e7b10ba",
+    "result_sha256": "de40919dfced8471a48cbef06b1816b05a8e3b797eec10e35d2fade2effa0d61",
+    "stage": "Stage23-1K",
+    "tag": "stage23-1k-behavior-only-random-natural-v1"
+  },
+  "shortcut_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_STAGE23_UNCERTAINTY_ANALYSIS",
+    "definition": "I(S) = DELTA_RANDOM(S) - DELTA_CHRONOLOGICAL(S)",
+    "f1_at_0_50": 0.06671196002312055,
+    "fpr_at_0_50": 0.037948796978317115,
+    "interpretation_status": "POINT_ESTIMATE_ONLY_UNTIL_UNCERTAINTY_STAGE",
+    "point_estimate_available": true,
+    "pr_auc": 0.003326690773110541,
+    "recall_at_0_50": 0.04667199763238462,
+    "roc_auc": -0.03595332320270184
+  },
+  "stage": "Stage23-1L",
+  "status": "BEHAVIOR_ONLY_CHRONOLOGICAL_NATURAL_RESULT_COMPLETE_UNSEALED"
+}

@@ -1,0 +1,77 @@
+{
+  "cell": {
+    "feature_count": 63,
+    "interpretation_term": "behavior-restricted performance",
+    "removed_features": [
+      "Dst Port",
+      "Protocol",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "behavior_restricted_feature_set",
+    "split": "CHRONOLOGICAL_NATURAL",
+    "subset": "BEHAVIOR_ONLY"
+  },
+  "core_artifact_sha256": {
+    "behavior_only_chronological_natural_lightgbm_model.txt": "65af6dcf849230508f4ffa738a93ad4c1cc6eed80c67083793085d6319d78d7c",
+    "behavior_only_chronological_natural_validation_probabilities.npz": "6b084ca96d8474dbaf6c20c52957ecea38ff2729b7facf158981e78840eb94b5",
+    "behavior_only_chronological_natural_xgboost_model.json": "2816b36504a717b87bf3bd2c761ef7d7df0f23988f8f377f6a63a0b45cfb5310",
+    "stage23_1l_behavior_only_chronological_natural_result.json": "185b5b247d51cc776a4506e64765c88ef23f0e69deb3e3f9d479014427097459"
+  },
+  "execution_cache": {
+    "commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "parquet_files_read": 0,
+    "scientifically_sealed": true,
+    "tag": "stage23-execution-cache-v1"
+  },
+  "models_fit_this_cell": 2,
+  "next_stage": "Stage23 placebo ablation block",
+  "post_result_adaptation": false,
+  "primary_boosted_ablation": {
+    "all_primary_subsets_have_both_splits": true,
+    "frozen_primary_subsets": 7,
+    "primary_boosted_fits": 24,
+    "primary_boosted_fits_expected": 24,
+    "splits_per_subset": 2,
+    "status": "COMPLETE_AND_FROZEN_AFTER_THIS_SEAL"
+  },
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.09553980786517301,
+    "pr_auc_removal_penalty": 0.010675347268799262,
+    "roc_auc": 0.47648177846945416,
+    "roc_auc_removal_penalty": 0.038436647924315004
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "remaining_stage23_model_fits": {
+    "depth_1_stumps": 6,
+    "placebo_boosted": 20,
+    "total": 26
+  },
+  "required_predecessor": {
+    "commit": "eae3a7c409687f086924cce84be65bca5e7b10ba",
+    "tag": "stage23-1k-behavior-only-random-natural-v1"
+  },
+  "result_tag": "stage23-1l-behavior-only-chronological-natural-v1",
+  "sealed_utc": "2026-08-17T11:24:27.971310+00:00",
+  "shortcut_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_STAGE23_UNCERTAINTY_ANALYSIS",
+    "f1_at_0_50": 0.06671196002312055,
+    "fpr_at_0_50": 0.037948796978317115,
+    "interpretation_status": "POINT_ESTIMATE_ONLY",
+    "pr_auc": 0.003326690773110541,
+    "recall_at_0_50": 0.04667199763238462,
+    "roc_auc": -0.03595332320270184
+  },
+  "source_checksum_manifest_sha256": "371096c436476258f241c8605601372c3528d58591adf046386e0ab95a643e10",
+  "stage": "Stage23-1L",
+  "stage23_models_fit_total": 24,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

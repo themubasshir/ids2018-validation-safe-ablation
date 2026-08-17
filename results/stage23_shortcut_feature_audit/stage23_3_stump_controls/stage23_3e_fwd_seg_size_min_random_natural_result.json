@@ -1,0 +1,130 @@
+{
+  "cache": {
+    "feature_file": "/kaggle/working/stage23_execution_cache_v1/features/feature_61.float64.dat",
+    "feature_file_sha256": "20a3b83c19131a1a307f74d9ad15a7b4332288f18dd0a4cce6accc1c45c48ea5",
+    "identifier": "stage23_execution_cache_v1",
+    "parquet_files_read": 0,
+    "recovery": "MINIMAL_STUMP_CACHE_RECOVERED_BYTE_EXACT"
+  },
+  "cell": {
+    "feature": "Fwd Seg Size Min",
+    "feature_index": 61,
+    "input_dtype": "float64",
+    "split": "RANDOM_NATURAL",
+    "train_attack": 1577839,
+    "train_rows": 11529922,
+    "validation_attack": 394460,
+    "validation_rows": 2882481
+  },
+  "created_utc": "2026-08-17T14:32:28.234657+00:00",
+  "evaluation": {
+    "attack_prevalence": 0.13684738945373795,
+    "confusion_matrix": {
+      "fn": 262119,
+      "fp": 103193,
+      "tn": 2384828,
+      "tp": 132341
+    },
+    "metrics": {
+      "PR_AUC": 0.279444272619476,
+      "PR_AUC_MINUS_ATTACK_PREVALENCE": 0.14259688316573807,
+      "ROC_AUC": 0.6470116136589396,
+      "accuracy": 0.8732647327076918,
+      "f1": 0.42013416000787307,
+      "fnr": 0.6645008365867262,
+      "fpr": 0.04147593609539469,
+      "precision": 0.5618764169928757,
+      "recall": 0.33549916341327385
+    },
+    "operating_threshold": 0.5
+  },
+  "execution_parent": {
+    "commit": "eca21e3f6a918d59c64af92eb701361dde91ada7",
+    "tag": "stage23-placebo-boosted-block-complete-v1"
+  },
+  "governance": {
+    "boosted_model_fits": 0,
+    "model_type": "DEPTH_1_STUMP_CONTROL",
+    "new_model_fits_this_result": 1,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "stage23_0_modified": false,
+    "stump_spec_modified": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "missing_value_handling": {
+    "fit_scope": "training membership only",
+    "implementation": "sklearn.impute.SimpleImputer(strategy='median')",
+    "imputation_seconds": 1.3549783769999522,
+    "method": "TRAINING_MEDIAN_IMPUTATION_FOR_STUMP_ONLY",
+    "training_median": 20.0,
+    "training_missing_values": 0,
+    "validation_missing_values": 0
+  },
+  "model": {
+    "fit_seconds": 1.0272568949999368,
+    "implementation": "sklearn.tree.DecisionTreeClassifier",
+    "materialization_seconds": 0.153754415000094,
+    "model_artifact": "stage23_3e_fwd_seg_size_min_random_natural_model.joblib",
+    "model_sha256": "72998254cb8f12cb1761cfef930bb62bfd5615365398f36a141255c135b80308",
+    "parameters": {
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 1,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "random_state": 42,
+      "splitter": "best"
+    },
+    "prediction_seconds": 0.04095786299990323,
+    "sklearn_version": "1.6.1"
+  },
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "protocol_checksums_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "stump_spec_git_blob": "c2c8803e7250b1ff781e45dbf4665e172865e555",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "random_to_chronological_degradation": {
+    "status": "PENDING_MATCHED_CHRONO_STUMP"
+  },
+  "stage": "Stage23-3E",
+  "status": "RESULT_COMPLETE_UNSEALED",
+  "tree_structure": {
+    "attack_branch_rule": "Attack iff leaf P(y=1) >= 0.5.",
+    "branch_predicting_attack": "RIGHT",
+    "left_leaf_class_distribution": {
+      "attack": 1047610,
+      "attack_rate": 0.0989680160455891,
+      "benign": 9537729
+    },
+    "left_leaf_support": 10585339,
+    "missing_imputation_median": 20.0,
+    "right_leaf_class_distribution": {
+      "attack": 530229,
+      "attack_rate": 0.5613365897967675,
+      "benign": 414354
+    },
+    "right_leaf_support": 944583,
+    "selected_feature": "Fwd Seg Size Min",
+    "sklearn_tree_n_node_samples": {
+      "left": 10585339,
+      "right": 944583,
+      "root": 11529922
+    },
+    "split_threshold": 30.0,
+    "tree_split_performed": true
+  },
+  "validation_probabilities": {
+    "artifact": "stage23_3e_fwd_seg_size_min_random_natural_validation_probabilities.npz",
+    "probability_dtype": "float64",
+    "sha256": "a5f712e507d0d5affbfe77926d6306ecd0a23b2d7cb1a57b87b86585f8d1fa4a"
+  }
+}

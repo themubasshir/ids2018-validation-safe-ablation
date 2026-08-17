@@ -1,0 +1,136 @@
+{
+  "created_utc": "2026-08-17T14:36:33.565698+00:00",
+  "definition": "Validation rows are routed through the already-fitted training-only median imputer and depth-1 stump. No estimator or imputer is refit.",
+  "model_fits": 0,
+  "results": [
+    {
+      "branch_predicting_attack": "NEITHER",
+      "feature": "Dst Port",
+      "left_validation_leaf": {
+        "attack": 387673,
+        "attack_rate": 0.25956149330898004,
+        "benign": 1105896,
+        "support": 1493569
+      },
+      "right_validation_leaf": {
+        "attack": 6787,
+        "attack_rate": 0.0048865586876634375,
+        "benign": 1382125,
+        "support": 1388912
+      },
+      "split": "RANDOM_NATURAL",
+      "split_performed": true,
+      "split_threshold": 80.5,
+      "stage": "Stage23-3A",
+      "training_imputation_median": 80.0
+    },
+    {
+      "branch_predicting_attack": "NEITHER",
+      "feature": "Dst Port",
+      "left_validation_leaf": {
+        "attack": 28676,
+        "attack_rate": 0.11349280478730983,
+        "benign": 223992,
+        "support": 252668
+      },
+      "right_validation_leaf": {
+        "attack": 33580,
+        "attack_rate": 0.09844274021435774,
+        "benign": 307532,
+        "support": 341112
+      },
+      "split": "CHRONOLOGICAL_NATURAL",
+      "split_performed": true,
+      "split_threshold": 80.5,
+      "stage": "Stage23-3B",
+      "training_imputation_median": 80.0
+    },
+    {
+      "branch_predicting_attack": "RIGHT",
+      "feature": "Init Fwd Win Byts",
+      "left_validation_leaf": {
+        "attack": 220134,
+        "attack_rate": 0.08672722845884186,
+        "benign": 2318100,
+        "support": 2538234
+      },
+      "right_validation_leaf": {
+        "attack": 174326,
+        "attack_rate": 0.5063980223502311,
+        "benign": 169921,
+        "support": 344247
+      },
+      "split": "RANDOM_NATURAL",
+      "split_performed": true,
+      "split_threshold": 26881.5,
+      "stage": "Stage23-3C",
+      "training_imputation_median": 279.0
+    },
+    {
+      "branch_predicting_attack": "RIGHT",
+      "feature": "Init Fwd Win Byts",
+      "left_validation_leaf": {
+        "attack": 60640,
+        "attack_rate": 0.10564404715654796,
+        "benign": 513363,
+        "support": 574003
+      },
+      "right_validation_leaf": {
+        "attack": 1616,
+        "attack_rate": 0.08171107852555999,
+        "benign": 18161,
+        "support": 19777
+      },
+      "split": "CHRONOLOGICAL_NATURAL",
+      "split_performed": true,
+      "split_threshold": 26881.5,
+      "stage": "Stage23-3D",
+      "training_imputation_median": 288.0
+    },
+    {
+      "branch_predicting_attack": "RIGHT",
+      "feature": "Fwd Seg Size Min",
+      "left_validation_leaf": {
+        "attack": 262119,
+        "attack_rate": 0.09902691667041312,
+        "benign": 2384828,
+        "support": 2646947
+      },
+      "right_validation_leaf": {
+        "attack": 132341,
+        "attack_rate": 0.5618764169928757,
+        "benign": 103193,
+        "support": 235534
+      },
+      "split": "RANDOM_NATURAL",
+      "split_performed": true,
+      "split_threshold": 30.0,
+      "stage": "Stage23-3E",
+      "training_imputation_median": 20.0
+    },
+    {
+      "branch_predicting_attack": "RIGHT",
+      "feature": "Fwd Seg Size Min",
+      "left_validation_leaf": {
+        "attack": 61063,
+        "attack_rate": 0.10441582336706531,
+        "benign": 523743,
+        "support": 584806
+      },
+      "right_validation_leaf": {
+        "attack": 1193,
+        "attack_rate": 0.13293960329841764,
+        "benign": 7781,
+        "support": 8974
+      },
+      "split": "CHRONOLOGICAL_NATURAL",
+      "split_performed": true,
+      "split_threshold": 30.0,
+      "stage": "Stage23-3F",
+      "training_imputation_median": 20.0
+    }
+  ],
+  "source_summary_sha256": "b78009175e2817b4d2d5f51d9712d5232d279b79e417d19f523bc74821ae89a3",
+  "stage": "Stage23-3 validation leaf distributions",
+  "status": "ZERO_FIT_DERIVED_SUPPLEMENT"
+}

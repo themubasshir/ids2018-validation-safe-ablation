@@ -1,0 +1,34 @@
+{
+  "execution_parent": {
+    "commit": "eca21e3f6a918d59c64af92eb701361dde91ada7",
+    "tag": "stage23-placebo-boosted-block-complete-v1"
+  },
+  "fit_accounting": {
+    "additional_stage23_model_fits_authorized": 0,
+    "depth_1_stumps": "6 / 6",
+    "placebo_boosted": "20 / 20",
+    "primary_boosted": "24 / 24",
+    "stage23_total": "50 / 50"
+  },
+  "governance": {
+    "new_boosted_fits_this_seal": 0,
+    "new_model_fits_this_seal": 0,
+    "new_stump_fits_this_seal": 0,
+    "parquet_files_read": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "stage23_model_fit_budget_exhausted": true,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "scientific_status": "All prospectively frozen Stage23 model fits are complete. Any subsequent Stage23 work must be analysis-only and must not introduce additional model fits.",
+  "sealed_utc": "2026-08-17T14:36:34.644015+00:00",
+  "stage": "Stage23-3 stump controls",
+  "status": "SEALED_COMPLETE_MODEL_FIT_BUDGET",
+  "stump_block": {
+    "source_checksums_sha256": "fe0c2879929ea83dad9a11e025575b2262bdae418c77ab23c4e7367de217720a",
+    "summary_sha256": "b78009175e2817b4d2d5f51d9712d5232d279b79e417d19f523bc74821ae89a3",
+    "validation_leaf_distributions_sha256": "8f1ca77592fb93fe0b750143b445054174275e718fa76b1de42378c5f4691885"
+  },
+  "tag": "stage23-3-stump-controls-complete-v1"
+}

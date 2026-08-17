@@ -1,0 +1,71 @@
+{
+  "additional_model_fits_authorized": 0,
+  "boosted_model_fits": 0,
+  "completed_stump_fits": 6,
+  "completed_tasks": [
+    {
+      "feature": "Dst Port",
+      "fit_completed_utc": "2026-08-17T14:31:58.127652+00:00",
+      "fit_seconds": 1.4892983759998515,
+      "ordinal": 1,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-3A"
+    },
+    {
+      "feature": "Dst Port",
+      "fit_completed_utc": "2026-08-17T14:32:07.508922+00:00",
+      "fit_seconds": 1.7636329829999795,
+      "ordinal": 2,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-3B"
+    },
+    {
+      "feature": "Init Fwd Win Byts",
+      "fit_completed_utc": "2026-08-17T14:32:12.463518+00:00",
+      "fit_seconds": 1.3023835230001168,
+      "ordinal": 3,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-3C"
+    },
+    {
+      "feature": "Init Fwd Win Byts",
+      "fit_completed_utc": "2026-08-17T14:32:20.357471+00:00",
+      "fit_seconds": 1.5255628540000998,
+      "ordinal": 4,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-3D"
+    },
+    {
+      "feature": "Fwd Seg Size Min",
+      "fit_completed_utc": "2026-08-17T14:32:24.310908+00:00",
+      "fit_seconds": 1.0272568949999368,
+      "ordinal": 5,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-3E"
+    },
+    {
+      "feature": "Fwd Seg Size Min",
+      "fit_completed_utc": "2026-08-17T14:32:31.656336+00:00",
+      "fit_seconds": 1.2522253269999055,
+      "ordinal": 6,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-3F"
+    }
+  ],
+  "completed_utc": "2026-08-17T14:32:32.591281+00:00",
+  "created_utc": "2026-08-17T14:31:52.015053+00:00",
+  "current_task": null,
+  "execution_parent_commit": "eca21e3f6a918d59c64af92eb701361dde91ada7",
+  "execution_parent_tag": "stage23-placebo-boosted-block-complete-v1",
+  "expected_stump_fits": 6,
+  "fit_in_progress": false,
+  "next_action": "ZERO_FIT_SEAL_ONLY",
+  "parquet_files_read": 0,
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "stage": "Stage23-3-Stump-Control-Block",
+  "stage23_fits_after_completed": 50,
+  "stage23_fits_before": 44,
+  "status": "ALL_SIX_STUMPS_COMPLETE_UNSEALED",
+  "warning": "If execution fails after a stump fit completes, do not blindly rerun this cell."
+}

@@ -1,0 +1,130 @@
+{
+  "cache": {
+    "feature_file": "/kaggle/working/stage23_execution_cache_v1/features/feature_00.float64.dat",
+    "feature_file_sha256": "9865224fb0aa281adb042e5af22f7a972fa32283080c602b380f056b50f12a85",
+    "identifier": "stage23_execution_cache_v1",
+    "parquet_files_read": 0,
+    "recovery": "MINIMAL_STUMP_CACHE_RECOVERED_BYTE_EXACT"
+  },
+  "cell": {
+    "feature": "Dst Port",
+    "feature_index": 0,
+    "input_dtype": "float64",
+    "split": "RANDOM_NATURAL",
+    "train_attack": 1577839,
+    "train_rows": 11529922,
+    "validation_attack": 394460,
+    "validation_rows": 2882481
+  },
+  "created_utc": "2026-08-17T14:32:02.762259+00:00",
+  "evaluation": {
+    "attack_prevalence": 0.13684738945373795,
+    "confusion_matrix": {
+      "fn": 394460,
+      "fp": 0,
+      "tn": 2488021,
+      "tp": 0
+    },
+    "metrics": {
+      "PR_AUC": 0.2574500989398031,
+      "PR_AUC_MINUS_ATTACK_PREVALENCE": 0.12060270948606513,
+      "ROC_AUC": 0.7691529949798699,
+      "accuracy": 0.863152610546262,
+      "f1": 0.0,
+      "fnr": 1.0,
+      "fpr": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "operating_threshold": 0.5
+  },
+  "execution_parent": {
+    "commit": "eca21e3f6a918d59c64af92eb701361dde91ada7",
+    "tag": "stage23-placebo-boosted-block-complete-v1"
+  },
+  "governance": {
+    "boosted_model_fits": 0,
+    "model_type": "DEPTH_1_STUMP_CONTROL",
+    "new_model_fits_this_result": 1,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "stage23_0_modified": false,
+    "stump_spec_modified": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "missing_value_handling": {
+    "fit_scope": "training membership only",
+    "implementation": "sklearn.impute.SimpleImputer(strategy='median')",
+    "imputation_seconds": 2.093142236999938,
+    "method": "TRAINING_MEDIAN_IMPUTATION_FOR_STUMP_ONLY",
+    "training_median": 80.0,
+    "training_missing_values": 0,
+    "validation_missing_values": 0
+  },
+  "model": {
+    "fit_seconds": 1.4892983759998515,
+    "implementation": "sklearn.tree.DecisionTreeClassifier",
+    "materialization_seconds": 0.16044346700005008,
+    "model_artifact": "stage23_3a_dst_port_random_natural_model.joblib",
+    "model_sha256": "53e7ab82edf193c12f3358a78a99e7889676fc102305e4e7bab3721e9c56a27e",
+    "parameters": {
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 1,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "random_state": 42,
+      "splitter": "best"
+    },
+    "prediction_seconds": 0.05418134900014593,
+    "sklearn_version": "1.6.1"
+  },
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "protocol_checksums_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "stump_spec_git_blob": "c2c8803e7250b1ff781e45dbf4665e172865e555",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "random_to_chronological_degradation": {
+    "status": "PENDING_MATCHED_CHRONO_STUMP"
+  },
+  "stage": "Stage23-3A",
+  "status": "RESULT_COMPLETE_UNSEALED",
+  "tree_structure": {
+    "attack_branch_rule": "Attack iff leaf P(y=1) >= 0.5.",
+    "branch_predicting_attack": "NEITHER",
+    "left_leaf_class_distribution": {
+      "attack": 1550915,
+      "attack_rate": 0.2595815269586257,
+      "benign": 4423759
+    },
+    "left_leaf_support": 5974674,
+    "missing_imputation_median": 80.0,
+    "right_leaf_class_distribution": {
+      "attack": 26924,
+      "attack_rate": 0.0048465883071286825,
+      "benign": 5528324
+    },
+    "right_leaf_support": 5555248,
+    "selected_feature": "Dst Port",
+    "sklearn_tree_n_node_samples": {
+      "left": 5974674,
+      "right": 5555248,
+      "root": 11529922
+    },
+    "split_threshold": 80.5,
+    "tree_split_performed": true
+  },
+  "validation_probabilities": {
+    "artifact": "stage23_3a_dst_port_random_natural_validation_probabilities.npz",
+    "probability_dtype": "float64",
+    "sha256": "02c3aa7012b4b7dbd838ffdd1535cdfadd00b77224483d450a64dd93d31469a7"
+  }
+}

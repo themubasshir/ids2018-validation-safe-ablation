@@ -1,0 +1,130 @@
+{
+  "cache": {
+    "feature_file": "/kaggle/working/stage23_execution_cache_v1/features/feature_58.float64.dat",
+    "feature_file_sha256": "95e36c6fdf6040044061eeb5edb8cf6ec34eb3ecf2dc252ebc9bb6d1440dd42a",
+    "identifier": "stage23_execution_cache_v1",
+    "parquet_files_read": 0,
+    "recovery": "MINIMAL_STUMP_CACHE_RECOVERED_BYTE_EXACT"
+  },
+  "cell": {
+    "feature": "Init Fwd Win Byts",
+    "feature_index": 58,
+    "input_dtype": "float64",
+    "split": "RANDOM_NATURAL",
+    "train_attack": 1577839,
+    "train_rows": 11529922,
+    "validation_attack": 394460,
+    "validation_rows": 2882481
+  },
+  "created_utc": "2026-08-17T14:32:16.462767+00:00",
+  "evaluation": {
+    "attack_prevalence": 0.13684738945373795,
+    "confusion_matrix": {
+      "fn": 220134,
+      "fp": 169921,
+      "tn": 2318100,
+      "tp": 174326
+    },
+    "metrics": {
+      "PR_AUC": 0.3001650481017988,
+      "PR_AUC_MINUS_ATTACK_PREVALENCE": 0.16331765864806083,
+      "ROC_AUC": 0.6868200827837668,
+      "accuracy": 0.8646808079567567,
+      "f1": 0.47197603379959846,
+      "fnr": 0.5580641890178979,
+      "fpr": 0.06829564541456845,
+      "precision": 0.5063980223502311,
+      "recall": 0.4419358109821021
+    },
+    "operating_threshold": 0.5
+  },
+  "execution_parent": {
+    "commit": "eca21e3f6a918d59c64af92eb701361dde91ada7",
+    "tag": "stage23-placebo-boosted-block-complete-v1"
+  },
+  "governance": {
+    "boosted_model_fits": 0,
+    "model_type": "DEPTH_1_STUMP_CONTROL",
+    "new_model_fits_this_result": 1,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "stage23_0_modified": false,
+    "stump_spec_modified": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "missing_value_handling": {
+    "fit_scope": "training membership only",
+    "implementation": "sklearn.impute.SimpleImputer(strategy='median')",
+    "imputation_seconds": 1.8626096359998883,
+    "method": "TRAINING_MEDIAN_IMPUTATION_FOR_STUMP_ONLY",
+    "training_median": 279.0,
+    "training_missing_values": 0,
+    "validation_missing_values": 0
+  },
+  "model": {
+    "fit_seconds": 1.3023835230001168,
+    "implementation": "sklearn.tree.DecisionTreeClassifier",
+    "materialization_seconds": 0.16075339300004998,
+    "model_artifact": "stage23_3c_init_fwd_win_byts_random_natural_model.joblib",
+    "model_sha256": "8f10e197d8a64b5910d8dd67dbfaf7c7b9561f710eb025519b007b0d16e7f5e5",
+    "parameters": {
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 1,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "random_state": 42,
+      "splitter": "best"
+    },
+    "prediction_seconds": 0.04204109600004813,
+    "sklearn_version": "1.6.1"
+  },
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "protocol_checksums_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "stump_spec_git_blob": "c2c8803e7250b1ff781e45dbf4665e172865e555",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "random_to_chronological_degradation": {
+    "status": "PENDING_MATCHED_CHRONO_STUMP"
+  },
+  "stage": "Stage23-3C",
+  "status": "RESULT_COMPLETE_UNSEALED",
+  "tree_structure": {
+    "attack_branch_rule": "Attack iff leaf P(y=1) >= 0.5.",
+    "branch_predicting_attack": "RIGHT",
+    "left_leaf_class_distribution": {
+      "attack": 881226,
+      "attack_rate": 0.08682589006227594,
+      "benign": 9268120
+    },
+    "left_leaf_support": 10149346,
+    "missing_imputation_median": 279.0,
+    "right_leaf_class_distribution": {
+      "attack": 696613,
+      "attack_rate": 0.5045814210880096,
+      "benign": 683963
+    },
+    "right_leaf_support": 1380576,
+    "selected_feature": "Init Fwd Win Byts",
+    "sklearn_tree_n_node_samples": {
+      "left": 10149346,
+      "right": 1380576,
+      "root": 11529922
+    },
+    "split_threshold": 26881.5,
+    "tree_split_performed": true
+  },
+  "validation_probabilities": {
+    "artifact": "stage23_3c_init_fwd_win_byts_random_natural_validation_probabilities.npz",
+    "probability_dtype": "float64",
+    "sha256": "dc6567d628977d27c656466ee192a34ac01f2941f004f4e284bce216b9225985"
+  }
+}

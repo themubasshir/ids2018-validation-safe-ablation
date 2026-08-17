@@ -1,0 +1,253 @@
+{
+  "artifacts": {
+    "lightgbm_model": {
+      "path": "no_fwd_seg_size_min_random_natural_lightgbm_model.txt",
+      "sha256": "3c4270af0465133c233527e00880a12a5ab141f2106d597d0db7f8aa89f0de5f"
+    },
+    "validation_probabilities": {
+      "path": "no_fwd_seg_size_min_random_natural_validation_probabilities.npz",
+      "sha256": "aa2a52e49041e716d1670c19383b2331796a87b56ed6868708a3aed67a30281e"
+    },
+    "xgboost_model": {
+      "path": "no_fwd_seg_size_min_random_natural_xgboost_model.json",
+      "sha256": "02d64109bea0db48979a81b7b24b34164418306bddbaf39b9119ca4aa69fcd62"
+    }
+  },
+  "cell": {
+    "feature_count": 69,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "removed_features": [
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "minimum_forward_segment_ablation",
+    "split": "RANDOM_NATURAL",
+    "subset": "NO_FWD_SEG_SIZE_MIN"
+  },
+  "created_utc": "2026-08-17T09:50:30.096836+00:00",
+  "data": {
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "scaling": "NONE",
+    "train": {
+      "attack": 1577839,
+      "benign": 9952083,
+      "rows": 11529922
+    },
+    "validation": {
+      "attack": 394460,
+      "attack_prevalence": 0.13684738945373795,
+      "benign": 2488021,
+      "rows": 2882481
+    }
+  },
+  "environment": {
+    "lightgbm": "4.6.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "shap": "0.51.0",
+    "xgboost": "3.2.0"
+  },
+  "execution_parent_commit": "f8cea7af7f239e254e427663a2d963483d0047c4",
+  "fixed_threshold_0_50": {
+    "accuracy": 0.9956516625781748,
+    "f1": 0.9838599599782636,
+    "fn": 12438,
+    "fnr": 0.03153171424225523,
+    "fp": 96,
+    "fpr": 3.858488332694941e-05,
+    "precision": 0.999748768704955,
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_0_50",
+    "recall": 0.9684682857577448,
+    "threshold": 0.5,
+    "tn": 2487925,
+    "tp": 382022
+  },
+  "full_reference": {
+    "f1_at_0_50": 0.983867395346681,
+    "fpr_at_0_50": 3.456562464705885e-05,
+    "pr_auc": 0.9955900418992819,
+    "recall_at_0_50": 0.9684581453125792,
+    "retrained": false,
+    "roc_auc": 0.9986245647735994,
+    "source": "Frozen Stage22R RANDOM_NATURAL FULL"
+  },
+  "governance": {
+    "new_lightgbm_fits": 1,
+    "new_model_fits_this_cell": 2,
+    "new_xgboost_fits": 1,
+    "placebo_executed": false,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "shap_executed": false,
+    "stage23_0_modified": false,
+    "stage23_total_authorized_model_fits": 50,
+    "stage23_total_model_fits_after_cell": 14,
+    "stage23_total_model_fits_before_cell": 12,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "models": {
+    "component_combination_dtype": "float64",
+    "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "ensemble_storage_dtype": "float32",
+    "lightgbm": {
+      "completed_fits": 1,
+      "configuration": "LGBM_11",
+      "fit_seconds": 385.6769511419998,
+      "library_version": "4.6.0",
+      "model_path": "no_fwd_seg_size_min_random_natural_lightgbm_model.txt",
+      "model_sha256": "3c4270af0465133c233527e00880a12a5ab141f2106d597d0db7f8aa89f0de5f",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "cpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      }
+    },
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "xgboost": {
+      "completed_fits": 1,
+      "configuration": "XGB_11",
+      "fit_seconds": 109.03141984800095,
+      "library_version": "3.2.0",
+      "model_path": "no_fwd_seg_size_min_random_natural_xgboost_model.json",
+      "model_sha256": "02d64109bea0db48979a81b7b24b34164418306bddbaf39b9119ca4aa69fcd62",
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      }
+    }
+  },
+  "next_authorized_action": "Seal Stage23-1G before executing another Stage23 model cell.",
+  "protocol": {
+    "checksum_manifest_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking_metrics": {
+    "pr_auc": 0.9955761360933137,
+    "pr_auc_minus_attack_prevalence": 0.8587287466395758,
+    "primary_metric": "PR_AUC",
+    "roc_auc": 0.9986087874098385
+  },
+  "removal_penalty_full_minus_ablated": {
+    "f1_at_0_50": 7.435368417407773e-06,
+    "fpr_at_0_50": -4.019258679890561e-06,
+    "pr_auc": 1.3905805968161822e-05,
+    "recall_at_0_50": -1.0140445165562895e-05,
+    "roc_auc": 1.5777363760904883e-05
+  },
+  "required_predecessor": {
+    "commit": "f8cea7af7f239e254e427663a2d963483d0047c4",
+    "stage": "Stage23-1F",
+    "tag": "stage23-1f-no-init-fwd-win-byts-chronological-natural-v1"
+  },
+  "runtime": {
+    "lightgbm_fit_seconds": 385.6769511419998,
+    "materialization_seconds": 58.473442019000686,
+    "xgboost_fit_seconds": 109.03141984800095
+  },
+  "shortcut_interaction": {
+    "required_future_cell": "NO_FWD_SEG_SIZE_MIN \u00d7 CHRONOLOGICAL_NATURAL",
+    "status": "PENDING_MATCHED_CHRONOLOGICAL_CELL"
+  },
+  "stage": "Stage23-1G",
+  "status": "NO_FWD_SEG_SIZE_MIN_RANDOM_NATURAL_RESULT_COMPLETE_UNSEALED"
+}

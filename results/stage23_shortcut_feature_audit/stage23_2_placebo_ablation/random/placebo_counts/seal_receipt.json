@@ -1,0 +1,31 @@
+{
+  "core_sha256": {
+    "checksums.sha256": "914d734a243a7fe9ee231cfef0ca9143982e4d9f26e73998b1517faab20b125f",
+    "placebo_counts_random_natural_lightgbm_model.txt": "e9aa94b7d71d49454422c41e46c7e1999936c1b92dc6686afbea8d2394e271a7",
+    "placebo_counts_random_natural_validation_probabilities.npz": "3c91f1b1d5848a920dda970d4c07b2fd094c8c7f1770f88785c9896c24e0911a",
+    "placebo_counts_random_natural_xgboost_model.json": "a5363e87c833b75d7a6e5f8b7a2f6371b4c9867cb7ac9f2ab30654949b707de0",
+    "stage23_2a_placebo_counts_random_natural_result.json": "8eab55f5d983f8510e0225cbea7574d52b00d5017675511419f79b4f9b4ba4aa"
+  },
+  "feature_count": 67,
+  "next_authorized_execution": "Stage23 remaining frozen placebo batch: Stage23-2B through Stage23-2J, beginning with PLACEBO_COUNTS \u00d7 CHRONOLOGICAL_NATURAL",
+  "parent_commit": "359b6a2c1b548e6b9fc84d2712f0fb13714b1c24",
+  "parent_tag": "stage23-1l-behavior-only-chronological-natural-v1",
+  "placebo": "PLACEBO_COUNTS",
+  "placebo_boosted_fits": 2,
+  "primary_boosted_fits": 24,
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "remaining_placebo_boosted_fits": 18,
+  "remaining_stump_fits": 6,
+  "removed_features": [
+    "Flow Duration",
+    "Tot Fwd Pkts",
+    "Tot Bwd Pkts"
+  ],
+  "result_tag": "stage23-2a-placebo-counts-random-natural-v1",
+  "sealed_utc": "2026-08-17T11:38:57.024078+00:00",
+  "split": "RANDOM_NATURAL",
+  "stage": "Stage23-2A",
+  "stage23_models_fit_total": 26,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

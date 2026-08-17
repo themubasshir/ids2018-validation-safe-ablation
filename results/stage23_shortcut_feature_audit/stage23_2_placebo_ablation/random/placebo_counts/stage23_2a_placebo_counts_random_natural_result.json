@@ -1,0 +1,283 @@
+{
+  "artifacts": {
+    "lightgbm_model": {
+      "path": "placebo_counts_random_natural_lightgbm_model.txt",
+      "sha256": "e9aa94b7d71d49454422c41e46c7e1999936c1b92dc6686afbea8d2394e271a7"
+    },
+    "validation_probabilities": {
+      "path": "placebo_counts_random_natural_validation_probabilities.npz",
+      "sha256": "3c91f1b1d5848a920dda970d4c07b2fd094c8c7f1770f88785c9896c24e0911a"
+    },
+    "xgboost_model": {
+      "path": "placebo_counts_random_natural_xgboost_model.json",
+      "sha256": "a5363e87c833b75d7a6e5f8b7a2f6371b4c9867cb7ac9f2ab30654949b707de0"
+    }
+  },
+  "cache": {
+    "data_manifest_sha256": "063c7263017936b18dd8cb5d508b0a9ed4e68326f8b31e97ac602651d789517b",
+    "identifier": "stage23_execution_cache_v1",
+    "materialization_seconds": 62.594778608001434,
+    "metadata_sha256": "e810d19f04a60233c85894205d29de718e91ac28cad42065fd258c0e0f966439",
+    "parquet_files_read": 0,
+    "seal_commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "seal_tag": "stage23-execution-cache-v1",
+    "sealed": true,
+    "selected_physical_feature_digests_verified": 67,
+    "semantic_70f_sha256": "8c43ab0e36a65de1c095acb1ebf9e7d029a9e2b1cc353455a66617db8a899bb2"
+  },
+  "cell": {
+    "feature_count": 67,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "placebo": "PLACEBO_COUNTS",
+    "removed_features": [
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts"
+    ],
+    "split": "RANDOM_NATURAL"
+  },
+  "created_utc": "2026-08-17T11:37:03.243522+00:00",
+  "data": {
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "scaling": "NONE",
+    "train": {
+      "attack": 1577839,
+      "benign": 9952083,
+      "rows": 11529922
+    },
+    "validation": {
+      "attack": 394460,
+      "attack_prevalence": 0.13684738945373795,
+      "benign": 2488021,
+      "rows": 2882481
+    }
+  },
+  "environment": {
+    "lightgbm": "4.6.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "shap": "0.51.0",
+    "xgboost": "3.2.0"
+  },
+  "execution_parent": {
+    "commit": "359b6a2c1b548e6b9fc84d2712f0fb13714b1c24",
+    "tag": "stage23-1l-behavior-only-chronological-natural-v1"
+  },
+  "fixed_threshold_0_50": {
+    "accuracy": 0.9956523564248992,
+    "f1": 0.9838623275746619,
+    "fn": 12442,
+    "fnr": 0.03154185468742078,
+    "fp": 90,
+    "fpr": 3.617332811901507e-05,
+    "precision": 0.9997644644969486,
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_0_50",
+    "recall": 0.9684581453125792,
+    "threshold": 0.5,
+    "tn": 2487931,
+    "tp": 382018
+  },
+  "full_reference": {
+    "f1_at_0_50": 0.983867395346681,
+    "fpr_at_0_50": 3.456562464705885e-05,
+    "pr_auc": 0.9955900418992819,
+    "recall_at_0_50": 0.9684581453125792,
+    "retrained": false,
+    "roc_auc": 0.9986245647735994,
+    "source": "Frozen Stage22R RANDOM_NATURAL FULL"
+  },
+  "governance": {
+    "execution_cache_optimization": true,
+    "execution_cache_scientifically_sealed": true,
+    "feature_definition_changed": false,
+    "input_dtype_changed": false,
+    "model_specification_changed": false,
+    "new_lightgbm_fits": 1,
+    "new_model_fits_this_cell": 2,
+    "new_xgboost_fits": 1,
+    "parquet_files_read": 0,
+    "placebo_boosted_fits_after_cell": 2,
+    "placebo_boosted_fits_before_cell": 0,
+    "placebo_boosted_fits_expected": 20,
+    "placebo_definition_changed": false,
+    "primary_boosted_model_fits_complete": true,
+    "primary_boosted_model_fits_total": 24,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "shap_executed": false,
+    "split_definition_changed": false,
+    "stage23_0_modified": false,
+    "stage23_total_authorized_model_fits": 50,
+    "stage23_total_model_fits_after_cell": 26,
+    "stage23_total_model_fits_before_cell": 24,
+    "stump_executed": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "models": {
+    "component_combination_dtype": "float64",
+    "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "ensemble_storage_dtype": "float32",
+    "lightgbm": {
+      "completed_fits": 1,
+      "configuration": "LGBM_11",
+      "fit_seconds": 378.4749020580002,
+      "library_version": "4.6.0",
+      "model_path": "placebo_counts_random_natural_lightgbm_model.txt",
+      "model_sha256": "e9aa94b7d71d49454422c41e46c7e1999936c1b92dc6686afbea8d2394e271a7",
+      "parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "device_type": "cpu",
+        "learning_rate": 0.06,
+        "max_depth": 12,
+        "min_child_samples": 20,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "num_leaves": 127,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "verbosity": -1
+      }
+    },
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "xgboost": {
+      "completed_fits": 1,
+      "configuration": "XGB_11",
+      "fit_seconds": 104.81464943100036,
+      "library_version": "3.2.0",
+      "model_path": "placebo_counts_random_natural_xgboost_model.json",
+      "model_sha256": "a5363e87c833b75d7a6e5f8b7a2f6371b4c9867cb7ac9f2ab30654949b707de0",
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "device": "cuda",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      }
+    }
+  },
+  "next_authorized_action": "Seal Stage23-2A before executing another Stage23 model cell.",
+  "placebo_interaction": {
+    "required_future_cell": "Stage23-2B PLACEBO_COUNTS \u00d7 CHRONOLOGICAL_NATURAL",
+    "status": "PENDING_MATCHED_CHRONOLOGICAL_CELL"
+  },
+  "placebo_protocol": {
+    "matched_k": 3,
+    "number_of_placebos": 5,
+    "placebo": "PLACEBO_COUNTS",
+    "seed": null,
+    "selection_method": "Five prospectively chosen ordinary behavioral triplets spanning count, volume/direction, timing, packet-size, and active/idle families."
+  },
+  "protocol": {
+    "checksum_manifest_sha256": "36ae0ded6f9b768943d3781610a30426a4b250d928d4207a6ea36ba40768100b",
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking_metrics": {
+    "pr_auc": 0.9955865163363365,
+    "pr_auc_minus_attack_prevalence": 0.8587391268825986,
+    "primary_metric": "PR_AUC",
+    "roc_auc": 0.9986174194459495
+  },
+  "removal_penalty_full_minus_placebo": {
+    "f1_at_0_50": 5.067772019140548e-06,
+    "fpr_at_0_50": -1.6077034719562243e-06,
+    "pr_auc": 3.525562945361216e-06,
+    "recall_at_0_50": 0.0,
+    "roc_auc": 7.145327649893396e-06
+  },
+  "runtime": {
+    "lightgbm_fit_seconds": 378.4749020580002,
+    "optimized_cache_materialization_seconds": 62.594778608001434,
+    "parquet_files_read": 0,
+    "xgboost_fit_seconds": 104.81464943100036
+  },
+  "stage": "Stage23-2A",
+  "status": "PLACEBO_COUNTS_RANDOM_NATURAL_RESULT_COMPLETE_UNSEALED"
+}

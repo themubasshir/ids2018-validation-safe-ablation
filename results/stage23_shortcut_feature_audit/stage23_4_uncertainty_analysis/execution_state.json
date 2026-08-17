@@ -1,0 +1,14 @@
+{
+  "bootstrap_chronological_completed": 1000,
+  "bootstrap_random_completed": 1000,
+  "bootstrap_replicates_expected": 1000,
+  "completed_utc": "2026-08-17T14:52:00.964605+00:00",
+  "created_utc": "2026-08-17T14:44:00.538069+00:00",
+  "model_fits": 0,
+  "next_action": "ZERO_FIT_SEAL_UNCERTAINTY_BLOCK",
+  "parquet_files_read": 0,
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "stage": "Stage23-4 uncertainty analysis",
+  "status": "UNCERTAINTY_ANALYSIS_COMPLETE_UNSEALED"
+}

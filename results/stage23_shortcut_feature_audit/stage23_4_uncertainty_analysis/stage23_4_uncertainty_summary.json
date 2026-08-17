@@ -1,0 +1,530 @@
+{
+  "cohorts": {
+    "CHRONOLOGICAL_NATURAL": {
+      "attack": 5242,
+      "benign": 44758,
+      "rows": 50000
+    },
+    "RANDOM_NATURAL": {
+      "attack": 6842,
+      "benign": 43158,
+      "rows": 50000
+    }
+  },
+  "comparisons": {
+    "BEHAVIOR_ONLY": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": 0.00807237832947763,
+          "upper_97_5": 0.01263975725460395
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.03032844641697618,
+          "upper_97_5": 0.04271457638678841
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -2.9204045875997815e-05,
+          "upper_97_5": 0.005382771146658513
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": 0.011323931343983412,
+          "upper_97_5": 0.014618400482256566
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 0.0019496373183142512,
+          "upper_97_5": 0.0026846718729636983
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.04039986869427763,
+          "upper_97_5": -0.028058423480978055
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.010675347268799262,
+          "roc_auc_removal_penalty": 0.038436647924315004
+        },
+        "family": "PRIMARY",
+        "interaction": {
+          "pr_auc": 0.003326690773110541,
+          "roc_auc": -0.03595332320270184
+        },
+        "random": {
+          "pr_auc_removal_penalty": 0.014002038041909803,
+          "roc_auc_removal_penalty": 0.002483324721613167
+        }
+      },
+      "family": "PRIMARY"
+    },
+    "NO_DST_PORT": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": 0.001959606159472882,
+          "upper_97_5": 0.005744408265310856
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.021811614647179976,
+          "upper_97_5": 0.03173947323167867
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.005267564063870375,
+          "upper_97_5": -0.0015165995640013267
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": 0.0001698831288928282,
+          "upper_97_5": 0.0007940842687093024
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 0.0001533007531018482,
+          "upper_97_5": 0.0005142040844624357
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.03139288726970821,
+          "upper_97_5": -0.02148060714233315
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.003741468725332764,
+          "roc_auc_removal_penalty": 0.026054035633011174
+        },
+        "family": "PRIMARY",
+        "interaction": {
+          "pr_auc": -0.003411625576458799,
+          "roc_auc": -0.025902681372348246
+        },
+        "random": {
+          "pr_auc_removal_penalty": 0.00032984314887396504,
+          "roc_auc_removal_penalty": 0.00015135426066292812
+        }
+      },
+      "family": "PRIMARY"
+    },
+    "NO_FWD_SEG_SIZE_MIN": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": 0.00024634464715258853,
+          "upper_97_5": 0.0015681088256354985
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.001926305712748261,
+          "upper_97_5": 0.007549470564999868
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.0014991129068541297,
+          "upper_97_5": -0.00017537466024770032
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": -2.295120965745412e-05,
+          "upper_97_5": 0.00018323750245296527
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 1.5079056840203164e-05,
+          "upper_97_5": 0.00015529749670415704
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.007461092543399267,
+          "upper_97_5": -0.0018735338020635245
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.0007603990709362518,
+          "roc_auc_removal_penalty": 0.0032363161882604796
+        },
+        "family": "PRIMARY",
+        "interaction": {
+          "pr_auc": -0.00074649326496809,
+          "roc_auc": -0.0032205388244995747
+        },
+        "random": {
+          "pr_auc_removal_penalty": 1.3905805968161822e-05,
+          "roc_auc_removal_penalty": 1.5777363760904883e-05
+        }
+      },
+      "family": "PRIMARY"
+    },
+    "NO_INIT_FWD_WIN_BYTS": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": -0.002121285931441744,
+          "upper_97_5": 0.0011902216007453486
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": -5.3415142766358105e-05,
+          "upper_97_5": 0.011270238698479254
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": 0.0006494786706753828,
+          "upper_97_5": 0.004066168610987353
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": 0.0014170261240420896,
+          "upper_97_5": 0.002335802960643324
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 0.00021982140963344997,
+          "upper_97_5": 0.00045631947418101336
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.010978204403835934,
+          "upper_97_5": 0.0004392081922844664
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.00018347052991359025,
+          "roc_auc_removal_penalty": 0.0057067436027592455
+        },
+        "family": "PRIMARY",
+        "interaction": {
+          "pr_auc": 0.0019891225379962546,
+          "roc_auc": -0.005274192868134353
+        },
+        "random": {
+          "pr_auc_removal_penalty": 0.002172593067909845,
+          "roc_auc_removal_penalty": 0.00043255073462489246
+        }
+      },
+      "family": "PRIMARY"
+    },
+    "NO_PORTS": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": 0.00195982038321412,
+          "upper_97_5": 0.005744814516019507
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.021811222579423604,
+          "upper_97_5": 0.031740064769699955
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.005286186787670953,
+          "upper_97_5": -0.0015476733267593347
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": 0.0001721911461683906,
+          "upper_97_5": 0.0007846471864412061
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 0.0001520621277799644,
+          "upper_97_5": 0.0005151428744065184
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.031383798992310086,
+          "upper_97_5": -0.021501918940749622
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.00374166774618212,
+          "roc_auc_removal_penalty": 0.026054489040292284
+        },
+        "family": "PRIMARY",
+        "interaction": {
+          "pr_auc": -0.0034190634923214613,
+          "roc_auc": -0.025905579372519916
+        },
+        "random": {
+          "pr_auc_removal_penalty": 0.00032260425386065883,
+          "roc_auc_removal_penalty": 0.0001489096677723678
+        }
+      },
+      "family": "PRIMARY"
+    },
+    "NO_SUSPICIOUS_GROUP": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": -0.0025539865163677895,
+          "upper_97_5": 0.00310479515108542
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.019040015913123962,
+          "upper_97_5": 0.030563780465907568
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": 0.00221174786153164,
+          "upper_97_5": 0.00810378345684727
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": 0.004598577822339797,
+          "upper_97_5": 0.0064184924496480614
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 0.0008720932723237124,
+          "upper_97_5": 0.001489534787771657
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.02932549128948949,
+          "upper_97_5": -0.017802274418892497
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.0015482290455561126,
+          "roc_auc_removal_penalty": 0.02552591873259652
+        },
+        "family": "PRIMARY",
+        "interaction": {
+          "pr_auc": 0.0044405674124163436,
+          "roc_auc": -0.024309873089373102
+        },
+        "random": {
+          "pr_auc_removal_penalty": 0.005988796457972456,
+          "roc_auc_removal_penalty": 0.001216045643223418
+        }
+      },
+      "family": "PRIMARY"
+    },
+    "PLACEBO_ACTIVITY": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": -0.000560152912040051,
+          "upper_97_5": 0.0002493596037328909
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": -0.0022541188435997008,
+          "upper_97_5": 0.0016297617302965055
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.00022491172034197344,
+          "upper_97_5": 0.0006005405414335411
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": -7.349637240033346e-05,
+          "upper_97_5": 0.00011708002745871302
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": -4.812563122560952e-06,
+          "upper_97_5": 0.00010232480202752303
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.0015803759837757253,
+          "upper_97_5": 0.0023125463317466787
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": -0.00033936113633246945,
+          "roc_auc_removal_penalty": -0.0016005855437528638
+        },
+        "family": "PLACEBO",
+        "interaction": {
+          "pr_auc": 0.0003453809931338453,
+          "roc_auc": 0.001608166379570175
+        },
+        "random": {
+          "pr_auc_removal_penalty": 6.019856801375845e-06,
+          "roc_auc_removal_penalty": 7.580835817311282e-06
+        }
+      },
+      "family": "PLACEBO"
+    },
+    "PLACEBO_COUNTS": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": -0.0005326375221844277,
+          "upper_97_5": 0.000211414861873943
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": -0.0022791328623527453,
+          "upper_97_5": 0.0015201658726529392
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.0001924894692649639,
+          "upper_97_5": 0.000571249406087932
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": -6.221487853516894e-05,
+          "upper_97_5": 9.306296626872267e-05
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": -1.3151186901519396e-05,
+          "upper_97_5": 7.641704426199214e-05
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.0015045810504098478,
+          "upper_97_5": 0.0023173767162522805
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": -0.00035135068279314174,
+          "roc_auc_removal_penalty": -0.0018669410389258179
+        },
+        "family": "PLACEBO",
+        "interaction": {
+          "pr_auc": 0.00035487624573850296,
+          "roc_auc": 0.0018740863665757113
+        },
+        "random": {
+          "pr_auc_removal_penalty": 3.525562945361216e-06,
+          "roc_auc_removal_penalty": 7.145327649893396e-06
+        }
+      },
+      "family": "PLACEBO"
+    },
+    "PLACEBO_IAT": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": 0.000834998731891853,
+          "upper_97_5": 0.001883947248631963
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.0027117436426396272,
+          "upper_97_5": 0.006698729139139717
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.0018540846072779144,
+          "upper_97_5": -0.0008261270535512137
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": -4.7037628933296885e-05,
+          "upper_97_5": 0.00010541591842526399
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": -1.0684095863716656e-06,
+          "upper_97_5": 7.670633904829083e-05
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.006673876448393251,
+          "upper_97_5": -0.0026836557358009133
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.0009173719466153973,
+          "roc_auc_removal_penalty": 0.0024242786008898953
+        },
+        "family": "PLACEBO",
+        "interaction": {
+          "pr_auc": -0.0009077737193242119,
+          "roc_auc": -0.0024177667787546042
+        },
+        "random": {
+          "pr_auc_removal_penalty": 9.598227291185424e-06,
+          "roc_auc_removal_penalty": 6.511822135291112e-06
+        }
+      },
+      "family": "PLACEBO"
+    },
+    "PLACEBO_PACKET_SIZE": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": -5.652205229009569e-05,
+          "upper_97_5": 0.0006014616285098198
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": -0.0018258067434213099,
+          "upper_97_5": 0.0008366828745349569
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": 0.0021383081363080298,
+          "upper_97_5": 0.0041602942421931745
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": 0.0024628749496304254,
+          "upper_97_5": 0.004365007708904592
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": 0.001205078175189514,
+          "upper_97_5": 0.0021392984130193414
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": 0.0006710463151678337,
+          "upper_97_5": 0.0036695768170522556
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.00019790280297961316,
+          "roc_auc_removal_penalty": -0.0008012489811932699
+        },
+        "family": "PLACEBO",
+        "interaction": {
+          "pr_auc": 0.003690380253384404,
+          "roc_auc": 0.0026233948768512594
+        },
+        "random": {
+          "pr_auc_removal_penalty": 0.003888283056364017,
+          "roc_auc_removal_penalty": 0.0018221458956579895
+        }
+      },
+      "family": "PLACEBO"
+    },
+    "PLACEBO_VOLUME_DIRECTION": {
+      "bootstrap_95_percentile_ci": {
+        "chronological_pr_auc_removal_penalty": {
+          "lower_2_5": 0.0001572071047957851,
+          "upper_97_5": 0.0007903790760631949
+        },
+        "chronological_roc_auc_removal_penalty": {
+          "lower_2_5": 0.00036527709897742067,
+          "upper_97_5": 0.0034157811884673087
+        },
+        "pr_auc_shortcut_interaction": {
+          "lower_2_5": -0.0008029240210030011,
+          "upper_97_5": -0.00016677853841592672
+        },
+        "random_pr_auc_removal_penalty": {
+          "lower_2_5": -8.593888651586556e-05,
+          "upper_97_5": 6.411794831150952e-05
+        },
+        "random_roc_auc_removal_penalty": {
+          "lower_2_5": -2.359674367829745e-05,
+          "upper_97_5": 4.672242028259665e-05
+        },
+        "roc_auc_shortcut_interaction": {
+          "lower_2_5": -0.003417464355822769,
+          "upper_97_5": -0.00034597310439506986
+        }
+      },
+      "complete_validation_point_estimates": {
+        "chronological": {
+          "pr_auc_removal_penalty": 0.000455778645810645,
+          "roc_auc_removal_penalty": 0.0010673401562556473
+        },
+        "family": "PLACEBO",
+        "interaction": {
+          "pr_auc": -0.00044688885657090394,
+          "roc_auc": -0.001059723868918283
+        },
+        "random": {
+          "pr_auc_removal_penalty": 8.889789239741042e-06,
+          "roc_auc_removal_penalty": 7.6162873373641915e-06
+        }
+      },
+      "family": "PLACEBO"
+    }
+  },
+  "completed_utc": "2026-08-17T14:52:00.817313+00:00",
+  "execution_parent": {
+    "commit": "f2cd2b59172179f9f0884d88e579276517de7a01",
+    "tag": "stage23-3-stump-controls-complete-v1"
+  },
+  "frozen_method": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_rng": "numpy.random.RandomState(seed=42), restarted independently per split",
+    "confidence_interval": "percentile 95% interval [2.5th, 97.5th]",
+    "important_limitation": "Confidence intervals are based on the frozen uncertainty cohort; full-validation metrics remain the primary point estimates.",
+    "interaction": "(FULL_R - ABLATED_R) - (FULL_C - ABLATED_C)",
+    "numpy_percentile_method": "default linear",
+    "pairing": "same sampled rows within split/replicate for FULL and every compared ablated model",
+    "sampling": "benign and attack rows resampled with replacement separately, preserving fixed cohort class counts"
+  },
+  "governance": {
+    "additional_stage23_model_fits_authorized": 0,
+    "model_fits": 0,
+    "new_subset": false,
+    "parquet_files_read": 0,
+    "primary_metric_changed": false,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "split_changed": false,
+    "uncertainty_cohort_changed": false,
+    "uncertainty_method_changed": false
+  },
+  "stage": "Stage23-4 uncertainty analysis",
+  "status": "UNCERTAINTY_ANALYSIS_COMPLETE_UNSEALED",
+  "status_note": "Full-validation metrics remain primary point estimates. Bootstrap intervals are supplementary uncertainty derived from the prospectively frozen 50,000-row cohorts."
+}

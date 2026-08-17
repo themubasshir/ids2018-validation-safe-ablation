@@ -1,0 +1,65 @@
+{
+  "comparisons": {
+    "BEHAVIOR_ONLY": {
+      "family": "PRIMARY",
+      "pr_auc_shortcut_interaction_ci_status": "INCLUDES_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    },
+    "NO_DST_PORT": {
+      "family": "PRIMARY",
+      "pr_auc_shortcut_interaction_ci_status": "BELOW_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    },
+    "NO_FWD_SEG_SIZE_MIN": {
+      "family": "PRIMARY",
+      "pr_auc_shortcut_interaction_ci_status": "BELOW_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    },
+    "NO_INIT_FWD_WIN_BYTS": {
+      "family": "PRIMARY",
+      "pr_auc_shortcut_interaction_ci_status": "ABOVE_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "INCLUDES_ZERO"
+    },
+    "NO_PORTS": {
+      "family": "PRIMARY",
+      "pr_auc_shortcut_interaction_ci_status": "BELOW_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    },
+    "NO_SUSPICIOUS_GROUP": {
+      "family": "PRIMARY",
+      "pr_auc_shortcut_interaction_ci_status": "ABOVE_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    },
+    "PLACEBO_ACTIVITY": {
+      "family": "PLACEBO",
+      "pr_auc_shortcut_interaction_ci_status": "INCLUDES_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "INCLUDES_ZERO"
+    },
+    "PLACEBO_COUNTS": {
+      "family": "PLACEBO",
+      "pr_auc_shortcut_interaction_ci_status": "INCLUDES_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "INCLUDES_ZERO"
+    },
+    "PLACEBO_IAT": {
+      "family": "PLACEBO",
+      "pr_auc_shortcut_interaction_ci_status": "BELOW_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    },
+    "PLACEBO_PACKET_SIZE": {
+      "family": "PLACEBO",
+      "pr_auc_shortcut_interaction_ci_status": "ABOVE_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "ABOVE_ZERO"
+    },
+    "PLACEBO_VOLUME_DIRECTION": {
+      "family": "PLACEBO",
+      "pr_auc_shortcut_interaction_ci_status": "BELOW_ZERO",
+      "roc_auc_shortcut_interaction_ci_status": "BELOW_ZERO"
+    }
+  },
+  "created_utc": "2026-08-17T14:53:25.413905+00:00",
+  "decision_rule": "Descriptive zero-location classification only: ABOVE_ZERO if CI lower bound > 0; BELOW_ZERO if CI upper bound < 0; otherwise INCLUDES_ZERO.",
+  "important_note": "This classification is not evidence of feature leakage or causality. Placebo interactions are retained as the matched reference context.",
+  "model_fits": 0,
+  "stage": "Stage23-4",
+  "status": "DERIVED_FROM_FROZEN_95_PERCENTILE_INTERVALS"
+}

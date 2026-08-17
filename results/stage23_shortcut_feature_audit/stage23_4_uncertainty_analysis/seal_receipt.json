@@ -1,0 +1,38 @@
+{
+  "analysis": {
+    "bootstrap_replicates_per_split": 1000,
+    "chronological_cohort_rows": 50000,
+    "comparisons": 11,
+    "confidence_interval": "percentile 95% [2.5th, 97.5th]",
+    "placebo_comparisons": 5,
+    "primary_comparisons": 6,
+    "random_cohort_rows": 50000
+  },
+  "artifact_sha256": {
+    "bootstrap_replicates_csv": "736bb0e8f2b4d883f49145892ba89b9b4ca77559be51e02a43290b0d40589b34",
+    "interaction_ci_zero_classification": "82ed627ebb2c05d47f8e99c8435bf514c3b07f2c46a67e544975e0a9a5e78645",
+    "source_checksums": "9f847e8de363b59c0d9797d7774ce61721e2be5a88e10968976cfc90fd12a654",
+    "summary_csv": "a2ae4c6ff92182ab05d569ef166ac42fda6ca345b7aa9c96a743e611ae0924e5",
+    "summary_json": "218c9c8df4b39d74d683862132a87c48c539212cfec2c12fd495ddb227cf550b"
+  },
+  "execution_parent": {
+    "commit": "f2cd2b59172179f9f0884d88e579276517de7a01",
+    "tag": "stage23-3-stump-controls-complete-v1"
+  },
+  "governance": {
+    "additional_model_fits_authorized": 0,
+    "bootstrap_recomputed_during_seal": false,
+    "new_model_fits": 0,
+    "parquet_files_read": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "stage23_model_fit_count": "50 / 50",
+    "uncertainty_cohort_changed": false,
+    "uncertainty_method_changed": false
+  },
+  "next_authorized_work": "Continue Stage23 analysis-only work under frozen protocol.",
+  "sealed_utc": "2026-08-17T14:53:25.414306+00:00",
+  "stage": "Stage23-4 uncertainty analysis",
+  "status": "SEALED",
+  "tag": "stage23-4-uncertainty-analysis-complete-v1"
+}

@@ -1,0 +1,98 @@
+{
+  "artifacts": {
+    "stage23_6d_attack_family_metrics.csv": {
+      "rows": 182,
+      "sha256": "43ceb003356dcf4b2272629b685331161221ac067f4c58164c50af1f83fa98e4"
+    },
+    "stage23_6d_attack_family_metrics.json": {
+      "sha256": "e0a3656dbc577e917f4b0644cc636b1aeda2c39b24e544b2cee340ce2e4f6247"
+    }
+  },
+  "completed_utc": "2026-08-17T16:50:19.115625+00:00",
+  "evaluation": {
+    "family_count": 13,
+    "fixed_threshold": 0.5,
+    "frozen_metrics": [
+      "support_attack",
+      "support_benign",
+      "PR_AUC",
+      "ROC_AUC",
+      "precision_at_0_50",
+      "recall_at_0_50",
+      "f1_at_0_50",
+      "fpr_at_0_50",
+      "fnr_at_0_50",
+      "delta_f1_FULL_minus_ablated",
+      "delta_recall_FULL_minus_ablated"
+    ],
+    "metric_rows": 182,
+    "minimum_attack_support_for_interpretation": 100,
+    "probability_source": "persisted float32 ensemble_probability",
+    "splits": [
+      "RANDOM_NATURAL",
+      "CHRONOLOGICAL_NATURAL"
+    ],
+    "subsets": [
+      "FULL",
+      "NO_DST_PORT",
+      "NO_PORTS",
+      "NO_INIT_FWD_WIN_BYTS",
+      "NO_FWD_SEG_SIZE_MIN",
+      "NO_SUSPICIOUS_GROUP",
+      "BEHAVIOR_ONLY"
+    ],
+    "zero_support_policy": "For support_attack=0, attack-dependent metrics are undefined/null; FPR remains defined from all benign validation rows."
+  },
+  "governance": {
+    "additional_model_fits_authorized": 0,
+    "development_source_parquet_reads": 0,
+    "lightgbm_execution": 0,
+    "lightgbm_imported": false,
+    "model_fits": 0,
+    "model_inference": 0,
+    "new_scientific_metric": false,
+    "new_subset": false,
+    "post_result_family_selection": false,
+    "raw_february_csv_reads": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "stage23_model_fit_budget": "50 / 50 SEALED",
+    "threshold_optimization": false,
+    "xgboost_execution": 0,
+    "xgboost_imported": false
+  },
+  "interpretation_boundary": {
+    "causality": "Family-specific ablation differences are descriptive associations under frozen memberships and do not establish causality.",
+    "chronological_family_coverage": "The frozen chronological validation contains Infilteration attacks only. The other frozen development families have zero chronological attack support and are retained descriptively."
+  },
+  "parent_commit": "b927499efdf7d4dd5013054cc796f1115f879f8b",
+  "parent_tag": "stage23-5-shap-proxy-absorption-complete-v1",
+  "probability_artifact_sha256": {
+    "CHRONOLOGICAL_NATURAL": {
+      "BEHAVIOR_ONLY": "6b084ca96d8474dbaf6c20c52957ecea38ff2729b7facf158981e78840eb94b5",
+      "FULL": "3fe6c468a0653ac5ee488da8d6586fd86628e9586eb01f6f5d962e35fff65e3f",
+      "NO_DST_PORT": "47e681c10b97879c6f9ef171fb667f753258f717d13cb30e895024b232d6bcd5",
+      "NO_FWD_SEG_SIZE_MIN": "566c5b131d9024601616af2b5055acc48eb080018287bafb4c479bfeaab6a041",
+      "NO_INIT_FWD_WIN_BYTS": "8cadb355ee2e99f83e3e0040c6082b895e2a4137b05a98e45cf2739340e9515c",
+      "NO_PORTS": "1cebe2d875ad342c8370a17689ff9301991c06c8cad94551290588465c98439e",
+      "NO_SUSPICIOUS_GROUP": "8bd661093859cb0e6c2b6248cc99eddc278e55e95d2b68f4ffee9939a8cba22a"
+    },
+    "RANDOM_NATURAL": {
+      "BEHAVIOR_ONLY": "0b0118a89bc63ada1e63c1f913bceb30c8bf234d25e3c060a03336e5a3e58b0a",
+      "FULL": "9dc64ccdb6580dad727668ff3e511e0a8572cbb1de49b9ffe8999b0c3d190394",
+      "NO_DST_PORT": "08cc16772c8aca26642a593a3ce15689993fa1f1c147b8ad21be6d2d015653f9",
+      "NO_FWD_SEG_SIZE_MIN": "aa2a52e49041e716d1670c19383b2331796a87b56ed6868708a3aed67a30281e",
+      "NO_INIT_FWD_WIN_BYTS": "720fa25d788b65b880396daffff60ef2776548a7a48745bdd653dc6765f0c593",
+      "NO_PORTS": "e518c928281e5c123c73467bca02b7c4317bcb3279d4fd8c21561a5f532e346e",
+      "NO_SUSPICIOUS_GROUP": "f820304ca76f038d562d7b1de38ecfc6b34b6d43a764e68b601f83bfdfb21207"
+    }
+  },
+  "stage": "Stage23-6D",
+  "stage23_6c": {
+    "attack_alignment_sha256": "3872d6000cbc78d8f97e47463115599c59d1d19dc2ffc8a8c72dbec8aeacbf26",
+    "checksum_manifest_sha256": "a54e01b733e093602a03b9b8bff5430f7cdfa4e987e0a36577ee686e736113b4",
+    "manifest_sha256": "bec2b909ac4249e351b39e466290be11f0f843e1bda8fcb247cc7122fa6272b8",
+    "support_sha256": "d8bffc4a0ba61b70033364db379e261b9530fde43b19b534f860785315af6377"
+  },
+  "status": "FROZEN_ATTACK_FAMILY_PRIMARY_ABLATION_METRICS_COMPLETE_UNSEALED"
+}

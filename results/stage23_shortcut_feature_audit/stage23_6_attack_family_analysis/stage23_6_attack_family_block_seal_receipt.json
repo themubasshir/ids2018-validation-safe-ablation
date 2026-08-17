@@ -1,0 +1,59 @@
+{
+  "execution_parent": {
+    "commit": "b927499efdf7d4dd5013054cc796f1115f879f8b",
+    "tag": "stage23-5-shap-proxy-absorption-complete-v1"
+  },
+  "governance": {
+    "additional_model_fits_authorized": 0,
+    "lightgbm_execution_stage23_6": 0,
+    "model_fits_during_seal": 0,
+    "model_fits_during_stage23_6c": 0,
+    "model_fits_during_stage23_6d": 0,
+    "model_inference_during_stage23_6": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "retraining": false,
+    "scientific_metrics_calculated_during_seal": 0,
+    "stage23_model_fit_budget": "50 / 50 SEALED",
+    "xgboost_execution_stage23_6": 0
+  },
+  "interpretation_boundary": {
+    "causality": "Family-specific ablation effects are descriptive associations under frozen memberships and do not establish causal feature dependence or leakage.",
+    "family_coverage": "The frozen chronological validation contains Infilteration attacks only. Other frozen development families have zero chronological attack support."
+  },
+  "sealed_utc": "2026-08-17T16:52:52.314704+00:00",
+  "stage": "Stage23-6 frozen attack-family analysis",
+  "stage23_6c": {
+    "artifacts_sha256": {
+      "attack_family_support_by_split.csv": "d8bffc4a0ba61b70033364db379e261b9530fde43b19b534f860785315af6377",
+      "checksums.sha256": "a54e01b733e093602a03b9b8bff5430f7cdfa4e987e0a36577ee686e736113b4",
+      "retained_development_attack_family_labels.parquet": "3872d6000cbc78d8f97e47463115599c59d1d19dc2ffc8a8c72dbec8aeacbf26",
+      "stage23_6c_alignment_manifest.json": "bec2b909ac4249e351b39e466290be11f0f843e1bda8fcb247cc7122fa6272b8"
+    },
+    "chronological_label_binary_mismatches": 0,
+    "chronological_validation_rows_verified": 593780,
+    "development_attack_families": 13,
+    "random_label_binary_mismatches": 0,
+    "random_validation_rows_verified": 2882481,
+    "retained_development_attacks": 1972299,
+    "status": "EXACT_ATTACK_FAMILY_ALIGNMENT_MATERIALIZED"
+  },
+  "stage23_6d": {
+    "artifacts_sha256": {
+      "checksums.sha256": "72c11c90e2db332d05ac40e414df01ff895e822e4b40cb09c31bd251e51e110e",
+      "stage23_6d_attack_family_metrics.csv": "43ceb003356dcf4b2272629b685331161221ac067f4c58164c50af1f83fa98e4",
+      "stage23_6d_attack_family_metrics.json": "e0a3656dbc577e917f4b0644cc636b1aeda2c39b24e544b2cee340ce2e4f6247",
+      "stage23_6d_manifest.json": "2ad711416e0c540165fb3b5912ac4def28028763e912e72c28536891637dfc1d"
+    },
+    "chronological_interpretable_families": 1,
+    "family_count": 13,
+    "family_metric_rows": 182,
+    "primary_subsets": 7,
+    "probability_artifacts": 14,
+    "random_interpretable_families": 11,
+    "splits": 2,
+    "status": "FROZEN_ATTACK_FAMILY_PRIMARY_ABLATION_METRICS_COMPLETE"
+  },
+  "status": "SEALED",
+  "tag": "stage23-6-attack-family-analysis-complete-v1"
+}

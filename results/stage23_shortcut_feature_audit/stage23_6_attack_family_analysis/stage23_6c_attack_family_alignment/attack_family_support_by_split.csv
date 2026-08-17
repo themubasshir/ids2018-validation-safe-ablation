@@ -1,0 +1,14 @@
+attack_family,development_retained_attack_support,random_natural_validation_attack_support,random_interpretable_ge_100,chronological_natural_validation_attack_support,chronological_interpretable_ge_100
+Brute Force -Web,611,117,True,0,False
+Brute Force -XSS,230,42,False,0,False
+DDOS attack-HOIC,668461,133767,True,0,False
+DDOS attack-LOIC-UDP,1730,354,True,0,False
+DDoS attacks-LOIC-HTTP,576175,115273,True,0,False
+DoS attacks-GoldenEye,41455,8240,True,0,False
+DoS attacks-Hulk,434873,86933,True,0,False
+DoS attacks-SlowHTTPTest,19462,3877,True,0,False
+DoS attacks-Slowloris,10285,2105,True,0,False
+FTP-BruteForce,39352,7914,True,0,False
+Infilteration,62256,12507,True,62256,True
+SQL Injection,87,14,False,0,False
+SSH-Bruteforce,117322,23317,True,0,False

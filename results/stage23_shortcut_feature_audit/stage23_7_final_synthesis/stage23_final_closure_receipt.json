@@ -1,0 +1,78 @@
+{
+  "attack_family_context": {
+    "chronological_attack_support": 62256,
+    "chronological_interpretable_families": 1,
+    "chronological_positive_family": "Infilteration",
+    "random_interpretable_families": 11
+  },
+  "execution_parent": {
+    "commit": "3c874e3d20b2f38d842423c1f2316fd60a5eea68",
+    "tag": "stage23-6-attack-family-analysis-complete-v1"
+  },
+  "final_state": "STAGE23_COMPLETE_NO_ADDITIONAL_MODEL_FITS_AUTHORIZED",
+  "final_tag": "stage23-shortcut-feature-audit-complete-v1",
+  "governance": {
+    "additional_model_fits_authorized": 0,
+    "lightgbm_execution_during_closure": 0,
+    "model_fits_during_closure": 0,
+    "model_inference_during_closure": 0,
+    "new_bootstrap_during_closure": 0,
+    "new_shap_during_closure": 0,
+    "raw_data_reads_during_closure": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rolling_forward_analysis": "NOT_INCLUDED_IN_FINAL_STAGE23_PROTOCOL",
+    "scientific_metrics_computed_during_closure": 0,
+    "xgboost_execution_during_closure": 0
+  },
+  "headline_full_results": {
+    "CHRONOLOGICAL_NATURAL": {
+      "PR_AUC": 0.10621515513397227,
+      "PR_AUC_minus_attack_prevalence": 0.001368242135892,
+      "ROC_AUC": 0.5149184263937692,
+      "attack_prevalence": 0.10484691299808
+    },
+    "RANDOM_NATURAL": {
+      "PR_AUC": 0.9955900418992819,
+      "ROC_AUC": 0.9986245647735994
+    }
+  },
+  "scientific_closure": {
+    "attack_family_metric_rows": 182,
+    "component_treeshap_models": 48,
+    "frozen_attack_families": 13,
+    "frozen_stopping_conditions_satisfied": "7 / 7",
+    "main_publication_figures": 4,
+    "manuscript_integration_files": 3,
+    "matched_size_placebo_split_results": 10,
+    "matched_size_placebo_subsets": 5,
+    "primary_split_results": 14,
+    "primary_subsets": 7,
+    "publication_and_supplementary_tables": 10,
+    "shap_proxy_comparisons": 22,
+    "stump_controls": 6,
+    "supplementary_figures": 2,
+    "uncertainty_comparisons": 11
+  },
+  "scientific_interpretation_boundary": {
+    "chronological_family_limit": "All frozen chronological attack support belongs to Infilteration; the other 12 frozen development families have zero chronological attack support.",
+    "not_supported": "Stage23 does not establish any tested feature as leakage or as a causal source of the validation-regime gap.",
+    "shap_boundary": "Component-specific TreeSHAP is primary. The equal-weight normalized consensus is descriptive only and is not exact SHAP for the probability-averaged ensemble.",
+    "supported": "Strong validation sensitivity and poor forward-temporal transfer of several discriminative cues."
+  },
+  "sealed_utc": "2026-08-17T17:39:34.125131+00:00",
+  "stage": "Stage23 validation-safe shortcut-feature audit",
+  "stage23_2_historical_schema_distribution": {
+    "BOTH": 0,
+    "DATA_VALIDATION_ONLY": 1,
+    "NEITHER": 0,
+    "RANKING_PREVALENCE_ONLY": 9
+  },
+  "stage23_7a_package": {
+    "package_checksum_manifest_sha256": "c29624f379ad32413308a4b4657d56f79109fd4fb494b3e8f754cb7e04bf5d19",
+    "scientific_package_copied_byte_for_byte": true,
+    "source_package": "/kaggle/working/stage23_7_final_synthesis"
+  },
+  "stage23_fit_budget": "50 / 50 SEALED",
+  "status": "FINAL_PROTOCOL_CLOSURE_SEALED"
+}

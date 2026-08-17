@@ -1,0 +1,37 @@
+{
+  "counts": {
+    "figure_files": 12,
+    "main_figure_bases": 4,
+    "manuscript_files": 3,
+    "publication_tables": 10,
+    "stopping_conditions": 7,
+    "supplementary_figure_bases": 2
+  },
+  "created_utc": "2026-08-17T17:36:27.268920+00:00",
+  "execution_parent_commit": "3c874e3d20b2f38d842423c1f2316fd60a5eea68",
+  "frozen_stage23_2_schema_distribution": {
+    "BOTH": 0,
+    "DATA_VALIDATION_ONLY": 1,
+    "NEITHER": 0,
+    "RANKING_PREVALENCE_ONLY": 9
+  },
+  "governance": {
+    "lightgbm_execution": 0,
+    "model_files_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "new_bootstrap": 0,
+    "new_shap": 0,
+    "npz_reads": 0,
+    "parquet_reads": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "repository_modified": false,
+    "stage23_fit_budget_after": 50,
+    "stage23_fit_budget_before": 50,
+    "xgboost_execution": 0
+  },
+  "next_authorized_action": "ZERO_FIT_FINAL_STAGE23_CLOSURE_SEAL_AND_PUSH",
+  "stage": "Stage23-7A-R5",
+  "status": "FINAL_SYNTHESIS_TABLES_FIGURES_COMPLETE_UNSEALED"
+}

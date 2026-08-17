@@ -1,0 +1,39 @@
+
+% Stage23 frozen manuscript integration.
+% Generated from sealed Stage23 JSON/CSV evidence only.
+
+\subsection{Validation-Safe Shortcut-Feature Audit}
+
+The full 70-feature ensemble achieved a random-natural PR-AUC of
+0.995590 and ROC-AUC of 0.998625,
+compared with chronological-natural PR-AUC 0.106215
+and ROC-AUC 0.514918. The corresponding chronological
+attack prevalence was 0.104847, placing the chronological PR-AUC only
+0.001368 above its prevalence
+reference.
+
+Frozen primary ablations revealed metric-dependent split interactions. Some
+pre-specified removals disproportionately reduced random-natural ranking, whereas
+others affected chronological ranking more strongly. Matched-size placebo removals
+also yielded non-zero interactions and bootstrap intervals excluding zero. Therefore,
+interaction significance alone does not identify leakage.
+
+The frozen depth-1 controls for Dst Port, Init Fwd Win Byts, and Fwd Seg Size Min
+showed substantially stronger discrimination under random-natural validation than
+under chronological-natural validation. These observations are consistent with
+split-specific discriminative cues that transfer poorly, but they do not establish
+causality.
+
+Component-specific TreeSHAP analyses further demonstrated importance redistribution
+after feature removal. Equal-weight normalized LightGBM/XGBoost shares are used only
+as a descriptive consensus and are not exact SHAP values for the averaged-probability
+ensemble.
+
+The behavior-restricted representation retained strong random-natural performance but
+did not preserve chronological discrimination. Attack-family conditioning further
+showed that all 62,256 chronological attack rows belonged to
+Infilteration, while random-natural validation contained 11 families meeting the frozen
+interpretive support threshold.
+
+Taken together, Stage23 supports a bounded conclusion of strong validation sensitivity
+and poor forward-temporal transfer. It does not prove that any tested feature is leakage.

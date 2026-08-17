@@ -1,0 +1,141 @@
+{
+  "execution_parent_commit": "3c874e3d20b2f38d842423c1f2316fd60a5eea68",
+  "model_files_read": 0,
+  "parquet_files_read": 0,
+  "probability_npz_files_read": 0,
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "source_file_count": 32,
+  "source_files": [
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/figure_plan.json",
+      "sha256": "3463cb2ea4d6af80921f9ec7f2fd539f15d1b5accd8676cfd310d7e10173fc7d"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/interpretation_matrix.json",
+      "sha256": "5cf9c63623735cf0a02e8a486d277bf2ab1f0de2bf05dfbee5536d79b3df3e39"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/metric_spec.json",
+      "sha256": "6e2fd7c4bdf61f650a9147e20ef6bfd468036f86afe97f16711b2728fccdd502"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/stopping_rule.json",
+      "sha256": "b37dd0b031e9e8fae9342fcff938805f5e9090f370ce786ef676bedb2cfcaee7"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/chronological/behavior_only/stage23_1l_behavior_only_chronological_natural_result.json",
+      "sha256": "185b5b247d51cc776a4506e64765c88ef23f0e69deb3e3f9d479014427097459"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/chronological/no_dst_port/stage23_1b_no_dst_port_chronological_natural_result.json",
+      "sha256": "9101d521fa2791eacbb6c6626289aedf1f102e13d146c5da78a3b0a898b4c022"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/chronological/no_fwd_seg_size_min/stage23_1h_no_fwd_seg_size_min_chronological_natural_result.json",
+      "sha256": "3e68cf65d666a7925068dc0b5918055a0a85df20f3f61bef1600d30266df2e06"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/chronological/no_init_fwd_win_byts/stage23_1f_no_init_fwd_win_byts_chronological_natural_result.json",
+      "sha256": "161989fae61fcfdba9c5c854e2876187905575d501b74eaf1ed2a857cbc936d7"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/chronological/no_ports/stage23_1d_no_ports_chronological_natural_result.json",
+      "sha256": "47240e34b857d087eae699885284c35e0a530f98730edbe4b2662ca0fe15ac55"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/chronological/no_suspicious_group/stage23_1j_no_suspicious_group_chronological_natural_result.json",
+      "sha256": "49913686033cdd2ab946803d3ac3def3bed09eb7fca9592a079a13c55f36a621"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/random/behavior_only/stage23_1k_behavior_only_random_natural_result.json",
+      "sha256": "de40919dfced8471a48cbef06b1816b05a8e3b797eec10e35d2fade2effa0d61"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/random/no_dst_port/stage23_1a_no_dst_port_random_natural_result.json",
+      "sha256": "eabc9fd3ab70990f5cfbca49619ef5e22613345542c4ea16de202c640ec7a6ef"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/random/no_fwd_seg_size_min/stage23_1g_no_fwd_seg_size_min_random_natural_result.json",
+      "sha256": "c661853f87801897116cf62dd9623011cf4548e8be7e4fa81e4d89d84252599a"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/random/no_init_fwd_win_byts/stage23_1e_no_init_fwd_win_byts_random_natural_result.json",
+      "sha256": "bae6f10594df955857ba8653fca886c2e861cd6687e718da80d3dffadf65db7f"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/random/no_ports/stage23_1c_no_ports_random_natural_result.json",
+      "sha256": "e36087d6387b936712ce302a56f6aa10fee6675d3b314f2e9ecc512b1b0e48d4"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_1_primary_ablation/random/no_suspicious_group/stage23_1i_no_suspicious_group_random_natural_result.json",
+      "sha256": "20b2b6491d4e85738d4ab6a52579233ce3bc660164a3742ca9ccb3a84a005fde"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/chronological/placebo_activity/stage23_2j_activity_chronological-natural_result.json",
+      "sha256": "838e5848feab647c9ff74b907a5bb25cc14b452d085ecd73aadee4bea5b8add4"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/chronological/placebo_counts/stage23_2b_counts_chronological-natural_result.json",
+      "sha256": "0778bc55e430127da12af9958f42b6fdd0be3575b5a613af61b7fd5c9477c4df"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/chronological/placebo_iat/stage23_2f_iat_chronological-natural_result.json",
+      "sha256": "ccfb803fa10b8bb962ef5349a8061c35e2d676c941e1ed23daa0e7ee43bf222c"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/chronological/placebo_packet_size/stage23_2h_packet-size_chronological-natural_result.json",
+      "sha256": "6baa34b5c84e32853b70f0901366c47714605859770b60bf1206deb9b9121924"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/chronological/placebo_volume_direction/stage23_2d_volume-direction_chronological-natural_result.json",
+      "sha256": "e582c436afa0339f3626ad45011eef9a682a2c20885401c1fa77f6b9f823cfd8"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/random/placebo_activity/stage23_2i_activity_random-natural_result.json",
+      "sha256": "b0e7a7aaf030d29331504a491d48d7bb998b72655b7f4dd37a01e23d578115a1"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/random/placebo_counts/stage23_2a_placebo_counts_random_natural_result.json",
+      "sha256": "8eab55f5d983f8510e0225cbea7574d52b00d5017675511419f79b4f9b4ba4aa"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/random/placebo_iat/stage23_2e_iat_random-natural_result.json",
+      "sha256": "8411792aab6aeb660b7a8111e06724e1d0bedf411db420f3612e37e3631a8cb4"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/random/placebo_packet_size/stage23_2g_packet-size_random-natural_result.json",
+      "sha256": "d0ac9d8cb31160aecddb044f506a4c289cad8d6315c0e850b1ec439d348f80e0"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_2_placebo_ablation/random/placebo_volume_direction/stage23_2c_volume-direction_random-natural_result.json",
+      "sha256": "b27a43af80f3a14ca8e7e96008e053f4e9b1fcc99d873df4e32cbd40111228be"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_3_stump_controls/stage23_3_stump_controls_summary.json",
+      "sha256": "b78009175e2817b4d2d5f51d9712d5232d279b79e417d19f523bc74821ae89a3"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_4_uncertainty_analysis/stage23_4_uncertainty_summary.json",
+      "sha256": "218c9c8df4b39d74d683862132a87c48c539212cfec2c12fd495ddb227cf550b"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_5b_treeshap_proxy_absorption/stage23_5b_component_importance.csv",
+      "sha256": "72db28133441e256ffd8f96a6e68776977ca568225ddf31c58f0b5fa3772b337"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_5b_treeshap_proxy_absorption/stage23_5b_descriptive_consensus_importance.csv",
+      "sha256": "03d8edd3414f78e5dfe838ba821f01246cf9ca543fe92c5242e76dd07d044ffd"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_5b_treeshap_proxy_absorption/stage23_5b_proxy_absorption_summary.csv",
+      "sha256": "a557a43ab946070fc366f7e7938b45b4faa7b6070a4518602ae0da45b208d4d6"
+    },
+    {
+      "path": "results/stage23_shortcut_feature_audit/stage23_6_attack_family_analysis/stage23_6d_attack_family_metrics/stage23_6d_attack_family_metrics.csv",
+      "sha256": "43ceb003356dcf4b2272629b685331161221ac067f4c58164c50af1f83fa98e4"
+    }
+  ],
+  "source_policy": "SEALED_REPOSITORY_JSON_AND_CSV_ONLY",
+  "stage": "Stage23-7A-R5"
+}

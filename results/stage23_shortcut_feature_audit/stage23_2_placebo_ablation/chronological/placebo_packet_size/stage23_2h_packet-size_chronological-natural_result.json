@@ -1,0 +1,158 @@
+{
+  "cache": {
+    "identifier": "stage23_execution_cache_v1",
+    "materialization_seconds": 42.69211393599835,
+    "parquet_files_read": 0
+  },
+  "cell": {
+    "feature_count": 67,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "placebo": "PLACEBO_PACKET_SIZE",
+    "removed_features": [
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var"
+    ],
+    "split": "CHRONOLOGICAL_NATURAL"
+  },
+  "created_utc": "2026-08-17T12:52:53.199261+00:00",
+  "execution_parent": {
+    "commit": "660c39bfb8207db326c73f4e5637239ca2140139",
+    "tag": "stage23-2a-placebo-counts-random-natural-v1"
+  },
+  "fixed_threshold_0_50": {
+    "accuracy": 0.8951042473643437,
+    "f1": 6.421679590296842e-05,
+    "fn": 62254,
+    "fnr": 0.9999678745823696,
+    "fp": 31,
+    "fpr": 5.8322860303579896e-05,
+    "precision": 0.06060606060606061,
+    "recall": 3.2125417630429196e-05,
+    "tn": 531493,
+    "tp": 2
+  },
+  "full_reference": {
+    "f1": 6.421679590296842e-05,
+    "fpr": 5.8322860303579896e-05,
+    "pr_auc": 0.10621515513397227,
+    "recall": 3.2125417630429196e-05,
+    "roc_auc": 0.5149184263937692
+  },
+  "governance": {
+    "new_model_fits_this_task": 2,
+    "placebo_definition_changed": false,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "stage23_0_modified": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "models": {
+    "ensemble": "0.5 * LIGHTGBM + 0.5 * XGBOOST",
+    "lightgbm": {
+      "backend": "cpu",
+      "fit_seconds": 461.45360088600137,
+      "model_sha256": "025936171c5b0a6602730bfb8d9761027b65a1d338eb9079174140cec8b62275"
+    },
+    "xgboost": {
+      "backend": "cuda",
+      "fit_seconds": 141.47455127099965,
+      "model_sha256": "6daf16f58c8cb99abcda492a2f9224447e289621a7526b5a424e87b70d7a460c"
+    }
+  },
+  "placebo_interaction": {
+    "confidence_interval_status": "PENDING_FROZEN_UNCERTAINTY_ANALYSIS",
+    "definition": "I(S) = DELTA_RANDOM(S) - DELTA_CHRONOLOGICAL(S)",
+    "f1_at_0_50": -5.150895483252427e-06,
+    "fpr_at_0_50": 8.038517359781121e-07,
+    "pr_auc": 0.003690380253384404,
+    "recall_at_0_50": -5.070222582781447e-06,
+    "roc_auc": 0.0026233948768512594,
+    "status": "POINT_ESTIMATE_ONLY"
+  },
+  "ranking_metrics": {
+    "attack_prevalence": 0.10484691299808009,
+    "pr_auc": 0.10601725233099266,
+    "pr_auc_minus_attack_prevalence": 0.001170339332912565,
+    "roc_auc": 0.5157196753749624
+  },
+  "removal_penalty_full_minus_placebo": {
+    "f1_at_0_50": 0.0,
+    "fpr_at_0_50": 0.0,
+    "pr_auc": 0.00019790280297961316,
+    "recall_at_0_50": 0.0,
+    "roc_auc": -0.0008012489811932699
+  },
+  "stage": "Stage23-2H",
+  "status": "RESULT_COMPLETE_UNSEALED"
+}

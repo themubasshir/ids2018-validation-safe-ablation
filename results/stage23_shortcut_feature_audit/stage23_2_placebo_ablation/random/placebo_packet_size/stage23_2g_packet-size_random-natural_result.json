@@ -1,0 +1,151 @@
+{
+  "cache": {
+    "identifier": "stage23_execution_cache_v1",
+    "materialization_seconds": 46.4516845170001,
+    "parquet_files_read": 0
+  },
+  "cell": {
+    "feature_count": 67,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "placebo": "PLACEBO_PACKET_SIZE",
+    "removed_features": [
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var"
+    ],
+    "split": "RANDOM_NATURAL"
+  },
+  "created_utc": "2026-08-17T12:41:56.961536+00:00",
+  "execution_parent": {
+    "commit": "660c39bfb8207db326c73f4e5637239ca2140139",
+    "tag": "stage23-2a-placebo-counts-random-natural-v1"
+  },
+  "fixed_threshold_0_50": {
+    "accuracy": 0.9956551318117969,
+    "f1": 0.9838725462421642,
+    "fn": 12440,
+    "fnr": 0.03153678446483801,
+    "fp": 84,
+    "fpr": 3.3761772911080736e-05,
+    "precision": 0.9997801645625275,
+    "recall": 0.968463215535162,
+    "tn": 2487937,
+    "tp": 382020
+  },
+  "full_reference": {
+    "f1": 0.983867395346681,
+    "fpr": 3.456562464705885e-05,
+    "pr_auc": 0.9955900418992819,
+    "recall": 0.9684581453125792,
+    "roc_auc": 0.9986245647735994
+  },
+  "governance": {
+    "new_model_fits_this_task": 2,
+    "placebo_definition_changed": false,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "stage23_0_modified": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false
+  },
+  "models": {
+    "ensemble": "0.5 * LIGHTGBM + 0.5 * XGBOOST",
+    "lightgbm": {
+      "backend": "cpu",
+      "fit_seconds": 375.68631669800016,
+      "model_sha256": "5ce97d1c0f82149e83a6090d5b4566b2d5f53a08416437fdb13af75d4c560674"
+    },
+    "xgboost": {
+      "backend": "cuda",
+      "fit_seconds": 105.63180469700092,
+      "model_sha256": "16485c2f059a8848c8ed1cc66dc6e25f791ee69439171d0bb441a6ffec7db6a2"
+    }
+  },
+  "placebo_interaction": {
+    "status": "PENDING_MATCHED_CHRONOLOGICAL_TASK"
+  },
+  "ranking_metrics": {
+    "attack_prevalence": 0.13684738945373795,
+    "pr_auc": 0.9917017588429179,
+    "pr_auc_minus_attack_prevalence": 0.8548543693891799,
+    "roc_auc": 0.9968024188779414
+  },
+  "removal_penalty_full_minus_placebo": {
+    "f1_at_0_50": -5.150895483252427e-06,
+    "fpr_at_0_50": 8.038517359781121e-07,
+    "pr_auc": 0.003888283056364017,
+    "recall_at_0_50": -5.070222582781447e-06,
+    "roc_auc": 0.0018221458956579895
+  },
+  "stage": "Stage23-2G",
+  "status": "RESULT_COMPLETE_UNSEALED"
+}

@@ -1,0 +1,110 @@
+{
+  "completed_utc": "2026-08-17T13:13:38.201556+00:00",
+  "new_model_fits": 18,
+  "parent_commit": "660c39bfb8207db326c73f4e5637239ca2140139",
+  "parent_tag": "stage23-2a-placebo-counts-random-natural-v1",
+  "parquet_files_read": 0,
+  "placebo_fits_after_batch": 20,
+  "placebo_fits_before_batch": 2,
+  "primary_boosted_fits": 24,
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "remaining_stump_fits": 6,
+  "results": [
+    {
+      "placebo": "PLACEBO_COUNTS",
+      "pr_auc": 0.10656650581676541,
+      "pr_interaction": 0.00035487624573850296,
+      "pr_penalty": -0.00035135068279314174,
+      "roc_auc": 0.516785367432695,
+      "roc_interaction": 0.0018740863665757113,
+      "roc_penalty": -0.0018669410389258179,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-2B"
+    },
+    {
+      "placebo": "PLACEBO_VOLUME_DIRECTION",
+      "pr_auc": 0.9955811521100422,
+      "pr_penalty": 8.889789239741042e-06,
+      "roc_auc": 0.998616948486262,
+      "roc_penalty": 7.6162873373641915e-06,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-2C"
+    },
+    {
+      "placebo": "PLACEBO_VOLUME_DIRECTION",
+      "pr_auc": 0.10575937648816162,
+      "pr_interaction": -0.00044688885657090394,
+      "pr_penalty": 0.000455778645810645,
+      "roc_auc": 0.5138510862375135,
+      "roc_interaction": -0.001059723868918283,
+      "roc_penalty": 0.0010673401562556473,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-2D"
+    },
+    {
+      "placebo": "PLACEBO_IAT",
+      "pr_auc": 0.9955804436719907,
+      "pr_penalty": 9.598227291185424e-06,
+      "roc_auc": 0.9986180529514641,
+      "roc_penalty": 6.511822135291112e-06,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-2E"
+    },
+    {
+      "placebo": "PLACEBO_IAT",
+      "pr_auc": 0.10529778318735687,
+      "pr_interaction": -0.0009077737193242119,
+      "pr_penalty": 0.0009173719466153973,
+      "roc_auc": 0.5124941477928793,
+      "roc_interaction": -0.0024177667787546042,
+      "roc_penalty": 0.0024242786008898953,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-2F"
+    },
+    {
+      "placebo": "PLACEBO_PACKET_SIZE",
+      "pr_auc": 0.9917017588429179,
+      "pr_penalty": 0.003888283056364017,
+      "roc_auc": 0.9968024188779414,
+      "roc_penalty": 0.0018221458956579895,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-2G"
+    },
+    {
+      "placebo": "PLACEBO_PACKET_SIZE",
+      "pr_auc": 0.10601725233099266,
+      "pr_interaction": 0.003690380253384404,
+      "pr_penalty": 0.00019790280297961316,
+      "roc_auc": 0.5157196753749624,
+      "roc_interaction": 0.0026233948768512594,
+      "roc_penalty": -0.0008012489811932699,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-2H"
+    },
+    {
+      "placebo": "PLACEBO_ACTIVITY",
+      "pr_auc": 0.9955840220424805,
+      "pr_penalty": 6.019856801375845e-06,
+      "roc_auc": 0.9986169839377821,
+      "roc_penalty": 7.580835817311282e-06,
+      "split": "RANDOM_NATURAL",
+      "stage": "Stage23-2I"
+    },
+    {
+      "placebo": "PLACEBO_ACTIVITY",
+      "pr_auc": 0.10655451627030474,
+      "pr_interaction": 0.0003453809931338453,
+      "pr_penalty": -0.00033936113633246945,
+      "roc_auc": 0.516519011937522,
+      "roc_interaction": 0.001608166379570175,
+      "roc_penalty": -0.0016005855437528638,
+      "split": "CHRONOLOGICAL_NATURAL",
+      "stage": "Stage23-2J"
+    }
+  ],
+  "stage": "Stage23 remaining placebo batch",
+  "stage23_fits_after_batch": 44,
+  "stage23_fits_before_batch": 26,
+  "status": "ALL_REMAINING_PLACEBO_RESULTS_COMPLETE_UNSEALED"
+}

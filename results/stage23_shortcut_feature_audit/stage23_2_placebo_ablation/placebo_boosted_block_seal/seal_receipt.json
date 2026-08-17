@@ -1,0 +1,149 @@
+{
+  "batch": {
+    "batch_state_sha256": "7897fad7841bdaa324b325f1463fe1e9742beed74075236715e8d1a9b63111da",
+    "new_fits": 18,
+    "summary_sha256": "4eb2fa42f325579b594adaaca5610b6cb612b4369f213476bb2e2db7bc9139d4",
+    "tasks": [
+      {
+        "checksums_sha256": "b47f16e8f490643a0e4c2a5cb5de7660fa64a9a1431732f23be1dabf302b66c2",
+        "placebo": "PLACEBO_COUNTS",
+        "pr_auc": 0.10656650581676541,
+        "result_file": "stage23_2b_counts_chronological-natural_result.json",
+        "result_sha256": "0778bc55e430127da12af9958f42b6fdd0be3575b5a613af61b7fd5c9477c4df",
+        "roc_auc": 0.516785367432695,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2b_counts_chronological-natural",
+        "split": "CHRONOLOGICAL_NATURAL",
+        "stage": "Stage23-2B"
+      },
+      {
+        "checksums_sha256": "4f4acb73c5b59670f160851aaca49a53ee2ae423b1ec7cbd028b12d44a9041ac",
+        "placebo": "PLACEBO_VOLUME_DIRECTION",
+        "pr_auc": 0.9955811521100422,
+        "result_file": "stage23_2c_volume-direction_random-natural_result.json",
+        "result_sha256": "b27a43af80f3a14ca8e7e96008e053f4e9b1fcc99d873df4e32cbd40111228be",
+        "roc_auc": 0.998616948486262,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2c_volume-direction_random-natural",
+        "split": "RANDOM_NATURAL",
+        "stage": "Stage23-2C"
+      },
+      {
+        "checksums_sha256": "f6047ce0a2e81b50d00dc6ca71d78eb5ff27980de64c6fe79cb350bd01836e42",
+        "placebo": "PLACEBO_VOLUME_DIRECTION",
+        "pr_auc": 0.10575937648816162,
+        "result_file": "stage23_2d_volume-direction_chronological-natural_result.json",
+        "result_sha256": "e582c436afa0339f3626ad45011eef9a682a2c20885401c1fa77f6b9f823cfd8",
+        "roc_auc": 0.5138510862375135,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2d_volume-direction_chronological-natural",
+        "split": "CHRONOLOGICAL_NATURAL",
+        "stage": "Stage23-2D"
+      },
+      {
+        "checksums_sha256": "3cf95d3b11c1bb90a14d8bd1f283bd2ea87ea1c69c20bf8f85c089e44287e452",
+        "placebo": "PLACEBO_IAT",
+        "pr_auc": 0.9955804436719907,
+        "result_file": "stage23_2e_iat_random-natural_result.json",
+        "result_sha256": "8411792aab6aeb660b7a8111e06724e1d0bedf411db420f3612e37e3631a8cb4",
+        "roc_auc": 0.9986180529514641,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2e_iat_random-natural",
+        "split": "RANDOM_NATURAL",
+        "stage": "Stage23-2E"
+      },
+      {
+        "checksums_sha256": "950076e77c8243843a8a71bcd4fff1755e9e776a741200bc15df96ca3e3db592",
+        "placebo": "PLACEBO_IAT",
+        "pr_auc": 0.10529778318735687,
+        "result_file": "stage23_2f_iat_chronological-natural_result.json",
+        "result_sha256": "ccfb803fa10b8bb962ef5349a8061c35e2d676c941e1ed23daa0e7ee43bf222c",
+        "roc_auc": 0.5124941477928793,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2f_iat_chronological-natural",
+        "split": "CHRONOLOGICAL_NATURAL",
+        "stage": "Stage23-2F"
+      },
+      {
+        "checksums_sha256": "2bfb54741f03e5447e19729e3bf4f8aa9c7a27a56215f5bbffd28908347b8f1c",
+        "placebo": "PLACEBO_PACKET_SIZE",
+        "pr_auc": 0.9917017588429179,
+        "result_file": "stage23_2g_packet-size_random-natural_result.json",
+        "result_sha256": "d0ac9d8cb31160aecddb044f506a4c289cad8d6315c0e850b1ec439d348f80e0",
+        "roc_auc": 0.9968024188779414,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2g_packet-size_random-natural",
+        "split": "RANDOM_NATURAL",
+        "stage": "Stage23-2G"
+      },
+      {
+        "checksums_sha256": "884d3ad685ada59edbf80aa354b745a7a99fa75c35d1d0c6f814bf4332ff99f4",
+        "placebo": "PLACEBO_PACKET_SIZE",
+        "pr_auc": 0.10601725233099266,
+        "result_file": "stage23_2h_packet-size_chronological-natural_result.json",
+        "result_sha256": "6baa34b5c84e32853b70f0901366c47714605859770b60bf1206deb9b9121924",
+        "roc_auc": 0.5157196753749624,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2h_packet-size_chronological-natural",
+        "split": "CHRONOLOGICAL_NATURAL",
+        "stage": "Stage23-2H"
+      },
+      {
+        "checksums_sha256": "54afffc2e30ba04cdeb2dc05cc26fc0f2c6bf539d02a3c1b75fafa41a2e6acd8",
+        "placebo": "PLACEBO_ACTIVITY",
+        "pr_auc": 0.9955840220424805,
+        "result_file": "stage23_2i_activity_random-natural_result.json",
+        "result_sha256": "b0e7a7aaf030d29331504a491d48d7bb998b72655b7f4dd37a01e23d578115a1",
+        "roc_auc": 0.9986169839377821,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2i_activity_random-natural",
+        "split": "RANDOM_NATURAL",
+        "stage": "Stage23-2I"
+      },
+      {
+        "checksums_sha256": "2c0218c5cd824a7e0946053c7b874c770e5b3b62bb0461576d24e1fef66ea868",
+        "placebo": "PLACEBO_ACTIVITY",
+        "pr_auc": 0.10655451627030474,
+        "result_file": "stage23_2j_activity_chronological-natural_result.json",
+        "result_sha256": "838e5848feab647c9ff74b907a5bb25cc14b452d085ecd73aadee4bea5b8add4",
+        "roc_auc": 0.516519011937522,
+        "source": "/kaggle/working/stage23_remaining_placebo_batch/stage23_2j_activity_chronological-natural",
+        "split": "CHRONOLOGICAL_NATURAL",
+        "stage": "Stage23-2J"
+      }
+    ]
+  },
+  "fit_accounting": {
+    "placebo_boosted": {
+      "completed": 20,
+      "expected": 20
+    },
+    "primary_boosted": {
+      "completed": 24,
+      "expected": 24
+    },
+    "stage23_total": {
+      "completed": 44,
+      "expected": 50
+    },
+    "stumps": {
+      "completed": 0,
+      "expected": 6
+    }
+  },
+  "governance": {
+    "lightgbm_backend": "cpu",
+    "parquet_files_read": 0,
+    "placebo_definition_changed": false,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "rebalancing": false,
+    "stage23_0_modified": false,
+    "subset_specific_tuning": false,
+    "threshold_optimization": false,
+    "xgboost_backend": "cuda"
+  },
+  "next_authorized_model_work": {
+    "block": "Stage23 depth-1 stump controls",
+    "new_fits": 6,
+    "stage23_after_completion": "50 / 50"
+  },
+  "parent_commit": "660c39bfb8207db326c73f4e5637239ca2140139",
+  "parent_tag": "stage23-2a-placebo-counts-random-natural-v1",
+  "seal_tag": "stage23-placebo-boosted-block-complete-v1",
+  "sealed_utc": "2026-08-17T13:13:38.853747+00:00",
+  "stage": "Stage23 placebo boosted block",
+  "status": "SCIENTIFIC_RESULTS_FROZEN"
+}

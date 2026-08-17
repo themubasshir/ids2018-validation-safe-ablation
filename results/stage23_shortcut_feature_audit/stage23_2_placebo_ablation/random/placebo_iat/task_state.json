@@ -1,0 +1,19 @@
+{
+  "checksums_sha256": "3cf95d3b11c1bb90a14d8bd1f283bd2ea87ea1c69c20bf8f85c089e44287e452",
+  "completed_utc": "2026-08-17T12:21:28.658748+00:00",
+  "created_utc": "2026-08-17T12:11:48.439009+00:00",
+  "lightgbm_fit_complete": true,
+  "lightgbm_fit_seconds": 380.73932969900125,
+  "lightgbm_model_sha256": "89ad4534be318a007df296060ead41bd7956b254395eb76b1f07f49b5342bfcc",
+  "materialization_complete": true,
+  "materialization_seconds": 46.7111632749984,
+  "placebo": "PLACEBO_IAT",
+  "result_complete": true,
+  "result_sha256": "8411792aab6aeb660b7a8111e06724e1d0bedf411db420f3612e37e3631a8cb4",
+  "split": "RANDOM_NATURAL",
+  "stage": "Stage23-2E",
+  "status": "RESULT_COMPLETE_UNSEALED",
+  "xgboost_fit_complete": true,
+  "xgboost_fit_seconds": 103.9415046590002,
+  "xgboost_model_sha256": "0c92a4515223fe62558661e13a895b698c7588ea4c62fb9cddf3adce1d251c4f"
+}

@@ -1,0 +1,57 @@
+{
+  "cell": {
+    "feature_count": 63,
+    "interpretation_term": "behavior-restricted performance",
+    "removed_features": [
+      "Dst Port",
+      "Protocol",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Seg Size Min"
+    ],
+    "semantic_label": "behavior_restricted_feature_set",
+    "split": "RANDOM_NATURAL",
+    "subset": "BEHAVIOR_ONLY"
+  },
+  "core_artifact_sha256": {
+    "behavior_only_random_natural_lightgbm_model.txt": "bb5c3b433582d7129fa765b0c211ed02b4801681b81560a5a5f8f08ae3360eb3",
+    "behavior_only_random_natural_validation_probabilities.npz": "0b0118a89bc63ada1e63c1f913bceb30c8bf234d25e3c060a03336e5a3e58b0a",
+    "behavior_only_random_natural_xgboost_model.json": "54c7c7064f7efcd54a6eaaeae375c58df93d2a852a8d7c43d4f9844efa82d913",
+    "stage23_1k_behavior_only_random_natural_result.json": "de40919dfced8471a48cbef06b1816b05a8e3b797eec10e35d2fade2effa0d61"
+  },
+  "execution_cache": {
+    "commit": "66e1c6382caa63699766e605df63df02beff894f",
+    "parquet_files_read": 0,
+    "scientifically_sealed": true,
+    "tag": "stage23-execution-cache-v1"
+  },
+  "models_fit_this_cell": 2,
+  "next_authorized_model_cell": "Stage23-1L BEHAVIOR_ONLY \u00d7 CHRONOLOGICAL_NATURAL",
+  "post_result_adaptation": false,
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "ranking": {
+    "pr_auc": 0.9815880038573721,
+    "pr_auc_removal_penalty": 0.014002038041909803,
+    "roc_auc": 0.9961412400519862,
+    "roc_auc_removal_penalty": 0.002483324721613167
+  },
+  "raw_mar1_accessed": false,
+  "raw_mar2_accessed": false,
+  "required_matched_cell": "Stage23-1L BEHAVIOR_ONLY \u00d7 CHRONOLOGICAL_NATURAL",
+  "required_predecessor": {
+    "commit": "12e1d1c45a6060473d1d5aa3d2a53d1a459fcc74",
+    "tag": "stage23-1j-no-suspicious-group-chronological-natural-v1"
+  },
+  "result_tag": "stage23-1k-behavior-only-random-natural-v1",
+  "sealed_utc": "2026-08-17T11:07:34.166292+00:00",
+  "shortcut_interaction_status": "PENDING_MATCHED_CHRONOLOGICAL_CELL",
+  "source_checksum_manifest_sha256": "c3ccb4eda01778f72facdadaef2d2c1a2b766715df87530f6cc9a142a2f55d48",
+  "stage": "Stage23-1K",
+  "stage23_models_fit_total": 22,
+  "status": "SCIENTIFIC_RESULT_FROZEN"
+}

@@ -1,0 +1,55 @@
+{
+  "cache_storage": {
+    "feature_count": 70,
+    "feature_dtype": "float64",
+    "large_binary_cache_committed_to_git": false,
+    "physical_bytes_verified": 8332170485,
+    "physical_manifest_entries": 75,
+    "rows": 14412403,
+    "runtime_path": "/kaggle/working/stage23_execution_cache_v1"
+  },
+  "cache_tag": "stage23-execution-cache-v1",
+  "frozen_build_artifacts": {
+    "cache_build_receipt.json": "024e8724cd0dd672f44015af909bf4f9b620f44b03e4ed09c48ac19ecc35a8f2",
+    "data_checksums.sha256": "063c7263017936b18dd8cb5d508b0a9ed4e68326f8b31e97ac602651d789517b",
+    "metadata.json": "e810d19f04a60233c85894205d29de718e91ac28cad42065fd258c0e0f966439"
+  },
+  "governance": {
+    "ensemble_definition_changed": false,
+    "feature_definitions_changed": false,
+    "input_dtype_changed": false,
+    "model_specification_changed": false,
+    "new_model_fits": 0,
+    "raw_mar1_accessed": false,
+    "raw_mar2_accessed": false,
+    "split_definitions_changed": false,
+    "stage23_0_modified": false,
+    "stage23_models_fit_after": 18,
+    "stage23_models_fit_before": 18,
+    "thresholds_changed": false
+  },
+  "next_authorized_model_cell": "Stage23-1J NO_SUSPICIOUS_GROUP \u00d7 CHRONOLOGICAL_NATURAL",
+  "protocol": {
+    "commit": "2c36cb669aa1efcd6ca15dfaddecdd0d6fbbb460",
+    "tag": "stage23-0-protocol-lock-v1"
+  },
+  "required_predecessor": {
+    "commit": "a68ed8da15972c9fa9ee7efb80c8f86bf263cdd0",
+    "tag": "stage23-1i-no-suspicious-group-random-natural-v1"
+  },
+  "sealed_utc": "2026-08-17T10:30:55.532204+00:00",
+  "semantic_equivalence": {
+    "cache_reconstructed_row_major_70f_sha256": "8c43ab0e36a65de1c095acb1ebf9e7d029a9e2b1cc353455a66617db8a899bb2",
+    "chronological_membership_exact": true,
+    "clean_positions_exact": true,
+    "day_ids_exact": true,
+    "exact_byte_equivalence": true,
+    "labels_exact": true,
+    "old_stage23_row_major_70f_sha256": "8c43ab0e36a65de1c095acb1ebf9e7d029a9e2b1cc353455a66617db8a899bb2",
+    "original_row_indices_exact": true,
+    "per_feature_exact_byte_equivalence": true,
+    "random_membership_exact": true
+  },
+  "stage": "Stage23-Execution-Cache-V1",
+  "status": "EXECUTION_CACHE_VERIFICATION_FROZEN"
+}

@@ -1,0 +1,188 @@
+{
+  "created_at_utc": "2026-08-18T04:56:29.391558+00:00",
+  "execution_parent": "3a0b4a54477a5159805e69caa1eba749ab614c7b",
+  "execution_variant": "R2_FAST_CONTINUATION_AFTER_NAME_METADATA_FALSE_GATE",
+  "k79": {
+    "day7_exclusions": 19291,
+    "membership_already_verified_by_r1": true,
+    "sha256": "3e979841468f9d42a8de7049ed50063d5907c0753fe5b1179dac948163d93134"
+  },
+  "models": {
+    "ensemble": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "lightgbm": {
+      "features": 70,
+      "scientific_identity_basis": [
+        "EXACT_MODEL_SHA256",
+        "EXACT_70_DIMENSION",
+        "FROZEN_POSITIONAL_INPUT_ORDER",
+        "BIT_FOR_BIT_FROZEN_PREDICTION_REPRODUCTION"
+      ],
+      "sha256": "7be4c610814e45be2e315996969d2e2f404a3ada14866b21a731e4382fdc18b8",
+      "stored_feature_names_textually_equal_canonical": false,
+      "trees": 400
+    },
+    "scientific_fits": 0,
+    "xgboost": {
+      "device": "cuda",
+      "features": 70,
+      "rounds": 400,
+      "sha256": "38499d0edcdc5c6d0b2c3afee913558973d35d5ebf1cb2ae888a16b8da98756c"
+    }
+  },
+  "next_authorized_step": "Stage24-1B — primary bridge62 source refit using frozen Stage22 chronological-natural memberships and inherited LightGBM/XGBoost hyperparameters; LightGBM GPU + XGBoost CUDA; no tuning; source-validation-only threshold selection.",
+  "probability_reproduction": {
+    "bitwise_exact": true,
+    "differing_positions": 0,
+    "inference_seconds": 7.479977369308472,
+    "maximum_absolute_difference": 0.0,
+    "reference_array_sha256": "1308c5268751950b267cf14c0bc3168c5ebfa186ef6214b30dfa61f3344f0d7c",
+    "reference_file_sha256": "3fe6c468a0653ac5ee488da8d6586fd86628e9586eb01f6f5d962e35fff65e3f",
+    "reproduced_array_sha256": "1308c5268751950b267cf14c0bc3168c5ebfa186ef6214b30dfa61f3344f0d7c"
+  },
+  "sanity_gate": {
+    "model_dimensions_exact": true,
+    "model_hashes_exact": true,
+    "operating_points_exact": true,
+    "pass": true,
+    "positional_feature_order_frozen": true,
+    "probability_vector_bitwise_exact": true,
+    "source_labels_exact": true,
+    "source_population_exact": true
+  },
+  "scientific_access": {
+    "cicids2017_rows_read": 0,
+    "scientific_model_fits": 0,
+    "source_inference_rows": 593780,
+    "target_labels_read": 0,
+    "target_metrics": 0,
+    "target_opening_budget": 8,
+    "target_openings_consumed": 0,
+    "target_predictions": 0,
+    "target_rows_read": 0
+  },
+  "source": {
+    "attack": 62256,
+    "benign": 531524,
+    "dataset": "CSE-CIC-IDS2018",
+    "dtype": "float64",
+    "explicit_imputation": "NONE",
+    "feature_count": 70,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "file": "02-28-2018.csv",
+    "negative_infinity_to_nan": 0,
+    "output_nan_values": 7936,
+    "positive_infinity_to_nan": 6085,
+    "raw_sha256": "f15e2a12304446058a0186c8ad67de2bd15735a9ba5c70c9a1f4c4242ab06771",
+    "retained_rows": 593780,
+    "scaling": "NONE"
+  },
+  "source_metrics": {
+    "operating_points": {
+      "balanced": {
+        "counts": {
+          "fn": 62251,
+          "fp": 359,
+          "tn": 531165,
+          "tp": 5
+        },
+        "exact": true,
+        "threshold": 0.07000000029802322
+      },
+      "security": {
+        "counts": {
+          "fn": 62251,
+          "fp": 359,
+          "tn": 531165,
+          "tp": 5
+        },
+        "exact": true,
+        "threshold": 0.07000000029802322
+      },
+      "standard": {
+        "counts": {
+          "fn": 62254,
+          "fp": 31,
+          "tn": 531493,
+          "tp": 2
+        },
+        "exact": true,
+        "threshold": 0.5
+      }
+    },
+    "pr_auc": 0.10621515513397227,
+    "roc_auc": 0.5149184263937692
+  },
+  "stage": "Stage24-1A",
+  "type": "PRIMARY_FULL_SOURCE_70F_SANITY"
+}

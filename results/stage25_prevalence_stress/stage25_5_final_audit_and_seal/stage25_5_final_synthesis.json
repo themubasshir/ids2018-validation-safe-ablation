@@ -1,0 +1,144 @@
+{
+  "absolute_scientific_accounting": {
+    "new_calibration": 0,
+    "new_model_fits": 0,
+    "new_model_inference": 0,
+    "new_probability_arrays": 0,
+    "new_threshold_searches": 0,
+    "target_reopenings": 0
+  },
+  "completion": {
+    "bayesian_prevalence_projection": "PASS",
+    "benchmark_operational_translation": "PASS",
+    "exact_break_even_analysis": "PASS",
+    "notebook_script_export": "COMPLETE",
+    "preregistered_sanity_tests": "7/7 PASS",
+    "protocol_lock": "PASS",
+    "publication_figures": "5/5 COMPLETE",
+    "publication_package": "COMPLETE",
+    "scientific_execution": "CLOSED",
+    "traffic_soc_capacity_projection": "PASS"
+  },
+  "created_at_utc": "2026-08-18T13:16:08.537357+00:00",
+  "final_rule": "NO FURTHER STAGE25 SCIENTIFIC FITTING, INFERENCE, TARGET OPENING, THRESHOLD TUNING, CALIBRATION, ASSUMPTION CHANGES, OR RESULT-DEPENDENT FIGURE SELECTION.",
+  "frozen_result_shas": {
+    "stage25_0": "d231af1e4f07363c4d932acc99e1052e3b33bd2d24ca22e4386f4c7c378827b7",
+    "stage25_1": "81e4d96494c3432745f97428b722cc8870f75372a2c4570653ec59e7bcaa25ff",
+    "stage25_2": "1e3e66eb1dcf416585fd3f0fada8675b6950fde5f3f45af006a25b1aec872737",
+    "stage25_3": "f7c59d81d1532e0a61461bc9f213e9947b5edfe15fd2f8d9eb5d10d0f6bf6732",
+    "stage25_4": "8fcc28f0ce2a616a166f22f4a33d0c76001f8ef9a337739bd32c14778932c205"
+  },
+  "frozen_scenario": {
+    "analyst_tiers": [
+      1,
+      3,
+      10
+    ],
+    "benign_flows_per_day": 1000000,
+    "minutes_per_alert": 2,
+    "prevalence_grid": [
+      0.1,
+      0.03,
+      0.01,
+      0.003,
+      0.001,
+      0.0001
+    ],
+    "relative_cost_C_FN": 100,
+    "relative_cost_C_FP": 1
+  },
+  "headline_findings": {
+    "cicids2017_to_ids2018_standard_at_0p1pct": {
+      "ppv_max": 0.00028799326638319063,
+      "ppv_min": 0.00025760984625191203
+    },
+    "cost_break_even_ranges": {
+      "STAGE22_CHRONOLOGICAL": {
+        "max_percent": 7.757369164447992,
+        "max_prevalence": 0.07757369164447991,
+        "min_percent": 1.7831022380837145,
+        "min_prevalence": 0.017831022380837145,
+        "operating_points": 3
+      },
+      "STAGE22_RANDOM": {
+        "max_percent": 0.006922502852372037,
+        "max_prevalence": 6.922502852372038e-05,
+        "min_percent": 3.569138478251155e-05,
+        "min_prevalence": 3.569138478251155e-07,
+        "operating_points": 3
+      },
+      "STAGE24_2017_TO_2018": {
+        "max_percent": 3.7394563696284333,
+        "max_prevalence": 0.037394563696284334,
+        "min_percent": 2.1956499178222946,
+        "min_prevalence": 0.021956499178222948,
+        "operating_points": 6
+      },
+      "STAGE24_2018_TO_2017": {
+        "max_percent": 0.03514379721524114,
+        "max_prevalence": 0.00035143797215241143,
+        "min_percent": 0.015593300746196,
+        "min_prevalence": 0.00015593300746196,
+        "operating_points": 12
+      }
+    },
+    "ids2018_to_cicids2017_standard_at_0p1pct": {
+      "ppv_max": 0.0603131328677882,
+      "ppv_min": 0.03923290050682091,
+      "processing_hours_max": 143.98095787345,
+      "processing_hours_min": 123.3563469883167
+    },
+    "relative_cost_at_0p01pct": {
+      "ignore_lower": 21,
+      "model_lower": 3
+    },
+    "relative_cost_at_0p1pct": {
+      "ignore_lower": 9,
+      "model_lower": 15
+    },
+    "stage22_chronological_standard_at_0p1pct": {
+      "fp_per_day": 58.322860303579894,
+      "ppv": 0.000551067866561745,
+      "processing_hours_per_day": 1.9451672626261844,
+      "tp_per_day": 0.03215757520563483
+    },
+    "stage22_random_standard_at_0p1pct": {
+      "fp_per_day": 34.56562464705885,
+      "ppv": 0.9655718537416295,
+      "processing_hours_per_day": 33.46643991775078,
+      "tp_per_day": 969.4275728854647
+    }
+  },
+  "limitations": [
+    "Prior-probability-shift assumption within each operating point.",
+    "Fixed one-million-benign-flow reference volume.",
+    "Two-minute alert-service reference assumption.",
+    "Dimensionless 1:100 relative-cost model, not financial loss.",
+    "No propagated TPR/FPR estimation uncertainty.",
+    "Benchmark datasets are not live production telemetry.",
+    "Stage24 GROUNDED_S4 cells remain non-evaluable.",
+    "No deployment- or prevalence-specific threshold retuning."
+  ],
+  "next_project_action": "START THE FINAL REMAINING RESEARCH STAGE IN A NEW NOTEBOOK; DO NOT REOPEN STAGE25.",
+  "publication_manifest_sha256": "0fd825da7326841268fc6dc6f8bf135377bec77f1fef8ea261cdb0f7bb6585cf",
+  "repository_parent_before_closeout": "7820b9865a08f78107673207480c54d8dd0fe3eb",
+  "scientific_interpretation": [
+    "Base-rate stress can sharply change PPV even when a frozen TPR/FPR operating point is held fixed.",
+    "Very low FPR is necessary for useful positive-alert precision under rare attacks.",
+    "High PPV does not guarantee low SOC workload because true alerts also require analyst service.",
+    "Capacity feasibility does not guarantee useful detection when TPR has collapsed.",
+    "Stage24 directional cross-dataset asymmetry persists after deployment-facing translation.",
+    "Relative-cost conclusions depend on prevalence and the frozen dimensionless 1:100 FP/FN cost assumption."
+  ],
+  "scientific_status": "CLOSED_AND_SEALED",
+  "stage": "Stage25",
+  "stage25_5_final_audit_sha256": "f9f50936b69e73d2ed29857206ea4c01f93236707680dd9ed5b046a758649bb4",
+  "stage25_commit_chain": {
+    "stage25_0": "988fc5dd85018659749466ad9f8a1efcd5723ca9",
+    "stage25_1": "bfcc41741e055356c82f8f2f04042f3c2556b090",
+    "stage25_2": "e905a490aa6b7fdd3c22b021b11de270c9b57784",
+    "stage25_3": "5d1f9b2437ed7731f375acf01667c0faac57494e",
+    "stage25_4": "7820b9865a08f78107673207480c54d8dd0fe3eb"
+  },
+  "status": "STAGE25_PREVALENCE_OPERATIONAL_STRESS_COMPLETE"
+}

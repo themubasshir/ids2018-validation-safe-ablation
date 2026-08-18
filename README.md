@@ -236,3 +236,45 @@ Publication and reproducibility package:
 - `scripts/stage24/`
 
 <!-- END STAGE24 CROSS-DATASET SUMMARY -->
+
+<!-- STAGE25_PREVALENCE_OPERATIONAL_STRESS_CLOSEOUT -->
+## Stage25 — Prevalence and Operational Stress Audit
+
+**Status: SCIENTIFICALLY CLOSED**
+
+Stage25 analytically translated 24 already-frozen Stage22/Stage24
+operating points across six preregistered attack prevalences without
+model refitting, new inference, target reopening, threshold tuning, or
+calibration.
+
+Key frozen outputs:
+
+- 24 operating points
+- 6 prevalence levels
+- 144 Bayesian / traffic / SOC / relative-cost projections
+- 120 exact PPV break-even calculations
+- 720 required-FPR calculations
+- 24 exact relative-cost break-even prevalences
+- 5 preregistered figures (PNG + SVG)
+- 7/7 preregistered sanity tests passed
+- fixed reference scenario: 1,000,000 benign flows/day, 2 min/alert,
+  analyst tiers 1/3/10, relative cost C_FP:C_FN = 1:100
+
+The analysis demonstrates that benchmark precision and F1 do not directly
+determine deployment PPV or SOC workload under rare attacks; very low FPR
+is essential, capacity feasibility is distinct from detection usefulness,
+and the Stage24 cross-dataset asymmetry persists under deployment-facing
+translation.
+
+Stage25-0 commit: `988fc5dd85018659749466ad9f8a1efcd5723ca9`  
+Stage25-1 commit: `bfcc41741e055356c82f8f2f04042f3c2556b090`  
+Stage25-2 commit: `e905a490aa6b7fdd3c22b021b11de270c9b57784`  
+Stage25-3 commit: `5d1f9b2437ed7731f375acf01667c0faac57494e`  
+Stage25-4 commit: `7820b9865a08f78107673207480c54d8dd0fe3eb`
+
+Publication material is under:
+
+- `results/stage25_prevalence_stress/stage25_publication_package/`
+- `figures/stage25_prevalence_stress/`
+- `docs/STAGE25_MANUSCRIPT_INTEGRATION.md`
+- `scripts/stage25/`

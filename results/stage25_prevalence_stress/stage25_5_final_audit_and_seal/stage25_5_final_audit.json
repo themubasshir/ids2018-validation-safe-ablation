@@ -1,0 +1,96 @@
+{
+  "audit_conclusion": "Stage25 scientific execution is complete and sealed. All downstream work is publication/reproducibility packaging only; Stage25 scientific adaptation is prohibited.",
+  "commit_chain": [
+    {
+      "commit": "988fc5dd85018659749466ad9f8a1efcd5723ca9",
+      "parent": "ad5a01ae9021183f6c5b8046c2647fd5dad7cb6d",
+      "passed": true,
+      "stage": "Stage25-0"
+    },
+    {
+      "commit": "bfcc41741e055356c82f8f2f04042f3c2556b090",
+      "parent": "988fc5dd85018659749466ad9f8a1efcd5723ca9",
+      "passed": true,
+      "stage": "Stage25-1"
+    },
+    {
+      "commit": "e905a490aa6b7fdd3c22b021b11de270c9b57784",
+      "parent": "bfcc41741e055356c82f8f2f04042f3c2556b090",
+      "passed": true,
+      "stage": "Stage25-2"
+    },
+    {
+      "commit": "5d1f9b2437ed7731f375acf01667c0faac57494e",
+      "parent": "e905a490aa6b7fdd3c22b021b11de270c9b57784",
+      "passed": true,
+      "stage": "Stage25-3"
+    },
+    {
+      "commit": "7820b9865a08f78107673207480c54d8dd0fe3eb",
+      "parent": "5d1f9b2437ed7731f375acf01667c0faac57494e",
+      "passed": true,
+      "stage": "Stage25-4"
+    }
+  ],
+  "created_at_utc": "2026-08-18T13:16:08.534832+00:00",
+  "figures": {
+    "generated": 5,
+    "outcome_based_dropping": false,
+    "png_svg_files": 10,
+    "preregistered": 5,
+    "verified": 10
+  },
+  "frozen_result_shas": {
+    "stage25_0_freeze_record": "d231af1e4f07363c4d932acc99e1052e3b33bd2d24ca22e4386f4c7c378827b7",
+    "stage25_1_result": "81e4d96494c3432745f97428b722cc8870f75372a2c4570653ec59e7bcaa25ff",
+    "stage25_2_result": "1e3e66eb1dcf416585fd3f0fada8675b6950fde5f3f45af006a25b1aec872737",
+    "stage25_3_result": "f7c59d81d1532e0a61461bc9f213e9947b5edfe15fd2f8d9eb5d10d0f6bf6732",
+    "stage25_4_result": "8fcc28f0ce2a616a166f22f4a33d0c76001f8ef9a337739bd32c14778932c205"
+  },
+  "journal_extension_summary_sha256": "13aff90cc077adcb0b1dee69f3ce0854961e67f94b6a8961ae8e7af22938e3a2",
+  "publication_documents": {
+    "docs/STAGE25_MANUSCRIPT_INTEGRATION.md": "8abc497f32cf3280d54335bf8a36568357be1e6ecdd24f070fad8704aff9f8f5",
+    "docs/STAGE25_MANUSCRIPT_INTEGRATION.tex": "02e841673610ca683a9041a5e3623ed7cc735d24a5fe13fa2c2ac3c46f8f6641",
+    "docs/STAGE25_PUBLICATION_CLOSEOUT.md": "aa00d0b5f6a777237e164dfd062444655ea2d6f0491d06372d737178f1c7a868",
+    "docs/STAGE25_PUBLICATION_TABLES.md": "dfa366a192d5257ee7617db9f96c7dca607451a591c0de24566c977a24a6a471",
+    "docs/STAGE25_PUBLICATION_TABLES.tex": "38360cb0802285a4f577dd1bc94d95b8461be020cd1c9fd935c451ac97ac1f02"
+  },
+  "publication_manifest_sha256": "0fd825da7326841268fc6dc6f8bf135377bec77f1fef8ea261cdb0f7bb6585cf",
+  "readme_sha256": "36840f0e6aeda8d09db3989d5cfbe4c984aec68f2ff0d284d55053805e324c4c",
+  "repository_parent_commit": "7820b9865a08f78107673207480c54d8dd0fe3eb",
+  "reproducibility": {
+    "full_notebook_sha256": "07173e18474756eb6626a0c2344343cfcde74a36f1d595d3adaede09dca0243e",
+    "github_notebook_sha256": "0fc76a98d89e2b3df11bc0a83e0965aae81c80ab117439d05b17762c054d398e",
+    "github_script_sha256": "7a0a8f48ceeec8ad29d7dafdbc9d0b2d3acbbd43e74f20c9c747f632a013bfee",
+    "notebook_source_mode": "RECOVERED_FROM_CURRENT_KERNEL_INPUT_HISTORY"
+  },
+  "sanity": {
+    "failed": 0,
+    "passed": 7,
+    "preregistered_tests": 7
+  },
+  "scientific_access": {
+    "calibration_runs": 0,
+    "model_files_loaded_for_science": 0,
+    "new_model_fits": 0,
+    "new_model_inference": 0,
+    "new_stage25_projections": 0,
+    "probability_arrays_created": 0,
+    "probability_arrays_opened": 0,
+    "target_features_read": 0,
+    "target_labels_read": 0,
+    "target_reopenings": 0,
+    "threshold_searches": 0
+  },
+  "scientific_inventory": {
+    "cost_break_even_rows": 24,
+    "inherited_cells": 8,
+    "operating_points": 24,
+    "ppv_break_even_rows": 120,
+    "prevalence_levels": 6,
+    "projection_rows": 144,
+    "required_fpr_rows": 720
+  },
+  "stage": "Stage25-5",
+  "status": "FINAL_AUDIT_PASS"
+}

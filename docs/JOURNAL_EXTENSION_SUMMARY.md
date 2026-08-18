@@ -112,3 +112,39 @@ Publication package:
 - `scripts/stage24/`
 
 <!-- END STAGE24 JOURNAL EXTENSION SUMMARY -->
+
+<!-- STAGE25_JOURNAL_EXTENSION_CLOSEOUT -->
+## Stage25 — Deployment Prevalence and SOC Operational Stress
+
+Stage25 is now scientifically closed. The stage uses the frozen Stage22
+random/chronological and Stage24 bidirectional cross-dataset operating
+points and performs no new model fitting or target access.
+
+The extension contributes a prior-shift deployment analysis across
+10%, 3%, 1%, 0.3%, 0.1%, and 0.01% attack prevalence. It reports PPV,
+NPV, likelihood-ratio evidence translation, exact PPV thresholds,
+required FPR for target PPV, projected false/true alert volume,
+analyst-processing workload, SOC capacity exceedance, and a frozen
+relative cost model.
+
+At 0.1% prevalence the Stage22 random STANDARD operating point retains
+PPV 0.965572 but still requires
+33.5
+analyst-hours/day because true positives themselves consume capacity.
+The chronological STANDARD operating point instead projects PPV
+0.000551068 with only
+0.0322 true alerts/day, showing why
+capacity fit cannot be equated with operational usefulness.
+
+The primary IDS2018→CICIDS2017 STANDARD transfer projects PPV
+0.039233–0.060313 at 0.1%,
+whereas the reverse CICIDS2017→IDS2018 STANDARD direction projects only
+0.000257610–0.000287993.
+Under the frozen 1:100 relative-cost scenario, 15/24 operating points
+favor the model at 0.1% prevalence but only 3/24 do so at 0.01%.
+
+All seven preregistered sanity checks pass and all five preregistered
+figures are retained.
+
+Stage25-4 frozen result SHA:
+`8fcc28f0ce2a616a166f22f4a33d0c76001f8ef9a337739bd32c14778932c205`

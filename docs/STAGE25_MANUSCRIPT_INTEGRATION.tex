@@ -1,0 +1,87 @@
+% Stage25 manuscript integration
+
+\subsection{Prevalence and Operational Stress Results}
+
+Stage25 translated the already-frozen Stage22 and Stage24 operating
+characteristics into deployment-stress quantities without model
+refitting, new inference, target reopening, threshold re-selection, or
+calibration. Twenty-four frozen operating points were evaluated across
+six preregistered attack prevalences (10\%, 3\%, 1\%, 0.3\%, 0.1\%,
+and 0.01\%), yielding 144 deterministic prior-shift projections.
+
+At 0.1\% prevalence, the Stage22 random-natural STANDARD operating point
+retained PPV 0.965572, with
+34.6 false alerts/day and
+969.4 true alerts/day per one million
+benign flows. The projected processing requirement was
+33.5
+analyst-hours/day. The SECURITY operating point increased frozen recall
+to 0.984701, but its FPR of
+0.006817 produced
+6817.1 false alerts/day, reducing PPV
+to 0.126325.
+
+The chronological STANDARD operating point projected PPV
+0.000551068 and only
+0.0322 true detections/day at 0.1\%
+prevalence. For IDS2018$\rightarrow$CICIDS2017 STANDARD transfer,
+projected PPV ranged from 0.039233 to
+0.060313, whereas the reverse
+CICIDS2017$\rightarrow$IDS2018 STANDARD transfer yielded only
+0.000257610--0.000287993.
+
+Under the frozen relative-cost ratio $C_{FP}:C_{FN}=1:100$, 15/24
+operating points had lower relative cost than the simplified ignore
+reference at 0.1\% prevalence, compared with only 3/24 at 0.01\%.
+All seven preregistered sanity tests passed.
+
+\subsection{Discussion}
+
+Stage25 separates prior-probability shift from temporal and domain shift.
+The former changes PPV even when TPR and FPR are held fixed, whereas the
+latter can change the operating characteristics themselves. The results
+show that low FPR is a critical requirement for preserving alert
+precision at rare attack prevalences, and that high benchmark recall can
+still produce an operationally excessive false-alert stream.
+
+SOC capacity and detection usefulness must also be interpreted
+separately. An operating point can exceed a small analyst team's capacity
+despite high PPV because true alerts require service, while another can
+fit within capacity simply because detection has collapsed. The
+bidirectional Stage24 asymmetry remains visible under this operational
+translation.
+
+The analytic break-even calculations identify exact prevalence
+boundaries under the frozen assumptions and avoid post-hoc graphical
+selection. They are conditional decision-analysis tools rather than
+claims of universal deployment readiness.
+
+\subsection{Limitations and Threats to Validity}
+
+Stage25 assumes prior-probability shift within each frozen operating
+point and is not empirical production validation. Real environments may
+change the class-conditional feature distributions and therefore TPR and
+FPR. The fixed one-million-benign-flow volume, two-minute alert service
+time, and one/three/ten analyst-day capacity tiers are reference
+scenarios rather than universal SOC constants.
+
+The $C_{FP}=1$, $C_{FN}=100$ cost model uses dimensionless relative
+operational cost units and must not be interpreted as financial loss.
+The projections are deterministic conditional transformations of frozen
+empirical estimates; TPR/FPR estimation uncertainty is not propagated.
+The benchmark datasets also differ from contemporary live enterprise
+telemetry. Finally, Stage24 GROUNDED\_S4 cells remained non-evaluable
+because exact durable physical membership was unavailable, and Stage25
+does not introduce a heuristic replacement.
+
+\subsection{Contributions}
+
+Stage25 provides a validation-safe operational translation layer that:
+(i) projects frozen operating points across preregistered attack
+prevalences using exact Bayesian relations; (ii) converts operating
+characteristics into projected alert volume and SOC workload;
+(iii) derives analytic PPV, required-FPR, and relative-cost break-even
+boundaries; (iv) connects random, chronological, and bidirectional
+cross-dataset results without averaging incompatible directions; and
+(v) preserves preregistered assumptions, figures, sanity tests, and
+artifact-level reproducibility through the final scientific seal.

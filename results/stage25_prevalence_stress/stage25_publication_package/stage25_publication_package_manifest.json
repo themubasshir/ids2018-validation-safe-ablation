@@ -1,0 +1,58 @@
+{
+  "documents": {
+    "docs/STAGE25_MANUSCRIPT_INTEGRATION.md": "8abc497f32cf3280d54335bf8a36568357be1e6ecdd24f070fad8704aff9f8f5",
+    "docs/STAGE25_MANUSCRIPT_INTEGRATION.tex": "02e841673610ca683a9041a5e3623ed7cc735d24a5fe13fa2c2ac3c46f8f6641",
+    "docs/STAGE25_PUBLICATION_TABLES.md": "dfa366a192d5257ee7617db9f96c7dca607451a591c0de24566c977a24a6a471",
+    "docs/STAGE25_PUBLICATION_TABLES.tex": "38360cb0802285a4f577dd1bc94d95b8461be020cd1c9fd935c451ac97ac1f02"
+  },
+  "external_downloadable_notebook": {
+    "path": "/kaggle/working/stage25_exports/stage25_prevalence_operational_stress_FULL.ipynb",
+    "sha256": "07173e18474756eb6626a0c2344343cfcde74a36f1d595d3adaede09dca0243e",
+    "source_mode": "RECOVERED_FROM_CURRENT_KERNEL_INPUT_HISTORY"
+  },
+  "figures": {
+    "figures/stage25_prevalence_stress/figure25_a_ppv_cliff.png": "a8833880dc40f6fcaf280bb65b5545dfdd7c983a7be8a1529a94cada984201d3",
+    "figures/stage25_prevalence_stress/figure25_a_ppv_cliff.svg": "0d233414c5cea9e72f560520847f9ebfd52d950231def1b696f9a170e7abc35c",
+    "figures/stage25_prevalence_stress/figure25_b_soc_capacity_exceedance.png": "e901ee55ede62e25a6439e58ff363304326a0bafe9d3ea49d88fbe83cfaf5676",
+    "figures/stage25_prevalence_stress/figure25_b_soc_capacity_exceedance.svg": "c2cae31370443afb55e1b2ba7adc06594973426d9dcb110861941e9a4710d6bc",
+    "figures/stage25_prevalence_stress/figure25_c_benchmark_to_deployment_translation.png": "47e1c4b973b0cc6e71b3da14f13bc088accb03a4014ba52300002c610191fc47",
+    "figures/stage25_prevalence_stress/figure25_c_benchmark_to_deployment_translation.svg": "f15c282fb976b6ad10a4a4ad8aaa2853159f8ac8bb95cf5b19a54ec62c4f2533",
+    "figures/stage25_prevalence_stress/figure25_d_required_fpr_for_target_ppv.png": "15f9e6eda8bec9a42d16aafd1f27af933e1e350db381f65c9fc8b324adb55f31",
+    "figures/stage25_prevalence_stress/figure25_d_required_fpr_for_target_ppv.svg": "d5ea77eac59b9ea729b08adeadee8521f87610d4756a65854a6802b34b7f05ff",
+    "figures/stage25_prevalence_stress/figure25_e_bayesian_evidence_translation.png": "0e703b4b412d7c646e5aed997ed925b5fd551ca847c2f5b1c3e792e93b089703",
+    "figures/stage25_prevalence_stress/figure25_e_bayesian_evidence_translation.svg": "52bb2cfab1f8d213c8ca2ec8cee370bea75114294029ae51add68de182ac4f54"
+  },
+  "frozen_result_shas": {
+    "stage25_0": "d231af1e4f07363c4d932acc99e1052e3b33bd2d24ca22e4386f4c7c378827b7",
+    "stage25_1": "81e4d96494c3432745f97428b722cc8870f75372a2c4570653ec59e7bcaa25ff",
+    "stage25_2": "1e3e66eb1dcf416585fd3f0fada8675b6950fde5f3f45af006a25b1aec872737",
+    "stage25_3": "f7c59d81d1532e0a61461bc9f213e9947b5edfe15fd2f8d9eb5d10d0f6bf6732",
+    "stage25_4": "8fcc28f0ce2a616a166f22f4a33d0c76001f8ef9a337739bd32c14778932c205"
+  },
+  "governance": {
+    "figure_files": "10/10 VERIFIED",
+    "new_calibration": 0,
+    "new_model_fits": 0,
+    "new_model_inference": 0,
+    "new_probability_arrays": 0,
+    "new_threshold_searches": 0,
+    "preregistered_figures": "5/5 COMPLETE",
+    "preregistered_sanity_tests": "7/7 PASS",
+    "target_reopenings": 0
+  },
+  "reproducibility_exports": {
+    "scripts/stage25/stage25_prevalence_operational_stress.ipynb": "0fc76a98d89e2b3df11bc0a83e0965aae81c80ab117439d05b17762c054d398e",
+    "scripts/stage25/stage25_prevalence_operational_stress.py": "7a0a8f48ceeec8ad29d7dafdbc9d0b2d3acbbd43e74f20c9c747f632a013bfee"
+  },
+  "scientific_status": "CLOSED",
+  "source_parent_commit": "7820b9865a08f78107673207480c54d8dd0fe3eb",
+  "stage": "Stage25",
+  "status": "PUBLICATION_PACKAGE_COMPLETE",
+  "tables": {
+    "results/stage25_prevalence_stress/stage25_publication_package/tables/table25_1_standard_operational_translation_0p1pct.csv": "fad4db8eadbed63a6f6df7d78f1a7371cd083b9eeaa548f4e1ce7cae0609463d",
+    "results/stage25_prevalence_stress/stage25_publication_package/tables/table25_2_all_operating_points_0p1pct.csv": "5c2c0964174dd1399f79e3505b3f08a1007e1a962beac0dc01cd31c3cb21e587",
+    "results/stage25_prevalence_stress/stage25_publication_package/tables/table25_3_exact_cost_break_even.csv": "3baa7492b14f95fcc0186d83b11a39947817e5ccd2b7166417fca2408715ff1b",
+    "results/stage25_prevalence_stress/stage25_publication_package/tables/table25_4_family_relative_cost_decisions.csv": "03fae629a2f74dcbea3468ec2171f5b52b2adf0d062850441cf2c1716c962b8c",
+    "results/stage25_prevalence_stress/stage25_publication_package/tables/table25_5_preregistered_sanity_audit.csv": "6cfe1ccdbfee287e532d9582f493a91bfeeb244b9e4ecad6a75783a763019cf8"
+  }
+}

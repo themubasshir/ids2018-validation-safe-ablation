@@ -1,0 +1,71 @@
+{
+  "affected_secondary_fits": [
+    "bridge62_xgboost",
+    "bridge70_xgboost"
+  ],
+  "amendment": {
+    "feature_representation_changed": false,
+    "hyperparameters_changed_other_than_device": false,
+    "parameter_changed": "device",
+    "performance_guided": false,
+    "previous": "cuda",
+    "replacement": "cpu",
+    "scientific_model_family_changed": false,
+    "scope": "EXECUTION_BACKEND_ONLY",
+    "target_guided": false,
+    "target_protocol_changed": false,
+    "threshold_protocol_changed": false,
+    "training_population_changed": false,
+    "tree_method": "hist",
+    "validation_population_changed": false
+  },
+  "authorization_after_commit": {
+    "additional_backend_amendment_required_for_bridge70": false,
+    "bridge70_secondary_fit_backend": "CPU_SAME_AMENDMENT",
+    "next_step": "REEXECUTE_STAGE24_4A_SECONDARY_BRIDGE62_XGBOOST_USING_CPU_BACKEND_WITH_ALL_OTHER_FROZEN_XGB_11_PARAMETERS_UNCHANGED"
+  },
+  "created_at_utc": "2026-08-18T10:51:48.535044+00:00",
+  "direction": "CICIDS2017_TO_IDS2018",
+  "frozen_xgb_11_after_amendment": {
+    "colsample_bytree": 1.0,
+    "device": "cpu",
+    "eval_metric": "logloss",
+    "gamma": 0.0,
+    "learning_rate": 0.06,
+    "max_depth": 7,
+    "min_child_weight": 1,
+    "n_estimators": 400,
+    "n_jobs": -1,
+    "objective": "binary:logistic",
+    "random_state": 42,
+    "reg_alpha": 0.0,
+    "reg_lambda": 3.0,
+    "subsample": 0.9,
+    "tree_method": "hist"
+  },
+  "parent_commit": "d624db8f14f96f9d2bde176df99653555cea842c",
+  "scientific_fit_accounting": {
+    "budget": 4,
+    "completed_after_amendment": 2,
+    "completed_before_amendment": 2,
+    "fit_3_consumed": false,
+    "remaining": 2
+  },
+  "stage": "Stage24-4A-EX1",
+  "target_opening_accounting": {
+    "budget": 8,
+    "consumed": 4,
+    "new_openings": 0,
+    "secondary_IDS2018_Feb28_opened": false
+  },
+  "trigger": {
+    "dev_nvidia0_exists": false,
+    "fit_attempt_marker_existed_after_failure": false,
+    "nvidia_smi_available_now": false,
+    "observed_exception": "FileNotFoundError: [Errno 2] No such file or directory: 'nvidia-smi'",
+    "scientific_fit_consumed": false,
+    "scientific_fit_was_attempted": false,
+    "stage24_4a_failure_location": "CUDA_PRE_FIT_GATE"
+  },
+  "type": "EXECUTION_BACKEND_AMENDMENT"
+}

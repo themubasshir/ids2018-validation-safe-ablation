@@ -1,0 +1,166 @@
+{
+  "analysis": {
+    "bayesian_projection_rows": 144,
+    "inherited_cells": 8,
+    "inherited_operating_points": 24,
+    "likelihood_ratio_rows": 24,
+    "ppv_cliff_rows": 120,
+    "prevalence_points": 6,
+    "required_fpr_rows": 720
+  },
+  "artifacts": {
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_bayesian_projection_grid.csv": "6b9197ce221a1af6a2acac4479fddee88ae843c907a0b4a70317c75946e37fae",
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_likelihood_ratios.csv": "5375869b59b33695525af972f6eda8210352adf7f06f502f8a6c8c9360fe24eb",
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_ppv_cliffs.csv": "1aebef7de27ab57947a2ce0063f5fcda0fddfd3dea08864bd55214e66bbc2a43",
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_required_fpr_for_target_ppv.csv": "80fdfc189f9efdb94ecbce26cc38810c29a33b81c9e9928a3950e6e646651a48",
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_sanity_tests.json": "ac5031767ff1c55ff1801bb664acac9b0922a7bd8c3f90ad9d3751d1914a7e2f"
+  },
+  "created_at_utc": "2026-08-18T12:42:39.607235+00:00",
+  "frozen_ppv_targets": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "frozen_prevalence_grid": [
+    0.1,
+    0.03,
+    0.01,
+    0.003,
+    0.001,
+    0.0001
+  ],
+  "headline_low_prevalence_ppv": {
+    "STAGE22_CHRONOLOGICAL": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 1.1892016095273969e-05,
+        "ppv_at_0_1_percent": 0.00011901454557619656
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 1.1892016095273969e-05,
+        "ppv_at_0_1_percent": 0.00011901454557619656
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 5.508450809244717e-05,
+        "ppv_at_0_1_percent": 0.000551067866561745
+      }
+    },
+    "STAGE22_RANDOM": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 0.6179721647233618,
+        "ppv_at_0_1_percent": 0.9418289315178459
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 0.014240369292562213,
+        "ppv_at_0_1_percent": 0.1263254841342615
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 0.7369857797327997,
+        "ppv_at_0_1_percent": 0.9655718537416295
+      }
+    },
+    "STAGE24_2017_TO_2018_BRIDGE62": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 3.0436749532356193e-05,
+        "ppv_at_0_1_percent": 0.0003045581889111154
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 4.454707162934953e-05,
+        "ppv_at_0_1_percent": 0.0004456931734638227
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 2.5743766680232833e-05,
+        "ppv_at_0_1_percent": 0.00025760984625191203
+      }
+    },
+    "STAGE24_2017_TO_2018_BRIDGE70": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 3.110791296696579e-05,
+        "ppv_at_0_1_percent": 0.00031127214666172614
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 3.274080950486639e-05,
+        "ppv_at_0_1_percent": 0.00032760642576871985
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 2.878086522404984e-05,
+        "ppv_at_0_1_percent": 0.00028799326638319063
+      }
+    },
+    "STAGE24_2018_TO_2017_BRIDGE62_FLAG_CORRECTED": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 0.003408705918268231,
+        "ppv_at_0_1_percent": 0.03310125960083343
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 0.003408705918268231,
+        "ppv_at_0_1_percent": 0.03310125960083343
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 0.005159065875707084,
+        "ppv_at_0_1_percent": 0.0493437352022411
+      }
+    },
+    "STAGE24_2018_TO_2017_BRIDGE62_PUBLISHED": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 0.003408705918268231,
+        "ppv_at_0_1_percent": 0.03310125960083343
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 0.003408705918268231,
+        "ppv_at_0_1_percent": 0.03310125960083343
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 0.005159065875707084,
+        "ppv_at_0_1_percent": 0.0493437352022411
+      }
+    },
+    "STAGE24_2018_TO_2017_BRIDGE70_FLAG_CORRECTED": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 0.0028366672413107225,
+        "ppv_at_0_1_percent": 0.027684729195520022
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 0.0028366672413107225,
+        "ppv_at_0_1_percent": 0.027684729195520022
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 0.004063244671642243,
+        "ppv_at_0_1_percent": 0.03923290050682091
+      }
+    },
+    "STAGE24_2018_TO_2017_BRIDGE70_PUBLISHED": {
+      "BALANCED": {
+        "ppv_at_0_01_percent": 0.0035485920847511923,
+        "ppv_at_0_1_percent": 0.03441758413967797
+      },
+      "SECURITY": {
+        "ppv_at_0_01_percent": 0.0035485920847511923,
+        "ppv_at_0_1_percent": 0.03441758413967797
+      },
+      "STANDARD": {
+        "ppv_at_0_01_percent": 0.006371791594385717,
+        "ppv_at_0_1_percent": 0.0603131328677882
+      }
+    }
+  },
+  "interpretation_boundary": "All Stage25-1 values are deterministic conditional transformations of frozen TPR/FPR estimates under the preregistered prior-probability-shift assumption. They are not empirical production-deployment measurements.",
+  "next_authorized_stage": "STAGE25_2_TRAFFIC_AND_SOC_CAPACITY_PROJECTION",
+  "protocol_freeze_record_sha256": "d231af1e4f07363c4d932acc99e1052e3b33bd2d24ca22e4386f4c7c378827b7",
+  "repository_parent_commit": "988fc5dd85018659749466ad9f8a1efcd5723ca9",
+  "sanity_test_status": "PASS",
+  "scientific_access": {
+    "model_files_loaded": 0,
+    "model_fit_calls": 0,
+    "model_inference_calls": 0,
+    "probability_arrays_created": 0,
+    "probability_arrays_opened": 0,
+    "target_features_read": 0,
+    "target_labels_read": 0,
+    "target_reopenings": 0,
+    "threshold_searches": 0
+  },
+  "stage": "Stage25-1",
+  "status": "BAYESIAN_PREVALENCE_PROJECTION_COMPLETE"
+}

@@ -1,0 +1,67 @@
+{
+  "figures": {
+    "25-A": {
+      "png": {
+        "bytes": 738131,
+        "path": "figures/stage25_prevalence_stress/figure25_a_ppv_cliff.png",
+        "sha256": "a8833880dc40f6fcaf280bb65b5545dfdd7c983a7be8a1529a94cada984201d3"
+      },
+      "svg": {
+        "bytes": 213083,
+        "path": "figures/stage25_prevalence_stress/figure25_a_ppv_cliff.svg",
+        "sha256": "0d233414c5cea9e72f560520847f9ebfd52d950231def1b696f9a170e7abc35c"
+      }
+    },
+    "25-B": {
+      "png": {
+        "bytes": 810051,
+        "path": "figures/stage25_prevalence_stress/figure25_b_soc_capacity_exceedance.png",
+        "sha256": "e901ee55ede62e25a6439e58ff363304326a0bafe9d3ea49d88fbe83cfaf5676"
+      },
+      "svg": {
+        "bytes": 215437,
+        "path": "figures/stage25_prevalence_stress/figure25_b_soc_capacity_exceedance.svg",
+        "sha256": "c2cae31370443afb55e1b2ba7adc06594973426d9dcb110861941e9a4710d6bc"
+      }
+    },
+    "25-C": {
+      "png": {
+        "bytes": 680237,
+        "path": "figures/stage25_prevalence_stress/figure25_c_benchmark_to_deployment_translation.png",
+        "sha256": "47e1c4b973b0cc6e71b3da14f13bc088accb03a4014ba52300002c610191fc47"
+      },
+      "svg": {
+        "bytes": 282479,
+        "path": "figures/stage25_prevalence_stress/figure25_c_benchmark_to_deployment_translation.svg",
+        "sha256": "f15c282fb976b6ad10a4a4ad8aaa2853159f8ac8bb95cf5b19a54ec62c4f2533"
+      }
+    },
+    "25-D": {
+      "png": {
+        "bytes": 3063035,
+        "path": "figures/stage25_prevalence_stress/figure25_d_required_fpr_for_target_ppv.png",
+        "sha256": "15f9e6eda8bec9a42d16aafd1f27af933e1e350db381f65c9fc8b324adb55f31"
+      },
+      "svg": {
+        "bytes": 1175180,
+        "path": "figures/stage25_prevalence_stress/figure25_d_required_fpr_for_target_ppv.svg",
+        "sha256": "d5ea77eac59b9ea729b08adeadee8521f87610d4756a65854a6802b34b7f05ff"
+      }
+    },
+    "25-E": {
+      "png": {
+        "bytes": 1065431,
+        "path": "figures/stage25_prevalence_stress/figure25_e_bayesian_evidence_translation.png",
+        "sha256": "0e703b4b412d7c646e5aed997ed925b5fd551ca847c2f5b1c3e792e93b089703"
+      },
+      "svg": {
+        "bytes": 297065,
+        "path": "figures/stage25_prevalence_stress/figure25_e_bayesian_evidence_translation.svg",
+        "sha256": "52bb2cfab1f8d213c8ca2ec8cee370bea75114294029ae51add68de182ac4f54"
+      }
+    }
+  },
+  "frozen_figure_plan_status": "ALL_REQUIRED_FIGURES_GENERATED",
+  "outcome_based_figure_dropping": false,
+  "stage": "Stage25-4"
+}

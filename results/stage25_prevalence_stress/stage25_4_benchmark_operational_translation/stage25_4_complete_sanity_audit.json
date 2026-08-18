@@ -1,0 +1,44 @@
+{
+  "frozen_test_count": 7,
+  "master_projection_rows": 144,
+  "stage": "Stage25-4",
+  "status": "ALL_PREREGISTERED_SANITY_TESTS_PASS",
+  "tests": {
+    "COMPLETE_PROJECTION_MATRIX": {
+      "passed": true,
+      "source_stage": "Stage25-1 + Stage25-4 join",
+      "source_test": "COMPLETE_PROJECTION_MATRIX"
+    },
+    "CONFUSION_IDENTITIES": {
+      "passed": true,
+      "source_stage": "Stage25-2",
+      "source_test": "PROJECTED_CONFUSION_IDENTITIES"
+    },
+    "COST_BREAK_EVEN_SIGN_REVERSAL": {
+      "passed": true,
+      "source_stage": "Stage25-3",
+      "source_test": "COST_BREAK_EVEN_SIGN_REVERSAL"
+    },
+    "FP_INVARIANCE": {
+      "passed": true,
+      "source_stage": "Stage25-2",
+      "source_test": "FP_INVARIANCE"
+    },
+    "PPV50_CHECK": {
+      "passed": true,
+      "source_stage": "Stage25-1",
+      "source_test": "PPV50_EXACT_CHECK"
+    },
+    "PPV_AT_OBSERVED_PREVALENCE": {
+      "passed": true,
+      "source_stage": "Stage25-1",
+      "source_test": "PPV_AT_OBSERVED_PREVALENCE"
+    },
+    "PPV_MONOTONICITY": {
+      "passed": true,
+      "source_stage": "Stage25-1",
+      "source_test": "PPV_MONOTONICITY"
+    }
+  },
+  "translation_rows_at_0_1_percent": 24
+}

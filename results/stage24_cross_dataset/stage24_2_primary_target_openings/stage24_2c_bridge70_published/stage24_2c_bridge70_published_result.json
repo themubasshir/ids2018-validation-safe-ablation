@@ -1,0 +1,667 @@
+{
+  "anti_adaptation": {
+    "hyperparameter_change": false,
+    "inherited_models_reused_exactly": true,
+    "performance_based_action": false,
+    "target_calibration": false,
+    "target_feature_remapping": false,
+    "target_feature_search": false,
+    "target_fit": false,
+    "target_imputation_fit": false,
+    "target_scaling_fit": false,
+    "target_threshold_selection": false
+  },
+  "bootstrap": {
+    "frozen_replicates": 2000,
+    "frozen_seed": 42,
+    "performed": false,
+    "reason": "Frozen paired stratified comparison is deferred until primary bridge70 FLAG_CORRECTED vector is also durable."
+  },
+  "bridge": "bridge70",
+  "created_at_utc": "2026-08-18T10:16:02.300919+00:00",
+  "descriptive_comparison_to_bridge62_published": {
+    "bridge70_minus_bridge62_brier": -0.0028439071582562203,
+    "bridge70_minus_bridge62_pr_auc": -0.0035016258686498825,
+    "bridge70_minus_bridge62_roc_auc": 0.007945042207821107,
+    "inferential_use": "NONE_UNTIL_FROZEN_PAIRED_BOOTSTRAP"
+  },
+  "direction": "IDS2018_TO_CICIDS2017",
+  "feature_matrix_audit": [
+    {
+      "day": "Monday",
+      "file_id": 0,
+      "published_feature_matrix_float64_sha256": "ad05861bfb31e73207f3c8f1b3094dd0d2579ee3b11be5f1f995837e20247178",
+      "rows": 529918
+    },
+    {
+      "day": "Tuesday",
+      "file_id": 1,
+      "published_feature_matrix_float64_sha256": "7b33a3378708bdb6e01c425da41484a3dbf3cf91dc2871e8fdd2c925879aa954",
+      "rows": 445909
+    },
+    {
+      "day": "Wednesday",
+      "file_id": 2,
+      "published_feature_matrix_float64_sha256": "a0c3949775a48cc93efbfad41f363ff2de6fe5d2682f73f5186aa2cce3454aa3",
+      "rows": 692703
+    },
+    {
+      "day": "Thursday",
+      "file_id": 3,
+      "published_feature_matrix_float64_sha256": "a473d4cf8bf2a74760b0882079648783f850aaf6d36b59bc224a7788640a1bd8",
+      "rows": 288602
+    },
+    {
+      "day": "Thursday",
+      "file_id": 4,
+      "published_feature_matrix_float64_sha256": "ed7e9baf37fef862dd13a4eb4b44dfa9be73b02b7a3f7781082436edf57877aa",
+      "rows": 170366
+    },
+    {
+      "day": "Friday",
+      "file_id": 5,
+      "published_feature_matrix_float64_sha256": "d7226e29bf9e80b269e5dfc6b620c8c24bfe44bed18195b193ec7e4faa0ea264",
+      "rows": 225745
+    },
+    {
+      "day": "Friday",
+      "file_id": 6,
+      "published_feature_matrix_float64_sha256": "279d4580f78d6d5f59d182eed5e2c41d16539c6886881aae0bf1b75c14af1654",
+      "rows": 286467
+    },
+    {
+      "day": "Friday",
+      "file_id": 7,
+      "published_feature_matrix_float64_sha256": "03e53e8807c0906bc3124c7b5ca9da1717884ce71e6d78a8094b10ea24b14afe",
+      "rows": 191033
+    }
+  ],
+  "metrics": {
+    "calibration": {
+      "brier": 0.1429117123245458,
+      "ece_10": 0.15450813969369126,
+      "ece_bins": [
+        {
+          "absolute_gap": 0.12526858182929904,
+          "bin": 0,
+          "count": 2574449,
+          "empirical_rate": 0.12675489007550741,
+          "mean_probability": 0.0014863082462083662
+        },
+        {
+          "absolute_gap": 0.7463286324047125,
+          "bin": 1,
+          "count": 56048,
+          "empirical_rate": 0.8883992292320868,
+          "mean_probability": 0.14207059682737436
+        },
+        {
+          "absolute_gap": 0.571846053904826,
+          "bin": 2,
+          "count": 20981,
+          "empirical_rate": 0.8292741051427482,
+          "mean_probability": 0.2574280512379223
+        },
+        {
+          "absolute_gap": 0.49298924350393647,
+          "bin": 3,
+          "count": 24956,
+          "empirical_rate": 0.8376743067799327,
+          "mean_probability": 0.34468506327599624
+        },
+        {
+          "absolute_gap": 0.39188482824595866,
+          "bin": 4,
+          "count": 19179,
+          "empirical_rate": 0.8432139319046874,
+          "mean_probability": 0.45132910365872875
+        },
+        {
+          "absolute_gap": 0.4256579064192805,
+          "bin": 5,
+          "count": 60487,
+          "empirical_rate": 0.9770363879841949,
+          "mean_probability": 0.5513784815649144
+        },
+        {
+          "absolute_gap": 0.3061787529315074,
+          "bin": 6,
+          "count": 21160,
+          "empirical_rate": 0.9395085066162571,
+          "mean_probability": 0.6333297536847496
+        },
+        {
+          "absolute_gap": 0.2285639478944137,
+          "bin": 7,
+          "count": 15154,
+          "empirical_rate": 0.9878579912894285,
+          "mean_probability": 0.7592940433950148
+        },
+        {
+          "absolute_gap": 0.13893501471445935,
+          "bin": 8,
+          "count": 10259,
+          "empirical_rate": 0.9801150209572083,
+          "mean_probability": 0.8411800062427489
+        },
+        {
+          "absolute_gap": 0.1465488831959545,
+          "bin": 9,
+          "count": 28070,
+          "empirical_rate": 0.8211613822586391,
+          "mean_probability": 0.9677102654545936
+        }
+      ],
+      "log_loss": 1.33846070775709
+    },
+    "file_level_descriptive": [
+      {
+        "attack": 0,
+        "benign": 529918,
+        "day": "Monday",
+        "file_id": 0,
+        "pr_auc": null,
+        "prevalence": 0.0,
+        "remote": "traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+        "roc_auc": null,
+        "rows": 529918,
+        "start": 0,
+        "stop": 529918
+      },
+      {
+        "attack": 13835,
+        "benign": 432074,
+        "day": "Tuesday",
+        "file_id": 1,
+        "pr_auc": 0.48283958705136454,
+        "prevalence": 0.031026509893274188,
+        "remote": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.9738676922284085,
+        "rows": 445909,
+        "start": 529918,
+        "stop": 975827
+      },
+      {
+        "attack": 252672,
+        "benign": 440031,
+        "day": "Wednesday",
+        "file_id": 2,
+        "pr_auc": 0.9598652154382037,
+        "prevalence": 0.36476238734349353,
+        "remote": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.9885407184928114,
+        "rows": 692703,
+        "start": 975827,
+        "stop": 1668530
+      },
+      {
+        "attack": 36,
+        "benign": 288566,
+        "day": "Thursday",
+        "file_id": 3,
+        "pr_auc": 0.00018227587174796404,
+        "prevalence": 0.00012473926029618645,
+        "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.6003436437033084,
+        "rows": 288602,
+        "start": 1668530,
+        "stop": 1957132
+      },
+      {
+        "attack": 2180,
+        "benign": 168186,
+        "day": "Thursday",
+        "file_id": 4,
+        "pr_auc": 0.3713481605797038,
+        "prevalence": 0.01279598041862813,
+        "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.9901290150910902,
+        "rows": 170366,
+        "start": 1957132,
+        "stop": 2127498
+      },
+      {
+        "attack": 128027,
+        "benign": 97718,
+        "day": "Friday",
+        "file_id": 5,
+        "pr_auc": 0.9540277372357572,
+        "prevalence": 0.5671310549513832,
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.9573456429357403,
+        "rows": 225745,
+        "start": 2127498,
+        "stop": 2353243
+      },
+      {
+        "attack": 158930,
+        "benign": 127537,
+        "day": "Friday",
+        "file_id": 6,
+        "pr_auc": 0.38509879032857813,
+        "prevalence": 0.5547933967961406,
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.1472694271562573,
+        "rows": 286467,
+        "start": 2353243,
+        "stop": 2639710
+      },
+      {
+        "attack": 1966,
+        "benign": 189067,
+        "day": "Friday",
+        "file_id": 7,
+        "pr_auc": 0.0055809363536358635,
+        "prevalence": 0.010291415619290908,
+        "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+        "roc_auc": 0.14029050244214425,
+        "rows": 191033,
+        "start": 2639710,
+        "stop": 2830743
+      }
+    ],
+    "primary": {
+      "pr_auc": 0.663981075198031,
+      "pr_excess": 0.4669847389004582,
+      "pr_normalized": 0.5815474573893238,
+      "prevalence_chance_anchor": 0.19699633629757277,
+      "roc_auc": 0.7418914673891959
+    },
+    "thresholded": {
+      "balanced": {
+        "accuracy": 0.8798128265264632,
+        "f1": 0.5907322019952195,
+        "f2": 0.4902394952530224,
+        "fn": 312112,
+        "fnr": 0.5596955774810543,
+        "fp": 28107,
+        "fpr": 0.012365068450664447,
+        "precision": 0.8972851290559529,
+        "recall": 0.4403044225189457,
+        "threshold": 0.07000000029802322,
+        "tn": 2244990,
+        "tp": 245534
+      },
+      "security": {
+        "accuracy": 0.8798128265264632,
+        "f1": 0.5907322019952195,
+        "f2": 0.4902394952530224,
+        "fn": 312112,
+        "fnr": 0.5596955774810543,
+        "fp": 28107,
+        "fpr": 0.012365068450664447,
+        "precision": 0.8972851290559529,
+        "recall": 0.4403044225189457,
+        "threshold": 0.07000000029802322,
+        "tn": 2244990,
+        "tp": 245534
+      },
+      "standard": {
+        "accuracy": 0.8450336183821703,
+        "f1": 0.3667938843146991,
+        "f2": 0.26852992373549806,
+        "fn": 430593,
+        "fnr": 0.772161909168182,
+        "fp": 8077,
+        "fpr": 0.0035533019488389627,
+        "precision": 0.9402279286612891,
+        "recall": 0.22783809083181802,
+        "threshold": 0.5,
+        "tn": 2265020,
+        "tp": 127053
+      }
+    }
+  },
+  "models": {
+    "ensemble": {
+      "combination_dtype": "float64",
+      "rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "storage_dtype": "float32",
+      "target_probability_sha256": "91e4271f0933d3e7b904e9d822377703fb5f8da04e3111d813fd1dd4298f9d1b"
+    },
+    "lightgbm": {
+      "model_file": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_lightgbm_model.txt",
+      "model_sha256": "7be4c610814e45be2e315996969d2e2f404a3ada14866b21a731e4382fdc18b8",
+      "target_probability_float32_sha256": "ad8c496a74e530c5c1e38771d0627a22ea2d0766ff0412b0da1d610ae666789b"
+    },
+    "xgboost": {
+      "model_file": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_xgboost_model.json",
+      "model_sha256": "38499d0edcdc5c6d0b2c3afee913558973d35d5ebf1cb2ae888a16b8da98756c",
+      "target_probability_float32_sha256": "74853de93594f343ea9eb0da8cf1c5f34a3a25dfa152ff5dede598c755c018ec"
+    }
+  },
+  "numeric_audit": [
+    {
+      "day": "Monday",
+      "file_id": 0,
+      "nan_cells_after_inf_conversion": 874,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 810,
+      "remote": "traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+      "rows": 529918
+    },
+    {
+      "day": "Tuesday",
+      "file_id": 1,
+      "nan_cells_after_inf_conversion": 528,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 327,
+      "remote": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "rows": 445909
+    },
+    {
+      "day": "Wednesday",
+      "file_id": 2,
+      "nan_cells_after_inf_conversion": 2594,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 1586,
+      "remote": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "rows": 692703
+    },
+    {
+      "day": "Thursday",
+      "file_id": 3,
+      "nan_cells_after_inf_conversion": 414,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 396,
+      "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "rows": 288602
+    },
+    {
+      "day": "Thursday",
+      "file_id": 4,
+      "nan_cells_after_inf_conversion": 270,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 250,
+      "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "rows": 170366
+    },
+    {
+      "day": "Friday",
+      "file_id": 5,
+      "nan_cells_after_inf_conversion": 68,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 64,
+      "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "rows": 225745
+    },
+    {
+      "day": "Friday",
+      "file_id": 6,
+      "nan_cells_after_inf_conversion": 742,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 727,
+      "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "rows": 286467
+    },
+    {
+      "day": "Friday",
+      "file_id": 7,
+      "nan_cells_after_inf_conversion": 244,
+      "negative_inf_to_nan": 0,
+      "positive_inf_to_nan": 216,
+      "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "rows": 191033
+    }
+  ],
+  "parent_commit": "293f91171e22b94d7342963f687df5aa5221ef5d",
+  "prediction_artifact": {
+    "binary_label_array_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+    "file": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2c_bridge70_published/bridge70_published_ensemble_predictions.npz",
+    "file_sha256": "fe7b981321d0c1cae37a881250e252a11caab5e3a1e2ef28777709d577c5c053",
+    "probability_array_sha256": "91e4271f0933d3e7b904e9d822377703fb5f8da04e3111d813fd1dd4298f9d1b",
+    "row_order": "FROZEN_PUBLISHED_POPULATION_ORDER"
+  },
+  "representation": {
+    "explicit_imputation": "NONE",
+    "feature_count": 70,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "input_semantics": "FROZEN_POSITIONAL_ORDER",
+    "negative_infinity": "CONVERT_TO_NAN",
+    "parse_dtype": "float64",
+    "positive_infinity": "CONVERT_TO_NAN",
+    "scaling": "NONE",
+    "target_mapping": {
+      "ACK Flag Cnt": "ACK Flag Count",
+      "Active Max": "Active Max",
+      "Active Mean": "Active Mean",
+      "Active Min": "Active Min",
+      "Active Std": "Active Std",
+      "Bwd Header Len": "Bwd Header Length",
+      "Bwd IAT Max": "Bwd IAT Max",
+      "Bwd IAT Mean": "Bwd IAT Mean",
+      "Bwd IAT Min": "Bwd IAT Min",
+      "Bwd IAT Std": "Bwd IAT Std",
+      "Bwd IAT Tot": "Bwd IAT Total",
+      "Bwd Pkt Len Max": "Bwd Packet Length Max",
+      "Bwd Pkt Len Mean": "Bwd Packet Length Mean",
+      "Bwd Pkt Len Min": "Bwd Packet Length Min",
+      "Bwd Pkt Len Std": "Bwd Packet Length Std",
+      "Bwd Pkts/s": "Bwd Packets/s",
+      "Bwd Seg Size Avg": "Avg Bwd Segment Size",
+      "CWE Flag Count": "CWE Flag Count",
+      "Down/Up Ratio": "Down/Up Ratio",
+      "Dst Port": "Destination Port",
+      "ECE Flag Cnt": "ECE Flag Count",
+      "FIN Flag Cnt": "FIN Flag Count",
+      "Flow Byts/s": "Flow Bytes/s",
+      "Flow Duration": "Flow Duration",
+      "Flow IAT Max": "Flow IAT Max",
+      "Flow IAT Mean": "Flow IAT Mean",
+      "Flow IAT Min": "Flow IAT Min",
+      "Flow IAT Std": "Flow IAT Std",
+      "Flow Pkts/s": "Flow Packets/s",
+      "Fwd Act Data Pkts": "act_data_pkt_fwd",
+      "Fwd Header Len": "Fwd Header Length",
+      "Fwd IAT Max": "Fwd IAT Max",
+      "Fwd IAT Mean": "Fwd IAT Mean",
+      "Fwd IAT Min": "Fwd IAT Min",
+      "Fwd IAT Std": "Fwd IAT Std",
+      "Fwd IAT Tot": "Fwd IAT Total",
+      "Fwd PSH Flags": "Fwd PSH Flags",
+      "Fwd Pkt Len Max": "Fwd Packet Length Max",
+      "Fwd Pkt Len Mean": "Fwd Packet Length Mean",
+      "Fwd Pkt Len Min": "Fwd Packet Length Min",
+      "Fwd Pkt Len Std": "Fwd Packet Length Std",
+      "Fwd Pkts/s": "Fwd Packets/s",
+      "Fwd Seg Size Avg": "Avg Fwd Segment Size",
+      "Fwd Seg Size Min": "min_seg_size_forward",
+      "Fwd URG Flags": "Fwd URG Flags",
+      "Idle Max": "Idle Max",
+      "Idle Mean": "Idle Mean",
+      "Idle Min": "Idle Min",
+      "Idle Std": "Idle Std",
+      "Init Bwd Win Byts": "Init_Win_bytes_backward",
+      "Init Fwd Win Byts": "Init_Win_bytes_forward",
+      "PSH Flag Cnt": "PSH Flag Count",
+      "Pkt Len Max": "Max Packet Length",
+      "Pkt Len Mean": "Packet Length Mean",
+      "Pkt Len Min": "Min Packet Length",
+      "Pkt Len Std": "Packet Length Std",
+      "Pkt Len Var": "Packet Length Variance",
+      "Pkt Size Avg": "Average Packet Size",
+      "Protocol": "Protocol",
+      "RST Flag Cnt": "RST Flag Count",
+      "SYN Flag Cnt": "SYN Flag Count",
+      "Subflow Bwd Byts": "Subflow Bwd Bytes",
+      "Subflow Bwd Pkts": "Subflow Bwd Packets",
+      "Subflow Fwd Byts": "Subflow Fwd Bytes",
+      "Subflow Fwd Pkts": "Subflow Fwd Packets",
+      "Tot Bwd Pkts": "Total Backward Packets",
+      "Tot Fwd Pkts": "Total Fwd Packets",
+      "TotLen Bwd Pkts": "Total Length of Bwd Packets",
+      "TotLen Fwd Pkts": "Total Length of Fwd Packets",
+      "URG Flag Cnt": "URG Flag Count"
+    }
+  },
+  "scientific_fit_accounting": {
+    "budget": 4,
+    "completed_after": 2,
+    "completed_before": 2,
+    "new_fits": 0
+  },
+  "stage": "Stage24-2C",
+  "status": "PRIMARY_BRIDGE70_PUBLISHED_TARGET_OPENING_COMPLETE",
+  "target_opening": {
+    "administratively_cancelled_grounded_cells": 2,
+    "consumed_after": 3,
+    "consumed_before": 2,
+    "new_scientific_fits": 0,
+    "opening_consumed_at_utc": "2026-08-18T10:14:30.967021+00:00",
+    "opening_number": 3,
+    "original_budget": 8
+  },
+  "target_population": {
+    "attack": 557646,
+    "benign": 2273097,
+    "binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+    "files": [
+      {
+        "day": "Monday",
+        "file_id": 0,
+        "remote": "traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+        "rows": 529918,
+        "start": 0,
+        "stop": 529918
+      },
+      {
+        "day": "Tuesday",
+        "file_id": 1,
+        "remote": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+        "rows": 445909,
+        "start": 529918,
+        "stop": 975827
+      },
+      {
+        "day": "Wednesday",
+        "file_id": 2,
+        "remote": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+        "rows": 692703,
+        "start": 975827,
+        "stop": 1668530
+      },
+      {
+        "day": "Thursday",
+        "file_id": 3,
+        "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "rows": 288602,
+        "start": 1668530,
+        "stop": 1957132
+      },
+      {
+        "day": "Thursday",
+        "file_id": 4,
+        "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "rows": 170366,
+        "start": 1957132,
+        "stop": 2127498
+      },
+      {
+        "day": "Friday",
+        "file_id": 5,
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+        "rows": 225745,
+        "start": 2127498,
+        "stop": 2353243
+      },
+      {
+        "day": "Friday",
+        "file_id": 6,
+        "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+        "rows": 286467,
+        "start": 2353243,
+        "stop": 2639710
+      },
+      {
+        "day": "Friday",
+        "file_id": 7,
+        "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+        "rows": 191033,
+        "start": 2639710,
+        "stop": 2830743
+      }
+    ],
+    "label_source": "STAGE24_2A_CANONICAL_PRIMARY_TARGET_ORDER",
+    "prevalence": 0.19699633629757277,
+    "rows": 2830743
+  },
+  "target_variant": "PUBLISHED",
+  "threshold_provenance": {
+    "balanced": 0.07000000029802322,
+    "security": 0.07000000029802322,
+    "source": "IDS2018_SOURCE_VALIDATION_ONLY",
+    "standard": 0.5,
+    "target_threshold_search": false
+  }
+}

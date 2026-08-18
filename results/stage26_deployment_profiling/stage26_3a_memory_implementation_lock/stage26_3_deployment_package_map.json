@@ -1,0 +1,265 @@
+{
+  "checkpoint": "STAGE26-3",
+  "definition": {
+    "deployment_package_size": "Serialized artifact(s) plus exact model-specific preprocessing/configuration/executable architecture/representation artifacts used by Stage26 execution.",
+    "generic_python_or_framework_install_size_included": false,
+    "serialized_model_size": "Sum of immutable Stage26 model/checkpoint artifacts for the actual deployment unit."
+  },
+  "frozen_before_first_memory_observation": true,
+  "schema": "stage26_3_deployment_package_map_v1",
+  "stage": 26,
+  "targets": {
+    "ENS_LGBM_XGB_EQUAL": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib",
+          "sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f",
+          "size_bytes": 864264
+        },
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib",
+          "sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2",
+          "size_bytes": 2420416
+        }
+      ],
+      "deployment_package_size_bytes": 3284680,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib",
+          "sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f",
+          "size_bytes": 864264
+        },
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib",
+          "sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2",
+          "size_bytes": 2420416
+        }
+      ],
+      "serialized_model_size_bytes": 3284680
+    },
+    "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+          "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31",
+          "size_bytes": 1968137
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+          "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c",
+          "size_bytes": 1966137
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+          "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552",
+          "size_bytes": 1966315
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+          "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739",
+          "size_bytes": 1966315
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_997_best.pt",
+          "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66",
+          "size_bytes": 1966315
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+          "sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5",
+          "size_bytes": 2295
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/ft_transformer_numeric.py",
+          "sha256": "8233a7b62e7045d7c920c15fd8ec974ed8b3db6f2f131dc4c64ba0ce0133dcfc",
+          "size_bytes": 4443
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4c_frozen_architecture.json",
+          "sha256": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa",
+          "size_bytes": 2298
+        }
+      ],
+      "deployment_package_size_bytes": 9842255,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+          "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31",
+          "size_bytes": 1968137
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+          "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c",
+          "size_bytes": 1966137
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+          "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552",
+          "size_bytes": 1966315
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+          "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739",
+          "size_bytes": 1966315
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_997_best.pt",
+          "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66",
+          "size_bytes": 1966315
+        }
+      ],
+      "serialized_model_size_bytes": 9833219
+    },
+    "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+          "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31",
+          "size_bytes": 1968137
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+          "sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5",
+          "size_bytes": 2295
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/ft_transformer_numeric.py",
+          "sha256": "8233a7b62e7045d7c920c15fd8ec974ed8b3db6f2f131dc4c64ba0ce0133dcfc",
+          "size_bytes": 4443
+        },
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4c_frozen_architecture.json",
+          "sha256": "4a1f5788eaacaca55f171684d5550509bdc07de832731dd58234f4e3300b88fa",
+          "size_bytes": 2298
+        }
+      ],
+      "deployment_package_size_bytes": 1977173,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+          "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31",
+          "size_bytes": 1968137
+        }
+      ],
+      "serialized_model_size_bytes": 1968137
+    },
+    "STAGE16_CATBOOST_TUNED": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/CATBOOST_tuned.joblib",
+          "sha256": "85b2305676280fee6e620d94eb28a58ba9b607aff247b65ad462ab16f89c0cd6",
+          "size_bytes": 458589
+        }
+      ],
+      "deployment_package_size_bytes": 458589,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/CATBOOST_tuned.joblib",
+          "sha256": "85b2305676280fee6e620d94eb28a58ba9b607aff247b65ad462ab16f89c0cd6",
+          "size_bytes": 458589
+        }
+      ],
+      "serialized_model_size_bytes": 458589
+    },
+    "STAGE16_LIGHTGBM_TUNED": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib",
+          "sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2",
+          "size_bytes": 2420416
+        }
+      ],
+      "deployment_package_size_bytes": 2420416,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib",
+          "sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2",
+          "size_bytes": 2420416
+        }
+      ],
+      "serialized_model_size_bytes": 2420416
+    },
+    "STAGE16_XGBOOST_TUNED": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib",
+          "sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f",
+          "size_bytes": 864264
+        }
+      ],
+      "deployment_package_size_bytes": 864264,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib",
+          "sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f",
+          "size_bytes": 864264
+        }
+      ],
+      "serialized_model_size_bytes": 864264
+    },
+    "STAGE20_MASKED_CNN_V1": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage20_1e_training/stage20_1e2_epoch10_model_state_dict.pt",
+          "sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+          "size_bytes": 376879
+        },
+        {
+          "repo_relative_path": "scripts/stage20_masked_cnn.py",
+          "sha256": "3638ae622017a36e6eeb33f227135829695ff2f3581c9b43787a02c1a440b9d4",
+          "size_bytes": 5559
+        },
+        {
+          "repo_relative_path": "scripts/stage20_packet_image_encoder.py",
+          "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+          "size_bytes": 4883
+        }
+      ],
+      "deployment_package_size_bytes": 387321,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage20_1e_training/stage20_1e2_epoch10_model_state_dict.pt",
+          "sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+          "size_bytes": 376879
+        }
+      ],
+      "serialized_model_size_bytes": 376879
+    },
+    "STAGE21_MASKED_VIT_V1": {
+      "deployment_package_artifacts": [
+        {
+          "repo_relative_path": "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt",
+          "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8",
+          "size_bytes": 378999
+        },
+        {
+          "repo_relative_path": "scripts/stage21_masked_vit.py",
+          "sha256": "3af99e4ea7061c68a676dc8fa7e485a7d13278f8947e4f8a8fbf2069dc31e3cb",
+          "size_bytes": 10520
+        },
+        {
+          "repo_relative_path": "scripts/stage20_packet_image_encoder.py",
+          "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+          "size_bytes": 4883
+        }
+      ],
+      "deployment_package_size_bytes": 394402,
+      "generic_framework_installation_excluded": true,
+      "serialized_model_artifacts": [
+        {
+          "repo_relative_path": "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt",
+          "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8",
+          "size_bytes": 378999
+        }
+      ],
+      "serialized_model_size_bytes": 378999
+    }
+  }
+}

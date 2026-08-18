@@ -1,0 +1,48 @@
+{
+  "checkpoint": "STAGE26-3A",
+  "file_count_excluding_manifest": 5,
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3_deployment_package_map.json",
+      "sha256": "09e0d093a8ca83f4d68e9affd675af4336b982a6af14e5034fc2e5ffd4bc547c",
+      "size_bytes": 11923
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3_memory_execution_plan.json",
+      "sha256": "018584b8f8c94d6afa5fcf3576c261bae2b0f694c8b748bf2e0421234e17ea13",
+      "size_bytes": 175916
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3_memory_implementation.json",
+      "sha256": "9e8439d41924f5bdd13dc4db0a8e997fb9a6be1883a38a9ff4028c9f785452dc",
+      "size_bytes": 2315
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3a_memory_freeze_receipt.json",
+      "sha256": "465cc0c89f09c42f0d33b4dc1f8e759983fccd2897cef0207c85e777cdee3a19",
+      "size_bytes": 1268
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_memory_worker.py",
+      "sha256": "2ba87c88244b8b3d8b0265d44b29204dc87e321e5aedc35dc5ac536de5fa8fd7",
+      "size_bytes": 21517
+    }
+  ],
+  "freeze_receipt_sha256": "465cc0c89f09c42f0d33b4dc1f8e759983fccd2897cef0207c85e777cdee3a19",
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "parent_commit": "7ffdba3f4ca4ea5cc53097d62aaf27957009b9f6",
+  "schema": "stage26_3a_memory_lock_package_manifest_v1",
+  "scientific_boundary": {
+    "deployment_package_map_frozen": true,
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "inference_performed": false,
+    "memory_observations": 0,
+    "memory_plan_frozen": true,
+    "memory_worker_frozen": true,
+    "model_deserialization_performed": false,
+    "timing_performed": false
+  },
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR"
+}

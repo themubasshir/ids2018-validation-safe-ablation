@@ -1,0 +1,6216 @@
+{
+  "checkpoint": "STAGE26-3",
+  "condition_count": 80,
+  "frozen_before_first_memory_observation": true,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "memory_repetitions": [
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_029",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 1,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 24,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_073",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 2,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 66,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_062",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 3,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 52,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_077",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 4,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 22,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_053",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 5,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 80,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_054",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 6,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 43,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_051",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 7,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 29,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_037",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 8,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 16,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_078",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 9,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 61,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_029",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 10,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 24,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_040",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 11,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 71,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_002",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 12,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 35,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_072",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 13,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 51,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_047",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 14,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 10,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_040",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 15,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 71,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_027",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 16,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 55,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_053",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 17,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 80,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_027",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 18,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 55,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_057",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 19,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 59,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_049",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 20,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 23,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_029",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 21,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 24,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_063",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 22,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 67,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_004",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 23,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 69,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_004",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 24,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 69,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_002",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 25,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 35,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_039",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 26,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 37,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_059",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 27,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 42,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_037",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 28,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 16,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_007",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 29,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 38,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_061",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 30,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 1,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_025",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 31,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 63,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_057",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 32,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 59,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_076",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 33,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 26,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_017",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 34,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 48,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_048",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 35,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 53,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_071",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 36,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 73,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_056",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 37,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 34,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_067",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 38,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 11,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_060",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 39,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 65,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_032",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 40,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 44,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_024",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 41,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 30,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_007",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 42,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 38,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_073",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 43,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 66,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_006",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 44,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 75,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_049",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 45,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 23,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_014",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 46,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 45,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_035",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 47,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 32,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_039",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 48,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 37,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_029",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 49,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 24,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_019",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 50,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 3,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_021",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 51,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 8,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_043",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 52,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 70,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_075",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 53,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 21,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_052",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 54,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 5,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_027",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 55,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 55,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_016",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 56,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 20,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_048",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 57,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 53,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_043",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 58,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 70,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_012",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 59,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 27,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_059",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 60,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 42,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_056",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 61,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 34,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_023",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 62,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 50,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_038",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 63,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 12,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_007",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 64,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 38,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_017",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 65,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 48,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_042",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 66,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 6,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_068",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 67,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 64,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_040",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 68,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 71,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_018",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 69,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 13,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_050",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 70,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 17,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_013",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 71,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 54,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_009",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 72,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 49,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_018",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 73,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 13,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_078",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 74,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 61,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_015",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 75,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 68,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_047",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 76,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 10,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_036",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 77,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 41,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_029",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 78,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 24,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_026",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 79,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 46,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_014",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 80,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 45,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_075",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 81,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 21,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_079",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 82,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 4,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_053",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 83,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 80,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_063",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 84,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 67,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_034",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 85,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 72,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_007",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 86,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 38,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_030",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 87,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 76,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_065",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 88,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 60,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_080",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 89,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 31,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_031",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 90,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 56,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_056",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 91,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 34,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_038",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 92,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 12,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_039",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 93,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 37,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_056",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 94,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 34,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_044",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 95,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 40,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_032",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 96,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 44,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_054",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 97,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 43,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_070",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 98,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 25,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_041",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 99,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 2,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_024",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 100,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 30,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_031",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 101,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 56,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_020",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 102,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 9,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_077",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 103,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 22,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_041",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 104,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 2,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_054",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 105,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 43,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_019",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 106,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 3,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_059",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 107,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 42,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_038",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 108,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 12,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_076",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 109,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 26,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_043",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 110,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 70,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_028",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 111,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 79,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_059",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 112,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 42,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_020",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 113,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 9,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_022",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 114,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 33,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_068",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 115,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 64,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_065",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 116,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 60,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_055",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 117,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 28,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_080",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 118,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 31,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_009",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 119,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 49,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_033",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 120,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 36,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_055",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 121,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 28,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_062",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 122,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 52,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_007",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 123,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 38,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_061",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 124,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 1,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_050",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 125,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 17,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_046",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 126,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 39,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_058",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 127,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 57,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_058",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 128,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 57,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_060",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 129,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 65,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_080",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 130,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 31,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_068",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 131,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 64,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_046",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 132,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 39,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_018",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 133,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 13,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_015",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 134,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 68,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_076",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 135,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 26,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_072",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 136,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 51,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_049",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 137,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 23,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_075",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 138,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 21,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_050",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 139,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 17,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_061",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 140,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 1,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_005",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 141,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 74,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_004",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 142,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 69,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_008",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 143,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 62,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_070",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 144,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 25,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_031",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 145,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 56,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_070",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 146,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 25,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_034",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 147,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 72,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_060",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 148,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 65,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_028",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 149,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 79,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_005",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 150,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 74,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_016",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 151,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 20,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_035",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 152,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 32,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_028",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 153,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 79,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_046",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 154,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 39,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_075",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 155,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 21,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_022",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 156,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 33,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_009",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 157,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 49,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_052",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 158,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 5,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_009",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 159,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 49,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_019",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 160,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 3,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_017",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 161,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 48,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_053",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 162,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 80,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_062",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 163,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 52,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_064",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 164,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 14,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_042",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 165,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 6,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_035",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 166,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 32,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_015",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 167,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 68,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_011",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 168,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 78,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_055",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 169,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 28,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_027",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 170,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 55,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_042",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 171,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 6,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_026",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 172,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 46,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_002",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 173,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 35,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_057",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 174,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 59,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_004",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 175,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 69,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_024",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 176,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 30,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_064",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 177,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 14,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_008",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 178,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 62,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_061",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 179,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 1,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_079",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 180,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 4,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_056",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 181,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 34,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_072",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 182,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 51,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_046",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 183,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 39,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_003",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 184,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 47,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_013",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 185,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 54,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_045",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 186,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 19,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_005",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 187,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 74,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_047",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 188,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 10,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_036",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 189,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 41,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_058",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 190,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 57,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_038",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 191,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 12,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_035",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 192,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 32,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_045",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 193,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 19,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_014",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 194,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 45,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_037",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 195,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 16,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_074",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 196,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 77,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_041",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 197,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 2,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_069",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 198,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 7,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_033",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 199,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 36,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_064",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 200,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 14,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_035",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 201,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 32,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_045",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 202,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 19,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_074",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 203,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 77,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_052",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 204,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 5,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_021",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 205,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 8,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_069",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 206,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 7,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_023",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 207,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 50,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_065",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 208,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 60,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_060",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 209,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 65,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_055",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 210,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 28,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_020",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 211,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 9,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_025",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 212,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 63,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_071",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 213,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 73,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_045",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 214,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 19,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_079",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 215,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 4,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_075",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 216,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 21,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_067",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 217,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 11,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_037",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 218,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 16,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_015",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 219,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 68,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_074",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 220,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 77,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_002",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 221,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 35,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_016",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 222,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 20,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_022",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 223,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 33,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_063",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 224,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 67,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_072",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 225,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 51,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_078",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 226,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 61,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_031",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 227,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 56,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_073",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 228,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 66,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_024",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 229,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 30,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_051",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 230,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 29,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_013",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 231,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 54,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_065",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 232,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 60,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_022",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 233,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 33,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_013",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 234,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 54,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_033",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 235,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 36,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_043",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 236,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 70,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_077",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 237,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 22,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_054",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 238,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 43,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_052",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 239,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 5,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_059",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 240,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 42,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_011",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 241,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 78,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_031",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 242,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 56,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_006",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 243,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 75,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_010",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 244,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 18,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_010",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 245,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 18,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_066",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 246,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 58,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_023",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 247,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 50,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_025",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 248,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 63,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_032",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 249,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 44,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_038",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 250,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 12,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_049",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 251,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 23,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_002",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 252,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 35,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_033",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 253,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 36,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_039",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 254,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 37,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_008",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 255,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 62,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_039",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 256,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 37,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_033",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 257,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 36,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_074",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 258,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 77,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_012",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 259,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 27,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_026",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 260,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 46,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_050",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 261,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 17,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_036",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 262,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 41,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_050",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 263,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 17,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_066",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 264,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 58,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_019",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 265,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 3,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_080",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 266,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 31,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_067",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 267,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 11,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_064",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 268,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 14,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_057",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 269,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 59,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_019",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 270,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 3,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_027",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 271,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 55,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_003",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 272,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 47,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_025",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 273,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 63,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_060",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 274,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 65,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_008",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 275,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 62,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_077",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 276,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 22,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_052",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 277,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 5,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_066",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 278,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 58,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_070",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 279,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 25,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_076",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 280,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 26,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_079",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 281,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 4,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_040",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 282,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 71,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_064",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 283,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 14,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_020",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 284,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 9,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_017",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 285,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 48,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_066",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 286,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 58,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_012",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 287,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 27,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_018",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 288,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 13,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_063",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 289,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 67,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_001",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 290,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 15,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_030",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 291,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 76,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_010",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 292,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 18,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_030",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 293,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 76,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_004",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 294,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 69,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_048",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 295,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 53,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_069",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 296,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 7,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_024",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 297,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 30,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_048",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 298,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 53,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_040",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 299,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 71,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_077",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 300,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 22,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_034",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 301,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 72,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_005",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 302,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 74,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_008",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 303,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 62,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_041",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 304,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 2,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_046",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 305,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 39,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_012",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 306,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 27,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_054",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 307,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 43,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_047",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 308,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 10,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_030",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 309,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 76,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_003",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 310,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 47,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_037",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 311,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 16,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_074",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 312,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 77,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_041",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 313,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 2,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_012",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 314,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 27,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_045",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 315,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 19,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_071",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 316,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 73,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_057",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 317,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 59,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_051",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 318,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 29,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_032",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 319,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 44,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_044",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 320,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 40,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_009",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 321,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 49,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_022",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 322,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 33,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_071",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 323,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 73,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_062",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 324,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 52,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_068",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 325,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 64,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_036",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 326,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 41,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_034",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 327,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 72,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_078",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 328,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 61,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_034",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 329,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 72,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_017",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 330,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 48,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_011",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 331,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 78,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_018",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 332,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 13,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_016",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 333,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 20,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_047",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 334,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 10,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_003",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 335,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 47,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_069",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 336,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 7,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_036",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 337,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 41,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_078",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 338,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 61,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_079",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 339,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 4,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_067",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 340,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 11,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_044",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 341,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 40,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_021",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 342,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 8,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_011",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 343,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 78,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_015",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 344,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 68,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_053",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 345,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 80,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_006",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 346,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 75,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_032",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 347,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 44,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_066",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 348,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 58,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_010",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 349,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 18,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_026",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 350,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 46,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_062",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 351,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 52,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_016",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 352,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 20,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_042",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 353,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 6,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_028",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 354,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 79,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_080",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 355,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 31,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_014",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 356,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 45,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_067",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 357,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 11,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_021",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 358,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 8,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_023",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 359,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 50,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_003",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 360,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 47,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_051",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 361,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 29,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_076",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 362,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 26,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_051",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 363,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 29,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_058",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 364,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 57,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_073",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 365,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 66,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_005",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 366,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 74,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_026",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 367,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 46,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_001",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 368,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 15,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_023",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 369,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 50,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_025",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 370,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 63,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_013",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 371,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 54,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_043",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 372,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 70,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_014",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 373,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 45,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_006",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 374,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 75,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_065",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 375,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 60,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_072",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 376,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 51,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_030",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 377,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 76,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_070",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 378,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 25,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_001",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 379,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 15,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_073",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 380,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 66,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_010",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 381,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 18,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_063",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 382,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 67,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_068",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 383,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 64,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_028",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 384,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 79,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_044",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 385,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 40,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_006",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 386,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 75,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_001",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 387,
+      "memory_repetition": 1,
+      "source_cpu_execution_order": 15,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_049",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 388,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 23,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_071",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 389,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 73,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_011",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 390,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 78,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_020",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 391,
+      "memory_repetition": 3,
+      "source_cpu_execution_order": 9,
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_021",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 392,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 8,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_069",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 393,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 7,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_044",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 394,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 40,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_061",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 395,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 1,
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "target_role": "OPERATIONAL_REFERENCE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_048",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 396,
+      "memory_repetition": 2,
+      "source_cpu_execution_order": 53,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_042",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 397,
+      "memory_repetition": 5,
+      "source_cpu_execution_order": 6,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "condition_id": "CPUCOND_001",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 398,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 15,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_055",
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "memory_execution_order": 399,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 28,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 1
+    },
+    {
+      "affinity": [
+        0,
+        1
+      ],
+      "batch_size": 256,
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "condition_id": "CPUCOND_058",
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "memory_execution_order": 400,
+      "memory_repetition": 4,
+      "source_cpu_execution_order": 57,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "target_role": "PRIMARY_ARCHITECTURE",
+      "thread_count": 2
+    }
+  ],
+  "parent_commit": "7ffdba3f4ca4ea5cc53097d62aaf27957009b9f6",
+  "randomization_seed": 26042,
+  "repetitions_per_condition": 5,
+  "schema": "stage26_3_memory_execution_plan_v1",
+  "selection_rule": "INHERIT_ALL_80_ALREADY_FROZEN_CPU_CONDITIONS; NO BATCH/HARDWARE/TARGET SELECTION FROM STAGE26-2 RESULTS",
+  "source_cpu_execution_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+  "stage": 26,
+  "total_memory_repetitions": 400
+}

@@ -1,0 +1,47 @@
+{
+  "checkpoint": "STAGE26-3",
+  "deployment_package_map_sha256": "09e0d093a8ca83f4d68e9affd675af4336b982a6af14e5034fc2e5ffd4bc547c",
+  "frozen_at_utc": "2026-08-18T21:13:03.550224+00:00",
+  "generic_framework_installation_size_excluded": true,
+  "gpu_used": false,
+  "holdout_accessed": false,
+  "max_worker_ram_fraction": 0.85,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "memory_and_timing_separate": true,
+  "memory_boundaries": {
+    "baseline_rss": "After required framework imports and deterministic input preparation, before model load.",
+    "delta_model_rss": "loaded_rss - baseline_rss",
+    "delta_peak_rss": "peak_rss - baseline_rss",
+    "loaded_rss": "After model construction/deserialization and before inference.",
+    "peak_rss": "Maximum RSS sampled every 5 ms during exactly one untimed memory-only inference pass; loaded and immediate post-inference RSS are also included in sample set.",
+    "ru_maxrss": "Linux ru_maxrss converted from KiB to bytes; descriptive only."
+  },
+  "memory_execution_plan_sha256": "018584b8f8c94d6afa5fcf3576c261bae2b0f694c8b748bf2e0421234e17ea13",
+  "memory_inference_passes_per_repetition": 1,
+  "memory_observations_at_freeze": 0,
+  "memory_scope": {
+    "batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "cpu_modes": 2,
+    "fresh_process_repetitions_per_condition": 5,
+    "selection_uses_stage26_2_performance_results": false,
+    "source_condition_count": 80,
+    "target_count": 8,
+    "total_fresh_process_repetitions": 400
+  },
+  "memory_worker_sha256": "2ba87c88244b8b3d8b0265d44b29204dc87e321e5aedc35dc5ac536de5fa8fd7",
+  "parent_commit": "7ffdba3f4ca4ea5cc53097d62aaf27957009b9f6",
+  "resource_limit_policy": "Parent execution controller must terminate and retain RESOURCE_LIMIT_OOM if worker RSS exceeds 85% of physical RAM. No batch replacement.",
+  "rss_sampling_interval_ms": 5,
+  "schema": "stage26_3_memory_implementation_v1",
+  "serialized_package_map_frozen_before_memory": true,
+  "source_cpu_execution_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+  "stage": 26,
+  "stage26_2_receipt_sha256": "b4b2623eabde7dd6b9acc250357a9f1ad61fa342c1dd496dcb634d4bfaca4d15",
+  "status": "FROZEN_BEFORE_FIRST_MEMORY_OBSERVATION"
+}

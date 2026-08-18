@@ -1,0 +1,66 @@
+{
+  "anti_adaptation": {
+    "feature_change": false,
+    "hyperparameter_tuning": false,
+    "performance_feedback": false,
+    "target_feedback": false,
+    "threshold_feedback": false
+  },
+  "corrective_execution_rule": {
+    "backend": "CUDA_UNCHANGED",
+    "data_membership": "UNCHANGED",
+    "ensemble": "UNCHANGED_0.5_LGBM_PLUS_0.5_XGB",
+    "execution_interface": {
+      "from": "SKLEARN_XGBCLASSIFIER_WITH_HOST_NUMPY_MEMMAP",
+      "to": "CUPY_FLOAT64_BATCHES_TO_GPU_QUANTILEDMATRIX_THEN_XGBOOST_TRAIN_CUDA"
+    },
+    "feature_representation": "UNCHANGED_BRIDGE62",
+    "hyperparameters": "UNCHANGED",
+    "max_bin": "256_DEFAULT_INHERITED; made explicit only for QuantileDMatrix construction",
+    "numeric_source_input": "UNCHANGED_FLOAT64",
+    "scientific_model": "XGB_11_UNCHANGED",
+    "threshold_semantics": "UNCHANGED_STAGE20_1E3_SOURCE_VALIDATION_ONLY",
+    "tree_method": "HIST_UNCHANGED",
+    "validation_prediction": "CUDA_INPLACE_PREDICT_FROM_CUPY",
+    "wrapper_to_native_parameter_translation": {
+      "n_estimators_400": "num_boost_round_400",
+      "n_jobs_minus_1": "nthread_minus_1",
+      "random_state_42": "seed_42"
+    }
+  },
+  "created_at_utc": "2026-08-18T05:33:14.737146+00:00",
+  "infrastructure_probe": {
+    "cupy_quantile_dmatrix": true,
+    "resolved_device": "cuda:0",
+    "scientific_fit": false,
+    "synthetic_only": true,
+    "xgboost_cuda_train": true
+  },
+  "next_authorized_step": "Construct the frozen bridge62 source training QuantileDMatrix from CuPy float64 batches and perform exactly one XGB_11 scientific fit with device=cuda and tree_method=hist.",
+  "parent_commit": "3009c3a9e4bcd9ede1aedcca900ee38e30eae670",
+  "scientific_fit_accounting": {
+    "completed_lightgbm_fits": 1,
+    "completed_stage24_fits": 1,
+    "completed_xgboost_fits": 0,
+    "interrupted_xgboost_execution_attempts": 1,
+    "stage24_fit_budget": 4
+  },
+  "stage": "Stage24-1B-R2-EX1",
+  "status": "XGBOOST_GPU_NATIVE_EXECUTION_PATH_FROZEN",
+  "trigger": {
+    "completed_xgboost_fit": false,
+    "ensemble_probability_observed": false,
+    "outcome": "USER_INTERRUPTED_BEFORE_COMPLETED_XGBOOST_FIT",
+    "previous_execution_interface": "XGBClassifier.fit(NUMPY_MEMMAP)",
+    "reason": "Host memmap / sklearn execution path caused substantial CPU-side matrix preparation while accelerator quota was active.",
+    "requested_backend": "cuda",
+    "source_validation_probability_observed": false,
+    "target_labels_read": 0,
+    "target_openings_consumed": 0,
+    "target_predictions": 0,
+    "target_rows_read": 0,
+    "threshold_selection_performed": false,
+    "tree_method": "hist",
+    "xgboost_model_serialized": false
+  }
+}

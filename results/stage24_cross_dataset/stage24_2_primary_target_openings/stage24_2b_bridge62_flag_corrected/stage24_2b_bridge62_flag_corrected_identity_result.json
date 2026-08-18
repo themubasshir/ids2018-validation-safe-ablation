@@ -1,0 +1,355 @@
+{
+  "anti_adaptation": {
+    "feature_remapping_search": false,
+    "feature_search": false,
+    "performance_based_action": false,
+    "target_calibration": false,
+    "target_fit": false,
+    "target_preprocessing_fit": false,
+    "target_threshold_search": false
+  },
+  "bridge": "bridge62",
+  "created_at_utc": "2026-08-18T10:10:24.916697+00:00",
+  "direction": "IDS2018_TO_CICIDS2017",
+  "frozen_invariance": {
+    "aggregate_flag_fields_present": 0,
+    "expected": "BITWISE_IDENTICAL_FEATURE_MATRICES_AND_PREDICTIONS",
+    "feature_count": 62,
+    "published_mapping_equals_flag_corrected_mapping": true,
+    "target_population_identical": true
+  },
+  "identity_audit": {
+    "binary_labels_bitwise_equal": true,
+    "flag_corrected_binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+    "flag_corrected_probability_sha256": "e9288ba2590e09ae51da183bff2160fbb501e8633a3af87a22c800f7d3a051d7",
+    "implementation_failure": false,
+    "per_file_feature_matrix_sha256": [
+      {
+        "corrected_feature_matrix_float64_sha256": "2ceb8725ce80118fd0e9abc09ec98db4fee9d9eb730bef5e7c69a978caaa71be",
+        "day": "Monday",
+        "file_id": 0,
+        "rows": 529918
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "e3f608c5897dd4a7638beaf345a333c130377c01afe1146aae69cac96b0f3d24",
+        "day": "Tuesday",
+        "file_id": 1,
+        "rows": 445909
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "682a74dbe8a97758af0b6121b2df6d6ed0508abd559ed96005ca64e18d3de993",
+        "day": "Wednesday",
+        "file_id": 2,
+        "rows": 692703
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "3908f25fbc1e106a7288e94463e70e639f53be0c08f1c6c393ed4d796af05068",
+        "day": "Thursday",
+        "file_id": 3,
+        "rows": 288602
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "9e05fac7a3bc74c58d3d3a0f5bb9a5ef94ce0fe8503972b63b718a9cbd0ed49d",
+        "day": "Thursday",
+        "file_id": 4,
+        "rows": 170366
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "db98455c3f9e6e08ae397cbec46a51157464c19fb15f02c43b85e95e83d3aeb5",
+        "day": "Friday",
+        "file_id": 5,
+        "rows": 225745
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "6e694f9d8ac8b3539d88f6a3e9e57c08ccd88c0d24bae5748cebe5568c8e884a",
+        "day": "Friday",
+        "file_id": 6,
+        "rows": 286467
+      },
+      {
+        "corrected_feature_matrix_float64_sha256": "f12ba180b8d4a21e87b868ed5a347d4b425825ff30316fdad0dd5eadecc0b28c",
+        "day": "Friday",
+        "file_id": 7,
+        "rows": 191033
+      }
+    ],
+    "probability_arrays_bitwise_equal": true,
+    "published_binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+    "published_probability_sha256": "e9288ba2590e09ae51da183bff2160fbb501e8633a3af87a22c800f7d3a051d7"
+  },
+  "metrics": {
+    "source": "BITWISE_IDENTICAL_STAGE24_2A_VECTOR",
+    "values": {
+      "calibration": {
+        "brier": 0.14575561948280202,
+        "ece_10": 0.15791447228380429,
+        "ece_bins": [
+          {
+            "absolute_gap": 0.135773870249634,
+            "bin": 0,
+            "count": 2611054,
+            "empirical_rate": 0.1382671518857902,
+            "mean_probability": 0.0024932816361561945
+          },
+          {
+            "absolute_gap": 0.5403605058690516,
+            "bin": 1,
+            "count": 18110,
+            "empirical_rate": 0.6893981225842076,
+            "mean_probability": 0.14903761671515606
+          },
+          {
+            "absolute_gap": 0.5685199294231758,
+            "bin": 2,
+            "count": 22277,
+            "empirical_rate": 0.8129460878933429,
+            "mean_probability": 0.24442615847016716
+          },
+          {
+            "absolute_gap": 0.43167929594844984,
+            "bin": 3,
+            "count": 12116,
+            "empirical_rate": 0.7841696929679762,
+            "mean_probability": 0.3524903970195264
+          },
+          {
+            "absolute_gap": 0.5165271958893751,
+            "bin": 4,
+            "count": 39116,
+            "empirical_rate": 0.9661263932917477,
+            "mean_probability": 0.4495991974023725
+          },
+          {
+            "absolute_gap": 0.45644687689982544,
+            "bin": 5,
+            "count": 76324,
+            "empirical_rate": 0.9776086159006342,
+            "mean_probability": 0.5211617390008088
+          },
+          {
+            "absolute_gap": 0.202837249702433,
+            "bin": 6,
+            "count": 7747,
+            "empirical_rate": 0.8505227830127792,
+            "mean_probability": 0.6476855333103462
+          },
+          {
+            "absolute_gap": 0.18284590276303658,
+            "bin": 7,
+            "count": 8044,
+            "empirical_rate": 0.9362257583291894,
+            "mean_probability": 0.7533798555661528
+          },
+          {
+            "absolute_gap": 0.11846717578747112,
+            "bin": 8,
+            "count": 13707,
+            "empirical_rate": 0.9693587218209674,
+            "mean_probability": 0.8508915460334963
+          },
+          {
+            "absolute_gap": 0.22981638825173345,
+            "bin": 9,
+            "count": 22248,
+            "empirical_rate": 0.7512585400934916,
+            "mean_probability": 0.981074928345225
+          }
+        ],
+        "log_loss": 1.317766153662649
+      },
+      "file_level_descriptive": [
+        {
+          "attack": 0,
+          "benign": 529918,
+          "day": "Monday",
+          "file_id": 0,
+          "pr_auc": null,
+          "prevalence": 0.0,
+          "remote": "traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+          "roc_auc": null,
+          "rows": 529918,
+          "start": 0,
+          "stop": 529918
+        },
+        {
+          "attack": 13835,
+          "benign": 432074,
+          "day": "Tuesday",
+          "file_id": 1,
+          "pr_auc": 0.43966440702165954,
+          "prevalence": 0.031026509893274188,
+          "remote": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.9652696728408964,
+          "rows": 445909,
+          "start": 529918,
+          "stop": 975827
+        },
+        {
+          "attack": 252672,
+          "benign": 440031,
+          "day": "Wednesday",
+          "file_id": 2,
+          "pr_auc": 0.9562795470307709,
+          "prevalence": 0.36476238734349353,
+          "remote": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.9869093837303088,
+          "rows": 692703,
+          "start": 975827,
+          "stop": 1668530
+        },
+        {
+          "attack": 36,
+          "benign": 288566,
+          "day": "Thursday",
+          "file_id": 3,
+          "pr_auc": 0.0001549631955291859,
+          "prevalence": 0.00012473926029618645,
+          "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.5836318400489162,
+          "rows": 288602,
+          "start": 1668530,
+          "stop": 1957132
+        },
+        {
+          "attack": 2180,
+          "benign": 168186,
+          "day": "Thursday",
+          "file_id": 4,
+          "pr_auc": 0.45364438850375044,
+          "prevalence": 0.01279598041862813,
+          "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.9931644404834884,
+          "rows": 170366,
+          "start": 1957132,
+          "stop": 2127498
+        },
+        {
+          "attack": 128027,
+          "benign": 97718,
+          "day": "Friday",
+          "file_id": 5,
+          "pr_auc": 0.9708183054709744,
+          "prevalence": 0.5671310549513832,
+          "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.975730019879891,
+          "rows": 225745,
+          "start": 2127498,
+          "stop": 2353243
+        },
+        {
+          "attack": 158930,
+          "benign": 127537,
+          "day": "Friday",
+          "file_id": 6,
+          "pr_auc": 0.3753222537458012,
+          "prevalence": 0.5547933967961406,
+          "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.11653852337022408,
+          "rows": 286467,
+          "start": 2353243,
+          "stop": 2639710
+        },
+        {
+          "attack": 1966,
+          "benign": 189067,
+          "day": "Friday",
+          "file_id": 7,
+          "pr_auc": 0.005630823206036166,
+          "prevalence": 0.010291415619290908,
+          "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+          "roc_auc": 0.13756391541371,
+          "rows": 191033,
+          "start": 2639710,
+          "stop": 2830743
+        }
+      ],
+      "primary": {
+        "pr_auc": 0.6674827010666808,
+        "pr_excess": 0.4704863647691081,
+        "pr_normalized": 0.5859081172803445,
+        "prevalence_chance_anchor": 0.19699633629757277,
+        "roc_auc": 0.7339464251813748
+      },
+      "thresholded": {
+        "balanced": {
+          "accuracy": 0.8795877972673606,
+          "f1": 0.590861186931795,
+          "f2": 0.4910628065588633,
+          "fn": 311521,
+          "fnr": 0.5586357653421705,
+          "fp": 29335,
+          "fpr": 0.012905300565703971,
+          "precision": 0.8935054091338125,
+          "recall": 0.44136423465782954,
+          "threshold": 0.05000000074505806,
+          "tn": 2243762,
+          "tp": 246125
+        },
+        "security": {
+          "accuracy": 0.8795877972673606,
+          "f1": 0.590861186931795,
+          "f2": 0.4910628065588633,
+          "fn": 311521,
+          "fnr": 0.5586357653421705,
+          "fp": 29335,
+          "fpr": 0.012905300565703971,
+          "precision": 0.8935054091338125,
+          "recall": 0.44136423465782954,
+          "threshold": 0.05000000074505806,
+          "tn": 2243762,
+          "tp": 246125
+        },
+        "standard": {
+          "accuracy": 0.8416514674769133,
+          "f1": 0.34631246755216444,
+          "f2": 0.2517028779973663,
+          "fn": 438910,
+          "fnr": 0.7870763889636078,
+          "fp": 9334,
+          "fpr": 0.004106291988419324,
+          "precision": 0.9271179823534005,
+          "recall": 0.21292361103639226,
+          "threshold": 0.5,
+          "tn": 2263763,
+          "tp": 118736
+        }
+      }
+    }
+  },
+  "models": {
+    "ensemble": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "lightgbm_sha256": "907c9c86755c3c32effb2d0899f92e1a0cce71915f90311c99afd8c73814c4d7",
+    "refit": false,
+    "xgboost_sha256": "b30966f34d6f0799657c528344ec540badef7f3ca3dd207abdaa4b45400e6231"
+  },
+  "parent_commit": "e1d953f12245f46e136a6a4a521ee8b0f4f8dace",
+  "prediction_artifact": {
+    "canonical_shared_artifact": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2a_bridge62_published/bridge62_published_ensemble_predictions.npz",
+    "canonical_shared_artifact_sha256": "c1052fdb3bfb2d1eaa46af700fa81e4a75d9eb96fddd5bcc3e5a66ffe58aeae3",
+    "new_duplicate_prediction_file_written": false,
+    "probability_array_sha256": "e9288ba2590e09ae51da183bff2160fbb501e8633a3af87a22c800f7d3a051d7"
+  },
+  "scientific_fit_accounting": {
+    "budget": 4,
+    "completed_after": 2,
+    "completed_before": 2
+  },
+  "stage": "Stage24-2B",
+  "status": "PRIMARY_BRIDGE62_FLAG_CORRECTED_IDENTITY_COMPLETE",
+  "target_opening": {
+    "administratively_cancelled_grounded_cells": 2,
+    "consumed_after": 2,
+    "consumed_before": 1,
+    "new_scientific_fits": 0,
+    "opening_consumed_at_utc": "2026-08-18T10:08:55.719461+00:00",
+    "opening_number": 2,
+    "original_budget": 8
+  },
+  "target_population": {
+    "attack": 557646,
+    "benign": 2273097,
+    "prevalence": 0.19699633629757277,
+    "rows": 2830743
+  },
+  "target_variant": "FLAG_CORRECTED"
+}

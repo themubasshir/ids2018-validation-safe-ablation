@@ -1,0 +1,127 @@
+{
+  "anti_adaptation": {
+    "amendment_basis": "DURABLE_ARTIFACT_IDENTIFIABILITY_ONLY",
+    "cicids2017_target_rows_supplied_to_model": 0,
+    "target_feature_selection": false,
+    "target_metrics_computed": 0,
+    "target_model_selection": false,
+    "target_predictions_created": 0,
+    "target_result_used_for_amendment": false,
+    "target_threshold_tuning": false
+  },
+  "bridge_semantic_sha256": "b7ff1d8563aafc69145be3acc827fbc59ae75d880b9804bad727f408299fce2f",
+  "budget": {
+    "administratively_cancelled_before_opening": 2,
+    "cancelled_openings_reassignable": false,
+    "fit_budget_changed": false,
+    "original_target_opening_cap": 8,
+    "remaining_evaluable_frozen_cells": 6,
+    "scientific_fit_budget": 4,
+    "scientific_fits_completed": 2,
+    "target_openings_consumed": 0
+  },
+  "cell_disposition": {
+    "administratively_cancelled_before_opening": [
+      {
+        "bridge": "bridge62",
+        "direction": "IDS2018_TO_CICIDS2017",
+        "target_variant": "GROUNDED_S4"
+      },
+      {
+        "bridge": "bridge70",
+        "direction": "IDS2018_TO_CICIDS2017",
+        "target_variant": "GROUNDED_S4"
+      }
+    ],
+    "cancelled_cells_may_be_reallocated": false,
+    "new_target_variants_may_replace_cancelled_cells": false,
+    "still_evaluable": [
+      {
+        "bridge": "bridge62",
+        "direction": "IDS2018_TO_CICIDS2017",
+        "target_variant": "PUBLISHED"
+      },
+      {
+        "bridge": "bridge62",
+        "direction": "IDS2018_TO_CICIDS2017",
+        "target_variant": "FLAG_CORRECTED"
+      },
+      {
+        "bridge": "bridge70",
+        "direction": "IDS2018_TO_CICIDS2017",
+        "target_variant": "PUBLISHED"
+      },
+      {
+        "bridge": "bridge70",
+        "direction": "IDS2018_TO_CICIDS2017",
+        "target_variant": "FLAG_CORRECTED"
+      },
+      {
+        "bridge": "bridge62",
+        "direction": "CICIDS2017_TO_IDS2018",
+        "target_variant": "IDS2018_FEB28"
+      },
+      {
+        "bridge": "bridge70",
+        "direction": "CICIDS2017_TO_IDS2018",
+        "target_variant": "IDS2018_FEB28"
+      }
+    ]
+  },
+  "checkpoint": "Stage24-1C-EX1",
+  "corpus_side_feasibility_audit": {
+    "coarse_stage": {
+      "ambiguous_excluded_rows": 60,
+      "ambiguous_grounded_rows": 428,
+      "ambiguous_keys": 55,
+      "ambiguous_published_rows": 488,
+      "definite_excluded": 1349,
+      "definite_grounded": 528081
+    },
+    "decision": "STOP_WITHOUT_ADOPTING_A_NEW_MEMBERSHIP_RULE",
+    "geometry_refinement": {
+      "diagnostic_npz_sha256": "3fe13ac9438f05a64fe09c91947013b05c1e138ed92317f9a3fc5a39c737a812",
+      "final_definite_excluded": 1384,
+      "final_definite_grounded": 528438,
+      "new_mandatory_grounded": 357,
+      "new_uniquely_excluded": 35,
+      "remaining_ambiguous_published_rows": 96,
+      "remaining_equivalence_classes": 20,
+      "remaining_unresolved_exclusions": 25
+    }
+  },
+  "created_at_utc": "2026-08-18T09:40:03.145961+00:00",
+  "durable_stage20_population": {
+    "compact_corpus_byte_exact": true,
+    "grounded_s4_monday_flows": 528509,
+    "published_monday_rows": 529918,
+    "published_occurrences_not_consumed": 1409,
+    "raw_pcap_replay_performed_after_amendment_decision": false,
+    "raw_pcap_required_for_full_identity_reconstruction": true
+  },
+  "forward_plan": [
+    "Do not acquire or replay CICIDS2017 PCAPs for GROUNDED_S4.",
+    "Do not download additional Stage20 compact corpora for Stage24 grounding.",
+    "Use published CICIDS2017 feature/label parquets for PUBLISHED and FLAG_CORRECTED.",
+    "Continue the frozen primary bridge62 and bridge70 target cells.",
+    "Continue the frozen secondary IDS2018-Feb28 cells.",
+    "Report GROUNDED_S4 as unavailable from durable artifacts, not as a negative result."
+  ],
+  "frozen_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+  "parent_commit": "683fe85839e63dcd5fd8e952fd07931b446652ff",
+  "preopening_attestation_commit": "3a0b4a54477a5159805e69caa1eba749ab614c7b",
+  "scientific_reason": {
+    "definition_changed": false,
+    "frozen_grounding_definition": "FROZEN_DIRECTED_S4_EXACT_21_FIELD_SIGNATURE",
+    "fuzzy_matching_adopted": false,
+    "inferred_membership_adopted": false,
+    "label_guided_repair_adopted": false,
+    "matching_rule_changed": false,
+    "nearest_matching_adopted": false,
+    "reason_not_evaluable": "The durable Stage20 compact corpus preserves the exact accepted flow population and packet-image representation but does not persist all identity dimensions required to recover the exact physical published-row occurrence of the frozen 21-field S4 signature. IPv4 source/destination identity was intentionally masked in the persisted representation and flow-start timestamp was not persisted. Corpus-side deterministic refinement therefore cannot uniquely identify every physical published occurrence.",
+    "replacement_population_created": false,
+    "requested_variant": "GROUNDED_S4",
+    "tolerance_matching_adopted": false
+  },
+  "status": "GROUNDED_S4_DURABLE_ARTIFACT_INFEASIBILITY_FROZEN"
+}

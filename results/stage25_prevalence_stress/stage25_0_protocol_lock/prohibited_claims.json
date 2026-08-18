@@ -1,0 +1,17 @@
+{
+  "claims": [
+    "The model is good for enterprise deployment.",
+    "The model is operationally useless.",
+    "Random splitting succeeds purely because prevalence is higher.",
+    "High F1 means low FPR.",
+    "We proved the IDS field is broken.",
+    "These are real SOC alert counts.",
+    "Relative cost units are dollars.",
+    "Every false negative represents an independent breach.",
+    "One million benign flows/day represents every enterprise.",
+    "Stage25 constitutes empirical production validation.",
+    "Stage24 transfer directions may be averaged."
+  ],
+  "preferred_prefix": "Under the frozen prior-shift, traffic-volume, analyst-service-time, and relative-cost assumptions...",
+  "stage": "Stage25-0"
+}

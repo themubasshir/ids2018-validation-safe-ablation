@@ -1,0 +1,68 @@
+{
+  "absolute_stage25_rules": {
+    "new_model_fits": 0,
+    "new_model_inference": 0,
+    "new_probability_arrays": 0,
+    "target_reopenings": 0
+  },
+  "created_at_utc": "2026-08-18T12:37:39.449558+00:00",
+  "future_analysis_shape": {
+    "ppv_targets": 5,
+    "prevalence_points": 6,
+    "projected_rows": 144
+  },
+  "inheritance": {
+    "operating_points": 24,
+    "stage22_cells": 2,
+    "stage24_cells": 6,
+    "total_cells": 8
+  },
+  "must_not_conflate": true,
+  "next_authorized_after_remote_verification": "STAGE25_1_BAYESIAN_PROJECTION",
+  "objective": "Analytically translate already-frozen operating characteristics under deployment prevalence and SOC-capacity stress.",
+  "operational_collapse_required": false,
+  "protocol_file_hashes": {
+    "analyst_capacity_spec.json": "d468468067a8c8b4f1583c0b34c989d9b3981e04e0565675ac638568b216270c",
+    "anti_adaptation.json": "fd2be78cf40640dba10da01c13b93e01e5b22a0de4c719c25af9f907016b1716",
+    "bayesian_equations.json": "8903da529914e257b4fe33a11128a6474d3403a8e153e620b85169ca08263beb",
+    "cost_model.json": "909793c15b38eebedda4b6c721530fbf7bf3460a944b970c7a221bc7da118805",
+    "figure_plan.json": "7266377a394fe29be9a2bac7bd02e484bed95b467b971fd5784e4049e407dfa5",
+    "handoff_reconciliation.json": "7b146535a617bc3aedcede093a205bdf0ba7867cf6448a417b6804d4d2ae4fea",
+    "inherited_artifact_hashes.json": "9e40a7eba3a35d68c3d7a06ffb94a0c415e92bc99f63b2dd8650b0a35d1c954c",
+    "inherited_operating_points.json": "f01a3cc154944c6d207db781c9815c376d8f09db0cf010761e624bd5706b26a5",
+    "interpretation_matrix.json": "4ace4ce6a58c313ae0d1383df5e805c9737cecb3b24b6c5bf4f8cf31db56461a",
+    "numerical_policy.json": "0271c4f9f8e49e4acd87e865c38f7364653793dd311cca4bb2331c12032998cc",
+    "observed_prevalence_receipts.json": "6142dac223040f28e80a86b062b724337423860c321cb4b8db1bf11103ef4990",
+    "prevalence_grid.json": "858bb1dfc668394c9d15a762ee739e4b5ea31a7277c1027cf884bf9301c4f205",
+    "prior_shift_assumption.json": "0aa8f07832a2938e62f53a124b6a9435449953327626fdb4b6aa08b9c0a707f2",
+    "prohibited_claims.json": "e534bf4eba07778b4aed0323ff4179e994851973dbe2de0553f9e4dfc93b910b",
+    "sanity_test_plan.json": "92fcf222b722cf92d06e70b68edf608c06bd6e7adfc049275d5458fb388b0418",
+    "success_condition.json": "8d3cbe33fd8a6ce01ae06eeffb39eb39c15c7c8d0b82b19bd1af4cf80f2e0666",
+    "threshold_policy.json": "d14ac07056f5d19c59f248229de02219c97b6043b7e52c319ae49aadba2e6cc8",
+    "traffic_volume_spec.json": "64ac86ed09ac014bd11074a0db314246df5fd52f3c63f23d56faf25fef69995b",
+    "uncertainty_policy.json": "9ea14659b4a415dba19d295c34cbb8c0afa218c207bfc95ba312f4436e72988c"
+  },
+  "recovery_note": {
+    "previous_failure": "Stage24-2D bridge70 model receipt omitted model_file because model was inherited from Stage22R.",
+    "projection_performed_before_fix": false,
+    "resolution": "Canonical Stage22R chronological model paths were used and verified against Stage24 model SHA256 receipts.",
+    "scientific_change": false
+  },
+  "repository_parent": "ad5a01ae9021183f6c5b8046c2647fd5dad7cb6d",
+  "stage": "Stage25-0",
+  "stage22_stage24_show": "TPR_FPR_CAN_CHANGE_UNDER_TEMPORAL_AND_DOMAIN_SHIFT",
+  "stage25_0_scientific_access": {
+    "cost_projections_calculated": 0,
+    "model_fit_calls": 0,
+    "model_inference_calls": 0,
+    "ppv_projections_calculated": 0,
+    "prevalence_projections_calculated": 0,
+    "probability_arrays_created": 0,
+    "probability_arrays_opened": 0,
+    "soc_projections_calculated": 0,
+    "target_features_read": 0,
+    "target_reopenings": 0
+  },
+  "stage25_isolates": "BASE_RATE_PRIOR_SHIFT_WITH_FIXED_TPR_FPR",
+  "status": "COMPLETE_PROTOCOL_LOCK_READY_FOR_REMOTE_FREEZE"
+}

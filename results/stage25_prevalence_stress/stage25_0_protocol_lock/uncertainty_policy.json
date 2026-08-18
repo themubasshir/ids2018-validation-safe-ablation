@@ -1,0 +1,10 @@
+{
+  "conditional_projection_uncertainty": "NONE",
+  "empirical_estimation_uncertainty_exists": true,
+  "inherited_TPR_FPR_uncertainty_propagated": false,
+  "new_bootstrap": "FORBIDDEN",
+  "reason": "Stage25 projections are deterministic conditional on inherited TPR/FPR and frozen assumptions.",
+  "reason_not_propagated": "A complete joint TPR/FPR sampling distribution is not durably available for every inherited operating point. Stage24 paired bootstrap artifacts concern PR-AUC/ROC-AUC/Brier comparisons and do not substitute for this.",
+  "required_language": "Values are exact conditional transformations of frozen empirical estimates and assumptions, not exact production-population truths.",
+  "stage": "Stage25-0"
+}

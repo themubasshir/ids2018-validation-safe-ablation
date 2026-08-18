@@ -1,0 +1,37 @@
+{
+  "alerts_per_analyst_day": 240,
+  "analyst_shift_minutes": 480,
+  "capacity_fit_does_not_imply_operational_usefulness": true,
+  "equations": {
+    "ACI_k": "(TP + FP) / (240*k)",
+    "FP_only_FPR_capacity": "(480*k/s) / B",
+    "alert_hours": "(TP + FP) * 2 / 60",
+    "false_alert_hours": "FP * 2 / 60",
+    "total_alert_FPR_ceiling": "240*k/B - TPR*pi/(1-pi)",
+    "total_alert_condition": "TPR*pi*B/(1-pi) + FPR*B <= 240*k"
+  },
+  "formal_term": "SOC Capacity Exceedance",
+  "minutes_per_alert": 2,
+  "service_time_semantics": "ASSUMED_REFERENCE_SCENARIO_NOT_UNIVERSAL_SOC_CONSTANT",
+  "stage": "Stage25-0",
+  "tiers": {
+    "1": {
+      "alert_capacity_per_day": 240,
+      "analyst_days": 1,
+      "analyst_hours": 8,
+      "false_positive_only_fpr_capacity": 0.00024
+    },
+    "10": {
+      "alert_capacity_per_day": 2400,
+      "analyst_days": 10,
+      "analyst_hours": 80,
+      "false_positive_only_fpr_capacity": 0.0024
+    },
+    "3": {
+      "alert_capacity_per_day": 720,
+      "analyst_days": 3,
+      "analyst_hours": 24,
+      "false_positive_only_fpr_capacity": 0.00072
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "after_remote_freeze": {
+    "add_favorable_cost_ratio": "FORBIDDEN",
+    "average_transfer_directions": "FORBIDDEN",
+    "change_capacity_tiers": "FORBIDDEN",
+    "change_cost_ratio": "FORBIDDEN",
+    "change_ppv_targets": "FORBIDDEN",
+    "change_prevalence_grid": "FORBIDDEN",
+    "change_service_time": "FORBIDDEN",
+    "change_traffic_volume": "FORBIDDEN",
+    "drop_0.01_percent": "FORBIDDEN",
+    "drop_poor_result": "FORBIDDEN",
+    "model_refit": "FORBIDDEN",
+    "new_inference": "FORBIDDEN",
+    "new_probability_array": "FORBIDDEN",
+    "new_threshold": "FORBIDDEN",
+    "ppv_specific_threshold": "FORBIDDEN",
+    "prevalence_specific_threshold": "FORBIDDEN",
+    "redefine_capacity": "FORBIDDEN",
+    "target_reopening": "FORBIDDEN"
+  },
+  "stage": "Stage25-0",
+  "unexpected_results": "REPORT_AS_RESULTS"
+}

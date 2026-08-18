@@ -1,0 +1,34 @@
+{
+  "recoveries": [
+    {
+      "handoff": "approximately 13.68%",
+      "repository_exact": 0.13684738945373795,
+      "resolution": "ROUNDED_HANDOFF_REPLACED_BY_EXACT_REPOSITORY_VALUE",
+      "topic": "Stage22 random observed prevalence"
+    },
+    {
+      "handoff": "approximately 10.48%",
+      "repository_exact": 0.10484691299808009,
+      "resolution": "ROUNDED_HANDOFF_REPLACED_BY_EXACT_REPOSITORY_VALUE",
+      "topic": "Stage22 chronological observed prevalence"
+    },
+    {
+      "repository_exact": 0.19699633629757277,
+      "resolution": "RECOVERED_FROM_FROZEN_TARGET_COUNTS",
+      "topic": "Stage24 primary target prevalence"
+    },
+    {
+      "repository_observation": "Stage24-2D records inherited bridge70 model SHA256 values without repeating model_file.",
+      "resolution": "Canonical Stage22R CHRONOLOGICAL_NATURAL model paths are frozen in Stage25 and verified byte-for-byte against the Stage24-declared SHA256 values.",
+      "scientific_change": false,
+      "topic": "Stage24 bridge70 model-file provenance"
+    },
+    {
+      "repository": "2 cells administratively cancelled before target opening",
+      "resolution": "EXCLUDED; NO SUBSTITUTE AND NO REALLOCATION",
+      "topic": "Stage24 GROUNDED_S4"
+    }
+  ],
+  "rule": "DURABLE_REPOSITORY_EVIDENCE_OVERRIDES_ROUNDED_HANDOFF_TEXT",
+  "substantive_discrepancies_found": 0
+}

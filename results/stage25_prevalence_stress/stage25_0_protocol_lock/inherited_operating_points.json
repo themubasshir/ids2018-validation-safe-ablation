@@ -1,0 +1,892 @@
+{
+  "cell_count": 8,
+  "cells": [
+    {
+      "bridge": "FULL_70_FEATURE",
+      "cell_id": "STAGE22_RANDOM",
+      "direction": "IDS2018_RANDOM_VALIDATION",
+      "evaluation_population": {
+        "attack": 394460,
+        "benign": 2488021,
+        "observed_prevalence": 0.13684738945373795,
+        "rows": 2882481
+      },
+      "family": "STAGE22_RANDOM",
+      "identity_duplicate_of": null,
+      "models": {
+        "lightgbm": {
+          "path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_lightgbm_model.txt",
+          "sha256": "9a92f4b8cd26738a470a7ff6fb72f51422a803e10b36bb32ac4bfc91373e6e50"
+        },
+        "xgboost": {
+          "path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_xgboost_model.json",
+          "sha256": "ac9e630c8a479f073953b7f05eccf8bc94d24eaf0d8bc6bf77f5954979235b4e"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 394460,
+          "benign": 2488021,
+          "f1": 0.983881786895567,
+          "f2": 0.974680102179555,
+          "fn": 12370,
+          "fnr": 0.03135932667444097,
+          "fp": 149,
+          "fpr": 5.98869543303694e-05,
+          "observed_prevalence": 0.13684738945373795,
+          "precision": 0.9996101915293835,
+          "recall": 0.968640673325559,
+          "rows": 2882481,
+          "threshold": 0.46,
+          "tn": 2487872,
+          "tp": 382090,
+          "tpr": 0.968640673325559
+        },
+        "SECURITY": {
+          "attack": 394460,
+          "benign": 2488021,
+          "f1": 0.971249465522113,
+          "f2": 0.9792756851715336,
+          "fn": 6035,
+          "fnr": 0.015299396643512653,
+          "fp": 16961,
+          "fpr": 0.006817064646962385,
+          "observed_prevalence": 0.13684738945373795,
+          "precision": 0.9581608639666885,
+          "recall": 0.9847006033564873,
+          "rows": 2882481,
+          "threshold": 0.1,
+          "tn": 2471060,
+          "tp": 388425,
+          "tpr": 0.9847006033564873
+        },
+        "STANDARD": {
+          "attack": 394460,
+          "benign": 2488021,
+          "f1": 0.983867395346681,
+          "f2": 0.9745635589588274,
+          "fn": 12442,
+          "fnr": 0.03154185468742077,
+          "fp": 86,
+          "fpr": 3.456562464705885e-05,
+          "observed_prevalence": 0.13684738945373795,
+          "precision": 0.9997749303854448,
+          "recall": 0.9684581453125792,
+          "rows": 2882481,
+          "threshold": 0.5,
+          "tn": 2487935,
+          "tp": 382018,
+          "tpr": 0.9684581453125792
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage22r_training/stage22r_2a_random_natural/stage22r_2a_random_natural_result.json",
+        "sha256": "dd7951f6d9c92538944a04357bab14fcc28f82ade748d37ad710fff2051abf73"
+      },
+      "source_stage": "Stage22R-2A",
+      "split_identity": {
+        "derivation": "random_validation bitset",
+        "membership_path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/random_validation.packbits",
+        "membership_sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad",
+        "membership_summary_sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d",
+        "type": "FROZEN_RANDOM_VALIDATION_MEMBERSHIP_BITSET"
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "STAGE22_RANDOM_VALIDATION",
+        "threshold_grid_path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "4ad606b9edcb5a04c373bc4389632640d8d2aa8997a3a0028a2c8e6cec161ead"
+      },
+      "variant": "RANDOM_NATURAL"
+    },
+    {
+      "bridge": "FULL_70_FEATURE",
+      "cell_id": "STAGE22_CHRONOLOGICAL",
+      "direction": "IDS2018_FORWARD_TEMPORAL_VALIDATION",
+      "evaluation_population": {
+        "attack": 62256,
+        "benign": 531524,
+        "observed_prevalence": 0.10484691299808009,
+        "rows": 593780
+      },
+      "family": "STAGE22_CHRONOLOGICAL",
+      "identity_duplicate_of": null,
+      "models": {
+        "lightgbm": {
+          "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_lightgbm_model.txt",
+          "sha256": "7be4c610814e45be2e315996969d2e2f404a3ada14866b21a731e4382fdc18b8"
+        },
+        "xgboost": {
+          "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_xgboost_model.json",
+          "sha256": "38499d0edcdc5c6d0b2c3afee913558973d35d5ebf1cb2ae888a16b8da98756c"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.00015969338869370808,
+          "f2": 0.00010024540074101401,
+          "fn": 62251,
+          "fnr": 0.9999196864559239,
+          "fp": 359,
+          "fpr": 0.0006754163499672639,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.013736263736263736,
+          "recall": 8.031354407607299e-05,
+          "rows": 593780,
+          "threshold": 0.07,
+          "tn": 531165,
+          "tp": 5,
+          "tpr": 8.031354407607299e-05
+        },
+        "SECURITY": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.00015969338869370808,
+          "f2": 0.00010024540074101401,
+          "fn": 62251,
+          "fnr": 0.9999196864559239,
+          "fp": 359,
+          "fpr": 0.0006754163499672639,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.013736263736263736,
+          "recall": 8.031354407607299e-05,
+          "rows": 593780,
+          "threshold": 0.07,
+          "tn": 531165,
+          "tp": 5,
+          "tpr": 8.031354407607299e-05
+        },
+        "STANDARD": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 6.421679590296842e-05,
+          "f2": 4.0151451274206306e-05,
+          "fn": 62254,
+          "fnr": 0.9999678745823696,
+          "fp": 31,
+          "fpr": 5.8322860303579896e-05,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.06060606060606061,
+          "recall": 3.2125417630429196e-05,
+          "rows": 593780,
+          "threshold": 0.5,
+          "tn": 531493,
+          "tp": 2,
+          "tpr": 3.2125417630429196e-05
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage22r_training/stage22r_2c_chronological_natural/stage22r_2c_chronological_natural_result.json",
+        "sha256": "f43b5fa5031946029d8bf58ad153a838efaa2dcffcccd98111f694984a8c2d51"
+      },
+      "source_stage": "Stage22R-2C",
+      "split_identity": {
+        "day_offsets_sha256": "22a1c2b9b208596d53d1e860a2ec426542a22f23de2a8236baa4dae2583e0d5a",
+        "membership_summary_sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d",
+        "note": "Chronological validation is frozen as day_id=7; no separate bitset is required.",
+        "type": "DETERMINISTIC_DAY_BASED_MEMBERSHIP",
+        "validation_rule": "day_id 7"
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "STAGE22_CHRONOLOGICAL_VALIDATION_02_28_2018",
+        "threshold_grid_path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "eb160ee4cc55307da496226780f96c67db3d8c5de0fd81e90a19d3904426f9b4"
+      },
+      "variant": "CHRONOLOGICAL_NATURAL"
+    },
+    {
+      "bridge": "bridge62",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE62_PUBLISHED",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "evaluation_population": {
+        "attack": 557646,
+        "benign": 2273097,
+        "observed_prevalence": 0.19699633629757277,
+        "rows": 2830743
+      },
+      "family": "STAGE24_2018_TO_2017",
+      "identity_duplicate_of": null,
+      "models": {
+        "lightgbm": {
+          "path": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/bridge62_lightgbm_model.txt",
+          "sha256": "907c9c86755c3c32effb2d0899f92e1a0cce71915f90311c99afd8c73814c4d7"
+        },
+        "xgboost": {
+          "path": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/bridge62_xgboost_model.json",
+          "sha256": "b30966f34d6f0799657c528344ec540badef7f3ca3dd207abdaa4b45400e6231"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.590861186931795,
+          "f2": 0.4910628065588633,
+          "fn": 311521,
+          "fnr": 0.5586357653421705,
+          "fp": 29335,
+          "fpr": 0.012905300565703971,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8935054091338125,
+          "recall": 0.44136423465782954,
+          "rows": 2830743,
+          "threshold": 0.05000000074505806,
+          "tn": 2243762,
+          "tp": 246125,
+          "tpr": 0.44136423465782954
+        },
+        "SECURITY": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.590861186931795,
+          "f2": 0.4910628065588633,
+          "fn": 311521,
+          "fnr": 0.5586357653421705,
+          "fp": 29335,
+          "fpr": 0.012905300565703971,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8935054091338125,
+          "recall": 0.44136423465782954,
+          "rows": 2830743,
+          "threshold": 0.05000000074505806,
+          "tn": 2243762,
+          "tp": 246125,
+          "tpr": 0.44136423465782954
+        },
+        "STANDARD": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.34631246755216444,
+          "f2": 0.2517028779973663,
+          "fn": 438910,
+          "fnr": 0.7870763889636078,
+          "fp": 9334,
+          "fpr": 0.004106291988419324,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.9271179823534005,
+          "recall": 0.21292361103639226,
+          "rows": 2830743,
+          "threshold": 0.5,
+          "tn": 2263763,
+          "tp": 118736,
+          "tpr": 0.21292361103639226
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2a_bridge62_published/stage24_2a_bridge62_published_result.json",
+        "sha256": "1d4b3010fdc8b0f7f62a0fed2c373824ce99cb2f16936c021756749a9ca54749"
+      },
+      "source_stage": "Stage24-2A",
+      "split_identity": {
+        "cicids2017_contract_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "source_day_offsets_sha256": "22a1c2b9b208596d53d1e860a2ec426542a22f23de2a8236baa4dae2583e0d5a",
+        "source_membership_summary_sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d",
+        "source_split": "STAGE22R_CHRONOLOGICAL_NATURAL",
+        "source_train": "day_id 0..6",
+        "source_validation": "day_id 7 = 02-28-2018",
+        "stage24_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "target_attack": 557646,
+        "target_benign": 2273097,
+        "target_identity": {
+          "attack": 557646,
+          "benign": 2273097,
+          "binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+          "prevalence": 0.19699633629757277,
+          "rows": 2830743
+        },
+        "target_population": "FULL_EFFECTIVE_CICIDS2017",
+        "target_rows": 2830743
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "IDS2018_02-28-2018_SOURCE_VALIDATION",
+        "threshold_grid_path": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/bridge62_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "94a37088f422e481e271715d9de64041db6c2cb267ff7f76ffc93b92aaa8e41b"
+      },
+      "variant": "PUBLISHED"
+    },
+    {
+      "bridge": "bridge62",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE62_FLAG_CORRECTED",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "evaluation_population": {
+        "attack": 557646,
+        "benign": 2273097,
+        "observed_prevalence": 0.19699633629757277,
+        "rows": 2830743
+      },
+      "family": "STAGE24_2018_TO_2017",
+      "identity_duplicate_of": "STAGE24_2018_TO_2017_BRIDGE62_PUBLISHED",
+      "models": {
+        "lightgbm": {
+          "path": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/bridge62_lightgbm_model.txt",
+          "sha256": "907c9c86755c3c32effb2d0899f92e1a0cce71915f90311c99afd8c73814c4d7"
+        },
+        "xgboost": {
+          "path": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/bridge62_xgboost_model.json",
+          "sha256": "b30966f34d6f0799657c528344ec540badef7f3ca3dd207abdaa4b45400e6231"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.590861186931795,
+          "f2": 0.4910628065588633,
+          "fn": 311521,
+          "fnr": 0.5586357653421705,
+          "fp": 29335,
+          "fpr": 0.012905300565703971,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8935054091338125,
+          "recall": 0.44136423465782954,
+          "rows": 2830743,
+          "threshold": 0.05000000074505806,
+          "tn": 2243762,
+          "tp": 246125,
+          "tpr": 0.44136423465782954
+        },
+        "SECURITY": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.590861186931795,
+          "f2": 0.4910628065588633,
+          "fn": 311521,
+          "fnr": 0.5586357653421705,
+          "fp": 29335,
+          "fpr": 0.012905300565703971,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8935054091338125,
+          "recall": 0.44136423465782954,
+          "rows": 2830743,
+          "threshold": 0.05000000074505806,
+          "tn": 2243762,
+          "tp": 246125,
+          "tpr": 0.44136423465782954
+        },
+        "STANDARD": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.34631246755216444,
+          "f2": 0.2517028779973663,
+          "fn": 438910,
+          "fnr": 0.7870763889636078,
+          "fp": 9334,
+          "fpr": 0.004106291988419324,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.9271179823534005,
+          "recall": 0.21292361103639226,
+          "rows": 2830743,
+          "threshold": 0.5,
+          "tn": 2263763,
+          "tp": 118736,
+          "tpr": 0.21292361103639226
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2b_bridge62_flag_corrected/stage24_2b_bridge62_flag_corrected_identity_result.json",
+        "sha256": "f894c63a0b6aa3ac0a616fe07aafa7e94f963fbcfd83408df43e37f52fdefde1"
+      },
+      "source_stage": "Stage24-2B",
+      "split_identity": {
+        "cicids2017_contract_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "source_day_offsets_sha256": "22a1c2b9b208596d53d1e860a2ec426542a22f23de2a8236baa4dae2583e0d5a",
+        "source_membership_summary_sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d",
+        "source_split": "STAGE22R_CHRONOLOGICAL_NATURAL",
+        "source_train": "day_id 0..6",
+        "source_validation": "day_id 7 = 02-28-2018",
+        "stage24_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "target_attack": 557646,
+        "target_benign": 2273097,
+        "target_identity": {
+          "attack": 557646,
+          "benign": 2273097,
+          "binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+          "prevalence": 0.19699633629757277,
+          "rows": 2830743
+        },
+        "target_population": "FULL_EFFECTIVE_CICIDS2017",
+        "target_rows": 2830743
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "IDS2018_02-28-2018_SOURCE_VALIDATION",
+        "threshold_grid_path": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/bridge62_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "94a37088f422e481e271715d9de64041db6c2cb267ff7f76ffc93b92aaa8e41b"
+      },
+      "variant": "FLAG_CORRECTED"
+    },
+    {
+      "bridge": "bridge70",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE70_PUBLISHED",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "evaluation_population": {
+        "attack": 557646,
+        "benign": 2273097,
+        "observed_prevalence": 0.19699633629757277,
+        "rows": 2830743
+      },
+      "family": "STAGE24_2018_TO_2017",
+      "identity_duplicate_of": null,
+      "models": {
+        "lightgbm": {
+          "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_lightgbm_model.txt",
+          "path_provenance": "CANONICAL_STAGE22R_CHRONOLOGICAL_NATURAL_MODEL",
+          "sha256": "7be4c610814e45be2e315996969d2e2f404a3ada14866b21a731e4382fdc18b8"
+        },
+        "xgboost": {
+          "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_xgboost_model.json",
+          "path_provenance": "CANONICAL_STAGE22R_CHRONOLOGICAL_NATURAL_MODEL",
+          "sha256": "38499d0edcdc5c6d0b2c3afee913558973d35d5ebf1cb2ae888a16b8da98756c"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.5907322019952195,
+          "f2": 0.4902394952530224,
+          "fn": 312112,
+          "fnr": 0.5596955774810544,
+          "fp": 28107,
+          "fpr": 0.012365068450664447,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8972851290559529,
+          "recall": 0.4403044225189457,
+          "rows": 2830743,
+          "threshold": 0.07000000029802322,
+          "tn": 2244990,
+          "tp": 245534,
+          "tpr": 0.4403044225189457
+        },
+        "SECURITY": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.5907322019952195,
+          "f2": 0.4902394952530224,
+          "fn": 312112,
+          "fnr": 0.5596955774810544,
+          "fp": 28107,
+          "fpr": 0.012365068450664447,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8972851290559529,
+          "recall": 0.4403044225189457,
+          "rows": 2830743,
+          "threshold": 0.07000000029802322,
+          "tn": 2244990,
+          "tp": 245534,
+          "tpr": 0.4403044225189457
+        },
+        "STANDARD": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.3667938843146991,
+          "f2": 0.26852992373549806,
+          "fn": 430593,
+          "fnr": 0.772161909168182,
+          "fp": 8077,
+          "fpr": 0.0035533019488389627,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.9402279286612891,
+          "recall": 0.22783809083181802,
+          "rows": 2830743,
+          "threshold": 0.5,
+          "tn": 2265020,
+          "tp": 127053,
+          "tpr": 0.22783809083181802
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2c_bridge70_published/stage24_2c_bridge70_published_result.json",
+        "sha256": "c06823a29303b5c4e5934fc585993af3e2c4b477d079934c8e48afd9cacb257b"
+      },
+      "source_stage": "Stage24-2C",
+      "split_identity": {
+        "cicids2017_contract_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "source_day_offsets_sha256": "22a1c2b9b208596d53d1e860a2ec426542a22f23de2a8236baa4dae2583e0d5a",
+        "source_membership_summary_sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d",
+        "source_split": "STAGE22R_CHRONOLOGICAL_NATURAL",
+        "source_train": "day_id 0..6",
+        "source_validation": "day_id 7 = 02-28-2018",
+        "stage24_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "target_attack": 557646,
+        "target_benign": 2273097,
+        "target_identity": {
+          "attack": 557646,
+          "benign": 2273097,
+          "binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+          "prevalence": 0.19699633629757277,
+          "rows": 2830743
+        },
+        "target_population": "FULL_EFFECTIVE_CICIDS2017",
+        "target_rows": 2830743
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "IDS2018_02-28-2018_SOURCE_VALIDATION",
+        "threshold_grid_path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "eb160ee4cc55307da496226780f96c67db3d8c5de0fd81e90a19d3904426f9b4"
+      },
+      "variant": "PUBLISHED"
+    },
+    {
+      "bridge": "bridge70",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE70_FLAG_CORRECTED",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "evaluation_population": {
+        "attack": 557646,
+        "benign": 2273097,
+        "observed_prevalence": 0.19699633629757277,
+        "rows": 2830743
+      },
+      "family": "STAGE24_2018_TO_2017",
+      "identity_duplicate_of": null,
+      "models": {
+        "lightgbm": {
+          "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_lightgbm_model.txt",
+          "path_provenance": "CANONICAL_STAGE22R_CHRONOLOGICAL_NATURAL_MODEL",
+          "sha256": "7be4c610814e45be2e315996969d2e2f404a3ada14866b21a731e4382fdc18b8"
+        },
+        "xgboost": {
+          "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_xgboost_model.json",
+          "path_provenance": "CANONICAL_STAGE22R_CHRONOLOGICAL_NATURAL_MODEL",
+          "sha256": "38499d0edcdc5c6d0b2c3afee913558973d35d5ebf1cb2ae888a16b8da98756c"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.5915919871920399,
+          "f2": 0.49539681157795606,
+          "fn": 308408,
+          "fnr": 0.5530533707764425,
+          "fp": 35717,
+          "fpr": 0.01571292382155271,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8746574020459371,
+          "recall": 0.4469466292235576,
+          "rows": 2830743,
+          "threshold": 0.07000000029802322,
+          "tn": 2237380,
+          "tp": 249238,
+          "tpr": 0.4469466292235576
+        },
+        "SECURITY": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.5915919871920399,
+          "f2": 0.49539681157795606,
+          "fn": 308408,
+          "fnr": 0.5530533707764425,
+          "fp": 35717,
+          "fpr": 0.01571292382155271,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.8746574020459371,
+          "recall": 0.4469466292235576,
+          "rows": 2830743,
+          "threshold": 0.07000000029802322,
+          "tn": 2237380,
+          "tp": 249238,
+          "tpr": 0.4469466292235576
+        },
+        "STANDARD": {
+          "attack": 557646,
+          "benign": 2273097,
+          "f1": 0.2501751439428033,
+          "f2": 0.17435070352038262,
+          "fn": 476763,
+          "fnr": 0.8549563701703231,
+          "fp": 8082,
+          "fpr": 0.003555501591001176,
+          "observed_prevalence": 0.19699633629757277,
+          "precision": 0.9091552857865453,
+          "recall": 0.1450436298296769,
+          "rows": 2830743,
+          "threshold": 0.5,
+          "tn": 2265015,
+          "tp": 80883,
+          "tpr": 0.1450436298296769
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2d_bridge70_flag_corrected/stage24_2d_bridge70_flag_corrected_result.json",
+        "sha256": "5b819f03d2f336dde1415cf08f48f1963fba15d725661dcebe3c37f5f5aaf53c"
+      },
+      "source_stage": "Stage24-2D",
+      "split_identity": {
+        "cicids2017_contract_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "source_day_offsets_sha256": "22a1c2b9b208596d53d1e860a2ec426542a22f23de2a8236baa4dae2583e0d5a",
+        "source_membership_summary_sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d",
+        "source_split": "STAGE22R_CHRONOLOGICAL_NATURAL",
+        "source_train": "day_id 0..6",
+        "source_validation": "day_id 7 = 02-28-2018",
+        "stage24_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "target_attack": 557646,
+        "target_benign": 2273097,
+        "target_identity": {
+          "attack": 557646,
+          "benign": 2273097,
+          "binary_label_sha256": "0e4edd0670c9cedde571e08ab92fedbe6acd6e2aa605d7fc62d286791c00740a",
+          "prevalence": 0.19699633629757277,
+          "rows": 2830743
+        },
+        "target_population": "FULL_EFFECTIVE_CICIDS2017",
+        "target_rows": 2830743
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "IDS2018_02-28-2018_SOURCE_VALIDATION",
+        "threshold_grid_path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "eb160ee4cc55307da496226780f96c67db3d8c5de0fd81e90a19d3904426f9b4"
+      },
+      "variant": "FLAG_CORRECTED"
+    },
+    {
+      "bridge": "bridge62",
+      "cell_id": "STAGE24_2017_TO_2018_BRIDGE62",
+      "direction": "CICIDS2017_TO_IDS2018",
+      "evaluation_population": {
+        "attack": 62256,
+        "benign": 531524,
+        "observed_prevalence": 0.10484691299808009,
+        "rows": 593780
+      },
+      "family": "STAGE24_2017_TO_2018",
+      "identity_duplicate_of": null,
+      "models": {
+        "xgboost": {
+          "path": "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4a_bridge62_xgboost/secondary_bridge62_xgboost_model.json",
+          "sha256": "8040bc7909429736c95ca396ebebf18636ce5d1f5c2232d12042c6ffadd47c5d"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.0011994949494949494,
+          "f2": 0.0007596110791274868,
+          "fn": 62218,
+          "fnr": 0.9993896170650218,
+          "fp": 1066,
+          "fpr": 0.0020055538414069734,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.034420289855072464,
+          "recall": 0.0006103829349781547,
+          "rows": 593780,
+          "threshold": 0.17000000178813934,
+          "tn": 530458,
+          "tp": 38,
+          "tpr": 0.0006103829349781547
+        },
+        "SECURITY": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.002627052384675528,
+          "f2": 0.00167518885760097,
+          "fn": 62172,
+          "fnr": 0.998650732459522,
+          "fp": 1610,
+          "fpr": 0.0030290259706052783,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.049586776859504134,
+          "recall": 0.0013492675404780262,
+          "rows": 593780,
+          "threshold": 0.05000000074505806,
+          "tn": 529914,
+          "tp": 84,
+          "tpr": 0.0013492675404780262
+        },
+        "STANDARD": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.0007609867461475046,
+          "f2": 0.0004802997070171787,
+          "fn": 62232,
+          "fnr": 0.9996144949884348,
+          "fp": 796,
+          "fpr": 0.0014975805419886966,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.02926829268292683,
+          "recall": 0.00038550501156515033,
+          "rows": 593780,
+          "threshold": 0.5,
+          "tn": 530728,
+          "tp": 24,
+          "tpr": 0.00038550501156515033
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5a_bridge62_ids2018_feb28/stage24_5a_secondary_bridge62_ids2018_feb28_result.json",
+        "sha256": "54ea37bd6cc5ea82b77762ee672afcecf9584d6fb115187df9040cebac715515"
+      },
+      "source_stage": "Stage24-5A",
+      "split_identity": {
+        "cicids2017_contract_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "source_split": "CICIDS2017_MON_WED_TRAIN_THURSDAY_VALIDATE",
+        "stage24_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "target_identity": {
+          "attack": 62256,
+          "benign": 531524,
+          "binary_label_sha256": "17369d505c1ce11f425a7c14c7552c95b39aad3492ae643c31f43a8a66a35177",
+          "canonical_row_order": "clean_position ASC; day_id=7; original_zero_based_row_index ASC after frozen K79 exclusions",
+          "clean_position_sha256": "d8a090f4c1667d62dd81de1ce8be9b0d68062adc2799c67fb7b55ad74a1f8b9b",
+          "dataset": "CSE-CIC-IDS2018",
+          "file": "02-28-2018.csv",
+          "materialization_mode": "RECONSTRUCTED_FROM_BYTE_EXACT_RAW_PLUS_FROZEN_K79",
+          "original_row_index_sha256": "374de0e9d74040581ddc5977fd4c78f8f8959df610d20d1775415f10f3e92dfc",
+          "prevalence": 0.10484691299808009,
+          "raw_source_expected_sha256": "f15e2a12304446058a0186c8ad67de2bd15735a9ba5c70c9a1f4c4242ab06771",
+          "rows": 593780,
+          "stage22r_day07_cache_expected_sha256": "3ab933a7988af562f49f63b8975882b7c66e843e9c4b967a38d5d875d062f62b"
+        },
+        "target_population": "IDS2018_FEB28_FROZEN_K79"
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "CICIDS2017_THURSDAY_SOURCE_VALIDATION",
+        "threshold_grid_path": "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4a_bridge62_xgboost/secondary_bridge62_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "026b382785785c49d36443cff9dac3204d78d540feeee65852949b9edf338485"
+      },
+      "variant": "FLAG_CORRECTED_SOURCE_SEMANTICS"
+    },
+    {
+      "bridge": "bridge70",
+      "cell_id": "STAGE24_2017_TO_2018_BRIDGE70",
+      "direction": "CICIDS2017_TO_IDS2018",
+      "evaluation_population": {
+        "attack": 62256,
+        "benign": 531524,
+        "observed_prevalence": 0.10484691299808009,
+        "rows": 593780
+      },
+      "family": "STAGE24_2017_TO_2018",
+      "identity_duplicate_of": null,
+      "models": {
+        "xgboost": {
+          "path": "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4b_bridge70_xgboost/secondary_bridge70_xgboost_model.json",
+          "sha256": "c8e658832e1f4a389bccbf32a00f1677463b0c9b4a8070965cc7d3a98c409621"
+        }
+      },
+      "operating_points": {
+        "BALANCED": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.0011999305303377172,
+          "f2": 0.0007596809340077168,
+          "fn": 62218,
+          "fnr": 0.9993896170650218,
+          "fp": 1043,
+          "fpr": 0.001962282041826898,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.03515263644773358,
+          "recall": 0.0006103829349781547,
+          "rows": 593780,
+          "threshold": 0.18000000715255737,
+          "tn": 530481,
+          "tp": 38,
+          "tpr": 0.0006103829349781547
+        },
+        "SECURITY": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.0016028411144459985,
+          "f2": 0.0010183502725584553,
+          "fn": 62205,
+          "fnr": 0.999180801850424,
+          "fp": 1330,
+          "fpr": 0.002502238845282621,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.036929761042722664,
+          "recall": 0.0008191981495759444,
+          "rows": 593780,
+          "threshold": 0.05000000074505806,
+          "tn": 530194,
+          "tp": 51,
+          "tpr": 0.0008191981495759444
+        },
+        "STANDARD": {
+          "attack": 62256,
+          "benign": 531524,
+          "f1": 0.000762001524003048,
+          "f2": 0.0004804612427930814,
+          "fn": 62232,
+          "fnr": 0.9996144949884348,
+          "fp": 712,
+          "fpr": 0.0013395444043918995,
+          "observed_prevalence": 0.10484691299808009,
+          "precision": 0.03260869565217391,
+          "recall": 0.00038550501156515033,
+          "rows": 593780,
+          "threshold": 0.5,
+          "tn": 530812,
+          "tp": 24,
+          "tpr": 0.00038550501156515033
+        }
+      },
+      "result_artifact": {
+        "path": "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5b_bridge70_ids2018_feb28/stage24_5b_secondary_bridge70_ids2018_feb28_result.json",
+        "sha256": "86d5ff8d15f2f55543738c6a8697937643c50d48c3b5d894c2032e3981de5afa"
+      },
+      "source_stage": "Stage24-5B",
+      "split_identity": {
+        "cicids2017_contract_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "source_split": "CICIDS2017_MON_WED_TRAIN_THURSDAY_VALIDATE",
+        "stage24_protocol_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "target_identity": {
+          "attack": 62256,
+          "benign": 531524,
+          "binary_label_sha256": "17369d505c1ce11f425a7c14c7552c95b39aad3492ae643c31f43a8a66a35177",
+          "canonical_row_order": "clean_position ASC; day_id=7; original_zero_based_row_index ASC after frozen K79 exclusions",
+          "clean_position_sha256": "d8a090f4c1667d62dd81de1ce8be9b0d68062adc2799c67fb7b55ad74a1f8b9b",
+          "dataset": "CSE-CIC-IDS2018",
+          "file": "02-28-2018.csv",
+          "membership_source": "STAGE24_5A_PERSISTED_CANONICAL_ROW_LOCATORS",
+          "original_row_index_sha256": "374de0e9d74040581ddc5977fd4c78f8f8959df610d20d1775415f10f3e92dfc",
+          "prevalence": 0.10484691299808009,
+          "raw_source_sha256": "f15e2a12304446058a0186c8ad67de2bd15735a9ba5c70c9a1f4c4242ab06771",
+          "rows": 593780
+        },
+        "target_population": "IDS2018_FEB28_FROZEN_K79"
+      },
+      "threshold_source": {
+        "deployment_retuning": false,
+        "selection_population": "CICIDS2017_THURSDAY_SOURCE_VALIDATION",
+        "threshold_grid_path": "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4b_bridge70_xgboost/secondary_bridge70_validation_threshold_grid.csv",
+        "threshold_grid_sha256": "9836a6e88f69630b7771dc51ef905e7f5705cd79b573f10e05e7d5bec81ac97c"
+      },
+      "variant": "FLAG_CORRECTED_SOURCE_SEMANTICS"
+    }
+  ],
+  "excluded": [
+    {
+      "cell": "STAGE22_RANDOM_REBALANCED",
+      "reason": "NOT_IN_FROZEN_STAGE25_PRIMARY_NATURAL_PREVALENCE_FAMILY"
+    },
+    {
+      "cell": "STAGE22_CHRONOLOGICAL_REBALANCED",
+      "reason": "NOT_IN_FROZEN_STAGE25_PRIMARY_NATURAL_PREVALENCE_FAMILY"
+    },
+    {
+      "cell": "STAGE22_FINAL_SINGLE_HOLDOUT",
+      "reason": "USED_AS_CLOSURE_EVIDENCE_ONLY; NOT_A_FROZEN_STAGE25 OPERATING_POINT_FAMILY"
+    },
+    {
+      "cell": "STAGE24_BRIDGE62_GROUNDED_S4",
+      "reason": "ADMINISTRATIVELY_CANCELLED_BEFORE_STAGE24_OPENING"
+    },
+    {
+      "cell": "STAGE24_BRIDGE70_GROUNDED_S4",
+      "reason": "ADMINISTRATIVELY_CANCELLED_BEFORE_STAGE24_OPENING"
+    }
+  ],
+  "new_prediction_access": false,
+  "new_threshold_derivation": false,
+  "operating_point_count": 24,
+  "repository_parent": "ad5a01ae9021183f6c5b8046c2647fd5dad7cb6d",
+  "stage": "Stage25-0",
+  "status": "FROZEN_BEFORE_ANY_STAGE25_PROJECTION"
+}

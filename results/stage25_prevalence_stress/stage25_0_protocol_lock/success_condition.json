@@ -1,0 +1,14 @@
+{
+  "operational_collapse_required": false,
+  "stage": "Stage25-0",
+  "unexpected_results": "REPORT_EXACTLY",
+  "valid_outcomes": [
+    "SEVERE_BASE_RATE_COLLAPSE",
+    "MODERATE_DEGRADATION",
+    "THRESHOLD_SPECIFIC_SURVIVAL",
+    "SECURITY_OPERATING_POINT_SURVIVAL",
+    "SOC_CAPACITY_EXCEEDANCE",
+    "COST_BREAK_EVEN_AT_VERY_LOW_PREVALENCE",
+    "UNEXPECTED_OPERATIONAL_ROBUSTNESS"
+  ]
+}

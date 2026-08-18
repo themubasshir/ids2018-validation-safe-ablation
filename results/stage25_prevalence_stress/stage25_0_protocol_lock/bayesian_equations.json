@@ -1,0 +1,15 @@
+{
+  "equations": {
+    "LR_minus": "(1-TPR) / (1-FPR)",
+    "LR_plus": "TPR / FPR",
+    "NPV": "(1-FPR)*(1-pi) / ((1-FPR)*(1-pi) + (1-TPR)*pi)",
+    "PPV": "TPR*pi / (TPR*pi + FPR*(1-pi))",
+    "posterior_odds_positive": "prior_odds * LR_plus",
+    "ppv50": "FPR / (TPR + FPR)",
+    "ppv_break_even_q": "q*FPR / (TPR*(1-q) + q*FPR)",
+    "prior_odds": "pi / (1-pi)",
+    "required_fpr_for_ppv_q": "TPR*pi*(1-q) / (q*(1-pi))"
+  },
+  "graphical_approximation_of_break_even": "FORBIDDEN",
+  "stage": "Stage25-0"
+}

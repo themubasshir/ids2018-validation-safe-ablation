@@ -1,0 +1,31 @@
+{
+  "allowed_operating_points": [
+    "STANDARD",
+    "BALANCED",
+    "SECURITY"
+  ],
+  "forbidden": [
+    "target-specific threshold optimization",
+    "prevalence-specific threshold optimization",
+    "PPV-specific threshold selection",
+    "new F1 maximization",
+    "new F2 maximization",
+    "new calibration",
+    "new probability inference"
+  ],
+  "grounded_s4": "NOT_ELIGIBLE_STAGE24_CANCELLED",
+  "stage": "Stage25-0",
+  "stage22_cells": [
+    "STAGE22_RANDOM",
+    "STAGE22_CHRONOLOGICAL"
+  ],
+  "stage24_cells": [
+    "STAGE24_2017_TO_2018_BRIDGE62",
+    "STAGE24_2017_TO_2018_BRIDGE70",
+    "STAGE24_2018_TO_2017_BRIDGE62_FLAG_CORRECTED",
+    "STAGE24_2018_TO_2017_BRIDGE62_PUBLISHED",
+    "STAGE24_2018_TO_2017_BRIDGE70_FLAG_CORRECTED",
+    "STAGE24_2018_TO_2017_BRIDGE70_PUBLISHED"
+  ],
+  "threshold_source": "EXACT_FROZEN_SOURCE_VALIDATION_ONLY"
+}

@@ -1,0 +1,19 @@
+{
+  "LR_minus": {
+    "both_zero": "NULL_UNDEFINED_0_OVER_0",
+    "denominator_zero_numerator_positive": "POSITIVE_INFINITY",
+    "normal": "(1-TPR)/(1-FPR)"
+  },
+  "LR_plus": {
+    "FPR_zero_TPR_positive": "POSITIVE_INFINITY",
+    "FPR_zero_TPR_zero": "NULL_UNDEFINED_0_OVER_0",
+    "normal": "TPR/FPR"
+  },
+  "break_even_values": "ANALYTIC_NOT_GRID_APPROXIMATED",
+  "calculation_dtype": "IEEE754_FLOAT64",
+  "epsilon_injection": "FORBIDDEN",
+  "internal_rounding": "NONE",
+  "other_zero_denominators": "NULL_WITH_EXPLICIT_STATUS",
+  "presentation_rounding": "ALLOWED_ONLY_AT_REPORTING_LAYER",
+  "stage": "Stage25-0"
+}

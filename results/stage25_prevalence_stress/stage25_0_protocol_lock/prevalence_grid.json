@@ -1,0 +1,46 @@
+{
+  "note": "10% is a deployment-stress grid point, not a generic benchmark prevalence.",
+  "observed_markers": {
+    "STAGE22_CHRONOLOGICAL": 0.10484691299808009,
+    "STAGE22_RANDOM": 0.13684738945373795,
+    "STAGE24_2017_TO_2018": 0.10484691299808009,
+    "STAGE24_2018_TO_2017": 0.19699633629757277
+  },
+  "ppv_target_grid": {
+    "decimal": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "labels": [
+      "10%",
+      "25%",
+      "50%",
+      "75%",
+      "90%"
+    ]
+  },
+  "prevalence_grid": {
+    "decimal": [
+      0.1,
+      0.03,
+      0.01,
+      0.003,
+      0.001,
+      0.0001
+    ],
+    "dropping_lowest_point": "FORBIDDEN",
+    "labels": [
+      "10%",
+      "3%",
+      "1%",
+      "0.3%",
+      "0.1%",
+      "0.01%"
+    ]
+  },
+  "stage": "Stage25-0",
+  "status": "FROZEN_BEFORE_PROJECTION"
+}

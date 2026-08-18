@@ -1,0 +1,17 @@
+{
+  "benign_flows_per_day": 1000000,
+  "enterprise_representativeness_claim": false,
+  "equations": {
+    "A": "pi * B / (1 - pi)",
+    "FN": "(1 - TPR) * A",
+    "FP": "FPR * B",
+    "N_total": "B / (1 - pi)",
+    "TN": "(1 - FPR) * B",
+    "TP": "TPR * A",
+    "alerts": "TP + FP",
+    "false_alert_fraction": "FP / (TP + FP)"
+  },
+  "important_implication": "At fixed benign volume and fixed FPR, FP/day does not fall merely because attack prevalence falls.",
+  "stage": "Stage25-0",
+  "volume_semantics": "FIXED_BENIGN_VOLUME_NOT_FIXED_TOTAL_VOLUME"
+}

@@ -1,0 +1,35 @@
+{
+  "drop_test_based_on_results": "FORBIDDEN",
+  "stage": "Stage25-0",
+  "tests": [
+    {
+      "name": "PPV_AT_OBSERVED_PREVALENCE",
+      "requirement": "Projected PPV at exact original prevalence reproduces frozen precision."
+    },
+    {
+      "name": "PPV_MONOTONICITY",
+      "requirement": "For fixed TPR>0 and FPR>0, PPV increases with prevalence."
+    },
+    {
+      "name": "FP_INVARIANCE",
+      "requirement": "FP=FPR*1,000,000 is invariant across prevalence for a fixed operating point."
+    },
+    {
+      "name": "COST_BREAK_EVEN_SIGN_REVERSAL",
+      "requirement": "Model-vs-ignore inequality reverses immediately around analytic pi_star_cost."
+    },
+    {
+      "name": "PPV50_CHECK",
+      "requirement": "PPV equals 0.5 at analytic pi_star_PPV50."
+    },
+    {
+      "name": "CONFUSION_IDENTITIES",
+      "requirement": "TP+FN equals attack volume and FP+TN equals 1,000,000."
+    },
+    {
+      "expected_rows": 144,
+      "name": "COMPLETE_PROJECTION_MATRIX",
+      "requirement": "24 operating points x 6 prevalence levels."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "C_FN": 100,
+  "C_FP": 1,
+  "currency": false,
+  "equations": {
+    "cost_break_even_prevalence": "(C_FP*FPR) / (C_FN*TPR + C_FP*FPR)",
+    "ignore": "A*C_FN",
+    "model": "FP*C_FP + FN*C_FN"
+  },
+  "limitations": [
+    "Not financial loss.",
+    "Not dollars.",
+    "Each malicious flow is not an independent breach.",
+    "The ignore/non-deployment comparator is simplified."
+  ],
+  "ratio": "1:100",
+  "stage": "Stage25-0",
+  "units": "RELATIVE_OPERATIONAL_COST_UNITS"
+}

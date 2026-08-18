@@ -1,0 +1,52 @@
+{
+  "average_bridges": "FORBIDDEN",
+  "average_directions": "FORBIDDEN",
+  "average_extractor_variants": "FORBIDDEN",
+  "entries": [
+    {
+      "permitted": "Operating point is sensitive to prior prevalence.",
+      "result": "PPV decreases as prevalence decreases within a frozen cell"
+    },
+    {
+      "permitted": "Under the frozen prior-shift projection, fewer than one in ten positive alerts corresponds to an attack.",
+      "result": "PPV < 10% at 0.1% prevalence"
+    },
+    {
+      "permitted": "Projected alerts exceed one assumed analyst-day.",
+      "result": "ACI_1 > 1"
+    },
+    {
+      "permitted": "Projected alerts exceed three assumed analyst-days.",
+      "result": "ACI_3 > 1"
+    },
+    {
+      "permitted": "False-alert rate alone exceeds the specified capacity scenario.",
+      "result": "Frozen FPR > capacity FPR"
+    },
+    {
+      "permitted": "Under the frozen 1:100 relative-cost model, the simplified ignore reference has lower expected relative cost.",
+      "result": "Cost(Model) > Cost(Ignore)"
+    },
+    {
+      "permitted": "The tested security FPR constraint does not guarantee capacity feasibility.",
+      "result": "Security threshold exceeds capacity"
+    },
+    {
+      "permitted": "Ranking quality alone does not establish deployment utility.",
+      "result": "Strong ranking but poor operational projection"
+    },
+    {
+      "permitted": "Frozen chronological operating characteristics produce poorer projection; prevalence alone must not be assumed causal.",
+      "result": "Chronological projection worse than random"
+    },
+    {
+      "permitted": "Transferred operating point is not operationally robust under the tested projection.",
+      "result": "Cross-dataset projection collapses"
+    },
+    {
+      "permitted": "It remains comparatively informative under the assumptions; empirical deployment validation is still required.",
+      "result": "Operating point survives 0.1% stress"
+    }
+  ],
+  "stage": "Stage25-0"
+}

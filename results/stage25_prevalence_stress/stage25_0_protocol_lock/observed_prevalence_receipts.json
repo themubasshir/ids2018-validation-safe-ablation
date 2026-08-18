@@ -1,0 +1,102 @@
+{
+  "receipts": [
+    {
+      "attack": 394460,
+      "benign": 2488021,
+      "bridge": "FULL_70_FEATURE",
+      "cell_id": "STAGE22_RANDOM",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "IDS2018_RANDOM_VALIDATION",
+      "family": "STAGE22_RANDOM",
+      "observed_prevalence": 0.13684738945373795,
+      "rows": 2882481,
+      "variant": "RANDOM_NATURAL"
+    },
+    {
+      "attack": 62256,
+      "benign": 531524,
+      "bridge": "FULL_70_FEATURE",
+      "cell_id": "STAGE22_CHRONOLOGICAL",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "IDS2018_FORWARD_TEMPORAL_VALIDATION",
+      "family": "STAGE22_CHRONOLOGICAL",
+      "observed_prevalence": 0.10484691299808009,
+      "rows": 593780,
+      "variant": "CHRONOLOGICAL_NATURAL"
+    },
+    {
+      "attack": 557646,
+      "benign": 2273097,
+      "bridge": "bridge62",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE62_PUBLISHED",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "family": "STAGE24_2018_TO_2017",
+      "observed_prevalence": 0.19699633629757277,
+      "rows": 2830743,
+      "variant": "PUBLISHED"
+    },
+    {
+      "attack": 557646,
+      "benign": 2273097,
+      "bridge": "bridge62",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE62_FLAG_CORRECTED",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "family": "STAGE24_2018_TO_2017",
+      "observed_prevalence": 0.19699633629757277,
+      "rows": 2830743,
+      "variant": "FLAG_CORRECTED"
+    },
+    {
+      "attack": 557646,
+      "benign": 2273097,
+      "bridge": "bridge70",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE70_PUBLISHED",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "family": "STAGE24_2018_TO_2017",
+      "observed_prevalence": 0.19699633629757277,
+      "rows": 2830743,
+      "variant": "PUBLISHED"
+    },
+    {
+      "attack": 557646,
+      "benign": 2273097,
+      "bridge": "bridge70",
+      "cell_id": "STAGE24_2018_TO_2017_BRIDGE70_FLAG_CORRECTED",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "IDS2018_TO_CICIDS2017",
+      "family": "STAGE24_2018_TO_2017",
+      "observed_prevalence": 0.19699633629757277,
+      "rows": 2830743,
+      "variant": "FLAG_CORRECTED"
+    },
+    {
+      "attack": 62256,
+      "benign": 531524,
+      "bridge": "bridge62",
+      "cell_id": "STAGE24_2017_TO_2018_BRIDGE62",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "CICIDS2017_TO_IDS2018",
+      "family": "STAGE24_2017_TO_2018",
+      "observed_prevalence": 0.10484691299808009,
+      "rows": 593780,
+      "variant": "FLAG_CORRECTED_SOURCE_SEMANTICS"
+    },
+    {
+      "attack": 62256,
+      "benign": 531524,
+      "bridge": "bridge70",
+      "cell_id": "STAGE24_2017_TO_2018_BRIDGE70",
+      "derivation": "FROZEN_CONFUSION_COUNTS",
+      "direction": "CICIDS2017_TO_IDS2018",
+      "family": "STAGE24_2017_TO_2018",
+      "observed_prevalence": 0.10484691299808009,
+      "rows": 593780,
+      "variant": "FLAG_CORRECTED_SOURCE_SEMANTICS"
+    }
+  ],
+  "stage": "Stage25-0",
+  "status": "EXACT_FROZEN_PREVALENCES"
+}

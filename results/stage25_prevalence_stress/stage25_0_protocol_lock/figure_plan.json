@@ -1,0 +1,72 @@
+{
+  "drop_figure_based_on_results": "FORBIDDEN",
+  "primary": [
+    {
+      "id": "25-A",
+      "required": [
+        "50% reference",
+        "10% reference",
+        "observed prevalence markers",
+        "deployment-grid points"
+      ],
+      "title": "PPV Cliff",
+      "x": "prevalence log scale",
+      "y": "PPV"
+    },
+    {
+      "also_report": "FP-only workload",
+      "capacity_reference_hours": [
+        8,
+        24,
+        80
+      ],
+      "id": "25-B",
+      "title": "SOC Capacity Exceedance",
+      "x": "prevalence log scale",
+      "y": "alert-processing hours/day"
+    },
+    {
+      "F1_is_not_PPV": true,
+      "id": "25-C",
+      "observed_metrics": [
+        "F1",
+        "precision",
+        "recall",
+        "FPR",
+        "observed prevalence"
+      ],
+      "projected_metrics": [
+        "PPV",
+        "FP/day",
+        "TP/day",
+        "alerts/day",
+        "analyst-hours/day"
+      ],
+      "projection_prevalence": 0.001,
+      "title": "Benchmark-to-Deployment Translation"
+    },
+    {
+      "id": "25-D",
+      "overlay_actual_fpr": true,
+      "target_ppv": [
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        0.9
+      ],
+      "title": "Required FPR for Target PPV",
+      "x": "prevalence log scale",
+      "y": "maximum permissible FPR"
+    }
+  ],
+  "stage": "Stage25-0",
+  "supplementary": [
+    {
+      "content": "Prior probability to posterior probability after positive alert using representative inherited LR+.",
+      "id": "25-E",
+      "status": "FROZEN_BEFORE_RESULTS",
+      "title": "Bayesian Evidence Translation"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "assumption": "PRIOR_PROBABILITY_SHIFT_ONLY",
+  "base_rate_and_domain_shift_must_not_be_conflated": true,
+  "between_cell_interpretation": "Different frozen cells retain different TPR/FPR values caused by their original validation/domain conditions.",
+  "critical_limitation": "Stage25 is analytic deployment-stress projection and not empirical production validation. Domain or temporal shift can change P(X|Y), TPR and FPR.",
+  "held_fixed_within_cell": [
+    "TPR",
+    "FPR",
+    "model",
+    "threshold"
+  ],
+  "stage": "Stage25-0",
+  "varied": "attack_prevalence_pi",
+  "within_cell_interpretation": "Only the prior attack probability changes analytically."
+}

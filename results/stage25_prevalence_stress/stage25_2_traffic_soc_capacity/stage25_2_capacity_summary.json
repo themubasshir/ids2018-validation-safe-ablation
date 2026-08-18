@@ -1,0 +1,138 @@
+{
+  "capacity_summary": {
+    "1": {
+      "0.0001": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.001": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 11,
+        "operating_points": 24
+      },
+      "0.003": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.01": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.03": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.1": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      }
+    },
+    "10": {
+      "0.0001": {
+        "capacity_exceeded_count": 15,
+        "capacity_feasible_count": 9,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.001": {
+        "capacity_exceeded_count": 15,
+        "capacity_feasible_count": 9,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.003": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 3,
+        "operating_points": 24
+      },
+      "0.01": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 11,
+        "operating_points": 24
+      },
+      "0.03": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.1": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      }
+    },
+    "3": {
+      "0.0001": {
+        "capacity_exceeded_count": 19,
+        "capacity_feasible_count": 5,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.001": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 3,
+        "operating_points": 24
+      },
+      "0.003": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 11,
+        "operating_points": 24
+      },
+      "0.01": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.03": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.1": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      }
+    }
+  },
+  "note": "Counts summarize the 24 frozen operating points separately at each frozen prevalence and analyst tier.",
+  "stage": "Stage25-2"
+}

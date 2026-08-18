@@ -1,0 +1,57 @@
+{
+  "stage": "Stage25-2",
+  "stage25_0_test_not_yet_due": {
+    "COST_BREAK_EVEN_SIGN_REVERSAL": "Deferred to Stage25-3 relative-cost analysis."
+  },
+  "status": "PASS",
+  "tests": {
+    "ACI_HOURS_IDENTITY": {
+      "completed_checks": 432,
+      "expected_checks": 432,
+      "identity": "alerts/(240*k) == processing_hours/(8*k)",
+      "passed": true
+    },
+    "COMPLETE_CAPACITY_MATRIX": {
+      "actual_rows": 432,
+      "expected_rows": 432,
+      "passed": true
+    },
+    "COMPLETE_TRAFFIC_MATRIX": {
+      "actual_rows": 144,
+      "expected_rows": 144,
+      "passed": true
+    },
+    "FP_INVARIANCE": {
+      "completed_checks": 24,
+      "expected_checks": 24,
+      "maximum_fp_range": 0.0,
+      "passed": true
+    },
+    "PROJECTED_CONFUSION_IDENTITIES": {
+      "completed_checks": 432,
+      "identities_per_row": [
+        "TP+FN=A",
+        "FP+TN=B",
+        "A+B=N_total"
+      ],
+      "passed": true,
+      "projection_rows": 144
+    },
+    "STAGE25_1_NPV_IDENTITY": {
+      "completed_checks": 144,
+      "expected_checks": 144,
+      "passed": true
+    },
+    "STAGE25_1_PPV_IDENTITY": {
+      "completed_checks": 144,
+      "expected_checks": 144,
+      "passed": true
+    },
+    "TOTAL_CAPACITY_FPR_INEQUALITY_IDENTITY": {
+      "completed_checks": 432,
+      "expected_checks": 432,
+      "identity": "direct alerts<=capacity agrees with FPR <= 240*k/B - TPR*pi/(1-pi)",
+      "passed": true
+    }
+  }
+}

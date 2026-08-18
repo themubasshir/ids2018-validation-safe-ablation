@@ -1,0 +1,181 @@
+{
+  "analysis": {
+    "capacity_tier_rows": 432,
+    "fixed_fpr_workload_rows": 24,
+    "operating_points": 24,
+    "prevalence_points": 6,
+    "traffic_projection_rows": 144
+  },
+  "artifacts": {
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_capacity_summary.json": "e19c504e5a2c8ce5d1e9b7316befa2c31c19f42aed1d841b34258629a862af92",
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_capacity_tiers.csv": "3917252ad3c75dad890c62a4bba6fa0a4360f09eed8871b70d288d353d55c395",
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_fixed_fpr_false_alert_workload.csv": "07891d41f02eedf5e97798247ba4403b603bf6c64c1a344291180fb7759db459",
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_sanity_tests.json": "4bdf1a90283c5f9e02adcb9f6327ca7b6f7349e18084be72ac6e4afd5bd54c72",
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_traffic_soc_projection.csv": "8f6e794fccf9b09b5c9beb7dd5ae7d24ab73d5bc10d49757b7f38118ace85f7b"
+  },
+  "capacity_summary": {
+    "1": {
+      "0.0001": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.001": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 11,
+        "operating_points": 24
+      },
+      "0.003": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.01": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.03": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.1": {
+        "capacity_exceeded_count": 23,
+        "capacity_feasible_count": 1,
+        "fp_only_capacity_exceeded_count": 21,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      }
+    },
+    "10": {
+      "0.0001": {
+        "capacity_exceeded_count": 15,
+        "capacity_feasible_count": 9,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.001": {
+        "capacity_exceeded_count": 15,
+        "capacity_feasible_count": 9,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.003": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 3,
+        "operating_points": 24
+      },
+      "0.01": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 11,
+        "operating_points": 24
+      },
+      "0.03": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.1": {
+        "capacity_exceeded_count": 17,
+        "capacity_feasible_count": 7,
+        "fp_only_capacity_exceeded_count": 15,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      }
+    },
+    "3": {
+      "0.0001": {
+        "capacity_exceeded_count": 19,
+        "capacity_feasible_count": 5,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 0,
+        "operating_points": 24
+      },
+      "0.001": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 3,
+        "operating_points": 24
+      },
+      "0.003": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 11,
+        "operating_points": 24
+      },
+      "0.01": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.03": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      },
+      "0.1": {
+        "capacity_exceeded_count": 21,
+        "capacity_feasible_count": 3,
+        "fp_only_capacity_exceeded_count": 19,
+        "infeasible_even_at_fpr_zero_count": 15,
+        "operating_points": 24
+      }
+    }
+  },
+  "created_at_utc": "2026-08-18T12:46:04.872553+00:00",
+  "frozen_scenario": {
+    "alerts_per_analyst_day": 240,
+    "analyst_shift_minutes": 480,
+    "analyst_tiers": [
+      1,
+      3,
+      10
+    ],
+    "benign_flows_per_day": 1000000,
+    "minutes_per_alert": 2
+  },
+  "interpretation_boundary": "SOC workload values are deterministic scenario projections conditional on frozen TPR/FPR, fixed 1,000,000 benign flows/day, 2 minutes per alert, and the preregistered analyst-capacity tiers. They are not measured production SOC workloads.",
+  "next_authorized_stage": "STAGE25_3_RELATIVE_COST_AND_BREAK_EVEN_ANALYSIS",
+  "repository_parent_commit": "bfcc41741e055356c82f8f2f04042f3c2556b090",
+  "sanity_test_status": "PASS",
+  "scientific_access": {
+    "model_files_loaded": 0,
+    "model_fit_calls": 0,
+    "model_inference_calls": 0,
+    "probability_arrays_created": 0,
+    "probability_arrays_opened": 0,
+    "target_features_read": 0,
+    "target_labels_read": 0,
+    "target_reopenings": 0,
+    "threshold_searches": 0
+  },
+  "stage": "Stage25-2",
+  "stage25_0_freeze_sha256": "d231af1e4f07363c4d932acc99e1052e3b33bd2d24ca22e4386f4c7c378827b7",
+  "stage25_1_result_sha256": "81e4d96494c3432745f97428b722cc8870f75372a2c4570653ec59e7bcaa25ff",
+  "status": "TRAFFIC_AND_SOC_CAPACITY_PROJECTION_COMPLETE"
+}

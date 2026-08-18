@@ -1,0 +1,159 @@
+{
+  "authorization": {
+    "protocol_modification_after_this_gate": "FORBIDDEN",
+    "scope": "Execution is authorized ONLY according to the immutable Stage24-0C protocol and 8-cell target-opening ledger.",
+    "status": "AUTHORIZED_FOR_FROZEN_STAGE24_EXECUTION",
+    "target_guided_protocol_adaptation": "FORBIDDEN"
+  },
+  "branch": "main",
+  "created_at_utc": "2026-08-18T04:39:06.394018+00:00",
+  "frozen_runtime": {
+    "lightgbm": "GPU",
+    "xgboost": "CUDA"
+  },
+  "governance_gate": {
+    "anti_adaptation_lock_active": true,
+    "gate_pass": true,
+    "protocol_committed_before_target_opening": true,
+    "protocol_created_before_target_opening": true,
+    "protocol_pushed_before_target_opening": true,
+    "protocol_remotely_verified_before_target_opening": true
+  },
+  "next_authorized_step": "Execute Stage24 according to the frozen order beginning with PRIMARY_FULL_SOURCE_70F_SANITY_WITH_FROZEN_STAGE22_MODELS. Target openings remain 0/8 until an explicitly budgeted target inference cell is executed.",
+  "protocol_artifacts": {
+    "final_preopening_protocol_lock": {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+      "sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2"
+    },
+    "gpu_backend_probe": {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_gpu_backend_probe.json",
+      "sha256": "d4607c4b21ee1317a52021188511d912012c90f6124e3c81dd4d6d624bffee66"
+    },
+    "semantic_bridge": {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.json",
+      "sha256": "b7ff1d8563aafc69145be3acc827fbc59ae75d880b9804bad727f408299fce2f"
+    },
+    "stage24_0b2": {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b2_complete_cicids2017_source_contract.json",
+      "sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779"
+    }
+  },
+  "protocol_lock_commit": "9433af17b37906d57db078008002b4836d912186",
+  "protocol_lock_commit_message": "stage24: freeze cross-dataset pre-opening protocol",
+  "protocol_lock_commit_parent": "963b2da0043c7438624916280de154a5628f8879",
+  "remote_byte_verification": {
+    "all_pass": true,
+    "files_in_protocol_lock_commit": 14,
+    "files_verified_exact": 14,
+    "records": [
+      {
+        "byte_identical": true,
+        "local_sha256": "cd770bd5be24fc2dd53e69bbc41094bf3e9cbf48600ffc5bfaa20efda59a64bc",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0_bootstrap_environment_receipt.json",
+        "remote_sha256": "cd770bd5be24fc2dd53e69bbc41094bf3e9cbf48600ffc5bfaa20efda59a64bc"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "b6fcdbd7ab48113b863cd388f5fc77d970b4fbe5be027994c7e00772e882ba4a",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0_bootstrap_environment_receipt.sha256",
+        "remote_sha256": "b6fcdbd7ab48113b863cd388f5fc77d970b4fbe5be027994c7e00772e882ba4a"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "8b4b2e896ddc72318254fe4764ed534caae83de446b3c8cdee5a8bf3ce6d5e50",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0a_schema_provenance_audit.json",
+        "remote_sha256": "8b4b2e896ddc72318254fe4764ed534caae83de446b3c8cdee5a8bf3ce6d5e50"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "a4449964208d7c4867a676f1314e574f0ca48f48e1a19111d9e9913a2919c54a",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0a_schema_provenance_audit.sha256",
+        "remote_sha256": "a4449964208d7c4867a676f1314e574f0ca48f48e1a19111d9e9913a2919c54a"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b2_complete_cicids2017_source_contract.json",
+        "remote_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "022192440d4966885926f1e30b44b9e6f42b9839d9fcd7a56c5ede8fdb3a5057",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b2_complete_cicids2017_source_contract.sha256",
+        "remote_sha256": "022192440d4966885926f1e30b44b9e6f42b9839d9fcd7a56c5ede8fdb3a5057"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "8a84f1dccc51f224427e00144088058590f48c8b603cfd798f6ba431d659da1c",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b_exact_cicids2017_source_recovery.json",
+        "remote_sha256": "8a84f1dccc51f224427e00144088058590f48c8b603cfd798f6ba431d659da1c"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "2ec05b97901adf84f9761798208a3f04bad9375e77af4e75290d216bde0b919f",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b_exact_cicids2017_source_recovery.sha256",
+        "remote_sha256": "2ec05b97901adf84f9761798208a3f04bad9375e77af4e75290d216bde0b919f"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+        "remote_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "de367a7bc344bd4eb66d5e5cf2e41a42bf485fdb6d8254559489470f3e89cf69",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.sha256",
+        "remote_sha256": "de367a7bc344bd4eb66d5e5cf2e41a42bf485fdb6d8254559489470f3e89cf69"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "d4607c4b21ee1317a52021188511d912012c90f6124e3c81dd4d6d624bffee66",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_gpu_backend_probe.json",
+        "remote_sha256": "d4607c4b21ee1317a52021188511d912012c90f6124e3c81dd4d6d624bffee66"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "7fffd47943011cf35b9bf1344b7b6a3695631aeb35e4b662006dc02c61ad46cc",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_gpu_backend_probe.sha256",
+        "remote_sha256": "7fffd47943011cf35b9bf1344b7b6a3695631aeb35e4b662006dc02c61ad46cc"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "b7ff1d8563aafc69145be3acc827fbc59ae75d880b9804bad727f408299fce2f",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.json",
+        "remote_sha256": "b7ff1d8563aafc69145be3acc827fbc59ae75d880b9804bad727f408299fce2f"
+      },
+      {
+        "byte_identical": true,
+        "local_sha256": "9b002fec555e637672bf174ad4296ff480b8dc1e8f009f4e233b348dc776658f",
+        "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.sha256",
+        "remote_sha256": "9b002fec555e637672bf174ad4296ff480b8dc1e8f009f4e233b348dc776658f"
+      }
+    ]
+  },
+  "remote_head_at_lock_verification": "9433af17b37906d57db078008002b4836d912186",
+  "remote_head_equal_lock_commit": true,
+  "repository": "themubasshir/ids2018-validation-safe-ablation",
+  "scientific_access_during_0d": {
+    "model_predictions": 0,
+    "scientific_model_fits": 0,
+    "target_labels_read": 0,
+    "target_metrics": 0,
+    "target_openings_consumed": 0,
+    "target_rows_read": 0
+  },
+  "scientific_fit_budget": {
+    "consumed_before_target_opening": 0,
+    "total": 4
+  },
+  "scientific_parent": "963b2da0043c7438624916280de154a5628f8879",
+  "stage": "Stage24-0D",
+  "target_opening_ledger": {
+    "budget": 8,
+    "consumed": 0,
+    "status_after_successful_0D": "AUTHORIZED_FOR_FROZEN_EXECUTION_ONLY",
+    "status_before_gate": "CLOSED"
+  },
+  "type": "PRE_TARGET_OPENING_REMOTE_VERIFICATION_ATTESTATION"
+}

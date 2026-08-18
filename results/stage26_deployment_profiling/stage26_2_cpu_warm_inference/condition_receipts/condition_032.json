@@ -1,0 +1,36 @@
+{
+  "affinity_requested": [
+    0
+  ],
+  "batch_size": 8192,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_035",
+  "elapsed_ns": [],
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.230594635009766,
+      "cpu_percent": 0.7,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.230594635009766,
+    "cpu_percent": 0.7,
+    "passed": true
+  },
+  "execution_order": 32,
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "memory_profiled": false,
+  "schema": "stage26_2_condition_receipt_v1",
+  "status": "TIMEOUT_RESOURCE_LIMIT",
+  "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 1,
+  "timed_runs": 20,
+  "timeout_seconds": 600,
+  "warmup_runs": 5
+}

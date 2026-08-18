@@ -1,0 +1,67 @@
+{
+  "affinity_observed": [
+    0,
+    1
+  ],
+  "affinity_requested": [
+    0,
+    1
+  ],
+  "batch_size": 8192,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_030",
+  "derived_input_seed": 34234,
+  "elapsed_ns": [
+    6790989,
+    7801229,
+    10528560,
+    7016630,
+    10998180,
+    9835750,
+    7139260,
+    7184980,
+    7085610,
+    9054600,
+    8723090,
+    7557130,
+    6966280,
+    6885490,
+    7224380,
+    7432420,
+    11264200,
+    8320180,
+    7697080,
+    7289720
+  ],
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.646209716796875,
+      "cpu_percent": 0.3,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.646209716796875,
+    "cpu_percent": 0.3,
+    "passed": true
+  },
+  "execution_order": 76,
+  "gpu_used": false,
+  "hardware_mode": "CPU_2_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "memory_profiled": false,
+  "python_gc_enabled": true,
+  "schema": "stage26_2_condition_receipt_v1",
+  "status": "PASS",
+  "target_id": "STAGE16_CATBOOST_TUNED",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 2,
+  "timed_output_sha256": "7af8b9a1d931d6fb5cdaeebacb331afc5957c869588852ec8c5f04b0d93a8671",
+  "timed_runs": 20,
+  "timing_boundary": "prepared_model_input_to_materialized_attack_probability",
+  "timing_clock": "time.perf_counter_ns",
+  "warmup_output_sha256": "7af8b9a1d931d6fb5cdaeebacb331afc5957c869588852ec8c5f04b0d93a8671",
+  "warmup_runs": 5
+}

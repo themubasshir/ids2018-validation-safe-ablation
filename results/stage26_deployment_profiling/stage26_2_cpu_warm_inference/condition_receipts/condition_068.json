@@ -1,0 +1,65 @@
+{
+  "affinity_observed": [
+    0
+  ],
+  "affinity_requested": [
+    0
+  ],
+  "batch_size": 8192,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_015",
+  "derived_input_seed": 34234,
+  "elapsed_ns": [
+    382166986,
+    395057145,
+    402374766,
+    382297056,
+    388619905,
+    386879476,
+    390065186,
+    388132306,
+    393813996,
+    383274535,
+    381306986,
+    389561126,
+    380641635,
+    390386005,
+    383218586,
+    393041936,
+    387460665,
+    380654076,
+    386491805,
+    392150585
+  ],
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.63869857788086,
+      "cpu_percent": 0.5,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.63869857788086,
+    "cpu_percent": 0.5,
+    "passed": true
+  },
+  "execution_order": 68,
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "memory_profiled": false,
+  "python_gc_enabled": true,
+  "schema": "stage26_2_condition_receipt_v1",
+  "status": "PASS",
+  "target_id": "STAGE16_LIGHTGBM_TUNED",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 1,
+  "timed_output_sha256": "64599e5ef557930030cd8bdb1edd399ba9f1d2a7745f602691f50256be4316e0",
+  "timed_runs": 20,
+  "timing_boundary": "prepared_model_input_to_materialized_attack_probability",
+  "timing_clock": "time.perf_counter_ns",
+  "warmup_output_sha256": "64599e5ef557930030cd8bdb1edd399ba9f1d2a7745f602691f50256be4316e0",
+  "warmup_runs": 5
+}

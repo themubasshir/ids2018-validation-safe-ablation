@@ -1,0 +1,67 @@
+{
+  "affinity_observed": [
+    0,
+    1
+  ],
+  "affinity_requested": [
+    0,
+    1
+  ],
+  "batch_size": 8192,
+  "comparison_group": "GROUP_B_PACKET_IMAGE",
+  "condition_id": "CPUCOND_060",
+  "derived_input_seed": 1034234,
+  "elapsed_ns": [
+    15210859881,
+    15161798924,
+    15011342311,
+    15066203665,
+    15010876951,
+    15299518858,
+    15094523730,
+    15069660550,
+    15095391691,
+    15202662019,
+    14906058062,
+    15059967530,
+    14761151944,
+    14771053923,
+    14772957453,
+    14687985415,
+    14695381025,
+    14710672884,
+    14755034064,
+    14691519925
+  ],
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.63964080810547,
+      "cpu_percent": 0.3,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.63964080810547,
+    "cpu_percent": 0.3,
+    "passed": true
+  },
+  "execution_order": 65,
+  "gpu_used": false,
+  "hardware_mode": "CPU_2_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "memory_profiled": false,
+  "python_gc_enabled": true,
+  "schema": "stage26_2_condition_receipt_v1",
+  "status": "PASS",
+  "target_id": "STAGE21_MASKED_VIT_V1",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 2,
+  "timed_output_sha256": "6dfa76d0a013693a76666a1976510a93135a3b1b37658f36b87c81187da05c5e",
+  "timed_runs": 20,
+  "timing_boundary": "prepared_model_input_to_materialized_attack_probability",
+  "timing_clock": "time.perf_counter_ns",
+  "warmup_output_sha256": "6dfa76d0a013693a76666a1976510a93135a3b1b37658f36b87c81187da05c5e",
+  "warmup_runs": 5
+}

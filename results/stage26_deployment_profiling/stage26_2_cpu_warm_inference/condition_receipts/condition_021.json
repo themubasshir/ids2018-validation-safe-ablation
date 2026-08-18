@@ -1,0 +1,65 @@
+{
+  "affinity_observed": [
+    0
+  ],
+  "affinity_requested": [
+    0
+  ],
+  "batch_size": 8192,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_075",
+  "derived_input_seed": 34234,
+  "elapsed_ns": [
+    15232628404,
+    15087385765,
+    14938700068,
+    14407576796,
+    14616705375,
+    13900744479,
+    13668682972,
+    13657417072,
+    13569739672,
+    13875684529,
+    14089108736,
+    13517809253,
+    13249059227,
+    13204968588,
+    13092999268,
+    13159078799,
+    14262020015,
+    14530261721,
+    13644237112,
+    13716469521
+  ],
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.65276336669922,
+      "cpu_percent": 1.0,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.65276336669922,
+    "cpu_percent": 1.0,
+    "passed": true
+  },
+  "execution_order": 21,
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "memory_profiled": false,
+  "python_gc_enabled": true,
+  "schema": "stage26_2_condition_receipt_v1",
+  "status": "PASS",
+  "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+  "target_role": "RESOURCE_DECOMPOSITION_REFERENCE",
+  "thread_count": 1,
+  "timed_output_sha256": "facdb5f014d1d40d30bf7a1388a4298ec61b1c8a5ee7126caaf177f251c4c07a",
+  "timed_runs": 20,
+  "timing_boundary": "prepared_model_input_to_materialized_attack_probability",
+  "timing_clock": "time.perf_counter_ns",
+  "warmup_output_sha256": "facdb5f014d1d40d30bf7a1388a4298ec61b1c8a5ee7126caaf177f251c4c07a",
+  "warmup_runs": 5
+}

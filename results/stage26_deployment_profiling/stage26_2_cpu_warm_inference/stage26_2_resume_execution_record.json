@@ -1,0 +1,38 @@
+{
+  "affinity_policy_changed": false,
+  "batch_policy_changed": false,
+  "checkpoint": "STAGE26-2",
+  "completed_condition_remeasured": false,
+  "condition_021_receipt_sha256": "47fdea995c8fe5574e904f598f57405bc0867072dd01a1deb5d09ccd836bf884",
+  "condition_021_status": "PASS",
+  "continuation_orders": [
+    22,
+    80
+  ],
+  "final_condition_status_counts": {
+    "PASS": 73,
+    "RESOURCE_LIMIT_OOM": 2,
+    "TIMEOUT_RESOURCE_LIMIT": 5
+  },
+  "frozen_execution_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+  "frozen_implementation_sha256": "678c53993799f66e1528808f46c9c27c64b8821dcb8de2ce83343f126f848d43",
+  "frozen_worker_sha256": "2248f9c61b896bccf306167524b8be978993f49fc198327a6e280ee4553709b4",
+  "gpu_used": false,
+  "heartbeat_inside_measured_region": false,
+  "holdout_reopened": false,
+  "input_generation_changed": false,
+  "isolated_recovery_condition": 21,
+  "memory_profiled": false,
+  "model_changed": false,
+  "original_interruption_after_durable_order": 20,
+  "parent_commit": "46379b6d036008db4d60b056a66f4c01383e3298",
+  "parent_side_heartbeat_seconds": 30,
+  "recorded_at_utc": "2026-08-18T21:01:03.160680+00:00",
+  "schema": "stage26_2_resume_execution_record_v1",
+  "stage": 26,
+  "thread_policy_changed": false,
+  "timed_iteration_policy_changed": false,
+  "timeout_policy_changed": false,
+  "timing_boundary_changed": false,
+  "warmup_policy_changed": false
+}

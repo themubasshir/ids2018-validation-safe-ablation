@@ -1,0 +1,78 @@
+{
+  "backend_amendment": {
+    "artifact": "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/stage24_1b_ex1_lightgbm_backend_amendment.json",
+    "only_change": "LightGBM device_type gpu -> cpu",
+    "sha256": "10d31ed6c5254a66cdefa9a2769f5deae294850d4da658d4f09bd1a42d739df5"
+  },
+  "created_at_utc": "2026-08-18T05:20:43.938368+00:00",
+  "direction": "IDS2018_TO_CICIDS2017",
+  "execution_parent": "e9544a1db582c61ca446636ef84d576184c72616",
+  "feature_count": 62,
+  "lightgbm": {
+    "backend": "CPU",
+    "configuration": "LGBM_11",
+    "feature_count": 62,
+    "fit_completed": true,
+    "fit_seconds": 521.6548020839691,
+    "model_file": "bridge62_lightgbm_model.txt",
+    "model_sha256": "907c9c86755c3c32effb2d0899f92e1a0cce71915f90311c99afd8c73814c4d7",
+    "parameters": {
+      "boosting_type": "gbdt",
+      "colsample_bytree": 1.0,
+      "device_type": "cpu",
+      "learning_rate": 0.06,
+      "max_depth": 12,
+      "min_child_samples": 20,
+      "n_estimators": 400,
+      "n_jobs": -1,
+      "num_leaves": 127,
+      "objective": "binary",
+      "random_state": 42,
+      "reg_alpha": 0.0,
+      "reg_lambda": 3.0,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "verbosity": -1
+    },
+    "tree_count": 400,
+    "validation_prediction_seconds": 6.287998199462891,
+    "validation_probability_file": "bridge62_validation_lightgbm_probabilities.npy",
+    "validation_probability_sha256": "cbafa1d3e3bce5068eb94f4ff1b163870fec3e808990dbc1e9b07fe63c86d379"
+  },
+  "next_authorized_step": "Stage24-1B-R2 — fit exactly one bridge62 XGB_11 model with device=cuda, combine with this frozen LightGBM validation vector at 0.5/0.5, then perform frozen source-validation-only threshold selection.",
+  "representation": "bridge62",
+  "scientific_access": {
+    "target_labels_read": 0,
+    "target_metrics": 0,
+    "target_opening_budget": 8,
+    "target_openings_consumed": 0,
+    "target_predictions": 0,
+    "target_rows_read": 0
+  },
+  "scientific_fit_accounting": {
+    "additional_model_search": false,
+    "completed_lightgbm_fits": 1,
+    "completed_stage24_fits_after": 1,
+    "completed_xgboost_fits": 0,
+    "failed_lightgbm_gpu_attempts": 1,
+    "stage24_fit_budget": 4
+  },
+  "source_train": {
+    "attack": 1910043,
+    "benign": 11908580,
+    "membership": "Stage22 CHRONOLOGICAL_NATURAL day_id 0..6",
+    "rows": 13818623
+  },
+  "source_validation": {
+    "attack": 62256,
+    "benign": 531524,
+    "membership": "Stage22 CHRONOLOGICAL_NATURAL day_id 7",
+    "rows": 593780
+  },
+  "stage": "Stage24-1B-R1",
+  "threshold_selection": {
+    "performed": false,
+    "reason": "Awaiting frozen XGBoost component and ensemble."
+  },
+  "type": "PRIMARY_BRIDGE62_LIGHTGBM_CPU_COMPLETION_CHECKPOINT"
+}

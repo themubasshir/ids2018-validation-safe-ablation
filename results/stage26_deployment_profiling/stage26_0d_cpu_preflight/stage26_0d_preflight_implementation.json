@@ -1,0 +1,20 @@
+{
+  "gpu_allowed": false,
+  "group_a_ft_input": "Z float32",
+  "group_a_seed_derivation": "derived_seed = 26042 + batch_size",
+  "group_a_tree_input": "float32(scaler.mean_ + Z * scaler.scale_)",
+  "group_b_cnn_boundary": "uint8 image + bool mask; frozen CNN forward performs float32 conversion and divide-by-255 internally",
+  "group_b_seed_derivation": "derived_seed = 26042 + 1000000 + batch_size",
+  "group_b_vit_boundary": "float32 image/255 + bool mask before frozen ViT forward",
+  "holdout_access_allowed": false,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "measurement_seed": 26042,
+  "memory_profiling_allowed": false,
+  "parent_protocol_commit": "f3957b964e659392c57d1b12881163288f2efedc",
+  "preflight_batch_size": 1,
+  "preflight_prediction_per_condition": 1,
+  "schema": "stage26_0d_preflight_implementation_v1",
+  "stage": 26,
+  "timing_allowed": false,
+  "worker_sha256": "248f7f3d1237cf1e8330f25f728ef4464cdbb6368f5a653ad205816e12190fb1"
+}

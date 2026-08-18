@@ -1,0 +1,750 @@
+{
+  "completed_at_utc": "2026-08-18T17:37:01.860193+00:00",
+  "cpu_execution_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+  "cpu_mode_count": 2,
+  "cross_mode_fingerprint_gate": [
+    {
+      "cpu1_sha256": "a0f5d59a72019a90642607cfb812a8b86bbe1f518621614ef737200c96973278",
+      "cpu2_sha256": "a0f5d59a72019a90642607cfb812a8b86bbe1f518621614ef737200c96973278",
+      "identical": true,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "cpu1_sha256": "fd7a0fbb059966d38d5118b68966e1f81ce8b7bdcf02ce0eba3b89ba078acdde",
+      "cpu2_sha256": "fd7a0fbb059966d38d5118b68966e1f81ce8b7bdcf02ce0eba3b89ba078acdde",
+      "identical": true,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "cpu1_sha256": "1316232b66e1cc125676565375ee6e34471dab6a6b40fe03a4d3751befbf1ac8",
+      "cpu2_sha256": "1316232b66e1cc125676565375ee6e34471dab6a6b40fe03a4d3751befbf1ac8",
+      "identical": true,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "cpu1_sha256": "aebbd0dc5e431cf6090d0745c6ef1e4f2bfa13a709e76465f3cb932ea940b17e",
+      "cpu2_sha256": "aebbd0dc5e431cf6090d0745c6ef1e4f2bfa13a709e76465f3cb932ea940b17e",
+      "identical": true,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "cpu1_sha256": "0a4ea6d2334c1615b81d51f380d927aa359f659a1865c74d5795f602f6c9f79d",
+      "cpu2_sha256": "0a4ea6d2334c1615b81d51f380d927aa359f659a1865c74d5795f602f6c9f79d",
+      "identical": true,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "cpu1_sha256": "567a517207263233a7d97b87cd630deb50d34be4ceb764265ebcf7272669a85d",
+      "cpu2_sha256": "567a517207263233a7d97b87cd630deb50d34be4ceb764265ebcf7272669a85d",
+      "identical": true,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "cpu1_sha256": "82b0f54611f58adb3d687e6d006f8cf3bb94e4a973a21cd76beb3aed53efa4ea",
+      "cpu2_sha256": "82b0f54611f58adb3d687e6d006f8cf3bb94e4a973a21cd76beb3aed53efa4ea",
+      "identical": true,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "cpu1_sha256": "9103db5b8452f6a360b09e0ea2fdc21d41ebe0d19c034a50b0964c45c0546300",
+      "cpu2_sha256": "9103db5b8452f6a360b09e0ea2fdc21d41ebe0d19c034a50b0964c45c0546300",
+      "identical": true,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    }
+  ],
+  "implementation_record_sha256": "b27634363c7b38599a0c4f090d772cb2293031d7de6c8037a25a800543b1fe77",
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "next_action": "GIT_ANCHOR_STAGE26_0D_PREFLIGHT_BEFORE_FIRST_CPU_TIMING",
+  "parent_protocol_commit": "f3957b964e659392c57d1b12881163288f2efedc",
+  "preflight_batch_size": 1,
+  "preflight_condition_count": 16,
+  "results": [
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "3.2.0",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "xgboost.sklearn.XGBClassifier",
+      "output_dtype": "float32",
+      "output_sha256": "a0f5d59a72019a90642607cfb812a8b86bbe1f518621614ef737200c96973278",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "thread_count_requested": 1,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "3.2.0",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "xgboost.sklearn.XGBClassifier",
+      "output_dtype": "float32",
+      "output_sha256": "a0f5d59a72019a90642607cfb812a8b86bbe1f518621614ef737200c96973278",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "thread_count_requested": 2,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "4.6.0",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "lightgbm.sklearn.LGBMClassifier",
+      "output_dtype": "float64",
+      "output_sha256": "fd7a0fbb059966d38d5118b68966e1f81ce8b7bdcf02ce0eba3b89ba078acdde",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "thread_count_requested": 1,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "4.6.0",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "lightgbm.sklearn.LGBMClassifier",
+      "output_dtype": "float64",
+      "output_sha256": "fd7a0fbb059966d38d5118b68966e1f81ce8b7bdcf02ce0eba3b89ba078acdde",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "STAGE16_LIGHTGBM_TUNED",
+      "thread_count_requested": 2,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "1.2.10",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "catboost.core.CatBoostClassifier",
+      "output_dtype": "float64",
+      "output_sha256": "1316232b66e1cc125676565375ee6e34471dab6a6b40fe03a4d3751befbf1ac8",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "thread_count_requested": 1,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "1.2.10",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "catboost.core.CatBoostClassifier",
+      "output_dtype": "float64",
+      "output_sha256": "1316232b66e1cc125676565375ee6e34471dab6a6b40fe03a4d3751befbf1ac8",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "thread_count_requested": 2,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "checkpoint_count": 5,
+      "derived_input_seed": 26043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "load_receipts": [
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 7,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 29,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 101,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 313,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 997,
+          "state_layout": "model_state_dict"
+        }
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "NumericFTTransformer",
+      "output_dtype": "float32",
+      "output_sha256": "aebbd0dc5e431cf6090d0745c6ef1e4f2bfa13a709e76465f3cb932ea940b17e",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "thread_count_requested": 1,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 1
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "checkpoint_count": 5,
+      "derived_input_seed": 26043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "load_receipts": [
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 7,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 29,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 101,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 313,
+          "state_layout": "model_state_dict"
+        },
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 997,
+          "state_layout": "model_state_dict"
+        }
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "NumericFTTransformer",
+      "output_dtype": "float32",
+      "output_sha256": "aebbd0dc5e431cf6090d0745c6ef1e4f2bfa13a709e76465f3cb932ea940b17e",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "thread_count_requested": 2,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 2
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 1026043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_boundary": "UINT8_IMAGE__CNN_INTERNAL_FLOAT32_DIV255",
+      "input_dtype": "torch.uint8",
+      "input_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "load_mode": "torch.load(weights_only=True)",
+      "memory_profiling_performed": false,
+      "model_class": "stage26_cnn_module.Stage20MaskedCNNv1",
+      "output_dtype": "float32",
+      "output_sha256": "0a4ea6d2334c1615b81d51f380d927aa359f659a1865c74d5795f602f6c9f79d",
+      "output_shape": [
+        1
+      ],
+      "padding_mask_dtype": "torch.bool",
+      "padding_mask_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "parameter_count": 93025,
+      "prediction_count": 1,
+      "state_layout": "DIRECT_STATE_DICT",
+      "status": "PASS",
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "thread_count_requested": 1,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 1
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 1026043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_boundary": "UINT8_IMAGE__CNN_INTERNAL_FLOAT32_DIV255",
+      "input_dtype": "torch.uint8",
+      "input_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "load_mode": "torch.load(weights_only=True)",
+      "memory_profiling_performed": false,
+      "model_class": "stage26_cnn_module.Stage20MaskedCNNv1",
+      "output_dtype": "float32",
+      "output_sha256": "0a4ea6d2334c1615b81d51f380d927aa359f659a1865c74d5795f602f6c9f79d",
+      "output_shape": [
+        1
+      ],
+      "padding_mask_dtype": "torch.bool",
+      "padding_mask_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "parameter_count": 93025,
+      "prediction_count": 1,
+      "state_layout": "DIRECT_STATE_DICT",
+      "status": "PASS",
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "thread_count_requested": 2,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 2
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 1026043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_boundary": "FLOAT32_DIV255_BEFORE_VIT_FORWARD",
+      "input_dtype": "torch.float32",
+      "input_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "load_mode": "torch.load(weights_only=True)",
+      "memory_profiling_performed": false,
+      "model_class": "stage26_vit_module.Stage21MaskedViTv1",
+      "output_dtype": "float32",
+      "output_sha256": "567a517207263233a7d97b87cd630deb50d34be4ceb764265ebcf7272669a85d",
+      "output_shape": [
+        1
+      ],
+      "padding_mask_dtype": "torch.bool",
+      "padding_mask_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "parameter_count": 91969,
+      "prediction_count": 1,
+      "state_layout": "DIRECT_STATE_DICT",
+      "status": "PASS",
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "thread_count_requested": 1,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 1
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 1026043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_boundary": "FLOAT32_DIV255_BEFORE_VIT_FORWARD",
+      "input_dtype": "torch.float32",
+      "input_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "load_mode": "torch.load(weights_only=True)",
+      "memory_profiling_performed": false,
+      "model_class": "stage26_vit_module.Stage21MaskedViTv1",
+      "output_dtype": "float32",
+      "output_sha256": "567a517207263233a7d97b87cd630deb50d34be4ceb764265ebcf7272669a85d",
+      "output_shape": [
+        1
+      ],
+      "padding_mask_dtype": "torch.bool",
+      "padding_mask_shape": [
+        1,
+        1,
+        64,
+        256
+      ],
+      "parameter_count": 91969,
+      "prediction_count": 1,
+      "state_layout": "DIRECT_STATE_DICT",
+      "status": "PASS",
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "thread_count_requested": 2,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 2
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": {
+        "lightgbm": "4.6.0",
+        "xgboost": "3.2.0"
+      },
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "EqualWeight(XGBClassifier,LGBMClassifier)",
+      "output_dtype": "float64",
+      "output_sha256": "82b0f54611f58adb3d687e6d006f8cf3bb94e4a973a21cd76beb3aed53efa4ea",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "thread_count_requested": 1,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "derived_input_seed": 26043,
+      "framework_version": {
+        "lightgbm": "4.6.0",
+        "xgboost": "3.2.0"
+      },
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "EqualWeight(XGBClassifier,LGBMClassifier)",
+      "output_dtype": "float64",
+      "output_sha256": "82b0f54611f58adb3d687e6d006f8cf3bb94e4a973a21cd76beb3aed53efa4ea",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "ENS_LGBM_XGB_EQUAL",
+      "thread_count_requested": 2,
+      "timing_performed": false
+    },
+    {
+      "affinity_observed": [
+        0
+      ],
+      "affinity_requested": [
+        0
+      ],
+      "batch_size": 1,
+      "checkpoint_count": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "load_receipts": [
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 7,
+          "state_layout": "model_state_dict"
+        }
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "NumericFTTransformer",
+      "output_dtype": "float32",
+      "output_sha256": "9103db5b8452f6a360b09e0ea2fdc21d41ebe0d19c034a50b0964c45c0546300",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "thread_count_requested": 1,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 1
+    },
+    {
+      "affinity_observed": [
+        0,
+        1
+      ],
+      "affinity_requested": [
+        0,
+        1
+      ],
+      "batch_size": 1,
+      "checkpoint_count": 1,
+      "derived_input_seed": 26043,
+      "framework_version": "2.10.0+cpu",
+      "gpu_used": false,
+      "hardware_mode": "CPU_2_PHYSICAL_CORE",
+      "holdout_accessed": false,
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        70
+      ],
+      "load_receipts": [
+        {
+          "load_mode": "torch.load(weights_only=True)",
+          "parameter_count": 159169,
+          "seed": 7,
+          "state_layout": "model_state_dict"
+        }
+      ],
+      "memory_profiling_performed": false,
+      "model_class": "NumericFTTransformer",
+      "output_dtype": "float32",
+      "output_sha256": "9103db5b8452f6a360b09e0ea2fdc21d41ebe0d19c034a50b0964c45c0546300",
+      "output_shape": [
+        1
+      ],
+      "prediction_count": 1,
+      "status": "PASS",
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "thread_count_requested": 2,
+      "timing_performed": false,
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 2
+    }
+  ],
+  "schema": "stage26_0d_cpu_preflight_receipt_v1",
+  "scientific_boundary_after_preflight": {
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "latency_observations": 0,
+    "memory_measurements": 0,
+    "model_deserialization_permitted": true,
+    "models_changed": false,
+    "performance_timing_performed": false,
+    "thresholds_changed": false,
+    "throughput_observations": 0,
+    "untimed_preflight_inference_performed": true
+  },
+  "stage": 26,
+  "status": "PASS",
+  "target_count": 8,
+  "worker_sha256": "248f7f3d1237cf1e8330f25f728ef4464cdbb6368f5a653ad205816e12190fb1"
+}

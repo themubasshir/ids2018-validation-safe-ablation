@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0d_cpu_preflight/stage26_0d_cpu_preflight_receipt.json",
+      "sha256": "4c7fc55a0e44e53587d385989dfec4f3f57f20768c7dd4a2d08e2936d2ba21e5",
+      "size_bytes": 21289
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0d_cpu_preflight/stage26_0d_preflight_implementation.json",
+      "sha256": "b27634363c7b38599a0c4f090d772cb2293031d7de6c8037a25a800543b1fe77",
+      "size_bytes": 1017
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0d_cpu_preflight/stage26_cpu_preflight_worker.py",
+      "sha256": "248f7f3d1237cf1e8330f25f728ef4464cdbb6368f5a653ad205816e12190fb1",
+      "size_bytes": 28657
+    }
+  ],
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "parent_protocol_commit": "f3957b964e659392c57d1b12881163288f2efedc",
+  "preflight_receipt_sha256": "4c7fc55a0e44e53587d385989dfec4f3f57f20768c7dd4a2d08e2936d2ba21e5",
+  "schema": "stage26_0d_preflight_package_manifest_v1",
+  "scientific_boundary": {
+    "gpu_used": false,
+    "holdout_accessed": false,
+    "memory_profiled": false,
+    "performance_timing_performed": false
+  },
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR_BEFORE_FIRST_CPU_TIMING"
+}

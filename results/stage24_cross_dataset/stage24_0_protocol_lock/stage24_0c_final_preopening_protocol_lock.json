@@ -1,0 +1,662 @@
+{
+  "anti_adaptation": {
+    "after_protocol_lock_commit": {
+      "family_taxonomy_change": "FORBIDDEN",
+      "feature_addition": "FORBIDDEN",
+      "feature_remapping": "FORBIDDEN",
+      "feature_removal": "FORBIDDEN",
+      "flag_mapping_search": "FORBIDDEN",
+      "grounding_tolerance_relaxation": "FORBIDDEN",
+      "label_guided_mapping": "FORBIDDEN",
+      "post_result_subset_creation": "FORBIDDEN",
+      "rescue_target": "FORBIDDEN",
+      "target_guided_hyperparameter_change": "FORBIDDEN",
+      "target_guided_imputation": "FORBIDDEN",
+      "target_guided_refit": "FORBIDDEN",
+      "target_guided_scaling": "FORBIDDEN",
+      "target_guided_threshold": "FORBIDDEN"
+    },
+    "bridge62_equals_or_beats_bridge70": "REPORT_AS_RESULTS",
+    "corrected_beats_published": "REPORT_AS_RESULTS",
+    "failed_family_transfer": "REPORT_AS_RESULTS",
+    "grounded_cohort_changes_conclusion": "REPORT_AS_RESULTS",
+    "poor_transfer": "REPORT_AS_RESULTS",
+    "published_beats_corrected": "REPORT_AS_RESULTS",
+    "unexpected_results": "REPORT_AS_RESULTS"
+  },
+  "attack_family_taxonomy": {
+    "bot": "BOT",
+    "ddos": "DDOS",
+    "dos goldeneye": "DOS",
+    "dos hulk": "DOS",
+    "dos slowhttptest": "DOS",
+    "dos slowloris": "DOS",
+    "ftp-patator": "AUTH_BRUTE_FORCE",
+    "heartbleed": "TARGET_ONLY_UNSEEN",
+    "infiltration": "INFILTRATION",
+    "portscan": "PORT_SCAN",
+    "ssh-patator": "AUTH_BRUTE_FORCE",
+    "web attack - brute force": "WEB_ATTACK",
+    "web attack - sql injection": "WEB_ATTACK",
+    "web attack - xss": "WEB_ATTACK"
+  },
+  "binary_label_rule": {
+    "all_other_nonempty_labels_binary": 1,
+    "benign_binary": 0,
+    "benign_tokens": [
+      "benign"
+    ],
+    "canonicalization": [
+      "STRIP_OUTER_WHITESPACE",
+      "NORMALIZE_UNICODE_DASHES_TO_ASCII_HYPHEN",
+      "COLLAPSE_INTERNAL_WHITESPACE",
+      "CASEFOLD_FOR_LOOKUP"
+    ],
+    "null_or_empty": "FAIL_CLOSED",
+    "target_label_values_observed_during_lock": false
+  },
+  "boosting_backend": {
+    "cpu_fallback_requires_probe_failure": true,
+    "gpu_first": true,
+    "lightgbm": "gpu",
+    "probe_artifact": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_gpu_backend_probe.json",
+    "probe_sha256": "d4607c4b21ee1317a52021188511d912012c90f6124e3c81dd4d6d624bffee66",
+    "xgboost": "cuda"
+  },
+  "bootstrap_protocol": {
+    "confidence_interval": "PERCENTILE_2.5_97.5",
+    "method": "PAIRED_STRATIFIED_ROW_BOOTSTRAP",
+    "metrics_for_paired_difference": [
+      "PR_AUC",
+      "ROC_AUC",
+      "Brier"
+    ],
+    "minimum_attack_support": 50,
+    "pairing": "SAME_RESAMPLED_ROW_INDICES_FOR_BOTH_COMPARED_PREDICTION_VECTORS",
+    "replicates": 2000,
+    "sampling": "WITH_REPLACEMENT_WITHIN_EACH_STRATUM_PRESERVING_ORIGINAL_STRATUM_SIZE",
+    "seed": 42,
+    "single_class_bootstrap_draw": "IMPOSSIBLE_BY_STRATIFIED_DESIGN_WHEN_BOTH_CLASSES_EXIST",
+    "strata": [
+      "BENIGN",
+      "ATTACK"
+    ]
+  },
+  "calibration_protocol": {
+    "metrics": {
+      "ECE": {
+        "binning": "fixed equal-width bins [0.0,0.1),...,[0.9,1.0]",
+        "bins": 10,
+        "fitted": false
+      },
+      "brier_score": "mean((p-y)^2)",
+      "log_loss": "binary cross entropy with probability clipping only for numerical log evaluation",
+      "log_loss_clip": 1e-15
+    },
+    "recalibration": "FORBIDDEN",
+    "target_fitted_calibrator": false
+  },
+  "comparison_protocol": {
+    "bridge62_flag_invariance": {
+      "comparison": "PUBLISHED_vs_FLAG_CORRECTED",
+      "expected": "BITWISE_IDENTICAL_FEATURE_MATRICES_AND_PREDICTIONS",
+      "reason": "all eight aggregate flag-count fields are absent from bridge62",
+      "violation": "IMPLEMENTATION_FAILURE"
+    },
+    "bridge70_artifact_shift": {
+      "comparison": "PUBLISHED_vs_FLAG_CORRECTED",
+      "paired": true,
+      "population": "IDENTICAL_FULL_EFFECTIVE_TARGET_ROWS",
+      "purpose": "isolate aggregate TCP-flag serialization artifact sensitivity"
+    },
+    "grounded_prediction_identity": {
+      "expected": "For the same bridge and same grounded rows, GROUNDED_S4 predictions must equal FLAG_CORRECTED full-population predictions restricted to those rows.",
+      "violation": "IMPLEMENTATION_FAILURE"
+    },
+    "grounding_selection_shift": {
+      "comparison": "FLAG_CORRECTED_FULL_vs_GROUNDED_S4",
+      "feature_semantics": "IDENTICAL_FLAG_CORRECTED_SEMANTICS",
+      "population_difference": "FULL_EFFECTIVE_vs_STAGE20_EXACT_GROUNDED_SUBSET",
+      "purpose": "isolate grounding/selection shift"
+    }
+  },
+  "created_at_utc": "2026-08-18T04:32:15.649156+00:00",
+  "execution_order": [
+    {
+      "action": "COMMIT_PUSH_REMOTE_VERIFY_STAGE24_0_PROTOCOL_LOCK",
+      "step": 1
+    },
+    {
+      "action": "PRIMARY_FULL_SOURCE_70F_SANITY_WITH_FROZEN_STAGE22_MODELS",
+      "step": 2
+    },
+    {
+      "action": "PRIMARY_BRIDGE62_SOURCE_REFIT_AND_SOURCE_VALIDATION_ONLY_THRESHOLD_SELECTION",
+      "step": 3
+    },
+    {
+      "action": "RECONSTRUCT_OR_RECOVER_GROUNDED_S4_MEMBERSHIP_USING_ONLY_FROZEN_STAGE20_EXACT_JOIN",
+      "step": 4
+    },
+    {
+      "action": "OPEN_PRIMARY_TARGET_CELLS_UNDER_FROZEN_LEDGER",
+      "step": 5
+    },
+    {
+      "action": "FREEZE_PRIMARY_RESULTS_NO_PROTOCOL_CHANGES",
+      "step": 6
+    },
+    {
+      "action": "TRAIN_SECONDARY_XGBOOST_SOURCE_MODELS_ON_CICIDS2017_MON_WED_AND_VALIDATE_THURSDAY",
+      "step": 7
+    },
+    {
+      "action": "OPEN_SECONDARY_IDS2018_FEB28_TARGET_CELLS",
+      "step": 8
+    },
+    {
+      "action": "FINAL_STAGE24_SYNTHESIS_WITH_DIRECTIONS_REPORTED_SEPARATELY",
+      "step": 9
+    }
+  ],
+  "family_policy": {
+    "below_minimum_support": "DESCRIPTIVE_ONLY",
+    "family_taxonomy_changes_after_target_label_read": "FORBIDDEN",
+    "heartbleed": "TARGET_ONLY_UNSEEN",
+    "minimum_attack_support_for_inferential_family_reporting": 50,
+    "unknown_nonbenign_family": "OTHER_ATTACK_UNSEEN_LABEL"
+  },
+  "grounded_s4": {
+    "Friday": {
+      "count_key": "holdout_matched_flows",
+      "manifest": "results/stage20_1e_training/stage20_1e4_friday_holdout_compact_corpus_manifest.json",
+      "matched_flows": 12088,
+      "matching": "EXACT_ONLY"
+    },
+    "Monday": {
+      "count_key": "supervised_matched_flows",
+      "manifest": "results/stage20_1e_training/stage20_1e1m_monday_compact_corpus_manifest.json",
+      "matched_flows": 528509,
+      "matching": "EXACT_ONLY"
+    },
+    "Thursday": {
+      "count_key": "validation_matched_flows",
+      "manifest": "results/stage20_1e_training/stage20_1e1v_thursday_validation_compact_corpus_manifest.json",
+      "matched_flows": 8197,
+      "matching": "EXACT_ONLY"
+    },
+    "Tuesday": {
+      "count_key": "supervised_matched_flows",
+      "manifest": "results/stage20_1e_training/stage20_1e1t_tuesday_compact_corpus_manifest.json",
+      "matched_flows": 4170,
+      "matching": "EXACT_ONLY"
+    },
+    "Wednesday": {
+      "count_key": "supervised_matched_flows",
+      "manifest": "results/stage20_1e_training/stage20_1e1w_wednesday_compact_corpus_manifest.json",
+      "matched_flows": 12951,
+      "matching": "EXACT_ONLY"
+    }
+  },
+  "metric_protocol": {
+    "auc_semantics": {
+      "PR_AUC": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+      "ROC_AUC": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+      "ties": "ALL_IDENTICAL_FLOAT32_SCORES_ENTER_CURVE_SIMULTANEOUSLY"
+    },
+    "average_primary_and_secondary_directions": false,
+    "co_primary_metric": "ROC_AUC",
+    "prevalence": {
+      "PR_chance_baseline": "pi",
+      "PR_excess": "PR_AUC - pi",
+      "PR_normalized": "(PR_AUC - pi) / (1 - pi) when pi < 1",
+      "formula": "n_attack / n_total",
+      "symbol": "pi"
+    },
+    "primary_metric": "PR_AUC",
+    "report_directions_separately": true,
+    "thresholded_descriptive_metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "F1",
+      "F2",
+      "FPR",
+      "FNR",
+      "TP",
+      "TN",
+      "FP",
+      "FN"
+    ]
+  },
+  "null_protocol": {
+    "source_prior_constant_predictor": {
+      "fit": false,
+      "primary_source_probability": 0.13822238293931313,
+      "secondary_source_probability": "COMPUTE_ON_FROZEN_CICIDS2017_MONDAY_WEDNESDAY_SOURCE_TRAIN_ONLY"
+    },
+    "target_prevalence_chance_anchor": {
+      "PR_AUC_anchor": "pi_target",
+      "ROC_AUC_anchor": 0.5,
+      "score_probability": "pi_target"
+    }
+  },
+  "numeric_policy": {
+    "explicit_imputation": "NONE",
+    "negative_infinity": "CONVERT_TO_NAN",
+    "other_nonnumeric_token": "FAIL_CLOSED",
+    "parse_dtype": "float64",
+    "positive_infinity": "CONVERT_TO_NAN",
+    "scaling": "NONE",
+    "target_fitted_imputer": "FORBIDDEN",
+    "target_fitted_scaler": "FORBIDDEN"
+  },
+  "opening_definition": "A target opening occurs when target feature values are first supplied to the frozen source-domain model for the corresponding direction / bridge / target-variant cell.",
+  "opening_ledger": {
+    "PRIMARY_IDS2018_TO_CICIDS2017": {
+      "bridge62": {
+        "FLAG_CORRECTED": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        },
+        "GROUNDED_S4": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        },
+        "PUBLISHED": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        }
+      },
+      "bridge70": {
+        "FLAG_CORRECTED": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        },
+        "GROUNDED_S4": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        },
+        "PUBLISHED": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        }
+      }
+    },
+    "SECONDARY_CICIDS2017_TO_IDS2018": {
+      "bridge62": {
+        "FEB28_2018": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        }
+      },
+      "bridge70": {
+        "FEB28_2018": {
+          "budget": 1,
+          "consumed": 0,
+          "status": "CLOSED"
+        }
+      }
+    }
+  },
+  "opening_summary": {
+    "all_closed": true,
+    "budget": 8,
+    "consumed": 0
+  },
+  "primary_direction": {
+    "bridge62": {
+      "ensemble": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "feature_count": 62,
+      "model": "BRIDGE_SPECIFIC_SOURCE_REFIT_OF_FROZEN_STAGE22R_PAIR",
+      "refit": true,
+      "target_feedback": false,
+      "tuning": false
+    },
+    "bridge70": {
+      "ensemble": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "feature_count": 70,
+      "model": "EXACT_INHERITED_STAGE22R_CHRONOLOGICAL_NATURAL_ENSEMBLE",
+      "refit": false
+    },
+    "direction": "IDS2018_TO_CICIDS2017",
+    "source_train": {
+      "attack": 1910043,
+      "benign": 11908580,
+      "dataset": "CSE-CIC-IDS2018",
+      "membership": "Stage22R CHRONOLOGICAL_NATURAL day_id 0..6",
+      "rows": 13818623
+    },
+    "source_validation": {
+      "attack": 62256,
+      "benign": 531524,
+      "dataset": "CSE-CIC-IDS2018",
+      "membership": "Stage22R CHRONOLOGICAL_NATURAL day_id 7 = 02-28-2018",
+      "rows": 593780
+    },
+    "target": "ALL_FIVE_CICIDS2017_DAYS_UNDER_FROZEN_EFFECTIVE_ROW_RULE",
+    "target_effective_rows_expected": 2830743
+  },
+  "provenance": {
+    "all_eight_byte_exact": true,
+    "cicids2017_exact_artifacts": 8,
+    "common_physical_schema_sha256": "63706afc6354bf72b247477956c93b921919f6d64252cefb109c63c1db7e660a",
+    "stage24_0b2_receipt": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b2_complete_cicids2017_source_contract.json",
+    "stage24_0b2_sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779"
+  },
+  "published_population": [
+    {
+      "day": "Monday",
+      "effective_rows": 529918,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 529918,
+      "remote": "traffic_labels/Monday-WorkingHours.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Tuesday",
+      "effective_rows": 445909,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 445909,
+      "remote": "traffic_labels/Tuesday-WorkingHours.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Wednesday",
+      "effective_rows": 692703,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 692703,
+      "remote": "traffic_labels/Wednesday-workingHours.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Thursday",
+      "effective_rows": 288602,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 288602,
+      "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Thursday",
+      "effective_rows": 170366,
+      "inclusion_rule": "INCLUDE_PHYSICAL_ORDINALS_1_THROUGH_170366;EXCLUDE_FROZEN_ALL_85_COLUMN_NULL_EOF_SUFFIX_170367_THROUGH_458968",
+      "physical_rows": 458968,
+      "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Friday",
+      "effective_rows": 225745,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 225745,
+      "remote": "traffic_labels/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Friday",
+      "effective_rows": 286467,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 286467,
+      "remote": "traffic_labels/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet"
+    },
+    {
+      "day": "Friday",
+      "effective_rows": 191033,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "physical_rows": 191033,
+      "remote": "traffic_labels/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet"
+    }
+  ],
+  "scientific_access_during_stage24_0c": {
+    "cicids2017_target_feature_rows_materialized": 0,
+    "cicids2017_target_labels_materialized": 0,
+    "cicids2017_target_prevalence_computed": false,
+    "cicids2017_target_row_groups_read": 0,
+    "ids2018_target_rows_read_for_secondary": 0,
+    "scientific_model_fits": 0,
+    "synthetic_gpu_probe_only": true,
+    "target_metrics": 0,
+    "target_model_predictions": 0,
+    "target_openings_consumed": 0
+  },
+  "scientific_fit_budget": {
+    "additional_fit_budget": 0,
+    "grand_total": 4,
+    "hyperparameter_search": 0,
+    "primary_IDS2018_to_CICIDS2017": {
+      "bridge62_lightgbm": 1,
+      "bridge62_xgboost": 1,
+      "bridge70_lightgbm": 0,
+      "bridge70_xgboost": 0,
+      "total": 2
+    },
+    "secondary_CICIDS2017_to_IDS2018": {
+      "bridge62_xgboost": 1,
+      "bridge70_xgboost": 1,
+      "total": 2
+    },
+    "synthetic_backend_probes_count_as_scientific_fits": false,
+    "target_guided_refits": 0
+  },
+  "scientific_parent": {
+    "repository_head": "963b2da0043c7438624916280de154a5628f8879",
+    "required_prelock_head": "963b2da0043c7438624916280de154a5628f8879"
+  },
+  "secondary_direction": {
+    "bridge62_fit": 1,
+    "bridge70_fit": 1,
+    "direction": "CICIDS2017_TO_IDS2018",
+    "hyperparameter_search": false,
+    "learner": "XGBOOST_ONLY",
+    "learner_configuration": "INHERIT_STAGE22R_XGB_11",
+    "mar01_status": "CLOSED_NOT_RESCUE_TARGET",
+    "mar02_status": "CLOSED_NOT_RESCUE_TARGET",
+    "source_train_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "source_unused_days": [
+      "Friday"
+    ],
+    "source_validation_days": [
+      "Thursday"
+    ],
+    "target": "IDS2018_02-28-2018",
+    "target_expected_clean_rows": 593780,
+    "target_feedback": false,
+    "target_stage22_clean_membership": "day_id 7"
+  },
+  "semantic_bridge": {
+    "artifact": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.json",
+    "bridge62_feature_count": 62,
+    "bridge70_feature_count": 70,
+    "sha256": "b7ff1d8563aafc69145be3acc827fbc59ae75d880b9804bad727f408299fce2f"
+  },
+  "source_sanity": {
+    "integrity_gates_only": [
+      "FEATURE_ORDER_EXACT",
+      "EXPECTED_DIMENSION",
+      "MODEL_LOAD_OR_FIT_SUCCESS",
+      "PREDICTION_VECTOR_LENGTH_EXACT",
+      "PROBABILITIES_NUMERIC_OR_EXPLICIT_NAN_FAILURE",
+      "NO_TARGET_FEEDBACK"
+    ],
+    "low_source_performance_rule": "REPORT_AS_RESULT; DO_NOT CHANGE MODEL, FEATURES, THRESHOLD GRID, OR TARGET EXECUTION PLAN",
+    "primary_bridge62_source": {
+      "model": "frozen-hyperparameter Stage22 LGBM+XGB refit",
+      "performance_based_stop": false,
+      "representation": "bridge62",
+      "validation": "same Stage22 CHRONOLOGICAL_NATURAL day_id 7"
+    },
+    "primary_full_source": {
+      "model": "exact frozen Stage22 ensemble",
+      "performance_based_stop": false,
+      "representation": "Stage22 exact 70F",
+      "validation": "Stage22 CHRONOLOGICAL_NATURAL day_id 7"
+    },
+    "sequence": [
+      "FULL_SOURCE",
+      "BRIDGE_SOURCE",
+      "CROSS_DATASET_TARGET"
+    ]
+  },
+  "stage": "Stage24-0C",
+  "target_inference_authorization": {
+    "current_status": "FORBIDDEN",
+    "next_required_gate": "STAGE24_0D_COMMIT_PUSH_REMOTE_VERIFY",
+    "reason": "Protocol lock has been written locally but has not yet been committed, pushed, and remotely verified."
+  },
+  "target_variants": {
+    "FLAG_CORRECTED": {
+      "effective_rows_expected": 2830743,
+      "feature_semantics": "STAGE20_1C8_SOURCE_DERIVED_FLAG_SERIALIZATION_CORRECTION",
+      "population": "SAME_FULL_EFFECTIVE_CICIDS2017_POPULATION_AS_PUBLISHED"
+    },
+    "GROUNDED_S4": {
+      "expected_matched_flow_count_from_frozen_stage20_manifests": 565915,
+      "feature_semantics": "FLAG_CORRECTED",
+      "membership_rule": "REUSE_EXACT_ROW_MEMBERSHIP_IF_BYTE_VERIFIABLE; OTHERWISE REPLAY FROZEN_STAGE20_EXACT_JOIN USING EXACT_PINNED_PCAPS; NO APPROXIMATION",
+      "population": "STAGE20_EXACT_SOURCE_FAITHFUL_GROUNDED_MATCHED_SUBSET"
+    },
+    "PUBLISHED": {
+      "effective_rows_expected": 2830743,
+      "feature_semantics": "PUBLISHED_LITERAL_HEADERS",
+      "population": "FULL_EFFECTIVE_CICIDS2017_POPULATION"
+    }
+  },
+  "threshold_protocol": {
+    "balanced": {
+      "comparisons": "EXACT_RATIONAL_FROM_CONFUSION_COUNTS",
+      "objective": "MAXIMUM_VALIDATION_F1",
+      "tie_break_order": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "CLOSER_TO_0_50",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "grid_integer_percent": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "runtime_threshold": "integer_percent / 100.0 cast consistently with persisted probabilities",
+    "security": {
+      "constraint": "FPR_LE_0_05",
+      "constraint_comparison": "EXACT_RATIONAL_FP_OVER_FP_PLUS_TN_LE_1_OVER_20",
+      "if_none": "UNAVAILABLE_NO_RELAXATION",
+      "objective": "MAXIMUM_VALIDATION_F2",
+      "tie_break_order": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "selection_data": "SOURCE_VALIDATION_ONLY",
+    "standard": {
+      "selection": "FIXED_DESCRIPTIVE",
+      "threshold_integer_percent": 50
+    },
+    "target_threshold_recalibration": "FORBIDDEN",
+    "target_threshold_search": "FORBIDDEN"
+  },
+  "thursday_ingestion_erratum": {
+    "classification": "NON_RECORD_STRUCTURAL_NULL_PADDING",
+    "effective_morning_record_ordinals": "1..170366",
+    "excluded_morning_physical_ordinals": "170367..458968",
+    "inherited": true,
+    "rule_frozen_before_stage24_target_read": true
+  },
+  "type": "FINAL_PRE_TARGET_OPENING_PROTOCOL_LOCK"
+}

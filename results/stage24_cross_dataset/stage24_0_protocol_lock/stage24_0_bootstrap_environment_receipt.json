@@ -1,0 +1,339 @@
+{
+  "artifact": "bootstrap_environment_receipt",
+  "bridge_compatibility": {
+    "bridge62_compatibility": "UNRESOLVED",
+    "bridge70_compatibility": "UNRESOLVED",
+    "important": "Numerical equality of feature counts does not establish semantic bridge compatibility.",
+    "stage22_feature_count": 70,
+    "stage22_feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ]
+  },
+  "created_utc": "2026-08-18T03:53:26.375141+00:00",
+  "inherited_artifacts": {
+    "stage20_flag_correction": {
+      "exists": true,
+      "path": "results/stage20_flag_serialization_correction/stage20_1c8_flag_serialization_correction.json",
+      "size_bytes": 3566
+    },
+    "stage20_s4_localization": {
+      "exists": true,
+      "path": "results/stage20_jnetpcap_forensic/stage20_1c10_residual_corrected_s4_localization.json",
+      "size_bytes": 3918
+    },
+    "stage20_s4_pilot": {
+      "exists": true,
+      "path": "results/stage20_jnetpcap_forensic/stage20_1c9_corrected_historical_exact_s4_pilot.json",
+      "size_bytes": 1664
+    },
+    "stage22_chronological_lightgbm": {
+      "exists": true,
+      "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_lightgbm_model.txt",
+      "size_bytes": 4990442
+    },
+    "stage22_chronological_result": {
+      "exists": true,
+      "path": "results/stage22r_training/stage22r_2c_chronological_natural/stage22r_2c_chronological_natural_result.json",
+      "size_bytes": 8932
+    },
+    "stage22_chronological_xgboost": {
+      "exists": true,
+      "path": "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_xgboost_model.json",
+      "size_bytes": 1607301
+    },
+    "stage23_behavior_only_features": {
+      "exists": true,
+      "path": "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/behavior_only_features.json",
+      "size_bytes": 1666
+    },
+    "stage23_feature_subset_spec": {
+      "exists": true,
+      "path": "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/feature_subset_spec.json",
+      "size_bytes": 15493
+    },
+    "stage23_final_closure": {
+      "exists": true,
+      "path": "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/stage23_final_closure_receipt.json",
+      "size_bytes": 3239
+    }
+  },
+  "kaggle_input_inventory": [
+    {
+      "dataset_mount": "datasets",
+      "file_count": 30,
+      "files": [
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv",
+          "size_bytes": 114122375
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/additional_baseline_model_results.csv",
+          "size_bytes": 530
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/cnn_baseline_result.csv",
+          "size_bytes": 243
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/final_model_comparison_with_threshold.csv",
+          "size_bytes": 918
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/random_forest_results.csv",
+          "size_bytes": 291
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/xgboost_threshold_results.csv",
+          "size_bytes": 1137
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/final_selected_xgboost_threshold_030.csv",
+          "size_bytes": 314
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/all_csv_label_summary.csv",
+          "size_bytes": 1169
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/final_multifile_xgboost_shap_top_20_features.csv",
+          "size_bytes": 536
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/processing_summary_small_files.csv",
+          "size_bytes": 586
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/lstm_baseline_result.csv",
+          "size_bytes": 241
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/mlp_baseline_result.csv",
+          "size_bytes": 242
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/xgboost_shap_top_15_features.csv",
+          "size_bytes": 403
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/full_baseline_model_comparison.csv",
+          "size_bytes": 755
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/model_comparison_results.csv",
+          "size_bytes": 744
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/processed_files_summary.csv",
+          "size_bytes": 1199
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/final_multi_file_xgboost_threshold_results.csv",
+          "size_bytes": 1106
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/results/xgboost_selected_threshold_045.csv",
+          "size_bytes": 315
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/models/final_xgboost_ids_model.pkl",
+          "size_bytes": 773138
+        },
+        {
+          "relative_path": "datasets/jmmubasshirrahman/ai-ids-research-kaggle/data/processed/merged_balanced_ids2018_safe.csv",
+          "size_bytes": 114122375
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-28-2018.csv",
+          "size_bytes": 209249758
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/03-01-2018.csv",
+          "size_bytes": 107842858
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-16-2018.csv",
+          "size_bytes": 333723605
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-15-2018.csv",
+          "size_bytes": 375945899
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-21-2018.csv",
+          "size_bytes": 328893673
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/03-02-2018.csv",
+          "size_bytes": 352368373
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-22-2018.csv",
+          "size_bytes": 382636202
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-20-2018.csv",
+          "size_bytes": 4054925350
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-14-2018.csv",
+          "size_bytes": 358223333
+        },
+        {
+          "relative_path": "datasets/solarmainframe/ids-intrusion-csv/02-23-2018.csv",
+          "size_bytes": 382840456
+        }
+      ],
+      "total_bytes": 7115678124,
+      "total_gib": 6.626992
+    }
+  ],
+  "next_authorized_activity": "Stage24-0 schema/provenance inspection sufficient to construct bridge62/bridge70 and identify PUBLISHED / FLAG_CORRECTED / GROUNDED_S4 sources. No target model inference.",
+  "prohibitions_observed": {
+    "csv_rows_read": 0,
+    "model_fits": 0,
+    "model_predictions": 0,
+    "parquet_rows_read": 0,
+    "stage24_target_openings": 0,
+    "target_feature_values_read": 0,
+    "target_metrics_computed": 0,
+    "target_threshold_searches": 0
+  },
+  "repository": {
+    "branch": "main",
+    "expected_starting_head": "963b2da0043c7438624916280de154a5628f8879",
+    "head": "963b2da0043c7438624916280de154a5628f8879",
+    "name": "ids2018-validation-safe-ablation",
+    "owner": "themubasshir",
+    "working_tree_clean_at_bootstrap": true
+  },
+  "runtime": {
+    "boosting_backend_policy_prospective": {
+      "catboost": "PREFER_GPU_TASK_TYPE_IF_USED_AND_SUPPORTED",
+      "gpu_names": [
+        "Tesla T4",
+        "Tesla T4"
+      ],
+      "hardware_gpu_detected": true,
+      "lightgbm": "PROBE_GPU_BACKEND_AFTER_STAGE24_0_BACKEND_POLICY_IS_FROZEN; USE_GPU_IF_SUPPORTED; CPU_ONLY_IF_GPU_CAPABILITY_PROBE_FAILS",
+      "policy": "GPU_FIRST_WHEN_SUPPORTED",
+      "scientific_note": "Compute backend changes must not alter frozen scientific hyperparameters, memberships, threshold semantics, or target policy.",
+      "xgboost": "PREFER_CUDA_IF_BUILD_AND_RUNTIME_SUPPORT_IT"
+    },
+    "gpu_available": true,
+    "gpu_names": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "versions": {
+      "catboost": "1.2.10",
+      "lightgbm": "4.6.0",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "pyarrow": "24.0.0",
+      "python": "3.12.13",
+      "sklearn": "1.6.1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "stage": "Stage24-0",
+  "status": "PROSPECTIVE_PROTOCOL_CONSTRUCTION_ONLY",
+  "target_governance": {
+    "definition_prospective": "A target is opened when its feature values are first supplied to a frozen source-domain model for prediction/evaluation.",
+    "ledger": {
+      "2017_to_2018": {
+        "bridge62": {
+          "feb28": "0/1"
+        },
+        "bridge70": {
+          "feb28": "0/1"
+        }
+      },
+      "2018_to_2017": {
+        "bridge62": {
+          "flag_corrected": "0/1",
+          "grounded_s4": "0/1",
+          "published": "0/1"
+        },
+        "bridge70": {
+          "flag_corrected": "0/1",
+          "grounded_s4": "0/1",
+          "published": "0/1"
+        }
+      },
+      "status": "PROSPECTIVE_NOT_YET_FROZEN"
+    },
+    "target_inference_allowed": false,
+    "target_openings_consumed": 0
+  }
+}

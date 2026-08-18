@@ -1,0 +1,58 @@
+{
+  "created_at_utc": "2026-08-18T04:32:15.648303+00:00",
+  "lightgbm": {
+    "attempted_gpu": true,
+    "exception": null,
+    "gpu_pass": true
+  },
+  "scientific_fit_budget_consumed": 0,
+  "scientific_fit_count": 0,
+  "scientific_lightgbm_parameters": {
+    "boosting_type": "gbdt",
+    "colsample_bytree": 1.0,
+    "device_type": "gpu",
+    "learning_rate": 0.06,
+    "max_depth": 12,
+    "min_child_samples": 20,
+    "n_estimators": 400,
+    "n_jobs": -1,
+    "num_leaves": 127,
+    "objective": "binary",
+    "random_state": 42,
+    "reg_alpha": 0.0,
+    "reg_lambda": 3.0,
+    "subsample": 0.9,
+    "subsample_freq": 1,
+    "verbosity": -1
+  },
+  "scientific_parent_head": "963b2da0043c7438624916280de154a5628f8879",
+  "scientific_xgboost_parameters": {
+    "colsample_bytree": 1.0,
+    "device": "cuda",
+    "eval_metric": "logloss",
+    "gamma": 0.0,
+    "learning_rate": 0.06,
+    "max_depth": 7,
+    "min_child_weight": 1,
+    "n_estimators": 400,
+    "n_jobs": -1,
+    "objective": "binary:logistic",
+    "random_state": 42,
+    "reg_alpha": 0.0,
+    "reg_lambda": 3.0,
+    "subsample": 0.9,
+    "tree_method": "hist"
+  },
+  "selected_scientific_lightgbm_backend": "gpu",
+  "selected_scientific_xgboost_device": "cuda",
+  "stage": "Stage24-0C",
+  "synthetic_only": true,
+  "target_labels_used": 0,
+  "target_rows_used": 0,
+  "type": "SYNTHETIC_ONLY_GPU_BACKEND_CAPABILITY_PROBE",
+  "xgboost": {
+    "attempted_cuda": true,
+    "cuda_pass": true,
+    "exception": null
+  }
+}

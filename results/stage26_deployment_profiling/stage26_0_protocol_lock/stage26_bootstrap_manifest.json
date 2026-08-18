@@ -1,0 +1,83 @@
+{
+  "cpu": {
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "logical_cores": 4,
+    "physical_cores": 2,
+    "ram_available_gib": 29.673,
+    "ram_total_gib": 31.348
+  },
+  "gpu": {
+    "devices": [],
+    "gpu_present": false,
+    "nvidia_smi_available": false
+  },
+  "kaggle_inputs": [
+    {
+      "dataset": "datasets",
+      "file_count": 29,
+      "path": "/kaggle/input/datasets",
+      "total_gib": 6.5207
+    }
+  ],
+  "packages": {
+    "catboost": "1.2.10",
+    "joblib": "1.5.3",
+    "lightgbm": "4.6.0",
+    "matplotlib": "3.10.0",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "psutil": "5.9.5",
+    "scipy": "1.16.3",
+    "sklearn": "1.6.1",
+    "tensorflow": "2.20.0",
+    "torch": "2.10.0+cpu",
+    "xgboost": "3.2.0"
+  },
+  "repository": {
+    "branch": "main",
+    "clean": true,
+    "head_sha": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+    "name": "ids2018-validation-safe-ablation",
+    "origin_main_sha": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+    "owner": "themubasshir",
+    "path": "/kaggle/working/ids2018-validation-safe-ablation",
+    "url": "https://github.com/themubasshir/ids2018-validation-safe-ablation.git"
+  },
+  "runtime": {
+    "hostname": "dcfe416d3de5",
+    "kaggle_input_exists": true,
+    "kaggle_working_exists": true,
+    "machine": "x86_64",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "python_executable": "/usr/bin/python3",
+    "stage": 26,
+    "timestamp_utc": "2026-08-18T16:34:03.945801+00:00",
+    "working_directory": "/kaggle/working"
+  },
+  "schema": "stage26_bootstrap_v1",
+  "scientific_status": "BOOTSTRAP_ONLY__NO_PROFILING_RESULTS_OBSERVED",
+  "stage": 26,
+  "stage26_design_boundary": {
+    "feature_extraction_profiling_started": false,
+    "model_profiling_started": false,
+    "pareto_analysis_started": false,
+    "protocol_frozen": false,
+    "timing_started": false
+  },
+  "timestamp_utc": "2026-08-18T16:36:33.821708+00:00",
+  "torch": {
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_count": 0,
+    "devices": [],
+    "version": "2.10.0+cpu"
+  }
+}

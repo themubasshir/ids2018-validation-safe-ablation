@@ -1,0 +1,59 @@
+{
+  "design_boundary": {
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "inference_executed": false,
+    "latency_measured": false,
+    "measurement_protocol_frozen": false,
+    "memory_profiled": false,
+    "models_deserialized": false,
+    "models_loaded": false
+  },
+  "ft_transformer": {
+    "architecture": {
+      "candidate_id": "FT_BALANCED",
+      "d_ff": 256,
+      "d_token": 64,
+      "dropout": 0.1,
+      "learning_rate": 0.0005,
+      "n_heads": 8,
+      "n_layers": 3,
+      "weight_decay": 1e-05
+    },
+    "candidate_id": "FT_BALANCED",
+    "checkpoint_seeds": [
+      7,
+      29,
+      101,
+      313,
+      997
+    ],
+    "ensemble_method": "unweighted arithmetic mean probabilities",
+    "final_predictor": "five_checkpoint_soft_voting_ensemble",
+    "input_predictor_count": 70,
+    "resource_representative_seed": 7
+  },
+  "repository_head": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+  "schema": "stage26_0b_resolution_record_v1",
+  "scientific_status": "ARTIFACT_AND_COMPARABILITY_RESOLUTION_COMPLETE",
+  "stage": 26,
+  "stage16": {
+    "comparability_decision": "RETRAIN_CLASSICAL_MODELS_ON_EXACT_DUPLICATE_SAFE_SPLIT",
+    "final_operational_strategy": "ENS_LGBM_XGB_EQUAL",
+    "primary_classical_ids": [
+      "XGBOOST",
+      "LIGHTGBM",
+      "CATBOOST"
+    ]
+  },
+  "stage20_stage21": {
+    "comparison_role": "LOCKED_FRIDAY_REUSE_BENCHMARK_NON_CONFIRMATORY",
+    "friday_population": {
+      "attack": 5602,
+      "benign": 6486,
+      "flows": 12088,
+      "pairing": "EXACT_SAME_FRIDAY_COMPACT_CORPUS_EXPORT_ORDER"
+    },
+    "representation": "64x256x1_FROZEN_STAGE20_PACKET_IMAGE"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "excluded_discovered_families": [
+    {
+      "family": "MLP",
+      "reason": "Discovered during 0A but not part of the predeclared Stage26 six-family profiling plan. Do not add after discovery without a separate pre-measurement amendment.",
+      "stage26_primary": false
+    },
+    {
+      "family": "Graph Transformer",
+      "reason": "Different representation and scientific population; cannot be placed on either primary Stage26 frontier without a separately defined comparable protocol.",
+      "stage26_primary": false
+    },
+    {
+      "family": "M-Temporal / temporal neural models",
+      "reason": "Different temporal representation and experiment family; not part of the frozen Stage26 architecture set.",
+      "stage26_primary": false
+    },
+    {
+      "family": "Other Stage16 classical candidates",
+      "reason": "Not part of the predeclared Stage26 XGB/LGBM/CatBoost architecture subset.",
+      "stage26_primary": false
+    }
+  ],
+  "operational_references": {
+    "ENS_LGBM_XGB_EQUAL": {
+      "count_as_architecture_family": false,
+      "holdout_pr_auc": 0.947391385608797,
+      "members": [
+        "STAGE16_LIGHTGBM_TUNED",
+        "STAGE16_XGBOOST_TUNED"
+      ],
+      "profile_in_stage26": true,
+      "reason": "Stage16 final frozen operational strategy. Profile its actual deployment cost as an operational reference, but do not use it to inflate the six-family architecture candidate count.",
+      "role": "FINAL_STAGE16_OPERATIONAL_CLASSICAL_STRATEGY",
+      "threshold": 0.46,
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": {
+      "count_as_architecture_family": false,
+      "eligible_for_predictive_pareto": false,
+      "profile_in_stage26": true,
+      "reason": "Allows Stage26 to distinguish one FT forward-pass cost from the actual five-checkpoint ensemble deployment cost.",
+      "representative_seed": 7,
+      "role": "RESOURCE_DECOMPOSITION_ONLY",
+      "selection_rule": "Lowest numerical seed in the already frozen five-checkpoint confirmation set; selected without consulting performance."
+    }
+  },
+  "primary_model_universe": [
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_model",
+      "family": "XGBoost",
+      "model_id": "STAGE16_XGBOOST_TUNED",
+      "profile_role": "PRIMARY"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_model",
+      "family": "LightGBM",
+      "model_id": "STAGE16_LIGHTGBM_TUNED",
+      "profile_role": "PRIMARY"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_model",
+      "family": "CatBoost",
+      "model_id": "STAGE16_CATBOOST_TUNED",
+      "profile_role": "PRIMARY"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "five_checkpoint_soft_voting",
+      "family": "FT-Transformer",
+      "model_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "profile_role": "PRIMARY"
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "deployment_unit": "single_model",
+      "family": "CNN",
+      "model_id": "STAGE20_MASKED_CNN_V1",
+      "profile_role": "PRIMARY"
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "deployment_unit": "single_model",
+      "family": "ViT",
+      "model_id": "STAGE21_MASKED_VIT_V1",
+      "profile_role": "PRIMARY"
+    }
+  ],
+  "repository_head": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+  "schema": "stage26_candidate_registry_v1",
+  "stage": 26,
+  "status": "RESOLVED_NOT_YET_MEASUREMENT_FROZEN"
+}

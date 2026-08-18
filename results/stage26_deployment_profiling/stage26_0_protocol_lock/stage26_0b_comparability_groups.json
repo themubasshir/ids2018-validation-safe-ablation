@@ -1,0 +1,37 @@
+{
+  "global_rule": "NO CROSS-GROUP PARETO FRONTIER. Discrimination values from different frozen populations must not be plotted as directly comparable.",
+  "groups": {
+    "GROUP_A_DUPSAFE70": {
+      "cross_group_pareto_allowed": false,
+      "members": [
+        "STAGE16_XGBOOST_TUNED",
+        "STAGE16_LIGHTGBM_TUNED",
+        "STAGE16_CATBOOST_TUNED",
+        "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+      ],
+      "metric_source_rule": "Only discrimination values evaluated on the same frozen population may share a Pareto frontier.",
+      "name": "Duplicate-safe 70-feature tabular / FT comparison",
+      "population_semantics": "Stage15 duplicate-safe train/validation/holdout partition inherited exactly by Stage16 classical benchmark.",
+      "predictor_count": 70,
+      "primary_pareto_allowed": true
+    },
+    "GROUP_B_PACKET_IMAGE": {
+      "claim_boundary": "DESCRIPTIVE / NON-CONFIRMATORY ARCHITECTURE BENCHMARK",
+      "cross_group_pareto_allowed": false,
+      "friday_attack": 5602,
+      "friday_benign": 6486,
+      "friday_rows": 12088,
+      "members": [
+        "STAGE20_MASKED_CNN_V1",
+        "STAGE21_MASKED_VIT_V1"
+      ],
+      "name": "Stage20/21 packet-image CNN vs ViT",
+      "population_semantics": "Exact same Friday compact corpus export order; locked reuse benchmark.",
+      "primary_pareto_allowed": true,
+      "representation": "64x256x1_FROZEN_STAGE20_PACKET_IMAGE"
+    }
+  },
+  "repository_head": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+  "schema": "stage26_comparability_groups_v1",
+  "stage": 26
+}

@@ -1,0 +1,74 @@
+{
+  "cpu_execution_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+  "file_count_excluding_manifest": 11,
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/cpu_execution_plan.json",
+      "sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+      "size_bytes": 35893
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/measurement_protocol.json",
+      "sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+      "size_bytes": 21872
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_candidate_registry.json",
+      "sha256": "610172f5324d81dccf40d536c9c4a7a22953404dfb67a4c5bf4d197610ca608a",
+      "size_bytes": 3585
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_comparability_groups.json",
+      "sha256": "44d54cfa97360a094a6c86cb3e5d447875ebe79f0a0e5232b96b174abcf459ca",
+      "size_bytes": 1551
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_required_dependencies.csv",
+      "sha256": "3fae673a5e8c0ec6ef35528aad58206b40c5b84917fac8316ea80de08cc036ff",
+      "size_bytes": 937
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_resolution_record.json",
+      "sha256": "6f71ed6a347321a50df11e660399e9d2ec19711b219861642acdc26b6f1ffdca",
+      "size_bytes": 1637
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_resolved_artifacts.csv",
+      "sha256": "bb73dd1c63ab78942cea9eba9c1d1bc9d278cb3ae4963e8c7410b37ef8d270ad",
+      "size_bytes": 6959
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0c_protocol_freeze_record.json",
+      "sha256": "95c1cc93c377d8f017de24e67f6fc04e192babdce4a32244df9741b5465191dc",
+      "size_bytes": 1052
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_artifact_inventory.csv",
+      "sha256": "b12f8ebe6d1b29f439457a6cabe023a5e6a2bb55e09b84ef71bbdd82bba353c3",
+      "size_bytes": 213080
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_bootstrap_manifest.json",
+      "sha256": "9659e61ecd3f14ba512a308c5d1d8088c124c63f8292f9ef6506e066d90b896a",
+      "size_bytes": 2202
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_kaggle_input_inventory.csv",
+      "sha256": "32414f147f3cb027e529d2021a921b5bb191fca0f6321a0e013a7be8126db85b",
+      "size_bytes": 3477
+    }
+  ],
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "protocol_freeze_record_sha256": "95c1cc93c377d8f017de24e67f6fc04e192babdce4a32244df9741b5465191dc",
+  "repository_parent_head": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+  "schema": "stage26_0c_package_manifest_v1",
+  "scientific_boundary": {
+    "gpu_used": false,
+    "inference_executed": false,
+    "latency_measured": false,
+    "memory_measured": false,
+    "models_loaded": false
+  },
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR_BEFORE_FIRST_MEASUREMENT"
+}

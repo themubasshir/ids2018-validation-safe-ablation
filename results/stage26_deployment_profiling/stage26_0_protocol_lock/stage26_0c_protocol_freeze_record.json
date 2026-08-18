@@ -1,0 +1,26 @@
+{
+  "cpu_execution_plan": {
+    "path": "/kaggle/working/stage26_deployment_profiling/protocol/cpu_execution_plan.json",
+    "sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363"
+  },
+  "frozen_at_utc": "2026-08-18T17:18:31.658320+00:00",
+  "measurement_protocol": {
+    "path": "/kaggle/working/stage26_deployment_profiling/protocol/measurement_protocol.json",
+    "sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625"
+  },
+  "next_action": "GIT_ANCHOR_AND_REMOTE_VERIFY_BEFORE_ANY_MODEL_LOAD_OR_TIMING",
+  "repository_head": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+  "schema": "stage26_0c_protocol_freeze_record_v1",
+  "scientific_boundary": {
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "models_deserialized": false,
+    "models_loaded_for_stage26": false,
+    "stage26_extraction_measurements": 0,
+    "stage26_inference_calls": 0,
+    "stage26_memory_measurements": 0,
+    "stage26_timing_observations": 0
+  },
+  "stage": 26,
+  "status": "FROZEN_BEFORE_FIRST_RESOURCE_MEASUREMENT"
+}

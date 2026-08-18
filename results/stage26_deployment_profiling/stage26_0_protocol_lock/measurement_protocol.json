@@ -1,0 +1,585 @@
+{
+  "artifact_identity_records": [
+    {
+      "name": "Stage20 CNN",
+      "repo_relative_path": "results/stage20_1e_training/stage20_1e2_epoch10_model_state_dict.pt",
+      "sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b",
+      "size_bytes": 376879
+    },
+    {
+      "name": "Stage21 ViT",
+      "repo_relative_path": "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt",
+      "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8",
+      "size_bytes": 378999
+    },
+    {
+      "name": "Stage20 encoder",
+      "repo_relative_path": "scripts/stage20_packet_image_encoder.py",
+      "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+      "size_bytes": 4883
+    },
+    {
+      "name": "Stage15 scaler",
+      "repo_relative_path": "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+      "sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5",
+      "size_bytes": 2295
+    }
+  ],
+  "cold_start_protocol": {
+    "components": [
+      "process_spawn_to_worker_ready_ms",
+      "framework_import_ms",
+      "model_deserialization_load_ms",
+      "first_prediction_ms",
+      "spawn_to_first_output_ms"
+    ],
+    "input_policy": "A frozen batch-size-1 deterministic Stage26 synthetic input is used for first prediction.",
+    "jit_policy": "Any first-call framework/JIT initialization belongs to first_prediction_ms and cold total. It is excluded only from warm steady-state timing after frozen warmup.",
+    "primary_cold_condition": "CPU_1_PHYSICAL_CORE",
+    "process_semantics": "Each repetition launches a fresh Python interpreter using subprocess exec semantics. multiprocessing fork reuse is forbidden.",
+    "repetitions": 20
+  },
+  "cpu_topology": {
+    "allowed_logical_cpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "execution_modes": {
+      "CPU_1_PHYSICAL_CORE": {
+        "affinity": [
+          0
+        ],
+        "batch_sizes": [
+          1,
+          64,
+          256,
+          1024,
+          8192
+        ],
+        "role": "PRIMARY_CPU_EFFICIENCY_BASELINE",
+        "thread_count": 1
+      },
+      "CPU_2_PHYSICAL_CORE": {
+        "affinity": [
+          0,
+          1
+        ],
+        "batch_sizes": [
+          1,
+          64,
+          256,
+          1024,
+          8192
+        ],
+        "role": "SECONDARY_SERVER_THROUGHPUT_CONDITION",
+        "thread_count": 2
+      }
+    },
+    "physical_core_representatives": [
+      0,
+      1
+    ],
+    "topology_resolution": "SYSFS_PHYSICAL_CORE_MAPPING",
+    "topology_rows": [
+      {
+        "core_id": 0,
+        "logical_cpu": 0,
+        "physical_package_id": 0
+      },
+      {
+        "core_id": 1,
+        "logical_cpu": 1,
+        "physical_package_id": 0
+      },
+      {
+        "core_id": 0,
+        "logical_cpu": 2,
+        "physical_package_id": 0
+      },
+      {
+        "core_id": 1,
+        "logical_cpu": 3,
+        "physical_package_id": 0
+      }
+    ]
+  },
+  "environment_and_failure_protocol": {
+    "no_post_result_adaptation": [
+      "no model substitution",
+      "no threshold retuning",
+      "no architecture change",
+      "no batch-size replacement",
+      "no selective warmup extension",
+      "no selective iteration extension",
+      "no selective thread-count change",
+      "no dropping slow models because they are slow"
+    ],
+    "precondition_gate": {
+      "available_ram_gib_min": 8.0,
+      "cpu_utilization_percent_max": 20.0,
+      "cpu_utilization_sampling_seconds": 1.0,
+      "if_gate_never_passes": "INVALID_ENVIRONMENT; do not silently benchmark.",
+      "retry_cooldown_seconds": 5,
+      "retry_count": 3
+    },
+    "resource_failure": {
+      "backend_unavailable": "Record BACKEND_UNAVAILABLE. Do not retrain, convert, or substitute another model.",
+      "out_of_memory": "Record RESOURCE_LIMIT_OOM. Do not reduce batch size post hoc for that condition.",
+      "serialization_incompatible": "Block affected target. A narrowly scoped compatibility adapter may be written only if it does not change artifact bytes, model parameters, input representation, or measurement policy.",
+      "timeout": "Record TIMEOUT_RESOURCE_LIMIT after 600 seconds. Do not alter iteration counts post hoc."
+    }
+  },
+  "extraction_protocol_gate": {
+    "inference_results_may_select_pcap": false,
+    "metrics_required": [
+      "packets_per_second",
+      "bytes_per_second",
+      "MiB_per_second",
+      "flows_per_second"
+    ],
+    "pcap_required_before_extraction_timing": true,
+    "required_before_first_extraction_measurement": [
+      "exact PCAP source",
+      "PCAP SHA256",
+      "PCAP byte size",
+      "packet count or exact packet bounds",
+      "sampling rule",
+      "disk_IO_included_boolean",
+      "serialization_included_boolean",
+      "JVM_startup_included_boolean",
+      "Python_process_startup_included_boolean",
+      "exact extractor versions"
+    ],
+    "scientific_rule": "No extraction timing may begin until a separate stage26_extraction_protocol.json is frozen. That subprotocol may not be chosen using Stage26 latency results.",
+    "status": "FROZEN_GATE_NOT_YET_EXECUTED"
+  },
+  "frozen_at_utc": "2026-08-18T17:18:31.658320+00:00",
+  "gpu_handoff_protocol": {
+    "backend_policy": "Benchmark only already-valid officially supported GPU inference execution paths. If a frozen model family has no valid GPU inference path in the runtime, record BACKEND_UNAVAILABLE. Do not retrain or convert merely to force GPU support.",
+    "gpu_batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "gpu_iteration_policy": {
+      "1": {
+        "role": "LATENCY_PRIMARY",
+        "timed_runs": 200,
+        "warmup_runs": 50
+      },
+      "64": {
+        "role": "MICROBATCH",
+        "timed_runs": 150,
+        "warmup_runs": 30
+      },
+      "256": {
+        "role": "MICROBATCH",
+        "timed_runs": 100,
+        "warmup_runs": 20
+      },
+      "1024": {
+        "role": "THROUGHPUT",
+        "timed_runs": 50,
+        "warmup_runs": 10
+      },
+      "8192": {
+        "role": "THROUGHPUT_STRESS",
+        "timed_runs": 20,
+        "warmup_runs": 5
+      }
+    },
+    "gpu_memory_rules": [
+      "baseline allocated/reserved",
+      "post-load allocated/reserved",
+      "peak allocated during inference",
+      "process-visible GPU memory where available"
+    ],
+    "gpu_session_requirements": [
+      "fresh session bootstrap",
+      "clone exact CPU-stage Git commit",
+      "verify this measurement_protocol.json SHA256",
+      "verify candidate registry SHA256",
+      "verify model/checkpoint SHA256 values",
+      "record exact GPU name",
+      "record GPU UUID if available",
+      "record driver version",
+      "record CUDA runtime/build",
+      "record framework versions"
+    ],
+    "gpu_timing_rule": "GPU work must be synchronized immediately before timer start and immediately before timer stop. Asynchronous launch timing without synchronization is invalid.",
+    "gpu_work_occurs_after_cpu_phase": true,
+    "protocol_mutation_after_gpu_results": false,
+    "reason": "Kaggle accelerator switch resets the session; CPU work must be fully persisted and git-anchored before enabling GPU."
+  },
+  "hypotheses_not_protocol_truths": [
+    "feature extraction may or may not dominate",
+    "tree models may or may not dominate",
+    "CNN may or may not be Pareto dominated",
+    "ViT may or may not be Pareto dominated",
+    "GPU may or may not materially improve deployment cost"
+  ],
+  "input_protocol": {
+    "GROUP_A_DUPSAFE70": {
+      "base_seed": 26042,
+      "construction": {
+        "ft_transformer_input": "Use Z as the already-scaled FT-Transformer model input.",
+        "scaled_matrix_Z": "Z ~ Normal(0,1), deterministic from frozen seed derived from batch size.",
+        "shared_rows_rule": "At each batch size, trees and FT-Transformer derive their inputs from the exact same underlying Z rows.",
+        "tree_input_X_raw": "X_raw = scaler.mean_ + Z * scaler.scale_. This preserves Stage15 training-feature scale without labels or holdout access."
+      },
+      "dtype": "float32",
+      "generator": "DETERMINISTIC_SCALER_GEOMETRY_SYNTHETIC",
+      "predictor_count": 70,
+      "rng": "numpy.random.default_rng_PCG64",
+      "scaler": {
+        "path": "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+        "sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5"
+      }
+    },
+    "GROUP_B_PACKET_IMAGE": {
+      "base_seed": 26042,
+      "channels": 1,
+      "encoder": {
+        "path": "scripts/stage20_packet_image_encoder.py",
+        "required_functions": [
+          "mask_ipv4_packet",
+          "encode_flow",
+          "scale_for_model"
+        ],
+        "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222"
+      },
+      "generator": "DETERMINISTIC_SYNTHETIC_IPV4_FLOW_ENCODER",
+      "model_boundary": {
+        "exact_forward_inputs": "Worker must use the original frozen architecture's required forward signature. If padding mask is required, it is passed exactly; if not required, it is not added.",
+        "image_scaling": "float32(image) / 255.0",
+        "padding_mask_preserved": true
+      },
+      "model_dtype": "float32",
+      "packet_image_cols": 256,
+      "packet_image_rows": 64,
+      "packet_recipe": {
+        "fragment_offset": 0,
+        "ihl_bytes": 20,
+        "ip_version": 4,
+        "packet_count_per_flow": "Deterministically sampled integer in [1,64].",
+        "packet_length_bytes": "Deterministically sampled integer in [40,256].",
+        "payload_bytes": "Deterministic pseudo-random uint8 values.",
+        "protocol": "Deterministic TCP/UDP mixture; protocol values 6 and 17."
+      },
+      "rng": "numpy.random.default_rng_PCG64"
+    },
+    "general": {
+      "data_dependent_model_selection": false,
+      "holdout_rows_used_for_model_timing": false,
+      "input_generation_timed_as_inference": false,
+      "labels_used": false,
+      "reason": "Model-only inference profiling must isolate execution cost from feature/preprocessing cost and must not reopen a predictive holdout solely for benchmarking."
+    }
+  },
+  "measurement_order": {
+    "cpu_condition_count": 80,
+    "cpu_execution_plan_seed": 26042,
+    "order_randomized_before_results": true
+  },
+  "memory_protocol": {
+    "cpu_metrics": {
+      "baseline_rss": "RSS after required framework imports and input preparation, before model load.",
+      "delta_model_rss": "loaded_rss - baseline_rss",
+      "delta_peak_rss": "peak_rss - baseline_rss",
+      "loaded_rss": "RSS after model load and before inference.",
+      "peak_rss": "Maximum sampled process RSS during memory-only inference run.",
+      "ru_maxrss": "Recorded descriptively inside the isolated process."
+    },
+    "fresh_process_per_repetition": true,
+    "max_worker_ram_fraction": 0.85,
+    "package_size": {
+      "deployment_package_size": "Sum of model/checkpoint artifacts plus model-specific required preprocessing/configuration/architecture artifacts. Generic Python/framework installation size is excluded.",
+      "serialized_model_size": "Actual immutable model/checkpoint bytes on disk."
+    },
+    "repetitions": 5,
+    "rss_sampling_interval_ms": 5,
+    "timing_and_memory_runs_separate": true
+  },
+  "next_permitted_actions": [
+    "Create durable Stage26-0C git commit containing this protocol lock and execution plan.",
+    "Push and verify the protocol commit remotely.",
+    "Only after remote verification: run Stage26 CPU execution preflight without timing.",
+    "Only after preflight passes: begin randomized CPU profiling."
+  ],
+  "no_expected_conclusion_frozen": true,
+  "pareto_protocol": {
+    "GROUP_A_DUPSAFE70": {
+      "eligible_primary_members": [
+        "STAGE16_XGBOOST_TUNED",
+        "STAGE16_LIGHTGBM_TUNED",
+        "STAGE16_CATBOOST_TUNED",
+        "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+      ],
+      "primary_cost_axis": "CPU_1_PHYSICAL_CORE batch1 p95 inference latency",
+      "primary_discrimination_axis": "Same-population frozen PR-AUC"
+    },
+    "GROUP_B_PACKET_IMAGE": {
+      "claim_boundary": "DESCRIPTIVE_NON_CONFIRMATORY",
+      "eligible_primary_members": [
+        "STAGE20_MASKED_CNN_V1",
+        "STAGE21_MASKED_VIT_V1"
+      ],
+      "primary_cost_axis": "CPU_1_PHYSICAL_CORE batch1 p95 inference latency",
+      "primary_discrimination_axis": "Same-Friday-population frozen PR-AUC"
+    },
+    "dominance_rule": {
+      "A_dominates_B_if": "A PR-AUC >= B PR-AUC and A p95 latency <= B p95 latency, with at least one strict inequality.",
+      "frontier_status": "Descriptive point-estimate frontier; bootstrap uncertainty reported separately."
+    },
+    "global_rule": "NO CROSS-GROUP PARETO FRONTIER.",
+    "operational_references": {
+      "ENS_LGBM_XGB_EQUAL": "May be shown as operational reference but does not increase architecture-family candidate count.",
+      "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": "Resource decomposition only; excluded from predictive Pareto."
+    }
+  },
+  "profile_targets": [
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_model",
+      "family": "XGBoost",
+      "role": "PRIMARY_ARCHITECTURE",
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_model",
+      "family": "LightGBM",
+      "role": "PRIMARY_ARCHITECTURE",
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_model",
+      "family": "CatBoost",
+      "role": "PRIMARY_ARCHITECTURE",
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "five_checkpoint_soft_voting",
+      "family": "FT-Transformer",
+      "role": "PRIMARY_ARCHITECTURE",
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "deployment_unit": "single_model",
+      "family": "CNN",
+      "role": "PRIMARY_ARCHITECTURE",
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "deployment_unit": "single_model",
+      "family": "ViT",
+      "role": "PRIMARY_ARCHITECTURE",
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "equal_weight_two_model_soft_voting",
+      "family": "Classical Ensemble",
+      "role": "OPERATIONAL_REFERENCE",
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "deployment_unit": "single_checkpoint_seed7",
+      "family": "FT-Transformer",
+      "role": "RESOURCE_DECOMPOSITION_REFERENCE",
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    }
+  ],
+  "repository_head_before_stage26_protocol_commit": "f9307d5f7a4c8fd53886d66b3e5f8e74a65d87c6",
+  "runtime_at_freeze": {
+    "gpu_present": false,
+    "logical_cpu_count_psutil": 4,
+    "physical_cpu_count_psutil": 2,
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "total_ram_gib": 31.34774398803711
+  },
+  "schema": "stage26_measurement_protocol_v1",
+  "scientific_boundary_at_freeze": {
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "models_deserialized": false,
+    "models_loaded_for_stage26": false,
+    "stage26_extraction_measurements": 0,
+    "stage26_inference_calls": 0,
+    "stage26_memory_measurements": 0,
+    "stage26_timing_observations": 0
+  },
+  "scientific_success_criterion": "Stage 26 succeeds when every frozen architecture receives a reproducible resource profile under the same declared hardware and measurement semantics, feature-extraction cost is explicitly separated from inference cost, and Pareto claims are restricted to scientifically comparable evaluation populations.",
+  "stage": 26,
+  "statistics_protocol": {
+    "bootstrap": {
+      "enabled": true,
+      "interval": "PERCENTILE_95_PERCENT",
+      "replicates": 2000,
+      "rng": "numpy.random.default_rng_PCG64",
+      "seed": 26042
+    },
+    "bootstrap_targets": [
+      "p50_latency",
+      "p95_latency",
+      "p99_latency_when_n_gte_100",
+      "median_throughput"
+    ],
+    "maximum_policy": "Maximum latency is descriptive only and is not used for Pareto dominance.",
+    "raw_timing_retention": {
+      "format": "CSV plus optional NPY mirror",
+      "minimum_columns": [
+        "target_id",
+        "hardware_mode",
+        "batch_size",
+        "iteration_index",
+        "elapsed_ns",
+        "flows_per_second"
+      ],
+      "required": true
+    }
+  },
+  "status": "FROZEN_BEFORE_FIRST_STAGE26_RESOURCE_MEASUREMENT",
+  "thread_policy": {
+    "backend_thread_rules": {
+      "catboost": "thread_count = frozen thread count for CPU prediction",
+      "lightgbm": "num_threads = frozen thread count where mutable for inference",
+      "pytorch_interop": 1,
+      "pytorch_intraop": "frozen thread count",
+      "xgboost": "n_jobs = frozen thread_count where mutable for inference"
+    },
+    "environment_keys": [
+      "OMP_NUM_THREADS",
+      "MKL_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "NUMEXPR_NUM_THREADS",
+      "BLIS_NUM_THREADS",
+      "VECLIB_MAXIMUM_THREADS"
+    ],
+    "smt_policy": "Affinity uses one logical CPU per distinct physical core where sysfs topology is available.",
+    "worker_rule": "Every benchmark worker sets each supported thread environment variable to the frozen condition thread_count before importing numerical/ML frameworks."
+  },
+  "timing_protocol": {
+    "clock": {
+      "cpu": "time.perf_counter_ns",
+      "raw_unit": "nanoseconds",
+      "raw_values_retained": true
+    },
+    "cpu_inference_rules": {
+      "catboost": {
+        "model_conversion_forbidden": true,
+        "native_loaded_artifact_only": true,
+        "training_forbidden": true
+      },
+      "lightgbm": {
+        "model_conversion_forbidden": true,
+        "native_loaded_artifact_only": true,
+        "training_forbidden": true
+      },
+      "torch": {
+        "autograd": false,
+        "input_prepared_before_timer": true,
+        "model_eval": true,
+        "torch_inference_mode": true
+      },
+      "xgboost": {
+        "model_conversion_forbidden": true,
+        "native_loaded_artifact_only": true,
+        "training_forbidden": true
+      }
+    },
+    "ensemble_rules": {
+      "ENS_LGBM_XGB_EQUAL": "Operational classical ensemble latency includes both LightGBM and XGBoost probability generation plus equal-weight probability averaging.",
+      "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING": "Primary FT latency includes all five checkpoint forward passes plus unweighted arithmetic probability averaging.",
+      "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": "Single seed-7 checkpoint only; resource decomposition only; not eligible for predictive Pareto claims."
+    },
+    "timed_boundary": {
+      "T_decision": "Threshold application is excluded from primary T_infer. It may be recorded separately as descriptive decision overhead.",
+      "T_end_to_end": "T_extract + T_preprocess + T_infer, only where the extraction pipeline is scientifically compatible.",
+      "T_infer": "Prepared model input -> materialized attack probability output.",
+      "T_preprocess": "Required model-boundary transforms only. Measured separately from inference."
+    }
+  },
+  "upstream_stage26_hashes": {
+    "stage26_0b_candidate_registry.json": "610172f5324d81dccf40d536c9c4a7a22953404dfb67a4c5bf4d197610ca608a",
+    "stage26_0b_comparability_groups.json": "44d54cfa97360a094a6c86cb3e5d447875ebe79f0a0e5232b96b174abcf459ca",
+    "stage26_0b_required_dependencies.csv": "3fae673a5e8c0ec6ef35528aad58206b40c5b84917fac8316ea80de08cc036ff",
+    "stage26_0b_resolution_record.json": "6f71ed6a347321a50df11e660399e9d2ec19711b219861642acdc26b6f1ffdca",
+    "stage26_0b_resolved_artifacts.csv": "bb73dd1c63ab78942cea9eba9c1d1bc9d278cb3ae4963e8c7410b37ef8d270ad",
+    "stage26_artifact_inventory.csv": "b12f8ebe6d1b29f439457a6cabe023a5e6a2bb55e09b84ef71bbdd82bba353c3",
+    "stage26_bootstrap_manifest.json": "9659e61ecd3f14ba512a308c5d1d8088c124c63f8292f9ef6506e066d90b896a",
+    "stage26_kaggle_input_inventory.csv": "32414f147f3cb027e529d2021a921b5bb191fca0f6321a0e013a7be8126db85b"
+  },
+  "warm_protocol": {
+    "batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "condition_timeout_seconds": 600,
+    "cooldown_seconds_between_conditions": 2,
+    "iteration_policy": {
+      "1": {
+        "role": "LATENCY_PRIMARY",
+        "timed_runs": 200,
+        "warmup_runs": 50
+      },
+      "64": {
+        "role": "MICROBATCH",
+        "timed_runs": 150,
+        "warmup_runs": 30
+      },
+      "256": {
+        "role": "MICROBATCH",
+        "timed_runs": 100,
+        "warmup_runs": 20
+      },
+      "1024": {
+        "role": "THROUGHPUT",
+        "timed_runs": 50,
+        "warmup_runs": 10
+      },
+      "8192": {
+        "role": "THROUGHPUT_STRESS",
+        "timed_runs": 20,
+        "warmup_runs": 5
+      }
+    },
+    "p99_policy": "p99 is a primary tail statistic only for conditions with at least 100 timed observations. It may not be promoted from the 20- or 50-sample large-batch conditions.",
+    "primary_latency_condition": {
+      "batch_size": 1,
+      "hardware_mode": "CPU_1_PHYSICAL_CORE",
+      "tail_statistics": [
+        "p50",
+        "p95",
+        "p99"
+      ]
+    },
+    "reported_distribution_metrics": [
+      "mean",
+      "standard_deviation",
+      "coefficient_of_variation",
+      "p50",
+      "p95",
+      "p99_if_timed_sample_count_gte_100",
+      "maximum_descriptive_only"
+    ],
+    "throughput_metrics": [
+      "batch_latency_seconds",
+      "amortized_latency_per_flow_seconds",
+      "flows_per_second"
+    ]
+  }
+}

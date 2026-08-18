@@ -1,0 +1,329 @@
+{
+  "anti_adaptation": {
+    "new_fit": false,
+    "performance_based_change": false,
+    "target_calibration": false,
+    "target_feature_remapping": false,
+    "target_feature_search": false,
+    "target_guided_refit": false,
+    "target_imputation_fit": false,
+    "target_scaling_fit": false,
+    "target_threshold_search": false
+  },
+  "bridge": "bridge70",
+  "created_at_utc": "2026-08-18T11:25:32.504278+00:00",
+  "direction": "CICIDS2017_TO_IDS2018",
+  "metrics": {
+    "calibration": {
+      "brier": 0.10565203888025433,
+      "ece_10": 0.10567180388463461,
+      "ece_bins": [
+        {
+          "absolute_gap": 0.1047339712122653,
+          "bin": 0,
+          "count": 592631,
+          "empirical_rate": 0.10498438319966387,
+          "mean_probability": 0.00025041198739857086
+        },
+        {
+          "absolute_gap": 0.1389014344248507,
+          "bin": 1,
+          "count": 90,
+          "empirical_rate": 0.011111111111111112,
+          "mean_probability": 0.1500125455359618
+        },
+        {
+          "absolute_gap": 0.17960494961924184,
+          "bin": 2,
+          "count": 167,
+          "empirical_rate": 0.0658682634730539,
+          "mean_probability": 0.24547321309229572
+        },
+        {
+          "absolute_gap": 0.3400236727650633,
+          "bin": 3,
+          "count": 97,
+          "empirical_rate": 0.020618556701030927,
+          "mean_probability": 0.3606422294660942
+        },
+        {
+          "absolute_gap": 0.42737293799044723,
+          "bin": 4,
+          "count": 59,
+          "empirical_rate": 0.01694915254237288,
+          "mean_probability": 0.4443220905328201
+        },
+        {
+          "absolute_gap": 0.5118162442337383,
+          "bin": 5,
+          "count": 88,
+          "empirical_rate": 0.045454545454545456,
+          "mean_probability": 0.5572707896882837
+        },
+        {
+          "absolute_gap": 0.626972976131974,
+          "bin": 6,
+          "count": 107,
+          "empirical_rate": 0.028037383177570093,
+          "mean_probability": 0.6550103593095441
+        },
+        {
+          "absolute_gap": 0.6950029149288084,
+          "bin": 7,
+          "count": 82,
+          "empirical_rate": 0.04878048780487805,
+          "mean_probability": 0.7437834027336865
+        },
+        {
+          "absolute_gap": 0.8249506238219027,
+          "bin": 8,
+          "count": 154,
+          "empirical_rate": 0.032467532467532464,
+          "mean_probability": 0.8574181562894351
+        },
+        {
+          "absolute_gap": 0.9191953731364891,
+          "bin": 9,
+          "count": 305,
+          "empirical_rate": 0.02622950819672131,
+          "mean_probability": 0.9454248813332105
+        }
+      ],
+      "log_loss": 1.439947759289421
+    },
+    "null_anchors": {
+      "secondary_source_prior_constant_predictor": {
+        "brier": 0.09686571105584083,
+        "fit_on_target": false,
+        "pr_auc": 0.10484691299808009,
+        "probability": 0.1597256267492943,
+        "probability_source": "CICIDS2017_MONDAY_WEDNESDAY_SOURCE_TRAIN_ONLY",
+        "roc_auc": 0.5
+      },
+      "target_prevalence_chance_anchor": {
+        "brier": 0.09385403783285312,
+        "pr_auc_anchor": 0.10484691299808009,
+        "probability": 0.10484691299808009,
+        "roc_auc_anchor": 0.5
+      }
+    },
+    "primary": {
+      "pr_auc": 0.10741914378003477,
+      "pr_excess": 0.0025722307819546764,
+      "pr_normalized": 0.002873509368737908,
+      "prevalence_chance_anchor": 0.10484691299808009,
+      "roc_auc": 0.5253021473786115
+    },
+    "thresholded": {
+      "balanced": {
+        "accuracy": 0.8934605409410893,
+        "f1": 0.0011999305303377172,
+        "f2": 0.0007596809340077168,
+        "fn": 62218,
+        "fnr": 0.9993896170650218,
+        "fp": 1043,
+        "fpr": 0.001962282041826898,
+        "precision": 0.03515263644773358,
+        "recall": 0.0006103829349781547,
+        "threshold": 0.18000000715255737,
+        "tn": 530481,
+        "tp": 38
+      },
+      "security": {
+        "accuracy": 0.8929990905722658,
+        "f1": 0.0016028411144459985,
+        "f2": 0.0010183502725584553,
+        "fn": 62205,
+        "fnr": 0.999180801850424,
+        "fp": 1330,
+        "fpr": 0.002502238845282621,
+        "precision": 0.036929761042722664,
+        "recall": 0.0008191981495759444,
+        "threshold": 0.05000000074505806,
+        "tn": 530194,
+        "tp": 51
+      },
+      "standard": {
+        "accuracy": 0.8939944087035603,
+        "f1": 0.000762001524003048,
+        "f2": 0.0004804612427930814,
+        "fn": 62232,
+        "fnr": 0.9996144949884348,
+        "fp": 712,
+        "fpr": 0.0013395444043918995,
+        "precision": 0.03260869565217391,
+        "recall": 0.00038550501156515033,
+        "threshold": 0.5,
+        "tn": 530812,
+        "tp": 24
+      }
+    }
+  },
+  "model": {
+    "boosted_rounds": 400,
+    "bridge": "bridge70",
+    "execution_device": "cpu",
+    "feature_count": 70,
+    "learner": "XGBOOST_ONLY",
+    "model_file": "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4b_bridge70_xgboost/secondary_bridge70_xgboost_model.json",
+    "model_sha256": "c8e658832e1f4a389bccbf32a00f1677463b0c9b4a8070965cc7d3a98c409621",
+    "source_domain": "CICIDS2017",
+    "source_semantics": "FLAG_CORRECTED"
+  },
+  "next_authorized_step": "STAGE24_6_SECONDARY_PAIRED_BOOTSTRAP_AND_FINAL_SYNTHESIS",
+  "opening_accounting": {
+    "administratively_cancelled": 2,
+    "budget": 8,
+    "consumed": 6,
+    "remaining_evaluable": 0,
+    "unused_cancelled_slots_reallocated": false
+  },
+  "paired_secondary_comparison_readiness": {
+    "binary_labels_identical": true,
+    "bootstrap_performed": false,
+    "bridge62_artifact": "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5a_bridge62_ids2018_feb28/secondary_bridge62_ids2018_feb28_predictions.npz",
+    "bridge62_artifact_sha256": "a4fdb7c0d8b7f92065664d879c62174b854a2d8832cac627c985458c5f857671",
+    "bridge62_probability_sha256": "4c7cc6af61b8c4813c9241d526b6a473e46e4f69a058305eceb7fb4c30621640",
+    "bridge70_artifact": "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5b_bridge70_ids2018_feb28/secondary_bridge70_ids2018_feb28_predictions.npz",
+    "bridge70_artifact_sha256": "47ce16eeab4d2d059148a68388d624a62f4b524f429eb7dcbb8ba4b21fd0b5c1",
+    "bridge70_probability_sha256": "badf2e99f7b6a2aad9687ca30a2056271d18b47f089d29093151f6331adf8c3b",
+    "clean_positions_identical": true,
+    "frozen_bootstrap_replicates": 2000,
+    "frozen_bootstrap_seed": 42,
+    "original_row_locators_identical": true,
+    "paired_rows": 593780
+  },
+  "parent_commit": "e09ff89f582f972a9641705f0850a9ba99516902",
+  "prediction": {
+    "artifact": "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5b_bridge70_ids2018_feb28/secondary_bridge70_ids2018_feb28_predictions.npz",
+    "artifact_sha256": "47ce16eeab4d2d059148a68388d624a62f4b524f429eb7dcbb8ba4b21fd0b5c1",
+    "inference_seconds": 2.6675851345062256,
+    "probability_array_sha256": "badf2e99f7b6a2aad9687ca30a2056271d18b47f089d29093151f6331adf8c3b",
+    "storage_dtype": "float32"
+  },
+  "representation": {
+    "explicit_imputation": "NONE",
+    "feature_count": 70,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "input_dtype": "float64",
+    "nan_cells_after_conversion": 7936,
+    "negative_infinity_to_nan": 0,
+    "positive_infinity_to_nan": 6085,
+    "scaling": "NONE",
+    "stage24_5a_70f_matrix_bitwise_identity": true,
+    "stage24_5a_expected_target_70f_matrix_sha256": "97d0e4406b07b563b062b68b26676a57f36584befce00d4c0c9b71fe73a6ca33",
+    "target_70f_matrix_sha256": "97d0e4406b07b563b062b68b26676a57f36584befce00d4c0c9b71fe73a6ca33"
+  },
+  "scientific_fit_accounting": {
+    "additional_fits_authorized": 0,
+    "budget": 4,
+    "completed": 4,
+    "remaining": 0
+  },
+  "stage": "Stage24-5B",
+  "status": "SECONDARY_BRIDGE70_IDS2018_FEB28_TARGET_OPENING_COMPLETE",
+  "target": "IDS2018_02-28-2018",
+  "target_opening": {
+    "administratively_cancelled": 2,
+    "consumed_after": 6,
+    "consumed_before": 5,
+    "new_scientific_fits": 0,
+    "opening_consumed_at_utc": "2026-08-18T11:25:27.882689+00:00",
+    "opening_number": 6,
+    "original_budget": 8,
+    "remaining_evaluable": 0
+  },
+  "target_population": {
+    "attack": 62256,
+    "benign": 531524,
+    "binary_label_sha256": "17369d505c1ce11f425a7c14c7552c95b39aad3492ae643c31f43a8a66a35177",
+    "canonical_row_order": "clean_position ASC; day_id=7; original_zero_based_row_index ASC after frozen K79 exclusions",
+    "clean_position_sha256": "d8a090f4c1667d62dd81de1ce8be9b0d68062adc2799c67fb7b55ad74a1f8b9b",
+    "dataset": "CSE-CIC-IDS2018",
+    "file": "02-28-2018.csv",
+    "membership_source": "STAGE24_5A_PERSISTED_CANONICAL_ROW_LOCATORS",
+    "original_row_index_sha256": "374de0e9d74040581ddc5977fd4c78f8f8959df610d20d1775415f10f3e92dfc",
+    "prevalence": 0.10484691299808009,
+    "raw_source_sha256": "f15e2a12304446058a0186c8ad67de2bd15735a9ba5c70c9a1f4c4242ab06771",
+    "rows": 593780,
+    "stage24_5a_prediction_artifact_sha256": "a4fdb7c0d8b7f92065664d879c62174b854a2d8832cac627c985458c5f857671"
+  },
+  "threshold_provenance": {
+    "IDS2018_target_threshold_search": false,
+    "balanced": 0.18000000715255737,
+    "security": 0.05000000074505806,
+    "selection_dataset": "CICIDS2017_THURSDAY_SOURCE_VALIDATION",
+    "standard": 0.5
+  }
+}

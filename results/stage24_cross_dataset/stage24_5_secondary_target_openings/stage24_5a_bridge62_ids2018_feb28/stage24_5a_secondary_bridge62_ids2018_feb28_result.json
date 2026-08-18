@@ -1,0 +1,311 @@
+{
+  "anti_adaptation": {
+    "new_fit": false,
+    "performance_based_change": false,
+    "target_calibration": false,
+    "target_feature_remapping": false,
+    "target_feature_search": false,
+    "target_guided_refit": false,
+    "target_imputation_fit": false,
+    "target_scaling_fit": false,
+    "target_threshold_search": false
+  },
+  "bootstrap": {
+    "frozen_replicates": 2000,
+    "frozen_seed": 42,
+    "performed": false,
+    "reason": "Frozen paired bridge62-vs-bridge70 secondary comparison is deferred until target opening #6 is durable."
+  },
+  "bridge": "bridge62",
+  "created_at_utc": "2026-08-18T11:19:42.635768+00:00",
+  "direction": "CICIDS2017_TO_IDS2018",
+  "metrics": {
+    "calibration": {
+      "brier": 0.10575815701309532,
+      "ece_10": 0.10570118012777417,
+      "ece_bins": [
+        {
+          "absolute_gap": 0.10465517119180916,
+          "bin": 0,
+          "count": 592441,
+          "empirical_rate": 0.10499779724900876,
+          "mean_probability": 0.0003426260571996104
+        },
+        {
+          "absolute_gap": 0.08279163088268182,
+          "bin": 1,
+          "count": 254,
+          "empirical_rate": 0.051181102362204724,
+          "mean_probability": 0.13397273324488654
+        },
+        {
+          "absolute_gap": 0.2296376781804221,
+          "bin": 2,
+          "count": 42,
+          "empirical_rate": 0.023809523809523808,
+          "mean_probability": 0.2534472019899459
+        },
+        {
+          "absolute_gap": 0.29426306284762715,
+          "bin": 3,
+          "count": 148,
+          "empirical_rate": 0.08108108108108109,
+          "mean_probability": 0.37534414392870824
+        },
+        {
+          "absolute_gap": 0.4530130207538605,
+          "bin": 4,
+          "count": 75,
+          "empirical_rate": 0.013333333333333334,
+          "mean_probability": 0.4663463540871938
+        },
+        {
+          "absolute_gap": 0.5509669931538134,
+          "bin": 5,
+          "count": 83,
+          "empirical_rate": 0.0,
+          "mean_probability": 0.5509669931538134
+        },
+        {
+          "absolute_gap": 0.6173880329035749,
+          "bin": 6,
+          "count": 99,
+          "empirical_rate": 0.04040404040404041,
+          "mean_probability": 0.6577920733076154
+        },
+        {
+          "absolute_gap": 0.7167340307904964,
+          "bin": 7,
+          "count": 114,
+          "empirical_rate": 0.02631578947368421,
+          "mean_probability": 0.7430498202641805
+        },
+        {
+          "absolute_gap": 0.8061708562714713,
+          "bin": 8,
+          "count": 175,
+          "empirical_rate": 0.045714285714285714,
+          "mean_probability": 0.851885141985757
+        },
+        {
+          "absolute_gap": 0.9266258985401908,
+          "bin": 9,
+          "count": 349,
+          "empirical_rate": 0.025787965616045846,
+          "mean_probability": 0.9524138641562366
+        }
+      ],
+      "log_loss": 1.4277148191526683
+    },
+    "null_anchors": {
+      "secondary_source_prior_constant_predictor": {
+        "brier": 0.09686571105584083,
+        "fit_on_target": false,
+        "pr_auc": 0.10484691299808009,
+        "probability": 0.1597256267492943,
+        "probability_source": "CICIDS2017_MONDAY_WEDNESDAY_SOURCE_TRAIN_ONLY",
+        "roc_auc": 0.5
+      },
+      "target_prevalence_chance_anchor": {
+        "brier": 0.09385403783285312,
+        "pr_auc_anchor": 0.10484691299808009,
+        "probability": 0.10484691299808009,
+        "roc_auc_anchor": 0.5
+      }
+    },
+    "primary": {
+      "pr_auc": 0.10817592573968819,
+      "pr_excess": 0.0033290127416081006,
+      "pr_normalized": 0.0037189311972969387,
+      "prevalence_chance_anchor": 0.10484691299808009,
+      "roc_auc": 0.5251666999050302
+    },
+    "thresholded": {
+      "balanced": {
+        "accuracy": 0.8934218060561151,
+        "f1": 0.0011994949494949494,
+        "f2": 0.0007596110791274868,
+        "fn": 62218,
+        "fnr": 0.9993896170650218,
+        "fp": 1066,
+        "fpr": 0.0020055538414069734,
+        "precision": 0.034420289855072464,
+        "recall": 0.0006103829349781547,
+        "threshold": 0.17000000178813934,
+        "tn": 530458,
+        "tp": 38
+      },
+      "security": {
+        "accuracy": 0.8925831115901512,
+        "f1": 0.002627052384675528,
+        "f2": 0.00167518885760097,
+        "fn": 62172,
+        "fnr": 0.998650732459522,
+        "fp": 1610,
+        "fpr": 0.0030290259706052783,
+        "precision": 0.049586776859504134,
+        "recall": 0.0013492675404780262,
+        "threshold": 0.05000000074505806,
+        "tn": 529914,
+        "tp": 84
+      },
+      "standard": {
+        "accuracy": 0.8938529421671326,
+        "f1": 0.0007609867461475046,
+        "f2": 0.0004802997070171787,
+        "fn": 62232,
+        "fnr": 0.9996144949884348,
+        "fp": 796,
+        "fpr": 0.0014975805419886966,
+        "precision": 0.02926829268292683,
+        "recall": 0.00038550501156515033,
+        "threshold": 0.5,
+        "tn": 530728,
+        "tp": 24
+      }
+    }
+  },
+  "model": {
+    "boosted_rounds": 400,
+    "bridge": "bridge62",
+    "execution_device": "cpu",
+    "feature_count": 62,
+    "learner": "XGBOOST_ONLY",
+    "model_file": "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4a_bridge62_xgboost/secondary_bridge62_xgboost_model.json",
+    "model_sha256": "8040bc7909429736c95ca396ebebf18636ce5d1f5c2232d12042c6ffadd47c5d",
+    "source_domain": "CICIDS2017"
+  },
+  "next_authorized_step": "STAGE24_5B_SECONDARY_BRIDGE70_IDS2018_FEB28_TARGET_OPENING",
+  "opening_accounting": {
+    "administratively_cancelled": 2,
+    "budget": 8,
+    "consumed": 5,
+    "next_evaluable_cell": "SECONDARY_BRIDGE70_IDS2018_FEB28",
+    "remaining_evaluable": 1
+  },
+  "parent_commit": "1390cf5c3f2a5c6ec6c20cf486ca6ee6c84d4769",
+  "prediction": {
+    "artifact": "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5a_bridge62_ids2018_feb28/secondary_bridge62_ids2018_feb28_predictions.npz",
+    "artifact_sha256": "a4fdb7c0d8b7f92065664d879c62174b854a2d8832cac627c985458c5f857671",
+    "inference_seconds": 3.7926881313323975,
+    "probability_array_sha256": "4c7cc6af61b8c4813c9241d526b6a473e46e4f69a058305eceb7fb4c30621640",
+    "storage_dtype": "float32"
+  },
+  "representation": {
+    "explicit_imputation": "NONE",
+    "feature_count": 62,
+    "feature_order": [
+      "Dst Port",
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "input_dtype": "float64",
+    "negative_infinity": "CONVERT_TO_NAN",
+    "positive_infinity": "CONVERT_TO_NAN",
+    "scaling": "NONE",
+    "target_70f_matrix_sha256": "97d0e4406b07b563b062b68b26676a57f36584befce00d4c0c9b71fe73a6ca33",
+    "target_70f_nan_cells": 7936,
+    "target_bridge62_matrix_sha256": "344be3db5f638b75feea23073f4a6d8f502f74bdec00ade4f1fc8d6b99853aa3",
+    "target_bridge62_nan_cells": 7936
+  },
+  "scientific_fit_accounting": {
+    "additional_fits_authorized": 0,
+    "budget": 4,
+    "completed": 4,
+    "remaining": 0
+  },
+  "stage": "Stage24-5A",
+  "status": "SECONDARY_BRIDGE62_IDS2018_FEB28_TARGET_OPENING_COMPLETE",
+  "target": "IDS2018_02-28-2018",
+  "target_opening": {
+    "consumed_after": 5,
+    "consumed_before": 4,
+    "new_scientific_fits": 0,
+    "opening_consumed_at_utc": "2026-08-18T11:19:36.988941+00:00",
+    "opening_number": 5,
+    "original_budget": 8,
+    "primary_grounded_cells_cancelled_before_opening": 2
+  },
+  "target_population": {
+    "attack": 62256,
+    "benign": 531524,
+    "binary_label_sha256": "17369d505c1ce11f425a7c14c7552c95b39aad3492ae643c31f43a8a66a35177",
+    "canonical_row_order": "clean_position ASC; day_id=7; original_zero_based_row_index ASC after frozen K79 exclusions",
+    "clean_position_sha256": "d8a090f4c1667d62dd81de1ce8be9b0d68062adc2799c67fb7b55ad74a1f8b9b",
+    "dataset": "CSE-CIC-IDS2018",
+    "file": "02-28-2018.csv",
+    "materialization_mode": "RECONSTRUCTED_FROM_BYTE_EXACT_RAW_PLUS_FROZEN_K79",
+    "materialization_source": "/kaggle/input/datasets/solarmainframe/ids-intrusion-csv/02-28-2018.csv",
+    "original_row_index_sha256": "374de0e9d74040581ddc5977fd4c78f8f8959df610d20d1775415f10f3e92dfc",
+    "prevalence": 0.10484691299808009,
+    "raw_source_expected_sha256": "f15e2a12304446058a0186c8ad67de2bd15735a9ba5c70c9a1f4c4242ab06771",
+    "rows": 593780,
+    "stage22r_day07_cache_expected_sha256": "3ab933a7988af562f49f63b8975882b7c66e843e9c4b967a38d5d875d062f62b"
+  },
+  "threshold_provenance": {
+    "IDS2018_target_threshold_search": false,
+    "balanced": 0.17000000178813934,
+    "security": 0.05000000074505806,
+    "selection_dataset": "CICIDS2017_THURSDAY_SOURCE_VALIDATION",
+    "standard": 0.5
+  }
+}

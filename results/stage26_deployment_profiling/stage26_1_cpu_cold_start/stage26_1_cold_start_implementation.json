@@ -1,0 +1,43 @@
+{
+  "affinity": [
+    0
+  ],
+  "batch_size": 1,
+  "checkpoint": "STAGE26-1",
+  "clock": "time.perf_counter_ns",
+  "component_boundaries": {
+    "first_prediction_ns": "Prepared model input to materialized attack probability. Includes ensemble member forwards and probability averaging for frozen ensemble targets.",
+    "framework_import_ns": "Imports required numerical/model framework(s), frozen architecture module(s), thread setup, and packet encoder module where required.",
+    "input_preparation_ns": "Supplementary diagnostic only: deterministic B=1 synthetic input construction. Not part of primary model-load or first-prediction component.",
+    "model_deserialization_load_ns": "Frozen model construction/deserialization, state restoration, eval mode, and frozen inference thread configuration where model-specific.",
+    "parent_process_total_ns": "Supplementary diagnostic: parent launch timestamp through worker process termination and stdout collection.",
+    "process_spawn_to_worker_ready_ns": "Parent perf_counter_ns immediately before subprocess exec to child perf_counter_ns after config parse + CPU affinity and immediately before ML/framework imports.",
+    "spawn_to_first_output_ns": "Parent subprocess launch timestamp to materialized first attack-probability output in child."
+  },
+  "condition_cooldown_seconds": 2,
+  "cpu_execution_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+  "environment_gate": {
+    "available_ram_gib_min": 8.0,
+    "cpu_utilization_percent_max": 20.0,
+    "cpu_utilization_sample_seconds": 1.0,
+    "retry_cooldown_seconds": 5,
+    "retry_count": 3
+  },
+  "execution_order": "DETERMINISTIC_RANDOMIZED_BEFORE_RESULTS",
+  "frozen_before_first_observation": true,
+  "gpu": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_access": false,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "memory_profiling": false,
+  "parent_commit": "c4502167547b7835ef4fa18ab9b1103b671e6894",
+  "preflight_receipt_sha256": "4c7fc55a0e44e53587d385989dfec4f3f57f20768c7dd4a2d08e2936d2ba21e5",
+  "raw_nanosecond_retention": true,
+  "repetitions_per_target": 20,
+  "schedule_sha256": "6cadf0ca95646f8456a1477d5db88b6c1f0d61bedbe2d8822dc7bb9aa1fed82a",
+  "schema": "stage26_1_cold_start_implementation_v1",
+  "stage": 26,
+  "subprocess_timeout_seconds": 600,
+  "thread_count": 1,
+  "worker_sha256": "b2047e213427e4089df01fb98691dc6313243c1df6a1649de62174d8405742ad"
+}

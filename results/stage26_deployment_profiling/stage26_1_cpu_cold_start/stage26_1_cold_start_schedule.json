@@ -1,0 +1,816 @@
+{
+  "affinity": [
+    0
+  ],
+  "batch_size": 1,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "parent_commit": "c4502167547b7835ef4fa18ab9b1103b671e6894",
+  "repetitions_per_target": 20,
+  "schedule": [
+    {
+      "execution_order": 1,
+      "repetition": 19,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 2,
+      "repetition": 9,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 3,
+      "repetition": 7,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 4,
+      "repetition": 8,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 5,
+      "repetition": 7,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 6,
+      "repetition": 10,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 7,
+      "repetition": 19,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 8,
+      "repetition": 17,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 9,
+      "repetition": 3,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 10,
+      "repetition": 11,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 11,
+      "repetition": 12,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 12,
+      "repetition": 15,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 13,
+      "repetition": 13,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 14,
+      "repetition": 20,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 15,
+      "repetition": 6,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 16,
+      "repetition": 8,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 17,
+      "repetition": 3,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 18,
+      "repetition": 9,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 19,
+      "repetition": 18,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 20,
+      "repetition": 2,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 21,
+      "repetition": 10,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 22,
+      "repetition": 14,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 23,
+      "repetition": 4,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 24,
+      "repetition": 18,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 25,
+      "repetition": 12,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 26,
+      "repetition": 10,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 27,
+      "repetition": 8,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 28,
+      "repetition": 11,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 29,
+      "repetition": 10,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 30,
+      "repetition": 1,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 31,
+      "repetition": 7,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 32,
+      "repetition": 17,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 33,
+      "repetition": 4,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 34,
+      "repetition": 5,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 35,
+      "repetition": 6,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 36,
+      "repetition": 4,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 37,
+      "repetition": 18,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 38,
+      "repetition": 16,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 39,
+      "repetition": 5,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 40,
+      "repetition": 11,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 41,
+      "repetition": 20,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 42,
+      "repetition": 4,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 43,
+      "repetition": 1,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 44,
+      "repetition": 19,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 45,
+      "repetition": 18,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 46,
+      "repetition": 5,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 47,
+      "repetition": 20,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 48,
+      "repetition": 4,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 49,
+      "repetition": 5,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 50,
+      "repetition": 15,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 51,
+      "repetition": 1,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 52,
+      "repetition": 15,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 53,
+      "repetition": 15,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 54,
+      "repetition": 18,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 55,
+      "repetition": 12,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 56,
+      "repetition": 12,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 57,
+      "repetition": 15,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 58,
+      "repetition": 2,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 59,
+      "repetition": 18,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 60,
+      "repetition": 8,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 61,
+      "repetition": 9,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 62,
+      "repetition": 18,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 63,
+      "repetition": 7,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 64,
+      "repetition": 3,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 65,
+      "repetition": 16,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 66,
+      "repetition": 9,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 67,
+      "repetition": 9,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 68,
+      "repetition": 7,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 69,
+      "repetition": 10,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 70,
+      "repetition": 19,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 71,
+      "repetition": 14,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 72,
+      "repetition": 11,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 73,
+      "repetition": 6,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 74,
+      "repetition": 15,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 75,
+      "repetition": 13,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 76,
+      "repetition": 1,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 77,
+      "repetition": 5,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 78,
+      "repetition": 3,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 79,
+      "repetition": 20,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 80,
+      "repetition": 2,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 81,
+      "repetition": 8,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 82,
+      "repetition": 3,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 83,
+      "repetition": 2,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 84,
+      "repetition": 12,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 85,
+      "repetition": 8,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 86,
+      "repetition": 7,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 87,
+      "repetition": 18,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 88,
+      "repetition": 11,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 89,
+      "repetition": 17,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 90,
+      "repetition": 5,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 91,
+      "repetition": 19,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 92,
+      "repetition": 2,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 93,
+      "repetition": 3,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 94,
+      "repetition": 16,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 95,
+      "repetition": 13,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 96,
+      "repetition": 10,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 97,
+      "repetition": 17,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 98,
+      "repetition": 2,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 99,
+      "repetition": 10,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 100,
+      "repetition": 1,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 101,
+      "repetition": 20,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 102,
+      "repetition": 6,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 103,
+      "repetition": 8,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 104,
+      "repetition": 19,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 105,
+      "repetition": 16,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 106,
+      "repetition": 14,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 107,
+      "repetition": 6,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 108,
+      "repetition": 12,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 109,
+      "repetition": 14,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 110,
+      "repetition": 1,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 111,
+      "repetition": 15,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 112,
+      "repetition": 2,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 113,
+      "repetition": 17,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 114,
+      "repetition": 2,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 115,
+      "repetition": 17,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 116,
+      "repetition": 7,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 117,
+      "repetition": 9,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 118,
+      "repetition": 17,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 119,
+      "repetition": 4,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 120,
+      "repetition": 6,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 121,
+      "repetition": 11,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 122,
+      "repetition": 16,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 123,
+      "repetition": 20,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 124,
+      "repetition": 13,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 125,
+      "repetition": 4,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 126,
+      "repetition": 13,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 127,
+      "repetition": 16,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 128,
+      "repetition": 14,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 129,
+      "repetition": 6,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 130,
+      "repetition": 13,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 131,
+      "repetition": 1,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 132,
+      "repetition": 17,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 133,
+      "repetition": 13,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 134,
+      "repetition": 11,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 135,
+      "repetition": 16,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 136,
+      "repetition": 5,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 137,
+      "repetition": 7,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 138,
+      "repetition": 1,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 139,
+      "repetition": 4,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 140,
+      "repetition": 15,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 141,
+      "repetition": 12,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 142,
+      "repetition": 9,
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "execution_order": 143,
+      "repetition": 19,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 144,
+      "repetition": 20,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 145,
+      "repetition": 13,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 146,
+      "repetition": 16,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 147,
+      "repetition": 11,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 148,
+      "repetition": 14,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 149,
+      "repetition": 9,
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    },
+    {
+      "execution_order": 150,
+      "repetition": 3,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    },
+    {
+      "execution_order": 151,
+      "repetition": 12,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 152,
+      "repetition": 3,
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "execution_order": 153,
+      "repetition": 20,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 154,
+      "repetition": 14,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 155,
+      "repetition": 5,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 156,
+      "repetition": 6,
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "execution_order": 157,
+      "repetition": 10,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "execution_order": 158,
+      "repetition": 14,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "execution_order": 159,
+      "repetition": 19,
+      "target_id": "ENS_LGBM_XGB_EQUAL"
+    },
+    {
+      "execution_order": 160,
+      "repetition": 8,
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    }
+  ],
+  "schema": "stage26_1_cold_start_schedule_v1",
+  "seed": 26042,
+  "target_count": 8,
+  "thread_count": 1,
+  "total_repetitions": 160
+}

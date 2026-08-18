@@ -1,0 +1,61 @@
+{
+  "checkpoint": "STAGE26-1",
+  "file_count_excluding_manifest": 8,
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_implementation.json",
+      "sha256": "38a7e54ed997af960cff56b8fa14941e2f6278ed996b0d7a117dbedf118aa652",
+      "size_bytes": 2498
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_raw.csv",
+      "sha256": "bd545c56dd197e076ee68d11cfc1d3cbadd3020044c5fe663f3eca6984059c3d",
+      "size_bytes": 38427
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_raw.jsonl",
+      "sha256": "f10c275e1f9a4a91222328a4893f785d06048269dbed308ab20b45df6d4903dc",
+      "size_bytes": 117706
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_receipt.json",
+      "sha256": "35d988fbdcf7d84d54e593cd37f1204a005c2e854ae7128cc559629616d99c10",
+      "size_bytes": 1883
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_schedule.json",
+      "sha256": "6cadf0ca95646f8456a1477d5db88b6c1f0d61bedbe2d8822dc7bb9aa1fed82a",
+      "size_bytes": 18361
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_summary.csv",
+      "sha256": "f71e9f4ba6f7ef03927b6c8b94563477ccad19b232157113faa43898f644da8a",
+      "size_bytes": 10631
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_summary.json",
+      "sha256": "12064e97d29a56e919b4a689adca323b62423d927dfba124df6ad89b161bbd07",
+      "size_bytes": 29010
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_cold_start_worker.py",
+      "sha256": "b2047e213427e4089df01fb98691dc6313243c1df6a1649de62174d8405742ad",
+      "size_bytes": 24091
+    }
+  ],
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "parent_commit": "c4502167547b7835ef4fa18ab9b1103b671e6894",
+  "receipt_sha256": "35d988fbdcf7d84d54e593cd37f1204a005c2e854ae7128cc559629616d99c10",
+  "schema": "stage26_1_cold_start_package_manifest_v1",
+  "scientific_boundary": {
+    "cold_start_measured": true,
+    "feature_extraction_measured": false,
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "memory_profiled": false,
+    "throughput_measured": false,
+    "warm_latency_measured": false
+  },
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR"
+}

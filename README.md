@@ -199,3 +199,40 @@ The historical publication archive through Stage21 remains in
 `figures/JOURNAL_FIGURE_INDEX.md`.
 
 <!-- END STAGES 14-22R RESEARCH EXTENSION STATUS -->
+
+<!-- BEGIN STAGE24 CROSS-DATASET SUMMARY -->
+
+## Stage24 — Cross-Dataset Generalization
+
+Stage24 is complete and scientifically closed.
+
+The bidirectional audit evaluates CSE-CIC-IDS2018 and CICIDS2017 using frozen
+feature bridges, extractor-semantic controls, source-only threshold selection,
+and paired uncertainty analysis.
+
+Frozen headline results:
+
+- IDS2018 → CICIDS2017 bridge62:
+  PR-AUC `0.667483`,
+  ROC-AUC `0.733946`.
+- CICIDS2017 → IDS2018 bridge62:
+  PR-AUC `0.108176`,
+  ROC-AUC `0.525167`.
+- Reciprocal IDS2018 target prevalence:
+  `0.104847`.
+- Aggregate-flag serialization correction produced statistically resolved
+  changes in primary bridge70 PR-AUC, ROC-AUC, and Brier score.
+- Scientific fits: `4/4`.
+- Evaluable target openings: `6/6`.
+- GROUNDED_S4 cells cancelled before opening: `2`.
+- Cancelled slots reallocated: `No`.
+
+Publication and reproducibility package:
+
+- `docs/STAGE24_MANUSCRIPT_INTEGRATION.md`
+- `docs/STAGE24_PUBLICATION_TABLES.md`
+- `docs/STAGE24_PUBLICATION_CLOSEOUT.md`
+- `figures/stage24_cross_dataset/`
+- `scripts/stage24/`
+
+<!-- END STAGE24 CROSS-DATASET SUMMARY -->

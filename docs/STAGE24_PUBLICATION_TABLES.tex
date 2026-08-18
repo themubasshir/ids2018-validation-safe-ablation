@@ -1,0 +1,110 @@
+
+% =============================================================================
+% Stage24 Publication Tables
+% Auto-generated from frozen Stage24 artifacts.
+% No scientific model execution is performed by this file.
+% =============================================================================
+
+\begin{table*}[t]
+\centering
+\caption{Bidirectional cross-dataset generalization under the frozen Stage24 protocol.}
+\label{tab:stage24_bidirectional}
+\begin{tabular}{llrrrr}
+\hline
+Direction & Representation & PR-AUC & PR$_{norm}$ & ROC-AUC & Brier \\
+\hline
+IDS2018$\rightarrow$CICIDS2017
+& bridge62
+& 0.667483
+& 0.585908
+& 0.733946
+& 0.145756 \\
+
+IDS2018$\rightarrow$CICIDS2017
+& bridge70 Published
+& 0.663981
+& 0.581547
+& 0.741891
+& 0.142912 \\
+
+IDS2018$\rightarrow$CICIDS2017
+& bridge70 Corrected
+& 0.656252
+& 0.571923
+& 0.744083
+& 0.147998 \\
+
+CICIDS2017$\rightarrow$IDS2018
+& bridge62
+& 0.108176
+& 0.003719
+& 0.525167
+& 0.105758 \\
+
+CICIDS2017$\rightarrow$IDS2018
+& bridge70
+& 0.107419
+& 0.002874
+& 0.525302
+& 0.105652 \\
+\hline
+\end{tabular}
+\end{table*}
+
+
+\begin{table*}[t]
+\centering
+\caption{Paired stratified bootstrap contrasts (2,000 replicates, seed 42). Values are point difference [95\% percentile CI].}
+\label{tab:stage24_bootstrap}
+\begin{tabular}{lrrr}
+\hline
+Comparison & PR-AUC & ROC-AUC & Brier \\
+\hline
+Primary: bridge70 Published $-$ bridge62 Published
+& -0.003502 [-0.003856, -0.003152]
+& +0.007945 [+0.007793, +0.008096]
+& -0.002844 [-0.002915, -0.002766] \\
+
+Primary: bridge70 Corrected $-$ bridge62 Corrected
+& -0.011230 [-0.011619, -0.010858]
+& +0.010137 [+0.009981, +0.010303]
+& +0.002243 [+0.002153, +0.002336] \\
+
+Primary artifact: bridge70 Corrected $-$ Published
+& -0.007729 [-0.007921, -0.007534]
+& +0.002192 [+0.002139, +0.002246]
+& +0.005087 [+0.005023, +0.005152] \\
+
+Secondary: bridge70 $-$ bridge62
+& -0.000757 [-0.001058, -0.000435]
+& +0.000135 [-0.000900, +0.001263]
+& -0.000106 [-0.000124, -0.000089] \\
+\hline
+\end{tabular}
+\end{table*}
+
+
+\begin{table*}[t]
+\centering
+\caption{Transfer of CICIDS2017 source-validation operating points to the IDS2018 Feb-28 target.}
+\label{tab:stage24_threshold_transfer}
+\begin{tabular}{llrrrrrr}
+\hline
+Bridge & Operating point & Threshold & Precision & Recall & F1 & FPR & FNR \\
+\hline
+bridge62 & STANDARD & 0.500 & 0.029268 & 0.000386 & 0.000761 & 0.001498 & 0.999614 \\
+bridge62 & BALANCED & 0.170 & 0.034420 & 0.000610 & 0.001199 & 0.002006 & 0.999390 \\
+bridge62 & SECURITY & 0.050 & 0.049587 & 0.001349 & 0.002627 & 0.003029 & 0.998651 \\
+bridge70 & STANDARD & 0.500 & 0.032609 & 0.000386 & 0.000762 & 0.001340 & 0.999614 \\
+bridge70 & BALANCED & 0.180 & 0.035153 & 0.000610 & 0.001200 & 0.001962 & 0.999390 \\
+bridge70 & SECURITY & 0.050 & 0.036930 & 0.000819 & 0.001603 & 0.002502 & 0.999181 \\
+
+\hline
+\end{tabular}
+\end{table*}
+
+% PR-AUC must be interpreted with target prevalence:
+%   IDS2018 -> CICIDS2017 prevalence = 0.196996336298
+%   CICIDS2017 -> IDS2018 prevalence = 0.104846912998
+%
+% The two transfer directions MUST NOT be averaged.

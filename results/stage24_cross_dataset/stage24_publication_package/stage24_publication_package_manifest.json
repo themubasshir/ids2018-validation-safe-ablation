@@ -1,0 +1,66 @@
+{
+  "anti_adaptation": {
+    "model_fit": false,
+    "model_inference": false,
+    "model_load": false,
+    "target_calibration": false,
+    "target_feature_change": false,
+    "target_opening": false,
+    "target_threshold_search": false
+  },
+  "created_at_utc": "2026-08-18T11:54:17.693285+00:00",
+  "frozen_scientific_artifacts": {
+    "final_report_sha256": "f867289cec34eca6666d02deec01864395503cea8a59b7eac88e1759d5eb2a0b",
+    "final_synthesis_sha256": "785bbcb00140f4d7e07e9b49ad33924166b5995e66a229c986d5b1abcbcaee4b",
+    "primary_bootstrap_sha256": "96732023e0a1c9b52a79fafa59ea4b851ef7f8bae1814e4b4b4fde0ef0df09aa",
+    "secondary_bootstrap_sha256": "28005e0f13d86658ba81e6b19dc154b94eedb316ea5ce0348287265c00541953"
+  },
+  "notebook_export": {
+    "full_downloadable_copy": "/kaggle/working/stage24_exports/stage24_cross_dataset_generalization_FULL.ipynb",
+    "full_downloadable_sha256": "f51c48e29070b2b8b87bc098403b3cd40800317a4cb5c6750e7e31eb360784c5",
+    "mode": "RECOVERED_FROM_PREVIOUS_STAGE24_EXPORT_CHECKPOINT",
+    "repo_python_script": "scripts/stage24/stage24_cross_dataset_generalization.py",
+    "repo_python_script_sha256": "104c8b3c3bde1eb81e7a70a05e15854e98d65f23d9d4799ea8ec22a064b106c6",
+    "repo_sanitized_ipynb": "scripts/stage24/stage24_cross_dataset_generalization.ipynb",
+    "repo_sanitized_ipynb_sha256": "9f2d54b4f36f516544026902e269d6601634ffda2c9c287a5ffef1758c9c4558"
+  },
+  "publication_files": {
+    "docs/STAGE24_MANUSCRIPT_INTEGRATION.md": "b2eee73de21d6cea656a21a8c2df5ac16c70c74f4123b512ca39726610735bb8",
+    "docs/STAGE24_MANUSCRIPT_INTEGRATION.tex": "df81ef82a61c35fbb3a731af1f1841e522133adfedd478c8c89ad2d5963117fe",
+    "docs/STAGE24_PUBLICATION_CLOSEOUT.md": "2ce69b552350269882bc965ab7918cd7949ffb1d082adc39b76ae78cf5032e91",
+    "docs/STAGE24_PUBLICATION_TABLES.md": "508e28f8f355edf7e5794dd4ef6be1ac37c4aba8bf7339d3636f41e5f913411a",
+    "docs/STAGE24_PUBLICATION_TABLES.tex": "1b335bc0e6065658c3be6ac5f597c1d8c9c06d2e034ce6f5bbcfdcf57c76f8e5",
+    "figures/stage24_cross_dataset/fig24_1_normalized_pr_auc_directionality.png": "169c0c9a23dde066c5c386f49c887c3631119b3dcb52fe6346854d2831d2901a",
+    "figures/stage24_cross_dataset/fig24_1_normalized_pr_auc_directionality.svg": "8905c8120fd591aa693cda667eff11b5daccd0c7633088af4b8af09a68401b1f",
+    "figures/stage24_cross_dataset/fig24_2_roc_auc_directionality.png": "dd2de878ab0bf631be3f31d364d49a58001cb6b6032f063ea26ac9cb9c144fe2",
+    "figures/stage24_cross_dataset/fig24_2_roc_auc_directionality.svg": "3356610a4d223da437ccccfd402bf032f50237b09da121b5a61fb000e3ec302a",
+    "figures/stage24_cross_dataset/fig24_3_paired_effects_forest.png": "708feaf5af4b24a49f3ddf50812ae022d3543831cbed198574cd6428c3873b0a",
+    "figures/stage24_cross_dataset/fig24_3_paired_effects_forest.svg": "f47138b0c85eb895aba00c0bcf544632ae06106cfc42c4d189dbff2c38f23ad9",
+    "figures/stage24_cross_dataset/fig24_4_secondary_threshold_transfer.png": "88b5362c42a58eee533f38b551c708dfafc4fcbcefff4345629e58059b1b350a",
+    "figures/stage24_cross_dataset/fig24_4_secondary_threshold_transfer.svg": "c428b6330030a8e954ba48e19a926cd2f9f9342f4535ccf36fa9dfb649201aac",
+    "results/stage24_cross_dataset/stage24_publication_package/tables/table24_1_bidirectional_generalization.csv": "a81ff92de80236d3febc70f339a65797f5bdcc1feb0a595a4356a557fd71c474",
+    "results/stage24_cross_dataset/stage24_publication_package/tables/table24_2_paired_bootstrap_contrasts.csv": "f8c2cdeac28a6d3d093aa057c1591c1e8b0fadfe7976fb0f1a961b2b6871c4d0",
+    "results/stage24_cross_dataset/stage24_publication_package/tables/table24_3_secondary_threshold_transfer.csv": "e5225dcfa5980c66d1e53d3728acec1e41d8743961bc933bef02c7cdfcaba15e",
+    "results/stage24_cross_dataset/stage24_publication_package/tables/table24_4_governance_and_populations.csv": "2d2a7a5a3e213916951770367033a9bd482ca46016fb9a20576df957077c09f5",
+    "scripts/stage24/README.md": "988de14b565be42f1f76e38cb02f4ed4cb2e6bc52ba11afb6207ca594b8d02d0",
+    "scripts/stage24/stage24_cross_dataset_generalization.ipynb": "9f2d54b4f36f516544026902e269d6601634ffda2c9c287a5ffef1758c9c4558",
+    "scripts/stage24/stage24_cross_dataset_generalization.py": "104c8b3c3bde1eb81e7a70a05e15854e98d65f23d9d4799ea8ec22a064b106c6"
+  },
+  "scientific_execution_closed": true,
+  "scientific_fits": {
+    "budget": 4,
+    "completed": 4,
+    "remaining": 0
+  },
+  "scientific_parent_commit": "a4b6a3854109ba3d85954fb4a40afe6fe1ee6114",
+  "stage": "Stage24-PUB-R1",
+  "stage24_final_synthesis_sha256": "785bbcb00140f4d7e07e9b49ad33924166b5995e66a229c986d5b1abcbcaee4b",
+  "target_openings": {
+    "administratively_cancelled": 2,
+    "cancelled_slots_reallocated": false,
+    "evaluable_completed": 6,
+    "original_budget": 8,
+    "remaining_evaluable": 0
+  },
+  "type": "NON_SCIENTIFIC_PUBLICATION_AND_REPRODUCIBILITY_CLOSEOUT"
+}

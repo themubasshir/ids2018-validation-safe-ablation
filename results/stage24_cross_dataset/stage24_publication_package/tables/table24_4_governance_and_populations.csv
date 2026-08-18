@@ -1,0 +1,7 @@
+item,value,detail
+Primary target population,2830743,"CICIDS2017: 2,273,097 benign / 557,646 attack / prevalence=0.196996336298"
+Secondary target population,593780,"IDS2018 Feb-28: 531,524 benign / 62,256 attack / prevalence=0.104846912998"
+Scientific fits,4,4/4 completed; no additional fits authorized
+Evaluable target openings,6,6/6 completed
+Administratively cancelled target cells,2,bridge62/bridge70 GROUNDED_S4; not reallocated
+Bootstrap replicates,2000,Paired stratified bootstrap; seed 42

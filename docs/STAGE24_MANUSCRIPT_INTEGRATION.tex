@@ -1,0 +1,94 @@
+
+% =============================================================================
+% Stage24 Manuscript Integration
+% Insert into an IEEE manuscript as appropriate.
+% =============================================================================
+
+\subsection{Bidirectional Cross-Dataset Generalization}
+
+Stage24 evaluated transfer in two separately reported directions. The
+IDS2018-to-CICIDS2017 direction used 2,830,743 effective
+CICIDS2017 flows with attack prevalence 0.196996, whereas the
+reciprocal CICIDS2017-to-IDS2018 direction used the frozen K79-clean IDS2018
+Feb-28 population of 593,780 flows with attack prevalence
+0.104847.
+
+For IDS2018-to-CICIDS2017, bridge62 achieved PR-AUC
+0.667483 and ROC-AUC
+0.733946. Bridge70 under the
+published semantics achieved PR-AUC
+0.663981 and ROC-AUC
+0.741891, while the flag-corrected
+bridge70 representation achieved PR-AUC
+0.656252 and ROC-AUC
+0.744083.
+
+The reciprocal transfer was substantially weaker. CICIDS2017-trained bridge62
+reached PR-AUC 0.108176 and ROC-AUC
+0.525167; bridge70 reached PR-AUC
+0.107419 and ROC-AUC
+0.525302. The IDS2018 Feb-28 PR-AUC
+prevalence anchor was 0.104847. The two transfer directions
+are therefore retained separately rather than averaged.
+
+\subsection{Extractor-Semantic Sensitivity}
+
+Within the primary bridge70 evaluation, replacing the published CICIDS2017
+aggregate-flag interpretation with the frozen corrected mapping changed PR-AUC
+by -0.007729
+(95\% CI [-0.007921, -0.007534]),
+ROC-AUC by +0.002192
+([+0.002139, +0.002246]), and Brier
+score by +0.005087
+([+0.005023, +0.005152]).
+All three intervals exclude zero, demonstrating measurable sensitivity to
+extractor/serialization semantics.
+
+\subsection{Operating-Point Transfer}
+
+CICIDS2017 Thursday source-validation thresholds transferred poorly to IDS2018
+Feb-28. For bridge62, standard, balanced, and security recall were
+0.000386,
+0.000610, and
+0.001349,
+respectively. Corresponding bridge70 recall values were
+0.000386,
+0.000610, and
+0.000819.
+No target threshold search was permitted.
+
+\subsection{Discussion}
+
+The Stage24 results demonstrate that cross-dataset IDS portability can be
+strongly directional even when feature names appear compatible across benchmark
+families. Successful IDS2018-to-CICIDS2017 transfer did not imply reciprocal
+CICIDS2017-to-IDS2018 generalization. The bridge ablation also shows that adding
+aggregate flag-count fields is not uniformly beneficial, while the serialization
+audit demonstrates that semantically misaligned extractor outputs can
+materially change reported cross-dataset results. Ranking discrimination,
+probability calibration, and operating-point transfer should therefore be
+evaluated as separate properties.
+
+\subsection{Limitations and Threats to Validity}
+
+The experiment covers two related CIC benchmark families and one frozen model
+strategy per direction, so the observed magnitude of asymmetry should not be
+generalized to unrelated operational networks or all model families. Target
+prevalence differs between directions, requiring PR-AUC to be interpreted
+together with prevalence, normalized PR-AUC, and ROC-AUC. Two preregistered
+GROUNDED\_S4 cells were administratively cancelled because exact durable
+physical-row membership could not be reconstructed without a new post-freeze
+heuristic; no substitute population was used. Finally, paired row-bootstrap
+intervals characterize uncertainty for the frozen target populations and do
+not represent variation across independently collected organizations or
+capture campaigns.
+
+\subsection{Stage24 Contribution}
+
+A validation-safe bidirectional cross-dataset audit revealed pronounced
+transfer asymmetry between CSE-CIC-IDS2018 and CICIDS2017, quantified the
+contribution of a common 62-feature bridge versus aggregate TCP-flag fields,
+demonstrated statistically resolved sensitivity to CICIDS2017 flag
+serialization semantics, and showed that source-selected operating thresholds
+can fail catastrophically under reciprocal transfer without target-guided
+adaptation.

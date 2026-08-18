@@ -62,3 +62,53 @@ See `docs/STAGE22R_MANUSCRIPT_INTEGRATION.md` and
 `docs/STAGE22R_PUBLICATION_FIGURES_AND_CLOSEOUT.md`.
 
 <!-- END STAGE22R JOURNAL EXTENSION SUMMARY -->
+
+<!-- BEGIN STAGE24 JOURNAL EXTENSION SUMMARY -->
+
+## Stage24 — Bidirectional Cross-Dataset Generalization
+
+Stage24 closes the earlier cross-dataset future-work gap through a frozen
+bidirectional audit between CSE-CIC-IDS2018 and CICIDS2017.
+
+IDS2018-to-CICIDS2017 transfer retained substantial ranking signal. The
+62-feature bridge achieved PR-AUC
+**0.667483**
+and ROC-AUC
+**0.733946**
+on **2,830,743** effective CICIDS2017 rows.
+
+The reciprocal CICIDS2017-to-IDS2018 transfer was much weaker. On the frozen
+IDS2018 Feb-28 target, attack prevalence was
+**0.104847**, while bridge62 reached PR-AUC
+**0.108176**
+and ROC-AUC
+**0.525167**.
+
+A preregistered serialization audit further showed that correcting the
+CICIDS2017 aggregate flag mapping changed primary bridge70 PR-AUC by
+**-0.007729**, ROC-AUC by
+**+0.002192**, and Brier score by
+**+0.005087**. The corresponding paired
+95% bootstrap intervals excluded zero.
+
+The two transfer directions are reported separately and are not averaged.
+No target-guided fitting, target threshold tuning, calibration, or feature
+search was performed.
+
+Two GROUNDED_S4 target cells were administratively cancelled before opening
+because exact durable physical-row membership could not be reconstructed
+without introducing a new post-freeze heuristic. No fuzzy substitute was used
+and the cancelled slots were not reallocated.
+
+Stage24 therefore supersedes the earlier statement that cross-dataset
+generalization remained untested.
+
+Publication package:
+
+- `docs/STAGE24_MANUSCRIPT_INTEGRATION.md`
+- `docs/STAGE24_PUBLICATION_TABLES.md`
+- `docs/STAGE24_PUBLICATION_CLOSEOUT.md`
+- `figures/stage24_cross_dataset/`
+- `scripts/stage24/`
+
+<!-- END STAGE24 JOURNAL EXTENSION SUMMARY -->

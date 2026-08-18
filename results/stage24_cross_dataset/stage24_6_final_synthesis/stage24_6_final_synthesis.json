@@ -1,0 +1,301 @@
+{
+  "anti_adaptation": {
+    "new_model_fit": false,
+    "new_target_inference": false,
+    "new_target_opening": false,
+    "performance_based_protocol_change": false,
+    "target_calibration": false,
+    "target_feature_remapping": false,
+    "target_feature_search": false,
+    "target_fitted_preprocessing": false,
+    "target_threshold_selection": false
+  },
+  "completion": {
+    "Stage24_complete": true,
+    "administratively_cancelled": 2,
+    "evaluable_target_openings": "6/6",
+    "original_opening_budget": 8,
+    "remaining_evaluable_work": 0,
+    "scientific_fits": "4/4"
+  },
+  "created_at_utc": "2026-08-18T11:33:02.446576+00:00",
+  "cross_direction_synthesis": {
+    "CICIDS2017_TO_IDS2018": {
+      "bridge62_pr_auc": 0.10817592573968819,
+      "bridge62_roc_auc": 0.5251666999050302,
+      "bridge70_pr_auc": 0.10741914378003477,
+      "bridge70_roc_auc": 0.5253021473786115,
+      "target_attack": 62256,
+      "target_prevalence": 0.10484691299808009,
+      "target_rows": 593780
+    },
+    "IDS2018_TO_CICIDS2017": {
+      "bridge62_published_pr_auc": 0.6674827010666808,
+      "bridge62_published_roc_auc": 0.7339464251813748,
+      "bridge70_flag_corrected_pr_auc": 0.6562523506197266,
+      "bridge70_flag_corrected_roc_auc": 0.7440833611037603,
+      "bridge70_published_pr_auc": 0.6639810751980307,
+      "bridge70_published_roc_auc": 0.7418914673891956,
+      "target_attack": 557646,
+      "target_rows": 2830743
+    },
+    "averaging_performed": false,
+    "averaging_prohibited": true,
+    "reason": "The frozen Stage24 protocol requires the two transfer directions to remain separate. They use different source models, target populations, and target prevalence structures."
+  },
+  "datasets": [
+    "CSE-CIC-IDS2018",
+    "CICIDS2017"
+  ],
+  "governance": {
+    "additional_fits_authorized": 0,
+    "administratively_cancelled_GROUNDED_S4_cells": 2,
+    "all_evaluable_target_cells_complete": true,
+    "cancelled_slots_reallocated": false,
+    "remaining_evaluable_target_openings": 0,
+    "scientific_fit_budget": 4,
+    "scientific_fits_completed": 4,
+    "scientific_fits_remaining": 0,
+    "target_opening_budget": 8,
+    "target_openings_consumed": 6
+  },
+  "interpretive_constraints": {
+    "GROUNDED_S4_fuzzy_substitute": false,
+    "GROUNDED_S4_inferred": false,
+    "directions_averaged": false,
+    "directions_must_remain_separate": true,
+    "post_target_feature_change": false,
+    "post_target_model_change": false,
+    "post_target_threshold_change": false
+  },
+  "parent_commit": "ce2913dd7a040b400be58acdacab4017bc4b45f7",
+  "primary_direction": {
+    "GROUNDED_S4": {
+      "definition_changed": false,
+      "heuristic_substitute_used": false,
+      "reason": "DURABLE_ARTIFACT_INFEASIBILITY",
+      "status": "NOT_EVALUABLE"
+    },
+    "bootstrap_artifact_sha256": "96732023e0a1c9b52a79fafa59ea4b851ef7f8bae1814e4b4b4fde0ef0df09aa",
+    "cells": {
+      "bridge62_FLAG_CORRECTED": {
+        "brier": 0.14575561948280363,
+        "identity": "BITWISE_IDENTICAL_TO_BRIDGE62_PUBLISHED",
+        "pr_auc": 0.6674827010666808,
+        "probability_sha256": "e9288ba2590e09ae51da183bff2160fbb501e8633a3af87a22c800f7d3a051d7",
+        "roc_auc": 0.7339464251813748
+      },
+      "bridge62_GROUNDED_S4": {
+        "reason": "GROUNDED_S4_DURABLE_ARTIFACT_INFEASIBILITY",
+        "status": "ADMINISTRATIVELY_CANCELLED_BEFORE_OPENING"
+      },
+      "bridge62_PUBLISHED": {
+        "brier": 0.14575561948280363,
+        "pr_auc": 0.6674827010666808,
+        "probability_sha256": "e9288ba2590e09ae51da183bff2160fbb501e8633a3af87a22c800f7d3a051d7",
+        "roc_auc": 0.7339464251813748
+      },
+      "bridge70_FLAG_CORRECTED": {
+        "brier": 0.14799829569416523,
+        "pr_auc": 0.6562523506197266,
+        "probability_sha256": "7ff3c93b010040b6d780f7f52ca9764c2957b3b93e87a29707c99e1a29ed709a",
+        "roc_auc": 0.7440833611037603
+      },
+      "bridge70_GROUNDED_S4": {
+        "reason": "GROUNDED_S4_DURABLE_ARTIFACT_INFEASIBILITY",
+        "status": "ADMINISTRATIVELY_CANCELLED_BEFORE_OPENING"
+      },
+      "bridge70_PUBLISHED": {
+        "brier": 0.1429117123245476,
+        "pr_auc": 0.6639810751980307,
+        "probability_sha256": "91e4271f0933d3e7b904e9d822377703fb5f8da04e3111d813fd1dd4298f9d1b",
+        "roc_auc": 0.7418914673891956
+      }
+    },
+    "direction": "IDS2018_TO_CICIDS2017",
+    "freeze_artifact": "results/stage24_cross_dataset/stage24_3_primary_results_freeze/stage24_3a_primary_paired_bootstrap/stage24_3a_primary_results_freeze.json",
+    "freeze_sha256": "bdb6471be8b154662149eeb616dfdfb78f978dd3f337659e773ad9a21b3ba42f",
+    "paired_comparisons": [
+      {
+        "bootstrap": {
+          "brier": {
+            "bootstrap_mean_difference": -0.0028448322309803046,
+            "ci_2_5": -0.0029149364091674455,
+            "ci_97_5": -0.0027662019449872497,
+            "ci_excludes_zero": true,
+            "point_difference": -0.002843907158256026
+          },
+          "pr_auc": {
+            "bootstrap_mean_difference": -0.003501144882580371,
+            "ci_2_5": -0.0038560981271429347,
+            "ci_97_5": -0.0031516826947989855,
+            "ci_excludes_zero": true,
+            "point_difference": -0.0035016258686501045
+          },
+          "roc_auc": {
+            "bootstrap_mean_difference": 0.007945884071538413,
+            "ci_2_5": 0.007793154614955148,
+            "ci_97_5": 0.008095808702662407,
+            "ci_excludes_zero": true,
+            "point_difference": 0.007945042207820885
+          }
+        },
+        "comparison": "bridge70_PUBLISHED_minus_bridge62_PUBLISHED",
+        "orientation": "A_MINUS_B"
+      },
+      {
+        "bootstrap": {
+          "brier": {
+            "bootstrap_mean_difference": 0.0022417191863510553,
+            "ci_2_5": 0.002152832903951,
+            "ci_97_5": 0.0023357401318126886,
+            "ci_excludes_zero": true,
+            "point_difference": 0.002242676211361594
+          },
+          "pr_auc": {
+            "bootstrap_mean_difference": -0.011228433762721434,
+            "ci_2_5": -0.011618514661808771,
+            "ci_97_5": -0.010858425491071225,
+            "ci_excludes_zero": true,
+            "point_difference": -0.011230350446954196
+          },
+          "roc_auc": {
+            "bootstrap_mean_difference": 0.010137983714676843,
+            "ci_2_5": 0.00998113569056219,
+            "ci_97_5": 0.010302578977685625,
+            "ci_excludes_zero": true,
+            "point_difference": 0.010136935922385515
+          }
+        },
+        "comparison": "bridge70_FLAG_CORRECTED_minus_bridge62_FLAG_CORRECTED",
+        "orientation": "A_MINUS_B"
+      },
+      {
+        "bootstrap": {
+          "brier": {
+            "bootstrap_mean_difference": 0.00508655141733136,
+            "ci_2_5": 0.005023235150538882,
+            "ci_97_5": 0.005151859409384719,
+            "ci_excludes_zero": true,
+            "point_difference": 0.00508658336961762
+          },
+          "pr_auc": {
+            "bootstrap_mean_difference": -0.007727288880141063,
+            "ci_2_5": -0.007920533620796666,
+            "ci_97_5": -0.007533628438638493,
+            "ci_excludes_zero": true,
+            "point_difference": -0.007728724578304091
+          },
+          "roc_auc": {
+            "bootstrap_mean_difference": 0.0021920996431384313,
+            "ci_2_5": 0.002138781705090112,
+            "ci_97_5": 0.0022460019481922834,
+            "ci_excludes_zero": true,
+            "point_difference": 0.00219189371456463
+          }
+        },
+        "comparison": "bridge70_FLAG_CORRECTED_minus_bridge70_PUBLISHED",
+        "orientation": "A_MINUS_B"
+      }
+    ]
+  },
+  "secondary_direction": {
+    "bootstrap_artifact": {
+      "file": "results/stage24_cross_dataset/stage24_6_final_synthesis/stage24_6_secondary_paired_bootstrap_replicates.npz",
+      "sha256": "28005e0f13d86658ba81e6b19dc154b94eedb316ea5ce0348287265c00541953"
+    },
+    "bootstrap_protocol": {
+      "auc_semantics": {
+        "PR_AUC": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION",
+        "ROC_AUC": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA",
+        "scores": "PERSISTED_FLOAT32_PROBABILITIES"
+      },
+      "confidence_interval": "PERCENTILE_2.5_97.5",
+      "exact_grouping": {
+        "attack_groups": 23861,
+        "attack_rows": 62256,
+        "benign_groups": 88256,
+        "benign_rows": 531524,
+        "compression_ratio": 5.296074636317418,
+        "total_groups": 112117,
+        "total_rows": 593780
+      },
+      "implementation": "EXACT_JOINT_PREDICTION_LABEL_EQUIVALENCE_GROUP_MULTINOMIAL_SUFFICIENT_STATISTIC",
+      "implementation_is_approximation": false,
+      "method": "PAIRED_STRATIFIED_ROW_BOOTSTRAP",
+      "metrics": [
+        "PR_AUC",
+        "ROC_AUC",
+        "Brier"
+      ],
+      "pairing": "SAME_BOOTSTRAP_MULTIPLICITIES_USED_FOR_BRIDGE62_AND_BRIDGE70",
+      "replicates": 2000,
+      "runtime_seconds": 181.20730137825012,
+      "sampling": "WITH_REPLACEMENT_WITHIN_EACH_STRATUM",
+      "seed": 42,
+      "strata": [
+        "BENIGN",
+        "ATTACK"
+      ]
+    },
+    "cells": {
+      "bridge62": {
+        "brier": 0.10575815701309531,
+        "pr_auc": 0.10817592573968819,
+        "pr_normalized": 0.0037189311972969387,
+        "probability_sha256": "4c7cc6af61b8c4813c9241d526b6a473e46e4f69a058305eceb7fb4c30621640",
+        "roc_auc": 0.5251666999050302,
+        "target": "IDS2018_02-28-2018"
+      },
+      "bridge70": {
+        "brier": 0.10565203888025436,
+        "pr_auc": 0.10741914378003477,
+        "pr_normalized": 0.002873509368737908,
+        "probability_sha256": "badf2e99f7b6a2aad9687ca30a2056271d18b47f089d29093151f6331adf8c3b",
+        "roc_auc": 0.5253021473786115,
+        "target": "IDS2018_02-28-2018"
+      }
+    },
+    "direction": "CICIDS2017_TO_IDS2018",
+    "paired_comparison": {
+      "bootstrap": {
+        "brier": {
+          "bootstrap_mean_difference": -0.00010613194956357511,
+          "ci_2_5": -0.00012429005268036267,
+          "ci_97_5": -8.894247671756873e-05,
+          "ci_excludes_zero": true,
+          "point_difference": -0.00010611813284094884
+        },
+        "pr_auc": {
+          "bootstrap_mean_difference": -0.000753957495482828,
+          "ci_2_5": -0.0010581433187110121,
+          "ci_97_5": -0.0004346707415334235,
+          "ci_excludes_zero": true,
+          "point_difference": -0.0007567819596534242
+        },
+        "roc_auc": {
+          "bootstrap_mean_difference": 0.0001439607315633552,
+          "ci_2_5": -0.0008996249242140846,
+          "ci_97_5": 0.0012627923717139042,
+          "ci_excludes_zero": false,
+          "point_difference": 0.00013544747358129605
+        }
+      },
+      "comparison": "bridge70_minus_bridge62",
+      "orientation": "A_MINUS_B"
+    },
+    "target": "IDS2018_02-28-2018",
+    "target_population": {
+      "attack": 62256,
+      "benign": 531524,
+      "binary_label_sha256": "17369d505c1ce11f425a7c14c7552c95b39aad3492ae643c31f43a8a66a35177",
+      "clean_position_sha256": "d8a090f4c1667d62dd81de1ce8be9b0d68062adc2799c67fb7b55ad74a1f8b9b",
+      "original_row_index_sha256": "374de0e9d74040581ddc5977fd4c78f8f8959df610d20d1775415f10f3e92dfc",
+      "prevalence": 0.10484691299808009,
+      "rows": 593780
+    }
+  },
+  "stage": "Stage24-6",
+  "status": "STAGE24_CROSS_DATASET_AUDIT_COMPLETE",
+  "title": "Cross-Dataset Generalization and Artifact-Sensitivity Audit"
+}

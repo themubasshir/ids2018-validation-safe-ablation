@@ -1,0 +1,38 @@
+{
+  "affinity_requested": [
+    0,
+    1
+  ],
+  "batch_size": 8192,
+  "comparison_group": "GROUP_B_PACKET_IMAGE",
+  "condition_id": "CPUCOND_050",
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.4344482421875,
+      "cpu_percent": 0.3,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.4344482421875,
+    "cpu_percent": 0.3,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_2_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "memory_execution_order": 263,
+  "memory_repetition": 3,
+  "parent_observed_peak_rss_bytes": 28617486336,
+  "resource_limit_reason": "PARENT_85_PERCENT_PHYSICAL_RAM_CEILING",
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 17,
+  "status": "RESOURCE_LIMIT_OOM",
+  "target_id": "STAGE20_MASKED_CNN_V1",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 2,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

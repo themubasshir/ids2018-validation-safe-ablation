@@ -1,0 +1,45 @@
+{
+  "affinity_requested": [
+    0
+  ],
+  "baseline_rss_bytes": 178954240,
+  "batch_size": 256,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_063",
+  "delta_model_rss_bytes": 113774592,
+  "delta_peak_rss_bytes": 115576832,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.243274688720703,
+      "cpu_percent": 0.5,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.243274688720703,
+    "cpu_percent": 0.5,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "inference_passes": 1,
+  "loaded_rss_bytes": 292728832,
+  "memory_execution_order": 382,
+  "memory_repetition": 5,
+  "parent_observed_peak_rss_bytes": 298082304,
+  "peak_rss_bytes": 294531072,
+  "rss_sample_count": 7,
+  "rss_sampling_interval_ms": 5,
+  "ru_maxrss_bytes_descriptive": 1210355712,
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 67,
+  "status": "PASS",
+  "target_id": "ENS_LGBM_XGB_EQUAL",
+  "target_role": "OPERATIONAL_REFERENCE",
+  "thread_count": 1,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

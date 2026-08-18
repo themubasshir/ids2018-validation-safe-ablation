@@ -1,0 +1,28 @@
+{
+  "checkpoint": "STAGE26-3B",
+  "completed_at_utc": "2026-08-18T22:07:16.921282+00:00",
+  "completed_observation_remeasured": false,
+  "environment_gate": {
+    "available_ram_gib_min": 8.0,
+    "cpu_percent_max": 20.0,
+    "retry_count": 3
+  },
+  "gpu_used": false,
+  "holdout_reopened": false,
+  "memory_observation_count": 400,
+  "memory_plan_sha256": "018584b8f8c94d6afa5fcf3576c261bae2b0f694c8b748bf2e0421234e17ea13",
+  "memory_worker_sha256": "2ba87c88244b8b3d8b0265d44b29204dc87e321e5aedc35dc5ac536de5fa8fd7",
+  "parent_commit": "2e1ece6cc198b054b01e467275951caafb6af794",
+  "parent_rss_guard_sampling_ms": 5,
+  "resource_timeout_seconds": 600,
+  "schema": "stage26_3b_execution_record_v1",
+  "stage": 26,
+  "status_counts": {
+    "PASS": 390,
+    "RESOURCE_LIMIT_OOM": 10
+  },
+  "timing_performed": false,
+  "worker_internal_rss_sampling_ms": 5,
+  "worker_ram_fraction_limit": 0.85,
+  "worker_ram_limit_bytes": 28610476236
+}

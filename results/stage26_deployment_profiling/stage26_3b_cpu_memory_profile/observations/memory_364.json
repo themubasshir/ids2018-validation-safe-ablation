@@ -1,0 +1,46 @@
+{
+  "affinity_requested": [
+    0,
+    1
+  ],
+  "baseline_rss_bytes": 255643648,
+  "batch_size": 256,
+  "comparison_group": "GROUP_B_PACKET_IMAGE",
+  "condition_id": "CPUCOND_058",
+  "delta_model_rss_bytes": 4284416,
+  "delta_peak_rss_bytes": 336031744,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.232311248779297,
+      "cpu_percent": 0.3,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.232311248779297,
+    "cpu_percent": 0.3,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_2_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "inference_passes": 1,
+  "loaded_rss_bytes": 259928064,
+  "memory_execution_order": 364,
+  "memory_repetition": 2,
+  "parent_observed_peak_rss_bytes": 591675392,
+  "peak_rss_bytes": 591675392,
+  "rss_sample_count": 86,
+  "rss_sampling_interval_ms": 5,
+  "ru_maxrss_bytes_descriptive": 1210355712,
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 57,
+  "status": "PASS",
+  "target_id": "STAGE21_MASKED_VIT_V1",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 2,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

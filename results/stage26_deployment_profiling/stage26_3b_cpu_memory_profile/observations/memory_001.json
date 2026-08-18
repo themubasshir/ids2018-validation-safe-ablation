@@ -1,0 +1,46 @@
+{
+  "affinity_requested": [
+    0,
+    1
+  ],
+  "baseline_rss_bytes": 179703808,
+  "batch_size": 1024,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_029",
+  "delta_model_rss_bytes": 92274688,
+  "delta_peak_rss_bytes": 95723520,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.60083770751953,
+      "cpu_percent": 0.5,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.60083770751953,
+    "cpu_percent": 0.5,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_2_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "inference_passes": 1,
+  "loaded_rss_bytes": 271978496,
+  "memory_execution_order": 1,
+  "memory_repetition": 3,
+  "parent_observed_peak_rss_bytes": 275423232,
+  "peak_rss_bytes": 275427328,
+  "rss_sample_count": 4,
+  "rss_sampling_interval_ms": 5,
+  "ru_maxrss_bytes_descriptive": 1210355712,
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 24,
+  "status": "PASS",
+  "target_id": "STAGE16_CATBOOST_TUNED",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 2,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

@@ -1,0 +1,10 @@
+{
+  "deployment_package_map_sha256": "09e0d093a8ca83f4d68e9affd675af4336b982a6af14e5034fc2e5ffd4bc547c",
+  "freeze_receipt_sha256": "465cc0c89f09c42f0d33b4dc1f8e759983fccd2897cef0207c85e777cdee3a19",
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "memory_execution_plan_sha256": "018584b8f8c94d6afa5fcf3576c261bae2b0f694c8b748bf2e0421234e17ea13",
+  "memory_implementation_sha256": "9e8439d41924f5bdd13dc4db0a8e997fb9a6be1883a38a9ff4028c9f785452dc",
+  "memory_worker_sha256": "2ba87c88244b8b3d8b0265d44b29204dc87e321e5aedc35dc5ac536de5fa8fd7",
+  "parent_memory_lock_commit": "2e1ece6cc198b054b01e467275951caafb6af794",
+  "schema": "stage26_3a_lock_reference_v1"
+}

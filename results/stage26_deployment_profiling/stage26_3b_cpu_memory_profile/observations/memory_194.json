@@ -1,0 +1,45 @@
+{
+  "affinity_requested": [
+    0
+  ],
+  "baseline_rss_bytes": 179961856,
+  "batch_size": 1024,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_014",
+  "delta_model_rss_bytes": 84672512,
+  "delta_peak_rss_bytes": 85377024,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 28.5989990234375,
+      "cpu_percent": 1.0,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 28.5989990234375,
+    "cpu_percent": 1.0,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "inference_passes": 1,
+  "loaded_rss_bytes": 264634368,
+  "memory_execution_order": 194,
+  "memory_repetition": 5,
+  "parent_observed_peak_rss_bytes": 270045184,
+  "peak_rss_bytes": 265338880,
+  "rss_sample_count": 12,
+  "rss_sampling_interval_ms": 5,
+  "ru_maxrss_bytes_descriptive": 1210355712,
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 45,
+  "status": "PASS",
+  "target_id": "STAGE16_LIGHTGBM_TUNED",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 1,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

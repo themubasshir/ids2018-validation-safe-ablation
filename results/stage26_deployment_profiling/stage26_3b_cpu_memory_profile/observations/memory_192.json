@@ -1,0 +1,45 @@
+{
+  "affinity_requested": [
+    0
+  ],
+  "baseline_rss_bytes": 373182464,
+  "batch_size": 8192,
+  "comparison_group": "GROUP_A_DUPSAFE70",
+  "condition_id": "CPUCOND_035",
+  "delta_model_rss_bytes": 7462912,
+  "delta_peak_rss_bytes": 2263486464,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 28.910751342773438,
+      "cpu_percent": 0.3,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 28.910751342773438,
+    "cpu_percent": 0.3,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "inference_passes": 1,
+  "loaded_rss_bytes": 380645376,
+  "memory_execution_order": 192,
+  "memory_repetition": 4,
+  "parent_observed_peak_rss_bytes": 2636668928,
+  "peak_rss_bytes": 2636668928,
+  "rss_sample_count": 12789,
+  "rss_sampling_interval_ms": 5,
+  "ru_maxrss_bytes_descriptive": 2636357632,
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 32,
+  "status": "PASS",
+  "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 1,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

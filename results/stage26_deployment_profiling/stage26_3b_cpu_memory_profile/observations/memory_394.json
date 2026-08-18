@@ -1,0 +1,45 @@
+{
+  "affinity_requested": [
+    0
+  ],
+  "baseline_rss_bytes": 267497472,
+  "batch_size": 1024,
+  "comparison_group": "GROUP_B_PACKET_IMAGE",
+  "condition_id": "CPUCOND_044",
+  "delta_model_rss_bytes": 4239360,
+  "delta_peak_rss_bytes": 4441325568,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.326587677001953,
+      "cpu_percent": 0.5,
+      "passed": true
+    }
+  ],
+  "environment_final": {
+    "attempt": 1,
+    "available_ram_gib": 29.326587677001953,
+    "cpu_percent": 0.5,
+    "passed": true
+  },
+  "gpu_used": false,
+  "hardware_mode": "CPU_1_PHYSICAL_CORE",
+  "holdout_accessed": false,
+  "inference_passes": 1,
+  "loaded_rss_bytes": 271736832,
+  "memory_execution_order": 394,
+  "memory_repetition": 4,
+  "parent_observed_peak_rss_bytes": 4701052928,
+  "peak_rss_bytes": 4708823040,
+  "rss_sample_count": 3474,
+  "rss_sampling_interval_ms": 5,
+  "ru_maxrss_bytes_descriptive": 4708720640,
+  "schema": "stage26_3_memory_observation_v1",
+  "source_cpu_execution_order": 40,
+  "status": "PASS",
+  "target_id": "STAGE20_MASKED_CNN_V1",
+  "target_role": "PRIMARY_ARCHITECTURE",
+  "thread_count": 1,
+  "timing_performed": false,
+  "worker_ram_limit_bytes": 28610476236
+}

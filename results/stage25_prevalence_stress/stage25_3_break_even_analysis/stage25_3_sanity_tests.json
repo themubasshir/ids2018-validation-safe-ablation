@@ -1,0 +1,47 @@
+{
+  "stage": "Stage25-3",
+  "status": "PASS",
+  "tests": {
+    "COMPLETE_COST_GRID": {
+      "actual_rows": 144,
+      "expected_rows": 144,
+      "passed": true
+    },
+    "COST_BREAK_EVEN_EQUALITY": {
+      "completed_checks": 24,
+      "expected_checks": 24,
+      "maximum_abs_delta_per_B": 1.734723475976807e-18,
+      "passed": true
+    },
+    "COST_BREAK_EVEN_SIGN_REVERSAL": {
+      "above_break_even": "MODEL_LOWER_RELATIVE_COST",
+      "below_break_even": "IGNORE_LOWER_RELATIVE_COST",
+      "completed_checks": 24,
+      "expected_checks": 24,
+      "passed": true
+    },
+    "COST_DELTA_IDENTITY": {
+      "completed_checks": 144,
+      "expected_checks": 144,
+      "identity": "C_model - C_ignore = FP*C_FP - TP*C_FN",
+      "passed": true
+    },
+    "EXACT_PPV_BREAK_EVEN_TABLE_RETAINED": {
+      "actual_rows": 120,
+      "expected_rows": 120,
+      "passed": true,
+      "source_sha256": "1aebef7de27ab57947a2ce0063f5fcda0fddfd3dea08864bd55214e66bbc2a43"
+    },
+    "EXACT_REQUIRED_FPR_TABLE_RETAINED": {
+      "actual_rows": 720,
+      "expected_rows": 720,
+      "passed": true,
+      "source_sha256": "80fdfc189f9efdb94ecbce26cc38810c29a33b81c9e9928a3950e6e646651a48"
+    },
+    "GRID_DECISION_MATCHES_ANALYTIC_BOUNDARY": {
+      "completed_checks": 144,
+      "expected_checks": 144,
+      "passed": true
+    }
+  }
+}

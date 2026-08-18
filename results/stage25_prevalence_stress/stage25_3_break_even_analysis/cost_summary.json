@@ -1,0 +1,212 @@
+{
+  "cost_break_even_max": 0.07757369164447991,
+  "cost_break_even_min": 3.569138478251155e-07,
+  "decision_summary": {
+    "all_operating_points": {
+      "0.0001": {
+        "equal_count": 0,
+        "ignore_lower_count": 21,
+        "model_lower_count": 3,
+        "operating_points": 24
+      },
+      "0.001": {
+        "equal_count": 0,
+        "ignore_lower_count": 9,
+        "model_lower_count": 15,
+        "operating_points": 24
+      },
+      "0.003": {
+        "equal_count": 0,
+        "ignore_lower_count": 9,
+        "model_lower_count": 15,
+        "operating_points": 24
+      },
+      "0.01": {
+        "equal_count": 0,
+        "ignore_lower_count": 9,
+        "model_lower_count": 15,
+        "operating_points": 24
+      },
+      "0.03": {
+        "equal_count": 0,
+        "ignore_lower_count": 6,
+        "model_lower_count": 18,
+        "operating_points": 24
+      },
+      "0.1": {
+        "equal_count": 0,
+        "ignore_lower_count": 0,
+        "model_lower_count": 24,
+        "operating_points": 24
+      }
+    },
+    "by_family": {
+      "STAGE22_CHRONOLOGICAL": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 2,
+          "model_lower_count": 1,
+          "operating_points": 3
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        }
+      },
+      "STAGE22_RANDOM": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        }
+      },
+      "STAGE24_2017_TO_2018": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 4,
+          "model_lower_count": 2,
+          "operating_points": 6
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 6,
+          "operating_points": 6
+        }
+      },
+      "STAGE24_2018_TO_2017": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 12,
+          "model_lower_count": 0,
+          "operating_points": 12
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        }
+      }
+    }
+  },
+  "interpretation": "For prevalence below an operating point's analytic cost break-even, the simplified ignore reference has lower expected relative operational cost. Above the break-even, the frozen model operating point has lower expected relative operational cost under C_FP=1/C_FN=100.",
+  "limitations": [
+    "Cost units are not currency.",
+    "The comparator is a simplified non-deployment/ignore reference.",
+    "Every malicious flow is not interpreted as an independent breach.",
+    "Results are conditional on frozen TPR/FPR and cost assumptions."
+  ],
+  "relative_cost_model": {
+    "C_FN": 100,
+    "C_FP": 1,
+    "not_currency": true,
+    "units": "RELATIVE_OPERATIONAL_COST_UNITS"
+  },
+  "stage": "Stage25-3"
+}

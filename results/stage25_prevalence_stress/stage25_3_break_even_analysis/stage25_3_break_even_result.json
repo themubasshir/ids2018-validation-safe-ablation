@@ -1,0 +1,239 @@
+{
+  "analysis": {
+    "cost_break_even_rows": 24,
+    "cost_projection_rows": 144,
+    "operating_points": 24,
+    "ppv_break_even_rows": 120,
+    "prevalence_points": 6,
+    "required_fpr_rows": 720
+  },
+  "artifacts": {
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/cost_break_even_points.csv": "52f6c62a1fbb0a1f5303c5b5e235453c6b9d68709484dee2d7b2974f07176cac",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/cost_projection_grid.csv": "c03aa3ec9b4ba3a0e0fe880dc8c2eff476d44ed2b4e612d840d1688e08859c9d",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/cost_summary.json": "70a792819417bf444b330f9cd692a5fe6eefb9e8ed7530297eaa448bf58122e6",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/ppv_break_even_points.csv": "1aebef7de27ab57947a2ce0063f5fcda0fddfd3dea08864bd55214e66bbc2a43",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/required_fpr_by_ppv.csv": "80fdfc189f9efdb94ecbce26cc38810c29a33b81c9e9928a3950e6e646651a48",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/stage25_3_sanity_tests.json": "77ed0431c9d8c2d581eca3c9d1834c412c24b200a04a35f407348ee9e18e354e"
+  },
+  "cost_decision_summary": {
+    "all_operating_points": {
+      "0.0001": {
+        "equal_count": 0,
+        "ignore_lower_count": 21,
+        "model_lower_count": 3,
+        "operating_points": 24
+      },
+      "0.001": {
+        "equal_count": 0,
+        "ignore_lower_count": 9,
+        "model_lower_count": 15,
+        "operating_points": 24
+      },
+      "0.003": {
+        "equal_count": 0,
+        "ignore_lower_count": 9,
+        "model_lower_count": 15,
+        "operating_points": 24
+      },
+      "0.01": {
+        "equal_count": 0,
+        "ignore_lower_count": 9,
+        "model_lower_count": 15,
+        "operating_points": 24
+      },
+      "0.03": {
+        "equal_count": 0,
+        "ignore_lower_count": 6,
+        "model_lower_count": 18,
+        "operating_points": 24
+      },
+      "0.1": {
+        "equal_count": 0,
+        "ignore_lower_count": 0,
+        "model_lower_count": 24,
+        "operating_points": 24
+      }
+    },
+    "by_family": {
+      "STAGE22_CHRONOLOGICAL": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 3,
+          "model_lower_count": 0,
+          "operating_points": 3
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 2,
+          "model_lower_count": 1,
+          "operating_points": 3
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        }
+      },
+      "STAGE22_RANDOM": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 3,
+          "operating_points": 3
+        }
+      },
+      "STAGE24_2017_TO_2018": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 6,
+          "model_lower_count": 0,
+          "operating_points": 6
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 4,
+          "model_lower_count": 2,
+          "operating_points": 6
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 6,
+          "operating_points": 6
+        }
+      },
+      "STAGE24_2018_TO_2017": {
+        "0.0001": {
+          "equal_count": 0,
+          "ignore_lower_count": 12,
+          "model_lower_count": 0,
+          "operating_points": 12
+        },
+        "0.001": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.003": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.01": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.03": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        },
+        "0.1": {
+          "equal_count": 0,
+          "ignore_lower_count": 0,
+          "model_lower_count": 12,
+          "operating_points": 12
+        }
+      }
+    }
+  },
+  "created_at_utc": "2026-08-18T12:51:33.386348+00:00",
+  "frozen_relative_cost": {
+    "C_FN": 100,
+    "C_FP": 1,
+    "currency": false,
+    "units": "RELATIVE_OPERATIONAL_COST_UNITS"
+  },
+  "interpretation_boundary": "All cost results are deterministic relative-operational-cost projections under the frozen 1:100 FP/FN cost ratio. They are not financial-loss estimates and do not imply that each malicious flow corresponds to an independent breach.",
+  "next_authorized_stage": "STAGE25_4_BENCHMARK_TO_OPERATIONAL_TRANSLATION",
+  "repository_parent_commit": "e905a490aa6b7fdd3c22b021b11de270c9b57784",
+  "sanity_test_status": "PASS",
+  "scientific_access": {
+    "model_files_loaded": 0,
+    "model_fit_calls": 0,
+    "model_inference_calls": 0,
+    "probability_arrays_created": 0,
+    "probability_arrays_opened": 0,
+    "target_features_read": 0,
+    "target_labels_read": 0,
+    "target_reopenings": 0,
+    "threshold_searches": 0
+  },
+  "stage": "Stage25-3",
+  "stage25_0_freeze_sha256": "d231af1e4f07363c4d932acc99e1052e3b33bd2d24ca22e4386f4c7c378827b7",
+  "stage25_1_result_sha256": "81e4d96494c3432745f97428b722cc8870f75372a2c4570653ec59e7bcaa25ff",
+  "stage25_2_result_sha256": "1e3e66eb1dcf416585fd3f0fada8675b6950fde5f3f45af006a25b1aec872737",
+  "status": "EXACT_BREAK_EVEN_ANALYSIS_COMPLETE"
+}

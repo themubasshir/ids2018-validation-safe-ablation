@@ -1,0 +1,80 @@
+{
+  "anti_adaptation": {
+    "feature_change": false,
+    "hyperparameter_tuning": false,
+    "performance_feedback": false,
+    "target_feedback": false,
+    "threshold_feedback": false
+  },
+  "corrective_execution_rule": {
+    "data_membership": "UNCHANGED",
+    "ensemble": {
+      "changes": "NONE",
+      "rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST"
+    },
+    "lightgbm": {
+      "algorithmic_hyperparameters": "UNCHANGED",
+      "configuration": "LGBM_11",
+      "only_change": {
+        "from": "gpu",
+        "parameter": "device_type",
+        "to": "cpu"
+      }
+    },
+    "numeric_input_policy": "UNCHANGED_FLOAT64_INPUT",
+    "representation": "UNCHANGED_BRIDGE62",
+    "scope": "STAGE24_PRIMARY_BRIDGE62_LIGHTGBM_SOURCE_REFIT",
+    "threshold_semantics": "UNCHANGED_SOURCE_VALIDATION_ONLY",
+    "xgboost": {
+      "backend": "cuda",
+      "changes": "NONE",
+      "configuration": "XGB_11"
+    }
+  },
+  "created_at_utc": "2026-08-18T05:09:03.454572+00:00",
+  "next_authorized_step": "Resume Stage24-1B from the already reconstructed bridge62 training memmap. Fit LGBM_11 once with device_type=cpu, then fit XGB_11 once with device=cuda. No other parameter or scientific rule may change.",
+  "parent_commit": "c5c96decdff956a856bb85eed53cd55dae3b2aeb",
+  "precedent": {
+    "artifact": "results/stage22r_protocol_recovery/stage22r_2a_ex1_lightgbm_backend_amendment/stage22r_2a_ex1_lightgbm_backend_amendment.json",
+    "artifact_sha256": "1fe97479e4af21045fdae585c405f6e8d5b1a994ad8f6eb05dac19164d428ea3",
+    "failure_text_exact_match": true,
+    "scientific_interpretation": "Implementation-backend correction forced by an upstream GPU learner defect; not a model-selection or performance-tuning decision.",
+    "stage22_status": "LIGHTGBM_GPU_BACKEND_FAILURE_FROZEN_CPU_FALLBACK"
+  },
+  "scientific_fit_accounting": {
+    "completed_lightgbm_fits": 0,
+    "completed_stage24_scientific_fits": 0,
+    "completed_xgboost_fits": 0,
+    "failed_runtime_attempt_is_additional_model_selection": false,
+    "lightgbm_execution_attempts": 1,
+    "reason": "No trained LightGBM model, validation probabilities, thresholds, target values, or target metrics were observed.",
+    "stage24_completed_fit_budget": 4
+  },
+  "stage": "Stage24-1B-EX1",
+  "status": "LIGHTGBM_FULL_SCALE_GPU_BACKEND_FAILURE_FROZEN_CPU_FALLBACK",
+  "timing": {
+    "frozen_before_any_stage24_target_opening": true,
+    "frozen_before_bridge62_threshold_selection": true,
+    "frozen_before_bridge62_validation_probability": true,
+    "frozen_before_successful_stage24_1b_model": true
+  },
+  "trigger": {
+    "completed_lightgbm_fit": false,
+    "component": "LIGHTGBM_LGBM_11",
+    "direction": "IDS2018_TO_CICIDS2017",
+    "failure": "Check failed: (best_split_info.left_count) > (0) at /__w/1/s/lightgbm-python/src/treelearner/serial_tree_learner.cpp, line 852",
+    "failure_location": "During LGBMClassifier.fit after exact frozen Stage22 chronological training membership was reconstructed and all population assertions passed.",
+    "lightgbm_model_serialized": false,
+    "lightgbm_validation_inference": false,
+    "representation": "bridge62",
+    "requested_backend": "gpu",
+    "runtime_lightgbm_version": "4.6.0",
+    "stage": "Stage24-1B",
+    "target_labels_read": 0,
+    "target_openings_consumed": 0,
+    "target_predictions": 0,
+    "target_rows_read": 0,
+    "threshold_selection_performed": false,
+    "xgboost_training_started": false
+  }
+}

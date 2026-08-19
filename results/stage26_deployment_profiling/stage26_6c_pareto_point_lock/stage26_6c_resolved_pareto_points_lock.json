@@ -1,0 +1,291 @@
+{
+  "binary64_validation_policy": "CPU1/B1 p95 values were verified by exact Python float.hex() identity against Stage26-6B / Stage26-2 values; no tolerance or rounding substitution was used.",
+  "checkpoint": "STAGE26-6C",
+  "cpu1_batch1_p95_binary64_identities": {
+    "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING": "0x1.69afd976ff3aep+3",
+    "STAGE16_CATBOOST_TUNED": "0x1.e9df548ecd8dap-3",
+    "STAGE16_LIGHTGBM_TUNED": "0x1.4c2a546760613p-1",
+    "STAGE16_XGBOOST_TUNED": "0x1.2ffae1b30ddebp-1",
+    "STAGE20_MASKED_CNN_V1": "0x1.310677b395c41p+3",
+    "STAGE21_MASKED_VIT_V1": "0x1.0d7724fa8b4bfp+1"
+  },
+  "created_at_utc": "2026-08-19T18:42:20.318561+00:00",
+  "excluded_from_primary_point_set": {
+    "ENS_LGBM_XGB_EQUAL": "Operational reference only; not an additional architecture family primary point.",
+    "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": "Resource decomposition only; excluded from predictive Pareto."
+  },
+  "group_partition": {
+    "GROUP_A_DUPSAFE70": [
+      "STAGE16_XGBOOST_TUNED",
+      "STAGE16_LIGHTGBM_TUNED",
+      "STAGE16_CATBOOST_TUNED",
+      "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    ],
+    "GROUP_B_PACKET_IMAGE": [
+      "STAGE20_MASKED_CNN_V1",
+      "STAGE21_MASKED_VIT_V1"
+    ]
+  },
+  "point_count": 6,
+  "point_order": [
+    "STAGE16_XGBOOST_TUNED",
+    "STAGE16_LIGHTGBM_TUNED",
+    "STAGE16_CATBOOST_TUNED",
+    "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+    "STAGE20_MASKED_CNN_V1",
+    "STAGE21_MASKED_VIT_V1"
+  ],
+  "point_set_sha256": "5fb0e952d6560b6cd0f84c49048c05d26ff3c89c52edd61ea91855d374c10a76",
+  "points": [
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cost_source": {
+        "affinity": [
+          0
+        ],
+        "batch_size": 1,
+        "condition_id": "CPUCOND_001",
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "metric": "CPU_1_PHYSICAL_CORE_BATCH1_P95_INFERENCE_LATENCY_MS",
+        "status": "PASS",
+        "status_crosscheck_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+        "status_crosscheck_row": 16,
+        "status_crosscheck_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+        "summary_source_field": "p95_batch_latency_ms",
+        "summary_source_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+        "summary_source_row": 16,
+        "summary_source_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+        "thread_count": 1,
+        "timed_runs": 200,
+        "value_ms": 0.5937109499999996
+      },
+      "p95_cpu1_batch1_inference_latency_ms": 0.5937109499999996,
+      "pr_auc": 0.9453847557659393,
+      "predictive_source": {
+        "configuration_id": "XGB_11",
+        "population": "STAGE15_STAGE16_EXACT_DUPSAFE_VALIDATION",
+        "selected_threshold": 0.465,
+        "source_field": "validation_pr_auc",
+        "source_path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_resolved_artifacts.csv",
+        "source_row": 2,
+        "source_sha256": "bb73dd1c63ab78942cea9eba9c1d1bc9d278cb3ae4963e8c7410b37ef8d270ad",
+        "value": 0.9453847557659393
+      },
+      "target_id": "STAGE16_XGBOOST_TUNED"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cost_source": {
+        "affinity": [
+          0
+        ],
+        "batch_size": 1,
+        "condition_id": "CPUCOND_011",
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "metric": "CPU_1_PHYSICAL_CORE_BATCH1_P95_INFERENCE_LATENCY_MS",
+        "status": "PASS",
+        "status_crosscheck_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+        "status_crosscheck_row": 79,
+        "status_crosscheck_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+        "summary_source_field": "p95_batch_latency_ms",
+        "summary_source_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+        "summary_source_row": 72,
+        "summary_source_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+        "thread_count": 1,
+        "timed_runs": 200,
+        "value_ms": 0.6487604499999996
+      },
+      "p95_cpu1_batch1_inference_latency_ms": 0.6487604499999996,
+      "pr_auc": 0.9466063189077636,
+      "predictive_source": {
+        "configuration_id": "LGBM_11",
+        "population": "STAGE15_STAGE16_EXACT_DUPSAFE_VALIDATION",
+        "selected_threshold": 0.47,
+        "source_field": "validation_pr_auc",
+        "source_path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_resolved_artifacts.csv",
+        "source_row": 3,
+        "source_sha256": "bb73dd1c63ab78942cea9eba9c1d1bc9d278cb3ae4963e8c7410b37ef8d270ad",
+        "value": 0.9466063189077636
+      },
+      "target_id": "STAGE16_LIGHTGBM_TUNED"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cost_source": {
+        "affinity": [
+          0
+        ],
+        "batch_size": 1,
+        "condition_id": "CPUCOND_021",
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "metric": "CPU_1_PHYSICAL_CORE_BATCH1_P95_INFERENCE_LATENCY_MS",
+        "status": "PASS",
+        "status_crosscheck_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+        "status_crosscheck_row": 9,
+        "status_crosscheck_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+        "summary_source_field": "p95_batch_latency_ms",
+        "summary_source_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+        "summary_source_row": 9,
+        "summary_source_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+        "thread_count": 1,
+        "timed_runs": 200,
+        "value_ms": 0.23919549999999995
+      },
+      "p95_cpu1_batch1_inference_latency_ms": 0.23919549999999995,
+      "pr_auc": 0.9430447292850749,
+      "predictive_source": {
+        "configuration_id": "CAT_04",
+        "population": "STAGE15_STAGE16_EXACT_DUPSAFE_VALIDATION",
+        "selected_threshold": 0.435,
+        "source_field": "validation_pr_auc",
+        "source_path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_0b_resolved_artifacts.csv",
+        "source_row": 4,
+        "source_sha256": "bb73dd1c63ab78942cea9eba9c1d1bc9d278cb3ae4963e8c7410b37ef8d270ad",
+        "value": 0.9430447292850749
+      },
+      "target_id": "STAGE16_CATBOOST_TUNED"
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cost_source": {
+        "affinity": [
+          0
+        ],
+        "batch_size": 1,
+        "condition_id": "CPUCOND_031",
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "metric": "CPU_1_PHYSICAL_CORE_BATCH1_P95_INFERENCE_LATENCY_MS",
+        "status": "PASS",
+        "status_crosscheck_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+        "status_crosscheck_row": 57,
+        "status_crosscheck_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+        "summary_source_field": "p95_batch_latency_ms",
+        "summary_source_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+        "summary_source_row": 51,
+        "summary_source_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+        "thread_count": 1,
+        "timed_runs": 200,
+        "value_ms": 11.302716
+      },
+      "p95_cpu1_batch1_inference_latency_ms": 11.302716,
+      "pr_auc": 0.9295715928199866,
+      "predictive_source": {
+        "ensemble_method": "unweighted arithmetic mean probabilities",
+        "explicitly_not_used": {
+          "field": "holdout_pr_auc",
+          "reason": "Group-A primary classical architecture points are frozen on the shared duplicate-safe validation population.",
+          "value": 0.9287861970480663
+        },
+        "population": "STAGE15_STAGE16_EXACT_DUPSAFE_VALIDATION",
+        "selected_threshold": 0.73,
+        "source_field": "validation_pr_auc",
+        "source_path": "results/stage15_transformer_checkpoint/stage15_6a_ensemble_validation_holdout_gap.json",
+        "source_sha256": "d95ae4343f21fe6db241b6e03425120dbff568efaeb3f6e47aa21fc8da6196a7",
+        "value": 0.9295715928199866
+      },
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "cost_source": {
+        "affinity": [
+          0
+        ],
+        "batch_size": 1,
+        "condition_id": "CPUCOND_041",
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "metric": "CPU_1_PHYSICAL_CORE_BATCH1_P95_INFERENCE_LATENCY_MS",
+        "status": "PASS",
+        "status_crosscheck_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+        "status_crosscheck_row": 3,
+        "status_crosscheck_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+        "summary_source_field": "p95_batch_latency_ms",
+        "summary_source_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+        "summary_source_row": 3,
+        "summary_source_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+        "thread_count": 1,
+        "timed_runs": 200,
+        "value_ms": 9.532039499999998
+      },
+      "p95_cpu1_batch1_inference_latency_ms": 9.532039499999998,
+      "pr_auc": 0.48945269459245255,
+      "predictive_source": {
+        "claim_boundary": "DESCRIPTIVE_NON_CONFIRMATORY",
+        "population": "EXACT_SAME_FRIDAY_COMPACT_CORPUS_EXPORT_ORDER",
+        "population_attack": 5602,
+        "population_benign": 6486,
+        "population_rows": 12088,
+        "source_field": "co_primary_descriptive.CNN_PR_AUC",
+        "source_path": "results/stage21_architecture/stage21_5_cnn_vit_descriptive_comparison.json",
+        "source_sha256": "142bef3193ed1e9acaaee60bfcf4c0ce49516c58a2487d7bb6d5519a1f2a7885",
+        "value": 0.48945269459245255
+      },
+      "target_id": "STAGE20_MASKED_CNN_V1"
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "cost_source": {
+        "affinity": [
+          0
+        ],
+        "batch_size": 1,
+        "condition_id": "CPUCOND_051",
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "metric": "CPU_1_PHYSICAL_CORE_BATCH1_P95_INFERENCE_LATENCY_MS",
+        "status": "PASS",
+        "status_crosscheck_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+        "status_crosscheck_row": 30,
+        "status_crosscheck_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+        "summary_source_field": "p95_batch_latency_ms",
+        "summary_source_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+        "summary_source_row": 26,
+        "summary_source_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+        "thread_count": 1,
+        "timed_runs": 200,
+        "value_ms": 2.1051984999999998
+      },
+      "p95_cpu1_batch1_inference_latency_ms": 2.1051984999999998,
+      "pr_auc": 0.606536911289453,
+      "predictive_source": {
+        "claim_boundary": "DESCRIPTIVE_NON_CONFIRMATORY",
+        "population": "EXACT_SAME_FRIDAY_COMPACT_CORPUS_EXPORT_ORDER",
+        "population_attack": 5602,
+        "population_benign": 6486,
+        "population_rows": 12088,
+        "source_field": "co_primary_descriptive.ViT_PR_AUC",
+        "source_path": "results/stage21_architecture/stage21_5_cnn_vit_descriptive_comparison.json",
+        "source_sha256": "142bef3193ed1e9acaaee60bfcf4c0ce49516c58a2487d7bb6d5519a1f2a7885",
+        "value": 0.606536911289453
+      },
+      "target_id": "STAGE21_MASKED_VIT_V1"
+    }
+  ],
+  "schema": "stage26_6c_resolved_pareto_points_lock_v2",
+  "scientific_parent": "92495eac2c9202973ff4d889e3c12669c06e9ef1",
+  "scientific_state_at_freeze": {
+    "bootstrap_uncertainty_computed": false,
+    "cross_group_frontier_computed": false,
+    "dominance_computed": false,
+    "frontier_computed": false,
+    "gpu_used": false,
+    "holdout_reopened": false,
+    "inference_performed": false,
+    "model_loaded": false,
+    "pcap_accessed": false,
+    "predictive_metric_recomputed": false,
+    "release_corpus_accessed": false,
+    "timing_performed": false
+  },
+  "source_resolution_policy": {
+    "GROUP_A_DUPSAFE70": "Frozen PR-AUC values share the exact duplicate-safe validation population inherited by Stage15/Stage16.",
+    "GROUP_B_PACKET_IMAGE": "Frozen PR-AUC values share the exact same Friday compact corpus export order and remain descriptive/non-confirmatory.",
+    "cost_axis": "CPU_1_PHYSICAL_CORE batch1 p95 isolated inference latency."
+  },
+  "source_stage26_6b": {
+    "path": "/kaggle/working/stage26_deployment_profiling/pareto/stage26_6b_resolved_pareto_points.json",
+    "point_set_sha256": "5fb0e952d6560b6cd0f84c49048c05d26ff3c89c52edd61ea91855d374c10a76",
+    "sha256": "715c05709f865477aacc9546377f45f9484eefc9a55559506e3d42fac26a44a7"
+  },
+  "stage": 26,
+  "status": "FROZEN_BEFORE_DOMINANCE"
+}

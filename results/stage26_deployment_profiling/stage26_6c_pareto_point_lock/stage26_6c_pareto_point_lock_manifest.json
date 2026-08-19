@@ -1,0 +1,39 @@
+{
+  "commit_subject": "stage26: freeze CPU Pareto point inputs",
+  "created_at_utc": "2026-08-19T18:42:20.348206+00:00",
+  "file_count_excluding_manifest": 3,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6c_pareto_point_lock/stage26_6c_resolved_pareto_points_lock.json",
+      "sha256": "3b4739d9cec40c0dc1a21c80cb3cc4682cab08bef671f760de4697a7ad8d6ddf",
+      "size_bytes": 13342
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6c_pareto_point_lock/stage26_6c_pareto_rules_lock.json",
+      "sha256": "aff5821c4e870bbd7326d93563c6e952cf34aafae06fa483e9ec6f348409a1d2",
+      "size_bytes": 1996
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6c_pareto_point_lock/stage26_6c_pareto_point_freeze_receipt.json",
+      "sha256": "f86db80ce6a611963671603fb3a27b260649fd6af36610cb5d2fbcd920da90b8",
+      "size_bytes": 1350
+    }
+  ],
+  "point_lock_sha256": "3b4739d9cec40c0dc1a21c80cb3cc4682cab08bef671f760de4697a7ad8d6ddf",
+  "point_set_sha256": "5fb0e952d6560b6cd0f84c49048c05d26ff3c89c52edd61ea91855d374c10a76",
+  "receipt_sha256": "f86db80ce6a611963671603fb3a27b260649fd6af36610cb5d2fbcd920da90b8",
+  "rule_lock_sha256": "aff5821c4e870bbd7326d93563c6e952cf34aafae06fa483e9ec6f348409a1d2",
+  "schema": "stage26_6c_pareto_point_lock_manifest_v2",
+  "scientific_parent": "92495eac2c9202973ff4d889e3c12669c06e9ef1",
+  "scientific_state": {
+    "GPU_used": false,
+    "bootstrap_uncertainty_computed": false,
+    "cross_group_frontier_computed": false,
+    "dominance_computed": false,
+    "frontier_computed": false,
+    "new_measurement_performed": false,
+    "point_inputs_frozen": true
+  },
+  "source_stage26_6b_sha256": "715c05709f865477aacc9546377f45f9484eefc9a55559506e3d42fac26a44a7",
+  "status": "READY_FOR_GIT_ANCHOR"
+}

@@ -1,0 +1,43 @@
+{
+  "GROUP_A_DUPSAFE70": {
+    "eligible_primary_members": [
+      "STAGE16_XGBOOST_TUNED",
+      "STAGE16_LIGHTGBM_TUNED",
+      "STAGE16_CATBOOST_TUNED",
+      "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+    ],
+    "primary_cost_axis": "CPU_1_PHYSICAL_CORE batch1 p95 inference latency",
+    "primary_discrimination_axis": "Same-population frozen PR-AUC"
+  },
+  "GROUP_B_PACKET_IMAGE": {
+    "claim_boundary": "DESCRIPTIVE_NON_CONFIRMATORY",
+    "eligible_primary_members": [
+      "STAGE20_MASKED_CNN_V1",
+      "STAGE21_MASKED_VIT_V1"
+    ],
+    "primary_cost_axis": "CPU_1_PHYSICAL_CORE batch1 p95 inference latency",
+    "primary_discrimination_axis": "Same-Friday-population frozen PR-AUC"
+  },
+  "checkpoint": "STAGE26-6C",
+  "created_at_utc": "2026-08-19T18:42:20.318710+00:00",
+  "dominance_rule": {
+    "A_dominates_B_if": "A PR-AUC >= B PR-AUC and A p95 latency <= B p95 latency, with at least one strict inequality.",
+    "frontier_status": "Descriptive point-estimate frontier; bootstrap uncertainty reported separately."
+  },
+  "execution_guard": {
+    "bootstrap_uncertainty_is_separate_from_point_estimate_frontier": true,
+    "cross_group_frontier_prohibited": true,
+    "point_estimate_frontier_may_be_computed_only_after_this_lock_is_git_anchored": true,
+    "post_freeze_cost_axis_substitution_prohibited": true,
+    "post_freeze_metric_substitution_prohibited": true
+  },
+  "global_rule": "NO CROSS-GROUP PARETO FRONTIER.",
+  "measurement_protocol_path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/measurement_protocol.json",
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "operational_references": {
+    "ENS_LGBM_XGB_EQUAL": "May be shown as operational reference but does not increase architecture-family candidate count.",
+    "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": "Resource decomposition only; excluded from predictive Pareto."
+  },
+  "schema": "stage26_6c_pareto_rules_lock_v2",
+  "stage": 26
+}

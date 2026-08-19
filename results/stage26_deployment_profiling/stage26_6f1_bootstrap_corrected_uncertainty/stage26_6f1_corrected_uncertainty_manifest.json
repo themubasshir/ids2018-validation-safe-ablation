@@ -1,0 +1,50 @@
+{
+  "checkpoint": "STAGE26-6F1",
+  "commit_subject": "stage26: anchor corrected CPU timing uncertainty",
+  "corrected_condition_csv_sha256": "f804f117312b967bfc13cc070a34be43545238bfd30a758a00ad58202c9e6828",
+  "corrected_json_sha256": "45ea4408738fb5101ce68a363c2cc0a7951648eed49e474da9489b00ce6128ce",
+  "created_at_utc": "2026-08-19T19:36:55.056391+00:00",
+  "execution_receipt_sha256": "8d37b6bc2e0a7a75b8102b7d1cd3c1c058907420b229c9da1f302d97a44f1130",
+  "file_count_excluding_manifest": 4,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_bootstrap_corrected_uncertainty.json",
+      "sha256": "45ea4408738fb5101ce68a363c2cc0a7951648eed49e474da9489b00ce6128ce",
+      "size_bytes": 129909
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_corrected_timing_uncertainty.csv",
+      "sha256": "f804f117312b967bfc13cc070a34be43545238bfd30a758a00ad58202c9e6828",
+      "size_bytes": 32892
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_six_point_p95_uncertainty.csv",
+      "sha256": "1d3870b62187037757ee3c98d126c2a004edb01c858b2ec22c2e54e7b4e52937",
+      "size_bytes": 1636
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_correction_execution_receipt.json",
+      "sha256": "8d37b6bc2e0a7a75b8102b7d1cd3c1c058907420b229c9da1f302d97a44f1130",
+      "size_bytes": 4027
+    }
+  ],
+  "immutable_historical_summary_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+  "immutable_warm_raw_sha256": "78c58289ccfc4598966d6516201028f43c4b1d16d8bd0268a0cf58129d4179fa",
+  "locked_protocol_sha256": "9e267bf526304ce2c29ed3a74e8f2be29f0320de613860a3ea47752a9f9192f8",
+  "locked_worker_sha256": "9f4e6b6adb9a020128a3d935d7fc4e37412fa3b944d5d1ac7119c716a9cdc91b",
+  "schema": "stage26_6f1_corrected_uncertainty_manifest_v1",
+  "scientific_parent": "94a2c5c290f67e3f9dda10a049e6a5318e912bdd",
+  "scientific_state": {
+    "GPU_used": false,
+    "Pareto_frontier_changed": false,
+    "corrected_uncertainty_computed": true,
+    "historical_artifact_overwritten": false,
+    "new_measurement_performed": false,
+    "point_estimate_changed": false,
+    "predictive_bootstrap_performed": false
+  },
+  "six_point_p95_csv_sha256": "1d3870b62187037757ee3c98d126c2a004edb01c858b2ec22c2e54e7b4e52937",
+  "stage": 26,
+  "stage26_6d_frontier_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5",
+  "status": "READY_FOR_GIT_ANCHOR"
+}

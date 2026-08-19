@@ -1,0 +1,100 @@
+{
+  "bootstrap": {
+    "CI_percentiles": [
+      2.5,
+      97.5
+    ],
+    "condition_local_seed_reset": true,
+    "derived_seeds": false,
+    "latency_unit_before_percentile": "milliseconds",
+    "percentile_method": "linear",
+    "replicates": 2000,
+    "rng": "numpy.random.default_rng_PCG64",
+    "same_resample_indices_within_condition": true,
+    "seed": 26042
+  },
+  "checkpoint": "STAGE26-6F1",
+  "condition_outcomes": {
+    "PASS": 73,
+    "bootstrapped_conditions": 73,
+    "fabricated_non_PASS_intervals": 0,
+    "non_PASS": 7,
+    "status_counts": {
+      "PASS": 73,
+      "RESOURCE_LIMIT_OOM": 2,
+      "TIMEOUT_RESOURCE_LIMIT": 5
+    },
+    "total": 80
+  },
+  "created_at_utc": "2026-08-19T19:36:55.047869+00:00",
+  "execution_environment": {
+    "default_rng_bit_generator": "PCG64",
+    "numpy": "2.0.2",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]"
+  },
+  "historical_vs_corrected_p95": {
+    "conditions_with_changed_p95_interval": 54,
+    "conditions_with_exact_same_p95_interval": 19,
+    "corrected_CI_label": "PROTOCOL_CERTIFIED_DERIVED_UNCERTAINTY",
+    "historical_CI_label": "HISTORICAL_NOT_PROTOCOL_CERTIFIED",
+    "maximum_absolute_lower_bound_change_ms": 100.45094410000092,
+    "maximum_absolute_upper_bound_change_ms": 1.598759550000068
+  },
+  "immutable_inputs": {
+    "condition_status_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+    "historical_summary_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+    "stage26_6d_frontier_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5",
+    "warm_raw_sha256": "78c58289ccfc4598966d6516201028f43c4b1d16d8bd0268a0cf58129d4179fa"
+  },
+  "locked_implementation": {
+    "freeze_receipt_sha256": "bee8b8922497ba23f8ec73e46ccfd4c863baad869b4dbfca90f081ce701b77c2",
+    "lock_manifest_sha256": "bb1509d721c8e26b14514d27790b534011ffac3f2452c712859a5f2dd4921c01",
+    "protocol_sha256": "9e267bf526304ce2c29ed3a74e8f2be29f0320de613860a3ea47752a9f9192f8",
+    "worker_sha256": "9f4e6b6adb9a020128a3d935d7fc4e37412fa3b944d5d1ac7119c716a9cdc91b"
+  },
+  "next": "Proceed to Stage26-7 CPU batch/component analysis using the immutable Stage26 measurements and the corrected Stage26-6F1 timing uncertainty where uncertainty reporting is required.",
+  "outputs": {
+    "corrected_condition_csv_sha256": "f804f117312b967bfc13cc070a34be43545238bfd30a758a00ad58202c9e6828",
+    "corrected_json_sha256": "45ea4408738fb5101ce68a363c2cc0a7951648eed49e474da9489b00ce6128ce",
+    "six_point_p95_csv_sha256": "1d3870b62187037757ee3c98d126c2a004edb01c858b2ec22c2e54e7b4e52937"
+  },
+  "point_estimate_integrity": {
+    "PASS_conditions_exactly_verified": 73,
+    "point_estimates_modified": false
+  },
+  "publication_policy": {
+    "retain_historical_CIs_for_audit": true,
+    "stage26_6d_point_estimate_frontier_remains_authoritative": true,
+    "use_historical_stage26_2_CIs": false,
+    "use_stage26_6f1_corrected_timing_CIs": true
+  },
+  "schema": "stage26_6f1_correction_execution_receipt_v1",
+  "scientific_parent": "94a2c5c290f67e3f9dda10a049e6a5318e912bdd",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "PR_AUC_bootstrap_computed": false,
+    "Pareto_frontier_changed": false,
+    "Pareto_frontier_recomputed": false,
+    "Release_corpus_accessed": false,
+    "bootstrap_executed": true,
+    "corrected_CI_computed": true,
+    "cross_group_frontier_computed": false,
+    "historical_CI_overwritten": false,
+    "holdout_reopened": false,
+    "inference_performed": false,
+    "model_loaded": false,
+    "point_estimate_modified": false,
+    "predictive_metric_recomputed": false,
+    "raw_measurement_modified": false,
+    "timing_performed": false
+  },
+  "six_point_pareto_uncertainty": {
+    "PR_AUC_bootstrap_computed": false,
+    "condition_count": 6,
+    "frontier_membership_changed": false,
+    "frontier_membership_recomputed": false
+  },
+  "stage": 26,
+  "status": "PASS_PROTOCOL_CERTIFIED_DERIVED_TIMING_UNCERTAINTY"
+}

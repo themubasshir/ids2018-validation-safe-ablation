@@ -1,0 +1,58 @@
+{
+  "bootstrap_uncertainty_computed": false,
+  "checkpoint": "STAGE26-6D",
+  "created_at_utc": "2026-08-19T18:44:59.028655+00:00",
+  "cross_group_comparisons": 0,
+  "frozen_inputs": {
+    "freeze_receipt_sha256": "f86db80ce6a611963671603fb3a27b260649fd6af36610cb5d2fbcd920da90b8",
+    "lock_manifest_sha256": "ddb1320491a54e4d6c5d461fb61c4854bfbf08e8f9585be2afff4ce8c8721479",
+    "point_lock_sha256": "3b4739d9cec40c0dc1a21c80cb3cc4682cab08bef671f760de4697a7ad8d6ddf",
+    "point_set_sha256": "5fb0e952d6560b6cd0f84c49048c05d26ff3c89c52edd61ea91855d374c10a76",
+    "rule_lock_sha256": "aff5821c4e870bbd7326d93563c6e952cf34aafae06fa483e9ec6f348409a1d2"
+  },
+  "next": "Audit frozen bootstrap-uncertainty availability and semantics separately; do not alter the point-estimate frontier.",
+  "ordered_within_group_comparisons": 14,
+  "output_hashes": {
+    "frontier_csv_sha256": "fe8ec789d96635a06d92256360d1214eefb239bcdb29a7f19faa1c6a1314e0d7",
+    "frontier_json_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5",
+    "pairwise_csv_sha256": "eea83f59d2da06820662952f808ea6b48e12c3fb7decaedd1eb8c7cb64e86ca6"
+  },
+  "results": {
+    "GROUP_A_DUPSAFE70": {
+      "dominated_members": [
+        "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING"
+      ],
+      "frontier_members": [
+        "STAGE16_XGBOOST_TUNED",
+        "STAGE16_LIGHTGBM_TUNED",
+        "STAGE16_CATBOOST_TUNED"
+      ]
+    },
+    "GROUP_B_PACKET_IMAGE": {
+      "claim_boundary": "DESCRIPTIVE_NON_CONFIRMATORY",
+      "dominated_members": [
+        "STAGE20_MASKED_CNN_V1"
+      ],
+      "frontier_members": [
+        "STAGE21_MASKED_VIT_V1"
+      ]
+    }
+  },
+  "schema": "stage26_6d_pareto_point_estimate_receipt_v1",
+  "scientific_parent": "36a1767c81ccc44818c543e82c2b8da95be39560",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "Release_corpus_accessed": false,
+    "cross_group_frontier_computed": false,
+    "holdout_reopened": false,
+    "inference_performed": false,
+    "model_loaded": false,
+    "point_estimate_dominance_computed": true,
+    "point_estimate_frontiers_computed": true,
+    "predictive_metric_recomputed": false,
+    "timing_performed": false
+  },
+  "stage": 26,
+  "status": "PASS_FROZEN_WITHIN_GROUP_POINT_ESTIMATE_PARETO"
+}

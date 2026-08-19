@@ -1,0 +1,45 @@
+{
+  "commit_subject": "stage26: anchor CPU Pareto point-estimate frontiers",
+  "created_at_utc": "2026-08-19T18:44:59.036856+00:00",
+  "file_count_excluding_manifest": 4,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6d_cpu_pareto_point_estimate/stage26_6d_within_group_pairwise_dominance.csv",
+      "sha256": "eea83f59d2da06820662952f808ea6b48e12c3fb7decaedd1eb8c7cb64e86ca6",
+      "size_bytes": 2485
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6d_cpu_pareto_point_estimate/stage26_6d_point_estimate_frontiers.json",
+      "sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5",
+      "size_bytes": 3902
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6d_cpu_pareto_point_estimate/stage26_6d_point_estimate_frontiers.csv",
+      "sha256": "fe8ec789d96635a06d92256360d1214eefb239bcdb29a7f19faa1c6a1314e0d7",
+      "size_bytes": 958
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6d_cpu_pareto_point_estimate/stage26_6d_pareto_point_estimate_receipt.json",
+      "sha256": "d898f08dc45cdb625efa5c000d76c4414a245d2091dc92274300f2260956bc79",
+      "size_bytes": 2270
+    }
+  ],
+  "frontier_csv_sha256": "fe8ec789d96635a06d92256360d1214eefb239bcdb29a7f19faa1c6a1314e0d7",
+  "frontier_json_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5",
+  "input_point_lock_sha256": "3b4739d9cec40c0dc1a21c80cb3cc4682cab08bef671f760de4697a7ad8d6ddf",
+  "input_point_set_sha256": "5fb0e952d6560b6cd0f84c49048c05d26ff3c89c52edd61ea91855d374c10a76",
+  "input_rule_lock_sha256": "aff5821c4e870bbd7326d93563c6e952cf34aafae06fa483e9ec6f348409a1d2",
+  "pairwise_csv_sha256": "eea83f59d2da06820662952f808ea6b48e12c3fb7decaedd1eb8c7cb64e86ca6",
+  "receipt_sha256": "d898f08dc45cdb625efa5c000d76c4414a245d2091dc92274300f2260956bc79",
+  "schema": "stage26_6d_pareto_point_estimate_manifest_v1",
+  "scientific_parent": "36a1767c81ccc44818c543e82c2b8da95be39560",
+  "scientific_state": {
+    "GPU_used": false,
+    "bootstrap_uncertainty_computed": false,
+    "cross_group_frontier_computed": false,
+    "new_measurement_performed": false,
+    "point_estimate_dominance_computed": true,
+    "point_estimate_frontiers_computed": true
+  },
+  "status": "READY_FOR_GIT_ANCHOR"
+}

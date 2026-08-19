@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-08-19T18:06:39.730217+00:00",
+  "dependency_proof_sha256": "05ecedbb0d973173c276e5bcec54041538b345614c296561867622933781b597",
+  "erratum_sha256": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839",
+  "file_count_excluding_manifest": 4,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_representation_worker_v2.py",
+      "sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+      "size_bytes": 18518
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_4c1a_historical_label_dependency_proof.json",
+      "sha256": "05ecedbb0d973173c276e5bcec54041538b345614c296561867622933781b597",
+      "size_bytes": 1303
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_4c1a_equivalence_erratum.json",
+      "sha256": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839",
+      "size_bytes": 4566
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_4c1a_equivalence_erratum_receipt.json",
+      "sha256": "3341f747f95b9da36c17c39727aaa139a71858551c2cadc31c233454a98f8ddb",
+      "size_bytes": 1332
+    }
+  ],
+  "original_4c1_protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "original_worker_v1_sha256": "1189f5949e0a0fb0b708449e13cfb172b2ff144d8d724c61c98621d382f57d7a",
+  "parent_commit": "ce6f51c53acf5b6e64d0f51bc3c28d9b4b12c3a6",
+  "receipt_sha256": "3341f747f95b9da36c17c39727aaa139a71858551c2cadc31c233454a98f8ddb",
+  "schema": "stage26_4c1a_equivalence_erratum_manifest_v1",
+  "status": "READY_FOR_GIT_ANCHOR",
+  "worker_v2_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+}

@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-08-19T18:06:39.679165+00:00",
+  "first_label_access_line": 255,
+  "first_two_outputs_are_representation_outputs": true,
+  "historical_class": "Stage20CompactCorpus",
+  "historical_loader_path": "scripts/stage20_compact_corpus.py",
+  "historical_loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+  "init_constructs_labels_filename": true,
+  "init_requires_labels_file": true,
+  "init_uses_np_load": true,
+  "label_access_occurs_after_representation_writes": true,
+  "last_representation_write_line": 242,
+  "reconstruct_self_attributes": [
+    "_n",
+    "encoded_bytes",
+    "flow_offsets",
+    "labels",
+    "packet_lengths"
+  ],
+  "reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+  "representation_write_lines": [
+    234,
+    242
+  ],
+  "return_order": [
+    "image",
+    "padding_mask",
+    "label"
+  ],
+  "schema": "stage26_4c1a_historical_label_dependency_proof_v1",
+  "scientific_conclusion": "Historical reconstruct() can be used to validate its first two representation outputs without opening labels.npy by bypassing __init__, binding the exact representation arrays, and supplying a valid in-memory label-neutral shim solely for the third output.",
+  "third_output_is_label": true
+}

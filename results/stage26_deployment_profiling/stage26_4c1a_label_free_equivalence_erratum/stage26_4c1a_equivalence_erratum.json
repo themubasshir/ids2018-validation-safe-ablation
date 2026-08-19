@@ -1,0 +1,106 @@
+{
+  "checkpoint": "STAGE26-4C1A",
+  "conflict": {
+    "original_protocol_labels_may_be_opened": false,
+    "reason_for_correction": "Executing worker v1 equivalence would require labels.npy through the historical constructor, violating the already-frozen no-label representation boundary.",
+    "worker_v1_executable_without_labels_file": false,
+    "worker_v1_would_invoke_historical_constructor": true
+  },
+  "correction": {
+    "historical_constructor_bypassed": true,
+    "historical_label_output_compared": false,
+    "historical_outputs_compared": [
+      "image",
+      "padding_mask"
+    ],
+    "historical_reconstruct_method_itself_used": true,
+    "in_memory_label_neutral_shim_used": true,
+    "label_neutral_shim_dtype": "uint8",
+    "label_neutral_shim_value": 0,
+    "labels_file_opened": false,
+    "representation_arrays_bound_from_exact_authoritative_source": true,
+    "scientific_reason": "The label is the historical method's third output and is read only after image and padding-mask construction. A valid zero shim allows the method to return while leaving the first two representation outputs dependent only on the exact compact-corpus representation arrays.",
+    "type": "PRE_EXECUTION_IMPLEMENTATION_ERRATUM",
+    "worker_v2_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_representation_worker_v2.py",
+    "worker_v2_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+  },
+  "created_at_utc": "2026-08-19T18:06:39.713054+00:00",
+  "discovery": {
+    "historical_constructor_requires_labels_npy": true,
+    "historical_loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "historical_reconstruct_reads_label": true,
+    "historical_reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+    "historical_return_order": [
+      "image",
+      "padding_mask",
+      "label"
+    ],
+    "label_access_after_representation_construction": true,
+    "proof_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_4c1a_historical_label_dependency_proof.json",
+    "proof_sha256": "05ecedbb0d973173c276e5bcec54041538b345614c296561867622933781b597"
+  },
+  "effective_execution_rule": {
+    "benchmark_worker": "stage26_representation_worker_v2.py",
+    "equivalence_worker": "stage26_representation_worker_v2.py",
+    "original_4C1_lock_remains_immutable_in_git_history": true,
+    "original_worker_v1_superseded_for_future_execution": true,
+    "timing_still_forbidden_until_equivalence_pass_and_git_anchor": true
+  },
+  "original_lock": {
+    "boundary_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+    "commit": "ce6f51c53acf5b6e64d0f51bc3c28d9b4b12c3a6",
+    "freeze_receipt_sha256": "b06e6cebb4123d7ea76225abbf906e2a68cd6364ed584b819973ea87b6e0a2e2",
+    "manifest_sha256": "f15f6881caa6fb99de07a979d4c934ce805af4cdf1a7d68b79ebabb9a21a6497",
+    "protocol_v1_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+    "provenance_sha256": "d63af99619353c4cdf5b9903d97176a4b34c72ce2dde7f51e26090796fc69035",
+    "worker_v1_sha256": "1189f5949e0a0fb0b708449e13cfb172b2ff144d8d724c61c98621d382f57d7a"
+  },
+  "schema": "stage26_4c1a_label_free_equivalence_erratum_v1",
+  "scientific_parent": "ce6f51c53acf5b6e64d0f51bc3c28d9b4b12c3a6",
+  "scientific_state_at_erratum_freeze": {
+    "corpus_regenerated": false,
+    "equivalence_executed": false,
+    "gpu_used": false,
+    "labels_accessed": false,
+    "models_loaded": false,
+    "pcap_accessed": false,
+    "representation_materialized": false,
+    "representation_timing_performed": false
+  },
+  "stage": 26,
+  "status": "PRE_EXECUTION_CORRECTION_FROZEN",
+  "unchanged_frozen_science": {
+    "CPU_affinity": [
+      0
+    ],
+    "GPU": false,
+    "batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "complete_E2E_claim_allowed": false,
+    "condition_timeout_seconds": 600,
+    "equivalence_flow_count": 128,
+    "equivalence_is_timed": false,
+    "equivalence_start_index_zero_based": 26042,
+    "image_shape": [
+      64,
+      256
+    ],
+    "labels_may_be_opened": false,
+    "largest_sample_end_index_exclusive": 34234,
+    "padding_mask_shape": [
+      64,
+      256
+    ],
+    "release_corpus_regeneration_forbidden": true,
+    "representation_boundary_changed": false,
+    "sample_selection_changed": false,
+    "sample_start_index_zero_based": 26042,
+    "thread_count": 1,
+    "timing_policy_changed": false
+  }
+}

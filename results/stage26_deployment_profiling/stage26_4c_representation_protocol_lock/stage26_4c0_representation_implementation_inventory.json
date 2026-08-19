@@ -1,0 +1,137 @@
+{
+  "authoritative_release": {
+    "asset": "stage20-Monday-compact-corpus-v1.tar",
+    "member_identities": {
+      "Monday/encoded_bytes.bin": {
+        "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+        "size_bytes": 522845159
+      },
+      "Monday/flow_offsets.npy": {
+        "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+        "size_bytes": 4228208
+      },
+      "Monday/labels.npy": {
+        "sha256": "48792b8d6a127b35342cb0789baa6c54396f1100a60ce7225daf08d1c3530424",
+        "size_bytes": 528637
+      },
+      "Monday/packet_lengths.npy": {
+        "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+        "size_bytes": 67649280
+      }
+    },
+    "recreated_from_pcap": false,
+    "restored_from_existing_GitHub_release": true,
+    "sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "size_bytes": 595261440,
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "checkpoint": "STAGE26-4C0-RECOVERY",
+  "created_at_utc": "2026-08-19T17:44:30.180527+00:00",
+  "geometry": {
+    "encoded_byte_count": 522845159,
+    "flow_count": 528509,
+    "flow_offsets_dtype": "uint64",
+    "flow_offsets_shape": [
+      528510
+    ],
+    "labels_dtype": "uint8",
+    "labels_shape": [
+      528509
+    ],
+    "maximum_encoded_bytes_per_packet": 256,
+    "packet_lengths_dtype": "uint16",
+    "packet_lengths_shape": [
+      528509,
+      64
+    ],
+    "packet_slots_per_flow": 64
+  },
+  "next_action": "Freeze Stage26-4C1 representation protocol using this exact fresh-session inventory SHA256, then commit and push the lock before any equivalence execution or representation timing.",
+  "resolved_representation_boundary": {
+    "complete_raw_flow_to_model_E2E_claim_allowed": false,
+    "component": "existing Stage20 compact GitHub Release corpus -> dense packet-image materialization",
+    "dense_image_dtype": "uint8",
+    "dense_image_shape_per_flow": [
+      64,
+      256
+    ],
+    "float32_div255_boundary": "MODEL_INPUT_BOUNDARY",
+    "float32_div255_part_of_this_component": false,
+    "group_A_70_feature_extraction_profiled": false,
+    "historical_padding_mask_generated_by_loader": true,
+    "input_files": [
+      "encoded_bytes.bin",
+      "flow_offsets.npy",
+      "packet_lengths.npy"
+    ],
+    "labels_required_for_component": false,
+    "raw_packet_header_masking_part_of_this_component": false,
+    "raw_packet_truncation_encoding_part_of_this_component": false
+  },
+  "schema": "stage26_4c0_representation_implementation_inventory_v2_fresh_session",
+  "scientific_parent": "55aba2e1cc08385659479c6275234dc23b11d231",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "dense_representation_materialized": false,
+    "git_modified": false,
+    "gpu_used": false,
+    "inference_performed": false,
+    "models_loaded": false,
+    "pcap_accessed": false,
+    "pcap_iterated": false,
+    "release_asset_restored": true,
+    "release_corpus_regenerated": false,
+    "representation_equivalence_test_performed": false,
+    "representation_timing_performed": false
+  },
+  "session_recovery": {
+    "encoded_bytes_rehashed_in_this_RR_cell": false,
+    "full_tar_rehashed_in_this_RR_cell": false,
+    "narrow_recovery_reason": "Prior AST detector did not recognize np.float32(255.0) as a numeric denominator equal to 255.",
+    "previous_recovery_all_four_member_verification_passed": true,
+    "previous_recovery_full_tar_verification_passed": true,
+    "previous_transient_4c0_lost": true,
+    "previous_unpushed_4c1_treated_as_lost": true,
+    "release_redownloaded_in_this_RR_cell": false,
+    "scientific_measurement_repeated": false
+  },
+  "stage": 26,
+  "stage20_implementation": {
+    "architecture_lock_sha256": "d3bba4d9d9df4432383a7f4239a8562f484cb5805b66d52794873bfaca837b3b",
+    "compact_loader": {
+      "reconstruct_args": [
+        "self",
+        "index"
+      ],
+      "reconstruct_class": "Stage20CompactCorpus",
+      "reconstruct_line": 145,
+      "repo_relative_path": "scripts/stage20_compact_corpus.py",
+      "sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0"
+    },
+    "encoder": {
+      "COLS": {
+        "line": 21,
+        "source": "COLS = 256",
+        "value": 256
+      },
+      "ROWS": {
+        "line": 20,
+        "source": "ROWS = 64",
+        "value": 64
+      },
+      "repo_relative_path": "scripts/stage20_packet_image_encoder.py",
+      "scale_for_model": {
+        "division_by_255": true,
+        "exact_denominator_source": "np.float32(255.0)",
+        "exists": true,
+        "float32_conversion": true,
+        "semantic_denominator_value": 255.0,
+        "source": "def scale_for_model(\n    image: np.ndarray,\n) -> np.ndarray:\n    \"\"\"Frozen model-boundary scaling: float(image) / 255.0.\"\"\"\n    array = np.asarray(image)\n\n    if array.shape != (ROWS, COLS):\n        raise ValueError(\n            f\"expected {(ROWS, COLS)}, got {array.shape}\"\n        )\n\n    return (\n        array.astype(np.float32)\n        /\n        np.float32(255.0)\n    )"
+      },
+      "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222"
+    },
+    "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625"
+  },
+  "status": "PASS_INVENTORY_REBUILT_AFTER_SESSION_RESET"
+}

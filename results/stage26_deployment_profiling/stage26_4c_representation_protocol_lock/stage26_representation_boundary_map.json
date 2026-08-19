@@ -1,0 +1,89 @@
+{
+  "authoritative_input": {
+    "component_input_files": [
+      "encoded_bytes.bin",
+      "flow_offsets.npy",
+      "packet_lengths.npy"
+    ],
+    "encoded_byte_count": 522845159,
+    "labels_used": false,
+    "population_flow_count": 528509,
+    "release_asset": "stage20-Monday-compact-corpus-v1.tar",
+    "release_tag": "stage20-compact-corpora-v1",
+    "release_tar_sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20"
+  },
+  "claim_boundary": {
+    "compact_corpus_dense_materialization_cost": true,
+    "complete_end_to_end_claim_allowed": false,
+    "group_A_70_feature_extraction_profiled": false,
+    "packet_masking_encoding_cost_included": false,
+    "raw_flow_to_packet_image_complete_cost": false,
+    "result_is_sample_specific": true
+  },
+  "component_name": "STAGE20_COMPACT_CORPUS_TO_DENSE_UINT8_IMAGE_AND_BYTE_PADDING_MASK",
+  "excluded_operations": [
+    "GitHub Release download",
+    "Release TAR restoration",
+    "raw PCAP reading",
+    "flow reconstruction",
+    "supervised matching/filtering",
+    "packet selection",
+    "header masking",
+    "packet truncation/compact encoding",
+    "labels.npy access",
+    "float32 conversion",
+    "division by 255",
+    "torch conversion",
+    "CNN inference",
+    "ViT inference",
+    "thresholding"
+  ],
+  "group": "GROUP_B_PACKET_IMAGE",
+  "historical_contract": {
+    "image_dtype": "uint8",
+    "image_shape": [
+      64,
+      256
+    ],
+    "image_variable": "image",
+    "loader_class": "Stage20CompactCorpus",
+    "padding_mask_dtype": "bool",
+    "padding_mask_shape": [
+      64,
+      256
+    ],
+    "padding_mask_variable": "padding_mask",
+    "reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c"
+  },
+  "included_operations": [
+    "read packet_lengths row",
+    "read flow byte offsets",
+    "allocate zero-filled uint8 batch image arrays",
+    "allocate zero-filled bool byte-padding-mask arrays",
+    "copy retained encoded packet bytes into each packet-row prefix",
+    "set authentic byte positions True in byte-padding mask",
+    "validate flow offset delta equals sum(packet_lengths)"
+  ],
+  "model_scaling_boundary": {
+    "conversion": "np.float32",
+    "denominator": "np.float32(255.0)",
+    "function": "scale_for_model",
+    "included_in_representation_materialization": false
+  },
+  "output": {
+    "batch_image_shape": "[B,64,256]",
+    "batch_padding_mask_shape": "[B,64,256]",
+    "image_dtype": "uint8",
+    "image_shape_per_flow": [
+      64,
+      256
+    ],
+    "padding_mask_dtype": "bool",
+    "padding_mask_shape_per_flow": [
+      64,
+      256
+    ]
+  },
+  "schema": "stage26_representation_boundary_map_v3",
+  "scientific_parent": "55aba2e1cc08385659479c6275234dc23b11d231"
+}

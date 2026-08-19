@@ -1,0 +1,79 @@
+{
+  "fresh_4c0_inventory": {
+    "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_4c0_representation_implementation_inventory.json",
+    "sha256": "b32a2a21407261d0c3628e80d1c39aab1b6921cf144b9ce5daea28392ec989a5"
+  },
+  "geometry": {
+    "columns": 256,
+    "encoded_byte_count": 522845159,
+    "flow_count": 528509,
+    "rows": 64
+  },
+  "release": {
+    "asset": "stage20-Monday-compact-corpus-v1.tar",
+    "members": {
+      "encoded_bytes.bin": {
+        "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+        "size_bytes": 522845159,
+        "tar_member": "Monday/encoded_bytes.bin"
+      },
+      "flow_offsets.npy": {
+        "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+        "size_bytes": 4228208,
+        "tar_member": "Monday/flow_offsets.npy"
+      },
+      "labels.npy": {
+        "sha256": "48792b8d6a127b35342cb0789baa6c54396f1100a60ce7225daf08d1c3530424",
+        "size_bytes": 528637,
+        "tar_member": "Monday/labels.npy"
+      },
+      "packet_lengths.npy": {
+        "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+        "size_bytes": 67649280,
+        "tar_member": "Monday/packet_lengths.npy"
+      }
+    },
+    "tag": "stage20-compact-corpora-v1",
+    "tar_bytes": 595261440,
+    "tar_sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20"
+  },
+  "schema": "stage26_4c_upstream_provenance_v3",
+  "scientific_parent": "55aba2e1cc08385659479c6275234dc23b11d231",
+  "stage20": {
+    "architecture_lock": {
+      "repo_relative_path": "results/stage20_1e_training/stage20_1e0_architecture_training_protocol_lock.json",
+      "sha256": "d3bba4d9d9df4432383a7f4239a8562f484cb5805b66d52794873bfaca837b3b"
+    },
+    "compact_loader": {
+      "class": "Stage20CompactCorpus",
+      "derived_output_contract": {
+        "image_dtype": "uint8",
+        "image_shape": [
+          64,
+          256
+        ],
+        "padding_mask_dtype": "bool",
+        "padding_mask_shape": [
+          64,
+          256
+        ]
+      },
+      "reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+      "repo_relative_path": "scripts/stage20_compact_corpus.py",
+      "sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0"
+    },
+    "encoder": {
+      "repo_relative_path": "scripts/stage20_packet_image_encoder.py",
+      "sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222"
+    }
+  },
+  "stage26_measurement_protocol": {
+    "repo_relative_path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/measurement_protocol.json",
+    "sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625"
+  },
+  "stage26_raw_extraction": {
+    "closed": true,
+    "manifest_repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_manifest.json",
+    "manifest_sha256": "39900c940ca25f3a541efe0dcb5f08d51408581f1f6f4b93980b093327276bc1"
+  }
+}

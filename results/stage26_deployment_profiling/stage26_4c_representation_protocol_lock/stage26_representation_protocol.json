@@ -1,0 +1,213 @@
+{
+  "authoritative_source": {
+    "member_identities": {
+      "encoded_bytes.bin": {
+        "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+        "size_bytes": 522845159,
+        "tar_member": "Monday/encoded_bytes.bin"
+      },
+      "flow_offsets.npy": {
+        "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+        "size_bytes": 4228208,
+        "tar_member": "Monday/flow_offsets.npy"
+      },
+      "labels.npy": {
+        "sha256": "48792b8d6a127b35342cb0789baa6c54396f1100a60ce7225daf08d1c3530424",
+        "size_bytes": 528637,
+        "tar_member": "Monday/labels.npy"
+      },
+      "packet_lengths.npy": {
+        "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+        "size_bytes": 67649280,
+        "tar_member": "Monday/packet_lengths.npy"
+      }
+    },
+    "population_flow_count": 528509,
+    "release_asset": "stage20-Monday-compact-corpus-v1.tar",
+    "release_tag": "stage20-compact-corpora-v1",
+    "release_tar_bytes": 595261440,
+    "release_tar_sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "restore_before_equivalence": true,
+    "restore_operation_timed": false,
+    "restore_rule": "Restore exact already-published Release members byte-for-byte to isolated runtime storage and verify every required member SHA256. Restoration is not corpus regeneration."
+  },
+  "checkpoint": "STAGE26-4C1",
+  "claim_boundary": {
+    "applies_to": "GROUP_B_PACKET_IMAGE",
+    "applies_to_group_A_70_feature_models": false,
+    "complete_pipeline_additivity_claim_allowed": false,
+    "component_name": "Stage20 compact Release corpus -> dense uint8 image + bool byte-level padding mask",
+    "packet_masking_encoding_cost_included": false,
+    "raw_flow_to_packet_image_complete": false,
+    "representation_results_sample_specific": true
+  },
+  "condition_count": 5,
+  "condition_timeout_seconds": 600,
+  "created_at_utc": "2026-08-19T17:55:27.302025+00:00",
+  "environment_gate": {
+    "available_ram_gib_min": 8.0,
+    "cpu_utilization_percent_max": 20.0,
+    "cpu_utilization_sampling_seconds": 1.0,
+    "if_gate_never_passes": "INVALID_ENVIRONMENT",
+    "retry_cooldown_seconds": 5,
+    "retry_count": 3
+  },
+  "failure_policy": {
+    "IMPLEMENTATION_FAILURE": "Stop for narrow implementation diagnosis; do not alter frozen scientific protocol.",
+    "INVALID_ENVIRONMENT": "Do not benchmark condition.",
+    "RESOURCE_LIMIT_OOM": "Record resource outcome; do not reduce batch.",
+    "TIMEOUT_RESOURCE_LIMIT": "Record timeout; do not adapt.",
+    "no_post_result_adaptation": true
+  },
+  "fresh_process_per_batch_condition": true,
+  "hardware": {
+    "affinity": [
+      0
+    ],
+    "gpu": false,
+    "mode": "CPU_1_PHYSICAL_CORE",
+    "thread_count": 1
+  },
+  "historical_output_contract": {
+    "image_dtype": "uint8",
+    "image_shape": [
+      64,
+      256
+    ],
+    "padding_mask_dtype": "bool",
+    "padding_mask_semantics": "Byte-level authenticity mask: True for retained encoded byte positions and False for zero-padding.",
+    "padding_mask_shape": [
+      64,
+      256
+    ]
+  },
+  "implementation": {
+    "boundary_map_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_boundary_map.json",
+    "boundary_map_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+    "fresh_4c0_inventory_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_4c0_representation_implementation_inventory.json",
+    "fresh_4c0_inventory_sha256": "b32a2a21407261d0c3628e80d1c39aab1b6921cf144b9ce5daea28392ec989a5",
+    "historical_encoder_path": "scripts/stage20_packet_image_encoder.py",
+    "historical_encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+    "historical_loader_class": "Stage20CompactCorpus",
+    "historical_loader_path": "scripts/stage20_compact_corpus.py",
+    "historical_loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "historical_reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+    "worker_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_worker_v1.py",
+    "worker_sha256": "1189f5949e0a0fb0b708449e13cfb172b2ff144d8d724c61c98621d382f57d7a"
+  },
+  "iteration_policy": {
+    "1": {
+      "role": "LATENCY_PRIMARY",
+      "timed_runs": 200,
+      "warmup_runs": 50
+    },
+    "1024": {
+      "role": "LARGE_BATCH",
+      "timed_runs": 50,
+      "warmup_runs": 10
+    },
+    "256": {
+      "role": "STANDARD_BATCH",
+      "timed_runs": 100,
+      "warmup_runs": 20
+    },
+    "64": {
+      "role": "MICROBATCH",
+      "timed_runs": 150,
+      "warmup_runs": 30
+    },
+    "8192": {
+      "role": "CAPACITY_BATCH",
+      "timed_runs": 20,
+      "warmup_runs": 5
+    }
+  },
+  "mandatory_pre_timing_equivalence_gate": {
+    "comparison": "For each gated flow, new worker image and byte-level padding_mask must be exactly np.array_equal to the first two outputs of frozen Stage20CompactCorpus.reconstruct().",
+    "flow_count": 128,
+    "gate_result_must_be_git_anchored_before_timing": true,
+    "required": true,
+    "start_index_zero_based": 26042,
+    "timing_allowed_before_gate_pass": false,
+    "timing_during_equivalence": false
+  },
+  "measurement_boundary": {
+    "JSON_serialization_included": false,
+    "Python_process_startup_included": false,
+    "batch_image_shape": "[B,64,256]",
+    "batch_output_allocation_included": true,
+    "batch_padding_mask_shape": "[B,64,256]",
+    "cold_disk_IO_claim_allowed": false,
+    "division_by_255_included": false,
+    "fingerprinting_included": false,
+    "float32_conversion_included": false,
+    "input": "RESTORED_EXACT_STAGE20_COMPACT_RELEASE_FILES",
+    "interpretation": "Warm compact-corpus dense-materialization cost under existing OS page-cache state.",
+    "labels_accessed": false,
+    "loader_initialization_included": false,
+    "memmap_reads_included": true,
+    "model_forward_included": false,
+    "output": "UINT8_IMAGE_BATCH_AND_BOOL_BYTE_PADDING_MASK_BATCH",
+    "page_cache_manipulated": false,
+    "release_download_included": false,
+    "release_tar_restoration_included": false,
+    "warm_exact_batch_before_timing": true
+  },
+  "required_raw_metrics": [
+    "batch_size",
+    "iteration_index",
+    "elapsed_ns",
+    "elapsed_seconds",
+    "flows_per_second",
+    "image_output_bytes",
+    "padding_mask_output_bytes",
+    "total_output_bytes"
+  ],
+  "sample": {
+    "batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "largest_batch_flow_count": 8192,
+    "largest_batch_population_fraction": 0.01550020907874795,
+    "largest_end_index_zero_based_exclusive": 34234,
+    "nested_rule": "Batch B uses flows [start,start+B); all smaller conditions are prefixes of the largest.",
+    "population_flow_count": 528509,
+    "sample_specific_claim_required": true,
+    "sampling_rule": "DETERMINISTIC_NESTED_CONTIGUOUS_SEGMENT",
+    "start_index_zero_based": 26042
+  },
+  "schema": "stage26_representation_protocol_v3",
+  "scientific_parent": "55aba2e1cc08385659479c6275234dc23b11d231",
+  "scientific_rules": {
+    "Friday_may_be_accessed": false,
+    "GPU_used": false,
+    "Thursday_may_be_accessed": false,
+    "first_representation_timing_allowed_only_after": "this protocol is remotely Git-anchored; exact Release members are restored and SHA-verified; the frozen 128-flow untimed equivalence gate passes; and the equivalence result is remotely Git-anchored.",
+    "labels_may_be_opened": false,
+    "models_may_be_loaded": false,
+    "pcap_may_be_opened": false,
+    "release_corpus_authoritative": true,
+    "release_corpus_regeneration_forbidden": true
+  },
+  "selection_independence": {
+    "sample_selected_using_inference_results": false,
+    "sample_selected_using_labels": false,
+    "sample_selected_using_representation_timing": false,
+    "seed": 26042,
+    "selection_rule": "Existing Stage26 seed 26042 modulo valid start positions for the largest frozen batch."
+  },
+  "stage": 26,
+  "status": "FROZEN_BEFORE_FIRST_REPRESENTATION_MEASUREMENT",
+  "summary_metrics": [
+    "p50_batch_latency",
+    "p95_batch_latency",
+    "p99_batch_latency_when_n_gte_100",
+    "median_flows_per_second",
+    "minimum_flows_per_second",
+    "maximum_flows_per_second"
+  ]
+}

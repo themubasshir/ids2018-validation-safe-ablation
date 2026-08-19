@@ -1,0 +1,46 @@
+{
+  "boundary_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+  "created_at_utc": "2026-08-19T17:55:27.330486+00:00",
+  "file_count_excluding_manifest": 6,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_4c0_representation_implementation_inventory.json",
+      "sha256": "b32a2a21407261d0c3628e80d1c39aab1b6921cf144b9ce5daea28392ec989a5",
+      "size_bytes": 5382
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_worker_v1.py",
+      "sha256": "1189f5949e0a0fb0b708449e13cfb172b2ff144d8d724c61c98621d382f57d7a",
+      "size_bytes": 16519
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_protocol.json",
+      "sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+      "size_bytes": 8439
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_boundary_map.json",
+      "sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+      "size_bytes": 2753
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_4c_upstream_provenance.json",
+      "sha256": "d63af99619353c4cdf5b9903d97176a4b34c72ce2dde7f51e26090796fc69035",
+      "size_bytes": 3098
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_4c1_representation_protocol_freeze_receipt.json",
+      "sha256": "b06e6cebb4123d7ea76225abbf906e2a68cd6364ed584b819973ea87b6e0a2e2",
+      "size_bytes": 2043
+    }
+  ],
+  "freeze_receipt_sha256": "b06e6cebb4123d7ea76225abbf906e2a68cd6364ed584b819973ea87b6e0a2e2",
+  "fresh_4c0_inventory_sha256": "b32a2a21407261d0c3628e80d1c39aab1b6921cf144b9ce5daea28392ec989a5",
+  "historical_reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+  "parent_commit": "55aba2e1cc08385659479c6275234dc23b11d231",
+  "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "provenance_sha256": "d63af99619353c4cdf5b9903d97176a4b34c72ce2dde7f51e26090796fc69035",
+  "schema": "stage26_4c_representation_lock_manifest_v3",
+  "status": "READY_FOR_GIT_ANCHOR",
+  "worker_sha256": "1189f5949e0a0fb0b708449e13cfb172b2ff144d8d724c61c98621d382f57d7a"
+}

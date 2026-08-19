@@ -1,0 +1,45 @@
+{
+  "checkpoint": "STAGE26-7B",
+  "created_at_utc": "2026-08-19T19:51:46.506862+00:00",
+  "frozen_analysis_permissions": {
+    "CPU2_vs_CPU1_inference_scaling": true,
+    "Group_A_extraction_inference_pipeline_ratio": false,
+    "Group_B_representation_vs_inference_component_ratio": true,
+    "Pareto_recomputation": false,
+    "complete_E2E_reconstruction": false,
+    "cross_group_Pareto": false,
+    "inference_batch_scaling": true,
+    "missing_cost_imputation": false,
+    "raw_extraction_Group_B_pipeline_ratio": false,
+    "raw_extraction_descriptive_reporting": true
+  },
+  "locks": {
+    "boundary_lock_sha256": "1def25c4046770dd1da2ff7939c38b01bc19917bbecf01423c9cad684b68221c",
+    "formula_lock_sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea",
+    "source_lock_sha256": "c56a08cc88a2e8d75df0832b72e41ecbb90ee1cf3f12c0a7402d9fc1d5247c42"
+  },
+  "next_permitted_action": "After remote Git verification, compute only the Stage26-7B frozen descriptive point-estimate scaling and scientifically compatible Group-B component-capacity ratios.",
+  "schema": "stage26_7b_capacity_freeze_receipt_v1",
+  "scientific_parent": "a484148cd8ea7d7c89604d3a015f73bd6f1bc81a",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Release_corpus_accessed": false,
+    "batch_scaling_computed": false,
+    "bottleneck_declared": false,
+    "capacity_ratio_computed": false,
+    "complete_E2E_reconstructed": false,
+    "inference_performed": false,
+    "missing_cost_imputed": false,
+    "model_loaded": false,
+    "new_bootstrap_executed": false,
+    "parallel_efficiency_computed": false,
+    "ratio_uncertainty_computed": false,
+    "timing_performed": false,
+    "two_core_speedup_computed": false
+  },
+  "stage": 26,
+  "stage26_7a_sha256": "3ecabd59e53f2f4784a154fdb8baa71fb2fa4504b41e4a7e91bf6b3e70d821c8",
+  "status": "PASS_CAPACITY_SOURCES_FORMULAS_BOUNDARIES_FROZEN_BEFORE_CALCULATION"
+}

@@ -1,0 +1,44 @@
+{
+  "GPU_allowed": false,
+  "checkpoint": "STAGE26-7B",
+  "created_at_utc": "2026-08-19T19:51:46.496900+00:00",
+  "group_B_component_ratio": {
+    "allowed": true,
+    "claim": "COMPONENT_CAPACITY_COMPARISON_ONLY",
+    "complete_E2E": false,
+    "predictive_comparison": false,
+    "raw_pcap_to_model": false
+  },
+  "pareto": {
+    "cross_group_frontier": false,
+    "membership_immutable": true,
+    "stage26_6d_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5"
+  },
+  "prohibited_derivations": [
+    "GROUP_A_EXTRACTION_TO_INFERENCE_PIPELINE_RATIO",
+    "RAW_EXTRACTION_TO_GROUP_B_INFERENCE_PIPELINE_RATIO",
+    "RAW_EXTRACTION_TO_REPRESENTATION_PIPELINE_RATIO",
+    "MINIMUM_COMPONENT_THROUGHPUT_AS_COMPLETE_PIPELINE_THROUGHPUT",
+    "SUM_COMPONENT_LATENCY_AS_COMPLETE_E2E",
+    "FULL_PIPELINE_BOTTLENECK_ACROSS_MISSING_BOUNDARIES",
+    "CROSS_GROUP_EXTRACTION_EQUIVALENCE",
+    "CROSS_GROUP_PARETO_FROM_CAPACITY",
+    "PARETO_MEMBERSHIP_RECOMPUTATION_FROM_STAGE26_7"
+  ],
+  "schema": "stage26_7b_capacity_boundary_lock_v1",
+  "stage": 26,
+  "stage26_4c3_measurement_caveat": {
+    "durable_measurement_retained": true,
+    "issue": "The Stage26-4C3 implementation performs full-array output integrity/fingerprint reading outside the timed region between timed iterations. Although excluded from each timer window, those reads may perturb cache/CPU state before subsequent timed iterations.",
+    "stage26_7_policy": "Use the durable 4C3 point estimates as measured, retain the caveat in component-capacity interpretation, and do not silently replace or rerun the measurement.",
+    "stage26_8_required_action": "Explicitly audit/report the inter-iteration integrity-read sensitivity and, if a prospective cleaner implementation sensitivity run is performed, preserve 4C3 as the original measurement rather than overwriting it.",
+    "status": "OPEN_STAGE26_8_AUDIT_ITEM"
+  },
+  "stage26_5a": {
+    "complete_E2E_available": false,
+    "group_A_70_feature_extraction_profiled": false,
+    "group_B_raw_to_compact_bridge_missing": true,
+    "missing_measurement_imputation_allowed": false
+  },
+  "status": "FROZEN_BEFORE_CAPACITY_INTERPRETATION"
+}

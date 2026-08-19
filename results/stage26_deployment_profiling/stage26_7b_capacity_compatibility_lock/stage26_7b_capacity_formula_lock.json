@@ -1,0 +1,81 @@
+{
+  "batch_scaling": {
+    "allowed": true,
+    "amortized_latency_improvement": {
+      "L_amortized": "median_amortized_latency_ms_per_flow",
+      "claim": "INFERENCE_COMPONENT_ONLY",
+      "formula": "L_amortized(target,hardware,1) / L_amortized(target,hardware,batch)",
+      "requirement": "BOTH_BATCH_AND_B1_PASS"
+    },
+    "reference_batch": 1,
+    "scope": "WITHIN_TARGET_WITHIN_HARDWARE_MODE",
+    "throughput_multiplier": {
+      "T": "median_throughput_flows_per_second",
+      "claim": "INFERENCE_COMPONENT_BATCH_SCALING_ONLY",
+      "formula": "T(target,hardware,batch) / T(target,hardware,1)",
+      "requirement": "BOTH_BATCH_AND_B1_PASS"
+    }
+  },
+  "checkpoint": "STAGE26-7B",
+  "created_at_utc": "2026-08-19T19:51:46.485021+00:00",
+  "group_B_representation_inference_capacity": {
+    "allowed": true,
+    "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+    "eligible_batches": {
+      "STAGE20_MASKED_CNN_V1": [
+        1,
+        64,
+        256
+      ],
+      "STAGE21_MASKED_VIT_V1": [
+        1,
+        64,
+        256,
+        1024
+      ]
+    },
+    "hardware": "CPU_1_PHYSICAL_CORE",
+    "interpretation": {
+      "ratio_eq_1": "EQUAL_MEASURED_COMPONENT_CAPACITY",
+      "ratio_gt_1": "REPRESENTATION_COMPONENT_LOWER_MEASURED_CAPACITY",
+      "ratio_lt_1": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY"
+    },
+    "matching": "EXACT_BATCH",
+    "ratio": {
+      "formula": "inference_median_throughput_flows_per_second / representation_median_flows_per_second",
+      "name": "component_capacity_ratio"
+    }
+  },
+  "raw_extraction": {
+    "descriptive_metrics_allowed": [
+      "packets_per_second_median",
+      "exportable_reconstructed_flows_per_second_median",
+      "completed_lifecycle_flows_per_second_median"
+    ],
+    "ratio_to_model_inference_allowed": false,
+    "ratio_to_representation_allowed": false
+  },
+  "schema": "stage26_7b_capacity_formula_lock_v1",
+  "stage": 26,
+  "status": "FROZEN_BEFORE_ANY_RATIO_OR_SCALING_RESULT",
+  "two_core_scaling": {
+    "allowed": true,
+    "claim": "INFERENCE_COMPONENT_CPU_SCALING_ONLY",
+    "matching": "EXACT_TARGET_AND_BATCH",
+    "parallel_efficiency": {
+      "denominator_reason": "CPU2 uses two physical cores versus one physical core.",
+      "formula": "two_core_speedup / 2.0"
+    },
+    "requirement": "CPU1_AND_CPU2_BOTH_PASS",
+    "speedup": {
+      "formula": "T(target,CPU2,batch) / T(target,CPU1,batch)"
+    }
+  },
+  "uncertainty": {
+    "corrected_stage26_6f1_timing_uncertainty_may_be_reported": true,
+    "historical_stage26_2_CIs_may_be_used_for_publication": false,
+    "ratio_and_scaling_results": "DESCRIPTIVE_POINT_ESTIMATES_UNLESS_SEPARATE_PROSPECTIVE_METHOD_FROZEN",
+    "ratio_uncertainty_propagation_frozen": false,
+    "ratio_uncertainty_to_be_invented_post_hoc": false
+  }
+}

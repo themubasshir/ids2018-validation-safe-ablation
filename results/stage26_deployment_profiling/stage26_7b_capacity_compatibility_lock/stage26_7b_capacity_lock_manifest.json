@@ -1,0 +1,46 @@
+{
+  "boundary_lock_sha256": "1def25c4046770dd1da2ff7939c38b01bc19917bbecf01423c9cad684b68221c",
+  "checkpoint": "STAGE26-7B",
+  "commit_subject": "stage26: freeze CPU capacity compatibility and formulas",
+  "created_at_utc": "2026-08-19T19:51:46.517640+00:00",
+  "file_count_excluding_manifest": 4,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7b_capacity_compatibility_lock/stage26_7b_capacity_source_lock.json",
+      "sha256": "c56a08cc88a2e8d75df0832b72e41ecbb90ee1cf3f12c0a7402d9fc1d5247c42",
+      "size_bytes": 5727
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7b_capacity_compatibility_lock/stage26_7b_capacity_formula_lock.json",
+      "sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea",
+      "size_bytes": 2836
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7b_capacity_compatibility_lock/stage26_7b_capacity_boundary_lock.json",
+      "sha256": "1def25c4046770dd1da2ff7939c38b01bc19917bbecf01423c9cad684b68221c",
+      "size_bytes": 2176
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7b_capacity_compatibility_lock/stage26_7b_capacity_freeze_receipt.json",
+      "sha256": "0bf2b935e8b5509b4fa6d32413a9ce835af7ead4166a77f173f553f940369790",
+      "size_bytes": 1976
+    }
+  ],
+  "formula_lock_sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea",
+  "freeze_receipt_sha256": "0bf2b935e8b5509b4fa6d32413a9ce835af7ead4166a77f173f553f940369790",
+  "schema": "stage26_7b_capacity_lock_manifest_v1",
+  "scientific_parent": "a484148cd8ea7d7c89604d3a015f73bd6f1bc81a",
+  "scientific_state": {
+    "GPU_used": false,
+    "Pareto_changed": false,
+    "boundaries_frozen": true,
+    "capacity_values_computed": false,
+    "formulas_frozen": true,
+    "new_measurement_performed": false,
+    "sources_frozen": true
+  },
+  "source_lock_sha256": "c56a08cc88a2e8d75df0832b72e41ecbb90ee1cf3f12c0a7402d9fc1d5247c42",
+  "stage": 26,
+  "stage26_7a_sha256": "3ecabd59e53f2f4784a154fdb8baa71fb2fa4504b41e4a7e91bf6b3e70d821c8",
+  "status": "READY_FOR_GIT_ANCHOR"
+}

@@ -1,0 +1,130 @@
+{
+  "checkpoint": "STAGE26-7B",
+  "created_at_utc": "2026-08-19T19:51:46.462767+00:00",
+  "frozen_batches": [
+    1,
+    64,
+    256,
+    1024,
+    8192
+  ],
+  "hardware_modes": {
+    "CPU1": {
+      "literal": "CPU_1_PHYSICAL_CORE",
+      "physical_cores": 1,
+      "threads": 1
+    },
+    "CPU2": {
+      "literal": "CPU_2_PHYSICAL_CORE",
+      "physical_cores": 2,
+      "threads": 2
+    }
+  },
+  "inference_point_fields": {
+    "amortized_latency": "median_amortized_latency_ms_per_flow",
+    "condition_status_source": "stage26_2_condition_status.csv",
+    "numerical_condition_requirement": "PASS_ONLY",
+    "throughput": "median_throughput_flows_per_second"
+  },
+  "inference_targets": [
+    "STAGE16_XGBOOST_TUNED",
+    "STAGE16_LIGHTGBM_TUNED",
+    "STAGE16_CATBOOST_TUNED",
+    "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+    "STAGE20_MASKED_CNN_V1",
+    "STAGE21_MASKED_VIT_V1",
+    "ENS_LGBM_XGB_EQUAL",
+    "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+  ],
+  "inference_uncertainty_source": {
+    "artifact": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_bootstrap_corrected_uncertainty.json",
+    "historical_stage26_2_CIs": "AUDIT_ONLY_NOT_PROTOCOL_CERTIFIED",
+    "sha256": "45ea4408738fb5101ce68a363c2cc0a7951648eed49e474da9489b00ce6128ce",
+    "status": "PROTOCOL_CERTIFIED_DERIVED_UNCERTAINTY"
+  },
+  "raw_extraction": {
+    "component": "RAW_PCAP_TO_SOURCE_FAITHFUL_FLOW_RECONSTRUCTION_COMPONENT",
+    "hardware": "CPU_1_PHYSICAL_CORE",
+    "median_component_metrics": {
+      "completed_lifecycle_flows_per_second_median": 500.0678387265431,
+      "exportable_reconstructed_flows_per_second_median": 1338.7844808632851,
+      "packets_per_second_median": 106829.27552372208
+    },
+    "semantic_note": "flows_per_second is exportable/reconstructed-flow rate; completed_lifecycle_flows_per_second is a distinct completed-lifecycle rate. Neither is a frozen model-input throughput.",
+    "source_sha256": "1914504fad850879d1ed11afed432436c18454f2bb8650f881244c865f18ba16"
+  },
+  "representation": {
+    "component": "STAGE20_COMPACT_CORPUS_TO_DENSE_UINT8_IMAGE_AND_BYTE_PADDING_MASK",
+    "eligible_Group_B_CPU1_batches": {
+      "STAGE20_MASKED_CNN_V1": [
+        1,
+        64,
+        256
+      ],
+      "STAGE21_MASKED_VIT_V1": [
+        1,
+        64,
+        256,
+        1024
+      ]
+    },
+    "hardware": "CPU_1_PHYSICAL_CORE",
+    "median_throughput_by_batch": {
+      "1": 17993.067007134334,
+      "64": 13781.90626324431,
+      "256": 13364.817948676995,
+      "1024": 11784.728086935844,
+      "8192": 10058.1799515663
+    },
+    "summary_csv_sha256": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5",
+    "summary_json_sha256": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7",
+    "throughput_field": "median_flows_per_second",
+    "throughput_unit": "flows_per_second"
+  },
+  "schema": "stage26_7b_capacity_source_lock_v1",
+  "scientific_parent": "a484148cd8ea7d7c89604d3a015f73bd6f1bc81a",
+  "source_identity": {
+    "E2E availability decision": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_5a_e2e_availability_closure/stage26_5a_e2e_availability_decision.json",
+      "sha256": "be151f3e9891353eae63546b55bc621ab83bb8d4b829e9fefab0e29eafe4bc96"
+    },
+    "E2E availability receipt": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_5a_e2e_availability_closure/stage26_5a_e2e_availability_receipt.json",
+      "sha256": "d0948249d170114716e0c40b2b77f05f0106935366daf2ddff6e9c82fd58403c"
+    },
+    "Pareto point-estimate result": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6d_cpu_pareto_point_estimate/stage26_6d_point_estimate_frontiers.json",
+      "sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5"
+    },
+    "corrected uncertainty": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_bootstrap_corrected_uncertainty.json",
+      "sha256": "45ea4408738fb5101ce68a363c2cc0a7951648eed49e474da9489b00ce6128ce"
+    },
+    "raw extraction summary": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_summary.json",
+      "sha256": "1914504fad850879d1ed11afed432436c18454f2bb8650f881244c865f18ba16"
+    },
+    "representation summary CSV": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.csv",
+      "sha256": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5"
+    },
+    "representation summary JSON": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.json",
+      "sha256": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7"
+    },
+    "warm status": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+      "sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af"
+    },
+    "warm summary": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+      "sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232"
+    }
+  },
+  "stage": 26,
+  "stage26_7a_transient": {
+    "path": "/kaggle/working/stage26_deployment_profiling/capacity/stage26_7a_capacity_source_compatibility_inventory.json",
+    "sha256": "3ecabd59e53f2f4784a154fdb8baa71fb2fa4504b41e4a7e91bf6b3e70d821c8"
+  },
+  "status": "FROZEN_BEFORE_CAPACITY_CALCULATION"
+}

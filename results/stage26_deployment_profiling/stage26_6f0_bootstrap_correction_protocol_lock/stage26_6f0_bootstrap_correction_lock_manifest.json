@@ -1,0 +1,55 @@
+{
+  "checkpoint": "STAGE26-6F0",
+  "commit_subject": "stage26: freeze bootstrap CI correction protocol",
+  "correction_protocol_sha256": "9e267bf526304ce2c29ed3a74e8f2be29f0320de613860a3ea47752a9f9192f8",
+  "correction_worker_sha256": "9f4e6b6adb9a020128a3d935d7fc4e37412fa3b944d5d1ac7119c716a9cdc91b",
+  "created_at_utc": "2026-08-19T19:31:34.859888+00:00",
+  "erratum_record_sha256": "59dc41df1f805180697a04a6be60c2e36d193d5623a02700713e3b5827a437f3",
+  "file_count_excluding_manifest": 6,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_protocol.json",
+      "sha256": "9e267bf526304ce2c29ed3a74e8f2be29f0320de613860a3ea47752a9f9192f8",
+      "size_bytes": 4958
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_worker.py",
+      "sha256": "9f4e6b6adb9a020128a3d935d7fc4e37412fa3b944d5d1ac7119c716a9cdc91b",
+      "size_bytes": 15395
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_statistical_erratum_record.json",
+      "sha256": "59dc41df1f805180697a04a6be60c2e36d193d5623a02700713e3b5827a437f3",
+      "size_bytes": 2124
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_freeze_receipt.json",
+      "sha256": "bee8b8922497ba23f8ec73e46ccfd4c863baad869b4dbfca90f081ce701b77c2",
+      "size_bytes": 2711
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/provenance/stage26_6e1_bootstrap_seed_provenance.json",
+      "sha256": "effbbbdf6355c8b08e6eb5abdf244f1760349d54973f177fe7e779d48c1148fc",
+      "size_bytes": 405031
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/provenance/stage26_6e2_final_bootstrap_provenance_audit.json",
+      "sha256": "3492fa1bf3cbdf7fd1e29079fccf8cfd8edaf8a9cc060a510ef5c5371bacea08",
+      "size_bytes": 324321
+    }
+  ],
+  "freeze_receipt_sha256": "bee8b8922497ba23f8ec73e46ccfd4c863baad869b4dbfca90f081ce701b77c2",
+  "schema": "stage26_6f0_bootstrap_correction_lock_manifest_v1",
+  "scientific_parent": "ff9d329785c6cd30d273729356f402e59dc4e844",
+  "scientific_state": {
+    "GPU_used": false,
+    "Pareto_changed": false,
+    "bootstrap_executed": false,
+    "corrected_values_seen": false,
+    "new_measurement_performed": false,
+    "protocol_frozen": true,
+    "worker_frozen": true
+  },
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR"
+}

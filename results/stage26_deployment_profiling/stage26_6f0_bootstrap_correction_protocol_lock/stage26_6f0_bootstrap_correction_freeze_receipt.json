@@ -1,0 +1,54 @@
+{
+  "checkpoint": "STAGE26-6F0",
+  "created_at_utc": "2026-08-19T19:31:34.847024+00:00",
+  "frozen_bootstrap": {
+    "condition_local_literal_seed_reset": true,
+    "derived_seeds": false,
+    "interval": "PERCENTILE_95_PERCENT",
+    "latency_statistic_unit": "MILLISECONDS_BEFORE_PERCENTILE",
+    "percentile_method": "linear",
+    "replicates": 2000,
+    "rng": "numpy.random.default_rng_PCG64",
+    "same_resample_indices_for_all_condition_statistics": true,
+    "seed": 26042
+  },
+  "locked_artifacts": {
+    "correction_protocol_sha256": "9e267bf526304ce2c29ed3a74e8f2be29f0320de613860a3ea47752a9f9192f8",
+    "correction_worker_sha256": "9f4e6b6adb9a020128a3d935d7fc4e37412fa3b944d5d1ac7119c716a9cdc91b",
+    "erratum_record_sha256": "59dc41df1f805180697a04a6be60c2e36d193d5623a02700713e3b5827a437f3"
+  },
+  "next_permitted_action": "Only after this checkpoint is remotely Git-verified, execute the locked correction worker against the immutable Stage26-2 raw timing observations and persist corrected derived uncertainty outputs in a new Stage26-6F1 checkpoint.",
+  "schema": "stage26_6f0_bootstrap_correction_freeze_receipt_v1",
+  "scientific_parent": "ff9d329785c6cd30d273729356f402e59dc4e844",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "PR_AUC_bootstrap_computed": false,
+    "Pareto_frontier_changed": false,
+    "Pareto_frontier_recomputed": false,
+    "Release_corpus_accessed": false,
+    "bootstrap_executed": false,
+    "corrected_CI_computed": false,
+    "cross_group_frontier_computed": false,
+    "historical_CI_overwritten": false,
+    "holdout_reopened": false,
+    "inference_performed": false,
+    "model_loaded": false,
+    "point_estimate_modified": false,
+    "predictive_metric_recomputed": false,
+    "raw_measurement_modified": false,
+    "timing_performed": false
+  },
+  "scope": "ALL_STAGE26_2_PASS_CONDITIONS",
+  "source_identity": {
+    "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+    "stage26_2_condition_status_sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af",
+    "stage26_2_historical_summary_sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232",
+    "stage26_2_warm_raw_sha256": "78c58289ccfc4598966d6516201028f43c4b1d16d8bd0268a0cf58129d4179fa",
+    "stage26_6d_frontier_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5",
+    "stage26_6e1_sha256": "effbbbdf6355c8b08e6eb5abdf244f1760349d54973f177fe7e779d48c1148fc",
+    "stage26_6e2_sha256": "3492fa1bf3cbdf7fd1e29079fccf8cfd8edaf8a9cc060a510ef5c5371bacea08"
+  },
+  "stage": 26,
+  "status": "PASS_BOOTSTRAP_CORRECTION_PROTOCOL_FROZEN_BEFORE_EXECUTION"
+}

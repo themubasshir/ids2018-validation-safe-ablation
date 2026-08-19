@@ -1,0 +1,36 @@
+{
+  "GPU_used": false,
+  "affected_artifacts": {
+    "historical_stage26_2_bootstrap_CI_fields": true,
+    "predictive_metrics": false,
+    "stage26_2_condition_outcomes": false,
+    "stage26_2_point_estimates": false,
+    "stage26_2_raw_timing_measurements": false,
+    "stage26_6d_pareto_membership": false
+  },
+  "bootstrap_executed_during_freeze": false,
+  "checkpoint": "STAGE26-6F0",
+  "classification": "DERIVED_SUMMARY_IMPLEMENTATION_PROVENANCE_ERRATUM",
+  "corrected_values_seen_before_freeze": false,
+  "correction_protocol_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_protocol.json",
+  "correction_worker_path": "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_worker.py",
+  "correction_worker_sha256": "9f4e6b6adb9a020128a3d935d7fc4e37412fa3b944d5d1ac7119c716a9cdc91b",
+  "created_at_utc": "2026-08-19T19:31:34.836732+00:00",
+  "finding": "The Stage26-2 bootstrap confidence intervals were durably stored, but the exact CI-generating implementation and bootstrap-specific seed provenance were not recoverable from committed repository history. The preserved Stage26-2 worker RNG calls are exclusively associated with deterministic synthetic model-input generation.",
+  "new_measurement_performed": false,
+  "provenance": {
+    "final_classification": "BOOTSTRAP_GENERATOR_NOT_RECOVERABLE_FROM_COMMITTED_PROVENANCE",
+    "stage26_6e1_sha256": "effbbbdf6355c8b08e6eb5abdf244f1760349d54973f177fe7e779d48c1148fc",
+    "stage26_6e2_sha256": "3492fa1bf3cbdf7fd1e29079fccf8cfd8edaf8a9cc060a510ef5c5371bacea08"
+  },
+  "publication_policy": {
+    "PR_AUC_bootstrap": "NOT_AUTHORIZED",
+    "corrected_CIs": "USE_FOR_FINAL_STAGE26_TIMING_UNCERTAINTY_AFTER_EXECUTION_OF_THE_GIT_ANCHORED_6F0_WORKER",
+    "historical_CIs": "RETAIN_FOR_AUDIT_NOT_PROTOCOL_CERTIFIED",
+    "pareto_frontier": "UNCHANGED_POINT_ESTIMATE_FRONTIER",
+    "point_estimates": "UNCHANGED",
+    "raw_measurements": "UNCHANGED"
+  },
+  "schema": "stage26_6f0_statistical_erratum_record_v1",
+  "stage": 26
+}

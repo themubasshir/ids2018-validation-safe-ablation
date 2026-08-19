@@ -1,0 +1,99 @@
+{
+  "bootstrap": {
+    "condition_local_rng_initialization": "For every PASS condition independently execute np.random.default_rng(26042).",
+    "condition_order_dependency": false,
+    "derived_seed_allowed": false,
+    "index_generation": "rng.integers(0, n, size=(2000, n), endpoint=False)",
+    "interval": "PERCENTILE_95_PERCENT",
+    "interval_percentiles": [
+      2.5,
+      97.5
+    ],
+    "literal_seed": 26042,
+    "metric_order_dependency": false,
+    "replicates": 2000,
+    "rng": "numpy.random.default_rng_PCG64",
+    "sample_size_per_replicate": "N_ORIGINAL_TIMED_OBSERVATIONS_FOR_CONDITION",
+    "sampling": "WITH_REPLACEMENT",
+    "within_condition_pairing": "The same 2000 x n resample-index matrix is reused for all frozen bootstrap targets within that condition."
+  },
+  "checkpoint": "STAGE26-6F0",
+  "created_at_utc": "2026-08-19T19:31:34.814537+00:00",
+  "execution_guard": {
+    "GPU_allowed": false,
+    "corrected_CI_computation_allowed_before_this_lock_is_git_anchored": false,
+    "input_hashes_must_match": true,
+    "worker_source_must_match_locked_sha256": true
+  },
+  "immutable_inputs": {
+    "condition_status": {
+      "path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+      "sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af"
+    },
+    "historical_summary": {
+      "path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_summary.csv",
+      "policy": "Historical artifact preserved unchanged. Existing CI fields are not protocol-certified.",
+      "sha256": "75a60850faf85e10a96a3d9865bb196f4a8cc50111255a2cc15248c54d646232"
+    },
+    "stage26_measurement_protocol": {
+      "path": "results/stage26_deployment_profiling/stage26_0_protocol_lock/measurement_protocol.json",
+      "sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625"
+    },
+    "warm_raw": {
+      "path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_raw.csv",
+      "sha256": "78c58289ccfc4598966d6516201028f43c4b1d16d8bd0268a0cf58129d4179fa"
+    }
+  },
+  "output_policy": {
+    "corrected_CIs_label": "PROTOCOL_CERTIFIED_DERIVED_UNCERTAINTY",
+    "historical_stage26_2_CIs_label": "HISTORICAL_NOT_PROTOCOL_CERTIFIED",
+    "historical_stage26_2_summary_modified": false,
+    "new_output_directory": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty",
+    "point_estimates_source": "ORIGINAL_IMMUTABLE_STAGE26_2_SUMMARY",
+    "raw_measurements_source": "ORIGINAL_IMMUTABLE_STAGE26_2_WARM_RAW"
+  },
+  "pareto_policy": {
+    "corrected_uncertainty_may_change_frontier_membership": false,
+    "cross_group_frontier_allowed": false,
+    "point_estimate_frontier_immutable": true,
+    "stage26_6d_frontier_sha256": "367b3d34ddb4dd125dcbe3db71291b5576b4521640cd2f11d76e50dc247fc6b5"
+  },
+  "predictive_uncertainty_policy": {
+    "PR_AUC_bootstrap_allowed": false,
+    "PR_AUC_is_stage26_bootstrap_target": false,
+    "holdout_reopening_allowed": false,
+    "predictive_metric_recomputation_allowed": false
+  },
+  "reason": {
+    "correction_type": "DERIVED_SUMMARY_ONLY_STATISTICAL_CORRECTION",
+    "final_provenance_classification": "BOOTSTRAP_GENERATOR_NOT_RECOVERABLE_FROM_COMMITTED_PROVENANCE",
+    "historical_bootstrap_generator_recoverable": false,
+    "historical_bootstrap_seed_certified": false,
+    "historical_stage26_2_CIs_exist": true,
+    "historical_stage26_2_CIs_protocol_certified": false
+  },
+  "schema": "stage26_6f0_bootstrap_correction_protocol_v1",
+  "scientific_parent": "ff9d329785c6cd30d273729356f402e59dc4e844",
+  "scope": {
+    "conditions": "ALL_STAGE26_2_PASS_CONDITIONS",
+    "failed_conditions": "OOM and timeout conditions retain their frozen status; no bootstrap values are fabricated.",
+    "historical_artifact_overwrite": false,
+    "model_inference_reexecution": false,
+    "point_estimate_replacement": false,
+    "raw_measurement_reexecution": false
+  },
+  "stage": 26,
+  "statistic_semantics": {
+    "CI_construction": "Apply np.percentile(bootstrap_statistic_vector, [2.5, 97.5], method='linear').",
+    "conversion_before_statistic": true,
+    "latency_conversion": "elapsed_ms = np.asarray(elapsed_ns, dtype=np.float64) / 1_000_000.0",
+    "latency_source": "elapsed_ns",
+    "maximum_latency": "DESCRIPTIVE_ONLY_NOT_BOOTSTRAPPED",
+    "median_throughput": "Bootstrap preserved raw flows_per_second observations directly and compute np.median for each replicate.",
+    "numpy_percentile_method": "linear",
+    "p50_latency": "For each bootstrap replicate compute np.percentile(resampled_elapsed_ms, 50, method='linear').",
+    "p95_latency": "For each bootstrap replicate compute np.percentile(resampled_elapsed_ms, 95, method='linear').",
+    "p99_latency": "Compute only when original n >= 100 using percentile 99; otherwise CI remains null."
+  },
+  "status": "FROZEN_BEFORE_CORRECTED_CI_COMPUTATION"
+}

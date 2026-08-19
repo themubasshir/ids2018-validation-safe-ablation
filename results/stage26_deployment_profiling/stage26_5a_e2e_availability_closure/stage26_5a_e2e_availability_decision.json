@@ -1,0 +1,61 @@
+{
+  "checkpoint": "STAGE26-5A",
+  "complete_E2E_status": "NOT_AVAILABLE_BY_DESIGN_AND_BOUNDARY",
+  "created_at_utc": "2026-08-19T18:24:35.925058+00:00",
+  "decision": "No complete end-to-end deployment latency or throughput value will be reported from the existing Stage26 CPU measurements.",
+  "group_A_dupsafe70": {
+    "blocking_gap": "The exact deployment-time 70-feature extraction / preprocessing path feeding Group-A models has not been profiled by Stage26.",
+    "complete_E2E_available": false,
+    "models": [
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "FT_TRANSFORMER_5_CHECKPOINT_ENSEMBLE"
+    ],
+    "operational_or_reference_targets": [
+      "ENS_LGBM_XGB_EQUAL",
+      "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    ],
+    "raw_extraction_measurement_substitutable": false,
+    "why_raw_extraction_is_not_substitutable": "Stage26-4B raw extraction terminates at flow lifecycle state/count geometry and does not emit the Group-A 70-feature model input."
+  },
+  "group_B_packet_image": {
+    "blocking_gap": [
+      "supervised matching/filtering",
+      "packet selection",
+      "packet truncation",
+      "header masking",
+      "compact packet encoding"
+    ],
+    "complete_raw_pcap_to_model_E2E_available": false,
+    "component_A_output_equals_component_B_input": false,
+    "component_B_claim": "Warm existing-compact-corpus dense materialization into uint8 [B,64,256] images and bool [B,64,256] masks.",
+    "component_B_measurement_valid": true,
+    "models": [
+      "CNN",
+      "ViT"
+    ]
+  },
+  "missing_measurement_is_not_imputed": true,
+  "no_new_measurement_required_for_stage26_5_closure": true,
+  "prohibited_derivations": {
+    "complete_pipeline_throughput_from_component_minimum": true,
+    "cross_group_extraction_equivalence": true,
+    "full_pipeline_bottleneck_across_missing_boundaries": true,
+    "report_sum_as_complete_E2E": true,
+    "sum_A_plus_B_plus_C_latency": true
+  },
+  "reason": "The measured component boundaries are not contiguous. Component A ends at source-faithful raw flow lifecycle reconstruction, while the authoritative Group-B compact corpus begins downstream of supervised matching/filtering, packet selection/truncation, and masking/encoding. Group-A deployment requires a 70-feature extraction boundary that has not been profiled. Summing measured components would therefore omit unmeasured operations and create a false complete-E2E claim.",
+  "schema": "stage26_5a_e2e_availability_decision_v1",
+  "scientific_parent": "aee59fabab2465cca7c80904279bb6d3ef23894f",
+  "stage": 26,
+  "status": "CLOSED_NO_VALID_COMPLETE_E2E_MEASUREMENT",
+  "still_valid": {
+    "Stage26_1_cold_start": true,
+    "Stage26_2_isolated_warm_inference": true,
+    "Stage26_3_memory": true,
+    "Stage26_4B_raw_extraction_component": true,
+    "Stage26_4C_compact_corpus_representation_component": true,
+    "component_level_comparisons_with_explicit_boundaries": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "GPU_allowed_after_this_checkpoint": false,
+  "checkpoint": "STAGE26-5A",
+  "complete_E2E_measurement_available": false,
+  "complete_E2E_measurement_performed": false,
+  "complete_E2E_value_imputed": false,
+  "component_measurements_preserved": true,
+  "created_at_utc": "2026-08-19T18:24:35.950681+00:00",
+  "decision_sha256": "be151f3e9891353eae63546b55bc621ab83bb8d4b829e9fefab0e29eafe4bc96",
+  "group_A_70_feature_extraction_profiled": false,
+  "group_B_missing_raw_to_compact_bridge": true,
+  "inventory_sha256": "b1738a35409efb480942925fceff78d62c3222bcd003cf019112b57b3a61ebe6",
+  "remaining_CPU_stages": [
+    "STAGE26-6",
+    "STAGE26-7",
+    "STAGE26-8"
+  ],
+  "roadmap_sha256": "baa3d7cae54d7a0c51fcab973922df29d5f23e7fd633b37a2d29ff9c9151ab20",
+  "schema": "stage26_5a_e2e_availability_receipt_v1",
+  "scientific_parent": "aee59fabab2465cca7c80904279bb6d3ef23894f",
+  "scientific_state": {
+    "GPU_used": false,
+    "inference_performed": false,
+    "labels_accessed": false,
+    "models_loaded": false,
+    "pcap_accessed": false,
+    "release_corpus_accessed": false,
+    "representation_materialized": false,
+    "timing_performed": false
+  },
+  "stage": 26,
+  "status": "PASS_E2E_AVAILABILITY_CLOSED_WITHOUT_INVALID_ADDITIVITY"
+}

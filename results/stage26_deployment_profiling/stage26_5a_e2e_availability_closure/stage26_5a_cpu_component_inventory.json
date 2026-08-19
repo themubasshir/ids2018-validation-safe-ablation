@@ -1,0 +1,60 @@
+{
+  "components": {
+    "CPU_memory": "COMPLETE",
+    "cold_start": "COMPLETE",
+    "complete_E2E": "CLOSED_NOT_AVAILABLE",
+    "packet_image_representation_CPU1": "COMPLETE_COMPONENT_ONLY",
+    "raw_extraction_CPU1": "COMPLETE_COMPONENT_ONLY",
+    "warm_CPU_inference": "COMPLETE"
+  },
+  "created_at_utc": "2026-08-19T18:24:35.925413+00:00",
+  "measurements_performed_by_this_checkpoint": false,
+  "provenance_hashes": {
+    "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_cpu_package_manifest.json": "7f4d01bb3fe685dca528a4a1c788bc5819b42a4e3080098fc3e923b2fb0e0f19",
+    "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_cpu_receipt.json": "b4b2623eabde7dd6b9acc250357a9f1ad61fa342c1dd496dcb634d4bfaca4d15",
+    "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_manifest.json": "39900c940ca25f3a541efe0dcb5f08d51408581f1f6f4b93980b093327276bc1",
+    "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_component_boundary_map.json": "3f798bf9665dabe245e627b3a21ae0ecd2f837f84b091ad07bc13f60f97458cf",
+    "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_extraction_protocol.json": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+    "results/stage26_deployment_profiling/stage26_4c2_representation_equivalence/stage26_4c2_equivalence_receipt.json": "4dd18384f0c5d2dbc68711fbb4fd11dc7facd550a4be9db2b3ab13cc5fda2351",
+    "results/stage26_deployment_profiling/stage26_4c2_representation_equivalence/stage26_4c2_representation_equivalence_manifest.json": "814914ddc47b824ea8d54d4732ab2ffdbd0b3847d60ef7a69a993e4298281121",
+    "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.json": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7",
+    "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_timing_manifest.json": "bfbc9000a708a803c53a11b591e8021d54325d1b7bccebb4b0aad65e1439b9db",
+    "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_timing_receipt.json": "ed55b65905080dd6b796a54fb720de76bf100fdc7f3271a973e49c81f1722b14",
+    "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_boundary_map.json": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+    "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_protocol.json": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f"
+  },
+  "representation_CPU1_summary": {
+    "1": {
+      "median_flows_per_second": 17993.067007134334,
+      "p50_batch_latency_seconds": 5.5577e-05,
+      "p95_batch_latency_seconds": 0.0001605544999999998,
+      "p99_batch_latency_seconds": 0.00045409701999999985
+    },
+    "1024": {
+      "median_flows_per_second": 11784.728086935844,
+      "p50_batch_latency_seconds": 0.086892735,
+      "p95_batch_latency_seconds": 0.10393937899999998,
+      "p99_batch_latency_seconds": null
+    },
+    "256": {
+      "median_flows_per_second": 13364.817948676995,
+      "p50_batch_latency_seconds": 0.0191547725,
+      "p95_batch_latency_seconds": 0.02215747415,
+      "p99_batch_latency_seconds": 0.027161419950000012
+    },
+    "64": {
+      "median_flows_per_second": 13781.90626324431,
+      "p50_batch_latency_seconds": 0.0046437705,
+      "p95_batch_latency_seconds": 0.005467607899999999,
+      "p99_batch_latency_seconds": 0.006449346059999998
+    },
+    "8192": {
+      "median_flows_per_second": 10058.1799515663,
+      "p50_batch_latency_seconds": 0.8144932524999999,
+      "p95_batch_latency_seconds": 0.8515766894,
+      "p99_batch_latency_seconds": null
+    }
+  },
+  "schema": "stage26_5a_cpu_component_inventory_v1",
+  "scientific_parent": "aee59fabab2465cca7c80904279bb6d3ef23894f"
+}

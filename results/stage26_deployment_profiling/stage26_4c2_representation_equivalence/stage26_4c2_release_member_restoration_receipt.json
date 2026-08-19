@@ -1,0 +1,41 @@
+{
+  "authoritative_release": {
+    "asset": "stage20-Monday-compact-corpus-v1.tar",
+    "sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "size_bytes": 595261440
+  },
+  "checkpoint": "STAGE26-4C2",
+  "created_at_utc": "2026-08-19T18:11:01.919583+00:00",
+  "gpu_used": false,
+  "labels_file_present_in_runtime": false,
+  "labels_member_extracted": false,
+  "labels_member_present_in_source_tar": true,
+  "pcap_accessed": false,
+  "release_corpus_regenerated": false,
+  "release_members_restored": true,
+  "restored_members": [
+    {
+      "runtime_filename": "encoded_bytes.bin",
+      "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+      "size_bytes": 522845159,
+      "source_tar_member": "Monday/encoded_bytes.bin"
+    },
+    {
+      "runtime_filename": "flow_offsets.npy",
+      "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+      "size_bytes": 4228208,
+      "source_tar_member": "Monday/flow_offsets.npy"
+    },
+    {
+      "runtime_filename": "packet_lengths.npy",
+      "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+      "size_bytes": 67649280,
+      "source_tar_member": "Monday/packet_lengths.npy"
+    }
+  ],
+  "runtime_directory": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+  "runtime_file_count": 3,
+  "schema": "stage26_4c2_release_member_restoration_receipt_v1",
+  "scientific_parent": "6a55aca543111e36e9fe83f16f008932d2392a13",
+  "timing_performed": false
+}

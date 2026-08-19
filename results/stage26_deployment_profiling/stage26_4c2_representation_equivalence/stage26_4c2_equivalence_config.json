@@ -1,0 +1,23 @@
+{
+  "affinity": [
+    0
+  ],
+  "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+  "end_index_exclusive": 26170,
+  "expected_flow_count": 528509,
+  "flow_count": 128,
+  "gpu_allowed": false,
+  "historical_loader_class": "Stage20CompactCorpus",
+  "historical_loader_path": "/kaggle/working/ids2018-validation-safe-ablation/scripts/stage20_compact_corpus.py",
+  "historical_loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+  "historical_reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+  "labels_allowed": false,
+  "labels_file_present": false,
+  "mode": "VALIDATE_EQUIVALENCE",
+  "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/stage26_4c2_equivalence_result.json",
+  "schema": "stage26_4c2_representation_equivalence_config_v1",
+  "scientific_parent": "6a55aca543111e36e9fe83f16f008932d2392a13",
+  "start_index": 26042,
+  "timing_allowed": false,
+  "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+}

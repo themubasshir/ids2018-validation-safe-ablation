@@ -1,0 +1,53 @@
+{
+  "boundary_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+  "commit_subject": "stage26: anchor representation equivalence gate",
+  "created_at_utc": "2026-08-19T18:11:02.227205+00:00",
+  "equivalence_config_sha256": "a2b22b9e9d755feb2159a934ddc8762370fc571130991cf6b97ec5a23c237ad5",
+  "equivalence_receipt_sha256": "4dd18384f0c5d2dbc68711fbb4fd11dc7facd550a4be9db2b3ab13cc5fda2351",
+  "equivalence_result_sha256": "d8b28e8aea4f898bf4c6d5eba95706bbffeaca4270e596ee63529d013e88da10",
+  "erratum_sha256": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839",
+  "file_count_excluding_manifest": 4,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c2_representation_equivalence/stage26_4c2_equivalence_config.json",
+      "sha256": "a2b22b9e9d755feb2159a934ddc8762370fc571130991cf6b97ec5a23c237ad5",
+      "size_bytes": 1157
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c2_representation_equivalence/stage26_4c2_equivalence_result.json",
+      "sha256": "d8b28e8aea4f898bf4c6d5eba95706bbffeaca4270e596ee63529d013e88da10",
+      "size_bytes": 906
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c2_representation_equivalence/stage26_4c2_release_member_restoration_receipt.json",
+      "sha256": "6f31d78553a24695eb378abd65823dfaa400325557e78c1d26686d031fb8a3d2",
+      "size_bytes": 1582
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c2_representation_equivalence/stage26_4c2_equivalence_receipt.json",
+      "sha256": "4dd18384f0c5d2dbc68711fbb4fd11dc7facd550a4be9db2b3ab13cc5fda2351",
+      "size_bytes": 2983
+    }
+  ],
+  "historical_loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+  "parent_commit": "6a55aca543111e36e9fe83f16f008932d2392a13",
+  "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "representation_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+  "restoration_receipt_sha256": "6f31d78553a24695eb378abd65823dfaa400325557e78c1d26686d031fb8a3d2",
+  "schema": "stage26_4c2_representation_equivalence_manifest_v1",
+  "scientific_boundaries": {
+    "equivalence_exact": true,
+    "equivalence_executed": true,
+    "equivalence_flow_count": 128,
+    "equivalence_timed": false,
+    "gpu_used": false,
+    "labels_accessed": false,
+    "models_loaded": false,
+    "pcap_accessed": false,
+    "release_corpus_regenerated": false,
+    "representation_timing_performed": false,
+    "timing_allowed_only_after_remote_anchor": true
+  },
+  "status": "READY_FOR_GIT_ANCHOR",
+  "worker_v2_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+}

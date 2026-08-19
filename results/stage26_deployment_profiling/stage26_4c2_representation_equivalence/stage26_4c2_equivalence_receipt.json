@@ -1,0 +1,74 @@
+{
+  "checkpoint": "STAGE26-4C2",
+  "created_at_utc": "2026-08-19T18:11:02.215029+00:00",
+  "equivalence_config": {
+    "CPU_affinity": [
+      0
+    ],
+    "end_index_exclusive": 26170,
+    "flow_count": 128,
+    "sha256": "a2b22b9e9d755feb2159a934ddc8762370fc571130991cf6b97ec5a23c237ad5",
+    "start_index_zero_based": 26042,
+    "timed": false
+  },
+  "equivalence_result": {
+    "all_128_images_exact": true,
+    "all_128_padding_masks_exact": true,
+    "image_dtype": "uint8",
+    "image_shape": [
+      64,
+      256
+    ],
+    "padding_mask_dtype": "bool",
+    "padding_mask_shape": [
+      64,
+      256
+    ],
+    "representation_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+    "sha256": "d8b28e8aea4f898bf4c6d5eba95706bbffeaca4270e596ee63529d013e88da10"
+  },
+  "frozen_inputs": {
+    "boundary_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+    "erratum_sha256": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839",
+    "historical_loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+    "historical_reconstruct_source_sha256": "6290b1427ba42a34590ed7847307e7926310d50056afaa55e83713bdf9afce0c",
+    "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+    "release_tar_sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "worker_v2_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+  },
+  "label_free_validation": {
+    "historical_constructor_invoked": false,
+    "historical_label_output_compared": false,
+    "historical_labels_file_opened": false,
+    "label_neutral_validation_shim_used": true,
+    "runtime_labels_file_present": false
+  },
+  "restoration": {
+    "labels_member_extracted": false,
+    "member_count": 3,
+    "receipt_sha256": "6f31d78553a24695eb378abd65823dfaa400325557e78c1d26686d031fb8a3d2",
+    "release_corpus_regenerated": false
+  },
+  "schema": "stage26_4c2_representation_equivalence_receipt_v1",
+  "scientific_parent": "6a55aca543111e36e9fe83f16f008932d2392a13",
+  "scientific_state": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "dense_representation_materialized_transiently_for_equivalence": true,
+    "dense_representation_persisted": false,
+    "equivalence_executed": true,
+    "gpu_used": false,
+    "inference_performed": false,
+    "labels_accessed": false,
+    "models_loaded": false,
+    "pcap_accessed": false,
+    "performance_observations_created": false,
+    "release_corpus_regenerated": false,
+    "release_members_restored": true,
+    "representation_timing_performed": false
+  },
+  "stage": 26,
+  "status": "PASS_EXACT_128_FLOW_REPRESENTATION_EQUIVALENCE",
+  "timing_permission_after_git_anchor": true,
+  "timing_permission_condition": "Representation timing becomes permitted only after this exact equivalence checkpoint is committed, pushed, and remotely byte/scientifically verified."
+}

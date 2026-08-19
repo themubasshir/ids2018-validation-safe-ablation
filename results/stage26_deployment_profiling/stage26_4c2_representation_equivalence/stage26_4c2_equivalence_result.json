@@ -1,0 +1,34 @@
+{
+  "corpus_created_or_modified": false,
+  "end_index_exclusive": 26170,
+  "flow_count": 128,
+  "gpu_used": false,
+  "historical_constructor_invoked": false,
+  "historical_label_output_compared": false,
+  "historical_labels_file_opened": false,
+  "historical_outputs_compared": [
+    "image",
+    "padding_mask"
+  ],
+  "image_dtype": "uint8",
+  "image_shape_per_flow": [
+    64,
+    256
+  ],
+  "label_neutral_validation_shim_used": true,
+  "labels_accessed": false,
+  "mode": "VALIDATE_EQUIVALENCE",
+  "padding_mask_dtype": "bool",
+  "padding_mask_shape_per_flow": [
+    64,
+    256
+  ],
+  "pcap_accessed": false,
+  "population_flow_count": 528509,
+  "representation_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+  "schema": "stage26_representation_worker_result_v3",
+  "start_index": 26042,
+  "status": "PASS",
+  "timing_performed": false,
+  "worker_pid": 398
+}

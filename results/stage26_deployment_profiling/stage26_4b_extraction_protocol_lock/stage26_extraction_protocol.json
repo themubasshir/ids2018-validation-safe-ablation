@@ -1,0 +1,184 @@
+{
+  "additional_descriptive_metrics": [
+    "completed_lifecycle_flows_per_second",
+    "container_bytes_per_second",
+    "captured_ipv4_bytes_per_second",
+    "valid_ipv4_packet_count",
+    "parser_tcp_count",
+    "parser_udp_count",
+    "parser_other0_count",
+    "fin_exportable_flows",
+    "timeout_exportable_flows",
+    "eof_current_exportable_flows",
+    "max_active_flows"
+  ],
+  "checkpoint": "STAGE26-4B1",
+  "claim_boundary": {
+    "complete_end_to_end_claim_allowed": false,
+    "measured": "Sequential raw PCAPNG read, Ethernet/VLAN IPv4 parsing, direct TCP/UDP/OTHER0 normalization, source-faithful bidirectional flow keying and CICFlowMeter-style timeout/FIN/EOF lifecycle reconstruction.",
+    "not_measured": [
+      "Stage20 supervised flow-to-label matching/filtering",
+      "packet truncation/selection to maximum 64 packets",
+      "IPv4/TCP/UDP masking",
+      "compact corpus creation",
+      "compact corpus serialization",
+      "dense 64x256 representation materialization",
+      "float32 /255 model scaling",
+      "70-feature CICFlowMeter CSV feature-vector serialization",
+      "model inference",
+      "GPU execution"
+    ]
+  },
+  "corpus_policy": {
+    "counts_are_expected_to_differ": true,
+    "existing_authoritative_monday_asset": "stage20-Monday-compact-corpus-v1.tar",
+    "existing_authoritative_monday_asset_sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "existing_authoritative_release_tag": "stage20-compact-corpora-v1",
+    "existing_release_flow_count": 528509,
+    "raw_exportable_flow_count": 529601,
+    "recreate_stage20_release_corpus_from_pcap": false,
+    "write_cicflowmeter_csv": false,
+    "write_new_flow_corpus": false,
+    "write_new_packet_corpus": false
+  },
+  "execution": {
+    "affinity": [
+      0
+    ],
+    "cpu_mode": "CPU_1_PHYSICAL_CORE",
+    "environment_gate": {
+      "attempts": 3,
+      "available_ram_gib_min": 8.0,
+      "cpu_utilization_percent_max": 20.0,
+      "cpu_utilization_sampling_seconds": 1.0,
+      "retry_cooldown_seconds": 5
+    },
+    "fresh_process_per_repetition": true,
+    "gpu": false,
+    "python_hash_seed": 0,
+    "repetitions": 5,
+    "thread_count": 1,
+    "timeout_seconds_per_repetition": 600
+  },
+  "extractor": {
+    "flow_id_semantics_identifier": "BASICPACKETINFO_JAVA_SIGNED_IPV4_FIRST_DIFFERING_BYTE_SWAP_IPS_AND_PORTS_TOGETHER",
+    "flow_lifecycle_semantics_identifier": "CICFLOWMETER_FLOWGENERATOR_EAA853DD82F08BA5288BB7F295B471DE7313F883",
+    "flow_timeout_us": 120000000,
+    "implementation_id": "STAGE26_SOURCE_FAITHFUL_RAW_FLOW_EXTRACTOR_V1",
+    "java_packetreader_used": false,
+    "lifecycle_reference_commit": "eaa853dd82f08ba5288bb7f295b471de7313f883",
+    "lifecycle_reference_repository": "ahlashkari/CICFlowMeter",
+    "lifecycle_reference_tree": "56a11f8fecab86228739fbe3259ff34f3bc841f4",
+    "parser_semantics_identifier": "STAGE20_FROZEN_IPV4_DIRECT_TRANSPORT_TCP6_UDP17_OTHER0",
+    "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "reason": "Stage20 separately freezes custom parser semantics and CICFlowMeter lifecycle semantics. The current runtime also lacks the original jnetpcap/libpcap execution path.",
+    "worker_path_at_freeze": "/kaggle/working/stage26_deployment_profiling/workers/stage26_raw_flow_extractor_v1.py",
+    "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+  },
+  "failure_policy": {
+    "implementation_mismatch": "Block timing and perform only source-faithful correctness diagnosis against already-frozen Stage20 anchors.",
+    "invalid_environment": "INVALID_ENVIRONMENT if precondition gate fails all attempts.",
+    "oom": "RESOURCE_LIMIT_OOM; no post-hoc sample reduction.",
+    "timeout": "TIMEOUT_RESOURCE_LIMIT after 600 seconds; no timeout or packet-bound adaptation."
+  },
+  "frozen_at_utc": "2026-08-19T08:50:30.900643+00:00",
+  "full_untimed_correctness_gate": {
+    "expected_exact_counts": {
+      "discarded_singleton_timeout_flows": 271,
+      "eof_current_exportable_flows": 193196,
+      "eof_singleton_discarded_flows": 52890,
+      "exportable_flow_count": 529601,
+      "fin_exportable_flows": 216388,
+      "max_active_flows": 246086,
+      "non_ipv4_packet_count": 83479,
+      "parser_other0_count": 984,
+      "parser_tcp_count": 10718469,
+      "parser_udp_count": 907039,
+      "raw_packet_count": 11709971,
+      "retained_packet_count": 11573331,
+      "timeout_exportable_flows": 120017,
+      "valid_ipv4_packet_count": 11626492
+    },
+    "failure_rule": "Any mismatch blocks extraction timing. Only a narrowly scoped parser/lifecycle implementation correction that restores the already-frozen Stage20 semantics is allowed. The source, timed packet bounds, repetitions, metrics, hardware condition, and failure rules may not change.",
+    "required_before_any_timed_extraction": true,
+    "scope": "ENTIRE_EXACT_MONDAY_PCAP",
+    "timing_performed": false
+  },
+  "measurement_boundary": {
+    "JVM_startup_included_boolean": false,
+    "Python_process_startup_included_boolean": false,
+    "disk_IO_included_boolean": true,
+    "os_page_cache_policy": "No privileged cache flushing/manipulation. Application file-read cost is inside the timed boundary; all five raw repetitions are retained.",
+    "result_json_serialization": "AFTER_TIMER",
+    "serialization_included_boolean": false,
+    "timer": "time.perf_counter_ns",
+    "timer_start": "Immediately before opening/reading the PCAP and beginning bounded raw extraction.",
+    "timer_stop": "Immediately after in-memory flow lifecycle reconstruction and declared sample-EOF flow accounting."
+  },
+  "next_actions": [
+    "Git-anchor and remotely verify this extraction protocol and exact worker.",
+    "Run one full-Monday UNTIMED correctness validation.",
+    "Only if every historical count matches exactly, execute the five frozen timed 1,000,000-packet repetitions.",
+    "Freeze any Release-corpus representation/materialization performance protocol separately before measuring it."
+  ],
+  "parent_commit": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+  "required_metrics": {
+    "MiB_per_second": "bytes_per_second / 2^20",
+    "bytes_per_second": "sum of captured frame bytes processed / elapsed seconds",
+    "flows_per_second": "exportable flows including declared sample-EOF exports / elapsed seconds",
+    "packets_per_second": "raw packet records processed / elapsed seconds"
+  },
+  "schema": "stage26_extraction_protocol_v1",
+  "scientific_rules": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "corpus_regeneration_from_pcap": false,
+    "full_correctness_gate_before_first_timing": true,
+    "gpu_used": false,
+    "inference_results_used_to_choose_source": false,
+    "labels_accessed": false,
+    "post_result_packet_bound_change": false,
+    "protocol_frozen_before_first_extraction_measurement": true
+  },
+  "source": {
+    "canonical_path": "/kaggle/working/stage26_deployment_profiling/sources/Monday-WorkingHours.pcap",
+    "container": "PCAPNG",
+    "filename": "Monday-WorkingHours.pcap",
+    "historical_raw_packet_count": 11709971,
+    "resolved_path_at_freeze": "/kaggle/working/stage26_hf_cache/datasets--bvsam--cic-ids-2017/blobs/f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "size_bytes": 10822507416,
+    "source_selection": "MONDAY_STAGE20_TRAIN_SOURCE",
+    "source_selection_used_stage26_performance_results": false
+  },
+  "stage": 26,
+  "status": "FROZEN_BEFORE_FIRST_EXTRACTION_MEASUREMENT",
+  "summary_policy": {
+    "p95_p99_not_inferred_from_five_repetitions": true,
+    "raw_repetitions_retained": true,
+    "repetition_count": 5,
+    "summary_statistics": [
+      "median",
+      "minimum",
+      "maximum"
+    ]
+  },
+  "timed_sample": {
+    "fraction_of_full_raw_packet_population": 0.08539730798650141,
+    "raw_packet_count": 1000000,
+    "raw_packet_end_index": 1000000,
+    "raw_packet_start_index": 1,
+    "reason": "Bounded reproducible sequential-source throughput sample frozen before any extraction performance measurement; independent of Stage26 model latency/memory results.",
+    "sample_boundary": "Packet 1,000,000 is treated as declared capture EOF for flow-count throughput accounting.",
+    "sampling_rule": "DETERMINISTIC_CONTIGUOUS_RAW_PACKET_PREFIX"
+  },
+  "upstream": {
+    "component_boundary_map_sha256": "3f798bf9665dabe245e627b3a21ae0ecd2f837f84b091ad07bc13f60f97458cf",
+    "extractor_inventory_sha256": "8e8188f2606dfbfdc7d662a378df29b17c0540416d061417d288b02ff7a0f686",
+    "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+    "release_corpus_geometry_audit_sha256": "47ad682502cfe3ca98d794e9a800263fed1b1c8b5331f5400160d27a518d129a",
+    "release_corpus_structure_audit_sha256": "a0ed17fa8d26049f53766e32981dff72724d79fbd573e7aab79c926a36833c3b",
+    "source_restoration_receipt_sha256": "a7d25f504c5a1d75f6cb46b94bd498ae6ca236a3872be5f868ce9160ec269bb3",
+    "stage20_monday_geometry_sha256": "3a26d6499334c12ea4e9272aef4250761c6cf4399e7fb4d33ef236f12d0b7272"
+  }
+}

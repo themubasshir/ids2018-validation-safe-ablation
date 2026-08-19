@@ -1,0 +1,37 @@
+{
+  "existing_release_corpus": {
+    "asset": "stage20-Monday-compact-corpus-v1.tar",
+    "authoritative": true,
+    "flow_count": 528509,
+    "geometry_audit_sha256": "47ad682502cfe3ca98d794e9a800263fed1b1c8b5331f5400160d27a518d129a",
+    "regeneration_from_pcap": false,
+    "sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "size_bytes": 595261440,
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "extractor_semantics": {
+    "cicflowmeter_commit": "eaa853dd82f08ba5288bb7f295b471de7313f883",
+    "flow_id": "BASICPACKETINFO_JAVA_SIGNED_IPV4_FIRST_DIFFERING_BYTE_SWAP_IPS_AND_PORTS_TOGETHER",
+    "lifecycle": "CICFLOWMETER_FLOWGENERATOR_EAA853DD82F08BA5288BB7F295B471DE7313F883",
+    "parser": "STAGE20_FROZEN_IPV4_DIRECT_TRANSPORT_TCP6_UDP17_OTHER0"
+  },
+  "historical_raw_counts": {
+    "exportable_flows": 529601,
+    "raw_packets": 11709971,
+    "retained_packets": 11573331,
+    "valid_ipv4": 11626492
+  },
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "parent_commit": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+  "raw_source": {
+    "container": "PCAPNG",
+    "filename": "Monday-WorkingHours.pcap",
+    "sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "size_bytes": 10822507416
+  },
+  "schema": "stage26_4b_upstream_provenance_v1",
+  "stage20_monday_geometry": {
+    "repo_relative_path": "results/stage20_1d_representation/stage20_1d2m_monday_exact_geometry_profile.json",
+    "sha256": "3a26d6499334c12ea4e9272aef4250761c6cf4399e7fb4d33ef236f12d0b7272"
+  }
+}

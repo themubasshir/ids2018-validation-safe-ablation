@@ -1,0 +1,50 @@
+{
+  "checkpoint": "STAGE26-4B1",
+  "component_boundary_map_sha256": "3f798bf9665dabe245e627b3a21ae0ecd2f837f84b091ad07bc13f60f97458cf",
+  "extraction_protocol_sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+  "file_count_excluding_manifest": 5,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_4b1_extraction_protocol_freeze_receipt.json",
+      "sha256": "3152b3f35a8cf7920ce6d60f22de49f1f6fdc7bd36c1c35d763d10015f09f811",
+      "size_bytes": 1680
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_4b_upstream_provenance.json",
+      "sha256": "5846727d5d7c4df0390c92133569630162ed18d311b174fbdf495a9cd9f58bda",
+      "size_bytes": 1595
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_component_boundary_map.json",
+      "sha256": "3f798bf9665dabe245e627b3a21ae0ecd2f837f84b091ad07bc13f60f97458cf",
+      "size_bytes": 2133
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_extraction_protocol.json",
+      "sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+      "size_bytes": 9156
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_raw_flow_extractor_v1.py",
+      "sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6",
+      "size_bytes": 33967
+    }
+  ],
+  "freeze_receipt_sha256": "3152b3f35a8cf7920ce6d60f22de49f1f6fdc7bd36c1c35d763d10015f09f811",
+  "parent_commit": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+  "schema": "stage26_4b_extraction_lock_manifest_v1",
+  "scientific_state": {
+    "corpus_regenerated": false,
+    "existing_release_corpus_authoritative": true,
+    "extraction_timing_performed": false,
+    "full_validation_performed": false,
+    "gpu_used": false,
+    "pcap_opened": false,
+    "pcap_packets_iterated": 0,
+    "protocol_frozen": true,
+    "worker_frozen": true
+  },
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR",
+  "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+}

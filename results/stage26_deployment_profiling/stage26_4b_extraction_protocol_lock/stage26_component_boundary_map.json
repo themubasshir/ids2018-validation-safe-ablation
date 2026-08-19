@@ -1,0 +1,38 @@
+{
+  "additivity_rule": {
+    "A_plus_B_plus_C_is_currently_complete_end_to_end": false,
+    "reason": "The Release corpus is already post several preprocessing operations. A future representation/end-to-end protocol must explicitly define and measure remaining boundaries before additive end-to-end claims are allowed."
+  },
+  "component_A_raw_extraction": {
+    "corpus_written": false,
+    "input": "Exact Monday raw PCAPNG source f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "measurement_status": "PROTOCOL_FROZEN_NOT_YET_MEASURED",
+    "output_boundary": "In-memory source-faithful reconstructed flow lifecycle state/counts. No corpus and no CSV are generated."
+  },
+  "component_B_existing_release_corpus": {
+    "asset": "stage20-Monday-compact-corpus-v1.tar",
+    "asset_sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "authoritative": true,
+    "encoded_bytes": 522845159,
+    "flow_count": 528509,
+    "important_boundary": "Corpus already lies downstream of raw parsing, flow reconstruction, supervised matching/filtering, packet selection/truncation, and masking/encoding.",
+    "member_sha256": {
+      "encoded_bytes.bin": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+      "flow_offsets.npy": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+      "labels.npy": "48792b8d6a127b35342cb0789baa6c54396f1100a60ce7225daf08d1c3530424",
+      "packet_lengths.npy": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8"
+    },
+    "regeneration_from_pcap": "FORBIDDEN",
+    "release_tag": "stage20-compact-corpora-v1",
+    "representation_performance_protocol_status": "NOT_YET_FROZEN",
+    "source": "EXISTING_GITHUB_RELEASE"
+  },
+  "component_C_model_inference": {
+    "note": "Stage26-2 isolated model inference and excluded input generation/preprocessing from the timed interval.",
+    "status": "ALREADY_MEASURED_STAGE26_2"
+  },
+  "frozen_before_stage26_extraction_timing": true,
+  "parent_commit": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+  "schema": "stage26_component_boundary_map_v1",
+  "stage": 26
+}

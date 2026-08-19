@@ -1,0 +1,111 @@
+{
+  "CPU_affinity": [
+    0
+  ],
+  "batch_conditions": {
+    "1": {
+      "batch_size": 1,
+      "end_index_exclusive": 26043,
+      "start_index_zero_based": 26042,
+      "timed_runs": 200,
+      "warmup_runs": 50
+    },
+    "1024": {
+      "batch_size": 1024,
+      "end_index_exclusive": 27066,
+      "start_index_zero_based": 26042,
+      "timed_runs": 50,
+      "warmup_runs": 10
+    },
+    "256": {
+      "batch_size": 256,
+      "end_index_exclusive": 26298,
+      "start_index_zero_based": 26042,
+      "timed_runs": 100,
+      "warmup_runs": 20
+    },
+    "64": {
+      "batch_size": 64,
+      "end_index_exclusive": 26106,
+      "start_index_zero_based": 26042,
+      "timed_runs": 150,
+      "warmup_runs": 30
+    },
+    "8192": {
+      "batch_size": 8192,
+      "end_index_exclusive": 34234,
+      "start_index_zero_based": 26042,
+      "timed_runs": 20,
+      "warmup_runs": 5
+    }
+  },
+  "boundary_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+  "cache_policy": {
+    "OS_page_cache_flush": false,
+    "OS_page_cache_manipulation": false,
+    "cold_storage_claim_allowed": false,
+    "exact_batch_warmup_before_timing": true,
+    "full_encoded_file_rehash_before_timing": false
+  },
+  "checkpoint": "STAGE26-4C3",
+  "condition_order": [
+    1,
+    64,
+    256,
+    1024,
+    8192
+  ],
+  "condition_order_rule": "FROZEN_PROTOCOL_BATCH_LIST_ORDER",
+  "condition_timeout_seconds": 600,
+  "created_at_utc": "2026-08-19T18:16:45.356026+00:00",
+  "environment_gate": {
+    "available_ram_gib_min": 8.0,
+    "cpu_utilization_percent_max": 20.0,
+    "cpu_utilization_sampling_seconds": 1.0,
+    "retry_cooldown_seconds": 5,
+    "retry_count": 3
+  },
+  "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+  "equivalence_manifest_sha256": "814914ddc47b824ea8d54d4732ab2ffdbd0b3847d60ef7a69a993e4298281121",
+  "fresh_process_per_batch_condition": true,
+  "measurement_started_when_written": false,
+  "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "sample_start_index_zero_based": 26042,
+  "schema": "stage26_4c3_cpu1_representation_execution_plan_v1",
+  "scientific_exclusions": {
+    "GPU": true,
+    "corpus_regeneration": true,
+    "float32_div255": true,
+    "inference": true,
+    "labels": true,
+    "models": true,
+    "pcap": true,
+    "raw_masking_encoding": true
+  },
+  "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+  "stage": 26,
+  "status": "FROZEN_EXECUTION_OF_EXISTING_STAGE26_4C_PROTOCOL",
+  "summary_reporting": {
+    "p50": "ALL_CONDITIONS",
+    "p95": "ALL_CONDITIONS",
+    "p99": "ONLY_WHEN_TIMED_ITERATION_COUNT_GTE_100",
+    "quantile_implementation": "numpy.percentile(method=\"linear\")",
+    "throughput_summary": [
+      "median",
+      "minimum",
+      "maximum"
+    ]
+  },
+  "thread_count": 1,
+  "timer": "time.perf_counter_ns",
+  "timer_boundary": {
+    "JSON_serialization": false,
+    "fingerprinting": false,
+    "float32_div255": false,
+    "inference": false,
+    "process_startup": false,
+    "representation_materialize_batch": true,
+    "source_initialization": false
+  },
+  "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+}

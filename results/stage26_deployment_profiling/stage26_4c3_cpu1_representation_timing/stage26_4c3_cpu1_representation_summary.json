@@ -1,0 +1,279 @@
+{
+  "CPU_affinity": [
+    0
+  ],
+  "CPU_mode": "CPU_1_PHYSICAL_CORE",
+  "checkpoint": "STAGE26-4C3",
+  "condition_count": 5,
+  "conditions": [
+    {
+      "CPU_affinity": [
+        0
+      ],
+      "batch_size": 1,
+      "condition_index": 1,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_config.json",
+      "config_sha256": "3c6a29790dfc05c95c35c0f2f877e38b367e448c99274139ab9fbbc8277a77ba",
+      "environment_gate": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "available_ram_gib": 29.693416595458984,
+            "cpu_utilization_percent": 25.7,
+            "passed": false
+          },
+          {
+            "attempt": 2,
+            "available_ram_gib": 29.692096710205078,
+            "cpu_utilization_percent": 0.5,
+            "passed": true
+          }
+        ],
+        "status": "PASS",
+        "successful_attempt": 2
+      },
+      "output_bytes_per_batch": {
+        "image": 16384,
+        "padding_mask": 16384,
+        "total": 32768
+      },
+      "process_finished_utc": "2026-08-19T18:16:52.684774+00:00",
+      "process_started_utc": "2026-08-19T18:16:52.385160+00:00",
+      "representation_fingerprint_sha256": "90764e0bf898fbde326ebc6d2a69b4bac7fd9d70564a13adb653ca71a16bc2d1",
+      "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_result.json",
+      "result_sha256": "77225af2314ae4c37ab26476f8a7e9c32b94349249847f05862b4d5768256fbb",
+      "sample_end_index_exclusive": 26043,
+      "sample_start_index_zero_based": 26042,
+      "status": "PASS",
+      "successful_gate_available_ram_gib": 29.692096710205078,
+      "successful_gate_cpu_percent": 0.5,
+      "summary": {
+        "maximum_flows_per_second": 21334.24359439336,
+        "median_flows_per_second": 17993.067007134334,
+        "minimum_flows_per_second": 1119.543763525488,
+        "p50_batch_latency_seconds": 5.5577e-05,
+        "p95_batch_latency_seconds": 0.0001605544999999998,
+        "p99_batch_latency_seconds": 0.00045409701999999985
+      },
+      "thread_count": 1,
+      "timed_runs": 200,
+      "warmup_runs": 50
+    },
+    {
+      "CPU_affinity": [
+        0
+      ],
+      "batch_size": 64,
+      "condition_index": 2,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_config.json",
+      "config_sha256": "581ee8171e93acfe982b0c67fe5168e88dc49505b366700792aab27381d9655b",
+      "environment_gate": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "available_ram_gib": 29.683902740478516,
+            "cpu_utilization_percent": 0.5,
+            "passed": true
+          }
+        ],
+        "status": "PASS",
+        "successful_attempt": 1
+      },
+      "output_bytes_per_batch": {
+        "image": 1048576,
+        "padding_mask": 1048576,
+        "total": 2097152
+      },
+      "process_finished_utc": "2026-08-19T18:16:56.059669+00:00",
+      "process_started_utc": "2026-08-19T18:16:53.702886+00:00",
+      "representation_fingerprint_sha256": "8a7ed90cf0dd3b79db92534de8b07715357a7448444a834570c6f2f22d728189",
+      "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_result.json",
+      "result_sha256": "f4e722d1facc7eb47e4c3d6c9189849c6ea6e2db6b4247c34b44002538521800",
+      "sample_end_index_exclusive": 26106,
+      "sample_start_index_zero_based": 26042,
+      "status": "PASS",
+      "successful_gate_available_ram_gib": 29.683902740478516,
+      "successful_gate_cpu_percent": 0.5,
+      "summary": {
+        "maximum_flows_per_second": 15829.938965691577,
+        "median_flows_per_second": 13781.90626324431,
+        "minimum_flows_per_second": 8877.497333629804,
+        "p50_batch_latency_seconds": 0.0046437705,
+        "p95_batch_latency_seconds": 0.005467607899999999,
+        "p99_batch_latency_seconds": 0.006449346059999998
+      },
+      "thread_count": 1,
+      "timed_runs": 150,
+      "warmup_runs": 30
+    },
+    {
+      "CPU_affinity": [
+        0
+      ],
+      "batch_size": 256,
+      "condition_index": 3,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_config.json",
+      "config_sha256": "9f491d9f24bde2aab272ba480bc93853da3dbace99d8e0b9f9e52a788ab92859",
+      "environment_gate": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "available_ram_gib": 29.687786102294922,
+            "cpu_utilization_percent": 0.3,
+            "passed": true
+          }
+        ],
+        "status": "PASS",
+        "successful_attempt": 1
+      },
+      "output_bytes_per_batch": {
+        "image": 4194304,
+        "padding_mask": 4194304,
+        "total": 8388608
+      },
+      "process_finished_utc": "2026-08-19T18:17:03.094094+00:00",
+      "process_started_utc": "2026-08-19T18:16:57.072094+00:00",
+      "representation_fingerprint_sha256": "226475fdfe3dc4ba34b12c37ea2dd0eef419a7b4c79b58032cfe5003997545e8",
+      "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_result.json",
+      "result_sha256": "488ab409532544e201ee9a304b919d49dd7ee50ad2f311ba950df8da293316ff",
+      "sample_end_index_exclusive": 26298,
+      "sample_start_index_zero_based": 26042,
+      "status": "PASS",
+      "successful_gate_available_ram_gib": 29.687786102294922,
+      "successful_gate_cpu_percent": 0.3,
+      "summary": {
+        "maximum_flows_per_second": 15129.962834664731,
+        "median_flows_per_second": 13364.817948676995,
+        "minimum_flows_per_second": 8712.763105450675,
+        "p50_batch_latency_seconds": 0.0191547725,
+        "p95_batch_latency_seconds": 0.02215747415,
+        "p99_batch_latency_seconds": 0.027161419950000012
+      },
+      "thread_count": 1,
+      "timed_runs": 100,
+      "warmup_runs": 20
+    },
+    {
+      "CPU_affinity": [
+        0
+      ],
+      "batch_size": 1024,
+      "condition_index": 4,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_config.json",
+      "config_sha256": "998416bce02c9d5090d7af22aa607a05ee85224a9ea447f89131fae427667bc0",
+      "environment_gate": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "available_ram_gib": 29.680233001708984,
+            "cpu_utilization_percent": 0.5,
+            "passed": true
+          }
+        ],
+        "status": "PASS",
+        "successful_attempt": 1
+      },
+      "output_bytes_per_batch": {
+        "image": 16777216,
+        "padding_mask": 16777216,
+        "total": 33554432
+      },
+      "process_finished_utc": "2026-08-19T18:17:16.639692+00:00",
+      "process_started_utc": "2026-08-19T18:17:04.104435+00:00",
+      "representation_fingerprint_sha256": "ab1d10fe91a6b5146175f5e2f0e7e2edca93b1f15d2f0101df737c0a2bc5d016",
+      "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_result.json",
+      "result_sha256": "7b1e3f2f7e623d9f13569baecab1e90a83a637db8b79df8b443899a3fd39eb09",
+      "sample_end_index_exclusive": 27066,
+      "sample_start_index_zero_based": 26042,
+      "status": "PASS",
+      "successful_gate_available_ram_gib": 29.680233001708984,
+      "successful_gate_cpu_percent": 0.5,
+      "summary": {
+        "maximum_flows_per_second": 13115.98607379438,
+        "median_flows_per_second": 11784.728086935844,
+        "minimum_flows_per_second": 7780.9077526123,
+        "p50_batch_latency_seconds": 0.086892735,
+        "p95_batch_latency_seconds": 0.10393937899999998,
+        "p99_batch_latency_seconds": null
+      },
+      "thread_count": 1,
+      "timed_runs": 50,
+      "warmup_runs": 10
+    },
+    {
+      "CPU_affinity": [
+        0
+      ],
+      "batch_size": 8192,
+      "condition_index": 5,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_config.json",
+      "config_sha256": "c3d0df3b7bd34b9a674fcd97d4828e782fbb4ee03c03b5101059aad3399eb0cc",
+      "environment_gate": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "available_ram_gib": 29.673370361328125,
+            "cpu_utilization_percent": 0.3,
+            "passed": true
+          }
+        ],
+        "status": "PASS",
+        "successful_attempt": 1
+      },
+      "output_bytes_per_batch": {
+        "image": 134217728,
+        "padding_mask": 134217728,
+        "total": 268435456
+      },
+      "process_finished_utc": "2026-08-19T18:18:05.490119+00:00",
+      "process_started_utc": "2026-08-19T18:17:17.650577+00:00",
+      "representation_fingerprint_sha256": "cd2fbccd7bb41cf0daa96af5ae02af4ebf8023934799889763e2295c9402ee77",
+      "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_result.json",
+      "result_sha256": "3014d77b1e2ec4c435f546cabe3d1780c8f2f5d51ff62ea2ab796399b1560f39",
+      "sample_end_index_exclusive": 34234,
+      "sample_start_index_zero_based": 26042,
+      "status": "PASS",
+      "successful_gate_available_ram_gib": 29.673370361328125,
+      "successful_gate_cpu_percent": 0.3,
+      "summary": {
+        "maximum_flows_per_second": 10432.94365176558,
+        "median_flows_per_second": 10058.1799515663,
+        "minimum_flows_per_second": 9040.840350789947,
+        "p50_batch_latency_seconds": 0.8144932524999999,
+        "p95_batch_latency_seconds": 0.8515766894,
+        "p99_batch_latency_seconds": null
+      },
+      "thread_count": 1,
+      "timed_runs": 20,
+      "warmup_runs": 5
+    }
+  ],
+  "created_at_utc": "2026-08-19T18:18:05.497883+00:00",
+  "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+  "execution_plan_sha256": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568",
+  "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "quantile_method": "numpy.percentile(method=linear)",
+  "raw_observation_count": 520,
+  "sample_start_index_zero_based": 26042,
+  "schema": "stage26_4c3_cpu1_representation_summary_v1",
+  "scientific_boundary": {
+    "cold_storage_claim_allowed": false,
+    "complete_E2E_claim_allowed": false,
+    "component": "existing Stage20 compact Release corpus -> dense uint8 image + bool byte-padding mask",
+    "fingerprinting_included": false,
+    "float32_div255_included": false,
+    "labels_accessed": false,
+    "model_inference_included": false,
+    "page_cache_manipulated": false,
+    "process_startup_included": false,
+    "raw_packet_masking_encoding_included": false,
+    "release_tar_restoration_included": false,
+    "source_initialization_included": false,
+    "warm_representation_materialization": true
+  },
+  "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+  "stage": 26,
+  "status": "PASS_ALL_FIVE_FROZEN_CPU1_REPRESENTATION_CONDITIONS",
+  "thread_count": 1,
+  "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+}

@@ -1,0 +1,109 @@
+{
+  "boundary_sha256": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba",
+  "commit_subject": "stage26: anchor CPU1 representation timing",
+  "condition_count": 5,
+  "created_at_utc": "2026-08-19T18:18:05.526149+00:00",
+  "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+  "equivalence_manifest_sha256": "814914ddc47b824ea8d54d4732ab2ffdbd0b3847d60ef7a69a993e4298281121",
+  "erratum_sha256": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839",
+  "execution_plan_sha256": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568",
+  "file_count_excluding_manifest": 15,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_execution_plan.json",
+      "sha256": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568",
+      "size_bytes": 3243
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_raw_observations.csv",
+      "sha256": "189852745ef83330526f6c680d459c7075a695f97614aa6c76a7ae7ded3447b3",
+      "size_bytes": 37820
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.json",
+      "sha256": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7",
+      "size_bytes": 11351
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.csv",
+      "sha256": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5",
+      "size_bytes": 1615
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_timing_receipt.json",
+      "sha256": "ed55b65905080dd6b796a54fb720de76bf100fdc7f3271a973e49c81f1722b14",
+      "size_bytes": 14677
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1/stage26_4c3_B1_config.json",
+      "sha256": "3c6a29790dfc05c95c35c0f2f877e38b367e448c99274139ab9fbbc8277a77ba",
+      "size_bytes": 1047
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1/stage26_4c3_B1_result.json",
+      "sha256": "77225af2314ae4c37ab26476f8a7e9c32b94349249847f05862b4d5768256fbb",
+      "size_bytes": 57121
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_64/stage26_4c3_B64_config.json",
+      "sha256": "581ee8171e93acfe982b0c67fe5168e88dc49505b366700792aab27381d9655b",
+      "size_bytes": 1050
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_64/stage26_4c3_B64_result.json",
+      "sha256": "f4e722d1facc7eb47e4c3d6c9189849c6ea6e2db6b4247c34b44002538521800",
+      "size_bytes": 44532
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_256/stage26_4c3_B256_config.json",
+      "sha256": "9f491d9f24bde2aab272ba480bc93853da3dbace99d8e0b9f9e52a788ab92859",
+      "size_bytes": 1053
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_256/stage26_4c3_B256_result.json",
+      "sha256": "488ab409532544e201ee9a304b919d49dd7ee50ad2f311ba950df8da293316ff",
+      "size_bytes": 30148
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1024/stage26_4c3_B1024_config.json",
+      "sha256": "998416bce02c9d5090d7af22aa607a05ee85224a9ea447f89131fae427667bc0",
+      "size_bytes": 1055
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1024/stage26_4c3_B1024_result.json",
+      "sha256": "7b1e3f2f7e623d9f13569baecab1e90a83a637db8b79df8b443899a3fd39eb09",
+      "size_bytes": 15712
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_8192/stage26_4c3_B8192_config.json",
+      "sha256": "c3d0df3b7bd34b9a674fcd97d4828e782fbb4ee03c03b5101059aad3399eb0cc",
+      "size_bytes": 1054
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_8192/stage26_4c3_B8192_result.json",
+      "sha256": "3014d77b1e2ec4c435f546cabe3d1780c8f2f5d51ff62ea2ab796399b1560f39",
+      "size_bytes": 6885
+    }
+  ],
+  "parent_commit": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+  "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "raw_observation_count": 520,
+  "raw_observations_csv_sha256": "189852745ef83330526f6c680d459c7075a695f97614aa6c76a7ae7ded3447b3",
+  "schema": "stage26_4c3_cpu1_representation_timing_manifest_v1",
+  "scientific_boundaries": {
+    "CPU1_representation_timing_complete": true,
+    "GPU_used": false,
+    "all_five_conditions_passed": true,
+    "complete_E2E_claim_allowed": false,
+    "float32_div255_included": false,
+    "labels_accessed": false,
+    "model_inference_included": false,
+    "pcap_accessed": false,
+    "release_corpus_regenerated": false
+  },
+  "status": "PASS_FIVE_FROZEN_CONDITIONS_READY_FOR_GIT_ANCHOR",
+  "summary_csv_sha256": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5",
+  "summary_json_sha256": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7",
+  "timing_receipt_sha256": "ed55b65905080dd6b796a54fb720de76bf100fdc7f3271a973e49c81f1722b14",
+  "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+}

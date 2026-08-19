@@ -1,0 +1,58 @@
+{
+  "checkpoint": "STAGE26-4B2",
+  "corpus_policy": {
+    "new_corpus_created": false,
+    "release_corpus_authoritative": true,
+    "release_corpus_regenerated": false
+  },
+  "created_at_utc": "2026-08-19T09:21:35.388144+00:00",
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b2_full_monday_validation/stage26_4b2_full_monday_validation_config.json",
+      "sha256": "409f43dfe167b17595b101b37b92d0796c757fd7cdb8c0946d9969f3c61ce122",
+      "size_bytes": 832
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b2_full_monday_validation/stage26_4b2_full_monday_validation_receipt.json",
+      "sha256": "0634cd71d3b1d2111a7b44a3519711660fb6ec3ad8f143804ba1cd3b9e6802d2",
+      "size_bytes": 3467
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b2_full_monday_validation/stage26_4b2_full_monday_validation_result.json",
+      "sha256": "a012ba81b4cbb339371898e6adc4cd43a1c6364086d1b343f0fb7cd73c3bb46f",
+      "size_bytes": 1743
+    }
+  ],
+  "parent_commit": "b41a0559598a70e6c69aac05c76e4c4edb73b34e",
+  "protocol_parent": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+  "protocol_sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+  "schema": "stage26_4b2_full_monday_validation_manifest_v1",
+  "scientific_gate": {
+    "full_validation_passed": true,
+    "gpu_used": false,
+    "labels_accessed": false,
+    "models_loaded": false,
+    "timed_extraction_allowed_after_anchor": true,
+    "timed_extraction_performed": false
+  },
+  "source": {
+    "filename": "Monday-WorkingHours.pcap",
+    "sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "size_bytes": 10822507416
+  },
+  "stage": 26,
+  "status": "PASS_EXACT_STAGE20_RECONSTRUCTION_READY_FOR_GIT_ANCHOR",
+  "validation": {
+    "config_sha256": "409f43dfe167b17595b101b37b92d0796c757fd7cdb8c0946d9969f3c61ce122",
+    "count_summary_sha256": "2ac0f791b97187cb10a4228775146958830719b29dc10a064ed5adae0614728e",
+    "full_raw_packet_count": 11709971,
+    "historical_anchor_count": 14,
+    "matched_anchor_count": 14,
+    "mismatch_count": 0,
+    "receipt_sha256": "0634cd71d3b1d2111a7b44a3519711660fb6ec3ad8f143804ba1cd3b9e6802d2",
+    "result_sha256": "a012ba81b4cbb339371898e6adc4cd43a1c6364086d1b343f0fb7cd73c3bb46f",
+    "throughput_measured": false,
+    "timing_performed": false
+  },
+  "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+}

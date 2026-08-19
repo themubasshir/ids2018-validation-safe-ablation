@@ -1,0 +1,17 @@
+{
+  "affinity": [
+    0
+  ],
+  "corpus_creation_allowed": false,
+  "gpu_allowed": false,
+  "mode": "FULL_VALIDATION_UNTIMED",
+  "packet_limit": null,
+  "pcap_path": "/kaggle/working/stage26_deployment_profiling/sources/Monday-WorkingHours.pcap",
+  "performance_timing_allowed": false,
+  "protocol_commit": "b41a0559598a70e6c69aac05c76e4c4edb73b34e",
+  "protocol_sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+  "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b2_full_monday_validation/stage26_4b2_full_monday_validation_result.json",
+  "schema": "stage26_4b2_full_monday_validation_config_v1",
+  "source_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+  "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+}

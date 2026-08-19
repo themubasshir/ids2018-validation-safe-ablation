@@ -1,0 +1,121 @@
+{
+  "Friday_accessed": false,
+  "Thursday_accessed": false,
+  "all_frozen_counts_exact": true,
+  "arithmetic_checks": {
+    "IPv4 = TCP + UDP + OTHER0": true,
+    "flows = FIN + timeout + EOF": true,
+    "raw = IPv4 + nonIPv4": true
+  },
+  "checkpoint": "STAGE26-4B2",
+  "config_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b2_full_monday_validation/stage26_4b2_full_monday_validation_config.json",
+  "config_sha256": "409f43dfe167b17595b101b37b92d0796c757fd7cdb8c0946d9969f3c61ce122",
+  "corpus_created_or_modified": false,
+  "count_summary_sha256": "2ac0f791b97187cb10a4228775146958830719b29dc10a064ed5adae0614728e",
+  "created_at_utc": "2026-08-19T09:17:01.567160+00:00",
+  "exact_comparison": [
+    {
+      "actual": 11709971,
+      "expected": 11709971,
+      "metric": "raw_packet_count",
+      "pass": true
+    },
+    {
+      "actual": 11626492,
+      "expected": 11626492,
+      "metric": "valid_ipv4_packet_count",
+      "pass": true
+    },
+    {
+      "actual": 83479,
+      "expected": 83479,
+      "metric": "non_ipv4_packet_count",
+      "pass": true
+    },
+    {
+      "actual": 10718469,
+      "expected": 10718469,
+      "metric": "parser_tcp_count",
+      "pass": true
+    },
+    {
+      "actual": 907039,
+      "expected": 907039,
+      "metric": "parser_udp_count",
+      "pass": true
+    },
+    {
+      "actual": 984,
+      "expected": 984,
+      "metric": "parser_other0_count",
+      "pass": true
+    },
+    {
+      "actual": 529601,
+      "expected": 529601,
+      "metric": "exportable_flow_count",
+      "pass": true
+    },
+    {
+      "actual": 11573331,
+      "expected": 11573331,
+      "metric": "retained_packet_count",
+      "pass": true
+    },
+    {
+      "actual": 246086,
+      "expected": 246086,
+      "metric": "max_active_flows",
+      "pass": true
+    },
+    {
+      "actual": 216388,
+      "expected": 216388,
+      "metric": "fin_exportable_flows",
+      "pass": true
+    },
+    {
+      "actual": 120017,
+      "expected": 120017,
+      "metric": "timeout_exportable_flows",
+      "pass": true
+    },
+    {
+      "actual": 193196,
+      "expected": 193196,
+      "metric": "eof_current_exportable_flows",
+      "pass": true
+    },
+    {
+      "actual": 271,
+      "expected": 271,
+      "metric": "discarded_singleton_timeout_flows",
+      "pass": true
+    },
+    {
+      "actual": 52890,
+      "expected": 52890,
+      "metric": "eof_singleton_discarded_flows",
+      "pass": true
+    }
+  ],
+  "failure_rule": null,
+  "gpu_used": false,
+  "labels_accessed": false,
+  "mismatches": [],
+  "models_loaded": false,
+  "performance_metrics_generated": false,
+  "protocol_commit": "b41a0559598a70e6c69aac05c76e4c4edb73b34e",
+  "protocol_sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+  "release_corpus_regenerated": false,
+  "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b2_full_monday_validation/stage26_4b2_full_monday_validation_result.json",
+  "result_sha256": "a012ba81b4cbb339371898e6adc4cd43a1c6364086d1b343f0fb7cd73c3bb46f",
+  "schema": "stage26_4b2_full_monday_validation_receipt_v1",
+  "source_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+  "source_size_bytes": 10822507416,
+  "stage": 26,
+  "status": "PASS_EXACT_STAGE20_RECONSTRUCTION",
+  "timed_extraction_allowed_next": true,
+  "timing_performed": false,
+  "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+}

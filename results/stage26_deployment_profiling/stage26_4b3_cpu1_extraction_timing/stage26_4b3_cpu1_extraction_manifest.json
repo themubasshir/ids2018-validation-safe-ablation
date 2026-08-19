@@ -1,0 +1,198 @@
+{
+  "checkpoint": "STAGE26-4B3",
+  "created_at_utc": "2026-08-19T09:28:34.577979+00:00",
+  "determinism": {
+    "all_successful_count_dicts_identical": true,
+    "prefix_count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171"
+  },
+  "file_count_excluding_manifest": 13,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_01_config.json",
+      "sha256": "4c563730d1b5130e825bbb1749927c2f9659b270756a1e58ffc151d273e8de4e",
+      "size_bytes": 1126
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_01_result.json",
+      "sha256": "2efd6e3f4cbaae7f141425011996e609d4e0a6950d8619448efe4dc481137f93",
+      "size_bytes": 2104
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_02_config.json",
+      "sha256": "1a85d139ec5f3d79ca0bfbde99984dc25a7e270c464236a4fb70dbcc664be6ad",
+      "size_bytes": 1125
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_02_result.json",
+      "sha256": "6d78f8803bc05c7528875ef9e0c6c5506a771dfbba004d8c45a4f6f8752d2498",
+      "size_bytes": 2102
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_03_config.json",
+      "sha256": "27bf3de0ffc6a1c0dd2a7a6a09f8576cc9f33db79280de4f0da338d521eb3aea",
+      "size_bytes": 1126
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_03_result.json",
+      "sha256": "a033c6853909f7513e6a4f1665226ec60817945dfba63058c67455a150e4d912",
+      "size_bytes": 2104
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_04_config.json",
+      "sha256": "84975b951cccc829457c8fd29d48addf68aa2f2672da1e5583f69f13055e4e5b",
+      "size_bytes": 1126
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_04_result.json",
+      "sha256": "1cd0142fe8d4335c3a23ea4f48d2b6b239a43aab68d187ea6a6cce73cd1ae402",
+      "size_bytes": 2104
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_05_config.json",
+      "sha256": "f5041552bcc353793bf50f98e7a21bc11a4cf38bb896875c2484e933a4703439",
+      "size_bytes": 1125
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/rep_05_result.json",
+      "sha256": "66d670e80fd2328ca03bdd7ec04392ab2586587a3d93dd335ea765aa2f43f146",
+      "size_bytes": 2105
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_receipt.json",
+      "sha256": "38e4faa798cdf038d401191190103e81e02ed5c20bb10417e90e28343e56649e",
+      "size_bytes": 1613
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_repetitions.csv",
+      "sha256": "4df7e43c658cd6447bb505fae3b2e68b5868be18701849f93f4a6e59af951285",
+      "size_bytes": 2376
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_summary.json",
+      "sha256": "1914504fad850879d1ed11afed432436c18454f2bb8650f881244c865f18ba16",
+      "size_bytes": 11516
+    }
+  ],
+  "measurement": {
+    "JVM_startup_included": false,
+    "Python_process_startup_included": false,
+    "affinity": [
+      0
+    ],
+    "cpu_mode": "CPU_1_PHYSICAL_CORE",
+    "disk_IO_included": true,
+    "fresh_process_per_repetition": true,
+    "packet_count": 1000000,
+    "packet_end": 1000000,
+    "packet_sampling_rule": "DETERMINISTIC_CONTIGUOUS_RAW_PACKET_PREFIX",
+    "packet_start": 1,
+    "page_cache_manipulated": false,
+    "requested_repetitions": 5,
+    "serialization_included": false,
+    "source": "Monday-WorkingHours.pcap",
+    "successful_repetitions": 5,
+    "thread_count": 1
+  },
+  "parent_commit": "e558da134162652c1a955f60f15c175f083923c8",
+  "primary_summary": {
+    "MiB_per_second": {
+      "maximum": 122.36301447906555,
+      "median": 121.42612029310541,
+      "minimum": 120.36194920915158,
+      "n": 5
+    },
+    "elapsed_seconds": {
+      "maximum": 9.443492147,
+      "median": 9.36072996,
+      "minimum": 9.289057866,
+      "n": 5
+    },
+    "flows_per_second": {
+      "maximum": 1349.1142138181615,
+      "median": 1338.7844808632851,
+      "minimum": 1327.0514556398666,
+      "n": 5
+    },
+    "packets_per_second": {
+      "maximum": 107653.54403272914,
+      "median": 106829.27552372208,
+      "minimum": 105893.03029363761,
+      "n": 5
+    }
+  },
+  "protocol_commit": "b41a0559598a70e6c69aac05c76e4c4edb73b34e",
+  "raw_repetitions": [
+    {
+      "MiB_per_second": 120.36194920915158,
+      "config_sha256": "4c563730d1b5130e825bbb1749927c2f9659b270756a1e58ffc151d273e8de4e",
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_seconds": 9.443492147,
+      "exportable_flow_count": 12532,
+      "flows_per_second": 1327.0514556398666,
+      "packets_per_second": 105893.03029363761,
+      "repetition": 1,
+      "result_sha256": "2efd6e3f4cbaae7f141425011996e609d4e0a6950d8619448efe4dc481137f93"
+    },
+    {
+      "MiB_per_second": 121.42612029310541,
+      "config_sha256": "1a85d139ec5f3d79ca0bfbde99984dc25a7e270c464236a4fb70dbcc664be6ad",
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_seconds": 9.36072996,
+      "exportable_flow_count": 12532,
+      "flows_per_second": 1338.7844808632851,
+      "packets_per_second": 106829.27552372208,
+      "repetition": 2,
+      "result_sha256": "6d78f8803bc05c7528875ef9e0c6c5506a771dfbba004d8c45a4f6f8752d2498"
+    },
+    {
+      "MiB_per_second": 122.36301447906555,
+      "config_sha256": "27bf3de0ffc6a1c0dd2a7a6a09f8576cc9f33db79280de4f0da338d521eb3aea",
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_seconds": 9.289057866,
+      "exportable_flow_count": 12532,
+      "flows_per_second": 1349.1142138181615,
+      "packets_per_second": 107653.54403272914,
+      "repetition": 3,
+      "result_sha256": "a033c6853909f7513e6a4f1665226ec60817945dfba63058c67455a150e4d912"
+    },
+    {
+      "MiB_per_second": 121.03144472173021,
+      "config_sha256": "84975b951cccc829457c8fd29d48addf68aa2f2672da1e5583f69f13055e4e5b",
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_seconds": 9.391254684,
+      "exportable_flow_count": 12532,
+      "flows_per_second": 1334.4329827782146,
+      "packets_per_second": 106482.04458811162,
+      "repetition": 4,
+      "result_sha256": "1cd0142fe8d4335c3a23ea4f48d2b6b239a43aab68d187ea6a6cce73cd1ae402"
+    },
+    {
+      "MiB_per_second": 121.80783435113781,
+      "config_sha256": "f5041552bcc353793bf50f98e7a21bc11a4cf38bb896875c2484e933a4703439",
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_seconds": 9.331395868,
+      "exportable_flow_count": 12532,
+      "flows_per_second": 1342.9930716984989,
+      "packets_per_second": 107165.10307201555,
+      "repetition": 5,
+      "result_sha256": "66d670e80fd2328ca03bdd7ec04392ab2586587a3d93dd335ea765aa2f43f146"
+    }
+  ],
+  "schema": "stage26_4b3_cpu1_extraction_manifest_v1",
+  "scientific_boundaries": {
+    "complete_end_to_end_claim": false,
+    "corpus_created": false,
+    "gpu_used": false,
+    "model_inference_performed": false,
+    "raw_extraction_performance_measured": true,
+    "release_corpus_regenerated": false,
+    "representation_timing": false
+  },
+  "stage": 26,
+  "status": "PASS_FIVE_FROZEN_REPETITIONS_READY_FOR_GIT_ANCHOR",
+  "top_level_hashes": {
+    "receipt_sha256": "38e4faa798cdf038d401191190103e81e02ed5c20bb10417e90e28343e56649e",
+    "summary_csv_sha256": "4df7e43c658cd6447bb505fae3b2e68b5868be18701849f93f4a6e59af951285",
+    "summary_json_sha256": "1914504fad850879d1ed11afed432436c18454f2bb8650f881244c865f18ba16"
+  }
+}

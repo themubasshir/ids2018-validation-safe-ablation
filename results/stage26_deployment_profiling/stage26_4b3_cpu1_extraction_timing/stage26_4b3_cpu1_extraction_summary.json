@@ -1,0 +1,296 @@
+{
+  "checkpoint": "STAGE26-4B3",
+  "condition": {
+    "JVM_startup_included": false,
+    "Python_process_startup_included": false,
+    "affinity": [
+      0
+    ],
+    "cpu_mode": "CPU_1_PHYSICAL_CORE",
+    "disk_IO_included": true,
+    "fresh_process_per_repetition": true,
+    "gpu": false,
+    "packet_count": 1000000,
+    "packet_end": 1000000,
+    "packet_sampling_rule": "DETERMINISTIC_CONTIGUOUS_RAW_PACKET_PREFIX",
+    "packet_start": 1,
+    "page_cache_manipulated": false,
+    "requested_repetitions": 5,
+    "serialization_included": false,
+    "thread_count": 1,
+    "timeout_seconds": 600
+  },
+  "created_at_utc": "2026-08-19T09:25:22.440794+00:00",
+  "measurement_complete": true,
+  "metrics": {
+    "MiB_per_second": {
+      "maximum": 122.36301447906555,
+      "median": 121.42612029310541,
+      "minimum": 120.36194920915158,
+      "n": 5
+    },
+    "bytes_per_second": {
+      "maximum": 128306920.27040064,
+      "median": 127324515.5124633,
+      "minimum": 126208651.25393532,
+      "n": 5
+    },
+    "captured_ipv4_bytes_per_second": {
+      "maximum": 126717944.59461923,
+      "median": 125747706.11158618,
+      "minimum": 124645660.91410759,
+      "n": 5
+    },
+    "completed_lifecycle_flows_per_second": {
+      "maximum": 503.9262396172051,
+      "median": 500.0678387265431,
+      "minimum": 495.6852748045177,
+      "n": 5
+    },
+    "container_bytes_per_second": {
+      "maximum": 131879499.69435576,
+      "median": 130869740.84657817,
+      "minimum": 129722806.45027786,
+      "n": 5
+    },
+    "elapsed_seconds": {
+      "maximum": 9.443492147,
+      "median": 9.36072996,
+      "minimum": 9.289057866,
+      "n": 5
+    },
+    "flows_per_second": {
+      "maximum": 1349.1142138181615,
+      "median": 1338.7844808632851,
+      "minimum": 1327.0514556398666,
+      "n": 5
+    },
+    "packets_per_second": {
+      "maximum": 107653.54403272914,
+      "median": 106829.27552372208,
+      "minimum": 105893.03029363761,
+      "n": 5
+    }
+  },
+  "prefix_count_consistency": true,
+  "prefix_count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+  "protocol_commit": "b41a0559598a70e6c69aac05c76e4c4edb73b34e",
+  "protocol_sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+  "repetitions": [
+    {
+      "MiB_per_second": 120.36194920915158,
+      "bytes_per_second": 126208651.25393532,
+      "captured_ipv4_bytes_per_second": 124645660.91410759,
+      "completed_lifecycle_flows_per_second": 495.6852748045177,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_01_config.json",
+      "config_sha256": "4c563730d1b5130e825bbb1749927c2f9659b270756a1e58ffc151d273e8de4e",
+      "container_bytes_per_second": 129722806.45027786,
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_ns": 9443492147,
+      "elapsed_seconds": 9.443492147,
+      "environment_gate": [
+        {
+          "attempt": 1,
+          "available_ram_gib": 29.324996948242188,
+          "cpu_gate_pass": true,
+          "cpu_utilization_percent": 0.3,
+          "gate_pass": true,
+          "ram_gate_pass": true
+        }
+      ],
+      "eof_current_exportable_flows": 7851,
+      "exportable_flow_count": 12532,
+      "finished_exportable_flows": 4681,
+      "flows_per_second": 1327.0514556398666,
+      "max_active_flows": 8673,
+      "packets_per_second": 105893.03029363761,
+      "pcap_file_bytes_consumed": 1225036304,
+      "raw_packet_count": 1000000,
+      "repetition": 1,
+      "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_01_result.json",
+      "result_sha256": "2efd6e3f4cbaae7f141425011996e609d4e0a6950d8619448efe4dc481137f93",
+      "status": "PASS",
+      "valid_ipv4_packet_count": 993753
+    },
+    {
+      "MiB_per_second": 121.42612029310541,
+      "bytes_per_second": 127324515.5124633,
+      "captured_ipv4_bytes_per_second": 125747706.11158618,
+      "completed_lifecycle_flows_per_second": 500.0678387265431,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_02_config.json",
+      "config_sha256": "1a85d139ec5f3d79ca0bfbde99984dc25a7e270c464236a4fb70dbcc664be6ad",
+      "container_bytes_per_second": 130869740.84657817,
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_ns": 9360729960,
+      "elapsed_seconds": 9.36072996,
+      "environment_gate": [
+        {
+          "attempt": 1,
+          "available_ram_gib": 29.31302261352539,
+          "cpu_gate_pass": true,
+          "cpu_utilization_percent": 0.5,
+          "gate_pass": true,
+          "ram_gate_pass": true
+        }
+      ],
+      "eof_current_exportable_flows": 7851,
+      "exportable_flow_count": 12532,
+      "finished_exportable_flows": 4681,
+      "flows_per_second": 1338.7844808632851,
+      "max_active_flows": 8673,
+      "packets_per_second": 106829.27552372208,
+      "pcap_file_bytes_consumed": 1225036304,
+      "raw_packet_count": 1000000,
+      "repetition": 2,
+      "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_02_result.json",
+      "result_sha256": "6d78f8803bc05c7528875ef9e0c6c5506a771dfbba004d8c45a4f6f8752d2498",
+      "status": "PASS",
+      "valid_ipv4_packet_count": 993753
+    },
+    {
+      "MiB_per_second": 122.36301447906555,
+      "bytes_per_second": 128306920.27040064,
+      "captured_ipv4_bytes_per_second": 126717944.59461923,
+      "completed_lifecycle_flows_per_second": 503.9262396172051,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_03_config.json",
+      "config_sha256": "27bf3de0ffc6a1c0dd2a7a6a09f8576cc9f33db79280de4f0da338d521eb3aea",
+      "container_bytes_per_second": 131879499.69435576,
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_ns": 9289057866,
+      "elapsed_seconds": 9.289057866,
+      "environment_gate": [
+        {
+          "attempt": 1,
+          "available_ram_gib": 29.317825317382812,
+          "cpu_gate_pass": true,
+          "cpu_utilization_percent": 0.7,
+          "gate_pass": true,
+          "ram_gate_pass": true
+        }
+      ],
+      "eof_current_exportable_flows": 7851,
+      "exportable_flow_count": 12532,
+      "finished_exportable_flows": 4681,
+      "flows_per_second": 1349.1142138181615,
+      "max_active_flows": 8673,
+      "packets_per_second": 107653.54403272914,
+      "pcap_file_bytes_consumed": 1225036304,
+      "raw_packet_count": 1000000,
+      "repetition": 3,
+      "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_03_result.json",
+      "result_sha256": "a033c6853909f7513e6a4f1665226ec60817945dfba63058c67455a150e4d912",
+      "status": "PASS",
+      "valid_ipv4_packet_count": 993753
+    },
+    {
+      "MiB_per_second": 121.03144472173021,
+      "bytes_per_second": 126910668.18053298,
+      "captured_ipv4_bytes_per_second": 125338983.93847457,
+      "completed_lifecycle_flows_per_second": 498.4424507169505,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_04_config.json",
+      "config_sha256": "84975b951cccc829457c8fd29d48addf68aa2f2672da1e5583f69f13055e4e5b",
+      "container_bytes_per_second": 130444370.34458345,
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_ns": 9391254684,
+      "elapsed_seconds": 9.391254684,
+      "environment_gate": [
+        {
+          "attempt": 1,
+          "available_ram_gib": 29.321292877197266,
+          "cpu_gate_pass": true,
+          "cpu_utilization_percent": 0.5,
+          "gate_pass": true,
+          "ram_gate_pass": true
+        }
+      ],
+      "eof_current_exportable_flows": 7851,
+      "exportable_flow_count": 12532,
+      "finished_exportable_flows": 4681,
+      "flows_per_second": 1334.4329827782146,
+      "max_active_flows": 8673,
+      "packets_per_second": 106482.04458811162,
+      "pcap_file_bytes_consumed": 1225036304,
+      "raw_packet_count": 1000000,
+      "repetition": 4,
+      "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_04_result.json",
+      "result_sha256": "1cd0142fe8d4335c3a23ea4f48d2b6b239a43aab68d187ea6a6cce73cd1ae402",
+      "status": "PASS",
+      "valid_ipv4_packet_count": 993753
+    },
+    {
+      "MiB_per_second": 121.80783435113781,
+      "bytes_per_second": 127724771.71257868,
+      "captured_ipv4_bytes_per_second": 126143005.46787177,
+      "completed_lifecycle_flows_per_second": 501.63984748010483,
+      "config_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_05_config.json",
+      "config_sha256": "f5041552bcc353793bf50f98e7a21bc11a4cf38bb896875c2484e933a4703439",
+      "container_bytes_per_second": 131281141.78512098,
+      "count_summary_sha256": "8672e244f8f87cc79a3667c002dd28c8d20c221b02825a9ed5e77d643a8cd171",
+      "elapsed_ns": 9331395868,
+      "elapsed_seconds": 9.331395868,
+      "environment_gate": [
+        {
+          "attempt": 1,
+          "available_ram_gib": 29.30926513671875,
+          "cpu_gate_pass": true,
+          "cpu_utilization_percent": 0.3,
+          "gate_pass": true,
+          "ram_gate_pass": true
+        }
+      ],
+      "eof_current_exportable_flows": 7851,
+      "exportable_flow_count": 12532,
+      "finished_exportable_flows": 4681,
+      "flows_per_second": 1342.9930716984989,
+      "max_active_flows": 8673,
+      "packets_per_second": 107165.10307201555,
+      "pcap_file_bytes_consumed": 1225036304,
+      "raw_packet_count": 1000000,
+      "repetition": 5,
+      "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_05_result.json",
+      "result_sha256": "66d670e80fd2328ca03bdd7ec04392ab2586587a3d93dd335ea765aa2f43f146",
+      "status": "PASS",
+      "valid_ipv4_packet_count": 993753
+    }
+  ],
+  "schema": "stage26_4b3_cpu1_extraction_summary_v1",
+  "scientific_boundaries": {
+    "Friday_accessed": false,
+    "Thursday_accessed": false,
+    "complete_end_to_end_claim": false,
+    "corpus_created": false,
+    "gpu_used": false,
+    "labels_accessed": false,
+    "models_loaded": false,
+    "release_corpus_regenerated": false,
+    "representation_timing": false
+  },
+  "scientific_parent": "e558da134162652c1a955f60f15c175f083923c8",
+  "source": {
+    "filename": "Monday-WorkingHours.pcap",
+    "sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+    "size_bytes": 10822507416
+  },
+  "stage": 26,
+  "status_counts": {
+    "PASS": 5
+  },
+  "successful_repetitions": 5,
+  "summary_policy": {
+    "p95_p99_from_five_repetitions": false,
+    "statistics": [
+      "median",
+      "minimum",
+      "maximum"
+    ]
+  },
+  "validation": {
+    "commit": "e558da134162652c1a955f60f15c175f083923c8",
+    "historical_anchor_count": 14,
+    "historical_anchors_exact": true,
+    "mismatches": 0,
+    "receipt_sha256": "0634cd71d3b1d2111a7b44a3519711660fb6ec3ad8f143804ba1cd3b9e6802d2",
+    "result_sha256": "a012ba81b4cbb339371898e6adc4cd43a1c6364086d1b343f0fb7cd73c3bb46f"
+  },
+  "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+}

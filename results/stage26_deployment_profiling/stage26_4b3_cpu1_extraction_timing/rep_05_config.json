@@ -1,0 +1,29 @@
+{
+  "affinity": [
+    0
+  ],
+  "condition": "CPU1_RAW_PACKET_PREFIX_1000000",
+  "corpus_creation_allowed": false,
+  "durable_validation_commit": "e558da134162652c1a955f60f15c175f083923c8",
+  "environment_gate": [
+    {
+      "attempt": 1,
+      "available_ram_gib": 29.30926513671875,
+      "cpu_gate_pass": true,
+      "cpu_utilization_percent": 0.3,
+      "gate_pass": true,
+      "ram_gate_pass": true
+    }
+  ],
+  "gpu_allowed": false,
+  "mode": "BENCHMARK_TIMED",
+  "packet_limit": 1000000,
+  "pcap_path": "/kaggle/working/stage26_deployment_profiling/sources/Monday-WorkingHours.pcap",
+  "protocol_commit": "b41a0559598a70e6c69aac05c76e4c4edb73b34e",
+  "protocol_sha256": "12f7f8f0332d92694a827e3473dc1cef66939cf1cf1c49c17ad1699e60d929b0",
+  "repetition": 5,
+  "result_path": "/kaggle/working/stage26_deployment_profiling/extraction/stage26_4b3_cpu1_extraction_timing/rep_05_result.json",
+  "schema": "stage26_4b3_extraction_timing_config_v1",
+  "source_sha256": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+  "worker_sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6"
+}

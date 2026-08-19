@@ -1,0 +1,53 @@
+{
+  "checkpoint": "STAGE26-7C",
+  "created_at_utc": "2026-08-19T19:55:49.749408+00:00",
+  "frozen_lock_identity": {
+    "boundary_lock_sha256": "1def25c4046770dd1da2ff7939c38b01bc19917bbecf01423c9cad684b68221c",
+    "formula_lock_sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea",
+    "freeze_receipt_sha256": "0bf2b935e8b5509b4fa6d32413a9ce835af7ead4166a77f173f553f940369790",
+    "lock_manifest_sha256": "f3f844c1fb3953831cd345f5ac767730e0933efb068ad9b7a79e50ccfe5789e8",
+    "source_lock_sha256": "c56a08cc88a2e8d75df0832b72e41ecbb90ee1cf3f12c0a7402d9fc1d5247c42"
+  },
+  "next": "Proceed to Stage26-8 CPU closure/audit. Explicitly resolve the Stage26-4C3 inter-iteration integrity-read sensitivity before final publication framing and before enabling GPU.",
+  "outputs": {
+    "batch_scaling_csv_sha256": "e41ecd347a75ac74f2046fe2ced4c98631dff44e81c976c1a6d767834cd7cd23",
+    "group_B_component_capacity_csv_sha256": "db3e665bb7020dd89a7274937a6650710d3d7a9f0721b95b8adb7d50cbbfbcab",
+    "raw_extraction_descriptive_sha256": "fa1e57da9081ba5abf5d04f75f469276add915ea46b02e7eef40f244d451504d",
+    "results_json_sha256": "ee5a852fb43ce01c980e64ef83611a88808d3a11a56a078609467fb899e39fdf",
+    "two_core_scaling_csv_sha256": "11eff1bc0c9decd25cc507fde652e6290ebe47ab294b555ea68cd25e895e166d"
+  },
+  "results": {
+    "Group_B_component_capacity_rows": 7,
+    "batch_scaling_numeric_PASS_rows": 73,
+    "batch_scaling_total_rows": 80,
+    "two_core_matched_PASS_rows": 36
+  },
+  "schema": "stage26_7c_capacity_scaling_receipt_v1",
+  "scientific_parent": "c524e763b8ae7593204f95f23f9e819b4dcaaf9f",
+  "scientific_state": {
+    "GPU_used": false,
+    "Group_B_component_capacity_direction_classified": true,
+    "Group_B_component_capacity_ratio_computed": true,
+    "PCAP_accessed": false,
+    "Pareto_changed": false,
+    "Pareto_recomputed": false,
+    "Release_corpus_accessed": false,
+    "batch_scaling_computed": true,
+    "complete_E2E_reconstructed": false,
+    "cross_group_Pareto": false,
+    "full_pipeline_bottleneck_declared": false,
+    "inference_performed": false,
+    "missing_cost_imputed": false,
+    "model_loaded": false,
+    "new_bootstrap_executed": false,
+    "parallel_efficiency_computed": true,
+    "ratio_uncertainty_computed": false,
+    "raw_extraction_used_in_ratio": false,
+    "scaling_uncertainty_computed": false,
+    "timing_performed": false,
+    "two_core_speedup_computed": true
+  },
+  "stage": 26,
+  "stage26_4c3_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+  "status": "PASS_CPU_CAPACITY_AND_SCALING_WITH_FROZEN_BOUNDARIES"
+}

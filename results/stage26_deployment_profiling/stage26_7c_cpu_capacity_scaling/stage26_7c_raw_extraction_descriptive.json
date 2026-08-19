@@ -1,0 +1,16 @@
+{
+  "bottleneck_claim": false,
+  "component": "RAW_PCAP_TO_SOURCE_FAITHFUL_FLOW_RECONSTRUCTION_COMPONENT",
+  "hardware": "CPU_1_PHYSICAL_CORE",
+  "median_component_metrics": {
+    "completed_lifecycle_flows_per_second_median": 500.0678387265431,
+    "exportable_reconstructed_flows_per_second_median": 1338.7844808632851,
+    "packets_per_second_median": 106829.27552372208
+  },
+  "schema": "stage26_7c_raw_extraction_descriptive_v1",
+  "semantic_note": "flows_per_second is exportable/reconstructed-flow rate; completed_lifecycle_flows_per_second is a distinct completed-lifecycle rate. Neither is a frozen model-input throughput.",
+  "source_sha256": "1914504fad850879d1ed11afed432436c18454f2bb8650f881244c865f18ba16",
+  "status": "COMPONENT_ONLY_NOT_COMPOSED",
+  "used_in_complete_E2E": false,
+  "used_in_pipeline_ratio": false
+}

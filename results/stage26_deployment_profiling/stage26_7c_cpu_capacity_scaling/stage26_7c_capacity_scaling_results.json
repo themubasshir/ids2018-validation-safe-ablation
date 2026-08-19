@@ -1,0 +1,164 @@
+{
+  "batch_scaling": {
+    "PASS_numeric_rows": 73,
+    "amortized_latency_improvement_formula": "L_amortized(B1)/L_amortized(batch)",
+    "claim_boundary": "INFERENCE_COMPONENT_ONLY",
+    "condition_rows": 80,
+    "reference_batch": 1,
+    "resource_limit_rows": 7,
+    "throughput_multiplier_formula": "T(batch)/T(B1)",
+    "uncertainty_propagated": false
+  },
+  "checkpoint": "STAGE26-7C",
+  "created_at_utc": "2026-08-19T19:55:49.741461+00:00",
+  "group_B_component_capacity": {
+    "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+    "ratio_count": 7,
+    "ratio_formula": "inference_median_flows_per_second / representation_median_flows_per_second",
+    "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+    "rows": [
+      {
+        "batch_size": 1,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.0073381962844335374,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_041",
+        "inference_median_flows_per_second": 132.03665745731684,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 17993.067007134334,
+        "target_id": "STAGE20_MASKED_CNN_V1",
+        "uncertainty_propagated": false
+      },
+      {
+        "batch_size": 64,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.004294994638472152,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_042",
+        "inference_median_flows_per_second": 59.19321350856008,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 13781.90626324431,
+        "target_id": "STAGE20_MASKED_CNN_V1",
+        "uncertainty_propagated": false
+      },
+      {
+        "batch_size": 256,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.004181531686946873,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_043",
+        "inference_median_flows_per_second": 55.88540974266916,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 13364.817948676995,
+        "target_id": "STAGE20_MASKED_CNN_V1",
+        "uncertainty_propagated": false
+      },
+      {
+        "batch_size": 1,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.02897863489541111,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_051",
+        "inference_median_flows_per_second": 521.4145194484133,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 17993.067007134334,
+        "target_id": "STAGE21_MASKED_VIT_V1",
+        "uncertainty_propagated": false
+      },
+      {
+        "batch_size": 64,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.04421911141638314,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_052",
+        "inference_median_flows_per_second": 609.4236485845488,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 13781.90626324431,
+        "target_id": "STAGE21_MASKED_VIT_V1",
+        "uncertainty_propagated": false
+      },
+      {
+        "batch_size": 256,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.030566648961596634,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_053",
+        "inference_median_flows_per_second": 408.5176986728557,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 13364.817948676995,
+        "target_id": "STAGE21_MASKED_VIT_V1",
+        "uncertainty_propagated": false
+      },
+      {
+        "batch_size": 1024,
+        "claim_boundary": "DOWNSTREAM_COMPONENT_LEVEL_ONLY__NOT_COMPLETE_E2E__NOT_RAW_PCAP_TO_MODEL",
+        "component_capacity_ratio_inference_over_representation": 0.02559810937717057,
+        "hardware_mode": "CPU_1_PHYSICAL_CORE",
+        "inference_condition_id": "CPUCOND_054",
+        "inference_median_flows_per_second": 301.66675854959783,
+        "lower_measured_capacity_component": "INFERENCE_COMPONENT_LOWER_MEASURED_CAPACITY",
+        "representation_measurement_caveat": "OPEN_STAGE26_8_AUDIT_ITEM",
+        "representation_median_flows_per_second": 11784.728086935844,
+        "target_id": "STAGE21_MASKED_VIT_V1",
+        "uncertainty_propagated": false
+      }
+    ],
+    "uncertainty_propagated": false
+  },
+  "publication_uncertainty": {
+    "ratio_uncertainty_propagated": false,
+    "reason": "Stage26-7B froze Stage26-7 scaling and capacity ratios as descriptive point estimates; no ratio uncertainty procedure was prospectively frozen.",
+    "scaling_uncertainty_propagated": false,
+    "timing_uncertainty_sha256": "45ea4408738fb5101ce68a363c2cc0a7951648eed49e474da9489b00ce6128ce",
+    "timing_uncertainty_source": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_bootstrap_corrected_uncertainty.json"
+  },
+  "raw_extraction": {
+    "metrics": {
+      "completed_lifecycle_flows_per_second_median": 500.0678387265431,
+      "exportable_reconstructed_flows_per_second_median": 1338.7844808632851,
+      "packets_per_second_median": 106829.27552372208
+    },
+    "reported_descriptively": true,
+    "used_in_complete_E2E": false,
+    "used_in_ratio": false
+  },
+  "schema": "stage26_7c_capacity_scaling_results_v1",
+  "scientific_boundaries": {
+    "GPU": false,
+    "Group_A_extraction_inference_ratio": false,
+    "Pareto_changed": false,
+    "Pareto_recomputed": false,
+    "complete_E2E_available": false,
+    "complete_E2E_reconstructed": false,
+    "component_capacity_direction_classified": true,
+    "cross_group_Pareto": false,
+    "full_pipeline_bottleneck_declared": false,
+    "missing_cost_imputed": false,
+    "new_bootstrap": false,
+    "new_measurement": false,
+    "raw_extraction_Group_B_pipeline_ratio": false
+  },
+  "scientific_parent": "c524e763b8ae7593204f95f23f9e819b4dcaaf9f",
+  "stage": 26,
+  "stage26_7b_locks": {
+    "boundary_lock_sha256": "1def25c4046770dd1da2ff7939c38b01bc19917bbecf01423c9cad684b68221c",
+    "formula_lock_sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea",
+    "freeze_receipt_sha256": "0bf2b935e8b5509b4fa6d32413a9ce835af7ead4166a77f173f553f940369790",
+    "manifest_sha256": "f3f844c1fb3953831cd345f5ac767730e0933efb068ad9b7a79e50ccfe5789e8",
+    "source_lock_sha256": "c56a08cc88a2e8d75df0832b72e41ecbb90ee1cf3f12c0a7402d9fc1d5247c42"
+  },
+  "status": "PASS_FROZEN_DESCRIPTIVE_CPU_CAPACITY_AND_SCALING",
+  "two_core_scaling": {
+    "claim_boundary": "INFERENCE_COMPONENT_CPU_SCALING_ONLY",
+    "matched_PASS_pairs": 36,
+    "parallel_efficiency_formula": "speedup/2",
+    "speedup_formula": "T(CPU2)/T(CPU1)",
+    "uncertainty_propagated": false
+  }
+}

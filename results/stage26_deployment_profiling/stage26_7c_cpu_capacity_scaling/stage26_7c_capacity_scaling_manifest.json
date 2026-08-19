@@ -1,0 +1,59 @@
+{
+  "batch_scaling_csv_sha256": "e41ecd347a75ac74f2046fe2ced4c98631dff44e81c976c1a6d767834cd7cd23",
+  "checkpoint": "STAGE26-7C",
+  "commit_subject": "stage26: anchor CPU capacity and scaling results",
+  "created_at_utc": "2026-08-19T19:55:49.757594+00:00",
+  "file_count_excluding_manifest": 6,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_inference_batch_scaling.csv",
+      "sha256": "e41ecd347a75ac74f2046fe2ced4c98631dff44e81c976c1a6d767834cd7cd23",
+      "size_bytes": 13055
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_two_core_scaling.csv",
+      "sha256": "11eff1bc0c9decd25cc507fde652e6290ebe47ab294b555ea68cd25e895e166d",
+      "size_bytes": 6411
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_group_b_component_capacity.csv",
+      "sha256": "db3e665bb7020dd89a7274937a6650710d3d7a9f0721b95b8adb7d50cbbfbcab",
+      "size_bytes": 2148
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_raw_extraction_descriptive.json",
+      "sha256": "fa1e57da9081ba5abf5d04f75f469276add915ea46b02e7eef40f244d451504d",
+      "size_bytes": 833
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_capacity_scaling_results.json",
+      "sha256": "ee5a852fb43ce01c980e64ef83611a88808d3a11a56a078609467fb899e39fdf",
+      "size_bytes": 8216
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_capacity_scaling_receipt.json",
+      "sha256": "30bfd4657a5a0218ce22a4fab1922ee26e07496c148809ec04c8059656b73ce4",
+      "size_bytes": 2586
+    }
+  ],
+  "group_B_component_capacity_csv_sha256": "db3e665bb7020dd89a7274937a6650710d3d7a9f0721b95b8adb7d50cbbfbcab",
+  "raw_extraction_descriptive_sha256": "fa1e57da9081ba5abf5d04f75f469276add915ea46b02e7eef40f244d451504d",
+  "receipt_sha256": "30bfd4657a5a0218ce22a4fab1922ee26e07496c148809ec04c8059656b73ce4",
+  "results_json_sha256": "ee5a852fb43ce01c980e64ef83611a88808d3a11a56a078609467fb899e39fdf",
+  "schema": "stage26_7c_capacity_scaling_manifest_v1",
+  "scientific_parent": "c524e763b8ae7593204f95f23f9e819b4dcaaf9f",
+  "scientific_state": {
+    "GPU_used": false,
+    "Pareto_changed": false,
+    "complete_E2E_reconstructed": false,
+    "descriptive_capacity_results_computed": true,
+    "new_measurement_performed": false,
+    "pipeline_bottleneck_declared": false
+  },
+  "stage": 26,
+  "stage26_7b_boundary_lock_sha256": "1def25c4046770dd1da2ff7939c38b01bc19917bbecf01423c9cad684b68221c",
+  "stage26_7b_formula_lock_sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea",
+  "stage26_7b_source_lock_sha256": "c56a08cc88a2e8d75df0832b72e41ecbb90ee1cf3f12c0a7402d9fc1d5247c42",
+  "status": "READY_FOR_GIT_ANCHOR",
+  "two_core_scaling_csv_sha256": "11eff1bc0c9decd25cc507fde652e6290ebe47ab294b555ea68cd25e895e166d"
+}

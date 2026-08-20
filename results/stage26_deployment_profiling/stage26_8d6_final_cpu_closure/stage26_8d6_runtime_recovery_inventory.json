@@ -1,0 +1,120 @@
+{
+  "all_runtime_files_metadata_bytes": 1194046290,
+  "all_runtime_files_metadata_count": 165,
+  "candidate_policy": "THESE ARE RESET-RECOVERY CANDIDATES DISCOVERED FROM THE CURRENT STAGE26 RUNTIME ROOT. THEY ARE NOT A POST-HOC REQUIRED-ASSET LIST. THE FRESH GPU BOOTSTRAP MUST RESOLVE ACTUAL REQUIRED ASSETS FROM THE FROZEN REPOSITORY IMPLEMENTATION AND THEN VERIFY RECOVERED PATHS/HASHES AGAINST THIS INVENTORY WHEN APPLICABLE.",
+  "candidates": [
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8c0_compact_input_restore_receipt.json",
+      "path_relative_to_runtime_root": "cpu_closure/stage26_8c0_compact_input_restore_receipt.json",
+      "sha256": "babcf2331db7c242297b346bad0904bb061251acb83003b5222c16295de96ff1",
+      "size_bytes": 3516,
+      "structure": null,
+      "suffix": ".json"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_batch_sensitivity_summary.csv",
+      "path_relative_to_runtime_root": "cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_batch_sensitivity_summary.csv",
+      "sha256": "3d00f76cb7f3d9dd13069f79ecfe740e6fa7d1718e035dc788f8ad8d709b424e",
+      "size_bytes": 3388,
+      "structure": null,
+      "suffix": ".csv"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_pair_results.csv",
+      "path_relative_to_runtime_root": "cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_pair_results.csv",
+      "sha256": "d1b8b751dc89f934e520683c5a81a8fed4d990d1f3d3304e4c73bed100e56048",
+      "size_bytes": 9626,
+      "structure": null,
+      "suffix": ".csv"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_raw_observations.csv",
+      "path_relative_to_runtime_root": "cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_raw_observations.csv",
+      "sha256": "2a313e20430069d6c253438edb9653bcc34aa52c81800e6cb7ff84af4bf48bec",
+      "size_bytes": 340276,
+      "structure": null,
+      "suffix": ".csv"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_worker_executions.csv",
+      "path_relative_to_runtime_root": "cpu_closure/stage26_8c1_paired_representation_sensitivity/stage26_8c1_worker_executions.csv",
+      "sha256": "c2e633afd44c93d703f97756d1c393767c4efda4b1329599f34c97741b23d884",
+      "size_bytes": 21418,
+      "structure": null,
+      "suffix": ".csv"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8d0_cpu_publication_source_audit.json",
+      "path_relative_to_runtime_root": "cpu_closure/stage26_8d0_cpu_publication_source_audit.json",
+      "sha256": "6b0207793eabe8435e14a7bd33a438c4a0e8f1e766d9bdf0e18f02db84b8d530",
+      "size_bytes": 1921544,
+      "structure": null,
+      "suffix": ".json"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset/encoded_bytes.bin",
+      "path_relative_to_runtime_root": "representation/stage26_4c2_equivalence/Monday_release_representation_subset/encoded_bytes.bin",
+      "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+      "size_bytes": 522845159,
+      "structure": null,
+      "suffix": ".bin"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset/flow_offsets.npy",
+      "path_relative_to_runtime_root": "representation/stage26_4c2_equivalence/Monday_release_representation_subset/flow_offsets.npy",
+      "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+      "size_bytes": 4228208,
+      "structure": {
+        "dtype": "uint64",
+        "kind": "NPY",
+        "shape": [
+          528510
+        ]
+      },
+      "suffix": ".npy"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset/packet_lengths.npy",
+      "path_relative_to_runtime_root": "representation/stage26_4c2_equivalence/Monday_release_representation_subset/packet_lengths.npy",
+      "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+      "size_bytes": 67649280,
+      "structure": {
+        "dtype": "uint16",
+        "kind": "NPY",
+        "shape": [
+          528509,
+          64
+        ]
+      },
+      "suffix": ".npy"
+    },
+    {
+      "classification": "RESET_RECOVERY_CANDIDATE_NOT_ASSERTED_REQUIRED",
+      "current_session_path": "/kaggle/working/stage26_deployment_profiling/source_cache/stage20-Monday-compact-corpus-v1.tar",
+      "path_relative_to_runtime_root": "source_cache/stage20-Monday-compact-corpus-v1.tar",
+      "sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+      "size_bytes": 595261440,
+      "structure": null,
+      "suffix": ".tar"
+    }
+  ],
+  "created_at_utc": "2026-08-20T10:23:54.738830+00:00",
+  "hashed_recovery_candidate_bytes": 1192283855,
+  "hashed_recovery_candidate_count": 10,
+  "raw_packet_file_count_excluded_from_hashing": 0,
+  "raw_packet_files_excluded_from_hashing": [],
+  "raw_packet_policy": "RAW PCAP/PCAPNG/CAP FILES ARE NOT HASHED OR USED TO RECREATE THE COMPACT CORPUS IN THIS CLOSURE. THE GPU PHASE MUST RESTORE THE ALREADY-ESTABLISHED COMPACT CORPUS/DERIVED ARTIFACTS.",
+  "runtime_root_current_session": "/kaggle/working/stage26_deployment_profiling",
+  "runtime_root_exists": true,
+  "schema": "stage26_8d6_runtime_recovery_inventory_v1",
+  "scientific_parent": "9c560a37d7a5d3bd79ad1a72a103e64c57548f26"
+}

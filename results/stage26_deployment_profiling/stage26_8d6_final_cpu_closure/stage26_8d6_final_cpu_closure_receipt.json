@@ -1,0 +1,47 @@
+{
+  "cpu_phase": "COMPLETE_AFTER_8D6_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "cpu_publication_artifact_audit": {
+    "audit_sha256": "e4375ab82ce31a9120038950c268397570cf7fb741339a843433417bfa279225",
+    "commit": "9c560a37d7a5d3bd79ad1a72a103e64c57548f26",
+    "manifest_sha256": "5def9c65b11adddb2243f83455f3531642a278f7ccd44ad285fd41879d03b03b",
+    "receipt_sha256": "f97f8396b1fa7eaa3315060007a3def4b4266ac3e1ca5dbf5d52bef74394fb42",
+    "verdict": "CPU_PUBLICATION_ARTIFACT_PACKAGE_PROTOCOL_CONFORMANT"
+  },
+  "created_at_utc": "2026-08-20T10:23:54.817880+00:00",
+  "frozen_identities": {
+    "cpu_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+    "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+    "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+    "preflight_receipt_sha256": "4c7fc55a0e44e53587d385989dfec4f3f57f20768c7dd4a2d08e2936d2ba21e5"
+  },
+  "gpu_allowed_after_8d6_commit_push_remote_verification": true,
+  "gpu_used_in_stage26_8d6": false,
+  "next_phase": "FRESH_KAGGLE_GPU_BOOTSTRAP",
+  "non_computation": {
+    "bootstrap_executed": false,
+    "gpu_used": false,
+    "inference_executed": false,
+    "model_conversion_executed": false,
+    "model_retraining_executed": false,
+    "raw_pcap_hashed_or_read_for_science": false,
+    "timing_executed": false
+  },
+  "repository_recovery": {
+    "branch": "main",
+    "exact_final_commit_policy": "THE FRESH GPU SESSION MUST CHECK OUT THE FINAL 8D6 COMMIT SHA EMITTED AFTER THIS RECEIPT IS COMMITTED.",
+    "gpu_bootstrap_contract_sha256": "09dfeb386f462597d4fca76aad5676d20901017c6f8175d221d2f85e108d59b7",
+    "parent_inventory_sha256": "8498a9690b7559811ef185f5e639698e73a912099cf6fee89e5fd8a4ad9ccbfc",
+    "repository_url": "https://github.com/themubasshir/ids2018-validation-safe-ablation.git",
+    "runtime_recovery_inventory_sha256": "5ab7158c7fbdd223545b811b2d8417cd4050b5a47a87a333a5eadac339f0ea5c"
+  },
+  "schema": "stage26_8d6_final_cpu_closure_receipt_v1",
+  "scientific_parent": "9c560a37d7a5d3bd79ad1a72a103e64c57548f26",
+  "scientific_state": {
+    "complete_e2e": "UNAVAILABLE",
+    "cpu_measurement_science": "FROZEN",
+    "cpu_publication_figures": "FROZEN_AND_AUDITED",
+    "cpu_publication_tables": "FROZEN_AND_AUDITED",
+    "historical_stage26_4c3": "RETAINED",
+    "stage26_8_sensitivity": "DESCRIPTIVE_SEPARATE_NOT_REPLACEMENT"
+  }
+}

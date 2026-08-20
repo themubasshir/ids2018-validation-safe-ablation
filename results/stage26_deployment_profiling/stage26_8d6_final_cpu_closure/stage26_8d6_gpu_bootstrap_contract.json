@@ -1,0 +1,106 @@
+{
+  "cpu_closure_parent": "9c560a37d7a5d3bd79ad1a72a103e64c57548f26",
+  "created_at_utc": "2026-08-20T10:23:54.739555+00:00",
+  "fresh_kaggle_gpu_bootstrap_sequence": [
+    "VERIFY_GPU_VISIBLE_AND_RECORD_GPU_MODEL_UUID_DRIVER_CUDA",
+    "READ_GITHUB_TOKEN_FROM_KAGGLE_SECRET_WITHOUT_PRINTING_IT",
+    "CLONE_REPOSITORY",
+    "CHECKOUT_EXACT_STAGE26_8D6_FINAL_CPU_CLOSURE_COMMIT",
+    "VERIFY_HEAD_AND_ORIGIN_MAIN_EXPECTED_COMMIT",
+    "VERIFY_REPOSITORY_CLEAN",
+    "VERIFY_STAGE26_8D6_CLOSURE_FILES_AND_PARENT_REPOSITORY_INVENTORY",
+    "RESTORE_GIT_LFS_OBJECTS_IF_FROZEN_INVENTORY_REQUIRES_LFS",
+    "DISCOVER_ACTUAL_REQUIRED_CORPUS_MODELS_PREPROCESSORS_FROM_FROZEN_REPOSITORY_IMPLEMENTATION",
+    "RESTORE_ALREADY_ESTABLISHED_COMPACT_CORPUS_AND_REQUIRED_ARTIFACTS",
+    "DO_NOT_RECREATE_COMPACT_CORPUS_FROM_MONDAY_OR_ANY_RAW_PCAP",
+    "VERIFY_RECOVERED_ASSET_SHA256_SIZE_AND_AVAILABLE_STRUCTURE",
+    "VERIFY_PROTOCOL_SCHEMA_TARGET_BATCH_AND_RANDOMIZATION_IDENTITIES",
+    "RECORD_FRAMEWORK_AND_GPU_BACKEND_VERSIONS",
+    "ALLOW_GPU_PROFILING_ONLY_AFTER_ALL_BOOTSTRAP_GATES_PASS"
+  ],
+  "frozen_identities": {
+    "cpu_plan_sha256": "b66b537f9c3652fee81aeeec956b7c825938967db67d32ccbfd09bd49bf67363",
+    "effective_cpu_publication_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+    "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+    "preflight_receipt_sha256": "4c7fc55a0e44e53587d385989dfec4f3f57f20768c7dd4a2d08e2936d2ba21e5",
+    "stage26_8d5_audit_sha256": "e4375ab82ce31a9120038950c268397570cf7fb741339a843433417bfa279225",
+    "stage26_8d5_manifest_sha256": "5def9c65b11adddb2243f83455f3531642a278f7ccd44ad285fd41879d03b03b",
+    "stage26_8d5_receipt_sha256": "f97f8396b1fa7eaa3315060007a3def4b4266ac3e1ca5dbf5d52bef74394fb42"
+  },
+  "gpu_profiling": {
+    "batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "gpu_memory_profiling_required": true,
+    "mandatory_gpu_synchronization": "SYNCHRONIZE_GPU_BEFORE_AND_AFTER_EVERY_TIMED_REGION",
+    "model_policy": {
+      "forced_backend_substitution_allowed": false,
+      "frozen_predictive_science_changes_allowed": false,
+      "model_conversion_allowed": false,
+      "retraining_allowed": false
+    },
+    "randomization_seed": 26042,
+    "resource_limit_policy": "PRESERVE GPU OOM/TIMEOUT/BACKEND_UNAVAILABLE AS OBSERVED RESOURCE/BACKEND OUTCOMES; DO NOT IMPUTE MISSING COST.",
+    "supported_backend_policy": "PROFILE_ONLY NATIVE/SUPPORTED GPU EXECUTION PATHS FOR THE FROZEN MODEL; DO NOT FORCE AN UNSUPPORTED BACKEND.",
+    "target_ids": [
+      "STAGE16_XGBOOST_TUNED",
+      "STAGE16_LIGHTGBM_TUNED",
+      "STAGE16_CATBOOST_TUNED",
+      "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "STAGE20_MASKED_CNN_V1",
+      "STAGE21_MASKED_VIT_V1",
+      "ENS_LGBM_XGB_EQUAL",
+      "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    ],
+    "unsupported_backend_status": "BACKEND_UNAVAILABLE",
+    "warmup_and_timed_runs": {
+      "1": {
+        "timed": 200,
+        "warmup": 50
+      },
+      "1024": {
+        "timed": 50,
+        "warmup": 10
+      },
+      "256": {
+        "timed": 100,
+        "warmup": 20
+      },
+      "64": {
+        "timed": 150,
+        "warmup": 30
+      },
+      "8192": {
+        "timed": 20,
+        "warmup": 5
+      }
+    }
+  },
+  "repository": {
+    "branch": "main",
+    "fresh_session_checkout_policy": "CLONE_REPOSITORY_THEN_CHECKOUT_EXACT_STAGE26_8D6_COMMIT_SHA_EMITTED_BY_THIS_STAGE",
+    "git_lfs_policy": "IF THE FROZEN INVENTORY REPORTS LFS TRACKED PATHS, INSTALL/VERIFY GIT-LFS AND RUN GIT LFS PULL BEFORE ASSET VERIFICATION.",
+    "parent_repository_inventory_file": "results/stage26_deployment_profiling/stage26_8d6_final_cpu_closure/stage26_8d6_parent_repository_inventory.json",
+    "runtime_recovery_inventory_file": "results/stage26_deployment_profiling/stage26_8d6_final_cpu_closure/stage26_8d6_runtime_recovery_inventory.json",
+    "url": "https://github.com/themubasshir/ids2018-validation-safe-ablation.git"
+  },
+  "reset_assumption": {
+    "current_kaggle_working_persistence_assumed": false,
+    "fresh_session_must_be_self_bootstrapping": true,
+    "kaggle_accelerator_change_may_reset_session": true
+  },
+  "schema": "stage26_8d6_gpu_bootstrap_contract_v1",
+  "scientific_boundaries_carried_forward": {
+    "complete_e2e_measurement": "UNAVAILABLE",
+    "cross_group_pareto": "PROHIBITED",
+    "historical_stage26_4c3": "RETAINED",
+    "missing_deployment_cost_imputation": "PROHIBITED",
+    "post_hoc_best_batch_selection": "PROHIBITED",
+    "pr_auc_bootstrap_ci": "PROHIBITED",
+    "stage26_8_sensitivity": "DESCRIPTIVE_SEPARATE_NOT_REPLACEMENT"
+  }
+}

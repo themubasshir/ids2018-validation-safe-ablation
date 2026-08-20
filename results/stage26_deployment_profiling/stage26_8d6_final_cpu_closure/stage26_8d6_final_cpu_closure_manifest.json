@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-08-20T10:23:54.817880+00:00",
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d6_final_cpu_closure/stage26_8d6_parent_repository_inventory.json",
+      "sha256": "8498a9690b7559811ef185f5e639698e73a912099cf6fee89e5fd8a4ad9ccbfc",
+      "size_bytes": 2504541
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d6_final_cpu_closure/stage26_8d6_runtime_recovery_inventory.json",
+      "sha256": "5ab7158c7fbdd223545b811b2d8417cd4050b5a47a87a333a5eadac339f0ea5c",
+      "size_bytes": 6675
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d6_final_cpu_closure/stage26_8d6_gpu_bootstrap_contract.json",
+      "sha256": "09dfeb386f462597d4fca76aad5676d20901017c6f8175d221d2f85e108d59b7",
+      "size_bytes": 4686
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d6_final_cpu_closure/stage26_8d6_final_cpu_closure_receipt.json",
+      "sha256": "6d946d710f4f5e5a47b13fce927eee5d36203acbbb7fd0e0e0237cc6133160fa",
+      "size_bytes": 2455
+    }
+  ],
+  "schema": "stage26_8d6_final_cpu_closure_manifest_v1",
+  "scientific_parent": "9c560a37d7a5d3bd79ad1a72a103e64c57548f26"
+}

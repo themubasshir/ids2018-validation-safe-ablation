@@ -1,0 +1,88 @@
+{
+  "stage": "Stage27-2C",
+  "status": "ALL_ELIGIBLE_TARGET_OPENINGS_CONSUMED_AND_FRIDAY_RESULTS_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "created_at_utc": "2026-08-20T18:59:54.598955+00:00",
+  "scientific_parent_commit": "bffa77c536cad211dea9ef46b102e5482e01e68e",
+  "required_artifact_count": 11,
+  "artifact_hashes_before_freeze_record": {
+    "friday_feature_materialization_receipt.json": {
+      "bytes": 5189,
+      "sha256": "a310f275f92729e99a0dea78821507416d83aba6d54d9c1e69ad9241d7fa3bb1"
+    },
+    "friday_primary_target_results.json": {
+      "bytes": 41028,
+      "sha256": "86b1d374e516dfbc9cefc859cae3ebfd5b1290a672fb4c83d43305f7f0a5855c"
+    },
+    "friday_probability_manifest.json": {
+      "bytes": 5056,
+      "sha256": "87d841dae9f9a7f3a90a905137e5d0f5569a6fde876b9c27a3ee7c16a0a97626"
+    },
+    "friday_target_opening_receipt.json": {
+      "bytes": 4378,
+      "sha256": "e9e6c4f2d851235f481823643982f6785198798b6e138b4513d9ed4a4aee7342"
+    },
+    "target/BOT_LIGHTGBM_friday_operational_prob_float32.npy": {
+      "bytes": 2813108,
+      "sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b"
+    },
+    "target/BOT_XGBOOST_friday_operational_prob_float32.npy": {
+      "bytes": 2813108,
+      "sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092"
+    },
+    "target/DDOS_LIGHTGBM_friday_operational_prob_float32.npy": {
+      "bytes": 2813108,
+      "sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b"
+    },
+    "target/DDOS_XGBOOST_friday_operational_prob_float32.npy": {
+      "bytes": 2813108,
+      "sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092"
+    },
+    "target/PORT_SCAN_LIGHTGBM_friday_operational_prob_float32.npy": {
+      "bytes": 2813108,
+      "sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b"
+    },
+    "target/PORT_SCAN_XGBOOST_friday_operational_prob_float32.npy": {
+      "bytes": 2813108,
+      "sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092"
+    }
+  },
+  "model_fit_budget": {
+    "authorized_total": 10,
+    "completed_before_stage": 10,
+    "completed_in_stage": 0,
+    "remaining": 0,
+    "model_refit_authorized": false
+  },
+  "threshold_status": {
+    "BOT": "ALL_OPERATING_POINTS_FROZEN",
+    "DDOS": "ALL_OPERATING_POINTS_FROZEN",
+    "INFILTRATION": "ALL_OPERATING_POINTS_FROZEN",
+    "PORT_SCAN": "ALL_OPERATING_POINTS_FROZEN",
+    "WEB_ATTACK": "ALL_OPERATING_POINTS_FROZEN"
+  },
+  "target_opening_status": {
+    "BOT": "CONSUMED_1_OF_1",
+    "DDOS": "CONSUMED_1_OF_1",
+    "INFILTRATION": "CONSUMED_1_OF_1",
+    "PORT_SCAN": "CONSUMED_1_OF_1",
+    "WEB_ATTACK": "CONSUMED_1_OF_1",
+    "total_consumed": 5,
+    "total_budget": 5,
+    "remaining": 0
+  },
+  "scientific_actions_completed": {
+    "friday_feature_rows_materialized": 703245,
+    "friday_target_probability_vectors": 6,
+    "target_openings_consumed_in_stage": 3,
+    "target_openings_consumed_total": 5,
+    "model_fits": 0,
+    "model_refits": 0,
+    "target_threshold_searches": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "next_authorized_step_after_remote_verification": "NO FURTHER TARGET OPENINGS ARE AUTHORIZED. PERFORM ONLY PREREGISTERED POST-OPENING ANALYSES FROM FROZEN PERSISTED PREDICTION VECTORS, INCLUDING THE FROZEN 2000-REPLICATE STRATIFIED ROW BOOTSTRAP AND SECONDARY BEHAVIORAL SIMILARITY ANALYSIS. NO RETRAINING, NO THRESHOLD RESELECTION, NO TARGET REOPENING.",
+  "additional_model_fit_authorized": false,
+  "target_reopening_authorized": false,
+  "target_adaptation_authorized": false
+}

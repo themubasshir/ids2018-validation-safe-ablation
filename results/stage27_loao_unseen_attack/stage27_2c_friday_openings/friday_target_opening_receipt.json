@@ -1,0 +1,109 @@
+{
+  "stage": "Stage27-2C",
+  "type": "FINAL_TARGET_OPENING_LEDGER_RECEIPT",
+  "created_at_utc": "2026-08-20T18:59:54.518219+00:00",
+  "scientific_parent_commit": "bffa77c536cad211dea9ef46b102e5482e01e68e",
+  "opening_definition": "A fold target opening occurs when that fold's frozen target predictor matrix is first supplied to either frozen Stage27 learner for scientific target inference.",
+  "same_opening_model_rule": "Both already-frozen learners and all already-frozen operating points for a fold must be evaluated from the same authorized target opening.",
+  "families": {
+    "BOT": {
+      "target_day": "Friday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE",
+      "runtime_opening_state": {
+        "stage": "Stage27-2C",
+        "family": "BOT",
+        "scientific_parent_commit": "bffa77c536cad211dea9ef46b102e5482e01e68e",
+        "opening_number": 1,
+        "opening_budget": 1,
+        "status": "OPENING_COMPLETE",
+        "opening_started_utc": "2026-08-20T18:59:08.149561+00:00",
+        "feature_content_sha256": "bd9111f88632c0a3b507748ab3dd369a303bbf0373802524afeb00f87ba6aedf",
+        "model_sha256": {
+          "XGBOOST": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+          "LIGHTGBM": "3c273f00f7d8672c4efcdf2473b9c9c84487f5a63ad60c7abde854c2f3fbad3e"
+        },
+        "completed_learners": [
+          "XGBOOST",
+          "LIGHTGBM"
+        ],
+        "threshold_source": "STAGE27_2B_THURSDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+        "adaptation_authorized": false,
+        "opening_completed_utc": "2026-08-20T18:59:23.391923+00:00"
+      }
+    },
+    "DDOS": {
+      "target_day": "Friday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE",
+      "runtime_opening_state": {
+        "stage": "Stage27-2C",
+        "family": "DDOS",
+        "scientific_parent_commit": "bffa77c536cad211dea9ef46b102e5482e01e68e",
+        "opening_number": 1,
+        "opening_budget": 1,
+        "status": "OPENING_COMPLETE",
+        "opening_started_utc": "2026-08-20T18:59:23.392515+00:00",
+        "feature_content_sha256": "bd9111f88632c0a3b507748ab3dd369a303bbf0373802524afeb00f87ba6aedf",
+        "model_sha256": {
+          "XGBOOST": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+          "LIGHTGBM": "adb23a188d215acdbfd47002d4c3c5a6a236dae4cc0d4783fbffaaccaef21c44"
+        },
+        "completed_learners": [
+          "XGBOOST",
+          "LIGHTGBM"
+        ],
+        "threshold_source": "STAGE27_2B_THURSDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+        "adaptation_authorized": false,
+        "opening_completed_utc": "2026-08-20T18:59:38.701465+00:00"
+      }
+    },
+    "INFILTRATION": {
+      "target_day": "Thursday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE_IN_STAGE27_2B"
+    },
+    "PORT_SCAN": {
+      "target_day": "Friday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE",
+      "runtime_opening_state": {
+        "stage": "Stage27-2C",
+        "family": "PORT_SCAN",
+        "scientific_parent_commit": "bffa77c536cad211dea9ef46b102e5482e01e68e",
+        "opening_number": 1,
+        "opening_budget": 1,
+        "status": "OPENING_COMPLETE",
+        "opening_started_utc": "2026-08-20T18:59:38.702108+00:00",
+        "feature_content_sha256": "bd9111f88632c0a3b507748ab3dd369a303bbf0373802524afeb00f87ba6aedf",
+        "model_sha256": {
+          "XGBOOST": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+          "LIGHTGBM": "d257eeb3b63018cde78b9460dadb02c46e0287cde5f8477bab0b8ff757962c4c"
+        },
+        "completed_learners": [
+          "XGBOOST",
+          "LIGHTGBM"
+        ],
+        "threshold_source": "STAGE27_2B_THURSDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+        "adaptation_authorized": false,
+        "opening_completed_utc": "2026-08-20T18:59:54.348955+00:00"
+      }
+    },
+    "WEB_ATTACK": {
+      "target_day": "Thursday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE_IN_STAGE27_2B"
+    }
+  },
+  "eligible_opening_budget_total": 5,
+  "openings_consumed_before_stage": 2,
+  "openings_consumed_in_stage": 3,
+  "openings_consumed_after_stage": 5,
+  "openings_remaining_after_stage": 0,
+  "reopening_for_adaptation": "FORBIDDEN"
+}

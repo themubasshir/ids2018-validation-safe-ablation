@@ -1,0 +1,104 @@
+{
+  "stage": "Stage27-2C",
+  "type": "FRIDAY_PROBABILITY_MANIFEST",
+  "created_at_utc": "2026-08-20T18:59:54.520782+00:00",
+  "scientific_parent_commit": "bffa77c536cad211dea9ef46b102e5482e01e68e",
+  "target_probability_vectors": {
+    "BOT::XGBOOST": {
+      "family": "BOT",
+      "learner": "XGBOOST",
+      "role": "FRIDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/BOT_XGBOOST_friday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/BOT_XGBOOST_friday_operational_prob_float32.npy",
+      "shape": [
+        703245
+      ],
+      "dtype": "float32",
+      "npy_bytes": 2813108,
+      "npy_sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092",
+      "content_sha256": "0e587829735ddfd39c9bfcba46f5d14584c29bb40176d8aeed5427aca5a86c60",
+      "opening_number": 1
+    },
+    "BOT::LIGHTGBM": {
+      "family": "BOT",
+      "learner": "LIGHTGBM",
+      "role": "FRIDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/BOT_LIGHTGBM_friday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/BOT_LIGHTGBM_friday_operational_prob_float32.npy",
+      "shape": [
+        703245
+      ],
+      "dtype": "float32",
+      "npy_bytes": 2813108,
+      "npy_sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b",
+      "content_sha256": "36ae0916a2dc685f1509a325be151b67082c6c6250c6c938f34907db432f80b6",
+      "opening_number": 1
+    },
+    "DDOS::XGBOOST": {
+      "family": "DDOS",
+      "learner": "XGBOOST",
+      "role": "FRIDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/DDOS_XGBOOST_friday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/DDOS_XGBOOST_friday_operational_prob_float32.npy",
+      "shape": [
+        703245
+      ],
+      "dtype": "float32",
+      "npy_bytes": 2813108,
+      "npy_sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092",
+      "content_sha256": "0e587829735ddfd39c9bfcba46f5d14584c29bb40176d8aeed5427aca5a86c60",
+      "opening_number": 1
+    },
+    "DDOS::LIGHTGBM": {
+      "family": "DDOS",
+      "learner": "LIGHTGBM",
+      "role": "FRIDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/DDOS_LIGHTGBM_friday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/DDOS_LIGHTGBM_friday_operational_prob_float32.npy",
+      "shape": [
+        703245
+      ],
+      "dtype": "float32",
+      "npy_bytes": 2813108,
+      "npy_sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b",
+      "content_sha256": "36ae0916a2dc685f1509a325be151b67082c6c6250c6c938f34907db432f80b6",
+      "opening_number": 1
+    },
+    "PORT_SCAN::XGBOOST": {
+      "family": "PORT_SCAN",
+      "learner": "XGBOOST",
+      "role": "FRIDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/PORT_SCAN_XGBOOST_friday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/PORT_SCAN_XGBOOST_friday_operational_prob_float32.npy",
+      "shape": [
+        703245
+      ],
+      "dtype": "float32",
+      "npy_bytes": 2813108,
+      "npy_sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092",
+      "content_sha256": "0e587829735ddfd39c9bfcba46f5d14584c29bb40176d8aeed5427aca5a86c60",
+      "opening_number": 1
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "family": "PORT_SCAN",
+      "learner": "LIGHTGBM",
+      "role": "FRIDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/PORT_SCAN_LIGHTGBM_friday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/PORT_SCAN_LIGHTGBM_friday_operational_prob_float32.npy",
+      "shape": [
+        703245
+      ],
+      "dtype": "float32",
+      "npy_bytes": 2813108,
+      "npy_sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b",
+      "content_sha256": "36ae0916a2dc685f1509a325be151b67082c6c6250c6c938f34907db432f80b6",
+      "opening_number": 1
+    }
+  },
+  "target_vector_count": 6,
+  "storage_dtype": "float32",
+  "model_fits": 0,
+  "model_refits": 0,
+  "target_threshold_searches": 0,
+  "openings_consumed_in_stage": 3
+}

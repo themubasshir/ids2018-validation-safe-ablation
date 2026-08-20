@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-08-20T11:45:49.878019+00:00",
+  "destination": {
+    "bytes": 3807767,
+    "cells_reconstructed": false,
+    "normalized": false,
+    "preservation_mode": "BYTE_FOR_BYTE",
+    "repository_path": "scripts/stage26/stage26_deployment_profiling_kaggle.py",
+    "rewritten": false,
+    "sha256": "e042c75c86b5f43f0da34fdb1bd63f5cb35b744f7003eaf99559324b0738229a",
+    "syntax_fixed": false
+  },
+  "interpretation": {
+    "authoritative_role": "ARCHIVAL_KAGGLE_NOTEBOOK_SOURCE_SCRIPT",
+    "reason": "Kaggle virtual notebook source can concatenate notebook constructs, magics, and cell fragments that are not guaranteed to compile as one standalone Python module.",
+    "scientific_results_source": "Frozen Stage26 repository artifacts and receipts remain the authoritative scientific results.",
+    "standalone_executability_guaranteed": false
+  },
+  "repository_parent_before_export": "8767f38719584ec9e8d18e5c1dfae0913e537fed",
+  "schema": "stage26_kaggle_virtual_source_export_receipt_v1",
+  "science": {
+    "corpus_accessed": false,
+    "gpu_used": false,
+    "inference_performed": false,
+    "memory_profiling_performed": false,
+    "model_loaded": false,
+    "new_measurement": false,
+    "timing_performed": false
+  },
+  "scientific_stage26_anchor": "9e8354ecc9cfa72c28aa037e5d2053de422bf7a2",
+  "source": {
+    "actual_json_notebook": false,
+    "bytes": 3807767,
+    "characters": 3807410,
+    "compile_diagnostic": "SyntaxError: unmatched ')' (__notebook_source__.ipynb, line 6331)",
+    "lines": 210533,
+    "misleading_filename_extension": ".ipynb",
+    "observed_type": "KAGGLE_VIRTUAL_PYTHON_SOURCE",
+    "path": "/kaggle/working/.virtual_documents/__notebook_source__.ipynb",
+    "sha256": "e042c75c86b5f43f0da34fdb1bd63f5cb35b744f7003eaf99559324b0738229a",
+    "standalone_python_compiles": false,
+    "utf8_decodable": true
+  }
+}

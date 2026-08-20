@@ -1,0 +1,9 @@
+order,asset,placement,recommended_role
+1,F26_CPU1_GPU_P95_SPEEDUP,MAIN_TEXT,Primary deployment-efficiency figure
+2,T26_CPU1_GPU_BATCH1_ANCHOR,MAIN_TEXT,Low-batch online inference comparison
+3,F26_PARETO,MAIN_TEXT,Within-group predictive-performance versus CPU latency trade-off
+4,F26_GPU_DELTA_PEAK_MEMORY,MAIN_TEXT_OR_APPENDIX_IF_SPACE_LIMITED,GPU memory scaling and resource-limit context
+5,T26_CPU1_GPU_MATCHED_COMPARISON,SUPPLEMENT,Full batchwise CPU/GPU numerical comparison
+6,T26_GPU_WARM_INFERENCE_MEMORY,SUPPLEMENT,Complete GPU latency/memory profile
+7,T26_GPU_BACKEND_RESOURCE_STATUS,SUPPLEMENT,Backend availability and resource-limit outcomes
+8,F26_COMPONENT_BOUNDARY,METHODS_OR_SUPPLEMENT,"Clarify extraction, representation, inference, and unavailable E2E boundary"

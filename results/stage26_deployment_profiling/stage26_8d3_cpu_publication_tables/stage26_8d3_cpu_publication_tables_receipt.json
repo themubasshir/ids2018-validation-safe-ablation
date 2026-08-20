@@ -1,0 +1,161 @@
+{
+  "complete_e2e": "UNAVAILABLE",
+  "created_at_utc": "2026-08-20T09:53:25.885747+00:00",
+  "deterministic_publication_transforms": [
+    "SOURCE_COLUMN_SELECTION_AND_RENAMING",
+    "EXACT_KEY_JOINS",
+    "BYTES_TO_MIB_UNIT_CONVERSION",
+    "MEMORY_STATUS_LABEL_FROM_FROZEN_REPETITION_COUNTS",
+    "PAIR_FINGERPRINT_EQUALITY_COUNT_REQUIRED_BY_FROZEN_T8_SCHEMA"
+  ],
+  "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+  "historical_stage26_4c3": "RETAINED_AS_ORIGINAL_MEASUREMENT",
+  "schema": "stage26_8d3_cpu_publication_tables_receipt_v1",
+  "scientific_parent": "80f7fce76b3a859ea699e8838eced34e9936d421",
+  "scientific_safety": {
+    "bootstrap_executed": false,
+    "cold_start_ci_used": false,
+    "gpu_used": false,
+    "group_b_ratio_inverted": false,
+    "group_b_ratio_recomputed": false,
+    "historical_stage26_2_ci_used": false,
+    "inference_executed": false,
+    "labels_accessed": false,
+    "measured_values_changed": false,
+    "memory_aggregated_across_cpu_or_batch": false,
+    "model_loaded": false,
+    "pareto_recomputed": false,
+    "pcap_accessed": false,
+    "random_sampling_executed": false,
+    "stage26_7c_recomputed": false,
+    "stage26_8_hypothesis_test": false,
+    "stage26_8_materiality_threshold": false,
+    "timing_executed": false
+  },
+  "source_identity": [
+    {
+      "anchor": "7ffdba3f4ca4ea5cc53097d62aaf27957009b9f6",
+      "byte_identical_to_anchor": true,
+      "label": "warm_cpu_point_estimates",
+      "path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_condition_status.csv",
+      "sha256": "df146563826992cb57702e589e4cf5d875ecfdbbf79533a731405e8eb738e7af"
+    },
+    {
+      "anchor": "a484148cd8ea7d7c89604d3a015f73bd6f1bc81a",
+      "byte_identical_to_anchor": true,
+      "label": "corrected_warm_cpu_uncertainty",
+      "path": "results/stage26_deployment_profiling/stage26_6f1_bootstrap_corrected_uncertainty/stage26_6f1_corrected_timing_uncertainty.csv",
+      "sha256": "f804f117312b967bfc13cc070a34be43545238bfd30a758a00ad58202c9e6828"
+    },
+    {
+      "anchor": "46379b6d036008db4d60b056a66f4c01383e3298",
+      "byte_identical_to_anchor": true,
+      "label": "cold_start_implementation",
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_implementation.json",
+      "sha256": "38a7e54ed997af960cff56b8fa14941e2f6278ed996b0d7a117dbedf118aa652"
+    },
+    {
+      "anchor": "46379b6d036008db4d60b056a66f4c01383e3298",
+      "byte_identical_to_anchor": true,
+      "label": "cold_start_point_estimates",
+      "path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_summary.csv",
+      "sha256": "f71e9f4ba6f7ef03927b6c8b94563477ccad19b232157113faa43898f644da8a"
+    },
+    {
+      "anchor": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+      "byte_identical_to_anchor": true,
+      "label": "cpu_memory_summary",
+      "path": "results/stage26_deployment_profiling/stage26_3b_cpu_memory_profile/stage26_3_memory_summary.csv",
+      "sha256": "52c6673f3ec542096d87170acea5b8eb3c00a49239a9c2edcd0ddc4eede0a74d"
+    },
+    {
+      "anchor": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+      "byte_identical_to_anchor": true,
+      "label": "deployment_package_sizes",
+      "path": "results/stage26_deployment_profiling/stage26_3b_cpu_memory_profile/stage26_3_package_sizes.csv",
+      "sha256": "99234ffe136afe7489fc6ed7640ca36146e69e251d1c1bd900a8ac152f3637f9"
+    },
+    {
+      "anchor": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+      "byte_identical_to_anchor": true,
+      "label": "capacity_batch_scaling",
+      "path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_inference_batch_scaling.csv",
+      "sha256": "e41ecd347a75ac74f2046fe2ced4c98631dff44e81c976c1a6d767834cd7cd23"
+    },
+    {
+      "anchor": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+      "byte_identical_to_anchor": true,
+      "label": "capacity_two_core_scaling",
+      "path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_two_core_scaling.csv",
+      "sha256": "11eff1bc0c9decd25cc507fde652e6290ebe47ab294b555ea68cd25e895e166d"
+    },
+    {
+      "anchor": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+      "byte_identical_to_anchor": true,
+      "label": "group_b_component_capacity",
+      "path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_group_b_component_capacity.csv",
+      "sha256": "db3e665bb7020dd89a7274937a6650710d3d7a9f0721b95b8adb7d50cbbfbcab"
+    },
+    {
+      "anchor": "ff9d329785c6cd30d273729356f402e59dc4e844",
+      "byte_identical_to_anchor": true,
+      "label": "pareto_point_estimate",
+      "path": "results/stage26_deployment_profiling/stage26_6d_cpu_pareto_point_estimate/stage26_6d_point_estimate_frontiers.csv",
+      "sha256": "fe8ec789d96635a06d92256360d1214eefb239bcdb29a7f19faa1c6a1314e0d7"
+    },
+    {
+      "anchor": "fd4497e333ebeb72b1eb188ed64ca2cdd0f08567",
+      "byte_identical_to_anchor": true,
+      "label": "representation_sensitivity_batch_summary",
+      "path": "results/stage26_deployment_profiling/stage26_8c1_paired_representation_sensitivity/evidence/stage26_8c1_batch_sensitivity_summary.csv",
+      "sha256": "3d00f76cb7f3d9dd13069f79ecfe740e6fa7d1718e035dc788f8ad8d709b424e"
+    },
+    {
+      "anchor": "fd4497e333ebeb72b1eb188ed64ca2cdd0f08567",
+      "byte_identical_to_anchor": true,
+      "label": "representation_sensitivity_pair_results",
+      "path": "results/stage26_deployment_profiling/stage26_8c1_paired_representation_sensitivity/evidence/stage26_8c1_pair_results.csv",
+      "sha256": "d1b8b751dc89f934e520683c5a81a8fed4d990d1f3d3304e4c73bed100e56048"
+    },
+    {
+      "anchor": "fd4497e333ebeb72b1eb188ed64ca2cdd0f08567",
+      "byte_identical_to_anchor": true,
+      "label": "representation_sensitivity_audit",
+      "path": "results/stage26_deployment_profiling/stage26_8c1_paired_representation_sensitivity/stage26_8c1_sensitivity_audit.json",
+      "sha256": "7daaa517e49ca99787b124855bb425abc89b0ef4522556a7500c69f9fd962af2"
+    },
+    {
+      "anchor": "92495eac2c9202973ff4d889e3c12669c06e9ef1",
+      "byte_identical_to_anchor": true,
+      "label": "complete_e2e_closure",
+      "path": "results/stage26_deployment_profiling/stage26_5a_e2e_availability_closure/stage26_5a_e2e_availability_decision.json",
+      "sha256": "be151f3e9891353eae63546b55bc621ab83bb8d4b829e9fefab0e29eafe4bc96"
+    },
+    {
+      "anchor": "55aba2e1cc08385659479c6275234dc23b11d231",
+      "byte_identical_to_anchor": true,
+      "label": "raw_extraction_component",
+      "path": "results/stage26_deployment_profiling/stage26_4b3_cpu1_extraction_timing/stage26_4b3_cpu1_extraction_summary.json",
+      "sha256": "1914504fad850879d1ed11afed432436c18454f2bb8650f881244c865f18ba16"
+    },
+    {
+      "anchor": "aee59fabab2465cca7c80904279bb6d3ef23894f",
+      "byte_identical_to_anchor": true,
+      "label": "historical_representation_component",
+      "path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.csv",
+      "sha256": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5"
+    }
+  ],
+  "stage26_8_representation_sensitivity": "DESCRIPTIVE_SEPARATE_NOT_REPLACEMENT",
+  "table_count": 8,
+  "table_row_counts": {
+    "T26_COMPONENT_MEASUREMENTS": 4,
+    "T26_CPU_CAPACITY_SCALING": 40,
+    "T26_CPU_COLD_START": 56,
+    "T26_CPU_MEMORY_PACKAGE": 400,
+    "T26_CPU_WARM_INFERENCE": 80,
+    "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO": 7,
+    "T26_PARETO": 6,
+    "T26_REPRESENTATION_SENSITIVITY": 5
+  }
+}

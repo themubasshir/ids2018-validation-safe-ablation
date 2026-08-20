@@ -1,0 +1,163 @@
+{
+  "created_at_utc": "2026-08-20T09:53:25.881010+00:00",
+  "effective_schema_repo_relative_path": "results/stage26_deployment_profiling/stage26_8d2a_cpu_publication_schema_erratum/stage26_8d2a_effective_cpu_publication_schema.json",
+  "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+  "publication_label": "COMPONENT_LEVEL_WITH_STAGE26_8_4C3_SENSITIVITY_AUDIT_COMPLETED",
+  "schema": "stage26_8d3_cpu_publication_tables_index_v1",
+  "scientific_parent": "80f7fce76b3a859ea699e8838eced34e9936d421",
+  "table_count": 8,
+  "tables": [
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "batch_size",
+        "status",
+        "n_timed_observations",
+        "p50_latency_ms",
+        "p50_ci95_low_ms",
+        "p50_ci95_high_ms",
+        "p95_latency_ms",
+        "p95_ci95_low_ms",
+        "p95_ci95_high_ms",
+        "p99_latency_ms",
+        "p99_ci95_low_ms",
+        "p99_ci95_high_ms",
+        "median_throughput_samples_per_s",
+        "throughput_ci95_low_samples_per_s",
+        "throughput_ci95_high_samples_per_s",
+        "resource_limit_outcome"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_WARM_INFERENCE.csv",
+      "row_count": 80,
+      "sha256": "d664feca94308ea544506df7ef5c997bc4486f457153abfc1959db36808cfaad",
+      "size_bytes": 18965,
+      "table_id": "T26_CPU_WARM_INFERENCE",
+      "title": "CPU isolated warm-inference deployment profile"
+    },
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "batch_size",
+        "deployment_package_size_mib",
+        "memory_metric_name",
+        "memory_value_mib",
+        "planned_repetitions",
+        "pass_repetitions",
+        "resource_limit_oom_repetitions",
+        "timeout_resource_limit_repetitions",
+        "memory_status",
+        "resource_limit_outcome"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_MEMORY_PACKAGE.csv",
+      "row_count": 400,
+      "sha256": "1daa8aa64288bd06fa93ed485dfc696751ef7a0927ef4fe9c8802b4c56c0a458",
+      "size_bytes": 56640,
+      "table_id": "T26_CPU_MEMORY_PACKAGE",
+      "title": "CPU deployment memory and package profile"
+    },
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "component",
+        "n_observations",
+        "p50_ms",
+        "p95_ms",
+        "status"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_COLD_START.csv",
+      "row_count": 56,
+      "sha256": "9d822632c93233e48113795f04c4e646fe0f330f10248fd7e12f8742b1b77803",
+      "size_bytes": 7076,
+      "table_id": "T26_CPU_COLD_START",
+      "title": "CPU cold-start component profile"
+    },
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "batch_size",
+        "cpu1_status",
+        "cpu2_status",
+        "cpu1_throughput_multiplier_vs_b1",
+        "cpu2_throughput_multiplier_vs_b1",
+        "cpu2_over_cpu1_speedup",
+        "physical_core_parallel_efficiency"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_CAPACITY_SCALING.csv",
+      "row_count": 40,
+      "sha256": "a5beda3df22ad701f2910e13201ba689788b667f02507cf64739c3bc225fc41e",
+      "size_bytes": 5127,
+      "table_id": "T26_CPU_CAPACITY_SCALING",
+      "title": "CPU component-level capacity and scaling"
+    },
+    {
+      "columns": [
+        "component_family",
+        "group_applicability",
+        "measurement_status",
+        "source_stage",
+        "hardware_scope",
+        "quantitative_detail_reference",
+        "claim_boundary",
+        "complete_e2e_available"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_COMPONENT_MEASUREMENTS.csv",
+      "row_count": 4,
+      "sha256": "dd4dedfe595e2cc29f1eb44c97d66f2c9b8d58d7c5924cafb9129be11ce76d67",
+      "size_bytes": 1232,
+      "table_id": "T26_COMPONENT_MEASUREMENTS",
+      "title": "Measured deployment component boundaries and complete-E2E availability"
+    },
+    {
+      "columns": [
+        "target_id",
+        "batch_size",
+        "inference_over_representation_capacity_ratio",
+        "publication_label"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO.csv",
+      "row_count": 7,
+      "sha256": "a29b334c2287edf4e02712bb4dfdc737a326fde4847fd9f1dcfadb7b83299f69",
+      "size_bytes": 847,
+      "table_id": "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO",
+      "title": "Group-B inference-to-representation component-capacity ratio"
+    },
+    {
+      "columns": [
+        "group",
+        "target_id",
+        "pr_auc",
+        "cpu1_batch1_p95_latency_ms",
+        "pareto_status"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_PARETO.csv",
+      "row_count": 6,
+      "sha256": "7d9f7c804bcb99c7d9307689c60442bd3a7c88ea84552c7f49863016705d3200",
+      "size_bytes": 650,
+      "table_id": "T26_PARETO",
+      "title": "Within-group predictive-performance / latency Pareto frontier"
+    },
+    {
+      "columns": [
+        "batch_size",
+        "n_pairs",
+        "fingerprints_equal_count",
+        "median_throughput_ratio_v3_over_v2",
+        "effect_direction",
+        "interpretation"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_REPRESENTATION_SENSITIVITY.csv",
+      "row_count": 5,
+      "sha256": "898b386c6a6a1432383386195b611ddadb7eb587698fc095b8df632f9197ee66",
+      "size_bytes": 1366,
+      "table_id": "T26_REPRESENTATION_SENSITIVITY",
+      "title": "Paired Stage26-4C3 implementation-sensitivity results"
+    }
+  ]
+}

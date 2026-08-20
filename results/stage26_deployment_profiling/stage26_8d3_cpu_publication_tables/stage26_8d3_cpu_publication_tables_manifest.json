@@ -1,0 +1,57 @@
+{
+  "created_at_utc": "2026-08-20T09:53:25.891265+00:00",
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_WARM_INFERENCE.csv",
+      "sha256": "d664feca94308ea544506df7ef5c997bc4486f457153abfc1959db36808cfaad",
+      "size_bytes": 18965
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_MEMORY_PACKAGE.csv",
+      "sha256": "1daa8aa64288bd06fa93ed485dfc696751ef7a0927ef4fe9c8802b4c56c0a458",
+      "size_bytes": 56640
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_COLD_START.csv",
+      "sha256": "9d822632c93233e48113795f04c4e646fe0f330f10248fd7e12f8742b1b77803",
+      "size_bytes": 7076
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_CAPACITY_SCALING.csv",
+      "sha256": "a5beda3df22ad701f2910e13201ba689788b667f02507cf64739c3bc225fc41e",
+      "size_bytes": 5127
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_COMPONENT_MEASUREMENTS.csv",
+      "sha256": "dd4dedfe595e2cc29f1eb44c97d66f2c9b8d58d7c5924cafb9129be11ce76d67",
+      "size_bytes": 1232
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO.csv",
+      "sha256": "a29b334c2287edf4e02712bb4dfdc737a326fde4847fd9f1dcfadb7b83299f69",
+      "size_bytes": 847
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_PARETO.csv",
+      "sha256": "7d9f7c804bcb99c7d9307689c60442bd3a7c88ea84552c7f49863016705d3200",
+      "size_bytes": 650
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_REPRESENTATION_SENSITIVITY.csv",
+      "sha256": "898b386c6a6a1432383386195b611ddadb7eb587698fc095b8df632f9197ee66",
+      "size_bytes": 1366
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/stage26_8d3_cpu_publication_tables_index.json",
+      "sha256": "ae869df663d349a448f797789f285cdd6bfa6f7c98183ff30f4102a14ee374ea",
+      "size_bytes": 5961
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/stage26_8d3_cpu_publication_tables_receipt.json",
+      "sha256": "941eca833d7adaa48227097be858ca82e74364ba84ce3c42162a4568dd0e3a04",
+      "size_bytes": 7679
+    }
+  ],
+  "schema": "stage26_8d3_cpu_publication_tables_manifest_v1",
+  "scientific_parent": "80f7fce76b3a859ea699e8838eced34e9936d421"
+}

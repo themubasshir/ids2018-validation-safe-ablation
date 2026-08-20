@@ -1,0 +1,235 @@
+{
+  "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+  "figures": [
+    {
+      "caption": "Stage26-2 p50/p95 point estimates with corrected Stage26-6F1 uncertainty; CPU1 and CPU2 are separate panels and resource-limit outcomes are explicit.",
+      "figure_id": "F26_WARM_LATENCY",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_WARM_LATENCY.png",
+          "sha256": "c3d5e615fee98f04afbda5aee966f9009b4245edce176d87c4312b6dff1aa465",
+          "size_bytes": 342808
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_WARM_LATENCY.pdf",
+          "sha256": "22bbcb7f75f311aec97a8a8950a6971c2dd07945d0807b7d78996622086a2d00",
+          "size_bytes": 41550
+        }
+      ],
+      "source_tables": [
+        "T26_CPU_WARM_INFERENCE"
+      ],
+      "title": "CPU isolated warm-inference latency by batch size",
+      "validations": [
+        "CORRECTED_STAGE26_6F1_UNCERTAINTY_ONLY",
+        "NO_STAGE26_2_HISTORICAL_CI",
+        "RESOURCE_LIMITS_EXPLICIT",
+        "NO_INTERPOLATION_THROUGH_RESOURCE_LIMITS"
+      ]
+    },
+    {
+      "caption": "Median isolated-inference throughput with corrected Stage26-6F1 uncertainty, separate CPU1/CPU2 panels, and explicit OOM/timeout preservation.",
+      "figure_id": "F26_WARM_THROUGHPUT",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_WARM_THROUGHPUT.png",
+          "sha256": "d8daa9598f92c2019f1809e81f7edf5985a7026b132c34962983bc4ca3d6c0d5",
+          "size_bytes": 226139
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_WARM_THROUGHPUT.pdf",
+          "sha256": "88936c30d70a81d264e79c9a1b4611eb42ae16e32c2a3a0420e9dab519e94b0e",
+          "size_bytes": 31020
+        }
+      ],
+      "source_tables": [
+        "T26_CPU_WARM_INFERENCE"
+      ],
+      "title": "CPU isolated warm-inference throughput by batch size",
+      "validations": [
+        "CORRECTED_STAGE26_6F1_UNCERTAINTY_ONLY",
+        "RESOURCE_LIMITS_EXPLICIT",
+        "NO_POST_HOC_BEST_BATCH"
+      ]
+    },
+    {
+      "caption": "Serialized package size is shown independently. Runtime memory preserves all five frozen Stage26-3B primary metrics at exact target \u00d7 CPU \u00d7 batch resolution, with RAM-limit outcomes annotated rather than imputed.",
+      "figure_id": "F26_MEMORY_PACKAGE",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_MEMORY_PACKAGE.png",
+          "sha256": "23564f5af6d251a5c8252c92b9e8df0c6ba3280912dbcb7c36eee21f63a8fe3a",
+          "size_bytes": 743407
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_MEMORY_PACKAGE.pdf",
+          "sha256": "55b17b50a8663d0a7480e6277cbe0d1beb5369918b5deac2c6e0ab2b1da1395d",
+          "size_bytes": 56196
+        }
+      ],
+      "source_tables": [
+        "T26_CPU_MEMORY_PACKAGE"
+      ],
+      "title": "Deployment package size and CPU memory profile",
+      "validations": [
+        "PACKAGE_SIZE_INDEPENDENT_PANEL",
+        "ALL_FIVE_FROZEN_MEMORY_METRICS",
+        "NO_CPU_OR_BATCH_AGGREGATION",
+        "RAM_LIMITS_EXPLICIT",
+        "NO_IMPUTATION"
+      ]
+    },
+    {
+      "caption": "Cold-start p50 and p95 component point estimates only; no cold-start confidence interval is publication-facing.",
+      "figure_id": "F26_COLD_START",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_COLD_START.png",
+          "sha256": "f8bb2c73bfdd3264d29f30a90ee2f4a8f8c370c049d37390b2f18727868ad2b4",
+          "size_bytes": 283476
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_COLD_START.pdf",
+          "sha256": "94165528d7a0ed07c793a37d7f9473e828489a8b04303ba240476f6d28e7dba4",
+          "size_bytes": 27517
+        }
+      ],
+      "source_tables": [
+        "T26_CPU_COLD_START"
+      ],
+      "title": "CPU cold-start point estimates",
+      "validations": [
+        "POINT_ESTIMATES_ONLY",
+        "NO_COLD_START_CI"
+      ]
+    },
+    {
+      "caption": "Within-target Stage26-7C batch scaling and matched CPU2/CPU1 scaling, copied without recomputation or uncertainty propagation.",
+      "figure_id": "F26_CAPACITY_SCALING",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_CAPACITY_SCALING.png",
+          "sha256": "8af7349fff2c2c5086270e716af630b925fb5a51ecd0e892d829d66a3b6019b6",
+          "size_bytes": 299399
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_CAPACITY_SCALING.pdf",
+          "sha256": "2b3b46fb4692ed5c416d826ae244bd793b4694f3b4dc005ee849bbcd2a81416e",
+          "size_bytes": 33416
+        }
+      ],
+      "source_tables": [
+        "T26_CPU_CAPACITY_SCALING"
+      ],
+      "title": "CPU component-level scaling",
+      "validations": [
+        "STAGE26_7C_COPIED_NOT_RECOMPUTED",
+        "NO_RATIO_CI",
+        "NO_POST_HOC_BEST_BATCH",
+        "COMPONENT_LEVEL_ONLY"
+      ]
+    },
+    {
+      "caption": "Stage26-6D point-estimate membership displayed separately for Group A and Group B; no Pareto recomputation, cross-group frontier, or PR-AUC bootstrap.",
+      "figure_id": "F26_PARETO",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_PARETO.png",
+          "sha256": "e73c4e8c6fefd7e8135e9da2f8f165d34a92abb5f42c201ff71b0c40db068be0",
+          "size_bytes": 193245
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_PARETO.pdf",
+          "sha256": "2677ad0da3bfe859651abff9c232a877d044d8fb894b504748fac77fc4a315d9",
+          "size_bytes": 21005
+        }
+      ],
+      "source_tables": [
+        "T26_PARETO"
+      ],
+      "title": "Within-group descriptive point-estimate Pareto frontiers",
+      "validations": [
+        "GROUPS_SEPARATE",
+        "STAGE26_6D_MEMBERSHIP_COPIED",
+        "NO_CROSS_GROUP_FRONTIER",
+        "NO_PR_AUC_BOOTSTRAP"
+      ]
+    },
+    {
+      "caption": "Median V3/V2 throughput ratios for the five frozen paired batches, with a neutral ratio-1 reference. Descriptive only; historical 4C3 is retained.",
+      "figure_id": "F26_REPRESENTATION_SENSITIVITY",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_REPRESENTATION_SENSITIVITY.png",
+          "sha256": "ee82461f8735b0f195ab2af53f2dae4b1943e5d11f6fe6e98f9d0340c74afc1d",
+          "size_bytes": 194130
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_REPRESENTATION_SENSITIVITY.pdf",
+          "sha256": "794fae16b03cde39f9308890034eac366238391af758cda9ef64b035fb50c33f",
+          "size_bytes": 17056
+        }
+      ],
+      "source_tables": [
+        "T26_REPRESENTATION_SENSITIVITY"
+      ],
+      "title": "Stage26-4C3 paired implementation sensitivity",
+      "validations": [
+        "DESCRIPTIVE_ONLY",
+        "NEUTRAL_RATIO_ONE_REFERENCE",
+        "NO_SIGNIFICANCE_TEST",
+        "NO_FIXED_BIAS_CLAIM",
+        "V3_NOT_REPLACEMENT"
+      ]
+    },
+    {
+      "caption": "Raw extraction, packet-image representation, and isolated inference are shown as distinct measured components; complete E2E is explicitly unavailable and no component values are added into a synthetic pipeline.",
+      "figure_id": "F26_COMPONENT_BOUNDARY",
+      "files": [
+        {
+          "format": "PNG",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_COMPONENT_BOUNDARY.png",
+          "sha256": "8adcc9e4be6ff1640a4e55739471ed706c294dbb566cf89cbc63c7adf193812a",
+          "size_bytes": 220335
+        },
+        {
+          "format": "PDF",
+          "path": "results/stage26_deployment_profiling/stage26_8d4_cpu_publication_figures/F26_COMPONENT_BOUNDARY.pdf",
+          "sha256": "ca4eb39aaac0fbba026e598a9ad882944421956fb8213ce2e5e75c77c51f8668",
+          "size_bytes": 19251
+        }
+      ],
+      "source_tables": [
+        "T26_COMPONENT_MEASUREMENTS"
+      ],
+      "title": "Measured deployment component boundaries",
+      "validations": [
+        "DISTINCT_COMPONENTS",
+        "COMPLETE_E2E_UNAVAILABLE",
+        "NO_ADDITIVE_LATENCY",
+        "NO_SYNTHETIC_PIPELINE_THROUGHPUT",
+        "NO_MISSING_COST_IMPUTATION"
+      ]
+    }
+  ],
+  "logical_figure_count": 8,
+  "publication_label": "COMPONENT_LEVEL_WITH_STAGE26_8_4C3_SENSITIVITY_AUDIT_COMPLETED",
+  "quantitative_input_policy": "STAGE26_8D3_PUBLICATION_TABLES_ONLY",
+  "rendered_file_count": 16,
+  "schema": "stage26_8d4_cpu_publication_figures_index_v1",
+  "scientific_parent": "b11936a4ee8234a36a29057658f7ee420a5cf68e"
+}

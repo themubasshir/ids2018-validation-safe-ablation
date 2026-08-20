@@ -1,0 +1,23 @@
+{
+  "stage": "Stage27-0",
+  "bootstrap_replicates": 2000,
+  "seed": 42,
+  "method": "STRATIFIED_ROW_BOOTSTRAP",
+  "sampling": "WITH_REPLACEMENT_WITHIN BENIGN AND ATTACK STRATA, PRESERVING ORIGINAL STRATUM SIZE",
+  "confidence_interval": "PERCENTILE_2.5_97.5",
+  "metrics": [
+    "ROC_AUC",
+    "PR_AUC",
+    "RECALL",
+    "FPR",
+    "NOVELTY_GENERALIZATION_GAP_WHERE_MATHEMATICALLY_COMPATIBLE"
+  ],
+  "model_retraining_during_bootstrap": false,
+  "threshold_reselection_during_bootstrap": false,
+  "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty.",
+  "clustered_bootstrap": {
+    "used": false,
+    "reason": "No previously frozen valid session/time-block grouping is being introduced into the Stage27 CICIDS2017 target population. Stage27 therefore preregisters the row-stratified bootstrap rather than inventing a grouping after results."
+  },
+  "bootstrap_procedure_change_after_results": "FORBIDDEN"
+}

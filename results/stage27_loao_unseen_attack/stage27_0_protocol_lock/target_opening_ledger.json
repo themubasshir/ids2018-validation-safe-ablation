@@ -1,0 +1,53 @@
+{
+  "stage": "Stage27-0",
+  "opening_definition": "A fold target opening occurs when that fold's frozen target predictor matrix is first supplied to either frozen Stage27 learner for scientific target inference.",
+  "same_opening_model_rule": "Both already-frozen learners and all already-frozen operating points for a fold must be evaluated from the same authorized target opening.",
+  "cross_fold_calendar_day_note": "The ledger is fold-specific. A calendar day may serve as known-family validation in another frozen fold. Such cross-fold role reuse cannot change any fold's already-frozen membership, model recipe, weighting rule, threshold rule, or target definition.",
+  "families": {
+    "BOT": {
+      "status": "SEALED",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": "ONLY_AFTER_FOLD_MEMBERSHIP_MODEL_AND_THRESHOLDS_ARE_FROZEN"
+    },
+    "DDOS": {
+      "status": "SEALED",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": "ONLY_AFTER_FOLD_MEMBERSHIP_MODEL_AND_THRESHOLDS_ARE_FROZEN"
+    },
+    "DOS": {
+      "status": "STRUCTURALLY_INELIGIBLE",
+      "opening_budget": 0,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": false
+    },
+    "AUTH_BRUTE_FORCE": {
+      "status": "STRUCTURALLY_INELIGIBLE",
+      "opening_budget": 0,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": false
+    },
+    "INFILTRATION": {
+      "status": "SEALED",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": "ONLY_AFTER_FOLD_MEMBERSHIP_MODEL_AND_THRESHOLDS_ARE_FROZEN"
+    },
+    "PORT_SCAN": {
+      "status": "SEALED",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": "ONLY_AFTER_FOLD_MEMBERSHIP_MODEL_AND_THRESHOLDS_ARE_FROZEN"
+    },
+    "WEB_ATTACK": {
+      "status": "SEALED",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "scientific_target_inference_authorized": "ONLY_AFTER_FOLD_MEMBERSHIP_MODEL_AND_THRESHOLDS_ARE_FROZEN"
+    }
+  },
+  "eligible_target_opening_budget_total": 5,
+  "openings_consumed_at_stage27_0": 0,
+  "reopening_for_adaptation": "FORBIDDEN"
+}

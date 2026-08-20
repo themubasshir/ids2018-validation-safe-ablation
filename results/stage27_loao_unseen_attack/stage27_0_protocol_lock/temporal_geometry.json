@@ -1,0 +1,102 @@
+{
+  "stage": "Stage27-0",
+  "unit": "WEEKDAY_ATOMIC_PARTITIONS",
+  "required_order": "TRAIN < VALIDATION < TARGET",
+  "original_universal_geometry": {
+    "train_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "validation_days": [
+      "Thursday"
+    ],
+    "target_days": [
+      "Friday"
+    ],
+    "universal_seven_fold_feasible": false,
+    "families_with_positive_target_support": [
+      "BOT",
+      "DDOS",
+      "PORT_SCAN"
+    ],
+    "reason": "Only BOT, DDOS and PORT_SCAN have Friday positives. DOS appears only Wednesday; AUTH_BRUTE_FORCE only Tuesday; INFILTRATION and WEB_ATTACK only Thursday. The universal Friday-target geometry therefore cannot produce all seven held-out-family targets."
+  },
+  "original_geometry_decision": "REJECTED_AS_UNIVERSAL_SEVEN_FOLD_DESIGN_BEFORE_MODEL_RESULTS",
+  "replacement_geometry_source": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/temporal_feasibility.json",
+  "replacement_geometry_source_sha256": "f257e6edec1378ac46595fb6f3ec9ac1e8f85601754dc2a22d5ffcdf5d4204d8",
+  "replacement_geometry_classification": "FEASIBILITY_CORRECTION_PRE_RESULT_NOT_PERFORMANCE_ADAPTATION",
+  "eligible_fold_days": {
+    "BOT": {
+      "train": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "validation": [
+        "Thursday"
+      ],
+      "target": [
+        "Friday"
+      ]
+    },
+    "DDOS": {
+      "train": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "validation": [
+        "Thursday"
+      ],
+      "target": [
+        "Friday"
+      ]
+    },
+    "INFILTRATION": {
+      "train": [
+        "Monday",
+        "Tuesday"
+      ],
+      "validation": [
+        "Wednesday"
+      ],
+      "target": [
+        "Thursday"
+      ]
+    },
+    "PORT_SCAN": {
+      "train": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "validation": [
+        "Thursday"
+      ],
+      "target": [
+        "Friday"
+      ]
+    },
+    "WEB_ATTACK": {
+      "train": [
+        "Monday",
+        "Tuesday"
+      ],
+      "validation": [
+        "Wednesday"
+      ],
+      "target": [
+        "Thursday"
+      ]
+    }
+  },
+  "important_semantic_limit": "Strict chronology means some non-held-out families occur only on or after a target day and therefore cannot all be represented in that fold's training set. Stage27-0 must describe the executable design as a chronology-first zero-training-exposure family audit and must not imply that every non-held-out family was necessarily seen in training.",
+  "cross_fold_role_semantics": {
+    "calendar_day_may_have_different_roles_in_different_folds": true,
+    "example": "Thursday is TARGET for INFILTRATION/WEB_ATTACK folds and VALIDATION for BOT/DDOS/PORT_SCAN folds.",
+    "target_opening_ledger_is_fold_specific": true,
+    "cross_fold_result_driven_adaptation": "FORBIDDEN",
+    "role_assignment_change_after_stage27_0": "FORBIDDEN"
+  }
+}

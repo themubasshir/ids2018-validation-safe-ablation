@@ -1,0 +1,20 @@
+{
+  "stage": "Stage27-0",
+  "minimum_positive_support_for_inferential_family_claim": 50,
+  "below_minimum_policy": "DESCRIPTIVE_ONLY_NOT_DROPPED",
+  "eligible_inferential_families": [
+    "BOT",
+    "DDOS",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "eligible_descriptive_only_families": [
+    "INFILTRATION"
+  ],
+  "structurally_ineligible_families": [
+    "DOS",
+    "AUTH_BRUTE_FORCE"
+  ],
+  "ineligible_family_policy": "RETAIN_IN_TAXONOMY_AND_REPORT_STRUCTURALLY_INELIGIBLE",
+  "support_threshold_change_after_results": "FORBIDDEN"
+}

@@ -1,0 +1,48 @@
+{
+  "stage": "Stage27-0",
+  "success_condition": "Stage27 succeeds if the preregistered LOAO audit produces valid, leakage-controlled, support-aware estimates of unseen-family discrimination and frozen operating-point transfer. Scientific success does not require survival or collapse.",
+  "permitted_outcome_interpretations": [
+    {
+      "outcome": "ELIGIBLE_FAMILIES_NEAR_CHANCE",
+      "interpretation": "Little unseen-family ranking signal was detected under the tested LOAO protocol."
+    },
+    {
+      "outcome": "SOME_FAMILIES_SURVIVE_WHILE_OTHERS_COLLAPSE",
+      "interpretation": "Unseen-family transfer is family-dependent and appears stronger for some traffic behaviors."
+    },
+    {
+      "outcome": "RANKING_SURVIVES_THRESHOLD_RECALL_COLLAPSES",
+      "interpretation": "Novel-family ranking information survives, but frozen operating points do not translate into reliable detection."
+    },
+    {
+      "outcome": "XGB_AND_LGBM_AGREE",
+      "interpretation": "The family-transfer pattern is less likely to be specific to one of the two preregistered learners."
+    },
+    {
+      "outcome": "XGB_AND_LGBM_DISAGREE",
+      "interpretation": "Novel-family conclusions depend materially on learner choice."
+    },
+    {
+      "outcome": "BROAD_TRANSFER_ACROSS_ELIGIBLE_FAMILIES",
+      "interpretation": "Broad unseen-family discrimination survives across the structurally executable benchmark folds."
+    },
+    {
+      "outcome": "SIMILAR_FAMILIES_TRANSFER_BETTER",
+      "interpretation": "LOAO performance is descriptively associated with the preregistered behavioral-similarity measure."
+    },
+    {
+      "outcome": "UNEXPECTED_FAMILY_TRANSFER",
+      "interpretation": "Retain and investigate without changing the preregistered protocol."
+    }
+  ],
+  "valid_high_level_outcomes": [
+    "UNIVERSAL_COLLAPSE_WITHIN_ELIGIBLE_FOLDS",
+    "SELECTIVE_FAMILY_TRANSFER",
+    "VOLUMETRIC_TRANSFER",
+    "STEALTH_FAMILY_TRANSFER",
+    "RANKING_THRESHOLD_DIVERGENCE",
+    "LEARNER_DEPENDENCE",
+    "BROAD_UNSEEN_FAMILY_TRANSFER"
+  ],
+  "expected_result_requirement": null
+}

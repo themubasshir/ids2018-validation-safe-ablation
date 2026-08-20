@@ -1,0 +1,62 @@
+{
+  "stage": "Stage27-0",
+  "primary_isolation_target": {
+    "co_primary_ranking_metrics": [
+      "ROC_AUC",
+      "PR_AUC"
+    ],
+    "operating_point_metrics": [
+      "RECALL",
+      "FPR",
+      "PRECISION",
+      "F1",
+      "TP",
+      "FP",
+      "TN",
+      "FN"
+    ],
+    "operating_points": [
+      "STANDARD",
+      "BALANCED",
+      "SECURITY"
+    ]
+  },
+  "auc_semantics": {
+    "PR_AUC": "DISTINCT_SCORE_GROUPED_NONINTERPOLATED_AVERAGE_PRECISION_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+    "ROC_AUC": "DISTINCT_SCORE_GROUPED_TRAPEZOIDAL_ROC_AREA_FROM_PERSISTED_FLOAT32_PROBABILITIES",
+    "ties": "ALL_IDENTICAL_FLOAT32_SCORES_ENTER_CURVE_SIMULTANEOUSLY"
+  },
+  "pr_auc_chance_anchor": {
+    "prevalence_symbol": "pi_h",
+    "formula": "target_heldout_attack / (target_heldout_attack + target_benign)",
+    "chance_pr_auc": "pi_h",
+    "pr_excess": "PR_AUC - pi_h",
+    "pr_lift": "PR_AUC / pi_h when pi_h > 0; otherwise undefined"
+  },
+  "known_family_control": {
+    "mandatory": true,
+    "population": "FROZEN KNOWN-FAMILY VALIDATION ATTACKS + VALIDATION BENIGN",
+    "purpose": "Verify each fold model remains functional on attack families represented before its target."
+  },
+  "novelty_generalization_gap": {
+    "definition": "M_known - M_unseen",
+    "primary_compatible_metrics": [
+      "ROC_AUC",
+      "PR_EXCESS",
+      "RECALL_STANDARD",
+      "RECALL_BALANCED",
+      "RECALL_SECURITY"
+    ],
+    "raw_pr_auc_gap": "REPORTABLE_DESCRIPTIVELY_BUT_INTERPRET_WITH SEPARATE_PREVALENCE_ANCHORS",
+    "causal_interpretation": false
+  },
+  "secondary_operational_context": {
+    "status": "DESCRIPTIVE_ONLY",
+    "ranking_and_threshold_metrics_allowed": true,
+    "model_selection_allowed": false,
+    "threshold_selection_allowed": false,
+    "family_identity_prediction_claim": false
+  },
+  "undefined_metric_policy": "Return/report NaN or undefined transparently. Do not alter denominators or smooth results.",
+  "metric_addition_after_target_results": "FORBIDDEN_WITHOUT_EXPLICIT_POST_HOC_LABEL"
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "Stage27-0",
+  "inherited_stage22_formula": "development_benign / development_attack",
+  "stage27_fold_formula": "train_benign / train_attack",
+  "statistics_source": "FINAL_FROZEN_TRAINING_MEMBERSHIP_FOR_THE_CURRENT_FOLD_ONLY",
+  "negative_class_weight": 1.0,
+  "positive_class_weight": "train_benign / train_attack",
+  "implementation": "Construct fit-time sample_weight with BENIGN=1.0 and ATTACK=(train_benign/train_attack) for both XGBoost and LightGBM. This keeps the inherited algorithmic hyperparameter dictionaries unchanged.",
+  "recompute_independently_per_fold": true,
+  "target_rows_in_weight_calculation": 0,
+  "validation_rows_in_weight_calculation": 0,
+  "weight_search": false,
+  "pre_materialization_expected_values": {
+    "BOT": 5.260953260086455,
+    "DDOS": 5.260953260086455,
+    "INFILTRATION": 69.53321286591977,
+    "PORT_SCAN": 5.260953260086455,
+    "WEB_ATTACK": 69.53321286591977
+  },
+  "execution_rule": "The actual per-fold receipt must recompute and freeze the value after final train membership is materialized. The feasibility-derived values above are audit expectations, not substitutes for execution-time recomputation.",
+  "single_class_train_rule": "HARD_SCIENTIFIC_INFEASIBILITY_BEFORE_MODEL_FIT"
+}

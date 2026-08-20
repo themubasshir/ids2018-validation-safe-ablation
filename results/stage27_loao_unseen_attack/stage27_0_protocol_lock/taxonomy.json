@@ -1,0 +1,43 @@
+{
+  "stage": "Stage27-0",
+  "status": "FROZEN_BEFORE_STAGE27_MODEL_FIT_INFERENCE_OR_TARGET_OPENING",
+  "created_at_utc": "2026-08-20T17:21:40.173492+00:00",
+  "parent_commit": "da1cc26b2759f43e64122bb8ff7a21d112dc420f",
+  "taxonomy_source": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+  "taxonomy_source_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+  "primary_family_order": [
+    "BOT",
+    "DDOS",
+    "DOS",
+    "AUTH_BRUTE_FORCE",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "raw_label_to_family": {
+    "bot": "BOT",
+    "ddos": "DDOS",
+    "dos goldeneye": "DOS",
+    "dos hulk": "DOS",
+    "dos slowhttptest": "DOS",
+    "dos slowloris": "DOS",
+    "ftp-patator": "AUTH_BRUTE_FORCE",
+    "heartbleed": "TARGET_ONLY_UNSEEN",
+    "infiltration": "INFILTRATION",
+    "portscan": "PORT_SCAN",
+    "ssh-patator": "AUTH_BRUTE_FORCE",
+    "web attack - brute force": "WEB_ATTACK",
+    "web attack - sql injection": "WEB_ATTACK",
+    "web attack - xss": "WEB_ATTACK"
+  },
+  "heartbleed_policy": "TARGET_ONLY_UNSEEN",
+  "unknown_nonbenign_family_policy": "OTHER_ATTACK_UNSEEN_LABEL",
+  "family_changes_after_stage27_0": "FORBIDDEN",
+  "structurally_ineligible_families": [
+    "DOS",
+    "AUTH_BRUTE_FORCE"
+  ],
+  "descriptive_only_families": [
+    "INFILTRATION"
+  ]
+}

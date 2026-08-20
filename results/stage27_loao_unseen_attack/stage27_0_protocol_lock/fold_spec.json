@@ -1,0 +1,317 @@
+{
+  "stage": "Stage27-0",
+  "design": "CHRONOLOGY_FIRST_ZERO_TRAINING_EXPOSURE_FAMILY_AUDIT",
+  "parent_commit": "da1cc26b2759f43e64122bb8ff7a21d112dc420f",
+  "family_count": 7,
+  "eligible_fold_count": 5,
+  "structurally_ineligible_fold_count": 2,
+  "descriptive_only_eligible_fold_count": 1,
+  "loao_invariant": {
+    "held_out_family_train_count_required": 0,
+    "held_out_family_validation_count_required": 0,
+    "violation": "FOLD_INVALID_HARD_STOP_BEFORE_FIT"
+  },
+  "training_population_rule": {
+    "negative_class": "BENIGN",
+    "positive_class": "ONLY PRIMARY-SEVEN-TAXONOMY ATTACK FAMILIES PRESENT IN THE FROZEN TRAIN DAYS EXCEPT THE HELD-OUT FAMILY",
+    "heartbleed": "EXCLUDED_FROM_STAGE27_TRAINING",
+    "unknown_nonbenign": "EXCLUDED_FROM_STAGE27_TRAINING"
+  },
+  "validation_population_rule": {
+    "negative_class": "BENIGN",
+    "positive_class": "ONLY PRIMARY-SEVEN-TAXONOMY KNOWN ATTACK FAMILIES PRESENT IN THE FROZEN VALIDATION DAY",
+    "held_out_family": "MUST_BE_ABSENT",
+    "heartbleed": "EXCLUDED",
+    "unknown_nonbenign": "EXCLUDED"
+  },
+  "folds": {
+    "BOT": {
+      "held_out_family": "BOT",
+      "status": "ELIGIBLE",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "target_positive_support": 1966,
+      "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+      "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+      "scientific_model_fit_authorized": true,
+      "replacement_geometry": {
+        "train_days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday"
+        ],
+        "validation_days": [
+          "Thursday"
+        ],
+        "target_days": [
+          "Friday"
+        ],
+        "held_out_family_train_count_expected": 0,
+        "held_out_family_validation_count_expected": 0,
+        "train_benign_expected": 1402023,
+        "train_known_attack_expected": 266496,
+        "train_known_family_support": {
+          "DDOS": 0,
+          "DOS": 252661,
+          "AUTH_BRUTE_FORCE": 13835,
+          "INFILTRATION": 0,
+          "PORT_SCAN": 0,
+          "WEB_ATTACK": 0
+        },
+        "validation_benign_expected": 456752,
+        "validation_known_attack_expected": 2216,
+        "validation_known_family_support": {
+          "DDOS": 0,
+          "DOS": 0,
+          "AUTH_BRUTE_FORCE": 0,
+          "INFILTRATION": 36,
+          "PORT_SCAN": 0,
+          "WEB_ATTACK": 2180
+        },
+        "primary_target_benign_expected": 414322,
+        "primary_target_heldout_attack_expected": 1966,
+        "primary_target_rows_expected": 416288,
+        "target_day": "Friday"
+      },
+      "pre_materialization_expected_class_weight": {
+        "formula": "train_benign / train_attack",
+        "value": 5.260953260086455,
+        "final_execution_value_must_be_recomputed": true,
+        "reason": "The final weight must use the realized frozen training membership after all preregistered input-validity gates."
+      }
+    },
+    "DDOS": {
+      "held_out_family": "DDOS",
+      "status": "ELIGIBLE",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "target_positive_support": 128027,
+      "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+      "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+      "scientific_model_fit_authorized": true,
+      "replacement_geometry": {
+        "train_days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday"
+        ],
+        "validation_days": [
+          "Thursday"
+        ],
+        "target_days": [
+          "Friday"
+        ],
+        "held_out_family_train_count_expected": 0,
+        "held_out_family_validation_count_expected": 0,
+        "train_benign_expected": 1402023,
+        "train_known_attack_expected": 266496,
+        "train_known_family_support": {
+          "BOT": 0,
+          "DOS": 252661,
+          "AUTH_BRUTE_FORCE": 13835,
+          "INFILTRATION": 0,
+          "PORT_SCAN": 0,
+          "WEB_ATTACK": 0
+        },
+        "validation_benign_expected": 456752,
+        "validation_known_attack_expected": 2216,
+        "validation_known_family_support": {
+          "BOT": 0,
+          "DOS": 0,
+          "AUTH_BRUTE_FORCE": 0,
+          "INFILTRATION": 36,
+          "PORT_SCAN": 0,
+          "WEB_ATTACK": 2180
+        },
+        "primary_target_benign_expected": 414322,
+        "primary_target_heldout_attack_expected": 128027,
+        "primary_target_rows_expected": 542349,
+        "target_day": "Friday"
+      },
+      "pre_materialization_expected_class_weight": {
+        "formula": "train_benign / train_attack",
+        "value": 5.260953260086455,
+        "final_execution_value_must_be_recomputed": true,
+        "reason": "The final weight must use the realized frozen training membership after all preregistered input-validity gates."
+      }
+    },
+    "DOS": {
+      "held_out_family": "DOS",
+      "status": "STRUCTURALLY_INELIGIBLE",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "target_positive_support": 252661,
+      "reason_code": "NO_KNOWN_ATTACK_POSITIVES_IN_DAY_ATOMIC_TRAIN",
+      "reason": "The only day-atomic chronology before Wednesday gives TRAIN=['Monday'], but TRAIN contains 0 known-family attack positives. A supervised attack-vs-benign learner cannot be fit honestly under this geometry.",
+      "scientific_model_fit_authorized": false,
+      "replacement_geometry": null
+    },
+    "AUTH_BRUTE_FORCE": {
+      "held_out_family": "AUTH_BRUTE_FORCE",
+      "status": "STRUCTURALLY_INELIGIBLE",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "target_positive_support": 13835,
+      "reason_code": "INSUFFICIENT_PRETARGET_WEEKDAY_DEPTH",
+      "reason": "AUTH_BRUTE_FORCE first appears on Tuesday. Fewer than two earlier weekday partitions exist, so separate day-atomic TRAIN and VALIDATION partitions cannot both precede TARGET.",
+      "scientific_model_fit_authorized": false,
+      "replacement_geometry": null
+    },
+    "INFILTRATION": {
+      "held_out_family": "INFILTRATION",
+      "status": "ELIGIBLE_DESCRIPTIVE_ONLY",
+      "support_status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+      "target_positive_support": 36,
+      "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+      "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+      "scientific_model_fit_authorized": true,
+      "replacement_geometry": {
+        "train_days": [
+          "Monday",
+          "Tuesday"
+        ],
+        "validation_days": [
+          "Wednesday"
+        ],
+        "target_days": [
+          "Thursday"
+        ],
+        "held_out_family_train_count_expected": 0,
+        "held_out_family_validation_count_expected": 0,
+        "train_benign_expected": 961992,
+        "train_known_attack_expected": 13835,
+        "train_known_family_support": {
+          "BOT": 0,
+          "DDOS": 0,
+          "DOS": 0,
+          "AUTH_BRUTE_FORCE": 13835,
+          "PORT_SCAN": 0,
+          "WEB_ATTACK": 0
+        },
+        "validation_benign_expected": 440031,
+        "validation_known_attack_expected": 252661,
+        "validation_known_family_support": {
+          "BOT": 0,
+          "DDOS": 0,
+          "DOS": 252661,
+          "AUTH_BRUTE_FORCE": 0,
+          "PORT_SCAN": 0,
+          "WEB_ATTACK": 0
+        },
+        "primary_target_benign_expected": 456752,
+        "primary_target_heldout_attack_expected": 36,
+        "primary_target_rows_expected": 456788,
+        "target_day": "Thursday"
+      },
+      "pre_materialization_expected_class_weight": {
+        "formula": "train_benign / train_attack",
+        "value": 69.53321286591977,
+        "final_execution_value_must_be_recomputed": true,
+        "reason": "The final weight must use the realized frozen training membership after all preregistered input-validity gates."
+      }
+    },
+    "PORT_SCAN": {
+      "held_out_family": "PORT_SCAN",
+      "status": "ELIGIBLE",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "target_positive_support": 158930,
+      "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+      "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+      "scientific_model_fit_authorized": true,
+      "replacement_geometry": {
+        "train_days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday"
+        ],
+        "validation_days": [
+          "Thursday"
+        ],
+        "target_days": [
+          "Friday"
+        ],
+        "held_out_family_train_count_expected": 0,
+        "held_out_family_validation_count_expected": 0,
+        "train_benign_expected": 1402023,
+        "train_known_attack_expected": 266496,
+        "train_known_family_support": {
+          "BOT": 0,
+          "DDOS": 0,
+          "DOS": 252661,
+          "AUTH_BRUTE_FORCE": 13835,
+          "INFILTRATION": 0,
+          "WEB_ATTACK": 0
+        },
+        "validation_benign_expected": 456752,
+        "validation_known_attack_expected": 2216,
+        "validation_known_family_support": {
+          "BOT": 0,
+          "DDOS": 0,
+          "DOS": 0,
+          "AUTH_BRUTE_FORCE": 0,
+          "INFILTRATION": 36,
+          "WEB_ATTACK": 2180
+        },
+        "primary_target_benign_expected": 414322,
+        "primary_target_heldout_attack_expected": 158930,
+        "primary_target_rows_expected": 573252,
+        "target_day": "Friday"
+      },
+      "pre_materialization_expected_class_weight": {
+        "formula": "train_benign / train_attack",
+        "value": 5.260953260086455,
+        "final_execution_value_must_be_recomputed": true,
+        "reason": "The final weight must use the realized frozen training membership after all preregistered input-validity gates."
+      }
+    },
+    "WEB_ATTACK": {
+      "held_out_family": "WEB_ATTACK",
+      "status": "ELIGIBLE",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "target_positive_support": 2180,
+      "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+      "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+      "scientific_model_fit_authorized": true,
+      "replacement_geometry": {
+        "train_days": [
+          "Monday",
+          "Tuesday"
+        ],
+        "validation_days": [
+          "Wednesday"
+        ],
+        "target_days": [
+          "Thursday"
+        ],
+        "held_out_family_train_count_expected": 0,
+        "held_out_family_validation_count_expected": 0,
+        "train_benign_expected": 961992,
+        "train_known_attack_expected": 13835,
+        "train_known_family_support": {
+          "BOT": 0,
+          "DDOS": 0,
+          "DOS": 0,
+          "AUTH_BRUTE_FORCE": 13835,
+          "INFILTRATION": 0,
+          "PORT_SCAN": 0
+        },
+        "validation_benign_expected": 440031,
+        "validation_known_attack_expected": 252661,
+        "validation_known_family_support": {
+          "BOT": 0,
+          "DDOS": 0,
+          "DOS": 252661,
+          "AUTH_BRUTE_FORCE": 0,
+          "INFILTRATION": 0,
+          "PORT_SCAN": 0
+        },
+        "primary_target_benign_expected": 456752,
+        "primary_target_heldout_attack_expected": 2180,
+        "primary_target_rows_expected": 458932,
+        "target_day": "Thursday"
+      },
+      "pre_materialization_expected_class_weight": {
+        "formula": "train_benign / train_attack",
+        "value": 69.53321286591977,
+        "final_execution_value_must_be_recomputed": true,
+        "reason": "The final weight must use the realized frozen training membership after all preregistered input-validity gates."
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "stage": "Stage27-0",
+  "status": "SECONDARY_PREREGISTERED_DESCRIPTIVE_ANALYSIS",
+  "scientific_question": "Is unseen-family transfer descriptively associated with behavioral similarity between the held-out family and attack families represented in that fold's training set?",
+  "descriptor_features": [
+    "Flow Duration",
+    "Tot Fwd Pkts",
+    "Tot Bwd Pkts",
+    "TotLen Fwd Pkts",
+    "TotLen Bwd Pkts",
+    "Pkt Len Mean",
+    "Pkt Len Std",
+    "Flow Byts/s",
+    "Flow Pkts/s",
+    "Down/Up Ratio",
+    "Protocol"
+  ],
+  "descriptor_feature_sha256": "b378d1e13e60b55b076440a749ee3275243dd7a7a674f30bb4172293706a9aba",
+  "preprocessing": {
+    "fit_population": "CURRENT_FOLD_TRAINING_ROWS_ONLY",
+    "missing_value_fill": "TRAINING_MEDIAN_PER_DESCRIPTOR",
+    "centering": "TRAINING_MEAN_AFTER_MEDIAN_FILL",
+    "scaling": "TRAINING_STANDARD_DEVIATION",
+    "zero_standard_deviation_rule": "USE_SCALE_1.0_AND_RECORD_ZERO_VARIANCE_DESCRIPTOR",
+    "target_fitted_preprocessing": false
+  },
+  "distance": {
+    "family_centroid": "ARITHMETIC_MEAN_OF_STANDARDIZED_DESCRIPTOR_VECTOR FOR EACH ATTACK FAMILY",
+    "heldout_centroid": "ARITHMETIC_MEAN_OF_STANDARDIZED_DESCRIPTOR_VECTOR FOR HELD_OUT_TARGET_ATTACK ROWS",
+    "measure": "EUCLIDEAN_DISTANCE",
+    "nearest_seen_distance": "MINIMUM EUCLIDEAN DISTANCE FROM HELDOUT CENTROID TO ANY ATTACK-FAMILY CENTROID PRESENT IN TRAINING",
+    "nearest_seen_family": "LEXICOGRAPHICALLY_SMALLEST_FAMILY_ON_EXACT_DISTANCE_TIE",
+    "similarity_score": "1 / (1 + nearest_seen_distance)",
+    "benign_distance": "EUCLIDEAN_DISTANCE_TO_TRAINING_BENIGN_CENTROID"
+  },
+  "minimum_seen_family_support_for_centroid": 1,
+  "association_reporting": {
+    "figure": "NEAREST_SEEN_SIMILARITY_VS_UNSEEN_RANKING_PERFORMANCE",
+    "statistical_claim": "EXPLORATORY_DESCRIPTIVE_ASSOCIATION_ONLY",
+    "causal_claim": false,
+    "strong_correlation_inference": false
+  },
+  "similarity_definition_change_after_loao_results": "FORBIDDEN"
+}

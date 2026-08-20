@@ -1,0 +1,18 @@
+{
+  "stage": "Stage27-0",
+  "forbidden_claims": [
+    "The model detects zero-day attacks.",
+    "ROC-AUC approximately 0.5 proves the model is a pure signature matcher.",
+    "The model learned zero malicious concepts.",
+    "Supervised IDS cannot detect zero-days.",
+    "ROC-AUC above 0.8 proves genuine causal behavioral understanding.",
+    "A family failed because it is stealthy, unless the frozen behavioral analysis actually supports that characterization."
+  ],
+  "preferred_terminology": [
+    "unseen attack family",
+    "zero-training-exposure family",
+    "attack-family novelty",
+    "LOAO generalization"
+  ],
+  "zero_day_equivalence_claim": "FORBIDDEN"
+}

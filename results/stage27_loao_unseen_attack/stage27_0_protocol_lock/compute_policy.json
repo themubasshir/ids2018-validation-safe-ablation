@@ -1,0 +1,21 @@
+{
+  "stage": "Stage27-0",
+  "primary_execution_device": "CPU",
+  "primary_gpu_budget_hours": 0,
+  "cuda_visible_devices": "",
+  "xgboost_backend": "cpu",
+  "lightgbm_backend": "cpu",
+  "backend_override_semantics": "GPU/CUDA -> CPU is an execution-backend change only. No algorithmic hyperparameter is changed.",
+  "cpu_required_for": [
+    "XGBoost",
+    "LightGBM",
+    "preprocessing",
+    "fold construction",
+    "inference",
+    "metrics",
+    "bootstrap",
+    "figures"
+  ],
+  "gpu_use_in_primary_stage27": "FORBIDDEN",
+  "future_gpu_extension": "Requires a separately frozen pre-result amendment for a genuinely GPU-dependent extension."
+}

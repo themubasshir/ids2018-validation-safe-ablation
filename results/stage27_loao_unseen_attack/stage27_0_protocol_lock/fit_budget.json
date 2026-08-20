@@ -1,0 +1,23 @@
+{
+  "stage": "Stage27-0",
+  "eligible_folds": [
+    "BOT",
+    "DDOS",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "eligible_fold_count": 5,
+  "models_per_fold": 2,
+  "primary_representation_count": 1,
+  "primary_representation": "FULL_STAGE22_COMPATIBLE_70",
+  "behavior_only_model_sensitivity": {
+    "included": false,
+    "decision_time": "BEFORE_ANY_STAGE27_MODEL_RESULTS",
+    "reason": "Stage27 keeps FULL as the primary experiment and does not add the optional Stage23 BEHAVIOR_ONLY model branch. Behavioral similarity remains a separate preregistered secondary analysis."
+  },
+  "maximum_authorized_scientific_fits": 10,
+  "formula": "5 eligible folds * 2 model families * 1 representation = 10",
+  "fits_completed_at_stage27_0": 0,
+  "additional_fit_without_pre_result_amendment": "FORBIDDEN"
+}

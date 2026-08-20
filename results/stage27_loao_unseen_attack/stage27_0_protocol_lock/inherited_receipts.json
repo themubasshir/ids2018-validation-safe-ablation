@@ -1,0 +1,79 @@
+{
+  "stage": "Stage27-0",
+  "scientific_parent_commit": "da1cc26b2759f43e64122bb8ff7a21d112dc420f",
+  "source_artifacts": [
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/family_day_support.csv",
+      "bytes": 262,
+      "sha256": "d12a25b3474bf2172687fcf5ceeb0ea55b0692c0e78e169550f9febe474ff087"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/benign_day_support.csv",
+      "bytes": 116,
+      "sha256": "e1d2ec83b7f0c4fc5116d17c96162900e7a0e59cf36d127f58a38deec3b0ea55"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/taxonomy_receipt.json",
+      "bytes": 1403,
+      "sha256": "93f64f8930a57a5892d8eede23cca4c5febd28fd41e7c1d78a4715475111cac1"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/source_artifact_receipts.json",
+      "bytes": 6889,
+      "sha256": "69694af81a091ca9eb519f98eaa307f3da0e365595ac7124d0054fead69af456"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/temporal_feasibility.json",
+      "bytes": 13009,
+      "sha256": "f257e6edec1378ac46595fb6f3ec9ac1e8f85601754dc2a22d5ffcdf5d4204d8"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0a_family_day_feasibility/feasibility_audit.md",
+      "bytes": 6007,
+      "sha256": "617239382760ef7851cdc4dab09caeadcf5b7699c424d652b2fae6efcbdf5870"
+    },
+    {
+      "path": "results/stage22_temporal_session_safe/stage22_2a_inherited_model_execution_recipe_lock.json",
+      "bytes": 15581,
+      "sha256": "6c0a733d75735fe10c5ed90621f79157577c055cdab14bc981e6f161a1749a0a"
+    },
+    {
+      "path": "results/stage22_temporal_session_safe/stage22_2b_devval_input_manifest.json",
+      "bytes": 10391,
+      "sha256": "bfb26edeaf4e29225b38b0c804994abfa292b748155c991ead705cba65612bdb"
+    },
+    {
+      "path": "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+      "bytes": 2814,
+      "sha256": "f80045b4a7750379ee6473575829d4124549038c6bbcd350be2724db0cdf3872"
+    },
+    {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+      "bytes": 20143,
+      "sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2"
+    },
+    {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.json",
+      "bytes": 30632,
+      "sha256": "b7ff1d8563aafc69145be3acc827fbc59ae75d880b9804bad727f408299fce2f"
+    },
+    {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b2_complete_cicids2017_source_contract.json",
+      "bytes": 38654,
+      "sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779"
+    }
+  ],
+  "stage27_0a_remote_anchor": {
+    "commit": "da1cc26b2759f43e64122bb8ff7a21d112dc420f",
+    "required_artifact_count": 6,
+    "verified_before_stage27_0": true
+  },
+  "provenance_decisions": {
+    "family_support_population": "STAGE24_FULL_EFFECTIVE_CICIDS2017_POPULATION",
+    "stage20_compact_release_family_membership": "NOT_AUTHORIZED_BINARY_ONLY",
+    "feature_identity": "EXACT_STAGE22_70_FEATURE_ORDER",
+    "cicids2017_column_semantics": "STAGE24_FLAG_CORRECTED_70_FEATURE_MAPPING",
+    "class_weight_formula": "EXACT_STAGE22_DEVELOPMENT_BENIGN_DIVIDED_BY_ATTACK_FORMULA",
+    "threshold_policy": "EXACT_STAGE22_VALIDATION_ONLY_THRESHOLD_POLICY"
+  }
+}

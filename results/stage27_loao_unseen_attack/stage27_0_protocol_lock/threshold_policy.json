@@ -1,0 +1,39 @@
+{
+  "stage": "Stage27-0",
+  "source": "results/stage22_temporal_session_safe/stage22_2a_inherited_model_execution_recipe_lock.json",
+  "source_sha256": "6c0a733d75735fe10c5ed90621f79157577c055cdab14bc981e6f161a1749a0a",
+  "selection_population": "KNOWN_FAMILY_VALIDATION_ONLY",
+  "held_out_family_in_threshold_selection": "FORBIDDEN",
+  "selected_separately_per": [
+    "HELD_OUT_FAMILY_FOLD",
+    "MODEL_FAMILY"
+  ],
+  "standard": {
+    "threshold": 0.5,
+    "selected": false
+  },
+  "balanced": {
+    "objective": "MAXIMIZE_F1",
+    "tie_break_1": "MINIMIZE_FPR",
+    "tie_break_2": "CHOOSE_HIGHER_THRESHOLD"
+  },
+  "security": {
+    "constraint": "FPR <= 0.05",
+    "if_no_feasible_threshold": "SECURITY_THRESHOLD_INFEASIBLE_NO_RELAXATION",
+    "objective": "MAXIMIZE_F2",
+    "tie_break_1": "MINIMIZE_FPR",
+    "tie_break_2": "CHOOSE_HIGHER_THRESHOLD"
+  },
+  "grid": {
+    "construction": "INTEGER_PERCENT / 100",
+    "integer_start": 1,
+    "integer_stop_inclusive": 99,
+    "integer_step": 1,
+    "count": 99,
+    "start": 0.01,
+    "stop": 0.99,
+    "step": 0.01
+  },
+  "target_threshold_search": "FORBIDDEN",
+  "post_target_threshold_change": "FORBIDDEN"
+}

@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-08-20T10:44:03.324774+00:00",
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_execution_plan.csv",
+      "sha256": "3d19e36b9b6000de853e291468a46b668df4301dac4c9304a3b72dda04469273",
+      "size_bytes": 3463
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_raw_timing.csv",
+      "sha256": "c41ffa687b3b779762f0adae2808d5e6489c4402d57fd8029d1c45f601e5565c",
+      "size_bytes": 372477
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_condition_summary.csv",
+      "sha256": "b355ce66882d1ebcc0f4a1a3cd030b81f2dac25f462761d22bcd0428b3bc2625",
+      "size_bytes": 16278
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_worker_results.json",
+      "sha256": "4253b8a9992f413e8c77225f54fd7ace7078b19e6fc459ff7211251b09ce98ac",
+      "size_bytes": 104027
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_environment.json",
+      "sha256": "dde88a5ebafe82ccca466db967a4797d440bcbfa006429427d64ecce6c7b6e5f",
+      "size_bytes": 845
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_profile_receipt.json",
+      "sha256": "4ed7c3999ef6f6fffd8361ebca04f9a4398565a00953c50d97acae922c8502c2",
+      "size_bytes": 2292
+    }
+  ],
+  "schema": "stage26_g1_gpu_profile_manifest_v1",
+  "scientific_parent": "304e5613627a744cbd5d369857f8ac5667a520eb"
+}

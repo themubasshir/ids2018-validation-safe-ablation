@@ -1,0 +1,357 @@
+{
+  "stage": "Stage27-0A",
+  "created_at_utc": "2026-08-20T17:05:29.085819+00:00",
+  "scientific_boundary": {
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "bootstrap_replicates": 0,
+    "gpu_execution": false,
+    "primary_execution_device": "CPU",
+    "primary_gpu_budget_hours": 0
+  },
+  "chronology_semantics": {
+    "unit": "WEEKDAY_ATOMIC_PARTITIONS",
+    "required_order": "TRAIN < VALIDATION < TARGET",
+    "train_requires_benign": true,
+    "train_requires_known_attack_positive": true,
+    "validation_requires_benign": true,
+    "validation_requires_known_attack_positive": true,
+    "heldout_family_required_absent_from_train": true,
+    "heldout_family_required_absent_from_validation": true
+  },
+  "original_proposal": {
+    "train_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "validation_days": [
+      "Thursday"
+    ],
+    "target_days": [
+      "Friday"
+    ],
+    "universal_seven_fold_feasible": false,
+    "families_with_positive_target_support": [
+      "BOT",
+      "DDOS",
+      "PORT_SCAN"
+    ],
+    "reason": "Only BOT, DDOS and PORT_SCAN have Friday positives. DOS appears only Wednesday; AUTH_BRUTE_FORCE only Tuesday; INFILTRATION and WEB_ATTACK only Thursday. The universal Friday-target geometry therefore cannot produce all seven held-out-family targets."
+  },
+  "replacement_day_atomic_family_specific_geometry": {
+    "status": "FEASIBILITY_CORRECTION_PRE_RESULT",
+    "eligible_folds": [
+      "BOT",
+      "DDOS",
+      "INFILTRATION",
+      "PORT_SCAN",
+      "WEB_ATTACK"
+    ],
+    "eligible_fold_count": 5,
+    "structurally_ineligible_folds": [
+      "DOS",
+      "AUTH_BRUTE_FORCE"
+    ],
+    "structurally_ineligible_fold_count": 2,
+    "descriptive_only_eligible_folds": [
+      "INFILTRATION"
+    ],
+    "minimum_positive_support_for_inferential_claim": 50,
+    "family_records": {
+      "BOT": {
+        "held_out_family": "BOT",
+        "first_and_only_positive_day": "Friday",
+        "target_positive_support": 1966,
+        "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 0,
+          "heldout_validation_support": 0,
+          "heldout_target_support": 1966,
+          "family_target_exists_under_original_geometry": true
+        },
+        "status": "ELIGIBLE",
+        "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+        "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+        "replacement_geometry": {
+          "train_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday"
+          ],
+          "validation_days": [
+            "Thursday"
+          ],
+          "target_days": [
+            "Friday"
+          ],
+          "heldout_family_train_count": 0,
+          "heldout_family_validation_count": 0,
+          "train_benign": 1402023,
+          "train_known_attack": 266496,
+          "train_known_family_support": {
+            "DDOS": 0,
+            "DOS": 252661,
+            "AUTH_BRUTE_FORCE": 13835,
+            "INFILTRATION": 0,
+            "PORT_SCAN": 0,
+            "WEB_ATTACK": 0
+          },
+          "validation_benign": 456752,
+          "validation_known_attack": 2216,
+          "validation_known_family_support": {
+            "DDOS": 0,
+            "DOS": 0,
+            "AUTH_BRUTE_FORCE": 0,
+            "INFILTRATION": 36,
+            "PORT_SCAN": 0,
+            "WEB_ATTACK": 2180
+          },
+          "target_benign_available_same_day": 414322,
+          "target_heldout_attack": 1966
+        }
+      },
+      "DDOS": {
+        "held_out_family": "DDOS",
+        "first_and_only_positive_day": "Friday",
+        "target_positive_support": 128027,
+        "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 0,
+          "heldout_validation_support": 0,
+          "heldout_target_support": 128027,
+          "family_target_exists_under_original_geometry": true
+        },
+        "status": "ELIGIBLE",
+        "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+        "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+        "replacement_geometry": {
+          "train_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday"
+          ],
+          "validation_days": [
+            "Thursday"
+          ],
+          "target_days": [
+            "Friday"
+          ],
+          "heldout_family_train_count": 0,
+          "heldout_family_validation_count": 0,
+          "train_benign": 1402023,
+          "train_known_attack": 266496,
+          "train_known_family_support": {
+            "BOT": 0,
+            "DOS": 252661,
+            "AUTH_BRUTE_FORCE": 13835,
+            "INFILTRATION": 0,
+            "PORT_SCAN": 0,
+            "WEB_ATTACK": 0
+          },
+          "validation_benign": 456752,
+          "validation_known_attack": 2216,
+          "validation_known_family_support": {
+            "BOT": 0,
+            "DOS": 0,
+            "AUTH_BRUTE_FORCE": 0,
+            "INFILTRATION": 36,
+            "PORT_SCAN": 0,
+            "WEB_ATTACK": 2180
+          },
+          "target_benign_available_same_day": 414322,
+          "target_heldout_attack": 128027
+        }
+      },
+      "DOS": {
+        "held_out_family": "DOS",
+        "first_and_only_positive_day": "Wednesday",
+        "target_positive_support": 252661,
+        "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 252661,
+          "heldout_validation_support": 0,
+          "heldout_target_support": 0,
+          "family_target_exists_under_original_geometry": false
+        },
+        "status": "STRUCTURALLY_INELIGIBLE",
+        "reason_code": "NO_KNOWN_ATTACK_POSITIVES_IN_DAY_ATOMIC_TRAIN",
+        "reason": "The only day-atomic chronology before Wednesday gives TRAIN=['Monday'], but TRAIN contains 0 known-family attack positives. A supervised attack-vs-benign learner cannot be fit honestly under this geometry.",
+        "replacement_geometry": null
+      },
+      "AUTH_BRUTE_FORCE": {
+        "held_out_family": "AUTH_BRUTE_FORCE",
+        "first_and_only_positive_day": "Tuesday",
+        "target_positive_support": 13835,
+        "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 13835,
+          "heldout_validation_support": 0,
+          "heldout_target_support": 0,
+          "family_target_exists_under_original_geometry": false
+        },
+        "status": "STRUCTURALLY_INELIGIBLE",
+        "reason_code": "INSUFFICIENT_PRETARGET_WEEKDAY_DEPTH",
+        "reason": "AUTH_BRUTE_FORCE first appears on Tuesday. Fewer than two earlier weekday partitions exist, so separate day-atomic TRAIN and VALIDATION partitions cannot both precede TARGET.",
+        "replacement_geometry": null
+      },
+      "INFILTRATION": {
+        "held_out_family": "INFILTRATION",
+        "first_and_only_positive_day": "Thursday",
+        "target_positive_support": 36,
+        "support_status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 0,
+          "heldout_validation_support": 36,
+          "heldout_target_support": 0,
+          "family_target_exists_under_original_geometry": false
+        },
+        "status": "ELIGIBLE_DESCRIPTIVE_ONLY",
+        "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+        "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+        "replacement_geometry": {
+          "train_days": [
+            "Monday",
+            "Tuesday"
+          ],
+          "validation_days": [
+            "Wednesday"
+          ],
+          "target_days": [
+            "Thursday"
+          ],
+          "heldout_family_train_count": 0,
+          "heldout_family_validation_count": 0,
+          "train_benign": 961992,
+          "train_known_attack": 13835,
+          "train_known_family_support": {
+            "BOT": 0,
+            "DDOS": 0,
+            "DOS": 0,
+            "AUTH_BRUTE_FORCE": 13835,
+            "PORT_SCAN": 0,
+            "WEB_ATTACK": 0
+          },
+          "validation_benign": 440031,
+          "validation_known_attack": 252661,
+          "validation_known_family_support": {
+            "BOT": 0,
+            "DDOS": 0,
+            "DOS": 252661,
+            "AUTH_BRUTE_FORCE": 0,
+            "PORT_SCAN": 0,
+            "WEB_ATTACK": 0
+          },
+          "target_benign_available_same_day": 456752,
+          "target_heldout_attack": 36
+        }
+      },
+      "PORT_SCAN": {
+        "held_out_family": "PORT_SCAN",
+        "first_and_only_positive_day": "Friday",
+        "target_positive_support": 158930,
+        "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 0,
+          "heldout_validation_support": 0,
+          "heldout_target_support": 158930,
+          "family_target_exists_under_original_geometry": true
+        },
+        "status": "ELIGIBLE",
+        "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+        "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+        "replacement_geometry": {
+          "train_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday"
+          ],
+          "validation_days": [
+            "Thursday"
+          ],
+          "target_days": [
+            "Friday"
+          ],
+          "heldout_family_train_count": 0,
+          "heldout_family_validation_count": 0,
+          "train_benign": 1402023,
+          "train_known_attack": 266496,
+          "train_known_family_support": {
+            "BOT": 0,
+            "DDOS": 0,
+            "DOS": 252661,
+            "AUTH_BRUTE_FORCE": 13835,
+            "INFILTRATION": 0,
+            "WEB_ATTACK": 0
+          },
+          "validation_benign": 456752,
+          "validation_known_attack": 2216,
+          "validation_known_family_support": {
+            "BOT": 0,
+            "DDOS": 0,
+            "DOS": 0,
+            "AUTH_BRUTE_FORCE": 0,
+            "INFILTRATION": 36,
+            "WEB_ATTACK": 2180
+          },
+          "target_benign_available_same_day": 414322,
+          "target_heldout_attack": 158930
+        }
+      },
+      "WEB_ATTACK": {
+        "held_out_family": "WEB_ATTACK",
+        "first_and_only_positive_day": "Thursday",
+        "target_positive_support": 2180,
+        "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+        "original_mon_wed_train_thu_validation_fri_target": {
+          "heldout_train_support": 0,
+          "heldout_validation_support": 2180,
+          "heldout_target_support": 0,
+          "family_target_exists_under_original_geometry": false
+        },
+        "status": "ELIGIBLE",
+        "reason_code": "DAY_ATOMIC_STRICT_CHRONOLOGY_AVAILABLE",
+        "reason": "A strict day-atomic TRAIN < VALIDATION < TARGET geometry exists with zero held-out-family support in both TRAIN and VALIDATION.",
+        "replacement_geometry": {
+          "train_days": [
+            "Monday",
+            "Tuesday"
+          ],
+          "validation_days": [
+            "Wednesday"
+          ],
+          "target_days": [
+            "Thursday"
+          ],
+          "heldout_family_train_count": 0,
+          "heldout_family_validation_count": 0,
+          "train_benign": 961992,
+          "train_known_attack": 13835,
+          "train_known_family_support": {
+            "BOT": 0,
+            "DDOS": 0,
+            "DOS": 0,
+            "AUTH_BRUTE_FORCE": 13835,
+            "INFILTRATION": 0,
+            "PORT_SCAN": 0
+          },
+          "validation_benign": 440031,
+          "validation_known_attack": 252661,
+          "validation_known_family_support": {
+            "BOT": 0,
+            "DDOS": 0,
+            "DOS": 252661,
+            "AUTH_BRUTE_FORCE": 0,
+            "INFILTRATION": 0,
+            "PORT_SCAN": 0
+          },
+          "target_benign_available_same_day": 456752,
+          "target_heldout_attack": 2180
+        }
+      }
+    }
+  },
+  "important_semantic_limit": "Strict chronology means some non-held-out families occur only on or after a target day and therefore cannot all be represented in that fold's training set. Stage27-0 must describe the executable design as a chronology-first zero-training-exposure family audit and must not imply that every non-held-out family was necessarily seen in training.",
+  "stage27_0_authorization": "AUTHORIZED_ONLY_AFTER_THIS_STAGE27_0A_COMMIT_IS_REMOTELY_VERIFIED"
+}

@@ -1,0 +1,45 @@
+{
+  "stage": "Stage27-0A",
+  "type": "TAXONOMY_RECEIPT",
+  "created_at_utc": "2026-08-20T17:05:29.086307+00:00",
+  "execution_parent": "e47f44751bc71d219c5d0f3b3fca06d62037fb8b",
+  "taxonomy_source": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+  "taxonomy_source_sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+  "primary_family_count": 7,
+  "primary_families": [
+    "BOT",
+    "DDOS",
+    "DOS",
+    "AUTH_BRUTE_FORCE",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "raw_label_to_family": {
+    "bot": "BOT",
+    "ddos": "DDOS",
+    "dos goldeneye": "DOS",
+    "dos hulk": "DOS",
+    "dos slowhttptest": "DOS",
+    "dos slowloris": "DOS",
+    "ftp-patator": "AUTH_BRUTE_FORCE",
+    "heartbleed": "TARGET_ONLY_UNSEEN",
+    "infiltration": "INFILTRATION",
+    "portscan": "PORT_SCAN",
+    "ssh-patator": "AUTH_BRUTE_FORCE",
+    "web attack - brute force": "WEB_ATTACK",
+    "web attack - sql injection": "WEB_ATTACK",
+    "web attack - xss": "WEB_ATTACK"
+  },
+  "target_only_unseen_not_in_primary_seven_family_taxonomy": {
+    "heartbleed": {
+      "mapping": "TARGET_ONLY_UNSEEN",
+      "support": 11,
+      "weekday": "Wednesday"
+    }
+  },
+  "taxonomy_mutated": false,
+  "family_merge_after_stage24": false,
+  "family_split_after_stage24": false,
+  "status": "EXACT_STAGE24_TAXONOMY_INHERITED"
+}

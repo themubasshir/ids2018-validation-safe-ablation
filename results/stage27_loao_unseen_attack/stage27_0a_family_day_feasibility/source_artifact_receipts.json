@@ -1,0 +1,171 @@
+{
+  "stage": "Stage27-0A",
+  "type": "SOURCE_ARTIFACT_RECEIPTS",
+  "created_at_utc": "2026-08-20T17:05:29.086497+00:00",
+  "execution_parent": "e47f44751bc71d219c5d0f3b3fca06d62037fb8b",
+  "stage26_closure": {
+    "verified": true,
+    "evidence": [
+      {
+        "path": "results/stage26_deployment_profiling/stage26_12_final_synthesis/stage26_g2_final_stage26_closure_receipt.json",
+        "sha256": "e564bc9408b3bb61596e96442e604b1cee03277718015cfd78a0811a47871f65",
+        "bytes": 1867,
+        "stage26_status": "COMPLETE"
+      },
+      {
+        "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/stage26_g2_final_stage26_closure_receipt.json",
+        "sha256": "e564bc9408b3bb61596e96442e604b1cee03277718015cfd78a0811a47871f65",
+        "bytes": 1867,
+        "stage26_status": "COMPLETE"
+      }
+    ]
+  },
+  "stage24_durable_sources": [
+    {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+      "bytes": 20143,
+      "sha256": "8ef234a9d283f2008f21b9add4361f14328d1f3c1cffa278077f59d9eb9e37c2",
+      "sha256_matches_frozen_expected": true
+    },
+    {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b2_complete_cicids2017_source_contract.json",
+      "bytes": 38654,
+      "sha256": "96f7fc5c0227660fe8ec17f5173630ee2ac71f6be199e81ee37dac0ad25d9779",
+      "sha256_matches_frozen_expected": true
+    },
+    {
+      "path": "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0b_exact_cicids2017_source_recovery.json",
+      "bytes": 25506,
+      "sha256": "8a84f1dccc51f224427e00144088058590f48c8b603cfd798f6ba431d659da1c",
+      "sha256_matches_frozen_expected": true
+    },
+    {
+      "path": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2a_bridge62_published/stage24_2a_bridge62_published_result.json",
+      "bytes": 19590,
+      "sha256": "1d4b3010fdc8b0f7f62a0fed2c373824ce99cb2f16936c021756749a9ca54749",
+      "sha256_matches_frozen_expected": true
+    }
+  ],
+  "effective_stage27_support_population": {
+    "dataset": "CICIDS2017",
+    "population_identity": "STAGE24_FULL_EFFECTIVE_TARGET_POPULATION",
+    "rows": 2830743,
+    "benign": 2273097,
+    "nonbenign_including_heartbleed": 557646,
+    "primary_seven_family_attack": 557635,
+    "heartbleed_target_only_unseen": 11,
+    "support_source": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2a_bridge62_published/stage24_2a_bridge62_published_result.json"
+  },
+  "stage20_compact_release_population_decision": {
+    "all_five_compact_manifests_binary_only": true,
+    "stage27_family_support_source": "STAGE24_FULL_CICIDS2017_EFFECTIVE_POPULATION",
+    "stage20_compact_release_role": "VALID_FOR_STAGE20_BINARY_RAW_BYTE_EXPERIMENTS_BUT_NOT_A_DURABLE_SEVEN_FAMILY_MEMBERSHIP_SOURCE",
+    "manifests": [
+      {
+        "day": "Monday",
+        "path": "results/stage20_1e_training/stage20_1e1m_monday_compact_corpus_manifest.json",
+        "bytes": 8863,
+        "sha256": "a726d87e044e56171282e9be2fc6220c47de0cd09b153624062713f1c3116892",
+        "compact_files": [
+          "encoded_bytes.bin",
+          "flow_offsets.npy",
+          "labels.npy",
+          "packet_lengths.npy"
+        ],
+        "flow_count": 528509,
+        "matched_binary_counts": {
+          "0": 528509
+        },
+        "family_label_array_present": false,
+        "binary_only_for_stage27_family_identity": true
+      },
+      {
+        "day": "Tuesday",
+        "path": "results/stage20_1e_training/stage20_1e1t_tuesday_compact_corpus_manifest.json",
+        "bytes": 7403,
+        "sha256": "20f920b576b49a36131fb271e963ef2bd7900f3c7bfc5458b24991676b5515af",
+        "compact_files": [
+          "encoded_bytes.bin",
+          "flow_offsets.npy",
+          "labels.npy",
+          "packet_lengths.npy"
+        ],
+        "flow_count": 4170,
+        "matched_binary_counts": {
+          "0": 4008,
+          "1": 162
+        },
+        "family_label_array_present": false,
+        "binary_only_for_stage27_family_identity": true
+      },
+      {
+        "day": "Wednesday",
+        "path": "results/stage20_1e_training/stage20_1e1w_wednesday_compact_corpus_manifest.json",
+        "bytes": 7071,
+        "sha256": "42a8f3813a786751999c209dce323ba701d9c29cd19add09aaadbd3297921d62",
+        "compact_files": [
+          "encoded_bytes.bin",
+          "flow_offsets.npy",
+          "labels.npy",
+          "packet_lengths.npy"
+        ],
+        "flow_count": 12951,
+        "matched_binary_counts": {
+          "0": 8657,
+          "1": 4294
+        },
+        "family_label_array_present": false,
+        "binary_only_for_stage27_family_identity": true
+      },
+      {
+        "day": "Thursday",
+        "path": "results/stage20_1e_training/stage20_1e1v_thursday_validation_compact_corpus_manifest.json",
+        "bytes": 28316,
+        "sha256": "93419837e38a7fea5ef9e183bdd78ceb9d719588c725bd2d1a3d91355cfffb04",
+        "compact_files": [
+          "encoded_bytes.bin",
+          "flow_offsets.npy",
+          "labels.npy",
+          "packet_lengths.npy"
+        ],
+        "flow_count": 8197,
+        "matched_binary_counts": {
+          "0": 8155,
+          "1": 42
+        },
+        "family_label_array_present": false,
+        "binary_only_for_stage27_family_identity": true
+      },
+      {
+        "day": "Friday",
+        "path": "results/stage20_1e_training/stage20_1e4_friday_holdout_compact_corpus_manifest.json",
+        "bytes": 24043,
+        "sha256": "8f2ddcaac7a3209f8875155c083707981bd58aecf4bec143ace19b6975c125ff",
+        "compact_files": [
+          "encoded_bytes.bin",
+          "flow_offsets.npy",
+          "labels.npy",
+          "packet_lengths.npy"
+        ],
+        "flow_count": 12088,
+        "matched_binary_counts": {
+          "0": 6486,
+          "1": 5602
+        },
+        "family_label_array_present": false,
+        "binary_only_for_stage27_family_identity": true
+      }
+    ]
+  },
+  "population_discrepancy_resolution": {
+    "discrepancy": "Stage20 compact corpora are much smaller exact-matched raw-byte corpora, whereas Stage24 exposes the full 2,830,743-row CICIDS2017 effective target population.",
+    "decision": "Use the Stage24 full effective CICIDS2017 population for Stage27 seven-family feasibility because it durably preserves the canonical attack-family label counts. Do not substitute Stage20 compact binary labels for family identities.",
+    "reason": "All five committed Stage20 compact manifests persist labels.npy as binary labels and do not persist a family-label array or durable seven-family membership mapping.",
+    "scientific_adaptation": false,
+    "decision_time": "BEFORE_ANY_STAGE27_MODEL_FIT_OR_INFERENCE"
+  },
+  "model_fits": 0,
+  "model_inference": 0,
+  "corpus_archives_downloaded_by_stage27_0a": 0,
+  "release_corpus_recreated": false
+}

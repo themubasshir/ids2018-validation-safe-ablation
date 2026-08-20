@@ -1,0 +1,166 @@
+{
+  "stage": "Stage27-2B",
+  "type": "THURSDAY_PROBABILITY_MANIFEST",
+  "created_at_utc": "2026-08-20T18:50:29.654544+00:00",
+  "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+  "validation_probability_vectors": {
+    "BOT::XGBOOST": {
+      "family": "BOT",
+      "learner": "XGBOOST",
+      "role": "THURSDAY_KNOWN_FAMILY_VALIDATION",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/BOT_XGBOOST_thursday_known_validation_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/BOT_XGBOOST_thursday_known_validation_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6",
+      "content_sha256": "fcbd6cac89c524443420a420ab9ae15831c507a965c2048329dabbf4305b13cc",
+      "target_opening_consumed": 0
+    },
+    "BOT::LIGHTGBM": {
+      "family": "BOT",
+      "learner": "LIGHTGBM",
+      "role": "THURSDAY_KNOWN_FAMILY_VALIDATION",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/BOT_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/BOT_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a",
+      "content_sha256": "6ff33ac4e4061d8f2b3c70e254dad259cec4cf46b184fc875c743c5f91f21806",
+      "target_opening_consumed": 0
+    },
+    "DDOS::XGBOOST": {
+      "family": "DDOS",
+      "learner": "XGBOOST",
+      "role": "THURSDAY_KNOWN_FAMILY_VALIDATION",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/DDOS_XGBOOST_thursday_known_validation_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/DDOS_XGBOOST_thursday_known_validation_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6",
+      "content_sha256": "fcbd6cac89c524443420a420ab9ae15831c507a965c2048329dabbf4305b13cc",
+      "target_opening_consumed": 0
+    },
+    "DDOS::LIGHTGBM": {
+      "family": "DDOS",
+      "learner": "LIGHTGBM",
+      "role": "THURSDAY_KNOWN_FAMILY_VALIDATION",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/DDOS_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/DDOS_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a",
+      "content_sha256": "6ff33ac4e4061d8f2b3c70e254dad259cec4cf46b184fc875c743c5f91f21806",
+      "target_opening_consumed": 0
+    },
+    "PORT_SCAN::XGBOOST": {
+      "family": "PORT_SCAN",
+      "learner": "XGBOOST",
+      "role": "THURSDAY_KNOWN_FAMILY_VALIDATION",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/PORT_SCAN_XGBOOST_thursday_known_validation_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/PORT_SCAN_XGBOOST_thursday_known_validation_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6",
+      "content_sha256": "fcbd6cac89c524443420a420ab9ae15831c507a965c2048329dabbf4305b13cc",
+      "target_opening_consumed": 0
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "family": "PORT_SCAN",
+      "learner": "LIGHTGBM",
+      "role": "THURSDAY_KNOWN_FAMILY_VALIDATION",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/PORT_SCAN_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/PORT_SCAN_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a",
+      "content_sha256": "6ff33ac4e4061d8f2b3c70e254dad259cec4cf46b184fc875c743c5f91f21806",
+      "target_opening_consumed": 0
+    }
+  },
+  "target_probability_vectors": {
+    "INFILTRATION::XGBOOST": {
+      "family": "INFILTRATION",
+      "learner": "XGBOOST",
+      "role": "THURSDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/INFILTRATION_XGBOOST_thursday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/INFILTRATION_XGBOOST_thursday_operational_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "09a3047ffa702387a9a2b2169fec70201f4810a74d150e2ee3e437f3a14b8440",
+      "content_sha256": "95840b468b34845be9b1b7081550c344ec1ea5693efc22aa8aaadf98ef17e284",
+      "opening_number": 1
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "family": "INFILTRATION",
+      "learner": "LIGHTGBM",
+      "role": "THURSDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/INFILTRATION_LIGHTGBM_thursday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/INFILTRATION_LIGHTGBM_thursday_operational_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "5e65b6343e3b3f157679dcd39a8555242ef20e25d0f95973d38c71594c40c55f",
+      "content_sha256": "a6b48f8bc2d6f975731f97f623c3818838e145004a278e9273ee91927fb46b6a",
+      "opening_number": 1
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "family": "WEB_ATTACK",
+      "learner": "XGBOOST",
+      "role": "THURSDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/WEB_ATTACK_XGBOOST_thursday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/WEB_ATTACK_XGBOOST_thursday_operational_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "09a3047ffa702387a9a2b2169fec70201f4810a74d150e2ee3e437f3a14b8440",
+      "content_sha256": "95840b468b34845be9b1b7081550c344ec1ea5693efc22aa8aaadf98ef17e284",
+      "opening_number": 1
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "family": "WEB_ATTACK",
+      "learner": "LIGHTGBM",
+      "role": "THURSDAY_TARGET_OPENING_OPERATIONAL_VECTOR",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/WEB_ATTACK_LIGHTGBM_thursday_operational_prob_float32.npy",
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/WEB_ATTACK_LIGHTGBM_thursday_operational_prob_float32.npy",
+      "shape": [
+        458968
+      ],
+      "dtype": "float32",
+      "npy_bytes": 1836000,
+      "npy_sha256": "5e65b6343e3b3f157679dcd39a8555242ef20e25d0f95973d38c71594c40c55f",
+      "content_sha256": "a6b48f8bc2d6f975731f97f623c3818838e145004a278e9273ee91927fb46b6a",
+      "opening_number": 1
+    }
+  },
+  "validation_vector_count": 6,
+  "target_vector_count": 4,
+  "total_vector_count": 10,
+  "storage_dtype": "float32",
+  "model_fits": 0,
+  "target_threshold_searches": 0
+}

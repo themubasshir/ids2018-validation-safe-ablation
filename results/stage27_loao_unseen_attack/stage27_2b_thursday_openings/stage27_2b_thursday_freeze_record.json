@@ -1,0 +1,108 @@
+{
+  "stage": "Stage27-2B",
+  "status": "THURSDAY_VALIDATION_AND_TWO_TARGET_OPENINGS_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "created_at_utc": "2026-08-20T18:50:29.739169+00:00",
+  "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+  "required_artifact_count": 16,
+  "artifact_hashes_before_freeze_record": {
+    "friday_fold_thursday_validation_threshold_receipt.json": {
+      "bytes": 240339,
+      "sha256": "58319b85251400ba1169dd7f155b615be61dc7145565fa81b00985c0160340d1"
+    },
+    "target/INFILTRATION_LIGHTGBM_thursday_operational_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "5e65b6343e3b3f157679dcd39a8555242ef20e25d0f95973d38c71594c40c55f"
+    },
+    "target/INFILTRATION_XGBOOST_thursday_operational_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "09a3047ffa702387a9a2b2169fec70201f4810a74d150e2ee3e437f3a14b8440"
+    },
+    "target/WEB_ATTACK_LIGHTGBM_thursday_operational_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "5e65b6343e3b3f157679dcd39a8555242ef20e25d0f95973d38c71594c40c55f"
+    },
+    "target/WEB_ATTACK_XGBOOST_thursday_operational_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "09a3047ffa702387a9a2b2169fec70201f4810a74d150e2ee3e437f3a14b8440"
+    },
+    "thursday_feature_materialization_receipt.json": {
+      "bytes": 4603,
+      "sha256": "706fddbd6224b3b8ff2b256099f36f9b815b43bda94a5801f663d6dfd61a3524"
+    },
+    "thursday_primary_target_results.json": {
+      "bytes": 27308,
+      "sha256": "1d21757d5632fa5b28ea87b60d25943e5e9a8795ad26a06a97dcae64f7da5e97"
+    },
+    "thursday_probability_manifest.json": {
+      "bytes": 8498,
+      "sha256": "bb0690ab656f0f4142793ea2e4ba3991e2a4c932f387ace02826994f00440899"
+    },
+    "thursday_target_opening_receipt.json": {
+      "bytes": 3170,
+      "sha256": "ab38aa80d046273a56e5436ffb328c64d215d93a31eb3448b2cb4dfbe3a267c1"
+    },
+    "validation/BOT_LIGHTGBM_thursday_known_validation_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a"
+    },
+    "validation/BOT_XGBOOST_thursday_known_validation_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6"
+    },
+    "validation/DDOS_LIGHTGBM_thursday_known_validation_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a"
+    },
+    "validation/DDOS_XGBOOST_thursday_known_validation_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6"
+    },
+    "validation/PORT_SCAN_LIGHTGBM_thursday_known_validation_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a"
+    },
+    "validation/PORT_SCAN_XGBOOST_thursday_known_validation_prob_float32.npy": {
+      "bytes": 1836000,
+      "sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6"
+    }
+  },
+  "model_fit_budget": {
+    "authorized_total": 10,
+    "completed_before_stage": 10,
+    "completed_in_stage": 0,
+    "remaining": 0,
+    "model_refit_authorized": false
+  },
+  "threshold_status": {
+    "BOT": "ALL_OPERATING_POINTS_FROZEN",
+    "DDOS": "ALL_OPERATING_POINTS_FROZEN",
+    "INFILTRATION": "ALL_OPERATING_POINTS_FROZEN",
+    "PORT_SCAN": "ALL_OPERATING_POINTS_FROZEN",
+    "WEB_ATTACK": "ALL_OPERATING_POINTS_FROZEN"
+  },
+  "target_opening_status": {
+    "BOT": "SEALED_0_OF_1",
+    "DDOS": "SEALED_0_OF_1",
+    "INFILTRATION": "CONSUMED_1_OF_1",
+    "PORT_SCAN": "SEALED_0_OF_1",
+    "WEB_ATTACK": "CONSUMED_1_OF_1",
+    "total_consumed": 2,
+    "total_budget": 5
+  },
+  "scientific_actions_completed": {
+    "thursday_feature_rows_materialized": 458968,
+    "friday_fold_validation_probability_vectors": 6,
+    "friday_fold_threshold_selections": 6,
+    "thursday_target_probability_vectors": 4,
+    "target_openings_consumed": 2,
+    "model_fits": 0,
+    "model_refits": 0,
+    "target_threshold_searches": 0,
+    "friday_predictor_source_files_read": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "next_authorized_step_after_remote_verification": "MATERIALIZE THE FROZEN FRIDAY 70-FEATURE POPULATION ONCE AND CONSUME THE SINGLE AUTHORIZED TARGET OPENINGS FOR BOT, DDOS, AND PORT_SCAN USING THEIR ALREADY-FROZEN MODELS AND THURSDAY-FROZEN OPERATING POINTS. NO REFIT, NO TARGET THRESHOLD SEARCH.",
+  "additional_model_fit_authorized": false,
+  "target_adaptation_authorized": false
+}

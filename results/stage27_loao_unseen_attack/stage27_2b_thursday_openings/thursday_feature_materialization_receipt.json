@@ -1,0 +1,119 @@
+{
+  "stage": "Stage27-2B",
+  "type": "THURSDAY_FEATURE_MATERIALIZATION_RECEIPT",
+  "created_at_utc": "2026-08-20T18:50:29.639439+00:00",
+  "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+  "runtime_feature_receipt": {
+    "stage": "Stage27-2B",
+    "type": "THURSDAY_RUNTIME_FEATURE_RECEIPT",
+    "created_at_utc": "2026-08-20T18:49:45.248251+00:00",
+    "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+    "feature_representation": "STAGE22_COMPATIBLE_RAW_FLOAT32_70_ON_CICIDS2017",
+    "feature_count": 70,
+    "feature_order_sha256": "6814c282137562890be3a13a91f369b9c502a1258d335464540bd373f1499edf",
+    "adapter_mapping_sha256": "88d7f3e133e7d20ee05dc4618c6102f0c420936e0fe72a9a094d951a9c4dad7a",
+    "rows": 458968,
+    "global_start": 1668530,
+    "global_stop_exclusive": 2127498,
+    "source_access_log": [
+      {
+        "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "basename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "effective_rows_read": 288602,
+        "predictor_columns_read": 70,
+        "excluded_suffix_rows_read": 0
+      },
+      {
+        "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "basename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "effective_rows_read": 170366,
+        "predictor_columns_read": 70,
+        "excluded_suffix_rows_read": 0
+      }
+    ],
+    "numeric_audit_by_source": [
+      {
+        "day": "Thursday",
+        "remote": "traffic_labels/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "basename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "effective_rows": 288602,
+        "positive_inf_to_nan": 396,
+        "negative_inf_to_nan": 0,
+        "nan_cells_before_inf_conversion": 18,
+        "nan_cells_after_inf_conversion_float64": 414,
+        "float32_nan_cells": 414,
+        "float32_inf_cells": 0
+      },
+      {
+        "day": "Thursday",
+        "remote": "traffic_labels/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "basename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "effective_rows": 170366,
+        "positive_inf_to_nan": 250,
+        "negative_inf_to_nan": 0,
+        "nan_cells_before_inf_conversion": 20,
+        "nan_cells_after_inf_conversion_float64": 270,
+        "float32_nan_cells": 270,
+        "float32_inf_cells": 0
+      }
+    ],
+    "numeric_audit_global": {
+      "positive_inf_to_nan": 646,
+      "negative_inf_to_nan": 0,
+      "float32_nan_cells": 684,
+      "float32_inf_cells": 0
+    },
+    "artifacts": {
+      "features": {
+        "path": "/kaggle/working/stage27_2b_thursday_cache/features/thursday_effective_features_float32.npy",
+        "shape": [
+          458968,
+          70
+        ],
+        "dtype": "float32",
+        "npy_bytes": 128511168,
+        "npy_sha256": "a01fd41a875639075eb417937f998b1c7bb96a188554ca48935bc21492664431",
+        "content_sha256": "a1ad1ba45dd5c63d2901e5a5b5054b281070345587aff07febb9d0f991bf97ce"
+      },
+      "global_idx": {
+        "path": "/kaggle/working/stage27_2b_thursday_cache/features/thursday_global_idx_int32.npy",
+        "shape": [
+          458968
+        ],
+        "dtype": "int32",
+        "npy_bytes": 1836000,
+        "npy_sha256": "9e6f00dfa7b487cedffe056d74d549c2ad23667a4d675794da03f756c191fabc",
+        "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40"
+      },
+      "family_codes": {
+        "path": "/kaggle/working/stage27_2b_thursday_cache/features/thursday_family_codes_uint8.npy",
+        "shape": [
+          458968
+        ],
+        "dtype": "uint8",
+        "npy_bytes": 459096,
+        "npy_sha256": "246b9bacc1f8a6d0614a99884709dad9ad4dfe3ffbb4397c121569a9143b73aa",
+        "content_sha256": "cd88a086bf57775e48e229c46b30081419c731155c81bf7820ce99678fb9d3d3"
+      }
+    },
+    "model_inference_completed_at_receipt_creation": 0,
+    "target_openings_consumed_at_receipt_creation": 0
+  },
+  "population": {
+    "rows": 458968,
+    "benign": 456752,
+    "infiltration": 36,
+    "web_attack": 2180,
+    "primary_taxonomy_attack": 2216,
+    "heartbleed": 0,
+    "other_unknown": 0
+  },
+  "cross_fold_roles": {
+    "BOT": "KNOWN_FAMILY_VALIDATION",
+    "DDOS": "KNOWN_FAMILY_VALIDATION",
+    "PORT_SCAN": "KNOWN_FAMILY_VALIDATION",
+    "INFILTRATION": "TARGET_DAY",
+    "WEB_ATTACK": "TARGET_DAY"
+  },
+  "friday_predictor_source_files_read": 0
+}

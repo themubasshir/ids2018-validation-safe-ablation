@@ -1,0 +1,84 @@
+{
+  "stage": "Stage27-2B",
+  "type": "THURSDAY_TARGET_OPENING_LEDGER_RECEIPT",
+  "created_at_utc": "2026-08-20T18:50:29.652159+00:00",
+  "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+  "opening_definition": "A fold target opening occurs when that fold's frozen target predictor matrix is first supplied to either frozen Stage27 learner for scientific target inference.",
+  "same_opening_model_rule": "Both already-frozen learners and all already-frozen operating points for a fold must be evaluated from the same authorized target opening.",
+  "families": {
+    "BOT": {
+      "target_day": "Friday",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "status": "SEALED"
+    },
+    "DDOS": {
+      "target_day": "Friday",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "status": "SEALED"
+    },
+    "INFILTRATION": {
+      "target_day": "Thursday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE",
+      "runtime_opening_state": {
+        "stage": "Stage27-2B",
+        "family": "INFILTRATION",
+        "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+        "opening_number": 1,
+        "opening_budget": 1,
+        "status": "OPENING_COMPLETE",
+        "opening_started_utc": "2026-08-20T18:50:17.805249+00:00",
+        "feature_content_sha256": "a1ad1ba45dd5c63d2901e5a5b5054b281070345587aff07febb9d0f991bf97ce",
+        "model_sha256": {
+          "XGBOOST": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9",
+          "LIGHTGBM": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751"
+        },
+        "completed_learners": [
+          "XGBOOST",
+          "LIGHTGBM"
+        ],
+        "adaptation_authorized": false,
+        "opening_completed_utc": "2026-08-20T18:50:23.710099+00:00"
+      }
+    },
+    "PORT_SCAN": {
+      "target_day": "Friday",
+      "opening_budget": 1,
+      "openings_consumed": 0,
+      "status": "SEALED"
+    },
+    "WEB_ATTACK": {
+      "target_day": "Thursday",
+      "opening_budget": 1,
+      "openings_consumed": 1,
+      "status": "OPENED_COMPLETE",
+      "runtime_opening_state": {
+        "stage": "Stage27-2B",
+        "family": "WEB_ATTACK",
+        "scientific_parent_commit": "8994c42e1fa31501784a7653d10b34c30a07c26c",
+        "opening_number": 1,
+        "opening_budget": 1,
+        "status": "OPENING_COMPLETE",
+        "opening_started_utc": "2026-08-20T18:50:23.710640+00:00",
+        "feature_content_sha256": "a1ad1ba45dd5c63d2901e5a5b5054b281070345587aff07febb9d0f991bf97ce",
+        "model_sha256": {
+          "XGBOOST": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9",
+          "LIGHTGBM": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751"
+        },
+        "completed_learners": [
+          "XGBOOST",
+          "LIGHTGBM"
+        ],
+        "adaptation_authorized": false,
+        "opening_completed_utc": "2026-08-20T18:50:29.453404+00:00"
+      }
+    }
+  },
+  "eligible_opening_budget_total": 5,
+  "openings_consumed_after_stage": 2,
+  "openings_remaining_after_stage": 3,
+  "reopening_for_adaptation": "FORBIDDEN"
+}

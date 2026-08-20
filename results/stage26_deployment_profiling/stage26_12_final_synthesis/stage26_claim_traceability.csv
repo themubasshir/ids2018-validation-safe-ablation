@@ -1,0 +1,9 @@
+claim_id,section,claim,source_artifact,source_metrics,scientific_boundary
+P1-C01,Deployment Efficiency,Masked CNN batch-1 GPU p95 latency advantage.,T26_CPU1_GPU_BATCH1_ANCHOR.csv,CPU1 p95=9.532039 ms; GPU p95=0.877846 ms; ratio=10.858,COMPONENT_LEVEL_PREPARED_INPUT_TO_MATERIALIZED_PROBABILITY
+P1-C02,Deployment Efficiency,FT ensemble batch-1 GPU p95 latency advantage.,T26_CPU1_GPU_BATCH1_ANCHOR.csv,CPU1 p95=11.302716 ms; GPU p95=5.821576 ms; ratio=1.942,COMPONENT_LEVEL_PREPARED_INPUT_TO_MATERIALIZED_PROBABILITY
+P1-C03,Deployment Efficiency,XGBoost batch-dependent CPU/GPU crossover.,T26_CPU1_GPU_MATCHED_COMPARISON.csv,B1 ratio=0.259; B256=1.023; B1024=3.257; B8192=12.405,COMPONENT_LEVEL_PREPARED_INPUT_TO_MATERIALIZED_PROBABILITY
+P1-C04,Deployment Efficiency,CatBoost remains CPU-favorable until very large batches.,T26_CPU1_GPU_MATCHED_COMPARISON.csv,B1 ratio=0.162; B1024=0.986; B8192=1.242,COMPONENT_LEVEL_PREPARED_INPUT_TO_MATERIALIZED_PROBABILITY
+P1-C05,Resource Feasibility,CNN B8192 produced a genuine CUDA OOM.,T26_GPU_WARM_INFERENCE_MEMORY.csv,"STAGE20_MASKED_CNN_V1, batch_size=8192, status=RESOURCE_LIMIT_OOM",NON_PASS_COST_NOT_IMPUTED
+P1-C06,Backend Availability,LightGBM and dependent ensemble GPU paths are unavailable.,T26_GPU_BACKEND_RESOURCE_STATUS.csv,LightGBM=BACKEND_UNAVAILABLE; ENS_LGBM_XGB_EQUAL=BACKEND_UNAVAILABLE,NO_FORCED_BACKEND_SUBSTITUTION
+P1-C07,Pareto Discussion,"Group-A CPU frontier includes XGBoost, LightGBM, and CatBoost.",T26_PARETO.csv,XGBoost=FRONTIER_MEMBER; LightGBM=FRONTIER_MEMBER; CatBoost=FRONTIER_MEMBER,WITHIN_GROUP_ONLY
+P1-C08,Pareto Discussion,Masked ViT dominates masked CNN on the descriptive Group-B CPU frontier.,T26_PARETO.csv,"ViT PR-AUC=0.606537, p95=2.105199 ms; CNN PR-AUC=0.489453, p95=9.532039 ms",GROUP_B_ONLY

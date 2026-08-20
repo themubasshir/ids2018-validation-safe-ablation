@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-08-20T10:44:03.317872+00:00",
+  "gpu_bootstrap_contract_sha256": "09dfeb386f462597d4fca76aad5676d20901017c6f8175d221d2f85e108d59b7",
+  "hardware_mode": "GPU_SINGLE_T4",
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "nvidia_smi_gpu_record": "1, Tesla T4, GPU-899c600e-794e-3a2e-3c0e-fccc6615ffc4, 580.159.04, 15360",
+  "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "scientific_parent": "304e5613627a744cbd5d369857f8ac5667a520eb",
+  "selected_gpu_reason": "GPU1_PRISTINE_BEFORE_G1_GPU0_USED_ONLY_FOR_G0B_SMOKE_PROBES_NOT_PERFORMANCE_SELECTION",
+  "selected_physical_gpu_index": 1,
+  "torch_cuda_parent": "12.8",
+  "torch_version_parent": "2.10.0+cu128",
+  "worker_sha256": "cbe469866aa0b1a33b31225e9946b25be6ae7410abf27461e0620facee3f1e2e"
+}

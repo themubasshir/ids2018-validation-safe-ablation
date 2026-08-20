@@ -1,0 +1,17 @@
+{
+  "byte_for_byte_copy_records": 69,
+  "corpus_accessed": false,
+  "cpu_closure_anchor": "304e5613627a744cbd5d369857f8ac5667a520eb",
+  "generated_at_utc": "2026-08-20T11:25:44.350849+00:00",
+  "gpu_g1_anchor": "79b9c23c91ef7185d35b700e6f6f84aefb54ab35",
+  "gpu_used": false,
+  "model_loaded": false,
+  "new_measurement": false,
+  "publication_pdfs": 10,
+  "publication_pngs": 10,
+  "publication_tables": 12,
+  "repository_parent": "3bf4c6e9e9cb2e6ccfeb108e35cbf5fbeded6fd4",
+  "schema": "stage26_canonical_publication_closeout_manifest_v1",
+  "scientific_stage26_anchor": "9e8354ecc9cfa72c28aa037e5d2053de422bf7a2",
+  "stage26_8_gpu_protocol_lock_status": "POST_CLOSURE_ARCHIVAL_RECONSTRUCTION_NOT_PROSPECTIVE"
+}

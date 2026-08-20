@@ -1,0 +1,6 @@
+batch_size,n_pairs,fingerprints_equal_count,median_throughput_ratio_v3_over_v2,effect_direction,interpretation
+1,5,5,1.0445519924635573,V3_MEDIAN_THROUGHPUT_GREATER_THAN_V2,Removing the historical inter-iteration full-output fingerprint changes measured representation timing in a batch-dependent direction in this contemporaneous paired sensitivity experiment.
+64,5,5,0.8868613759450831,V3_MEDIAN_THROUGHPUT_LESS_THAN_V2,Removing the historical inter-iteration full-output fingerprint changes measured representation timing in a batch-dependent direction in this contemporaneous paired sensitivity experiment.
+256,5,5,0.9335575049266839,V3_MEDIAN_THROUGHPUT_LESS_THAN_V2,Removing the historical inter-iteration full-output fingerprint changes measured representation timing in a batch-dependent direction in this contemporaneous paired sensitivity experiment.
+1024,5,5,0.9710431219049023,V3_MEDIAN_THROUGHPUT_LESS_THAN_V2,Removing the historical inter-iteration full-output fingerprint changes measured representation timing in a batch-dependent direction in this contemporaneous paired sensitivity experiment.
+8192,5,5,1.0043477474272686,V3_MEDIAN_THROUGHPUT_GREATER_THAN_V2,Removing the historical inter-iteration full-output fingerprint changes measured representation timing in a batch-dependent direction in this contemporaneous paired sensitivity experiment.

@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-08-20T11:25:44.230126+00:00",
+  "directory_role": "POST_CLOSURE_CANONICAL_ARCHIVAL_INDEX",
+  "gpu_g1_anchor": "79b9c23c91ef7185d35b700e6f6f84aefb54ab35",
+  "gpu_rerun": false,
+  "new_measurement": false,
+  "prospective_preregistration": false,
+  "retroactive_protocol_claim": false,
+  "schema": "stage26_8_gpu_protocol_lock_archival_notice_v1",
+  "scientific_stage26_anchor": "9e8354ecc9cfa72c28aa037e5d2053de422bf7a2",
+  "statement": "This directory was created after Stage26 scientific closure to provide the canonical publication-facing GPU protocol location. It indexes and copies already-frozen G1 protocol/execution artifacts byte-for-byte. It must not be cited as evidence that this directory itself existed prospectively before GPU measurement."
+}

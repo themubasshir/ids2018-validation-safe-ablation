@@ -1,0 +1,76 @@
+{
+  "backend_policy": {
+    "ENS_LGBM_XGB_EQUAL": "BACKEND_UNAVAILABLE_DUE_TO_REQUIRED_LIGHTGBM_COMPONENT",
+    "STAGE16_LIGHTGBM_TUNED": "BACKEND_UNAVAILABLE",
+    "no_forced_backend_substitution": true,
+    "no_model_conversion": true,
+    "no_retraining": true
+  },
+  "backend_unavailable_condition_count": 10,
+  "bootstrap": {
+    "enabled": true,
+    "interval": "PERCENTILE_95_PERCENT",
+    "replicates": 2000,
+    "rng": "numpy.random.default_rng_PCG64",
+    "seed": 26042,
+    "stream_order": "CONDITIONS_SORTED_BY_CONDITION_ID__P50_THEN_P95_THEN_P99_IF_ELIGIBLE_THEN_MEDIAN_THROUGHPUT"
+  },
+  "condition_count": 40,
+  "created_at_utc": "2026-08-20T10:44:03.321636+00:00",
+  "hardware_mode": "GPU_SINGLE_T4",
+  "memory": {
+    "memory_run_repetitions": 3,
+    "process_gpu_memory_sampler": "NVML_WITH_NVIDIA_SMI_FALLBACK",
+    "required": true,
+    "sampling_interval_seconds": 0.005,
+    "timing_and_memory_runs_separate": true,
+    "torch_allocator_peak_also_recorded_for_torch_targets": true
+  },
+  "randomization_seed": 26042,
+  "raw_timing_observation_count": 3100,
+  "schema": "stage26_g1_gpu_warm_profile_receipt_v1",
+  "scientific_boundaries": {
+    "compact_corpus_required_for_warm_inference": false,
+    "complete_e2e_measurement": "UNAVAILABLE",
+    "cross_group_pareto": "PROHIBITED",
+    "missing_cost_imputation": "PROHIBITED",
+    "raw_pcap_accessed": false
+  },
+  "scientific_parent": "304e5613627a744cbd5d369857f8ac5667a520eb",
+  "selected_physical_gpu_index": 1,
+  "status_counts": {
+    "BACKEND_UNAVAILABLE": 10,
+    "PASS": 29,
+    "RESOURCE_LIMIT_OOM": 1
+  },
+  "supported_condition_count": 30,
+  "timing": {
+    "boundary": "PREPARED_MODEL_INPUT_TO_HOST_NUMPY_ATTACK_PROBABILITY",
+    "clock": "time.perf_counter_ns",
+    "condition_timeout_seconds": 600,
+    "cooldown_seconds_between_conditions": 2,
+    "gpu_synchronization": "DEVICE_SYNCHRONIZE_BEFORE_AND_AFTER_EVERY_TIMED_REGION",
+    "warmup_and_timed_runs": {
+      "1": {
+        "timed": 200,
+        "warmup": 50
+      },
+      "64": {
+        "timed": 150,
+        "warmup": 30
+      },
+      "256": {
+        "timed": 100,
+        "warmup": 20
+      },
+      "1024": {
+        "timed": 50,
+        "warmup": 10
+      },
+      "8192": {
+        "timed": 20,
+        "warmup": 5
+      }
+    }
+  }
+}

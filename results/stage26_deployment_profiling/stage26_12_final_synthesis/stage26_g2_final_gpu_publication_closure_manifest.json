@@ -1,0 +1,57 @@
+{
+  "created_at_utc": "2026-08-20T10:49:44.223359+00:00",
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_GPU_WARM_INFERENCE_MEMORY.csv",
+      "sha256": "fd16546ba1b2b4130fc2fdff7095302e38a015770feed1965a4d7df8e4ff8597",
+      "size_bytes": 19232
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_CPU1_GPU_MATCHED_COMPARISON.csv",
+      "sha256": "24cbd9a22ad58b85782485a0c08109a7606429b8fc09674056ab7c9cf29edc3b",
+      "size_bytes": 13727
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_GPU_BACKEND_RESOURCE_STATUS.csv",
+      "sha256": "3f6922821b4d3f01ff8b84405584acea0d8270a5dba7f4402aaa7ee1fafc9ade",
+      "size_bytes": 1077
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_CPU1_GPU_BATCH1_ANCHOR.csv",
+      "sha256": "cc3479a5dadf897fa8beb5eddc2a05ea7e4ed9548e7e7efe0aecc04f09efcfc8",
+      "size_bytes": 3694
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_CPU1_GPU_P95_SPEEDUP.png",
+      "sha256": "a5b23cd1513d21798cad7cf1aef3c85e974bbe8086b6d1a868125d2b05b4ced7",
+      "size_bytes": 203588
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_CPU1_GPU_P95_SPEEDUP.pdf",
+      "sha256": "a5fa474c6d260521b793e2c380166448e4eb7c055d3b93920601f18b865c44c5",
+      "size_bytes": 22587
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_GPU_DELTA_PEAK_MEMORY.png",
+      "sha256": "b5848e0b9bed6c5393feec835c51c120a77bcb8bb7fa0ef1f60ecff10afab24b",
+      "size_bytes": 210207
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_GPU_DELTA_PEAK_MEMORY.pdf",
+      "sha256": "55dae00f6eb49ed0c136832a383c9595dbd1790e0c98a986eab901656966ab8b",
+      "size_bytes": 24477
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/stage26_g2_final_gpu_publication_index.json",
+      "sha256": "8bb41ad37e3558014ff0d4209dc8d75f323a109ff94462b23fc9a9290462b39a",
+      "size_bytes": 5093
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/stage26_g2_final_stage26_closure_receipt.json",
+      "sha256": "e564bc9408b3bb61596e96442e604b1cee03277718015cfd78a0811a47871f65",
+      "size_bytes": 1867
+    }
+  ],
+  "schema": "stage26_g2_final_gpu_publication_closure_manifest_v1",
+  "scientific_parent": "79b9c23c91ef7185d35b700e6f6f84aefb54ab35"
+}

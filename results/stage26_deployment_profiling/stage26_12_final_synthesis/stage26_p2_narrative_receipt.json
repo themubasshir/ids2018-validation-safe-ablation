@@ -1,0 +1,35 @@
+{
+  "artifact_role": "DERIVED_MANUSCRIPT_SUPPORT_NOT_NEW_SCIENCE",
+  "claim_boundaries": {
+    "complete_e2e_available": false,
+    "component_level_only": true,
+    "cross_group_pareto_allowed": false,
+    "missing_cost_imputation": false,
+    "post_hoc_best_batch": false,
+    "ratio_confidence_intervals_computed": false
+  },
+  "corpus_accessed": false,
+  "created_at_utc": "2026-08-20T11:08:55.216660+00:00",
+  "inference_performed": false,
+  "model_loaded": false,
+  "new_measurement": false,
+  "schema": "stage26_p2_paper_facing_narrative_receipt_v1",
+  "scientific_geometry": {
+    "batch1_anchor_rows": 6,
+    "gpu_backend_unavailable": 10,
+    "gpu_conditions": 40,
+    "gpu_pass": 29,
+    "gpu_resource_limit_oom": 1,
+    "matched_cpu1_gpu_pass_rows": 26
+  },
+  "scientific_parent": "9e8354ecc9cfa72c28aa037e5d2053de422bf7a2",
+  "source_hashes": {
+    "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_CPU_WARM_INFERENCE.csv": "d664feca94308ea544506df7ef5c997bc4486f457153abfc1959db36808cfaad",
+    "results/stage26_deployment_profiling/stage26_8d3_cpu_publication_tables/T26_PARETO.csv": "7d9f7c804bcb99c7d9307689c60442bd3a7c88ea84552c7f49863016705d3200",
+    "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_CPU1_GPU_BATCH1_ANCHOR.csv": "cc3479a5dadf897fa8beb5eddc2a05ea7e4ed9548e7e7efe0aecc04f09efcfc8",
+    "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_CPU1_GPU_MATCHED_COMPARISON.csv": "24cbd9a22ad58b85782485a0c08109a7606429b8fc09674056ab7c9cf29edc3b",
+    "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_GPU_BACKEND_RESOURCE_STATUS.csv": "3f6922821b4d3f01ff8b84405584acea0d8270a5dba7f4402aaa7ee1fafc9ade",
+    "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_GPU_WARM_INFERENCE_MEMORY.csv": "fd16546ba1b2b4130fc2fdff7095302e38a015770feed1965a4d7df8e4ff8597"
+  },
+  "source_policy": "FROZEN_STAGE26_PUBLICATION_ARTIFACTS_ONLY"
+}

@@ -1,0 +1,527 @@
+{
+  "allowed_wording": [
+    "component-level measured capacity",
+    "descriptive point-estimate frontier",
+    "paired implementation-sensitivity evidence",
+    "historical Stage26-4C3 retained",
+    "complete E2E measurement unavailable",
+    "resource-limit outcome",
+    "corrected Stage26-6F1 timing uncertainty"
+  ],
+  "cold_start_ci_verdict": "COLD_START_CI_IMPLEMENTATION_PROVENANCE_NOT_CERTIFIED",
+  "cold_start_publication_policy": "COLD_START_POINT_ESTIMATES_ONLY",
+  "figures": [
+    {
+      "id": "F26_WARM_LATENCY",
+      "prohibited": [
+        "Stage26-2 historical CIs",
+        "interpolation through resource-limit outcomes"
+      ],
+      "required_encoding": [
+        "separate CPU1 and CPU2 series/panels",
+        "p50/p95 point estimates",
+        "Stage26-6F1 corrected uncertainty only",
+        "explicit markers/annotations for OOM and timeout"
+      ],
+      "title": "CPU isolated warm-inference latency by batch size"
+    },
+    {
+      "id": "F26_WARM_THROUGHPUT",
+      "prohibited": [
+        "post-hoc best-batch highlighting"
+      ],
+      "required_encoding": [
+        "separate CPU1 and CPU2 series/panels",
+        "median throughput",
+        "Stage26-6F1 corrected uncertainty only",
+        "explicit OOM/timeout preservation"
+      ],
+      "title": "CPU isolated warm-inference throughput by batch size"
+    },
+    {
+      "id": "F26_MEMORY_PACKAGE",
+      "prohibited": [
+        "imputed memory values"
+      ],
+      "required_encoding": [
+        "package size shown independently from runtime memory",
+        "RAM-limit outcomes visibly retained"
+      ],
+      "title": "Deployment package size and CPU memory profile"
+    },
+    {
+      "id": "F26_COLD_START",
+      "prohibited": [
+        "any cold-start confidence interval"
+      ],
+      "required_encoding": [
+        "point estimates only"
+      ],
+      "title": "CPU cold-start point estimates"
+    },
+    {
+      "id": "F26_CAPACITY_SCALING",
+      "prohibited": [
+        "ratio confidence intervals",
+        "pipeline bottleneck wording",
+        "post-hoc best-batch selection"
+      ],
+      "required_encoding": [
+        "within-target scaling only",
+        "CPU2/CPU1 speedup where matched PASS exists"
+      ],
+      "title": "CPU component-level scaling"
+    },
+    {
+      "id": "F26_PARETO",
+      "prohibited": [
+        "cross-group frontier",
+        "PR-AUC bootstrap CI",
+        "Pareto recomputation"
+      ],
+      "required_encoding": [
+        "Group A and Group B displayed separately",
+        "immutable Stage26-6D membership"
+      ],
+      "title": "Within-group descriptive point-estimate Pareto frontiers"
+    },
+    {
+      "id": "F26_REPRESENTATION_SENSITIVITY",
+      "prohibited": [
+        "corrected-replacement wording",
+        "fixed-bias claim",
+        "significance annotation"
+      ],
+      "required_encoding": [
+        "V3/V2 throughput ratio by frozen batch",
+        "neutral reference at ratio 1 if plotted",
+        "descriptive wording"
+      ],
+      "title": "Stage26-4C3 paired implementation sensitivity"
+    },
+    {
+      "id": "F26_COMPONENT_BOUNDARY",
+      "prohibited": [
+        "summed A+B+C latency",
+        "complete-pipeline throughput",
+        "full-pipeline bottleneck"
+      ],
+      "required_encoding": [
+        "raw extraction, representation, and isolated inference shown as distinct measured components",
+        "complete E2E explicitly marked unavailable"
+      ],
+      "title": "Measured deployment component boundaries"
+    }
+  ],
+  "fixed_batches": [
+    1,
+    64,
+    256,
+    1024,
+    8192
+  ],
+  "fixed_cpu_modes": {
+    "CPU1": {
+      "affinity": [
+        0
+      ],
+      "literal": "CPU_1_PHYSICAL_CORE",
+      "thread_count": 1
+    },
+    "CPU2": {
+      "affinity": [
+        0,
+        1
+      ],
+      "literal": "CPU_2_PHYSICAL_CORE",
+      "thread_count": 2
+    }
+  },
+  "fixed_model_groups": {
+    "GROUP_A_DUPSAFE70": [
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "FT Transformer final 5-checkpoint soft-voting ensemble"
+    ],
+    "GROUP_B_PACKET_IMAGE": [
+      "CNN",
+      "ViT"
+    ],
+    "operational_reference_only": [
+      "ENS_LGBM_XGB_EQUAL",
+      "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    ]
+  },
+  "generation_order_after_lock": [
+    "CPU publication tables",
+    "CPU publication figures",
+    "publication artifact hash/protocol audit",
+    "CPU closure commit and push",
+    "remote byte verification",
+    "clean-repo verification",
+    "GPU enablement only after all prior steps pass"
+  ],
+  "global_rules": {
+    "capacity_scaling": "Use immutable Stage26-7C component-level results only. No new bootstrap, ratio CI, post-hoc best-batch selection, or bottleneck claim.",
+    "cold_start_uncertainty": "Point estimates only. Stored Stage26-1 bootstrap confidence intervals must not appear in publication-facing tables, figures, captions, or claims.",
+    "complete_e2e": "Report complete E2E as unavailable. Do not add component latencies, derive pipeline throughput from minimum component capacity, or impute missing extraction/bridge costs.",
+    "pareto": "Use immutable Stage26-6D descriptive point-estimate frontiers only. Never recompute and never construct a cross-group frontier.",
+    "representation": "Retain historical Stage26-4C3 as the original measurement. Report Stage26-8 paired V3/V2 evidence separately as descriptive implementation sensitivity only. V3 is not a corrected replacement.",
+    "schema_erratum": "Stage26-8D2A resolves table-shape/semantic ambiguities only. No scientific result or protocol conclusion changes.",
+    "warm_cpu_point_estimates": "Use Stage26-2 point estimates. Preserve PASS, OOM, and timeout exactly.",
+    "warm_cpu_uncertainty": "Use Stage26-6F1 corrected bootstrap uncertainty only. Historical Stage26-2 confidence intervals are not certified and must not appear as publication-facing uncertainty."
+  },
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "prohibited_wording": [
+    "full-pipeline bottleneck",
+    "complete E2E throughput",
+    "A+B+C latency",
+    "cross-group Pareto frontier",
+    "PR-AUC bootstrap CI",
+    "V3 corrected replacement for 4C3",
+    "historical Stage26-2 CIs as certified",
+    "imputed deployment cost",
+    "best batch selected after observing results"
+  ],
+  "publication_label": "COMPONENT_LEVEL_WITH_STAGE26_8_4C3_SENSITIVITY_AUDIT_COMPLETED",
+  "schema": "stage26_8d2a_effective_cpu_publication_schema_v1",
+  "schema_resolution": {
+    "base_schema_commit": "f04591864f2c64096a3932bc6f793e84a36e81f2",
+    "base_schema_sha256": "f5d66a399ef66f9997de496f109e5ec48c55262b4cd6d7a88e570e8ab7e3cdd6",
+    "effective_for_downstream_publication_generation": true,
+    "memory_conditions_aggregated": false,
+    "original_stage26_8d2_files_modified": false,
+    "ratio_reciprocals_computed": false,
+    "ratios_recomputed": false,
+    "resolution": "STAGE26_8D2_BASE_PLUS_STAGE26_8D2A_SEMANTIC_ERRATUM",
+    "result_values_changed": false,
+    "statistics_recomputed": false
+  },
+  "scientific_parent": "fd4497e333ebeb72b1eb188ed64ca2cdd0f08567",
+  "scope": {
+    "complete_e2e_measurement_available": false,
+    "cross_group_pareto_allowed": false,
+    "gpu_allowed": false,
+    "hardware_phase": "CPU_ONLY",
+    "missing_cost_imputation_allowed": false,
+    "publication_artifact_generation_allowed_after_this_lock": true,
+    "resource_limit_outcomes_must_be_preserved": true
+  },
+  "source_anchors": {
+    "capacity_scaling_7c": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+    "cold_start": "46379b6d036008db4d60b056a66f4c01383e3298",
+    "complete_e2e_closure": "92495eac2c9202973ff4d889e3c12669c06e9ef1",
+    "corrected_warm_cpu_uncertainty_6f1": "a484148cd8ea7d7c89604d3a015f73bd6f1bc81a",
+    "cpu_memory_package": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+    "pareto_point_estimate": "ff9d329785c6cd30d273729356f402e59dc4e844",
+    "raw_extraction_component": "55aba2e1cc08385659479c6275234dc23b11d231",
+    "representation_historical_4c3": "aee59fabab2465cca7c80904279bb6d3ef23894f",
+    "representation_sensitivity_protocol": "973e0c479ce91ad21e92ed5db11585f26a4c49ec",
+    "representation_sensitivity_results": "fd4497e333ebeb72b1eb188ed64ca2cdd0f08567",
+    "warm_cpu_point_estimates": "7ffdba3f4ca4ea5cc53097d62aaf27957009b9f6"
+  },
+  "stage26_8d1_audit_sha256": "c90c80936c522df42ba387982bd51b1dfb6548b968a1616ee28d74e7e2800d00",
+  "tables": [
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "batch_size",
+        "status",
+        "n_timed_observations",
+        "p50_latency_ms",
+        "p50_ci95_low_ms",
+        "p50_ci95_high_ms",
+        "p95_latency_ms",
+        "p95_ci95_low_ms",
+        "p95_ci95_high_ms",
+        "p99_latency_ms",
+        "p99_ci95_low_ms",
+        "p99_ci95_high_ms",
+        "median_throughput_samples_per_s",
+        "throughput_ci95_low_samples_per_s",
+        "throughput_ci95_high_samples_per_s",
+        "resource_limit_outcome"
+      ],
+      "id": "T26_CPU_WARM_INFERENCE",
+      "row_unit": "target x CPU_mode x batch_size",
+      "rules": [
+        "For non-PASS/resource-limit rows, preserve unavailable metrics as unavailable; never impute.",
+        "p99 and p99 CI are only present when the frozen protocol permits them.",
+        "Historical Stage26-2 CI fields are prohibited."
+      ],
+      "source_policy": [
+        "Stage26-2 point estimates",
+        "Stage26-6F1 corrected timing uncertainty"
+      ],
+      "title": "CPU isolated warm-inference deployment profile"
+    },
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "batch_size",
+        "deployment_package_size_mib",
+        "memory_metric_name",
+        "memory_value_mib",
+        "planned_repetitions",
+        "pass_repetitions",
+        "resource_limit_oom_repetitions",
+        "timeout_resource_limit_repetitions",
+        "memory_status",
+        "resource_limit_outcome"
+      ],
+      "descriptive_metric_excluded_from_primary_table": {
+        "reason": "Stage26-3A prospectively labels ru_maxrss as descriptive only.",
+        "source_field": "median_ru_maxrss_bytes_descriptive"
+      },
+      "frozen_primary_memory_metrics": [
+        {
+          "output_name": "median_baseline_rss_mib",
+          "source_field": "median_baseline_rss_bytes"
+        },
+        {
+          "output_name": "median_loaded_rss_mib",
+          "source_field": "median_loaded_rss_bytes"
+        },
+        {
+          "output_name": "median_peak_rss_mib",
+          "source_field": "median_peak_rss_bytes"
+        },
+        {
+          "output_name": "median_delta_model_rss_mib",
+          "source_field": "median_delta_model_rss_bytes"
+        },
+        {
+          "output_name": "median_delta_peak_rss_mib",
+          "source_field": "median_delta_peak_rss_bytes"
+        }
+      ],
+      "id": "T26_CPU_MEMORY_PACKAGE",
+      "row_unit": "target x CPU_mode x batch_size x memory_metric_name",
+      "rules": [
+        "Do not aggregate across CPU modes or batch sizes.",
+        "Do not select a best, worst, maximum, or minimum condition after observing results.",
+        "Every frozen Stage26-3B condition remains represented.",
+        "Deployment package size is joined by target and may be repeated across condition/metric rows.",
+        "Preserve planned/pass/OOM/timeout repetition counts.",
+        "If a memory value is unavailable because of a frozen resource-limit outcome, retain it as unavailable; never impute."
+      ],
+      "source_policy": [
+        "Stage26-3B condition summaries",
+        "Stage26-3B deployment package sizes"
+      ],
+      "title": "CPU deployment memory and package profile",
+      "unit_conversion": {
+        "classification": "UNIT_CONVERSION_ONLY_NOT_NEW_STATISTIC",
+        "formula": "bytes / 1048576",
+        "from": "bytes",
+        "to": "MiB"
+      }
+    },
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "component",
+        "n_observations",
+        "p50_ms",
+        "p95_ms",
+        "status"
+      ],
+      "forbidden_columns": [
+        "p50_bootstrap_ci95_low_ms",
+        "p50_bootstrap_ci95_high_ms",
+        "p95_bootstrap_ci95_low_ms",
+        "p95_bootstrap_ci95_high_ms"
+      ],
+      "id": "T26_CPU_COLD_START",
+      "row_unit": "target x CPU_mode x cold_start_component",
+      "rules": [
+        "No cold-start CI may be publication-facing.",
+        "No post-hoc bootstrap reconstruction."
+      ],
+      "source_policy": [
+        "Stage26-1 point estimates only"
+      ],
+      "title": "CPU cold-start component profile"
+    },
+    {
+      "columns": [
+        "target_id",
+        "group",
+        "batch_size",
+        "cpu1_status",
+        "cpu2_status",
+        "cpu1_throughput_multiplier_vs_b1",
+        "cpu2_throughput_multiplier_vs_b1",
+        "cpu2_over_cpu1_speedup",
+        "physical_core_parallel_efficiency"
+      ],
+      "id": "T26_CPU_CAPACITY_SCALING",
+      "row_unit": "target x batch_size",
+      "rules": [
+        "Copy immutable Stage26-7C descriptive values; do not recompute them.",
+        "Batch throughput multiplier remains within target and within hardware mode exactly as Stage26-7B froze.",
+        "Two-core speedup/efficiency appear only where Stage26-7C contains the matched PASS result.",
+        "No derived-statistic CI.",
+        "No post-hoc best-batch selection.",
+        "Do not label any component result as a full-pipeline bottleneck."
+      ],
+      "source_field_mapping": {
+        "cpu1_throughput_multiplier_vs_b1": "stage26_7c_inference_batch_scaling.csv::throughput_multiplier_vs_B1 where hardware_mode=CPU_1_PHYSICAL_CORE",
+        "cpu2_over_cpu1_speedup": "stage26_7c_two_core_scaling.csv::two_core_speedup",
+        "cpu2_throughput_multiplier_vs_b1": "stage26_7c_inference_batch_scaling.csv::throughput_multiplier_vs_B1 where hardware_mode=CPU_2_PHYSICAL_CORE",
+        "physical_core_parallel_efficiency": "stage26_7c_two_core_scaling.csv::two_core_parallel_efficiency"
+      },
+      "source_policy": [
+        "Immutable Stage26-7C inference batch scaling",
+        "Immutable Stage26-7C two-core scaling"
+      ],
+      "title": "CPU component-level capacity and scaling"
+    },
+    {
+      "columns": [
+        "component_family",
+        "group_applicability",
+        "measurement_status",
+        "source_stage",
+        "hardware_scope",
+        "quantitative_detail_reference",
+        "claim_boundary",
+        "complete_e2e_available"
+      ],
+      "fixed_rows": [
+        {
+          "claim_boundary": "Not CICFlowMeter 70-feature extraction; not complete E2E; no full-pipeline extrapolation.",
+          "complete_e2e_available": false,
+          "component_family": "RAW_EXTRACTION_COMPONENT",
+          "group_applicability": "RAW_PACKET_EXTRACTION_COMPONENT_ONLY",
+          "hardware_scope": "CPU_1_PHYSICAL_CORE",
+          "measurement_status": "MEASURED_COMPONENT_ONLY",
+          "quantitative_detail_reference": "Stage26-4B3 committed extraction summary",
+          "source_stage": "Stage26-4B3"
+        },
+        {
+          "claim_boundary": "Historical Stage26-4C3 retained as original measurement; V3 is sensitivity only.",
+          "complete_e2e_available": false,
+          "component_family": "PACKET_IMAGE_REPRESENTATION_COMPONENT",
+          "group_applicability": "GROUP_B_PACKET_IMAGE",
+          "hardware_scope": "CPU_1_PHYSICAL_CORE",
+          "measurement_status": "MEASURED_COMPONENT_ONLY",
+          "quantitative_detail_reference": "Stage26-4C3 historical representation summary; Stage26-8 sensitivity reported separately",
+          "source_stage": "Historical Stage26-4C3 retained"
+        },
+        {
+          "claim_boundary": "Isolated warm inference only; corrected Stage26-6F1 timing uncertainty.",
+          "complete_e2e_available": false,
+          "component_family": "ISOLATED_WARM_INFERENCE_COMPONENT",
+          "group_applicability": "GROUP_A_DUPSAFE70_AND_GROUP_B_PACKET_IMAGE",
+          "hardware_scope": "CPU1_AND_CPU2",
+          "measurement_status": "MEASURED_COMPONENT_ONLY",
+          "quantitative_detail_reference": "T26_CPU_WARM_INFERENCE",
+          "source_stage": "Stage26-2 + Stage26-6F1"
+        },
+        {
+          "claim_boundary": "Complete E2E measurement unavailable; no A+B+C additive latency; no throughput from minimum component capacity; no missing-cost imputation.",
+          "complete_e2e_available": false,
+          "component_family": "COMPLETE_E2E",
+          "group_applicability": "GROUP_A_DUPSAFE70_AND_GROUP_B_PACKET_IMAGE",
+          "hardware_scope": "NOT_APPLICABLE",
+          "measurement_status": "CLOSED_NO_VALID_COMPLETE_E2E_MEASUREMENT",
+          "quantitative_detail_reference": "NONE",
+          "source_stage": "Stage26-5A"
+        }
+      ],
+      "id": "T26_COMPONENT_MEASUREMENTS",
+      "row_unit": "component family",
+      "rules": [
+        "This table is a boundary/availability matrix, not a new numerical synthesis.",
+        "Numeric component measurements remain in their original committed sources or dedicated publication tables.",
+        "Do not choose one raw-extraction rate post hoc merely to populate a generic throughput column.",
+        "Do not combine raw extraction, representation, and inference into a complete pipeline estimate."
+      ],
+      "source_policy": [
+        "Stage26-4B3 raw extraction component",
+        "Stage26-4C3 historical representation component",
+        "Stage26-2 point estimates + Stage26-6F1 corrected uncertainty for isolated inference",
+        "Stage26-5A complete-E2E availability closure"
+      ],
+      "title": "Measured deployment component boundaries and complete-E2E availability"
+    },
+    {
+      "columns": [
+        "target_id",
+        "batch_size",
+        "inference_over_representation_capacity_ratio",
+        "publication_label"
+      ],
+      "frozen_formula": "inference_median_throughput_flows_per_second / representation_median_flows_per_second",
+      "id": "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO",
+      "row_unit": "target x batch_size matched PASS condition",
+      "rules": [
+        "Copy the existing immutable Stage26-7C ratio directly.",
+        "Do not invert, reciprocate, or recompute the ratio.",
+        "Use publication label COMPONENT_LEVEL_WITH_STAGE26_8_4C3_SENSITIVITY_AUDIT_COMPLETED.",
+        "No ratio CI.",
+        "The ratio is a downstream component-capacity comparison, not a pipeline bottleneck statement."
+      ],
+      "source_field_mapping": {
+        "inference_over_representation_capacity_ratio": "stage26_7c_group_b_component_capacity.csv::component_capacity_ratio_inference_over_representation"
+      },
+      "source_policy": [
+        "Immutable Stage26-7C"
+      ],
+      "title": "Group-B inference-to-representation component-capacity ratio"
+    },
+    {
+      "columns": [
+        "group",
+        "target_id",
+        "pr_auc",
+        "cpu1_batch1_p95_latency_ms",
+        "pareto_status"
+      ],
+      "id": "T26_PARETO",
+      "row_unit": "target",
+      "rules": [
+        "Group A and Group B are evaluated separately.",
+        "No cross-group frontier.",
+        "No PR-AUC bootstrap.",
+        "Wording: descriptive point-estimate frontier; bootstrap uncertainty reported separately."
+      ],
+      "source_policy": [
+        "Immutable Stage26-6D"
+      ],
+      "title": "Within-group predictive-performance / latency Pareto frontier"
+    },
+    {
+      "columns": [
+        "batch_size",
+        "n_pairs",
+        "fingerprints_equal_count",
+        "median_throughput_ratio_v3_over_v2",
+        "effect_direction",
+        "interpretation"
+      ],
+      "id": "T26_REPRESENTATION_SENSITIVITY",
+      "row_unit": "batch_size",
+      "rules": [
+        "Descriptive paired sensitivity only.",
+        "No significance test.",
+        "No bootstrap.",
+        "No materiality threshold.",
+        "Do not call V3 a corrected replacement.",
+        "Historical Stage26-4C3 remains the original measurement."
+      ],
+      "source_policy": [
+        "Stage26-8 paired V2/V3 sensitivity"
+      ],
+      "title": "Paired Stage26-4C3 implementation-sensitivity results"
+    }
+  ]
+}

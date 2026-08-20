@@ -1,0 +1,32 @@
+{
+  "base_schema_sha256": "f5d66a399ef66f9997de496f109e5ec48c55262b4cd6d7a88e570e8ab7e3cdd6",
+  "bootstrap_executed": false,
+  "corrected_table_ids": [
+    "T26_CPU_MEMORY_PACKAGE",
+    "T26_CPU_CAPACITY_SCALING",
+    "T26_COMPONENT_MEASUREMENTS",
+    "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO"
+  ],
+  "created_at_utc": "2026-08-20T09:41:22.791992+00:00",
+  "effective_schema_repo_relative_path": "results/stage26_deployment_profiling/stage26_8d2a_cpu_publication_schema_erratum/stage26_8d2a_effective_cpu_publication_schema.json",
+  "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+  "erratum_repo_relative_path": "results/stage26_deployment_profiling/stage26_8d2a_cpu_publication_schema_erratum/stage26_8d2a_cpu_publication_schema_erratum.json",
+  "erratum_sha256": "bba520fc26d58b663657ec47e774313933fc17ca8a5774b39a8a88ee44bdb5b0",
+  "figure_count": 8,
+  "gpu_used": false,
+  "inference_executed": false,
+  "labels_accessed": false,
+  "memory_condition_aggregation": false,
+  "model_loaded": false,
+  "pareto_recomputed": false,
+  "pcap_accessed": false,
+  "random_sampling_executed": false,
+  "ratio_inverted": false,
+  "ratio_recomputed": false,
+  "result_rows_used_for_schema_selection": false,
+  "schema": "stage26_8d2a_cpu_publication_schema_erratum_receipt_v1",
+  "scientific_parent": "f04591864f2c64096a3932bc6f793e84a36e81f2",
+  "stage26_7c_recomputed": false,
+  "table_count": 8,
+  "timing_executed": false
+}

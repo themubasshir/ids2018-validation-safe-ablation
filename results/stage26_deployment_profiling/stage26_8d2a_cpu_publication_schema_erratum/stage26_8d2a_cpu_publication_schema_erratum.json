@@ -1,0 +1,295 @@
+{
+  "audit_scope": "PROTOCOL_FORMULA_AND_SOURCE_HEADER_STRUCTURE_ONLY",
+  "base_schema": {
+    "repo_relative_path": "results/stage26_deployment_profiling/stage26_8d2_cpu_publication_schema_lock/stage26_8d2_cpu_publication_schema.json",
+    "sha256": "f5d66a399ef66f9997de496f109e5ec48c55262b4cd6d7a88e570e8ab7e3cdd6",
+    "status": "RETAINED_UNMODIFIED_AS_HISTORICAL_FREEZE"
+  },
+  "corrections": [
+    {
+      "issue": "Base row unit 'target' omitted prospectively frozen CPU-mode and batch condition dimensions.",
+      "resolution": "Use target x CPU_mode x batch_size x memory_metric_name long form; no condition aggregation.",
+      "table_id": "T26_CPU_MEMORY_PACKAGE"
+    },
+    {
+      "issue": "Base schema used one singular batch throughput multiplier although Stage26-7B freezes scaling within hardware mode.",
+      "resolution": "Expose separate CPU1 and CPU2 immutable Stage26-7C throughput multipliers.",
+      "table_id": "T26_CPU_CAPACITY_SCALING"
+    },
+    {
+      "issue": "Base numeric-wide component schema could require arbitrary selection among multiple valid raw-extraction component metrics.",
+      "resolution": "Use a component-boundary/availability matrix; numeric details remain in dedicated committed sources and publication tables.",
+      "table_id": "T26_COMPONENT_MEASUREMENTS"
+    },
+    {
+      "issue": "Base output column label expressed the reciprocal direction of the prospective Stage26-7B formula.",
+      "resolution": "Label the existing immutable ratio as inference_over_representation_capacity_ratio; no value inversion or recomputation.",
+      "table_id": "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO"
+    }
+  ],
+  "created_at_utc": "2026-08-20T09:41:22.773542+00:00",
+  "memory_aggregated_across_conditions": false,
+  "prospective_formula_evidence": {
+    "batch_scaling_scope": "WITHIN_TARGET_WITHIN_HARDWARE_MODE",
+    "batch_throughput_formula": "T(target,hardware,batch) / T(target,hardware,1)",
+    "group_b_ratio_formula": "inference_median_throughput_flows_per_second / representation_median_flows_per_second",
+    "group_b_ratio_name": "component_capacity_ratio"
+  },
+  "publication_policy": {
+    "cold_start": "COLD_START_POINT_ESTIMATES_ONLY",
+    "complete_e2e": "UNAVAILABLE",
+    "effective_schema": "STAGE26_8D2_BASE_PLUS_STAGE26_8D2A_ERRATUM",
+    "gpu": "OFF",
+    "historical_4c3": "RETAIN_AS_ORIGINAL_MEASUREMENT",
+    "stage26_6d_pareto": "UNCHANGED",
+    "stage26_7c": "UNCHANGED",
+    "stage26_8_representation_sensitivity": "DESCRIPTIVE_SEPARATE_NOT_REPLACEMENT",
+    "warm_timing_uncertainty": "STAGE26_6F1_CORRECTED_ONLY"
+  },
+  "ratio_inverted": false,
+  "ratio_recomputed": false,
+  "result_rows_used_for_schema_selection": false,
+  "schema": "stage26_8d2a_cpu_publication_schema_semantic_erratum_v1",
+  "scientific_parent": "f04591864f2c64096a3932bc6f793e84a36e81f2",
+  "scientific_results_changed": false,
+  "source_identity": [
+    {
+      "anchor": "2e1ece6cc198b054b01e467275951caafb6af794",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3_memory_implementation.json",
+      "sha256": "9e8439d41924f5bdd13dc4db0a8e997fb9a6be1883a38a9ff4028c9f785452dc"
+    },
+    {
+      "anchor": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_3b_cpu_memory_profile/stage26_3_memory_summary.csv",
+      "sha256": "52c6673f3ec542096d87170acea5b8eb3c00a49239a9c2edcd0ddc4eede0a74d"
+    },
+    {
+      "anchor": "347d93f21d454cc5bda2c45889c890c67cdf0ecc",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_3b_cpu_memory_profile/stage26_3_package_sizes.csv",
+      "sha256": "99234ffe136afe7489fc6ed7640ca36146e69e251d1c1bd900a8ac152f3637f9"
+    },
+    {
+      "anchor": "c524e763b8ae7593204f95f23f9e819b4dcaaf9f",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_7b_capacity_compatibility_lock/stage26_7b_capacity_formula_lock.json",
+      "sha256": "7cb33c57dd030e6fb2c0763eec70471b4afc0f9d06d071bc690fbac02d6dacea"
+    },
+    {
+      "anchor": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_inference_batch_scaling.csv",
+      "sha256": "e41ecd347a75ac74f2046fe2ced4c98631dff44e81c976c1a6d767834cd7cd23"
+    },
+    {
+      "anchor": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_two_core_scaling.csv",
+      "sha256": "11eff1bc0c9decd25cc507fde652e6290ebe47ab294b555ea68cd25e895e166d"
+    },
+    {
+      "anchor": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+      "byte_identical_to_anchor": true,
+      "path": "results/stage26_deployment_profiling/stage26_7c_cpu_capacity_scaling/stage26_7c_group_b_component_capacity.csv",
+      "sha256": "db3e665bb7020dd89a7274937a6650710d3d7a9f0721b95b8adb7d50cbbfbcab"
+    }
+  ],
+  "statistics_recomputed": false,
+  "table_overrides": {
+    "T26_COMPONENT_MEASUREMENTS": {
+      "columns": [
+        "component_family",
+        "group_applicability",
+        "measurement_status",
+        "source_stage",
+        "hardware_scope",
+        "quantitative_detail_reference",
+        "claim_boundary",
+        "complete_e2e_available"
+      ],
+      "fixed_rows": [
+        {
+          "claim_boundary": "Not CICFlowMeter 70-feature extraction; not complete E2E; no full-pipeline extrapolation.",
+          "complete_e2e_available": false,
+          "component_family": "RAW_EXTRACTION_COMPONENT",
+          "group_applicability": "RAW_PACKET_EXTRACTION_COMPONENT_ONLY",
+          "hardware_scope": "CPU_1_PHYSICAL_CORE",
+          "measurement_status": "MEASURED_COMPONENT_ONLY",
+          "quantitative_detail_reference": "Stage26-4B3 committed extraction summary",
+          "source_stage": "Stage26-4B3"
+        },
+        {
+          "claim_boundary": "Historical Stage26-4C3 retained as original measurement; V3 is sensitivity only.",
+          "complete_e2e_available": false,
+          "component_family": "PACKET_IMAGE_REPRESENTATION_COMPONENT",
+          "group_applicability": "GROUP_B_PACKET_IMAGE",
+          "hardware_scope": "CPU_1_PHYSICAL_CORE",
+          "measurement_status": "MEASURED_COMPONENT_ONLY",
+          "quantitative_detail_reference": "Stage26-4C3 historical representation summary; Stage26-8 sensitivity reported separately",
+          "source_stage": "Historical Stage26-4C3 retained"
+        },
+        {
+          "claim_boundary": "Isolated warm inference only; corrected Stage26-6F1 timing uncertainty.",
+          "complete_e2e_available": false,
+          "component_family": "ISOLATED_WARM_INFERENCE_COMPONENT",
+          "group_applicability": "GROUP_A_DUPSAFE70_AND_GROUP_B_PACKET_IMAGE",
+          "hardware_scope": "CPU1_AND_CPU2",
+          "measurement_status": "MEASURED_COMPONENT_ONLY",
+          "quantitative_detail_reference": "T26_CPU_WARM_INFERENCE",
+          "source_stage": "Stage26-2 + Stage26-6F1"
+        },
+        {
+          "claim_boundary": "Complete E2E measurement unavailable; no A+B+C additive latency; no throughput from minimum component capacity; no missing-cost imputation.",
+          "complete_e2e_available": false,
+          "component_family": "COMPLETE_E2E",
+          "group_applicability": "GROUP_A_DUPSAFE70_AND_GROUP_B_PACKET_IMAGE",
+          "hardware_scope": "NOT_APPLICABLE",
+          "measurement_status": "CLOSED_NO_VALID_COMPLETE_E2E_MEASUREMENT",
+          "quantitative_detail_reference": "NONE",
+          "source_stage": "Stage26-5A"
+        }
+      ],
+      "id": "T26_COMPONENT_MEASUREMENTS",
+      "row_unit": "component family",
+      "rules": [
+        "This table is a boundary/availability matrix, not a new numerical synthesis.",
+        "Numeric component measurements remain in their original committed sources or dedicated publication tables.",
+        "Do not choose one raw-extraction rate post hoc merely to populate a generic throughput column.",
+        "Do not combine raw extraction, representation, and inference into a complete pipeline estimate."
+      ],
+      "source_policy": [
+        "Stage26-4B3 raw extraction component",
+        "Stage26-4C3 historical representation component",
+        "Stage26-2 point estimates + Stage26-6F1 corrected uncertainty for isolated inference",
+        "Stage26-5A complete-E2E availability closure"
+      ],
+      "title": "Measured deployment component boundaries and complete-E2E availability"
+    },
+    "T26_CPU_CAPACITY_SCALING": {
+      "columns": [
+        "target_id",
+        "group",
+        "batch_size",
+        "cpu1_status",
+        "cpu2_status",
+        "cpu1_throughput_multiplier_vs_b1",
+        "cpu2_throughput_multiplier_vs_b1",
+        "cpu2_over_cpu1_speedup",
+        "physical_core_parallel_efficiency"
+      ],
+      "id": "T26_CPU_CAPACITY_SCALING",
+      "row_unit": "target x batch_size",
+      "rules": [
+        "Copy immutable Stage26-7C descriptive values; do not recompute them.",
+        "Batch throughput multiplier remains within target and within hardware mode exactly as Stage26-7B froze.",
+        "Two-core speedup/efficiency appear only where Stage26-7C contains the matched PASS result.",
+        "No derived-statistic CI.",
+        "No post-hoc best-batch selection.",
+        "Do not label any component result as a full-pipeline bottleneck."
+      ],
+      "source_field_mapping": {
+        "cpu1_throughput_multiplier_vs_b1": "stage26_7c_inference_batch_scaling.csv::throughput_multiplier_vs_B1 where hardware_mode=CPU_1_PHYSICAL_CORE",
+        "cpu2_over_cpu1_speedup": "stage26_7c_two_core_scaling.csv::two_core_speedup",
+        "cpu2_throughput_multiplier_vs_b1": "stage26_7c_inference_batch_scaling.csv::throughput_multiplier_vs_B1 where hardware_mode=CPU_2_PHYSICAL_CORE",
+        "physical_core_parallel_efficiency": "stage26_7c_two_core_scaling.csv::two_core_parallel_efficiency"
+      },
+      "source_policy": [
+        "Immutable Stage26-7C inference batch scaling",
+        "Immutable Stage26-7C two-core scaling"
+      ],
+      "title": "CPU component-level capacity and scaling"
+    },
+    "T26_CPU_MEMORY_PACKAGE": {
+      "columns": [
+        "target_id",
+        "group",
+        "cpu_mode",
+        "batch_size",
+        "deployment_package_size_mib",
+        "memory_metric_name",
+        "memory_value_mib",
+        "planned_repetitions",
+        "pass_repetitions",
+        "resource_limit_oom_repetitions",
+        "timeout_resource_limit_repetitions",
+        "memory_status",
+        "resource_limit_outcome"
+      ],
+      "descriptive_metric_excluded_from_primary_table": {
+        "reason": "Stage26-3A prospectively labels ru_maxrss as descriptive only.",
+        "source_field": "median_ru_maxrss_bytes_descriptive"
+      },
+      "frozen_primary_memory_metrics": [
+        {
+          "output_name": "median_baseline_rss_mib",
+          "source_field": "median_baseline_rss_bytes"
+        },
+        {
+          "output_name": "median_loaded_rss_mib",
+          "source_field": "median_loaded_rss_bytes"
+        },
+        {
+          "output_name": "median_peak_rss_mib",
+          "source_field": "median_peak_rss_bytes"
+        },
+        {
+          "output_name": "median_delta_model_rss_mib",
+          "source_field": "median_delta_model_rss_bytes"
+        },
+        {
+          "output_name": "median_delta_peak_rss_mib",
+          "source_field": "median_delta_peak_rss_bytes"
+        }
+      ],
+      "id": "T26_CPU_MEMORY_PACKAGE",
+      "row_unit": "target x CPU_mode x batch_size x memory_metric_name",
+      "rules": [
+        "Do not aggregate across CPU modes or batch sizes.",
+        "Do not select a best, worst, maximum, or minimum condition after observing results.",
+        "Every frozen Stage26-3B condition remains represented.",
+        "Deployment package size is joined by target and may be repeated across condition/metric rows.",
+        "Preserve planned/pass/OOM/timeout repetition counts.",
+        "If a memory value is unavailable because of a frozen resource-limit outcome, retain it as unavailable; never impute."
+      ],
+      "source_policy": [
+        "Stage26-3B condition summaries",
+        "Stage26-3B deployment package sizes"
+      ],
+      "title": "CPU deployment memory and package profile",
+      "unit_conversion": {
+        "classification": "UNIT_CONVERSION_ONLY_NOT_NEW_STATISTIC",
+        "formula": "bytes / 1048576",
+        "from": "bytes",
+        "to": "MiB"
+      }
+    },
+    "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO": {
+      "columns": [
+        "target_id",
+        "batch_size",
+        "inference_over_representation_capacity_ratio",
+        "publication_label"
+      ],
+      "frozen_formula": "inference_median_throughput_flows_per_second / representation_median_flows_per_second",
+      "id": "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO",
+      "row_unit": "target x batch_size matched PASS condition",
+      "rules": [
+        "Copy the existing immutable Stage26-7C ratio directly.",
+        "Do not invert, reciprocate, or recompute the ratio.",
+        "Use publication label COMPONENT_LEVEL_WITH_STAGE26_8_4C3_SENSITIVITY_AUDIT_COMPLETED.",
+        "No ratio CI.",
+        "The ratio is a downstream component-capacity comparison, not a pipeline bottleneck statement."
+      ],
+      "source_field_mapping": {
+        "inference_over_representation_capacity_ratio": "stage26_7c_group_b_component_capacity.csv::component_capacity_ratio_inference_over_representation"
+      },
+      "source_policy": [
+        "Immutable Stage26-7C"
+      ],
+      "title": "Group-B inference-to-representation component-capacity ratio"
+    }
+  },
+  "trigger": "SOURCE_SCHEMA_SEMANTIC_AMBIGUITIES_FOUND_BEFORE_PUBLICATION_TABLE_GENERATION"
+}

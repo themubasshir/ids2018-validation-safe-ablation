@@ -1,0 +1,24 @@
+{
+  "affinity": [
+    0
+  ],
+  "batch_size": 256,
+  "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+  "end_index_exclusive": 26298,
+  "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+  "expected_flow_count": 528509,
+  "float32_div255_allowed": false,
+  "gpu_allowed": false,
+  "labels_allowed": false,
+  "mode": "BENCHMARK_TIMED",
+  "models_allowed": false,
+  "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+  "result_path": "/kaggle/working/stage26_deployment_profiling/cpu_closure/stage26_8c1_paired_representation_sensitivity/worker_results/block_23__B256__pair_1__v3_clean_result.json",
+  "schema": "stage26_4c3_cpu1_representation_condition_config_v1",
+  "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+  "start_index": 26042,
+  "thread_count": 1,
+  "timed_runs": 100,
+  "warmup_runs": 20,
+  "worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02"
+}

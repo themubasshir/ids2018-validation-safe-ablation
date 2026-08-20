@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-08-20T08:44:38.163423+00:00",
+  "geometry": {
+    "cols": 256,
+    "encoded_bytes": 522845159,
+    "flow_count": 528509,
+    "packet_slots": 64,
+    "rows": 64
+  },
+  "next": "Execute only the remotely anchored Stage26-8B randomized 25-pair / 50-fresh-process contemporaneous V2-vs-V3 CPU1 representation sensitivity plan.",
+  "release_provenance": {
+    "asset": "stage20-Monday-compact-corpus-v1.tar",
+    "asset_id": 515837749,
+    "browser_download_url": "https://github.com/themubasshir/ids2018-validation-safe-ablation/releases/download/stage20-compact-corpora-v1/stage20-Monday-compact-corpus-v1.tar",
+    "committed_receipt": "results/stage21_architecture/stage21_1r1m_monday_release_upload_receipt.json",
+    "download_action": "DOWNLOADED_FROM_COMMITTED_GITHUB_RELEASE_URL",
+    "recreated_from_pcap": false,
+    "release_id": 371092195,
+    "sha256": "4f0b1a4a93df86fad5b11632da50dc12d3d4392b65f48b5e7bdefeea31706a20",
+    "size_bytes": 595261440,
+    "source": "EXISTING_GITHUB_RELEASE",
+    "tag": "stage20-compact-corpora-v1"
+  },
+  "runtime": {
+    "file_count": 3,
+    "files": {
+      "encoded_bytes.bin": {
+        "sha256": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c",
+        "size_bytes": 522845159,
+        "source_tar_member": "Monday/encoded_bytes.bin"
+      },
+      "flow_offsets.npy": {
+        "sha256": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e",
+        "size_bytes": 4228208,
+        "source_tar_member": "Monday/flow_offsets.npy"
+      },
+      "packet_lengths.npy": {
+        "sha256": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8",
+        "size_bytes": 67649280,
+        "source_tar_member": "Monday/packet_lengths.npy"
+      }
+    },
+    "labels_file_present": false,
+    "release_tar": "/kaggle/working/stage26_deployment_profiling/source_cache/stage20-Monday-compact-corpus-v1.tar",
+    "restore_action": "EXTRACTED_EXACT_THREE_MEMBERS_FROM_VERIFIED_RELEASE_TAR",
+    "restore_directory": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset"
+  },
+  "schema": "stage26_8c0_compact_input_restore_receipt_v2",
+  "scientific_parent": "973e0c479ce91ad21e92ed5db11585f26a4c49ec",
+  "scientific_state": {
+    "GPU_used": false,
+    "Git_modified": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "bootstrap_executed": false,
+    "historical_4C3_modified": false,
+    "inference_performed": false,
+    "labels_extracted": false,
+    "model_loaded": false,
+    "release_byte_identity_verified": true,
+    "release_corpus_regenerated": false,
+    "release_downloaded_or_reused": true,
+    "representation_executed": false,
+    "sensitivity_results_seen": false,
+    "sensitivity_timing_executed": false,
+    "stage26_7c_modified": false
+  },
+  "stage26_8b_identity": {
+    "V2_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "V3_worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+    "execution_plan_sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+    "freeze_receipt_sha256": "d052bcd8bf3b2ed6a93f1ca3813036c030fa1d1de1fb28ffea166cf3e226bc33",
+    "lock_manifest_sha256": "6cfa4790ccabd1d755af40960b2e38846b4e15fe92ba2fac70d72ac3c162334f",
+    "protocol_sha256": "4ce96c1540b29bd9683305ed981412b46be4b0b2596dcb58b3064f0724f05c5e"
+  },
+  "status": "PASS_EXACT_GITHUB_RELEASE_LABEL_FREE_RESTORE"
+}

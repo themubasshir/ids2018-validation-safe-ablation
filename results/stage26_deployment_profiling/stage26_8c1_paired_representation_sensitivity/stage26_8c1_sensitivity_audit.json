@@ -1,0 +1,117 @@
+{
+  "checkpoint": "STAGE26-8C2",
+  "created_at_utc": "2026-08-20T09:09:45.813661+00:00",
+  "descriptive_batch_results": {
+    "1": {
+      "p50_latency_ratio_V3_over_V2_median": 0.957348072421006,
+      "p95_latency_ratio_V3_over_V2_median": 0.9232916049033358,
+      "p99_latency_ratio_V3_over_V2_median": 1.034319339863654,
+      "throughput_direction": "V3_MEDIAN_THROUGHPUT_GREATER_THAN_V2",
+      "throughput_ratio_V3_over_V2_max": 1.0555226294570503,
+      "throughput_ratio_V3_over_V2_median": 1.0445519924635573,
+      "throughput_ratio_V3_over_V2_min": 1.0223394943335817
+    },
+    "1024": {
+      "p50_latency_ratio_V3_over_V2_median": 1.0300812862123807,
+      "p95_latency_ratio_V3_over_V2_median": 1.0802709461039521,
+      "p99_latency_ratio_V3_over_V2_median": null,
+      "throughput_direction": "V3_MEDIAN_THROUGHPUT_LESS_THAN_V2",
+      "throughput_ratio_V3_over_V2_max": 1.0159964032367366,
+      "throughput_ratio_V3_over_V2_median": 0.9710431219049023,
+      "throughput_ratio_V3_over_V2_min": 0.9254552507560075
+    },
+    "256": {
+      "p50_latency_ratio_V3_over_V2_median": 1.0714975882782978,
+      "p95_latency_ratio_V3_over_V2_median": 1.0681246287549686,
+      "p99_latency_ratio_V3_over_V2_median": 1.0517697656083693,
+      "throughput_direction": "V3_MEDIAN_THROUGHPUT_LESS_THAN_V2",
+      "throughput_ratio_V3_over_V2_max": 0.9735849720532557,
+      "throughput_ratio_V3_over_V2_median": 0.9335575049266839,
+      "throughput_ratio_V3_over_V2_min": 0.8894849098817642
+    },
+    "64": {
+      "p50_latency_ratio_V3_over_V2_median": 1.127571743536571,
+      "p95_latency_ratio_V3_over_V2_median": 1.11875426160644,
+      "p99_latency_ratio_V3_over_V2_median": 1.0872087354498365,
+      "throughput_direction": "V3_MEDIAN_THROUGHPUT_LESS_THAN_V2",
+      "throughput_ratio_V3_over_V2_max": 0.922243402351308,
+      "throughput_ratio_V3_over_V2_median": 0.8868613759450831,
+      "throughput_ratio_V3_over_V2_min": 0.8829023567598484
+    },
+    "8192": {
+      "p50_latency_ratio_V3_over_V2_median": 0.9956714840052905,
+      "p95_latency_ratio_V3_over_V2_median": 0.9755639515038682,
+      "p99_latency_ratio_V3_over_V2_median": null,
+      "throughput_direction": "V3_MEDIAN_THROUGHPUT_GREATER_THAN_V2",
+      "throughput_ratio_V3_over_V2_max": 1.030179091623638,
+      "throughput_ratio_V3_over_V2_median": 1.0043477474272686,
+      "throughput_ratio_V3_over_V2_min": 0.995457517452962
+    }
+  },
+  "descriptive_interpretation": {
+    "supported_statement": "Removing the historical inter-iteration full-output fingerprint changes measured representation timing in a batch-dependent direction in this contemporaneous paired sensitivity experiment.",
+    "throughput_direction_uniform_across_batches": false,
+    "unsupported_statements": [
+      "V3_IS_STATISTICALLY_FASTER",
+      "V3_IS_STATISTICALLY_SLOWER",
+      "HISTORICAL_4C3_IS_BIASED_BY_A_FIXED_PERCENTAGE",
+      "V3_IS_A_CORRECTED_REPLACEMENT_FOR_HISTORICAL_4C3",
+      "SENSITIVITY_IS_MATERIALLY_NEGLIGIBLE",
+      "SENSITIVITY_IS_MATERIALLY_LARGE"
+    ]
+  },
+  "execution_geometry": {
+    "all_pair_fingerprints_equal": true,
+    "complete_pairs": 25,
+    "frozen_pair_blocks": 25,
+    "incomplete_pairs": 0,
+    "replacement_pairs": 0,
+    "worker_PASS": 50,
+    "worker_execution_slots": 50
+  },
+  "publication_policy": {
+    "V3": "PAIRED_SENSITIVITY_ONLY_NOT_REPLACEMENT",
+    "complete_E2E_claim_allowed": false,
+    "historical_stage26_4c3": "RETAIN_AS_ORIGINAL_MEASUREMENT",
+    "publication_label_after_CPU_closure": "COMPONENT_LEVEL_WITH_STAGE26_8_4C3_SENSITIVITY_AUDIT_COMPLETED",
+    "stage26_7_group_b_component_ratios": "UNCHANGED_HISTORICAL_4C3_BASED_COMPONENT_RESULTS",
+    "stage26_7c": "UNCHANGED",
+    "stage26_8_4c3_audit_item": "COMPLETED_WITH_PAIRED_SENSITIVITY_EVIDENCE"
+  },
+  "schema": "stage26_8c1_paired_representation_sensitivity_audit_v1",
+  "scientific_parent": "973e0c479ce91ad21e92ed5db11585f26a4c49ec",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Stage26_7C_recomputed": false,
+    "bootstrap_executed": false,
+    "historical_4C3_modified": false,
+    "historical_4C3_replaced": false,
+    "hypothesis_test_performed": false,
+    "inference_performed": false,
+    "labels_accessed": false,
+    "materiality_threshold_selected": false,
+    "model_loaded": false,
+    "new_timing_in_this_anchor_cell": false,
+    "sensitivity_timing_already_completed": true
+  },
+  "stage": 26,
+  "statistical_policy": {
+    "bootstrap": false,
+    "confidence_interval": false,
+    "descriptive_only": true,
+    "hypothesis_test": false,
+    "materiality_threshold": null,
+    "p_value": false,
+    "post_hoc_threshold": false
+  },
+  "status": "PASS_PAIRED_4C3_IMPLEMENTATION_SENSITIVITY_AUDIT_COMPLETED",
+  "trigger": {
+    "historical_issue": "OUTSIDE_TIMER_BEFORE_NEXT_TIMED_ITERATION",
+    "historical_worker": "V2_ORIGINAL",
+    "historical_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "sensitivity_worker": "V3_CLEAN",
+    "sensitivity_worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02"
+  }
+}

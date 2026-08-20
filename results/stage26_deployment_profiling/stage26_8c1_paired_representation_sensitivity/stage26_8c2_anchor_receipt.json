@@ -1,0 +1,55 @@
+{
+  "checkpoint": "STAGE26-8C2",
+  "commit_subject": "stage26: anchor paired representation sensitivity results",
+  "completed_measurement_top_level_hashes": {
+    "stage26_8c1_batch_sensitivity_summary.csv": "3d00f76cb7f3d9dd13069f79ecfe740e6fa7d1718e035dc788f8ad8d709b424e",
+    "stage26_8c1_execution_receipt.json": "4cb2292b1526cedb60caec07a141372471abc7e5ad5475a01affb1174b7ba978",
+    "stage26_8c1_pair_results.csv": "d1b8b751dc89f934e520683c5a81a8fed4d990d1f3d3304e4c73bed100e56048",
+    "stage26_8c1_paired_sensitivity_results.json": "17d80752b38e13b3cc65dc1791fe0353765edd4a71798613ab878a0cdd835312",
+    "stage26_8c1_raw_observations.csv": "2a313e20430069d6c253438edb9653bcc34aa52c81800e6cb7ff84af4bf48bec",
+    "stage26_8c1_worker_executions.csv": "c2e633afd44c93d703f97756d1c393767c4efda4b1329599f34c97741b23d884"
+  },
+  "created_at_utc": "2026-08-20T09:09:45.830105+00:00",
+  "execution_geometry": {
+    "all_pair_fingerprints_equal": true,
+    "complete_pairs": 25,
+    "incomplete_pairs": 0,
+    "pair_blocks": 25,
+    "raw_observations": 5200,
+    "replacement_pairs": 0,
+    "worker_PASS": 50,
+    "worker_executions": 50
+  },
+  "frozen_upstream": {
+    "V2_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "V3_worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+    "execution_plan_sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+    "freeze_receipt_sha256": "d052bcd8bf3b2ed6a93f1ca3813036c030fa1d1de1fb28ffea166cf3e226bc33",
+    "lock_manifest_sha256": "6cfa4790ccabd1d755af40960b2e38846b4e15fe92ba2fac70d72ac3c162334f",
+    "protocol_sha256": "4ce96c1540b29bd9683305ed981412b46be4b0b2596dcb58b3064f0724f05c5e",
+    "restore_receipt_sha256": "babcf2331db7c242297b346bad0904bb061251acb83003b5222c16295de96ff1"
+  },
+  "next": "After remote byte/scientific verification, proceed to final Stage26 CPU closure audit and publication-facing CPU tables/figures. Do not modify historical Stage26-4C3 or Stage26-7C.",
+  "schema": "stage26_8c2_paired_sensitivity_anchor_receipt_v1",
+  "scientific_parent": "973e0c479ce91ad21e92ed5db11585f26a4c49ec",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Stage26_7C_recomputed": false,
+    "bootstrap_executed": false,
+    "completed_timing_rerun": false,
+    "historical_4C3_modified": false,
+    "historical_4C3_replaced": false,
+    "hypothesis_test_performed": false,
+    "inference_performed": false,
+    "labels_accessed": false,
+    "materiality_threshold_selected": false,
+    "model_loaded": false,
+    "new_timing_executed_by_anchor": false,
+    "pair_replacement": false
+  },
+  "sensitivity_audit_sha256": "7daaa517e49ca99787b124855bb425abc89b0ef4522556a7500c69f9fd962af2",
+  "stage": 26,
+  "status": "READY_FOR_GIT_ANCHOR"
+}

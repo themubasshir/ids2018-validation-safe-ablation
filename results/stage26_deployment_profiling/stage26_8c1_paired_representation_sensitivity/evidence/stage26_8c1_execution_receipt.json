@@ -1,0 +1,51 @@
+{
+  "created_at_utc": "2026-08-20T08:56:48.711708+00:00",
+  "execution": {
+    "adaptive_reordering": false,
+    "complete_pairs": 25,
+    "incomplete_pairs": 0,
+    "pair_blocks_processed": 25,
+    "raw_observations": 5200,
+    "replacement_pairs": 0,
+    "worker_execution_slots_processed": 50,
+    "worker_status_counts": {
+      "PASS": 50
+    }
+  },
+  "frozen_identity": {
+    "V2_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "V3_worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+    "execution_plan_sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+    "freeze_receipt_sha256": "d052bcd8bf3b2ed6a93f1ca3813036c030fa1d1de1fb28ffea166cf3e226bc33",
+    "lock_manifest_sha256": "6cfa4790ccabd1d755af40960b2e38846b4e15fe92ba2fac70d72ac3c162334f",
+    "protocol_sha256": "4ce96c1540b29bd9683305ed981412b46be4b0b2596dcb58b3064f0724f05c5e",
+    "restore_receipt_sha256": "babcf2331db7c242297b346bad0904bb061251acb83003b5222c16295de96ff1"
+  },
+  "next": "Inspect the complete frozen paired sensitivity result, then durably anchor the unchanged raw evidence and descriptive summaries before Stage26 CPU closure.",
+  "outputs": {
+    "batch_summary_csv_sha256": "3d00f76cb7f3d9dd13069f79ecfe740e6fa7d1718e035dc788f8ad8d709b424e",
+    "pair_results_csv_sha256": "d1b8b751dc89f934e520683c5a81a8fed4d990d1f3d3304e4c73bed100e56048",
+    "raw_observations_csv_sha256": "2a313e20430069d6c253438edb9653bcc34aa52c81800e6cb7ff84af4bf48bec",
+    "results_json_sha256": "17d80752b38e13b3cc65dc1791fe0353765edd4a71798613ab878a0cdd835312",
+    "worker_executions_csv_sha256": "c2e633afd44c93d703f97756d1c393767c4efda4b1329599f34c97741b23d884"
+  },
+  "schema": "stage26_8c1_execution_receipt_v1",
+  "scientific_parent": "973e0c479ce91ad21e92ed5db11585f26a4c49ec",
+  "scientific_state": {
+    "GPU_used": false,
+    "Git_modified": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Stage26_7C_recomputed": false,
+    "bootstrap_executed": false,
+    "historical_4C3_modified": false,
+    "historical_4C3_replaced": false,
+    "hypothesis_test_performed": false,
+    "inference_performed": false,
+    "labels_accessed": false,
+    "materiality_threshold_selected": false,
+    "model_loaded": false,
+    "sensitivity_timing_executed": true
+  },
+  "status": "PASS_ALL_25_PAIRS_COMPLETE"
+}

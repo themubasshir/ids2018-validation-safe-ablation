@@ -1,0 +1,41 @@
+{
+  "bootstrap_executed": false,
+  "cold_start_publication_policy": "COLD_START_POINT_ESTIMATES_ONLY",
+  "created_at_utc": "2026-08-20T09:34:58.325910+00:00",
+  "figure_count": 8,
+  "figure_ids": [
+    "F26_WARM_LATENCY",
+    "F26_WARM_THROUGHPUT",
+    "F26_MEMORY_PACKAGE",
+    "F26_COLD_START",
+    "F26_CAPACITY_SCALING",
+    "F26_PARETO",
+    "F26_REPRESENTATION_SENSITIVITY",
+    "F26_COMPONENT_BOUNDARY"
+  ],
+  "gpu_used": false,
+  "inference_executed": false,
+  "labels_accessed": false,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "pareto_recomputed": false,
+  "pcap_accessed": false,
+  "publication_schema_repo_relative_path": "results/stage26_deployment_profiling/stage26_8d2_cpu_publication_schema_lock/stage26_8d2_cpu_publication_schema.json",
+  "publication_schema_sha256": "f5d66a399ef66f9997de496f109e5ec48c55262b4cd6d7a88e570e8ab7e3cdd6",
+  "schema": "stage26_8d2_cpu_publication_schema_receipt_v1",
+  "scientific_parent": "fd4497e333ebeb72b1eb188ed64ca2cdd0f08567",
+  "stage26_7c_recomputed": false,
+  "stage26_8d1_audit_sha256": "c90c80936c522df42ba387982bd51b1dfb6548b968a1616ee28d74e7e2800d00",
+  "stage26_8d1_verdict": "COLD_START_CI_IMPLEMENTATION_PROVENANCE_NOT_CERTIFIED",
+  "table_count": 8,
+  "table_ids": [
+    "T26_CPU_WARM_INFERENCE",
+    "T26_CPU_MEMORY_PACKAGE",
+    "T26_CPU_COLD_START",
+    "T26_CPU_CAPACITY_SCALING",
+    "T26_COMPONENT_MEASUREMENTS",
+    "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO",
+    "T26_PARETO",
+    "T26_REPRESENTATION_SENSITIVITY"
+  ],
+  "timing_executed": false
+}

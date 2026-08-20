@@ -1,0 +1,56 @@
+{
+  "stage": "Stage27-1A",
+  "type": "RUNTIME_FAMILY_CODE_CACHE_RECEIPT",
+  "created_at_utc": "2026-08-20T17:56:17.570362+00:00",
+  "scientific_parent_commit": "1ea6bedb141bc3fa6115edbc5296d0f7c6252559",
+  "cache_root": "/kaggle/working/stage27_1a_membership_cache",
+  "global_row_semantics": "ZERO_BASED_INDEX_IN_CONCATENATION_OF_8_FROZEN_EFFECTIVE_SOURCE_SEGMENTS_IN_STAGE24_PUBLISHED_POPULATION_ORDER",
+  "family_codebook": {
+    "BENIGN": 0,
+    "BOT": 1,
+    "DDOS": 2,
+    "DOS": 3,
+    "AUTH_BRUTE_FORCE": 4,
+    "INFILTRATION": 5,
+    "PORT_SCAN": 6,
+    "WEB_ATTACK": 7,
+    "TARGET_ONLY_UNSEEN": 8,
+    "OTHER_ATTACK_UNSEEN_LABEL": 9
+  },
+  "arrays": {
+    "global_family_codes": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/global_family_codes.npy",
+      "dtype": "uint8",
+      "shape": [
+        2830743
+      ],
+      "count": 2830743,
+      "content_sha256": "b0e9fb8b0eba74fdb66b0f1ab06c03dea5ab2b91bf280a28055b68c8f01ad632",
+      "npy_bytes": 2830871,
+      "npy_sha256": "7d02977cbfc31809db018e40cbbf78a932db63c4901fb3e24c1fbb13b50dc879"
+    },
+    "global_day_codes": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/global_day_codes.npy",
+      "dtype": "uint8",
+      "shape": [
+        2830743
+      ],
+      "count": 2830743,
+      "content_sha256": "a474d277f5b22df628e55e40a73222d993db532e4cdbfa2d9baaf7cc6a7e0533",
+      "npy_bytes": 2830871,
+      "npy_sha256": "daaecadf570b1d80154c05c4241552647210b28048336da599ff71f0d301798f"
+    },
+    "global_source_codes": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/global_source_codes.npy",
+      "dtype": "uint8",
+      "shape": [
+        2830743
+      ],
+      "count": 2830743,
+      "content_sha256": "9fd9281a18aa9b7cb43b643d431f80a75b4d695eb7119a4fdbbed5318d07e6d0",
+      "npy_bytes": 2830871,
+      "npy_sha256": "2e49932a59027d7fa4f94c867953a0374db7cd3caa5fb6cd86ea0d2a5a5dbd41"
+    }
+  },
+  "rebuild_rule": "If the Kaggle runtime cache is lost, rebuild from the same 8 byte-exact frozen source assets, effective-row rules and taxonomy, then require these content hashes before any model fit."
+}

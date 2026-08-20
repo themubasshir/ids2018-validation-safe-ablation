@@ -1,0 +1,92 @@
+{
+  "stage": "Stage27-1A",
+  "status": "MEMBERSHIP_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "created_at_utc": "2026-08-20T17:56:17.574685+00:00",
+  "scientific_parent_commit": "1ea6bedb141bc3fa6115edbc5296d0f7c6252559",
+  "required_artifact_count": 9,
+  "artifact_hashes_before_freeze_record": {
+    "source_effective_population_receipt.json": {
+      "bytes": 7024,
+      "sha256": "69792afdf534ed014c1c1f95e21b90190e1461a1a6cdbfe702c0fdfc57a928b5"
+    },
+    "canonical_label_census.json": {
+      "bytes": 3971,
+      "sha256": "c5def0b7b27fa165d97c1117c12c916d5bfbca1afc2e811b93c71c2ea8124292"
+    },
+    "family_code_cache_receipt.json": {
+      "bytes": 2121,
+      "sha256": "8899b7aad3986e4abb12b4ed815e18be334ac4f9618affb7b8dff2a6bdb4a0f0"
+    },
+    "fold_BOT_membership_receipt.json": {
+      "bytes": 5044,
+      "sha256": "8d150328c89f2ebdee326293c76c7cd6dd5a72a638802775a0847900fb857c30"
+    },
+    "fold_DDOS_membership_receipt.json": {
+      "bytes": 5051,
+      "sha256": "6f0069820238e628ccf335c72f5fc5049800388db04841e4b694be4e09e7f274"
+    },
+    "fold_INFILTRATION_membership_receipt.json": {
+      "bytes": 5070,
+      "sha256": "8c19ee7c30be6db289dac734ab165642073b2e45786cf2a775dfe121a14ac2b1"
+    },
+    "fold_PORT_SCAN_membership_receipt.json": {
+      "bytes": 5076,
+      "sha256": "2861774baf701c509d76c68bfb50ba88f91fa84e7a0dc08ca4f0e08abdeac83c"
+    },
+    "fold_WEB_ATTACK_membership_receipt.json": {
+      "bytes": 5043,
+      "sha256": "f09a6364929a3b2d5afe64afea70b31fe17bb8c7f639b67402a5cc5ee5d21fd6"
+    }
+  },
+  "source_population": {
+    "physical_rows": 3119345,
+    "effective_rows": 2830743,
+    "structural_null_excluded": 288602,
+    "byte_exact_source_count": 8
+  },
+  "eligible_folds": [
+    "BOT",
+    "DDOS",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "eligible_fold_count": 5,
+  "structurally_ineligible": [
+    "DOS",
+    "AUTH_BRUTE_FORCE"
+  ],
+  "descriptive_only": [
+    "INFILTRATION"
+  ],
+  "source_label_compatibility_status": "PASS_EXACT_STAGE24_U0096_WEB_ATTACK_ALIAS_REPRODUCTION",
+  "heldout_exclusion_global_status": "PASS_ALL_5_FOLDS",
+  "heldout_train_counts": {
+    "BOT": 0,
+    "DDOS": 0,
+    "INFILTRATION": 0,
+    "PORT_SCAN": 0,
+    "WEB_ATTACK": 0
+  },
+  "heldout_validation_counts": {
+    "BOT": 0,
+    "DDOS": 0,
+    "INFILTRATION": 0,
+    "PORT_SCAN": 0,
+    "WEB_ATTACK": 0
+  },
+  "scientific_actions_completed": {
+    "source_downloads_this_stage": 0,
+    "label_rows_processed": 2830743,
+    "predictor_columns_read": 0,
+    "feature_rows_materialized": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selections": 0,
+    "target_predictor_openings": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "next_authorized_step_after_remote_verification": "MATERIALIZE FROZEN 70-FEATURE TRAIN/VALIDATION MATRICES AND TRAIN THE TWO PREREGISTERED LEARNERS PER ELIGIBLE FOLD ON CPU, ONLY AFTER THE MEMBERSHIP RECEIPTS ARE COMMITTED/PUSHED/REMOTE-VERIFIED.",
+  "fit_authorization_now": false
+}

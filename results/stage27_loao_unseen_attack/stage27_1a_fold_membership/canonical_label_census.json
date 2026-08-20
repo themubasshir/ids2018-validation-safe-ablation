@@ -1,0 +1,144 @@
+{
+  "stage": "Stage27-1A",
+  "type": "CANONICAL_LABEL_CENSUS",
+  "created_at_utc": "2026-08-20T17:56:17.569312+00:00",
+  "scientific_parent_commit": "1ea6bedb141bc3fa6115edbc5296d0f7c6252559",
+  "canonicalization": [
+    "STRIP_OUTER_WHITESPACE",
+    "NORMALIZE_UNICODE_DASHES_TO_ASCII_HYPHEN",
+    "COLLAPSE_INTERNAL_WHITESPACE",
+    "CASEFOLD_FOR_LOOKUP",
+    "MAP_ONLY_THE_THREE_FROZEN_CICIDS2017_WEB_ATTACK_U+0096_CP1252_EN_DASH_COMPATIBILITY_ALIASES_TO_THE_ALREADY_FROZEN_ASCII_HYPHEN_TAXONOMY_KEYS"
+  ],
+  "source_encoding_compatibility": {
+    "issue": "The byte-exact CICIDS2017 traffic_labels Web Attack strings preserve Windows-1252 byte 0x96 as Unicode U+0096. The durable Stage24 published census records these exact strings.",
+    "taxonomy_change": false,
+    "authorized_aliases": {
+      "web attack  brute force": "web attack - brute force",
+      "web attack  sql injection": "web attack - sql injection",
+      "web attack  xss": "web attack - xss"
+    },
+    "expected_and_observed_alias_counts": {
+      "web attack  brute force": 1507,
+      "web attack  sql injection": 21,
+      "web attack  xss": 652
+    },
+    "total_rows_mapped": 2180,
+    "durable_evidence_path": "results/stage24_cross_dataset/stage24_2_primary_target_openings/stage24_2a_bridge62_published/stage24_2a_bridge62_published_result.json",
+    "durable_evidence_sha256": "1d4b3010fdc8b0f7f62a0fed2c373824ce99cb2f16936c021756749a9ca54749",
+    "status": "PASS_EXACT"
+  },
+  "precompat_canonical_label_counts": {
+    "benign": 2273097,
+    "bot": 1966,
+    "ddos": 128027,
+    "dos goldeneye": 10293,
+    "dos hulk": 231073,
+    "dos slowhttptest": 5499,
+    "dos slowloris": 5796,
+    "ftp-patator": 7938,
+    "heartbleed": 11,
+    "infiltration": 36,
+    "portscan": 158930,
+    "ssh-patator": 5897,
+    "web attack  brute force": 1507,
+    "web attack  sql injection": 21,
+    "web attack  xss": 652
+  },
+  "raw_canonical_label_counts": {
+    "benign": 2273097,
+    "bot": 1966,
+    "ddos": 128027,
+    "dos goldeneye": 10293,
+    "dos hulk": 231073,
+    "dos slowhttptest": 5499,
+    "dos slowloris": 5796,
+    "ftp-patator": 7938,
+    "heartbleed": 11,
+    "infiltration": 36,
+    "portscan": 158930,
+    "ssh-patator": 5897,
+    "web attack - brute force": 1507,
+    "web attack - sql injection": 21,
+    "web attack - xss": 652
+  },
+  "family_counts": {
+    "BENIGN": 2273097,
+    "BOT": 1966,
+    "DDOS": 128027,
+    "DOS": 252661,
+    "AUTH_BRUTE_FORCE": 13835,
+    "INFILTRATION": 36,
+    "PORT_SCAN": 158930,
+    "WEB_ATTACK": 2180,
+    "TARGET_ONLY_UNSEEN": 11,
+    "OTHER_ATTACK_UNSEEN_LABEL": 0
+  },
+  "family_day_counts": {
+    "BOT": {
+      "Monday": 0,
+      "Tuesday": 0,
+      "Wednesday": 0,
+      "Thursday": 0,
+      "Friday": 1966
+    },
+    "DDOS": {
+      "Monday": 0,
+      "Tuesday": 0,
+      "Wednesday": 0,
+      "Thursday": 0,
+      "Friday": 128027
+    },
+    "DOS": {
+      "Monday": 0,
+      "Tuesday": 0,
+      "Wednesday": 252661,
+      "Thursday": 0,
+      "Friday": 0
+    },
+    "AUTH_BRUTE_FORCE": {
+      "Monday": 0,
+      "Tuesday": 13835,
+      "Wednesday": 0,
+      "Thursday": 0,
+      "Friday": 0
+    },
+    "INFILTRATION": {
+      "Monday": 0,
+      "Tuesday": 0,
+      "Wednesday": 0,
+      "Thursday": 36,
+      "Friday": 0
+    },
+    "PORT_SCAN": {
+      "Monday": 0,
+      "Tuesday": 0,
+      "Wednesday": 0,
+      "Thursday": 0,
+      "Friday": 158930
+    },
+    "WEB_ATTACK": {
+      "Monday": 0,
+      "Tuesday": 0,
+      "Wednesday": 0,
+      "Thursday": 2180,
+      "Friday": 0
+    }
+  },
+  "benign_day_counts": {
+    "Monday": 529918,
+    "Tuesday": 432074,
+    "Wednesday": 440031,
+    "Thursday": 456752,
+    "Friday": 414322
+  },
+  "global_arithmetic": {
+    "benign": 2273097,
+    "primary_seven_family_attack": 557635,
+    "target_only_unseen": 11,
+    "other_attack_unseen_label": 0,
+    "all_nonbenign": 557646,
+    "effective_rows": 2830743
+  },
+  "stage27_0a_support_reproduction": "PASS_EXACT"
+}

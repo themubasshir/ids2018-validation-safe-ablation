@@ -1,0 +1,154 @@
+{
+  "stage": "Stage27-1A",
+  "type": "FOLD_MEMBERSHIP_RECEIPT",
+  "created_at_utc": "2026-08-20T17:56:16.494752+00:00",
+  "scientific_parent_commit": "1ea6bedb141bc3fa6115edbc5296d0f7c6252559",
+  "held_out_family": "BOT",
+  "fold_status": "ELIGIBLE",
+  "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+  "train_days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday"
+  ],
+  "validation_days": [
+    "Thursday"
+  ],
+  "target_days": [
+    "Friday"
+  ],
+  "membership_semantics": {
+    "global_row_id": "ZERO_BASED_INDEX_IN_CONCATENATION_OF_THE_8_FROZEN_EFFECTIVE_SOURCE_SEGMENTS_IN_STAGE24_PUBLISHED_POPULATION_ORDER",
+    "train": "BENIGN + PRIMARY-SEVEN KNOWN ATTACK FAMILIES ON FROZEN TRAIN DAYS; HELD-OUT FAMILY EXCLUDED; HEARTBLEED/OTHER UNKNOWN EXCLUDED",
+    "validation": "BENIGN + PRIMARY-SEVEN KNOWN ATTACK FAMILIES ON FROZEN VALIDATION DAY; HELD-OUT FAMILY EXCLUDED; HEARTBLEED/OTHER UNKNOWN EXCLUDED",
+    "primary_target": "SAME-TARGET-DAY BENIGN + HELD-OUT FAMILY ONLY",
+    "operational_target": "SAME-TARGET-DAY BENIGN + ALL PRIMARY-SEVEN ATTACK FAMILIES"
+  },
+  "counts": {
+    "train_rows": 1668519,
+    "train_benign": 1402023,
+    "train_attack": 266496,
+    "validation_rows": 458968,
+    "validation_benign": 456752,
+    "validation_attack": 2216,
+    "primary_target_rows": 416288,
+    "primary_target_benign": 414322,
+    "primary_target_heldout_attack": 1966,
+    "operational_target_rows": 703245,
+    "operational_target_benign": 414322,
+    "operational_target_attack": 288923
+  },
+  "heldout_exclusion": {
+    "train_count": 0,
+    "validation_count": 0,
+    "train_required": 0,
+    "validation_required": 0,
+    "status": "PASS"
+  },
+  "chronology_and_disjointness": {
+    "train_max_global_idx": 1668529,
+    "validation_min_global_idx": 1668530,
+    "validation_max_global_idx": 2127497,
+    "target_min_global_idx": 2127498,
+    "strict_global_order": true,
+    "train_validation_disjoint": true,
+    "train_target_disjoint": true,
+    "validation_target_disjoint": true
+  },
+  "class_weight": {
+    "formula": "train_benign / train_attack",
+    "train_benign": 1402023,
+    "train_attack": 266496,
+    "realized_value": 5.260953260086455,
+    "stage27_0_expected_value": 5.260953260086455,
+    "recomputed_from_frozen_train_membership": true,
+    "target_rows_used": 0,
+    "validation_rows_used": 0
+  },
+  "family_support": {
+    "train": {
+      "BOT": 0,
+      "DDOS": 0,
+      "DOS": 252661,
+      "AUTH_BRUTE_FORCE": 13835,
+      "INFILTRATION": 0,
+      "PORT_SCAN": 0,
+      "WEB_ATTACK": 0
+    },
+    "validation": {
+      "BOT": 0,
+      "DDOS": 0,
+      "DOS": 0,
+      "AUTH_BRUTE_FORCE": 0,
+      "INFILTRATION": 36,
+      "PORT_SCAN": 0,
+      "WEB_ATTACK": 2180
+    },
+    "operational_target": {
+      "BOT": 1966,
+      "DDOS": 128027,
+      "DOS": 0,
+      "AUTH_BRUTE_FORCE": 0,
+      "INFILTRATION": 0,
+      "PORT_SCAN": 158930,
+      "WEB_ATTACK": 0
+    }
+  },
+  "runtime_membership_arrays": {
+    "train_global_idx": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/BOT/train_global_idx.npy",
+      "dtype": "int32",
+      "shape": [
+        1668519
+      ],
+      "count": 1668519,
+      "content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+      "npy_bytes": 6674204,
+      "npy_sha256": "7f87ae6455bce853677236670250bfc0608b99ba3a285c901cd0b6bb6ee65be5"
+    },
+    "validation_global_idx": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/BOT/validation_global_idx.npy",
+      "dtype": "int32",
+      "shape": [
+        458968
+      ],
+      "count": 458968,
+      "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+      "npy_bytes": 1836000,
+      "npy_sha256": "9e6f00dfa7b487cedffe056d74d549c2ad23667a4d675794da03f756c191fabc"
+    },
+    "primary_target_global_idx": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/BOT/primary_target_global_idx.npy",
+      "dtype": "int32",
+      "shape": [
+        416288
+      ],
+      "count": 416288,
+      "content_sha256": "023d4b9ec7cd5a0e006c12aba105cc4ebea06372d9b00e7b50c87ac2a4a88a99",
+      "npy_bytes": 1665280,
+      "npy_sha256": "f7fb058039519d490611c43bef9fdcf014967aef4208be62451a1cd5eceb6241"
+    },
+    "operational_target_global_idx": {
+      "path": "/kaggle/working/stage27_1a_membership_cache/BOT/operational_target_global_idx.npy",
+      "dtype": "int32",
+      "shape": [
+        703245
+      ],
+      "count": 703245,
+      "content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+      "npy_bytes": 2813108,
+      "npy_sha256": "2148b17b1be8fb72fa68d5d35e99434d31f5533ab5125480ecb1d24e05560856"
+    }
+  },
+  "known_family_control": {
+    "membership": "IDENTICAL_TO_FROZEN_VALIDATION_MEMBERSHIP",
+    "threshold_selection_authorized_later": true,
+    "threshold_selection_executed_now": false
+  },
+  "target_opening_semantics": {
+    "predictor_columns_read": 0,
+    "label_column_read_for_membership_only": true,
+    "model_inference_on_target": false,
+    "opening_consumed": 0
+  }
+}

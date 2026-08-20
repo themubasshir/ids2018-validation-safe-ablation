@@ -1,0 +1,9 @@
+claim_id,topic,claim,source,boundary
+P2-C01,Group A CPU frontier,"XGBoost, LightGBM, and CatBoost are descriptive Group-A CPU frontier members.",T26_PARETO.csv,WITHIN_GROUP_A_ONLY
+P2-C02,Group B CPU frontier,Masked ViT has higher PR-AUC and lower CPU1 B1 p95 latency than masked CNN within Group B.,T26_PARETO.csv,WITHIN_GROUP_B_ONLY
+P2-C03,CNN B1 acceleration,CNN B1 CPU/GPU p95 point-estimate ratio=10.858443.,T26_CPU1_GPU_BATCH1_ANCHOR.csv,COMPONENT_LEVEL_POINT_ESTIMATE
+P2-C04,FT B1 acceleration,FT ensemble B1 CPU/GPU p95 point-estimate ratio=1.941522.,T26_CPU1_GPU_BATCH1_ANCHOR.csv,COMPONENT_LEVEL_POINT_ESTIMATE
+P2-C05,XGBoost crossover,XGBoost is CPU-favorable through B64 and GPU-favorable from measured B256 onward.,T26_CPU1_GPU_MATCHED_COMPARISON.csv,MEASURED_BATCHES_ONLY
+P2-C06,CatBoost crossover,CatBoost is still CPU-favorable at B1024 and becomes GPU-favorable at measured B8192.,T26_CPU1_GPU_MATCHED_COMPARISON.csv,MEASURED_BATCHES_ONLY
+P2-C07,CNN resource limit,CNN B8192 is RESOURCE_LIMIT_OOM with no imputed cost.,T26_GPU_WARM_INFERENCE_MEMORY.csv,RESOURCE_LIMIT_OUTCOME
+P2-C08,LightGBM backend,LightGBM native GPU inference and the dependent LightGBM+XGBoost complete GPU ensemble are BACKEND_UNAVAILABLE.,T26_GPU_BACKEND_RESOURCE_STATUS.csv,NO_BACKEND_SUBSTITUTION

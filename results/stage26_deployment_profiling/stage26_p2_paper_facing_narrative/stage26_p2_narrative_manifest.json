@@ -1,0 +1,22 @@
+{
+  "files": {
+    "stage26_deployment_claim_traceability.csv": {
+      "bytes": 1288,
+      "sha256": "27283b480aad3e07be5cc734745068874c81f46046ecbfbd5eb104703ef9da80"
+    },
+    "stage26_deployment_ieee_ready_narrative.md": {
+      "bytes": 6070,
+      "sha256": "4afbec8b86631b9b9eb42a31927bab5535d5f83b1f1275bfd992e46c986c75f5"
+    },
+    "stage26_deployment_manuscript_asset_map.csv": {
+      "bytes": 745,
+      "sha256": "0d392222634b933ed0a3f202db06c8f63040e7c9d0776f3fdbfe85ba2d8cb494"
+    },
+    "stage26_p2_narrative_receipt.json": {
+      "bytes": 2012,
+      "sha256": "4517dc0bed1b5872cbc4d337c03d96a800f6e13d32259050c9fbc83d8b21aa5f"
+    }
+  },
+  "schema": "stage26_p2_paper_facing_narrative_manifest_v1",
+  "scientific_parent": "9e8354ecc9cfa72c28aa037e5d2053de422bf7a2"
+}

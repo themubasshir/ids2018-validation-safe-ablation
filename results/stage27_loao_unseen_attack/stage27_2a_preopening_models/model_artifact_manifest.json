@@ -1,0 +1,325 @@
+{
+  "stage": "Stage27-2A",
+  "type": "MODEL_AND_VALIDATION_ARTIFACT_MANIFEST",
+  "created_at_utc": "2026-08-20T18:32:16.442934+00:00",
+  "scientific_parent_commit": "9bdf2c1fca362312855b8612c579da685a390ffe",
+  "models": {
+    "BOT::XGBOOST": {
+      "family": "BOT",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/BOT_XGBOOST_XGB_11.json",
+      "bytes": 1761497,
+      "sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+      "fit_ordinal": 1,
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "positive_class_weight": 5.260953260086455,
+      "fit_elapsed_seconds": 98.51679982699989,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "BOT::LIGHTGBM": {
+      "family": "BOT",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/BOT_LIGHTGBM_LGBM_11.txt",
+      "bytes": 5101491,
+      "sha256": "3c273f00f7d8672c4efcdf2473b9c9c84487f5a63ad60c7abde854c2f3fbad3e",
+      "fit_ordinal": 2,
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "positive_class_weight": 5.260953260086455,
+      "fit_elapsed_seconds": 91.96901820899984,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "DDOS::XGBOOST": {
+      "family": "DDOS",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/DDOS_XGBOOST_XGB_11.json",
+      "bytes": 1761497,
+      "sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+      "fit_ordinal": 3,
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "positive_class_weight": 5.260953260086455,
+      "fit_elapsed_seconds": 95.51406464199954,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "DDOS::LIGHTGBM": {
+      "family": "DDOS",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/DDOS_LIGHTGBM_LGBM_11.txt",
+      "bytes": 5101497,
+      "sha256": "adb23a188d215acdbfd47002d4c3c5a6a236dae4cc0d4783fbffaaccaef21c44",
+      "fit_ordinal": 4,
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "positive_class_weight": 5.260953260086455,
+      "fit_elapsed_seconds": 92.34559566400003,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "INFILTRATION::XGBOOST": {
+      "family": "INFILTRATION",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/INFILTRATION_XGBOOST_XGB_11.json",
+      "bytes": 627209,
+      "sha256": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9",
+      "fit_ordinal": 5,
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "positive_class_weight": 69.53321286591977,
+      "fit_elapsed_seconds": 46.91328707499997,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "family": "INFILTRATION",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/INFILTRATION_LIGHTGBM_LGBM_11.txt",
+      "bytes": 1042244,
+      "sha256": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751",
+      "fit_ordinal": 6,
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "positive_class_weight": 69.53321286591977,
+      "fit_elapsed_seconds": 34.97308094000073,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "PORT_SCAN::XGBOOST": {
+      "family": "PORT_SCAN",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/PORT_SCAN_XGBOOST_XGB_11.json",
+      "bytes": 1761497,
+      "sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+      "fit_ordinal": 7,
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "positive_class_weight": 5.260953260086455,
+      "fit_elapsed_seconds": 95.7465375690008,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "family": "PORT_SCAN",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/PORT_SCAN_LIGHTGBM_LGBM_11.txt",
+      "bytes": 5101496,
+      "sha256": "d257eeb3b63018cde78b9460dadb02c46e0287cde5f8477bab0b8ff757962c4c",
+      "fit_ordinal": 8,
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "positive_class_weight": 5.260953260086455,
+      "fit_elapsed_seconds": 85.4560071549995,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "family": "WEB_ATTACK",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/WEB_ATTACK_XGBOOST_XGB_11.json",
+      "bytes": 627209,
+      "sha256": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9",
+      "fit_ordinal": 9,
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "positive_class_weight": 69.53321286591977,
+      "fit_elapsed_seconds": 47.142400929999894,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "family": "WEB_ATTACK",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/models/WEB_ATTACK_LIGHTGBM_LGBM_11.txt",
+      "bytes": 1042244,
+      "sha256": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751",
+      "fit_ordinal": 10,
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "positive_class_weight": 69.53321286591977,
+      "fit_elapsed_seconds": 34.73619707199941,
+      "validation_used_during_fit": false,
+      "target_rows_used_in_fit": 0
+    }
+  },
+  "wednesday_validation_probabilities": {
+    "INFILTRATION::XGBOOST": {
+      "family": "INFILTRATION",
+      "learner": "XGBOOST",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/INFILTRATION_XGBOOST_wednesday_known_validation_prob_float32.npy",
+      "rows": 692692,
+      "dtype": "float32",
+      "npy_bytes": 2770896,
+      "npy_sha256": "ee2c63842582a0599beff28cdf5f9b7e4a65af97197861e8d48b265460a45f4f",
+      "content_sha256": "30e3a76a6fd5799e1ec0aa592a7f51bc9321635394d9618b3cf58fc9b60e5cf3",
+      "population": "WEDNESDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+      "heldout_rows": 0,
+      "target_rows": 0
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "family": "INFILTRATION",
+      "learner": "LIGHTGBM",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/INFILTRATION_LIGHTGBM_wednesday_known_validation_prob_float32.npy",
+      "rows": 692692,
+      "dtype": "float32",
+      "npy_bytes": 2770896,
+      "npy_sha256": "107a635e0ef257f3d76957ec9770b9391fd74fd64ce182b6f714d13fc9371ad4",
+      "content_sha256": "b48f2f7cd5b1b8432959c272f6af96648e80f033b78424b8cbb61b5f7947b144",
+      "population": "WEDNESDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+      "heldout_rows": 0,
+      "target_rows": 0
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "family": "WEB_ATTACK",
+      "learner": "XGBOOST",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/WEB_ATTACK_XGBOOST_wednesday_known_validation_prob_float32.npy",
+      "rows": 692692,
+      "dtype": "float32",
+      "npy_bytes": 2770896,
+      "npy_sha256": "ee2c63842582a0599beff28cdf5f9b7e4a65af97197861e8d48b265460a45f4f",
+      "content_sha256": "30e3a76a6fd5799e1ec0aa592a7f51bc9321635394d9618b3cf58fc9b60e5cf3",
+      "population": "WEDNESDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+      "heldout_rows": 0,
+      "target_rows": 0
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "family": "WEB_ATTACK",
+      "learner": "LIGHTGBM",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/WEB_ATTACK_LIGHTGBM_wednesday_known_validation_prob_float32.npy",
+      "rows": 692692,
+      "dtype": "float32",
+      "npy_bytes": 2770896,
+      "npy_sha256": "107a635e0ef257f3d76957ec9770b9391fd74fd64ce182b6f714d13fc9371ad4",
+      "content_sha256": "b48f2f7cd5b1b8432959c272f6af96648e80f033b78424b8cbb61b5f7947b144",
+      "population": "WEDNESDAY_KNOWN_FAMILY_VALIDATION_ONLY",
+      "heldout_rows": 0,
+      "target_rows": 0
+    }
+  },
+  "model_count": 10,
+  "validation_probability_vector_count": 4,
+  "target_probability_vector_count": 0
+}

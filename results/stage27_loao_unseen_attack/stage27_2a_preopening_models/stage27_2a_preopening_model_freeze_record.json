@@ -1,0 +1,136 @@
+{
+  "stage": "Stage27-2A",
+  "status": "ALL_10_MODELS_AND_THURSDAY_TARGET_FOLD_THRESHOLDS_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "created_at_utc": "2026-08-20T18:32:16.608213+00:00",
+  "scientific_parent_commit": "9bdf2c1fca362312855b8612c579da685a390ffe",
+  "required_artifact_count": 18,
+  "artifact_hashes_before_freeze_record": {
+    "fit_execution_receipt.json": {
+      "bytes": 11307,
+      "sha256": "de6be674354b0ae65d593bb6cf8f859b93ac805206915544c174c248138b5c36"
+    },
+    "model_artifact_manifest.json": {
+      "bytes": 12809,
+      "sha256": "7ecbb0bda5926403a72a9f9e46936492f2d33613ab86a376d4fad7c4d9dcdf18"
+    },
+    "models/BOT_LIGHTGBM_LGBM_11.txt": {
+      "bytes": 5101491,
+      "sha256": "3c273f00f7d8672c4efcdf2473b9c9c84487f5a63ad60c7abde854c2f3fbad3e"
+    },
+    "models/BOT_XGBOOST_XGB_11.json": {
+      "bytes": 1761497,
+      "sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9"
+    },
+    "models/DDOS_LIGHTGBM_LGBM_11.txt": {
+      "bytes": 5101497,
+      "sha256": "adb23a188d215acdbfd47002d4c3c5a6a236dae4cc0d4783fbffaaccaef21c44"
+    },
+    "models/DDOS_XGBOOST_XGB_11.json": {
+      "bytes": 1761497,
+      "sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9"
+    },
+    "models/INFILTRATION_LIGHTGBM_LGBM_11.txt": {
+      "bytes": 1042244,
+      "sha256": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751"
+    },
+    "models/INFILTRATION_XGBOOST_XGB_11.json": {
+      "bytes": 627209,
+      "sha256": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9"
+    },
+    "models/PORT_SCAN_LIGHTGBM_LGBM_11.txt": {
+      "bytes": 5101496,
+      "sha256": "d257eeb3b63018cde78b9460dadb02c46e0287cde5f8477bab0b8ff757962c4c"
+    },
+    "models/PORT_SCAN_XGBOOST_XGB_11.json": {
+      "bytes": 1761497,
+      "sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9"
+    },
+    "models/WEB_ATTACK_LIGHTGBM_LGBM_11.txt": {
+      "bytes": 1042244,
+      "sha256": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751"
+    },
+    "models/WEB_ATTACK_XGBOOST_XGB_11.json": {
+      "bytes": 627209,
+      "sha256": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9"
+    },
+    "validation/INFILTRATION_LIGHTGBM_wednesday_known_validation_prob_float32.npy": {
+      "bytes": 2770896,
+      "sha256": "107a635e0ef257f3d76957ec9770b9391fd74fd64ce182b6f714d13fc9371ad4"
+    },
+    "validation/INFILTRATION_XGBOOST_wednesday_known_validation_prob_float32.npy": {
+      "bytes": 2770896,
+      "sha256": "ee2c63842582a0599beff28cdf5f9b7e4a65af97197861e8d48b265460a45f4f"
+    },
+    "validation/WEB_ATTACK_LIGHTGBM_wednesday_known_validation_prob_float32.npy": {
+      "bytes": 2770896,
+      "sha256": "107a635e0ef257f3d76957ec9770b9391fd74fd64ce182b6f714d13fc9371ad4"
+    },
+    "validation/WEB_ATTACK_XGBOOST_wednesday_known_validation_prob_float32.npy": {
+      "bytes": 2770896,
+      "sha256": "ee2c63842582a0599beff28cdf5f9b7e4a65af97197861e8d48b265460a45f4f"
+    },
+    "wednesday_validation_threshold_receipt.json": {
+      "bytes": 148946,
+      "sha256": "c9b1af94b5b2cb0e09dc12d8ff0d967c940eda3c8b70cc04612d5b71a93243d6"
+    }
+  },
+  "fit_budget": {
+    "authorized": 10,
+    "completed": 10,
+    "remaining": 0,
+    "additional_fit_authorized": false
+  },
+  "model_status": {
+    "BOT": {
+      "XGBOOST": "FROZEN",
+      "LIGHTGBM": "FROZEN"
+    },
+    "DDOS": {
+      "XGBOOST": "FROZEN",
+      "LIGHTGBM": "FROZEN"
+    },
+    "INFILTRATION": {
+      "XGBOOST": "FROZEN",
+      "LIGHTGBM": "FROZEN"
+    },
+    "PORT_SCAN": {
+      "XGBOOST": "FROZEN",
+      "LIGHTGBM": "FROZEN"
+    },
+    "WEB_ATTACK": {
+      "XGBOOST": "FROZEN",
+      "LIGHTGBM": "FROZEN"
+    }
+  },
+  "threshold_status": {
+    "INFILTRATION": "ALL_OPERATING_POINTS_FROZEN",
+    "WEB_ATTACK": "ALL_OPERATING_POINTS_FROZEN",
+    "BOT": "BALANCED_SECURITY_PENDING_VALIDATION",
+    "DDOS": "BALANCED_SECURITY_PENDING_VALIDATION",
+    "PORT_SCAN": "BALANCED_SECURITY_PENDING_VALIDATION"
+  },
+  "thursday_target_opening_readiness": {
+    "INFILTRATION": true,
+    "WEB_ATTACK": true
+  },
+  "friday_target_opening_readiness": {
+    "BOT": false,
+    "DDOS": false,
+    "PORT_SCAN": false
+  },
+  "scientific_actions_completed": {
+    "model_fits": 10,
+    "validation_inference_vectors": 4,
+    "validation_threshold_selections": 4,
+    "thursday_predictor_source_files_read": 0,
+    "friday_predictor_source_files_read": 0,
+    "target_probability_vectors": 0,
+    "target_inference": 0,
+    "target_openings_consumed": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "next_authorized_step_after_remote_verification": "MATERIALIZE THE FROZEN THURSDAY 70-FEATURE POPULATION ONCE. USE IT AS KNOWN-FAMILY VALIDATION FOR BOT/DDOS/PORT_SCAN TO FREEZE THEIR BALANCED/SECURITY THRESHOLDS, AND AS THE SINGLE AUTHORIZED TARGET OPENING FOR INFILTRATION/WEB_ATTACK USING THE ALREADY-FROZEN MODELS/OPERATING POINTS. NO REFIT.",
+  "model_refit_authorized": false,
+  "target_adaptation_authorized": false
+}

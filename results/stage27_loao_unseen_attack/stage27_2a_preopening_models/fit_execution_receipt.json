@@ -1,0 +1,353 @@
+{
+  "stage": "Stage27-2A",
+  "type": "ALL_TEN_FIT_EXECUTION_RECEIPT",
+  "created_at_utc": "2026-08-20T18:32:16.441811+00:00",
+  "scientific_parent_commit": "9bdf2c1fca362312855b8612c579da685a390ffe",
+  "environment": {
+    "versions": {
+      "python": "3.12.13",
+      "numpy": "2.0.2",
+      "scikit_learn": "1.6.1",
+      "xgboost": "3.2.0",
+      "lightgbm": "4.6.0",
+      "joblib": "1.5.3"
+    },
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "cuda_visible_devices": "",
+    "execution_device": "CPU"
+  },
+  "fit_budget": {
+    "authorized": 10,
+    "completed": 10,
+    "remaining": 0,
+    "additional_fit_authorized": false
+  },
+  "execution_order": [
+    {
+      "fit_ordinal": 1,
+      "family": "BOT",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 5.260953260086455,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "model_sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+      "model_bytes": 1761497,
+      "fit_elapsed_seconds": 98.51679982699989,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 2,
+      "family": "BOT",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 5.260953260086455,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "model_sha256": "3c273f00f7d8672c4efcdf2473b9c9c84487f5a63ad60c7abde854c2f3fbad3e",
+      "model_bytes": 5101491,
+      "fit_elapsed_seconds": 91.96901820899984,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 3,
+      "family": "DDOS",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 5.260953260086455,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "model_sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+      "model_bytes": 1761497,
+      "fit_elapsed_seconds": 95.51406464199954,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 4,
+      "family": "DDOS",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 5.260953260086455,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "model_sha256": "adb23a188d215acdbfd47002d4c3c5a6a236dae4cc0d4783fbffaaccaef21c44",
+      "model_bytes": 5101497,
+      "fit_elapsed_seconds": 92.34559566400003,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 5,
+      "family": "INFILTRATION",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 69.53321286591977,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "model_sha256": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9",
+      "model_bytes": 627209,
+      "fit_elapsed_seconds": 46.91328707499997,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 6,
+      "family": "INFILTRATION",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 69.53321286591977,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "model_sha256": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751",
+      "model_bytes": 1042244,
+      "fit_elapsed_seconds": 34.97308094000073,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 7,
+      "family": "PORT_SCAN",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 5.260953260086455,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "model_sha256": "3d7b8747f911ae406894dbb07ec6870ceda91653e09792702b85e5777c5d43c9",
+      "model_bytes": 1761497,
+      "fit_elapsed_seconds": 95.7465375690008,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 8,
+      "family": "PORT_SCAN",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "train_spec": {
+        "slice": [
+          0,
+          1668519
+        ],
+        "rows": 1668519,
+        "benign": 1402023,
+        "attack": 266496,
+        "positive_class_weight": 5.260953260086455,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 5.260953260086455,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "model_sha256": "d257eeb3b63018cde78b9460dadb02c46e0287cde5f8477bab0b8ff757962c4c",
+      "model_bytes": 5101496,
+      "fit_elapsed_seconds": 85.4560071549995,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 9,
+      "family": "WEB_ATTACK",
+      "learner": "XGBOOST",
+      "configuration_id": "XGB_11",
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 69.53321286591977,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "model_sha256": "0611a874f999a4483d20ac8a1a01418dc6f08d36636a203ce209d37be3e6c2e9",
+      "model_bytes": 627209,
+      "fit_elapsed_seconds": 47.142400929999894,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    },
+    {
+      "fit_ordinal": 10,
+      "family": "WEB_ATTACK",
+      "learner": "LIGHTGBM",
+      "configuration_id": "LGBM_11",
+      "train_spec": {
+        "slice": [
+          0,
+          975827
+        ],
+        "rows": 975827,
+        "benign": 961992,
+        "attack": 13835,
+        "positive_class_weight": 69.53321286591977,
+        "sample_weight_dtype": "float64",
+        "sample_weight_rule": "BENIGN=1.0;ATTACK=train_benign/train_attack"
+      },
+      "sample_weight": {
+        "dtype": "float64",
+        "negative": 1.0,
+        "positive": 69.53321286591977,
+        "formula": "train_benign / train_attack",
+        "validation_rows_used": 0,
+        "target_rows_used": 0
+      },
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "model_sha256": "5dc9100c3e0fcad481b61a6a6b35008a1943cc7881416a4b89cd143501b77751",
+      "model_bytes": 1042244,
+      "fit_elapsed_seconds": 34.73619707199941,
+      "validation_used_during_fit": false,
+      "target_rows_used": 0
+    }
+  ],
+  "validation_outcomes_generated_before_all_10_fits_completed": false,
+  "hyperparameter_search": false,
+  "early_stopping": false,
+  "refit_after_validation": false,
+  "gpu_hours": 0
+}

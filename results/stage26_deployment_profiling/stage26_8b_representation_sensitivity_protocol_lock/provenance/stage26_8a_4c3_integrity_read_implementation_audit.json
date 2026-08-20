@@ -1,0 +1,820 @@
+{
+  "ast_evidence": [],
+  "candidate_implementation_files": [
+    {
+      "hit_terms": [
+        "perf_counter_ns",
+        "fingerprint",
+        "sha256",
+        "representation",
+        "materialize",
+        "timed_runs",
+        "warmup_runs"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "representation path",
+        "4C path",
+        "worker filename/path",
+        "contains perf_counter_ns",
+        "contains fingerprint",
+        "contains timed_runs"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_representation_worker_v2.py",
+      "score": 77,
+      "sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+      "size_bytes": 18518
+    },
+    {
+      "hit_terms": [
+        "perf_counter_ns",
+        "fingerprint",
+        "sha256",
+        "representation",
+        "materialize",
+        "timed_runs",
+        "warmup_runs"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "representation path",
+        "4C path",
+        "worker filename/path",
+        "contains perf_counter_ns",
+        "contains fingerprint",
+        "contains timed_runs"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_worker_v1.py",
+      "score": 77,
+      "sha256": "1189f5949e0a0fb0b708449e13cfb172b2ff144d8d724c61c98621d382f57d7a",
+      "size_bytes": 16519
+    },
+    {
+      "hit_terms": [
+        "perf_counter_ns",
+        "fingerprint",
+        "sha256",
+        "materialize",
+        "timed_runs",
+        "warmup_runs"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "worker filename/path",
+        "contains perf_counter_ns",
+        "contains fingerprint",
+        "contains timed_runs"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_warm_cpu_worker.py",
+      "score": 42,
+      "sha256": "2248f9c61b896bccf306167524b8be978993f49fc198327a6e280ee4553709b4",
+      "size_bytes": 36323
+    },
+    {
+      "hit_terms": [
+        "perf_counter_ns",
+        "sha256",
+        "materialize"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "worker filename/path",
+        "contains perf_counter_ns"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_cold_start_worker.py",
+      "score": 28,
+      "sha256": "b2047e213427e4089df01fb98691dc6313243c1df6a1649de62174d8405742ad",
+      "size_bytes": 24091
+    },
+    {
+      "hit_terms": [
+        "perf_counter_ns",
+        "fingerprint",
+        "sha256"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "contains perf_counter_ns",
+        "contains fingerprint"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_raw_flow_extractor_v1.py",
+      "score": 26,
+      "sha256": "ba34c5ab1a8e0bdb22acf5d6be3430cc2b31fdec04dc333dcf3ef7344abe44e6",
+      "size_bytes": 33967
+    },
+    {
+      "hit_terms": [
+        "time_ns",
+        "sha256"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "worker filename/path"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_0d_cpu_preflight/stage26_cpu_preflight_worker.py",
+      "score": 20,
+      "sha256": "248f7f3d1237cf1e8330f25f728ef4464cdbb6368f5a653ad205816e12190fb1",
+      "size_bytes": 28657
+    },
+    {
+      "hit_terms": [
+        "materialize"
+      ],
+      "reasons": [
+        "Stage26 path",
+        "worker filename/path"
+      ],
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_memory_worker.py",
+      "score": 20,
+      "sha256": "2ba87c88244b8b3d8b0265d44b29204dc87e321e5aedc35dc5ac536de5fa8fd7",
+      "size_bytes": 21517
+    }
+  ],
+  "classification": "NOT_RESOLVABLE_FROM_SOURCE",
+  "created_at_utc": "2026-08-20T07:55:23.211156+00:00",
+  "measurement_policy": {
+    "original_stage26_4c3_overwritten": false,
+    "original_stage26_4c3_retained": true,
+    "publication_replacement_decided": false,
+    "sensitivity_result_computed": false,
+    "sensitivity_timing_executed": false,
+    "stage26_7_component_ratios_recomputed": false
+  },
+  "metadata_string_hits": [
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.boundary_sha256",
+      "value": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.equivalence_fingerprint_sha256",
+      "value": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.equivalence_manifest_sha256",
+      "value": "814914ddc47b824ea8d54d4732ab2ffdbd0b3847d60ef7a69a993e4298281121"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.equivalence_receipt_sha256",
+      "value": "4dd18384f0c5d2dbc68711fbb4fd11dc7facd550a4be9db2b3ab13cc5fda2351"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.equivalence_result_sha256",
+      "value": "d8b28e8aea4f898bf4c6d5eba95706bbffeaca4270e596ee63529d013e88da10"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.erratum_sha256",
+      "value": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.execution_plan_sha256",
+      "value": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.protocol_sha256",
+      "value": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.frozen_inputs.worker_v2_sha256",
+      "value": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[0].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_config.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[0].config_sha256",
+      "value": "3c6a29790dfc05c95c35c0f2f877e38b367e448c99274139ab9fbbc8277a77ba"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[0].representation_fingerprint_sha256",
+      "value": "90764e0bf898fbde326ebc6d2a69b4bac7fd9d70564a13adb653ca71a16bc2d1"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[0].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_result.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[0].result_sha256",
+      "value": "77225af2314ae4c37ab26476f8a7e9c32b94349249847f05862b4d5768256fbb"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[1].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_config.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[1].config_sha256",
+      "value": "581ee8171e93acfe982b0c67fe5168e88dc49505b366700792aab27381d9655b"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[1].representation_fingerprint_sha256",
+      "value": "8a7ed90cf0dd3b79db92534de8b07715357a7448444a834570c6f2f22d728189"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[1].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_result.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[1].result_sha256",
+      "value": "f4e722d1facc7eb47e4c3d6c9189849c6ea6e2db6b4247c34b44002538521800"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[2].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_config.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[2].config_sha256",
+      "value": "9f491d9f24bde2aab272ba480bc93853da3dbace99d8e0b9f9e52a788ab92859"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[2].representation_fingerprint_sha256",
+      "value": "226475fdfe3dc4ba34b12c37ea2dd0eef419a7b4c79b58032cfe5003997545e8"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[2].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_result.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[2].result_sha256",
+      "value": "488ab409532544e201ee9a304b919d49dd7ee50ad2f311ba950df8da293316ff"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[3].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_config.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[3].config_sha256",
+      "value": "998416bce02c9d5090d7af22aa607a05ee85224a9ea447f89131fae427667bc0"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[3].representation_fingerprint_sha256",
+      "value": "ab1d10fe91a6b5146175f5e2f0e7e2edca93b1f15d2f0101df737c0a2bc5d016"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[3].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_result.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[3].result_sha256",
+      "value": "7b1e3f2f7e623d9f13569baecab1e90a83a637db8b79df8b443899a3fd39eb09"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[4].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_config.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[4].config_sha256",
+      "value": "c3d0df3b7bd34b9a674fcd97d4828e782fbb4ee03c03b5101059aad3399eb0cc"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[4].representation_fingerprint_sha256",
+      "value": "cd2fbccd7bb41cf0daa96af5ae02af4ebf8023934799889763e2295c9402ee77"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[4].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_result.json"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.measurement.conditions[4].result_sha256",
+      "value": "3014d77b1e2ec4c435f546cabe3d1780c8f2f5d51ff62ea2ab796399b1560f39"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.output_hashes.raw_observations_csv_sha256",
+      "value": "189852745ef83330526f6c680d459c7075a695f97614aa6c76a7ae7ded3447b3"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.output_hashes.summary_csv_sha256",
+      "value": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.output_hashes.summary_json_sha256",
+      "value": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.schema",
+      "value": "stage26_4c3_cpu1_representation_timing_receipt_v1"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.source_provenance.encoded_bytes.anchored_sha256",
+      "value": "27e6f730c9951075f500bedc96b91d215b74a995ee23e1f09e269eaa7a2bd82c"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.source_provenance.flow_offsets.anchored_sha256",
+      "value": "3744c55767896e98f5691210d6820224d9ae8315130ce74bb5d4264c25e4326e"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.source_provenance.packet_lengths.anchored_sha256",
+      "value": "16547aedafc3aaffcf9dca5ef50c7456cd823ed1ab59965a4c10520f11fb68f8"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.source_provenance.runtime_directory",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset"
+    },
+    {
+      "metadata_source": "receipt",
+      "path": "$.status",
+      "value": "PASS_FIVE_FROZEN_CPU1_REPRESENTATION_CONDITIONS"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.boundary_sha256",
+      "value": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.commit_subject",
+      "value": "stage26: anchor CPU1 representation timing"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.equivalence_fingerprint_sha256",
+      "value": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.equivalence_manifest_sha256",
+      "value": "814914ddc47b824ea8d54d4732ab2ffdbd0b3847d60ef7a69a993e4298281121"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.erratum_sha256",
+      "value": "1f6748b3042b64626de73c74f9a9ff2f8c1f9ce5e6b445a5dd2030137f951839"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.execution_plan_sha256",
+      "value": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[0].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_execution_plan.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[0].sha256",
+      "value": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[1].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_raw_observations.csv"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[1].sha256",
+      "value": "189852745ef83330526f6c680d459c7075a695f97614aa6c76a7ae7ded3447b3"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[2].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[2].sha256",
+      "value": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[3].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.csv"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[3].sha256",
+      "value": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[4].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_timing_receipt.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[4].sha256",
+      "value": "ed55b65905080dd6b796a54fb720de76bf100fdc7f3271a973e49c81f1722b14"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[5].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1/stage26_4c3_B1_config.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[5].sha256",
+      "value": "3c6a29790dfc05c95c35c0f2f877e38b367e448c99274139ab9fbbc8277a77ba"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[6].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1/stage26_4c3_B1_result.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[6].sha256",
+      "value": "77225af2314ae4c37ab26476f8a7e9c32b94349249847f05862b4d5768256fbb"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[7].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_64/stage26_4c3_B64_config.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[7].sha256",
+      "value": "581ee8171e93acfe982b0c67fe5168e88dc49505b366700792aab27381d9655b"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[8].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_64/stage26_4c3_B64_result.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[8].sha256",
+      "value": "f4e722d1facc7eb47e4c3d6c9189849c6ea6e2db6b4247c34b44002538521800"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[9].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_256/stage26_4c3_B256_config.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[9].sha256",
+      "value": "9f491d9f24bde2aab272ba480bc93853da3dbace99d8e0b9f9e52a788ab92859"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[10].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_256/stage26_4c3_B256_result.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[10].sha256",
+      "value": "488ab409532544e201ee9a304b919d49dd7ee50ad2f311ba950df8da293316ff"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[11].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1024/stage26_4c3_B1024_config.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[11].sha256",
+      "value": "998416bce02c9d5090d7af22aa607a05ee85224a9ea447f89131fae427667bc0"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[12].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1024/stage26_4c3_B1024_result.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[12].sha256",
+      "value": "7b1e3f2f7e623d9f13569baecab1e90a83a637db8b79df8b443899a3fd39eb09"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[13].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_8192/stage26_4c3_B8192_config.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[13].sha256",
+      "value": "c3d0df3b7bd34b9a674fcd97d4828e782fbb4ee03c03b5101059aad3399eb0cc"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[14].repo_relative_path",
+      "value": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_8192/stage26_4c3_B8192_result.json"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.files[14].sha256",
+      "value": "3014d77b1e2ec4c435f546cabe3d1780c8f2f5d51ff62ea2ab796399b1560f39"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.protocol_sha256",
+      "value": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.raw_observations_csv_sha256",
+      "value": "189852745ef83330526f6c680d459c7075a695f97614aa6c76a7ae7ded3447b3"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.schema",
+      "value": "stage26_4c3_cpu1_representation_timing_manifest_v1"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.summary_csv_sha256",
+      "value": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.summary_json_sha256",
+      "value": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.timing_receipt_sha256",
+      "value": "ed55b65905080dd6b796a54fb720de76bf100fdc7f3271a973e49c81f1722b14"
+    },
+    {
+      "metadata_source": "manifest",
+      "path": "$.worker_sha256",
+      "value": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+    },
+    {
+      "metadata_source": "execution_plan",
+      "path": "$.boundary_sha256",
+      "value": "88efc94664d9658b1e0601506ac4ea369300a98a05049e79280a77107c0828ba"
+    },
+    {
+      "metadata_source": "execution_plan",
+      "path": "$.equivalence_fingerprint_sha256",
+      "value": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185"
+    },
+    {
+      "metadata_source": "execution_plan",
+      "path": "$.equivalence_manifest_sha256",
+      "value": "814914ddc47b824ea8d54d4732ab2ffdbd0b3847d60ef7a69a993e4298281121"
+    },
+    {
+      "metadata_source": "execution_plan",
+      "path": "$.protocol_sha256",
+      "value": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f"
+    },
+    {
+      "metadata_source": "execution_plan",
+      "path": "$.schema",
+      "value": "stage26_4c3_cpu1_representation_execution_plan_v1"
+    },
+    {
+      "metadata_source": "execution_plan",
+      "path": "$.worker_sha256",
+      "value": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[0].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_config.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[0].config_sha256",
+      "value": "3c6a29790dfc05c95c35c0f2f877e38b367e448c99274139ab9fbbc8277a77ba"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[0].representation_fingerprint_sha256",
+      "value": "90764e0bf898fbde326ebc6d2a69b4bac7fd9d70564a13adb653ca71a16bc2d1"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[0].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_result.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[0].result_sha256",
+      "value": "77225af2314ae4c37ab26476f8a7e9c32b94349249847f05862b4d5768256fbb"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[1].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_config.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[1].config_sha256",
+      "value": "581ee8171e93acfe982b0c67fe5168e88dc49505b366700792aab27381d9655b"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[1].representation_fingerprint_sha256",
+      "value": "8a7ed90cf0dd3b79db92534de8b07715357a7448444a834570c6f2f22d728189"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[1].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_result.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[1].result_sha256",
+      "value": "f4e722d1facc7eb47e4c3d6c9189849c6ea6e2db6b4247c34b44002538521800"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[2].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_config.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[2].config_sha256",
+      "value": "9f491d9f24bde2aab272ba480bc93853da3dbace99d8e0b9f9e52a788ab92859"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[2].representation_fingerprint_sha256",
+      "value": "226475fdfe3dc4ba34b12c37ea2dd0eef419a7b4c79b58032cfe5003997545e8"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[2].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_result.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[2].result_sha256",
+      "value": "488ab409532544e201ee9a304b919d49dd7ee50ad2f311ba950df8da293316ff"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[3].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_config.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[3].config_sha256",
+      "value": "998416bce02c9d5090d7af22aa607a05ee85224a9ea447f89131fae427667bc0"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[3].representation_fingerprint_sha256",
+      "value": "ab1d10fe91a6b5146175f5e2f0e7e2edca93b1f15d2f0101df737c0a2bc5d016"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[3].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_result.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[3].result_sha256",
+      "value": "7b1e3f2f7e623d9f13569baecab1e90a83a637db8b79df8b443899a3fd39eb09"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[4].config_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_config.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[4].config_sha256",
+      "value": "c3d0df3b7bd34b9a674fcd97d4828e782fbb4ee03c03b5101059aad3399eb0cc"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[4].representation_fingerprint_sha256",
+      "value": "cd2fbccd7bb41cf0daa96af5ae02af4ebf8023934799889763e2295c9402ee77"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[4].result_path",
+      "value": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_result.json"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.conditions[4].result_sha256",
+      "value": "3014d77b1e2ec4c435f546cabe3d1780c8f2f5d51ff62ea2ab796399b1560f39"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.equivalence_fingerprint_sha256",
+      "value": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.execution_plan_sha256",
+      "value": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.protocol_sha256",
+      "value": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.schema",
+      "value": "stage26_4c3_cpu1_representation_summary_v1"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.status",
+      "value": "PASS_ALL_FIVE_FROZEN_CPU1_REPRESENTATION_CONDITIONS"
+    },
+    {
+      "metadata_source": "summary",
+      "path": "$.worker_sha256",
+      "value": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+    }
+  ],
+  "ordering_evidence": [],
+  "recommended_next": "NARROW_SOURCE_DIAGNOSTIC_REQUIRED",
+  "resolved_worker": null,
+  "schema": "stage26_8a_4c3_integrity_read_implementation_audit_v1",
+  "scientific_consequence": "The committed source audit does not yet provide enough structural evidence to determine the exact integrity-read ordering. Perform one narrower provenance/source diagnostic before deciding whether any sensitivity run is justified.",
+  "scientific_parent": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+  "scientific_state": {
+    "GPU_used": false,
+    "Git_modified": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Release_corpus_accessed": false,
+    "bootstrap_executed": false,
+    "implementation_inspected": true,
+    "inference_performed": false,
+    "model_loaded": false,
+    "representation_reexecuted": false,
+    "timing_executed": false
+  },
+  "source_analysis": {
+    "contexts": [],
+    "fingerprint_lines": [],
+    "hash_lines": [],
+    "loop_lines": [],
+    "resolved": false,
+    "timer_lines": []
+  },
+  "stage26_4c3_identity": {
+    "execution plan": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_execution_plan.json",
+      "sha256": "5e23b40c0e5d13a91641c42ad3ac95b4f3a828a6e351a3cd139d826d3ade2568"
+    },
+    "manifest": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_timing_manifest.json",
+      "sha256": "bfbc9000a708a803c53a11b591e8021d54325d1b7bccebb4b0aad65e1439b9db"
+    },
+    "raw observations": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_raw_observations.csv",
+      "sha256": "189852745ef83330526f6c680d459c7075a695f97614aa6c76a7ae7ded3447b3"
+    },
+    "receipt": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_timing_receipt.json",
+      "sha256": "ed55b65905080dd6b796a54fb720de76bf100fdc7f3271a973e49c81f1722b14"
+    },
+    "summary CSV": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.csv",
+      "sha256": "ca5bbc17edfa4bb088599236b4099c1986fd73cb7f087ef3ac753a524afd2ba5"
+    },
+    "summary JSON": {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/stage26_4c3_cpu1_representation_summary.json",
+      "sha256": "63c8041144668c62218fc9c46eb6a57aba9dcda0c9a3f0477f932f6a572c34f7"
+    }
+  },
+  "stage26_7c_anchor": {
+    "commit": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+    "manifest_sha256": "f090a992195e718b9ae569e681b3fd4b50b9dba76bca89fb6fc1099e30fa426c",
+    "receipt_sha256": "30bfd4657a5a0218ce22a4fab1922ee26e07496c148809ec04c8059656b73ce4",
+    "results_sha256": "ee5a852fb43ce01c980e64ef83611a88808d3a11a56a078609467fb899e39fdf"
+  },
+  "status": "PASS_READ_ONLY_IMPLEMENTATION_AUDIT"
+}

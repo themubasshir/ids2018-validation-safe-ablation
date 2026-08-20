@@ -1,0 +1,62 @@
+{
+  "V3_integrity": {
+    "inter_iteration_fingerprint_absent": true,
+    "materialize_batch_identical_to_V2": true,
+    "post_all_timing_integrity_fingerprint_present": true,
+    "reconstruct_identical_to_V2": true,
+    "timer_boundary_identical": true
+  },
+  "checkpoint": "STAGE26-8B",
+  "created_at_utc": "2026-08-20T08:20:16.972324+00:00",
+  "design": {
+    "adaptive_reordering": false,
+    "batches": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "contemporaneous_A_B": true,
+    "fresh_worker_processes": 50,
+    "hardware": "CPU_1_PHYSICAL_CORE",
+    "pair_blocks": 25,
+    "pair_replicates_per_batch": 5,
+    "paired": true,
+    "randomization_seed": 26042,
+    "replacement_pairs": false
+  },
+  "locked_artifacts": {
+    "V2_to_V3_diff_sha256": "955e9b5d77c63bb482a14690fbc471aff15bce3c811469b41d0373fd23b64dbd",
+    "V2_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "V3_worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+    "execution_plan_sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+    "protocol_sha256": "4ce96c1540b29bd9683305ed981412b46be4b0b2596dcb58b3064f0724f05c5e"
+  },
+  "next_permitted_action": "After remote Git verification, restore/verify the exact compact representation inputs and execute only the frozen paired V2/V3 Stage26-8B sensitivity plan.",
+  "schema": "stage26_8b_representation_sensitivity_freeze_receipt_v1",
+  "scientific_parent": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+  "scientific_state": {
+    "GPU_used": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Release_corpus_accessed": false,
+    "bootstrap_executed": false,
+    "corrected_or_sensitivity_timing_executed": false,
+    "historical_4C3_modified": false,
+    "historical_4C3_replaced": false,
+    "hypothesis_test_performed": false,
+    "inference_performed": false,
+    "materiality_threshold_selected": false,
+    "model_loaded": false,
+    "representation_executed": false,
+    "stage26_7c_modified": false,
+    "stage26_7c_recomputed": false
+  },
+  "stage": 26,
+  "status": "PASS_PAIRED_SENSITIVITY_PROTOCOL_FROZEN_BEFORE_TIMING",
+  "trigger": {
+    "classification": "OUTSIDE_TIMER_BEFORE_NEXT_TIMED_ITERATION",
+    "stage26_8a1_sha256": "e2121362d23a8e81afd367d42df944f8558422c0984762c5fbca5dd5f186a9c0"
+  }
+}

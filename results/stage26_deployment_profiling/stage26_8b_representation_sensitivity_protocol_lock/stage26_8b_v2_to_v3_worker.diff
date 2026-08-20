@@ -1,0 +1,65 @@
+--- stage26_representation_worker_v2.py
++++ stage26_representation_worker_v3_sensitivity.py
+@@ -706,27 +706,6 @@
+                 "non-positive elapsed time"
+             )
+ 
+-        # Integrity check intentionally outside timer.
+-        output_fingerprint = fingerprint(
+-            images,
+-            masks,
+-        )
+-
+-        if reference_fingerprint is None:
+-
+-            reference_fingerprint = (
+-                output_fingerprint
+-            )
+-
+-        elif (
+-            output_fingerprint
+-            !=
+-            reference_fingerprint
+-        ):
+-
+-            raise RuntimeError(
+-                "representation output changed across timed iterations"
+-            )
+ 
+         elapsed_seconds = (
+             elapsed_ns
+@@ -774,6 +753,34 @@
+             }
+         )
+ 
++    # Stage26-8B sensitivity V3:
++    # perform full-output integrity read only AFTER all timed iterations.
++    # This removes the historical inter-iteration fingerprint/cache-state
++    # perturbation while preserving the exact materialization timer boundary.
++    if not observations:
++
++        raise RuntimeError(
++            "no timed observations produced"
++        )
++
++    reference_fingerprint = fingerprint(
++        images,
++        masks,
++    )
++
++    if (
++        warm_fingerprint is not None
++        and
++        reference_fingerprint
++        !=
++        warm_fingerprint
++    ):
++
++        raise RuntimeError(
++            "final timed representation differs from final warmup representation"
++        )
++
++
+     return {
+         "status":
+             "PASS",

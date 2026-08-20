@@ -1,0 +1,65 @@
+{
+  "V2_to_V3_diff_sha256": "955e9b5d77c63bb482a14690fbc471aff15bce3c811469b41d0373fd23b64dbd",
+  "V2_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+  "V3_worker_sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+  "checkpoint": "STAGE26-8B",
+  "commit_subject": "stage26: freeze paired representation sensitivity protocol",
+  "created_at_utc": "2026-08-20T08:20:16.977545+00:00",
+  "execution_plan_sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+  "file_count_excluding_manifest": 7,
+  "files": [
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_8b_representation_sensitivity_protocol.json",
+      "sha256": "4ce96c1540b29bd9683305ed981412b46be4b0b2596dcb58b3064f0724f05c5e",
+      "size_bytes": 13502
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_8b_representation_sensitivity_execution_plan.json",
+      "sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+      "size_bytes": 4924
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_representation_worker_v3_sensitivity.py",
+      "sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+      "size_bytes": 18717
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_8b_v2_to_v3_worker.diff",
+      "sha256": "955e9b5d77c63bb482a14690fbc471aff15bce3c811469b41d0373fd23b64dbd",
+      "size_bytes": 1587
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_8b_representation_sensitivity_freeze_receipt.json",
+      "sha256": "d052bcd8bf3b2ed6a93f1ca3813036c030fa1d1de1fb28ffea166cf3e226bc33",
+      "size_bytes": 2376
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/provenance/stage26_8a_4c3_integrity_read_implementation_audit.json",
+      "sha256": "0d457c476567426c0093d29222450f411e94732455139a5d2f39ad2c0d1ed73c",
+      "size_bytes": 31737
+    },
+    {
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/provenance/stage26_8a1_exact_worker_ordering_diagnostic.json",
+      "sha256": "e2121362d23a8e81afd367d42df944f8558422c0984762c5fbca5dd5f186a9c0",
+      "size_bytes": 3611
+    }
+  ],
+  "freeze_receipt_sha256": "d052bcd8bf3b2ed6a93f1ca3813036c030fa1d1de1fb28ffea166cf3e226bc33",
+  "protocol_sha256": "4ce96c1540b29bd9683305ed981412b46be4b0b2596dcb58b3064f0724f05c5e",
+  "schema": "stage26_8b_representation_sensitivity_lock_manifest_v1",
+  "scientific_parent": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+  "scientific_state": {
+    "GPU_used": false,
+    "V3_worker_frozen": true,
+    "execution_order_frozen": true,
+    "historical_4C3_modified": false,
+    "protocol_frozen": true,
+    "sensitivity_results_seen": false,
+    "stage26_7c_modified": false,
+    "timing_executed": false
+  },
+  "stage": 26,
+  "stage26_8a1_sha256": "e2121362d23a8e81afd367d42df944f8558422c0984762c5fbca5dd5f186a9c0",
+  "stage26_8a_sha256": "0d457c476567426c0093d29222450f411e94732455139a5d2f39ad2c0d1ed73c",
+  "status": "READY_FOR_GIT_ANCHOR"
+}

@@ -1,0 +1,276 @@
+{
+  "checkpoint": "STAGE26-8B",
+  "created_at_utc": "2026-08-20T08:20:16.967409+00:00",
+  "environment_policy": {
+    "CPU1_affinity_required": true,
+    "GPU_allowed": false,
+    "environment_gate": {
+      "attempts": 3,
+      "max_CPU_percent": 20.0,
+      "min_available_RAM_GiB": 8.0,
+      "retry_seconds": 5
+    },
+    "failed_pair_policy": "REPORT_AS_INCOMPLETE_PAIR_WITHOUT_REPLACEMENT",
+    "pair_validity": "A pair contributes to paired sensitivity summaries only when both its V2 and V3 worker executions PASS.",
+    "replacement_pair_after_failure": false,
+    "same_Kaggle_runtime_for_all_A_B_measurements": true
+  },
+  "experimental_design": {
+    "A": "EXACT_HISTORICAL_V2_WORKER",
+    "B": "CLEAN_V3_SENSITIVITY_WORKER",
+    "batch_sizes": [
+      1,
+      64,
+      256,
+      1024,
+      8192
+    ],
+    "execution_plan_sha256": "5581bb2576919930913f49a308470083e7b27e315bc5cd99ba1fc1a853dcac14",
+    "fresh_process_per_worker_execution": true,
+    "hardware_mode": "CPU_1_PHYSICAL_CORE",
+    "historical_absolute_timing_used_as_A_control": false,
+    "pair_replicates_per_batch": 5,
+    "reason": "A and B must be measured contemporaneously so runtime or hardware differences from the historical Kaggle session cannot be attributed to the fingerprint change.",
+    "same_runtime_required": true,
+    "total_fresh_processes": 50,
+    "total_pair_blocks": 25,
+    "type": "PAIRED_CONTEMPORANEOUS_A_B_SENSITIVITY"
+  },
+  "historical_condition_configs": {
+    "conditions": {
+      "1": {
+        "config": {
+          "affinity": [
+            0
+          ],
+          "batch_size": 1,
+          "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+          "end_index_exclusive": 26043,
+          "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+          "expected_flow_count": 528509,
+          "float32_div255_allowed": false,
+          "gpu_allowed": false,
+          "labels_allowed": false,
+          "mode": "BENCHMARK_TIMED",
+          "models_allowed": false,
+          "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+          "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1/stage26_4c3_B1_result.json",
+          "schema": "stage26_4c3_cpu1_representation_condition_config_v1",
+          "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+          "start_index": 26042,
+          "thread_count": 1,
+          "timed_runs": 200,
+          "warmup_runs": 50,
+          "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+        },
+        "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1/stage26_4c3_B1_config.json",
+        "sha256": "3c6a29790dfc05c95c35c0f2f877e38b367e448c99274139ab9fbbc8277a77ba"
+      },
+      "1024": {
+        "config": {
+          "affinity": [
+            0
+          ],
+          "batch_size": 1024,
+          "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+          "end_index_exclusive": 27066,
+          "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+          "expected_flow_count": 528509,
+          "float32_div255_allowed": false,
+          "gpu_allowed": false,
+          "labels_allowed": false,
+          "mode": "BENCHMARK_TIMED",
+          "models_allowed": false,
+          "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+          "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_1024/stage26_4c3_B1024_result.json",
+          "schema": "stage26_4c3_cpu1_representation_condition_config_v1",
+          "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+          "start_index": 26042,
+          "thread_count": 1,
+          "timed_runs": 50,
+          "warmup_runs": 10,
+          "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+        },
+        "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_1024/stage26_4c3_B1024_config.json",
+        "sha256": "998416bce02c9d5090d7af22aa607a05ee85224a9ea447f89131fae427667bc0"
+      },
+      "256": {
+        "config": {
+          "affinity": [
+            0
+          ],
+          "batch_size": 256,
+          "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+          "end_index_exclusive": 26298,
+          "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+          "expected_flow_count": 528509,
+          "float32_div255_allowed": false,
+          "gpu_allowed": false,
+          "labels_allowed": false,
+          "mode": "BENCHMARK_TIMED",
+          "models_allowed": false,
+          "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+          "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_256/stage26_4c3_B256_result.json",
+          "schema": "stage26_4c3_cpu1_representation_condition_config_v1",
+          "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+          "start_index": 26042,
+          "thread_count": 1,
+          "timed_runs": 100,
+          "warmup_runs": 20,
+          "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+        },
+        "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_256/stage26_4c3_B256_config.json",
+        "sha256": "9f491d9f24bde2aab272ba480bc93853da3dbace99d8e0b9f9e52a788ab92859"
+      },
+      "64": {
+        "config": {
+          "affinity": [
+            0
+          ],
+          "batch_size": 64,
+          "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+          "end_index_exclusive": 26106,
+          "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+          "expected_flow_count": 528509,
+          "float32_div255_allowed": false,
+          "gpu_allowed": false,
+          "labels_allowed": false,
+          "mode": "BENCHMARK_TIMED",
+          "models_allowed": false,
+          "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+          "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_64/stage26_4c3_B64_result.json",
+          "schema": "stage26_4c3_cpu1_representation_condition_config_v1",
+          "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+          "start_index": 26042,
+          "thread_count": 1,
+          "timed_runs": 150,
+          "warmup_runs": 30,
+          "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+        },
+        "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_64/stage26_4c3_B64_config.json",
+        "sha256": "581ee8171e93acfe982b0c67fe5168e88dc49505b366700792aab27381d9655b"
+      },
+      "8192": {
+        "config": {
+          "affinity": [
+            0
+          ],
+          "batch_size": 8192,
+          "corpus_dir": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c2_equivalence/Monday_release_representation_subset",
+          "end_index_exclusive": 34234,
+          "equivalence_fingerprint_sha256": "1f64ea3719abcdd658d2a16f6c59348f0465cb800cc08d0f2fc697d14f31b185",
+          "expected_flow_count": 528509,
+          "float32_div255_allowed": false,
+          "gpu_allowed": false,
+          "labels_allowed": false,
+          "mode": "BENCHMARK_TIMED",
+          "models_allowed": false,
+          "protocol_sha256": "4c446212f1af49a6c70c3ef6fcd22facb3f67c650ce6f12a4790807bd58bcb2f",
+          "result_path": "/kaggle/working/stage26_deployment_profiling/representation/stage26_4c3_cpu1_timing/conditions/batch_8192/stage26_4c3_B8192_result.json",
+          "schema": "stage26_4c3_cpu1_representation_condition_config_v1",
+          "scientific_parent": "d6ec86b1a6fb7ce69c254dd1c6238eb3ec0f459b",
+          "start_index": 26042,
+          "thread_count": 1,
+          "timed_runs": 20,
+          "warmup_runs": 5,
+          "worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+        },
+        "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c3_cpu1_representation_timing/conditions/batch_8192/stage26_4c3_B8192_config.json",
+        "sha256": "c3d0df3b7bd34b9a674fcd97d4828e782fbb4ee03c03b5101059aad3399eb0cc"
+      }
+    },
+    "policy": "For every batch, preserve the committed historical 4C3 benchmark configuration semantics including start index, batch size, warmup runs and timed runs."
+  },
+  "inference_policy": {
+    "bootstrap": false,
+    "confidence_interval_for_pair_ratio": false,
+    "hypothesis_test": false,
+    "interpretation": "DESCRIPTIVE_PAIRED_SENSITIVITY_ONLY",
+    "materiality_threshold": null,
+    "p_value": false,
+    "post_hoc_threshold_allowed": false
+  },
+  "primary_estimand": {
+    "across_five_pairs_reporting": [
+      "ALL_FIVE_PAIR_RATIOS",
+      "MEDIAN_PAIR_RATIO",
+      "MIN_PAIR_RATIO",
+      "MAX_PAIR_RATIO"
+    ],
+    "name": "throughput_ratio_clean_over_original",
+    "per_pair_formula": "median_throughput_V3 / median_throughput_V2",
+    "statistic_source": "raw timed flows_per_second observations",
+    "within_worker_summary": "np.median"
+  },
+  "prohibited": [
+    "COMPARE_NEW_V3_DIRECTLY_TO_HISTORICAL_4C3_AS_CAUSAL_EFFECT",
+    "OVERWRITE_STAGE26_4C3",
+    "RECOMPUTE_STAGE26_7C_DURING_SENSITIVITY",
+    "INVENT_POST_HOC_MATERIALITY_THRESHOLD",
+    "BOOTSTRAP_SENSITIVITY_RESULTS",
+    "HYPOTHESIS_TEST_SENSITIVITY_RESULTS",
+    "MODEL_INFERENCE",
+    "PARETO_RECOMPUTATION",
+    "PCAP_ACCESS",
+    "GPU_USE"
+  ],
+  "publication_policy": {
+    "V3_becomes_replacement_measurement": false,
+    "historical_stage26_4c3_overwritten": false,
+    "historical_stage26_4c3_remains_original_measurement": true,
+    "required_reporting": "Distinguish the original Stage26-4C3 measurement from the paired V2-vs-V3 sensitivity result.",
+    "sensitivity_role": "ROBUSTNESS_EVIDENCE_FOR_INTER_ITERATION_INTEGRITY_READ_SENSITIVITY",
+    "stage26_7c_component_ratios_replaced": false,
+    "stage26_7c_recomputed": false
+  },
+  "randomization": {
+    "adaptive_reordering_allowed": false,
+    "randomize_worker_order_within_pair": true,
+    "rng": "numpy.random.default_rng_PCG64",
+    "seed": 26042,
+    "shuffle_pair_blocks": true
+  },
+  "schema": "stage26_8b_representation_sensitivity_protocol_v1",
+  "scientific_parent": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+  "secondary_estimands": {
+    "latency_conversion": "float64 elapsed_ns / 1_000_000.0 before percentile",
+    "latency_unit": "milliseconds",
+    "p50_latency_ratio_clean_over_original": "p50_latency_V3 / p50_latency_V2",
+    "p95_latency_ratio_clean_over_original": "p95_latency_V3 / p95_latency_V2",
+    "p99_latency_ratio_clean_over_original_when_n_gte_100": "p99_latency_V3 / p99_latency_V2",
+    "percentile_method": "numpy.percentile(method='linear')"
+  },
+  "stage": 26,
+  "status": "FROZEN_BEFORE_ANY_SENSITIVITY_TIMING",
+  "timing_boundary": {
+    "V2_integrity_read": "AFTER_TIMER_INSIDE_REPEATED_TIMED_LOOP",
+    "V3_integrity_read": "AFTER_ALL_REPEATED_TIMED_ITERATIONS",
+    "included": "source.materialize_batch(indices)",
+    "integrity_read_included_in_reported_latency": false,
+    "timer": "time.perf_counter_ns"
+  },
+  "trigger": {
+    "audit": "STAGE26-8A1",
+    "audit_sha256": "e2121362d23a8e81afd367d42df944f8558422c0984762c5fbca5dd5f186a9c0",
+    "classification": "OUTSIDE_TIMER_BEFORE_NEXT_TIMED_ITERATION",
+    "historical_worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "issue": "Historical V2 performs a full-output fingerprint read after every timed materialization and before the next timed iteration, creating a possible inter-iteration cache/CPU-state perturbation."
+  },
+  "worker_identity": {
+    "V2_original": {
+      "inter_iteration_full_output_fingerprint": true,
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_representation_worker_v2.py",
+      "sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+    },
+    "V2_to_V3_diff_sha256": "955e9b5d77c63bb482a14690fbc471aff15bce3c811469b41d0373fd23b64dbd",
+    "V3_clean": {
+      "inter_iteration_full_output_fingerprint": false,
+      "materialize_batch_identical_to_V2": true,
+      "post_all_timing_integrity_fingerprint": true,
+      "reconstruct_identical_to_V2": true,
+      "repo_relative_path": "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_representation_worker_v3_sensitivity.py",
+      "sha256": "c065e70fc16a628e482961f0db669d95affb841edd39153abf28dc99e868ad02",
+      "timer_boundary_identical_to_V2": true
+    }
+  }
+}

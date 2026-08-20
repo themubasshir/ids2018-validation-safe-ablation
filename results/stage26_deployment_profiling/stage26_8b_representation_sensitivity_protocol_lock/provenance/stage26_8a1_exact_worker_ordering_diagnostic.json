@@ -1,0 +1,127 @@
+{
+  "call_records": [
+    {
+      "calls": [
+        {
+          "call": "range",
+          "line": 682
+        },
+        {
+          "call": "time.perf_counter_ns",
+          "line": 687
+        },
+        {
+          "call": "source.materialize_batch",
+          "line": 690
+        },
+        {
+          "call": "time.perf_counter_ns",
+          "line": 695
+        },
+        {
+          "call": "int",
+          "line": 697
+        },
+        {
+          "call": "RuntimeError",
+          "line": 705
+        },
+        {
+          "call": "fingerprint",
+          "line": 710
+        },
+        {
+          "call": "RuntimeError",
+          "line": 727
+        },
+        {
+          "call": "observations.append",
+          "line": 737
+        },
+        {
+          "call": "int",
+          "line": 759
+        },
+        {
+          "call": "int",
+          "line": 764
+        },
+        {
+          "call": "int",
+          "line": 769
+        }
+      ],
+      "loop_end": 775,
+      "loop_index": 1,
+      "loop_start": 682
+    }
+  ],
+  "classification": "OUTSIDE_TIMER_BEFORE_NEXT_TIMED_ITERATION",
+  "classification_evidence": [
+    {
+      "fingerprint_hash_after_timer_before_next_iteration": [
+        710,
+        715,
+        717,
+        718,
+        722,
+        724
+      ],
+      "fingerprint_hash_inside_timer": [],
+      "loop_end": 775,
+      "loop_start": 682,
+      "timer_start_line": 687,
+      "timer_stop_line": 695
+    }
+  ],
+  "next_action": "FREEZE_PROSPECTIVE_STAGE26_8B_4C3_SENSITIVITY_PROTOCOL",
+  "schema": "stage26_8a1_exact_worker_ordering_diagnostic_v1",
+  "scientific_consequence": "CONFIRMED: the exact frozen Stage26-4C3 worker performs an integrity/fingerprint-related full-output read after the timer stops but before control returns to the next iteration of the repeated timing loop. The read is therefore excluded from the reported latency itself but may perturb cache/CPU state entering the next timed observation.",
+  "scientific_parent": "9b6c9d16762ebf314ac3f0a160b0bb4f77e15ca3",
+  "scientific_state": {
+    "GPU_used": false,
+    "Git_modified": false,
+    "PCAP_accessed": false,
+    "Pareto_recomputed": false,
+    "Release_corpus_accessed": false,
+    "bootstrap_executed": false,
+    "inference_performed": false,
+    "model_loaded": false,
+    "representation_executed": false,
+    "timing_executed": false,
+    "worker_uniquely_resolved": true
+  },
+  "status": "PASS_EXACT_SHA_BASED_WORKER_DIAGNOSTIC",
+  "timing_loops": [
+    {
+      "end": 775,
+      "fingerprint_hash_lines": [
+        710,
+        715,
+        717,
+        718,
+        722,
+        724
+      ],
+      "header": "for iteration in range(1, timed_runs + 1):",
+      "start": 682,
+      "timer_lines": [
+        687,
+        695
+      ]
+    }
+  ],
+  "worker_resolution": {
+    "classification": "UNIQUE_AND_CERTIFIED",
+    "metadata_worker_shas": {
+      "manifest.worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+      "plan.worker_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+      "receipt.frozen_inputs.worker_v2_sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23"
+    },
+    "repo_relative_path": "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_representation_worker_v2.py",
+    "sha256": "ebc19f2ea82b8cbc1b26c9cf6797550293eb16d16ae41e649cbd8d154d9ccd23",
+    "tracked_python_files_with_matching_sha": [
+      "results/stage26_deployment_profiling/stage26_4c1a_label_free_equivalence_erratum/stage26_representation_worker_v2.py"
+    ]
+  }
+}

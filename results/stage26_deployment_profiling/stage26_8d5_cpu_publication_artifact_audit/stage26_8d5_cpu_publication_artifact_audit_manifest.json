@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-08-20T10:13:30.827134+00:00",
+  "files": [
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d5_cpu_publication_artifact_audit/stage26_8d5_cpu_publication_artifact_audit.json",
+      "sha256": "e4375ab82ce31a9120038950c268397570cf7fb741339a843433417bfa279225",
+      "size_bytes": 2142
+    },
+    {
+      "path": "results/stage26_deployment_profiling/stage26_8d5_cpu_publication_artifact_audit/stage26_8d5_cpu_publication_artifact_audit_receipt.json",
+      "sha256": "f97f8396b1fa7eaa3315060007a3def4b4266ac3e1ca5dbf5d52bef74394fb42",
+      "size_bytes": 814
+    }
+  ],
+  "schema": "stage26_8d5_cpu_publication_artifact_audit_manifest_v1",
+  "scientific_parent": "aefaa993e86dbc1d7fbd7e9c301e629883b0c51d"
+}

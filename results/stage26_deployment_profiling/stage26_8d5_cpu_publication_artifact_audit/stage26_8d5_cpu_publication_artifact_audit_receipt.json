@@ -1,0 +1,13 @@
+{
+  "audit_sha256": "e4375ab82ce31a9120038950c268397570cf7fb741339a843433417bfa279225",
+  "ci_column_detection": "TOKEN_AWARE",
+  "created_at_utc": "2026-08-20T10:13:30.827134+00:00",
+  "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+  "gpu_allowed": false,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "schema": "stage26_8d5_cpu_publication_artifact_audit_receipt_v1",
+  "scientific_parent": "aefaa993e86dbc1d7fbd7e9c301e629883b0c51d",
+  "stage26_8d3_manifest_sha256": "656b0e936a18405e05d0775b1703b9417fd87afe52f4c610d72ef8df70971a97",
+  "stage26_8d4_manifest_sha256": "4ab72733b333c51086dd5ac0e643bcd21b2bb3f2edf268aefeebef79833f0a31",
+  "verdict": "CPU_PUBLICATION_ARTIFACT_PACKAGE_PROTOCOL_CONFORMANT"
+}

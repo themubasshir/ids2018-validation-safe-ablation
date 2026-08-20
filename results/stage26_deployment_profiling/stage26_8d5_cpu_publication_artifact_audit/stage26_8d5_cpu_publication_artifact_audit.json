@@ -1,0 +1,60 @@
+{
+  "audit_implementation": {
+    "ci_column_detection": "TOKEN_AWARE",
+    "naive_ci_substring_detection": false,
+    "stage26_8d5r1_false_positive_resolved": true
+  },
+  "created_at_utc": "2026-08-20T10:13:30.827134+00:00",
+  "effective_schema_sha256": "973cc58ed6572d30b1cce94f3659226d99b185390c2aca92d9ed030e50358ad0",
+  "gpu_allowed_after_this_stage": false,
+  "logical_figure_count": 8,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "next_stage": "STAGE26_8D6_FINAL_CPU_CLOSURE_AND_FRESH_SESSION_GPU_BOOTSTRAP_MANIFEST",
+  "non_computation": {
+    "bootstrap": false,
+    "gpu": false,
+    "inference": false,
+    "labels": false,
+    "model_loading": false,
+    "pcap": false,
+    "random_sampling": false,
+    "timing": false
+  },
+  "rendered_figure_file_count": 16,
+  "schema": "stage26_8d5_cpu_publication_artifact_audit_v1",
+  "scientific_parent": "aefaa993e86dbc1d7fbd7e9c301e629883b0c51d",
+  "scientific_state": {
+    "cold_start_publication": "POINT_ESTIMATES_ONLY",
+    "complete_e2e": "UNAVAILABLE",
+    "cross_group_pareto": false,
+    "historical_stage26_4c3": "RETAINED",
+    "memory_aggregation": false,
+    "pareto_recomputed": false,
+    "pr_auc_bootstrap_ci": false,
+    "ratio_ci": false,
+    "ratio_inverted": false,
+    "ratio_recomputed": false,
+    "stage26_7c_recomputed": false,
+    "stage26_8_sensitivity": "DESCRIPTIVE_SEPARATE_NOT_REPLACEMENT",
+    "warm_uncertainty": "STAGE26_6F1_CORRECTED_ONLY"
+  },
+  "stage26_8d3_anchor": "b11936a4ee8234a36a29057658f7ee420a5cf68e",
+  "stage26_8d4_anchor": "aefaa993e86dbc1d7fbd7e9c301e629883b0c51d",
+  "table_count": 8,
+  "table_row_counts": {
+    "T26_COMPONENT_MEASUREMENTS": 4,
+    "T26_CPU_CAPACITY_SCALING": 40,
+    "T26_CPU_COLD_START": 56,
+    "T26_CPU_MEMORY_PACKAGE": 400,
+    "T26_CPU_WARM_INFERENCE": 80,
+    "T26_GROUP_B_REPRESENTATION_INFERENCE_RATIO": 7,
+    "T26_PARETO": 6,
+    "T26_REPRESENTATION_SENSITIVITY": 5
+  },
+  "verdict": "CPU_PUBLICATION_ARTIFACT_PACKAGE_PROTOCOL_CONFORMANT",
+  "warm_status_counts": {
+    "PASS": 73,
+    "RESOURCE_LIMIT_OOM": 2,
+    "TIMEOUT_RESOURCE_LIMIT": 5
+  }
+}

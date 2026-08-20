@@ -1,0 +1,584 @@
+{
+  "stage": "Stage27-3A",
+  "type": "BOOTSTRAP_EXECUTION_RECEIPT",
+  "created_at_utc": "2026-08-20T19:23:03.304095+00:00",
+  "scientific_parent_commit": "9771631b18009883da32680b9218d5e40a036942",
+  "frozen_uncertainty_spec": {
+    "stage": "Stage27-0",
+    "bootstrap_replicates": 2000,
+    "seed": 42,
+    "method": "STRATIFIED_ROW_BOOTSTRAP",
+    "sampling": "WITH_REPLACEMENT_WITHIN BENIGN AND ATTACK STRATA, PRESERVING ORIGINAL STRATUM SIZE",
+    "confidence_interval": "PERCENTILE_2.5_97.5",
+    "metrics": [
+      "ROC_AUC",
+      "PR_AUC",
+      "RECALL",
+      "FPR",
+      "NOVELTY_GENERALIZATION_GAP_WHERE_MATHEMATICALLY_COMPATIBLE"
+    ],
+    "model_retraining_during_bootstrap": false,
+    "threshold_reselection_during_bootstrap": false,
+    "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty.",
+    "clustered_bootstrap": {
+      "used": false,
+      "reason": "No previously frozen valid session/time-block grouping is being introduced into the Stage27 CICIDS2017 target population. Stage27 therefore preregisters the row-stratified bootstrap rather than inventing a grouping after results."
+    },
+    "bootstrap_procedure_change_after_results": "FORBIDDEN"
+  },
+  "implementation": {
+    "name": "EXACT_SCORE_GROUP_MULTINOMIAL_STRATIFIED_ROW_BOOTSTRAP",
+    "equivalence_statement": "WITHIN EACH LABEL STRATUM, INDIVIDUAL WITH-REPLACEMENT ROW DRAWS ARE COLLAPSED INTO MULTINOMIAL COUNTS OVER IDENTICAL PERSISTED FLOAT32 SCORES. FOR THE FROZEN GROUPED ROC-AUC, GROUPED NONINTERPOLATED PR-AUC, RECALL, AND FPR AT FIXED THRESHOLDS, THIS IS EXACTLY THE SAME SAMPLING LAW AS EXPLICIT ROW RESAMPLING.",
+    "root_seed": 42,
+    "task_stream_rule": "NUMPY_SEEDSEQUENCE_ENTROPY_42_SPAWN_KEY_EQUALS_FIXED_TASK_INDEX",
+    "task_order": [
+      {
+        "task_index": 0,
+        "family": "BOT",
+        "learner": "XGBOOST",
+        "root_entropy": 42,
+        "spawn_key": [
+          0
+        ]
+      },
+      {
+        "task_index": 1,
+        "family": "BOT",
+        "learner": "LIGHTGBM",
+        "root_entropy": 42,
+        "spawn_key": [
+          1
+        ]
+      },
+      {
+        "task_index": 2,
+        "family": "DDOS",
+        "learner": "XGBOOST",
+        "root_entropy": 42,
+        "spawn_key": [
+          2
+        ]
+      },
+      {
+        "task_index": 3,
+        "family": "DDOS",
+        "learner": "LIGHTGBM",
+        "root_entropy": 42,
+        "spawn_key": [
+          3
+        ]
+      },
+      {
+        "task_index": 4,
+        "family": "INFILTRATION",
+        "learner": "XGBOOST",
+        "root_entropy": 42,
+        "spawn_key": [
+          4
+        ]
+      },
+      {
+        "task_index": 5,
+        "family": "INFILTRATION",
+        "learner": "LIGHTGBM",
+        "root_entropy": 42,
+        "spawn_key": [
+          5
+        ]
+      },
+      {
+        "task_index": 6,
+        "family": "PORT_SCAN",
+        "learner": "XGBOOST",
+        "root_entropy": 42,
+        "spawn_key": [
+          6
+        ]
+      },
+      {
+        "task_index": 7,
+        "family": "PORT_SCAN",
+        "learner": "LIGHTGBM",
+        "root_entropy": 42,
+        "spawn_key": [
+          7
+        ]
+      },
+      {
+        "task_index": 8,
+        "family": "WEB_ATTACK",
+        "learner": "XGBOOST",
+        "root_entropy": 42,
+        "spawn_key": [
+          8
+        ]
+      },
+      {
+        "task_index": 9,
+        "family": "WEB_ATTACK",
+        "learner": "LIGHTGBM",
+        "root_entropy": 42,
+        "spawn_key": [
+          9
+        ]
+      }
+    ],
+    "ci_percentiles": [
+      2.5,
+      97.5
+    ],
+    "numpy_percentile_method": "linear"
+  },
+  "uncertainty_scope": {
+    "bootstrapped_population": "PRIMARY_UNSEEN_TARGET_ONLY",
+    "known_control_bootstrapped": false,
+    "novelty_gap_formula_per_replicate": "FROZEN_KNOWN_CONTROL_POINT_ESTIMATE_MINUS_BOOTSTRAPPED_UNSEEN_TARGET_METRIC",
+    "reason": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+  },
+  "input_probability_receipts": {
+    "BOT::XGBOOST": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/BOT_XGBOOST_friday_operational_prob_float32.npy",
+        "rows": 703245,
+        "dtype": "float32",
+        "npy_sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092",
+        "content_sha256": "0e587829735ddfd39c9bfcba46f5d14584c29bb40176d8aeed5427aca5a86c60"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/BOT_XGBOOST_thursday_known_validation_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6",
+        "content_sha256": "fcbd6cac89c524443420a420ab9ae15831c507a965c2048329dabbf4305b13cc"
+      }
+    },
+    "BOT::LIGHTGBM": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/BOT_LIGHTGBM_friday_operational_prob_float32.npy",
+        "rows": 703245,
+        "dtype": "float32",
+        "npy_sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b",
+        "content_sha256": "36ae0916a2dc685f1509a325be151b67082c6c6250c6c938f34907db432f80b6"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/BOT_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a",
+        "content_sha256": "6ff33ac4e4061d8f2b3c70e254dad259cec4cf46b184fc875c743c5f91f21806"
+      }
+    },
+    "DDOS::XGBOOST": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/DDOS_XGBOOST_friday_operational_prob_float32.npy",
+        "rows": 703245,
+        "dtype": "float32",
+        "npy_sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092",
+        "content_sha256": "0e587829735ddfd39c9bfcba46f5d14584c29bb40176d8aeed5427aca5a86c60"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/DDOS_XGBOOST_thursday_known_validation_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6",
+        "content_sha256": "fcbd6cac89c524443420a420ab9ae15831c507a965c2048329dabbf4305b13cc"
+      }
+    },
+    "DDOS::LIGHTGBM": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/DDOS_LIGHTGBM_friday_operational_prob_float32.npy",
+        "rows": 703245,
+        "dtype": "float32",
+        "npy_sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b",
+        "content_sha256": "36ae0916a2dc685f1509a325be151b67082c6c6250c6c938f34907db432f80b6"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/DDOS_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a",
+        "content_sha256": "6ff33ac4e4061d8f2b3c70e254dad259cec4cf46b184fc875c743c5f91f21806"
+      }
+    },
+    "INFILTRATION::XGBOOST": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/INFILTRATION_XGBOOST_thursday_operational_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "09a3047ffa702387a9a2b2169fec70201f4810a74d150e2ee3e437f3a14b8440",
+        "content_sha256": "95840b468b34845be9b1b7081550c344ec1ea5693efc22aa8aaadf98ef17e284"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/INFILTRATION_XGBOOST_wednesday_known_validation_prob_float32.npy",
+        "rows": 692692,
+        "dtype": "float32",
+        "npy_sha256": "ee2c63842582a0599beff28cdf5f9b7e4a65af97197861e8d48b265460a45f4f",
+        "content_sha256": "30e3a76a6fd5799e1ec0aa592a7f51bc9321635394d9618b3cf58fc9b60e5cf3"
+      }
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/INFILTRATION_LIGHTGBM_thursday_operational_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "5e65b6343e3b3f157679dcd39a8555242ef20e25d0f95973d38c71594c40c55f",
+        "content_sha256": "a6b48f8bc2d6f975731f97f623c3818838e145004a278e9273ee91927fb46b6a"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/INFILTRATION_LIGHTGBM_wednesday_known_validation_prob_float32.npy",
+        "rows": 692692,
+        "dtype": "float32",
+        "npy_sha256": "107a635e0ef257f3d76957ec9770b9391fd74fd64ce182b6f714d13fc9371ad4",
+        "content_sha256": "b48f2f7cd5b1b8432959c272f6af96648e80f033b78424b8cbb61b5f7947b144"
+      }
+    },
+    "PORT_SCAN::XGBOOST": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/PORT_SCAN_XGBOOST_friday_operational_prob_float32.npy",
+        "rows": 703245,
+        "dtype": "float32",
+        "npy_sha256": "fa4608e254ad9a59ece4f308fa861888c73870c491d0ede2b1b6870bdb1d1092",
+        "content_sha256": "0e587829735ddfd39c9bfcba46f5d14584c29bb40176d8aeed5427aca5a86c60"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/PORT_SCAN_XGBOOST_thursday_known_validation_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "6fb6ac75ee67d86050419e93f7d39ce43fa1349376ef69cd01db4fb8fc9d5fa6",
+        "content_sha256": "fcbd6cac89c524443420a420ab9ae15831c507a965c2048329dabbf4305b13cc"
+      }
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/target/PORT_SCAN_LIGHTGBM_friday_operational_prob_float32.npy",
+        "rows": 703245,
+        "dtype": "float32",
+        "npy_sha256": "021b98828732bb0927d2300b509a580a8513bc5d1b521f2bb0cfdef77830404b",
+        "content_sha256": "36ae0916a2dc685f1509a325be151b67082c6c6250c6c938f34907db432f80b6"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/validation/PORT_SCAN_LIGHTGBM_thursday_known_validation_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "d93edd35b37b5a4c8f18e16a796a9ab81f0d9c966ed7e538279ac964371ec00a",
+        "content_sha256": "6ff33ac4e4061d8f2b3c70e254dad259cec4cf46b184fc875c743c5f91f21806"
+      }
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/WEB_ATTACK_XGBOOST_thursday_operational_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "09a3047ffa702387a9a2b2169fec70201f4810a74d150e2ee3e437f3a14b8440",
+        "content_sha256": "95840b468b34845be9b1b7081550c344ec1ea5693efc22aa8aaadf98ef17e284"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/WEB_ATTACK_XGBOOST_wednesday_known_validation_prob_float32.npy",
+        "rows": 692692,
+        "dtype": "float32",
+        "npy_sha256": "ee2c63842582a0599beff28cdf5f9b7e4a65af97197861e8d48b265460a45f4f",
+        "content_sha256": "30e3a76a6fd5799e1ec0aa592a7f51bc9321635394d9618b3cf58fc9b60e5cf3"
+      }
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "target": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/target/WEB_ATTACK_LIGHTGBM_thursday_operational_prob_float32.npy",
+        "rows": 458968,
+        "dtype": "float32",
+        "npy_sha256": "5e65b6343e3b3f157679dcd39a8555242ef20e25d0f95973d38c71594c40c55f",
+        "content_sha256": "a6b48f8bc2d6f975731f97f623c3818838e145004a278e9273ee91927fb46b6a"
+      },
+      "known_control": {
+        "durable_path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/validation/WEB_ATTACK_LIGHTGBM_wednesday_known_validation_prob_float32.npy",
+        "rows": 692692,
+        "dtype": "float32",
+        "npy_sha256": "107a635e0ef257f3d76957ec9770b9391fd74fd64ce182b6f714d13fc9371ad4",
+        "content_sha256": "b48f2f7cd5b1b8432959c272f6af96648e80f033b78424b8cbb61b5f7947b144"
+      }
+    }
+  },
+  "task_execution": {
+    "BOT::XGBOOST": {
+      "task_index": 0,
+      "root_seed": 42,
+      "spawn_key": [
+        0
+      ],
+      "runtime_meta": {
+        "task_index": 0,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          0
+        ],
+        "replicates": 2000,
+        "batch_size": 14,
+        "unique_score_groups": 141498,
+        "positive_unique_scores": 451,
+        "negative_unique_scores": 141138,
+        "n_positive": 1966,
+        "n_negative": 414322,
+        "elapsed_seconds": 56.06287096300002
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/BOT_XGBOOST_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "119dc659dcb5a7015a9fa2be418c06371b4d8fdded01deaee9c4d7bdbb6a3657",
+      "replicate_content_sha256": "21a493a410f6961420a1fb070ef3743a18abf8360b6b46dc4e830405a68a6ab4"
+    },
+    "BOT::LIGHTGBM": {
+      "task_index": 1,
+      "root_seed": 42,
+      "spawn_key": [
+        1
+      ],
+      "runtime_meta": {
+        "task_index": 1,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          1
+        ],
+        "replicates": 2000,
+        "batch_size": 13,
+        "unique_score_groups": 148933,
+        "positive_unique_scores": 582,
+        "negative_unique_scores": 148455,
+        "n_positive": 1966,
+        "n_negative": 414322,
+        "elapsed_seconds": 58.61772111499886
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/BOT_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "b0736220d511135565f2c04243033017dea1f0f25f9184a1843cd085fc001d4c",
+      "replicate_content_sha256": "3fceab1bd1f42095a43d1be97923568ff6a535251debdbbcf74a83c27dabc2d1"
+    },
+    "DDOS::XGBOOST": {
+      "task_index": 2,
+      "root_seed": 42,
+      "spawn_key": [
+        2
+      ],
+      "runtime_meta": {
+        "task_index": 2,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          2
+        ],
+        "replicates": 2000,
+        "batch_size": 10,
+        "unique_score_groups": 194548,
+        "positive_unique_scores": 53422,
+        "negative_unique_scores": 141138,
+        "n_positive": 128027,
+        "n_negative": 414322,
+        "elapsed_seconds": 76.95126835300107
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/DDOS_XGBOOST_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "e4845f301cbfa529be4da2341be00dcec09d5d52fbf4a14dcdd3e6d8b739c9d1",
+      "replicate_content_sha256": "d1aaf7a6fedc1305b26a37d1eb7d1847cc7627486b520331e94f565a2b04b77e"
+    },
+    "DDOS::LIGHTGBM": {
+      "task_index": 3,
+      "root_seed": 42,
+      "spawn_key": [
+        3
+      ],
+      "runtime_meta": {
+        "task_index": 3,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          3
+        ],
+        "replicates": 2000,
+        "batch_size": 9,
+        "unique_score_groups": 211900,
+        "positive_unique_scores": 63453,
+        "negative_unique_scores": 148455,
+        "n_positive": 128027,
+        "n_negative": 414322,
+        "elapsed_seconds": 84.56779622600152
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/DDOS_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "317d77d02a8e5a74bcd7c043c7103e08fe930811ad73654ab523a1ef3ac5f787",
+      "replicate_content_sha256": "5c19042f5c0fa1e017f534425c46b1601e9e6eff7946ec501acf09cf04746cd9"
+    },
+    "INFILTRATION::XGBOOST": {
+      "task_index": 4,
+      "root_seed": 42,
+      "spawn_key": [
+        4
+      ],
+      "runtime_meta": {
+        "task_index": 4,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          4
+        ],
+        "replicates": 2000,
+        "batch_size": 16,
+        "unique_score_groups": 26226,
+        "positive_unique_scores": 27,
+        "negative_unique_scores": 26207,
+        "n_positive": 36,
+        "n_negative": 456752,
+        "elapsed_seconds": 23.871854003000408
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/INFILTRATION_XGBOOST_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "59ffa75d053b57fea304e3c679a59c12a47f15617238a72708225ea92707172a",
+      "replicate_content_sha256": "f208d72cdf58283c2c014fa587d24003ec933ff26d912f2d94eb160f7b19701a"
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "task_index": 5,
+      "root_seed": 42,
+      "spawn_key": [
+        5
+      ],
+      "runtime_meta": {
+        "task_index": 5,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          5
+        ],
+        "replicates": 2000,
+        "batch_size": 16,
+        "unique_score_groups": 23331,
+        "positive_unique_scores": 23,
+        "negative_unique_scores": 23314,
+        "n_positive": 36,
+        "n_negative": 456752,
+        "elapsed_seconds": 23.182523023000613
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/INFILTRATION_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "30b2f4b75fd53034e825ffcbaff70f544c23d14a08bb9b68748742c609a9ca3e",
+      "replicate_content_sha256": "edbc3daba309b1e4b43c7081ec7125d1968810b9e3c448649dfafbeb93dfe6cd"
+    },
+    "PORT_SCAN::XGBOOST": {
+      "task_index": 6,
+      "root_seed": 42,
+      "spawn_key": [
+        6
+      ],
+      "runtime_meta": {
+        "task_index": 6,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          6
+        ],
+        "replicates": 2000,
+        "batch_size": 14,
+        "unique_score_groups": 142662,
+        "positive_unique_scores": 1533,
+        "negative_unique_scores": 141138,
+        "n_positive": 158930,
+        "n_negative": 414322,
+        "elapsed_seconds": 55.79751122199923
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/PORT_SCAN_XGBOOST_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "b2dba9d5aeb9c9b88cb9d79555c56fd2a09cff7538297039fbe170a11974ff35",
+      "replicate_content_sha256": "5b3027969bf8ca2aed5aa5ed61ea934c46b636645700d31eb4be2fd78687f29f"
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "task_index": 7,
+      "root_seed": 42,
+      "spawn_key": [
+        7
+      ],
+      "runtime_meta": {
+        "task_index": 7,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          7
+        ],
+        "replicates": 2000,
+        "batch_size": 13,
+        "unique_score_groups": 150562,
+        "positive_unique_scores": 2110,
+        "negative_unique_scores": 148455,
+        "n_positive": 158930,
+        "n_negative": 414322,
+        "elapsed_seconds": 58.996312914001464
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/PORT_SCAN_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "7afdaf262c1e9dec2b82a2d119a3abaf2aff6fe8e0ab57228b45f9b98f5db437",
+      "replicate_content_sha256": "904b5171c2d7e33aac58053f5916f836a595e9d8bec5fd4abe0f55abc1ff56b6"
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "task_index": 8,
+      "root_seed": 42,
+      "spawn_key": [
+        8
+      ],
+      "runtime_meta": {
+        "task_index": 8,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          8
+        ],
+        "replicates": 2000,
+        "batch_size": 16,
+        "unique_score_groups": 26305,
+        "positive_unique_scores": 136,
+        "negative_unique_scores": 26207,
+        "n_positive": 2180,
+        "n_negative": 456752,
+        "elapsed_seconds": 24.503142277000734
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/WEB_ATTACK_XGBOOST_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "ff0641247d43ee3adf392ac7720cea951f85fa91b9b05caad67ed32c8d386651",
+      "replicate_content_sha256": "e1ef270379a21ec37befada776bd5622efbc2006a5dbbe245b755829b340bc0b"
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "task_index": 9,
+      "root_seed": 42,
+      "spawn_key": [
+        9
+      ],
+      "runtime_meta": {
+        "task_index": 9,
+        "root_seed": 42,
+        "seed_sequence_spawn_key": [
+          9
+        ],
+        "replicates": 2000,
+        "batch_size": 16,
+        "unique_score_groups": 23496,
+        "positive_unique_scores": 193,
+        "negative_unique_scores": 23314,
+        "n_positive": 2180,
+        "n_negative": 456752,
+        "elapsed_seconds": 23.807534773000953
+      },
+      "point_estimate_reconstruction": "PASS",
+      "frozen_novelty_gap_reconstruction": "PASS",
+      "replicate_matrix_runtime_path": "/kaggle/working/stage27_3a_bootstrap_cache/replicates/WEB_ATTACK_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "replicate_npy_sha256": "b7363f9024dcdb5425d9087d32b4df7251f44fba2a6c7131c94a35141429e78e",
+      "replicate_content_sha256": "c4fd18ce2c3b8f09cf53a9ab942f5e6bb12ebdac2c224884fad29f82e17f466c"
+    }
+  },
+  "scientific_actions": {
+    "bootstrap_tasks": 10,
+    "bootstrap_replicates_per_task": 2000,
+    "total_task_replicates": 20000,
+    "raw_target_predictor_reads": 0,
+    "model_fits": 0,
+    "model_refits": 0,
+    "model_inference": 0,
+    "target_reopenings": 0,
+    "threshold_reselection": 0,
+    "gpu_hours": 0
+  }
+}

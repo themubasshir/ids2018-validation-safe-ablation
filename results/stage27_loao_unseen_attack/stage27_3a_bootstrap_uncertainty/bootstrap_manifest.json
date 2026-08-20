@@ -1,0 +1,317 @@
+{
+  "stage": "Stage27-3A",
+  "type": "BOOTSTRAP_REPLICATE_MANIFEST",
+  "created_at_utc": "2026-08-20T19:23:03.309798+00:00",
+  "scientific_parent_commit": "9771631b18009883da32680b9218d5e40a036942",
+  "replicate_matrix_count": 10,
+  "replicates_per_matrix": 2000,
+  "columns": [
+    "ROC_AUC",
+    "PR_AUC",
+    "PR_EXCESS",
+    "RECALL_STANDARD",
+    "FPR_STANDARD",
+    "RECALL_BALANCED",
+    "FPR_BALANCED",
+    "RECALL_SECURITY",
+    "FPR_SECURITY",
+    "GAP_ROC_AUC",
+    "GAP_PR_EXCESS",
+    "GAP_RECALL_STANDARD",
+    "GAP_RECALL_BALANCED",
+    "GAP_RECALL_SECURITY"
+  ],
+  "dtype": "float64",
+  "matrices": {
+    "BOT::XGBOOST": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/BOT_XGBOOST_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "119dc659dcb5a7015a9fa2be418c06371b4d8fdded01deaee9c4d7bdbb6a3657",
+      "content_sha256": "21a493a410f6961420a1fb070ef3743a18abf8360b6b46dc4e830405a68a6ab4",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/BOT_XGBOOST_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "BOT::LIGHTGBM": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/BOT_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "b0736220d511135565f2c04243033017dea1f0f25f9184a1843cd085fc001d4c",
+      "content_sha256": "3fceab1bd1f42095a43d1be97923568ff6a535251debdbbcf74a83c27dabc2d1",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/BOT_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "DDOS::XGBOOST": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/DDOS_XGBOOST_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "e4845f301cbfa529be4da2341be00dcec09d5d52fbf4a14dcdd3e6d8b739c9d1",
+      "content_sha256": "d1aaf7a6fedc1305b26a37d1eb7d1847cc7627486b520331e94f565a2b04b77e",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/DDOS_XGBOOST_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "DDOS::LIGHTGBM": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/DDOS_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "317d77d02a8e5a74bcd7c043c7103e08fe930811ad73654ab523a1ef3ac5f787",
+      "content_sha256": "5c19042f5c0fa1e017f534425c46b1601e9e6eff7946ec501acf09cf04746cd9",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/DDOS_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "INFILTRATION::XGBOOST": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/INFILTRATION_XGBOOST_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "59ffa75d053b57fea304e3c679a59c12a47f15617238a72708225ea92707172a",
+      "content_sha256": "f208d72cdf58283c2c014fa587d24003ec933ff26d912f2d94eb160f7b19701a",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/INFILTRATION_XGBOOST_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/INFILTRATION_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "30b2f4b75fd53034e825ffcbaff70f544c23d14a08bb9b68748742c609a9ca3e",
+      "content_sha256": "edbc3daba309b1e4b43c7081ec7125d1968810b9e3c448649dfafbeb93dfe6cd",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/INFILTRATION_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "PORT_SCAN::XGBOOST": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/PORT_SCAN_XGBOOST_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "b2dba9d5aeb9c9b88cb9d79555c56fd2a09cff7538297039fbe170a11974ff35",
+      "content_sha256": "5b3027969bf8ca2aed5aa5ed61ea934c46b636645700d31eb4be2fd78687f29f",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/PORT_SCAN_XGBOOST_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/PORT_SCAN_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "7afdaf262c1e9dec2b82a2d119a3abaf2aff6fe8e0ab57228b45f9b98f5db437",
+      "content_sha256": "904b5171c2d7e33aac58053f5916f836a595e9d8bec5fd4abe0f55abc1ff56b6",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/PORT_SCAN_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/WEB_ATTACK_XGBOOST_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "ff0641247d43ee3adf392ac7720cea951f85fa91b9b05caad67ed32c8d386651",
+      "content_sha256": "e1ef270379a21ec37befada776bd5622efbc2006a5dbbe245b755829b340bc0b",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/WEB_ATTACK_XGBOOST_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "path": "/kaggle/working/ids2018-validation-safe-ablation/results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/WEB_ATTACK_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "shape": [
+        2000,
+        14
+      ],
+      "dtype": "float64",
+      "npy_bytes": 224128,
+      "npy_sha256": "b7363f9024dcdb5425d9087d32b4df7251f44fba2a6c7131c94a35141429e78e",
+      "content_sha256": "c4fd18ce2c3b8f09cf53a9ab942f5e6bb12ebdac2c224884fad29f82e17f466c",
+      "durable_path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/replicates/WEB_ATTACK_LIGHTGBM_primary_target_bootstrap_float64.npy",
+      "columns": [
+        "ROC_AUC",
+        "PR_AUC",
+        "PR_EXCESS",
+        "RECALL_STANDARD",
+        "FPR_STANDARD",
+        "RECALL_BALANCED",
+        "FPR_BALANCED",
+        "RECALL_SECURITY",
+        "FPR_SECURITY",
+        "GAP_ROC_AUC",
+        "GAP_PR_EXCESS",
+        "GAP_RECALL_STANDARD",
+        "GAP_RECALL_BALANCED",
+        "GAP_RECALL_SECURITY"
+      ],
+      "replicates": 2000
+    }
+  }
+}

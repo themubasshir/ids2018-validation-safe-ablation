@@ -1,0 +1,1846 @@
+{
+  "stage": "Stage27-3A",
+  "type": "BOOTSTRAP_UNCERTAINTY_SUMMARY",
+  "created_at_utc": "2026-08-20T19:23:03.305915+00:00",
+  "scientific_parent_commit": "9771631b18009883da32680b9218d5e40a036942",
+  "confidence_interval": "PERCENTILE_2.5_97.5",
+  "bootstrap_replicates": 2000,
+  "root_seed": 42,
+  "metric_columns": [
+    "ROC_AUC",
+    "PR_AUC",
+    "PR_EXCESS",
+    "RECALL_STANDARD",
+    "FPR_STANDARD",
+    "RECALL_BALANCED",
+    "FPR_BALANCED",
+    "RECALL_SECURITY",
+    "FPR_SECURITY",
+    "GAP_ROC_AUC",
+    "GAP_PR_EXCESS",
+    "GAP_RECALL_STANDARD",
+    "GAP_RECALL_BALANCED",
+    "GAP_RECALL_SECURITY"
+  ],
+  "families": {
+    "BOT": "INFERENTIAL_ELIGIBLE_SUPPORT",
+    "DDOS": "INFERENTIAL_ELIGIBLE_SUPPORT",
+    "INFILTRATION": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+    "PORT_SCAN": "INFERENTIAL_ELIGIBLE_SUPPORT",
+    "WEB_ATTACK": "INFERENTIAL_ELIGIBLE_SUPPORT"
+  },
+  "results": {
+    "BOT::XGBOOST": {
+      "family": "BOT",
+      "learner": "XGBOOST",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 416288,
+        "heldout_attack": 1966,
+        "benign": 414322,
+        "prevalence": 0.004722691982473672
+      },
+      "known_control": {
+        "rows": 458968,
+        "attack": 2216,
+        "benign": 456752,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.9929227426611306,
+          "PR_EXCESS": 0.8627453399746862,
+          "RECALL_STANDARD": 0.865072202166065,
+          "RECALL_BALANCED": 0.9268953068592057,
+          "RECALL_SECURITY": 0.9268953068592057
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.03,
+        "SECURITY": 0.03
+      },
+      "score_grouping": {
+        "unique_score_groups": 141498,
+        "positive_unique_scores": 451,
+        "negative_unique_scores": 141138,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.32238681852330214,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.32250995569644886,
+          "bootstrap_median": 0.32252142419607954,
+          "ci_2_5": 0.310181759005875,
+          "ci_97_5": 0.3353523494662471,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.0032557314024596272,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.003259572607062961,
+          "bootstrap_median": 0.0032589886312309603,
+          "ci_2_5": 0.0031935712780963178,
+          "ci_97_5": 0.003330955764502422,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": -0.0014669605800140448,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.0014631193754107111,
+          "bootstrap_median": -0.0014637033512427118,
+          "ci_2_5": -0.001529120704377354,
+          "ci_97_5": -0.00139173621797125,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.0001641235560747438,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0001636504940601754,
+          "bootstrap_median": 0.0001641235560747438,
+          "ci_2_5": 0.00012550624876303938,
+          "ci_97_5": 0.00020515444509342976,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0004296175438427117,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00042886329955928003,
+          "bootstrap_median": 0.0004296175438427117,
+          "ci_2_5": 0.000366864419461192,
+          "ci_97_5": 0.0004899570865172499,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0004296175438427117,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00042886329955928003,
+          "bootstrap_median": 0.0004296175438427117,
+          "ci_2_5": 0.000366864419461192,
+          "ci_97_5": 0.0004899570865172499,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": 0.6705359241378284,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6704127869646817,
+          "bootstrap_median": 0.670401318465051,
+          "ci_2_5": 0.6575703931948834,
+          "ci_97_5": 0.6827409836552556,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.8642123005547002,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8642084593500969,
+          "bootstrap_median": 0.8642090433259288,
+          "ci_2_5": 0.8641370761926573,
+          "ci_97_5": 0.8642744606790634,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 0.865072202166065,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.865072202166065,
+          "bootstrap_median": 0.865072202166065,
+          "ci_2_5": 0.865072202166065,
+          "ci_97_5": 0.865072202166065,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.9268953068592057,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9268953068592061,
+          "bootstrap_median": 0.9268953068592057,
+          "ci_2_5": 0.9268953068592057,
+          "ci_97_5": 0.9268953068592057,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.9268953068592057,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9268953068592061,
+          "bootstrap_median": 0.9268953068592057,
+          "ci_2_5": 0.9268953068592057,
+          "ci_97_5": 0.9268953068592057,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "BOT::LIGHTGBM": {
+      "family": "BOT",
+      "learner": "LIGHTGBM",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 416288,
+        "heldout_attack": 1966,
+        "benign": 414322,
+        "prevalence": 0.004722691982473672
+      },
+      "known_control": {
+        "rows": 458968,
+        "attack": 2216,
+        "benign": 456752,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.9951005393569083,
+          "PR_EXCESS": 0.90688232546355,
+          "RECALL_STANDARD": 0.8497292418772563,
+          "RECALL_BALANCED": 0.8889891696750902,
+          "RECALL_SECURITY": 0.9101985559566786
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.04,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 148933,
+        "positive_unique_scores": 582,
+        "negative_unique_scores": 148455,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.5590614406711931,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.5591171324289266,
+          "bootstrap_median": 0.5590751109843686,
+          "ci_2_5": 0.5521439617651238,
+          "ci_97_5": 0.5660056016248203,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.004879010248700389,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.004883513658714942,
+          "bootstrap_median": 0.004882365355226733,
+          "ci_2_5": 0.004810468022939988,
+          "ci_97_5": 0.004958082673306732,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.0001563182662267168,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00016082167624126962,
+          "bootstrap_median": 0.000159673372753061,
+          "ci_2_5": 8.777604046631547e-05,
+          "ci_97_5": 0.00023539069083306017,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.0001544692292468177,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00015504366169307926,
+          "bootstrap_median": 0.0001544692292468177,
+          "ci_2_5": 0.00011826550364209479,
+          "ci_97_5": 0.00019550011826550365,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.000270321151181931,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0002711417689623046,
+          "bootstrap_median": 0.000270321151181931,
+          "ci_2_5": 0.00022204951704230043,
+          "ci_97_5": 0.0003234199487355245,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.00044651261579158237,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00044793662899870145,
+          "bootstrap_median": 0.00044651261579158237,
+          "ci_2_5": 0.0003837594914100627,
+          "ci_97_5": 0.0005165064852940466,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": 0.4360390986857152,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.4359834069279818,
+          "bootstrap_median": 0.4360254283725398,
+          "ci_2_5": 0.4290949377320881,
+          "ci_97_5": 0.44295657759178453,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.9067260071973232,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9067215037873088,
+          "bootstrap_median": 0.9067226520907969,
+          "ci_2_5": 0.906646934772717,
+          "ci_97_5": 0.9067945494230837,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 0.8497292418772563,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8497292418772561,
+          "bootstrap_median": 0.8497292418772563,
+          "ci_2_5": 0.8497292418772563,
+          "ci_97_5": 0.8497292418772563,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.8889891696750902,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8889891696750903,
+          "bootstrap_median": 0.8889891696750902,
+          "ci_2_5": 0.8889891696750902,
+          "ci_97_5": 0.8889891696750902,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.9101985559566786,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9101985559566789,
+          "bootstrap_median": 0.9101985559566786,
+          "ci_2_5": 0.9101985559566786,
+          "ci_97_5": 0.9101985559566786,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "DDOS::XGBOOST": {
+      "family": "DDOS",
+      "learner": "XGBOOST",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 542349,
+        "heldout_attack": 128027,
+        "benign": 414322,
+        "prevalence": 0.23606017527459255
+      },
+      "known_control": {
+        "rows": 458968,
+        "attack": 2216,
+        "benign": 456752,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.9929227426611306,
+          "PR_EXCESS": 0.8627453399746862,
+          "RECALL_STANDARD": 0.865072202166065,
+          "RECALL_BALANCED": 0.9268953068592057,
+          "RECALL_SECURITY": 0.9268953068592057
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.03,
+        "SECURITY": 0.03
+      },
+      "score_grouping": {
+        "unique_score_groups": 194548,
+        "positive_unique_scores": 53422,
+        "negative_unique_scores": 141138,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.9981965450426153,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9981950184779,
+          "bootstrap_median": 0.9981950310940002,
+          "ci_2_5": 0.9981238925445802,
+          "ci_97_5": 0.9982631177790051,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.9924676314551882,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9924626165895842,
+          "bootstrap_median": 0.9924792892971213,
+          "ci_2_5": 0.9918247156690351,
+          "ci_97_5": 0.9930743524190455,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.7564074561805957,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7564024413149917,
+          "bootstrap_median": 0.7564191140225287,
+          "ci_2_5": 0.7557645403944425,
+          "ci_97_5": 0.757014177144453,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.6240714849211495,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6241098362064251,
+          "bootstrap_median": 0.624059768642552,
+          "ci_2_5": 0.6214939036297031,
+          "ci_97_5": 0.6266883157458975,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.0001641235560747438,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00016493934669170354,
+          "bootstrap_median": 0.0001641235560747438,
+          "ci_2_5": 0.00012550624876303938,
+          "ci_97_5": 0.00020515444509342976,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.6619697407578089,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6620006209627657,
+          "bootstrap_median": 0.6619775516102072,
+          "ci_2_5": 0.6595636076765058,
+          "ci_97_5": 0.6645865715825569,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0004296175438427117,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0004304755721395437,
+          "bootstrap_median": 0.0004296175438427117,
+          "ci_2_5": 0.00036927800116817353,
+          "ci_97_5": 0.0004972581711808686,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.6619697407578089,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6620006209627657,
+          "bootstrap_median": 0.6619775516102072,
+          "ci_2_5": 0.6595636076765058,
+          "ci_97_5": 0.6645865715825569,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0004296175438427117,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0004304755721395437,
+          "bootstrap_median": 0.0004296175438427117,
+          "ci_2_5": 0.00036927800116817353,
+          "ci_97_5": 0.0004972581711808686,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": -0.005273802381484782,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.005272275816769465,
+          "bootstrap_median": -0.005272288432869698,
+          "ci_2_5": -0.0053403751178745405,
+          "ci_97_5": -0.005201149883449669,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.10633788379409048,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.10634289865969442,
+          "bootstrap_median": 0.10632622595215752,
+          "ci_2_5": 0.10573116283023315,
+          "ci_97_5": 0.10698079958024359,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 0.24100071724491545,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.2409623659596397,
+          "bootstrap_median": 0.24101243352351304,
+          "ci_2_5": 0.23838388642016756,
+          "ci_97_5": 0.24357829853636181,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.26492556610139684,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.2648946858964401,
+          "bootstrap_median": 0.2649177552489985,
+          "ci_2_5": 0.26230873527664894,
+          "ci_97_5": 0.26733169918269994,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.26492556610139684,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.2648946858964401,
+          "bootstrap_median": 0.2649177552489985,
+          "ci_2_5": 0.26230873527664894,
+          "ci_97_5": 0.26733169918269994,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "DDOS::LIGHTGBM": {
+      "family": "DDOS",
+      "learner": "LIGHTGBM",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 542349,
+        "heldout_attack": 128027,
+        "benign": 414322,
+        "prevalence": 0.23606017527459255
+      },
+      "known_control": {
+        "rows": 458968,
+        "attack": 2216,
+        "benign": 456752,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.9951005393569083,
+          "PR_EXCESS": 0.90688232546355,
+          "RECALL_STANDARD": 0.8497292418772563,
+          "RECALL_BALANCED": 0.8889891696750902,
+          "RECALL_SECURITY": 0.9101985559566786
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.04,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 211900,
+        "positive_unique_scores": 63453,
+        "negative_unique_scores": 148455,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.9985818073127533,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9985819374565649,
+          "bootstrap_median": 0.9985829853493948,
+          "ci_2_5": 0.9984927114296822,
+          "ci_97_5": 0.9986652290504912,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.9939610126616193,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9939842555142554,
+          "bootstrap_median": 0.9939892022126745,
+          "ci_2_5": 0.9933046721200243,
+          "ci_97_5": 0.9946353710091357,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.7579008373870267,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.757924080239663,
+          "bootstrap_median": 0.757929026938082,
+          "ci_2_5": 0.7572444968454317,
+          "ci_97_5": 0.7585751957345431,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.16625399329828863,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.16624711193732572,
+          "bootstrap_median": 0.1662696150030853,
+          "ci_2_5": 0.16424660423191983,
+          "ci_97_5": 0.16812879314519594,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.0001544692292468177,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0001538815221011677,
+          "bootstrap_median": 0.0001544692292468177,
+          "ci_2_5": 0.00011585192193511327,
+          "ci_97_5": 0.00019308653655852211,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.2625383708124068,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.2625426980246354,
+          "bootstrap_median": 0.2625539925172034,
+          "ci_2_5": 0.26032008873128326,
+          "ci_97_5": 0.2649753567606833,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.000270321151181931,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00026883800522299085,
+          "bootstrap_median": 0.0002679075694749494,
+          "ci_2_5": 0.00022198917749962588,
+          "ci_97_5": 0.0003185927853215615,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.6278363157771407,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6278396197677052,
+          "bootstrap_median": 0.6277660181055559,
+          "ci_2_5": 0.6252897826239777,
+          "ci_97_5": 0.6303906597827021,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.00044651261579158237,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00044547960282099433,
+          "bootstrap_median": 0.00044409903408460086,
+          "ci_2_5": 0.0003813459097030812,
+          "ci_97_5": 0.0005116793218800836,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": -0.0034812679558449133,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.0034813980996565457,
+          "bootstrap_median": -0.0034824459924864826,
+          "ci_2_5": -0.0035646896935828593,
+          "ci_97_5": -0.0033921720727739164,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.14898148807652323,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.148958245223887,
+          "bootstrap_median": 0.14895329852546801,
+          "ci_2_5": 0.14830712972900684,
+          "ci_97_5": 0.1496378286181183,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 0.6834752485789677,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6834821299399306,
+          "bootstrap_median": 0.6834596268741711,
+          "ci_2_5": 0.6816004487320603,
+          "ci_97_5": 0.6854826376453365,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.6264507988626835,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.6264464716504549,
+          "bootstrap_median": 0.6264351771578869,
+          "ci_2_5": 0.6240138129144069,
+          "ci_97_5": 0.6286690809438069,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.2823622401795379,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.2823589361889734,
+          "bootstrap_median": 0.28243253785112277,
+          "ci_2_5": 0.27980789617397656,
+          "ci_97_5": 0.28490877333270087,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "INFILTRATION::XGBOOST": {
+      "family": "INFILTRATION",
+      "learner": "XGBOOST",
+      "support_status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+      "inferential_family_claim_authorized": false,
+      "target_population": {
+        "rows": 456788,
+        "heldout_attack": 36,
+        "benign": 456752,
+        "prevalence": 7.881117717628309e-05
+      },
+      "known_control": {
+        "rows": 692692,
+        "attack": 252661,
+        "benign": 440031,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.7702741760649505,
+          "PR_EXCESS": 0.1879786881627537,
+          "RECALL_STANDARD": 1.1873617218328115e-05,
+          "RECALL_BALANCED": 0.00041557660264148404,
+          "RECALL_SECURITY": 0.00041557660264148404
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.01,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 26226,
+        "positive_unique_scores": 27,
+        "negative_unique_scores": 26207,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.7815653303713564,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7815415463576393,
+          "bootstrap_median": 0.7821732155645855,
+          "ci_2_5": 0.7473200065656831,
+          "ci_97_5": 0.8142090009093191,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.00018106454836966566,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0001883086297153021,
+          "bootstrap_median": 0.00018706099175926322,
+          "ci_2_5": 0.0001560787928114386,
+          "ci_97_5": 0.00022957867703790307,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.00010225337119338258,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00010949745253901899,
+          "bootstrap_median": 0.00010824981458298014,
+          "ci_2_5": 7.72676156351555e-05,
+          "ci_97_5": 0.00015076749986161998,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.00020142221599467544,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00020153825270606367,
+          "bootstrap_median": 0.00020142221599467544,
+          "ci_2_5": 0.0001620135215609346,
+          "ci_97_5": 0.0002452096542543875,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0013530318422251024,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0013516109398535748,
+          "bootstrap_median": 0.0013508424703121168,
+          "ci_2_5": 0.0012435632465758223,
+          "ci_97_5": 0.0014625004378743826,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0013530318422251024,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0013516109398535748,
+          "bootstrap_median": 0.0013508424703121168,
+          "ci_2_5": 0.0012435632465758223,
+          "ci_97_5": 0.0014625004378743826,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": -0.011291154306405926,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.011267370292688731,
+          "bootstrap_median": -0.011899039499634945,
+          "ci_2_5": -0.04393482484436864,
+          "ci_97_5": 0.022954169499267395,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.18787643479156033,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.18786919071021468,
+          "bootstrap_median": 0.18787043834817074,
+          "ci_2_5": 0.18782792066289208,
+          "ci_97_5": 0.18790142054711856,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 1.1873617218328115e-05,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 1.1873617218328115e-05,
+          "bootstrap_median": 1.1873617218328115e-05,
+          "ci_2_5": 1.1873617218328115e-05,
+          "ci_97_5": 1.1873617218328115e-05,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.00041557660264148404,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0004155766026414842,
+          "bootstrap_median": 0.00041557660264148404,
+          "ci_2_5": 0.00041557660264148404,
+          "ci_97_5": 0.00041557660264148404,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.00041557660264148404,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0004155766026414842,
+          "bootstrap_median": 0.00041557660264148404,
+          "ci_2_5": 0.00041557660264148404,
+          "ci_97_5": 0.00041557660264148404,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "INFILTRATION::LIGHTGBM": {
+      "family": "INFILTRATION",
+      "learner": "LIGHTGBM",
+      "support_status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+      "inferential_family_claim_authorized": false,
+      "target_population": {
+        "rows": 456788,
+        "heldout_attack": 36,
+        "benign": 456752,
+        "prevalence": 7.881117717628309e-05
+      },
+      "known_control": {
+        "rows": 692692,
+        "attack": 252661,
+        "benign": 440031,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.7951419393603236,
+          "PR_EXCESS": 0.21766371221388597,
+          "RECALL_STANDARD": 3.957872406109372e-06,
+          "RECALL_BALANCED": 7.519957571607806e-05,
+          "RECALL_SECURITY": 7.519957571607806e-05
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.01,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 23331,
+        "positive_unique_scores": 23,
+        "negative_unique_scores": 23314,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.7536628192104249,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7544895173480966,
+          "bootstrap_median": 0.7547180812685124,
+          "ci_2_5": 0.7238805049628195,
+          "ci_97_5": 0.7864676214395947,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.00015591221379998596,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00016407947607712122,
+          "bootstrap_median": 0.00016286630396696115,
+          "ci_2_5": 0.00014382486856808884,
+          "ci_97_5": 0.0001929629519488426,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 7.710103662370287e-05,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 8.526829890083815e-05,
+          "bootstrap_median": 8.405512679067806e-05,
+          "ci_2_5": 6.501369139180575e-05,
+          "ci_97_5": 0.0001141517747725595,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.00012479419904017934,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00012512807825690965,
+          "bootstrap_median": 0.00012479419904017934,
+          "ci_2_5": 9.414299225838091e-05,
+          "ci_97_5": 0.000159824149647949,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0002320734227764739,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0002323733667285529,
+          "bootstrap_median": 0.0002320734227764739,
+          "ci_2_5": 0.00019042062213192278,
+          "ci_97_5": 0.00028023960486215716,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.0,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0,
+          "bootstrap_median": 0.0,
+          "ci_2_5": 0.0,
+          "ci_97_5": 0.0,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0002320734227764739,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0002323733667285529,
+          "bootstrap_median": 0.0002320734227764739,
+          "ci_2_5": 0.00019042062213192278,
+          "ci_97_5": 0.00028023960486215716,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": 0.04147912014989874,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.04065242201222712,
+          "bootstrap_median": 0.04042385809181126,
+          "ci_2_5": 0.00867431792072892,
+          "ci_97_5": 0.07126143439750406,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.21758661117726227,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.21757844391498515,
+          "bootstrap_median": 0.2175796570870953,
+          "ci_2_5": 0.21754956043911342,
+          "ci_97_5": 0.21759869852249417,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 3.957872406109372e-06,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 3.957872406109373e-06,
+          "bootstrap_median": 3.957872406109372e-06,
+          "ci_2_5": 3.957872406109372e-06,
+          "ci_97_5": 3.957872406109372e-06,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 7.519957571607806e-05,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 7.519957571607806e-05,
+          "bootstrap_median": 7.519957571607806e-05,
+          "ci_2_5": 7.519957571607806e-05,
+          "ci_97_5": 7.519957571607806e-05,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 7.519957571607806e-05,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 7.519957571607806e-05,
+          "bootstrap_median": 7.519957571607806e-05,
+          "ci_2_5": 7.519957571607806e-05,
+          "ci_97_5": 7.519957571607806e-05,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "PORT_SCAN::XGBOOST": {
+      "family": "PORT_SCAN",
+      "learner": "XGBOOST",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 573252,
+        "heldout_attack": 158930,
+        "benign": 414322,
+        "prevalence": 0.2772428181672284
+      },
+      "known_control": {
+        "rows": 458968,
+        "attack": 2216,
+        "benign": 456752,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.9929227426611306,
+          "PR_EXCESS": 0.8627453399746862,
+          "RECALL_STANDARD": 0.865072202166065,
+          "RECALL_BALANCED": 0.9268953068592057,
+          "RECALL_SECURITY": 0.9268953068592057
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.03,
+        "SECURITY": 0.03
+      },
+      "score_grouping": {
+        "unique_score_groups": 142662,
+        "positive_unique_scores": 1533,
+        "negative_unique_scores": 141138,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.5505911851149156,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.5505658905506816,
+          "bootstrap_median": 0.5505635063685617,
+          "ci_2_5": 0.5486823262421032,
+          "ci_97_5": 0.552399107671196,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.36222066063704805,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.3622020166957911,
+          "bootstrap_median": 0.3621900171577822,
+          "ci_2_5": 0.3604616033303502,
+          "ci_97_5": 0.3639952904763927,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.08497784246981965,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.08495919852856267,
+          "bootstrap_median": 0.08494719899055381,
+          "ci_2_5": 0.0832187851631218,
+          "ci_97_5": 0.0867524723091643,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.0032215440760083053,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.003221286100799094,
+          "bootstrap_median": 0.0032183980368715786,
+          "ci_2_5": 0.002938400553702888,
+          "ci_97_5": 0.003504687598313723,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.0001641235560747438,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.000164224926506437,
+          "bootstrap_median": 0.0001641235560747438,
+          "ci_2_5": 0.00012550624876303938,
+          "ci_97_5": 0.00020515444509342976,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.00480085572264519,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.004803709180142201,
+          "bootstrap_median": 0.00480085572264519,
+          "ci_2_5": 0.004461083495878689,
+          "ci_97_5": 0.005159504184232052,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0004296175438427117,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0004293315344104344,
+          "bootstrap_median": 0.0004296175438427117,
+          "ci_2_5": 0.000366864419461192,
+          "ci_97_5": 0.0004923706682242314,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.00480085572264519,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.004803709180142201,
+          "bootstrap_median": 0.00480085572264519,
+          "ci_2_5": 0.004461083495878689,
+          "ci_97_5": 0.005159504184232052,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0004296175438427117,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0004293315344104344,
+          "bootstrap_median": 0.0004296175438427117,
+          "ci_2_5": 0.000366864419461192,
+          "ci_97_5": 0.0004923706682242314,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": 0.442331557546215,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.44235685211044895,
+          "bootstrap_median": 0.44235923629256896,
+          "ci_2_5": 0.4405236349899346,
+          "ci_97_5": 0.44424041641902734,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.7777674975048665,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7777861414461236,
+          "bootstrap_median": 0.7777981409841324,
+          "ci_2_5": 0.7759928676655219,
+          "ci_97_5": 0.7795265548115644,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 0.8618506580900567,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8618509160652659,
+          "bootstrap_median": 0.8618538041291934,
+          "ci_2_5": 0.8615675145677513,
+          "ci_97_5": 0.8621338016123621,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.9220944511365605,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9220915976790637,
+          "bootstrap_median": 0.9220944511365605,
+          "ci_2_5": 0.9217358026749737,
+          "ci_97_5": 0.922434223363327,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.9220944511365605,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9220915976790637,
+          "bootstrap_median": 0.9220944511365605,
+          "ci_2_5": 0.9217358026749737,
+          "ci_97_5": 0.922434223363327,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "PORT_SCAN::LIGHTGBM": {
+      "family": "PORT_SCAN",
+      "learner": "LIGHTGBM",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 573252,
+        "heldout_attack": 158930,
+        "benign": 414322,
+        "prevalence": 0.2772428181672284
+      },
+      "known_control": {
+        "rows": 458968,
+        "attack": 2216,
+        "benign": 456752,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.9951005393569083,
+          "PR_EXCESS": 0.90688232546355,
+          "RECALL_STANDARD": 0.8497292418772563,
+          "RECALL_BALANCED": 0.8889891696750902,
+          "RECALL_SECURITY": 0.9101985559566786
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.04,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 150562,
+        "positive_unique_scores": 2110,
+        "negative_unique_scores": 148455,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.7558855961851745,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7559033017116678,
+          "bootstrap_median": 0.7559197705043685,
+          "ci_2_5": 0.7546399851169513,
+          "ci_97_5": 0.7570405688103726,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.4191064980155718,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.4191542101032257,
+          "bootstrap_median": 0.41916118040357375,
+          "ci_2_5": 0.4176113378228475,
+          "ci_97_5": 0.4206240884309075,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.14186367984834342,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.1419113919359973,
+          "bootstrap_median": 0.14191836223634532,
+          "ci_2_5": 0.1403685196556191,
+          "ci_97_5": 0.14338127026367908,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.002145598691247719,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0021451897061599444,
+          "bootstrap_median": 0.002145598691247719,
+          "ci_2_5": 0.0019190838734033852,
+          "ci_97_5": 0.0023846976656389605,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.0001544692292468177,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00015435458411573608,
+          "bootstrap_median": 0.0001544692292468177,
+          "ci_2_5": 0.00011826550364209479,
+          "ci_97_5": 0.00019308653655852211,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.011678097275530108,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.011693497137104386,
+          "bootstrap_median": 0.011690681432077014,
+          "ci_2_5": 0.011149562700559995,
+          "ci_97_5": 0.01225083370037123,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.000270321151181931,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00027008341338379324,
+          "bootstrap_median": 0.000270321151181931,
+          "ci_2_5": 0.00022204951704230043,
+          "ci_97_5": 0.000321006367028543,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.012634493173095073,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.01265053797269238,
+          "bootstrap_median": 0.012650223368778708,
+          "ci_2_5": 0.012080790285031145,
+          "ci_97_5": 0.01321965645252627,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.00044651261579158237,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00044600455684226274,
+          "bootstrap_median": 0.00044651261579158237,
+          "ci_2_5": 0.0003837594914100627,
+          "ci_97_5": 0.0005116793218800836,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": 0.23921494317173386,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.2391972376452406,
+          "bootstrap_median": 0.23918076885253986,
+          "ci_2_5": 0.23805997054653572,
+          "ci_97_5": 0.24046055423995702,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": 0.7650186456152066,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7649709335275527,
+          "bootstrap_median": 0.7649639632272046,
+          "ci_2_5": 0.7635010551998709,
+          "ci_97_5": 0.7665138058079308,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": 0.8475836431860085,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8475840521710963,
+          "bootstrap_median": 0.8475836431860085,
+          "ci_2_5": 0.8473445442116173,
+          "ci_97_5": 0.847810158003853,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": 0.8773110723995601,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8772956725379859,
+          "bootstrap_median": 0.8772984882430133,
+          "ci_2_5": 0.8767383359747191,
+          "ci_97_5": 0.8778396069745302,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": 0.8975640627835836,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.8975480179839862,
+          "bootstrap_median": 0.8975483325878999,
+          "ci_2_5": 0.8969788995041523,
+          "ci_97_5": 0.8981177656716475,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "WEB_ATTACK::XGBOOST": {
+      "family": "WEB_ATTACK",
+      "learner": "XGBOOST",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 458932,
+        "heldout_attack": 2180,
+        "benign": 456752,
+        "prevalence": 0.004750159064959515
+      },
+      "known_control": {
+        "rows": 692692,
+        "attack": 252661,
+        "benign": 440031,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.7702741760649505,
+          "PR_EXCESS": 0.1879786881627537,
+          "RECALL_STANDARD": 1.1873617218328115e-05,
+          "RECALL_BALANCED": 0.00041557660264148404,
+          "RECALL_SECURITY": 0.00041557660264148404
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.01,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 26305,
+        "positive_unique_scores": 136,
+        "negative_unique_scores": 26207,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.9693327932280035,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.969330898179483,
+          "bootstrap_median": 0.9693390969620195,
+          "ci_2_5": 0.9660011982442522,
+          "ci_97_5": 0.9725572434385528,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.7205965776366885,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7207889651846078,
+          "bootstrap_median": 0.7207679887573786,
+          "ci_2_5": 0.7017918734429232,
+          "ci_97_5": 0.7396294463850369,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.7158464185717289,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7160388061196482,
+          "bootstrap_median": 0.7160178296924189,
+          "ci_2_5": 0.6970417143779636,
+          "ci_97_5": 0.7348792873200773,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.5142201834862385,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.5142534403669724,
+          "bootstrap_median": 0.5142201834862385,
+          "ci_2_5": 0.4935779816513762,
+          "ci_97_5": 0.5348623853211009,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.00020142221599467544,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00020192467684870564,
+          "bootstrap_median": 0.00020361158790766106,
+          "ci_2_5": 0.0001620135215609346,
+          "ci_97_5": 0.0002430202823414019,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.7779816513761468,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7779575688073394,
+          "bootstrap_median": 0.7775229357798165,
+          "ci_2_5": 0.7605504587155963,
+          "ci_97_5": 0.7958715596330275,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0013530318422251024,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0013549103233264441,
+          "bootstrap_median": 0.001355221214138088,
+          "ci_2_5": 0.001247887256103969,
+          "ci_97_5": 0.001466879181700354,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.7779816513761468,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7779575688073394,
+          "bootstrap_median": 0.7775229357798165,
+          "ci_2_5": 0.7605504587155963,
+          "ci_97_5": 0.7958715596330275,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0013530318422251024,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0013549103233264441,
+          "bootstrap_median": 0.001355221214138088,
+          "ci_2_5": 0.001247887256103969,
+          "ci_97_5": 0.001466879181700354,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": -0.19905861716305295,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.19905672211453249,
+          "bootstrap_median": -0.199064920897069,
+          "ci_2_5": -0.2022830673736023,
+          "ci_97_5": -0.19572702217930174,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": -0.5278677304089752,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.5280601179568946,
+          "bootstrap_median": -0.5280391415296652,
+          "ci_2_5": -0.5469005991573237,
+          "ci_97_5": -0.5090630262152099,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": -0.5142083098690202,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.5142415667497542,
+          "bootstrap_median": -0.5142083098690202,
+          "ci_2_5": -0.5348505117038825,
+          "ci_97_5": -0.49356610803415785,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": -0.7775660747735054,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.7775419922046979,
+          "bootstrap_median": -0.777107359177175,
+          "ci_2_5": -0.795455983030386,
+          "ci_97_5": -0.7601348821129549,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": -0.7775660747735054,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.7775419922046979,
+          "bootstrap_median": -0.777107359177175,
+          "ci_2_5": -0.795455983030386,
+          "ci_97_5": -0.7601348821129549,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    },
+    "WEB_ATTACK::LIGHTGBM": {
+      "family": "WEB_ATTACK",
+      "learner": "LIGHTGBM",
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "inferential_family_claim_authorized": true,
+      "target_population": {
+        "rows": 458932,
+        "heldout_attack": 2180,
+        "benign": 456752,
+        "prevalence": 0.004750159064959515
+      },
+      "known_control": {
+        "rows": 692692,
+        "attack": 252661,
+        "benign": 440031,
+        "bootstrapped": false,
+        "reason": "FROZEN_UNCERTAINTY_SPEC_QUANTIFIES_TARGET_SAMPLING_UNCERTAINTY",
+        "point_metrics_used_for_gap": {
+          "ROC_AUC": 0.7951419393603236,
+          "PR_EXCESS": 0.21766371221388597,
+          "RECALL_STANDARD": 3.957872406109372e-06,
+          "RECALL_BALANCED": 7.519957571607806e-05,
+          "RECALL_SECURITY": 7.519957571607806e-05
+        }
+      },
+      "thresholds": {
+        "STANDARD": 0.5,
+        "BALANCED": 0.01,
+        "SECURITY": 0.01
+      },
+      "score_grouping": {
+        "unique_score_groups": 23496,
+        "positive_unique_scores": 193,
+        "negative_unique_scores": 23314,
+        "equivalence": "EXACT_FOR_FROZEN_METRICS_UNDER_WITH_REPLACEMENT_STRATIFIED_ROW_BOOTSTRAP"
+      },
+      "metrics": {
+        "ROC_AUC": {
+          "point_estimate": 0.990056168035138,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.9900640086394423,
+          "bootstrap_median": 0.9900503980860631,
+          "ci_2_5": 0.9887282309520425,
+          "ci_97_5": 0.991380863655197,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_AUC": {
+          "point_estimate": 0.7604998658179246,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7607145378283667,
+          "bootstrap_median": 0.760768041102549,
+          "ci_2_5": 0.739954753832639,
+          "ci_97_5": 0.7817206921327072,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "PR_EXCESS": {
+          "point_estimate": 0.755749706752965,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.7559643787634073,
+          "bootstrap_median": 0.7560178820375895,
+          "ci_2_5": 0.7352045947676794,
+          "ci_97_5": 0.7769705330677477,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_STANDARD": {
+          "point_estimate": 0.052752293577981654,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.052810321100917434,
+          "bootstrap_median": 0.052752293577981654,
+          "ci_2_5": 0.04357798165137615,
+          "ci_97_5": 0.062385321100917435,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_STANDARD": {
+          "point_estimate": 0.00012479419904017934,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.0001248193768171787,
+          "bootstrap_median": 0.00012479419904017934,
+          "ci_2_5": 9.414299225838091e-05,
+          "ci_97_5": 0.0001576347777349634,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_BALANCED": {
+          "point_estimate": 0.5211009174311927,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.5211004587155963,
+          "bootstrap_median": 0.5211009174311927,
+          "ci_2_5": 0.49954128440366974,
+          "ci_97_5": 0.5422133027522935,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_BALANCED": {
+          "point_estimate": 0.0002320734227764739,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00023225076190142572,
+          "bootstrap_median": 0.0002320734227764739,
+          "ci_2_5": 0.00018828598451676182,
+          "ci_97_5": 0.0002780502329491715,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "RECALL_SECURITY": {
+          "point_estimate": 0.5211009174311927,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.5211004587155963,
+          "bootstrap_median": 0.5211009174311927,
+          "ci_2_5": 0.49954128440366974,
+          "ci_97_5": 0.5422133027522935,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "FPR_SECURITY": {
+          "point_estimate": 0.0002320734227764739,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": 0.00023225076190142572,
+          "bootstrap_median": 0.0002320734227764739,
+          "ci_2_5": 0.00018828598451676182,
+          "ci_97_5": 0.0002780502329491715,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_ROC_AUC": {
+          "point_estimate": -0.19491422867481434,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.1949220692791187,
+          "bootstrap_median": -0.19490845872573948,
+          "ci_2_5": -0.19623892429487333,
+          "ci_97_5": -0.19358629159171895,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_PR_EXCESS": {
+          "point_estimate": -0.538085994539079,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.5383006665495211,
+          "bootstrap_median": -0.5383541698237035,
+          "ci_2_5": -0.5593068208538617,
+          "ci_97_5": -0.5175408825537934,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_STANDARD": {
+          "point_estimate": -0.05274833570557554,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.052806363228511316,
+          "bootstrap_median": -0.05274833570557554,
+          "ci_2_5": -0.06238136322851132,
+          "ci_97_5": -0.04357402377897004,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_BALANCED": {
+          "point_estimate": -0.5210257178554766,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.5210252591398802,
+          "bootstrap_median": -0.5210257178554766,
+          "ci_2_5": -0.5421381031765774,
+          "ci_97_5": -0.4994660848279537,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        },
+        "GAP_RECALL_SECURITY": {
+          "point_estimate": -0.5210257178554766,
+          "bootstrap_replicates_total": 2000,
+          "bootstrap_replicates_finite": 2000,
+          "bootstrap_mean": -0.5210252591398802,
+          "bootstrap_median": -0.5210257178554766,
+          "ci_2_5": -0.5421381031765774,
+          "ci_97_5": -0.4994660848279537,
+          "ci_method": "PERCENTILE_2.5_97.5_NUMPY_LINEAR"
+        }
+      },
+      "raw_pr_auc_known_minus_unseen_gap_ci": "NOT_BOOTSTRAPPED_AS_PRIMARY_GAP_DIFFERENT_PREVALENCE_ANCHORS",
+      "conditional_interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty."
+    }
+  },
+  "interpretation": "Intervals quantify target-sampling uncertainty conditional on the fitted model. They do not include training-seed, model-selection, or population uncertainty.",
+  "raw_pr_auc_gap_policy": "REPORTABLE_DESCRIPTIVELY_BUT_INTERPRET_WITH SEPARATE_PREVALENCE_ANCHORS"
+}

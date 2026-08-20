@@ -1,0 +1,54 @@
+{
+  "stage": "Stage27-1B",
+  "status": "PREFIT_FEATURE_CACHE_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "created_at_utc": "2026-08-20T18:05:29.624987+00:00",
+  "scientific_parent_commit": "c5ad77b346f5d98e41ca5eccd4336087f8c1786e",
+  "required_artifact_count": 4,
+  "artifact_hashes_before_freeze_record": {
+    "prefit_source_feature_receipt.json": {
+      "bytes": 5042,
+      "sha256": "ccf8732fcaf8cf3ca83b17410262fbccf16911e1651169e9c50d3cfc177e9c9c"
+    },
+    "monwed_known_feature_cache_receipt.json": {
+      "bytes": 2258,
+      "sha256": "0ed8418a2e96ed09470fd53b6db4729a7c8b0381c07b538955a6f6d74f62b109"
+    },
+    "fold_feature_binding_receipt.json": {
+      "bytes": 2847,
+      "sha256": "c2bcac1ef7617a8b14d5d3a68e55b553736ee19236c713d2c0cf50da317f0b3c"
+    }
+  },
+  "prefit_population": {
+    "rows": 1668519,
+    "features": 70,
+    "matrix_dtype": "float32",
+    "days_read": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "thursday_predictors_read": false,
+    "friday_predictors_read": false,
+    "heartbleed_predictors_persisted": 0
+  },
+  "fold_readiness": {
+    "INFILTRATION": "TRAIN_AND_VALIDATION_READY",
+    "WEB_ATTACK": "TRAIN_AND_VALIDATION_READY",
+    "BOT": "TRAIN_READY_VALIDATION_SEALED",
+    "DDOS": "TRAIN_READY_VALIDATION_SEALED",
+    "PORT_SCAN": "TRAIN_READY_VALIDATION_SEALED"
+  },
+  "scientific_actions_completed": {
+    "predictor_source_days_read": 3,
+    "predictor_source_days_sealed": 2,
+    "feature_rows_materialized": 1668519,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selections": 0,
+    "target_predictor_inference_openings": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "next_authorized_step_after_remote_verification": "FIT THE TWO FROZEN CPU LEARNERS FOR THE FIVE ELIGIBLE FOLDS USING ONLY THEIR FROZEN TRAIN SLICES. FOR INFILTRATION AND WEB_ATTACK, SELECT/FREEZE VALIDATION-ONLY THRESHOLDS FROM THE FROZEN WEDNESDAY VALIDATION SLICE. DO NOT READ THURSDAY PREDICTORS UNTIL THOSE THURSDAY-TARGET MODEL/THRESHOLD ARTIFACTS ARE FROZEN.",
+  "target_predictor_opening_authorized_now": false
+}

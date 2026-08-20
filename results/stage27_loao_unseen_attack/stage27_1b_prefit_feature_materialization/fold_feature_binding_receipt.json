@@ -1,0 +1,93 @@
+{
+  "stage": "Stage27-1B",
+  "type": "FOLD_FEATURE_BINDING_RECEIPT",
+  "created_at_utc": "2026-08-20T18:05:29.623947+00:00",
+  "scientific_parent_commit": "c5ad77b346f5d98e41ca5eccd4336087f8c1786e",
+  "shared_feature_cache": "/kaggle/working/stage27_1b_prefit_feature_cache/monwed_known_features_float32.npy",
+  "shared_label_cache": "/kaggle/working/stage27_1b_prefit_feature_cache/monwed_known_binary_labels_uint8.npy",
+  "shared_global_idx_cache": "/kaggle/working/stage27_1b_prefit_feature_cache/monwed_known_global_idx_int32.npy",
+  "bindings": {
+    "INFILTRATION": {
+      "train_slice": [
+        0,
+        975827
+      ],
+      "validation_slice": [
+        975827,
+        1668519
+      ],
+      "target_predictors_materialized": false
+    },
+    "WEB_ATTACK": {
+      "train_slice": [
+        0,
+        975827
+      ],
+      "validation_slice": [
+        975827,
+        1668519
+      ],
+      "target_predictors_materialized": false
+    },
+    "BOT": {
+      "train_slice": [
+        0,
+        1668519
+      ],
+      "validation_slice": null,
+      "validation_status": "SEALED_THURSDAY_UNTIL_THURSDAY_TARGET_FOLD_MODELS_AND_THRESHOLDS_ARE_FROZEN",
+      "target_predictors_materialized": false
+    },
+    "DDOS": {
+      "train_slice": [
+        0,
+        1668519
+      ],
+      "validation_slice": null,
+      "validation_status": "SEALED_THURSDAY_UNTIL_THURSDAY_TARGET_FOLD_MODELS_AND_THRESHOLDS_ARE_FROZEN",
+      "target_predictors_materialized": false
+    },
+    "PORT_SCAN": {
+      "train_slice": [
+        0,
+        1668519
+      ],
+      "validation_slice": null,
+      "validation_status": "SEALED_THURSDAY_UNTIL_THURSDAY_TARGET_FOLD_MODELS_AND_THRESHOLDS_ARE_FROZEN",
+      "target_predictors_materialized": false
+    }
+  },
+  "fit_readiness": {
+    "INFILTRATION": {
+      "train_features_ready": true,
+      "validation_features_ready": true,
+      "fit_authorized_after_remote_freeze": true,
+      "threshold_selection_authorized_after_remote_freeze": true
+    },
+    "WEB_ATTACK": {
+      "train_features_ready": true,
+      "validation_features_ready": true,
+      "fit_authorized_after_remote_freeze": true,
+      "threshold_selection_authorized_after_remote_freeze": true
+    },
+    "BOT": {
+      "train_features_ready": true,
+      "validation_features_ready": false,
+      "fit_authorized_after_remote_freeze": true,
+      "threshold_selection_authorized": false
+    },
+    "DDOS": {
+      "train_features_ready": true,
+      "validation_features_ready": false,
+      "fit_authorized_after_remote_freeze": true,
+      "threshold_selection_authorized": false
+    },
+    "PORT_SCAN": {
+      "train_features_ready": true,
+      "validation_features_ready": false,
+      "fit_authorized_after_remote_freeze": true,
+      "threshold_selection_authorized": false
+    }
+  },
+  "target_predictor_matrix_count": 0
+}

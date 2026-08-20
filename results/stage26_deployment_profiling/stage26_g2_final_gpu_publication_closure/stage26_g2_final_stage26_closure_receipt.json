@@ -1,0 +1,43 @@
+{
+  "backend_availability": {
+    "ENS_LGBM_XGB_EQUAL": "BACKEND_UNAVAILABLE_DUE_TO_REQUIRED_LIGHTGBM_COMPONENT",
+    "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING": "GPU_NATIVE_MEASURED",
+    "FT_BALANCED_SINGLE_RESOURCE_REFERENCE": "GPU_NATIVE_MEASURED",
+    "STAGE16_CATBOOST_TUNED": "GPU_NATIVE_MEASURED",
+    "STAGE16_LIGHTGBM_TUNED": "BACKEND_UNAVAILABLE",
+    "STAGE16_XGBOOST_TUNED": "GPU_NATIVE_MEASURED",
+    "STAGE20_MASKED_CNN_V1": "GPU_NATIVE_MEASURED_WITH_B8192_RESOURCE_LIMIT_OOM",
+    "STAGE21_MASKED_VIT_V1": "GPU_NATIVE_MEASURED"
+  },
+  "cpu_closure_anchor": "304e5613627a744cbd5d369857f8ac5667a520eb",
+  "created_at_utc": "2026-08-20T10:49:44.223359+00:00",
+  "gpu_bootstrap_contract_sha256": "09dfeb386f462597d4fca76aad5676d20901017c6f8175d221d2f85e108d59b7",
+  "gpu_measurement_status": "COMPLETE_AND_DURABLE",
+  "gpu_phase_status": "COMPLETE",
+  "gpu_status_counts": {
+    "BACKEND_UNAVAILABLE": 10,
+    "PASS": 29,
+    "RESOURCE_LIMIT_OOM": 1
+  },
+  "matched_cpu1_gpu_pass_rows": 26,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "publication_package_status": "CPU_AND_GPU_COMPONENT_LEVEL_PROFILE_READY",
+  "raw_timing_observations": 3100,
+  "schema": "stage26_g2_final_gpu_publication_closure_receipt_v1",
+  "scientific_boundaries": {
+    "compact_corpus_accessed": false,
+    "complete_e2e_measurement": "UNAVAILABLE",
+    "cpu_gpu_speedup_ratio_ci": "NOT_COMPUTED",
+    "cross_group_pareto": "PROHIBITED",
+    "missing_cost_imputation": "PROHIBITED",
+    "model_conversion": false,
+    "new_gpu_inference": false,
+    "new_gpu_memory_measurement": false,
+    "new_timing": false,
+    "post_hoc_best_batch_selection": "PROHIBITED",
+    "raw_pcap_accessed": false,
+    "retraining": false
+  },
+  "scientific_parent": "79b9c23c91ef7185d35b700e6f6f84aefb54ab35",
+  "stage26_status": "COMPLETE"
+}

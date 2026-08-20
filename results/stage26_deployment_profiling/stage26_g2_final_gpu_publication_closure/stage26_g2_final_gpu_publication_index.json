@@ -1,0 +1,118 @@
+{
+  "batch1_point_estimates": [
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cpu1_median_throughput_samples_per_s": 112.60450582569108,
+      "cpu1_p95_latency_ms": 11.302716,
+      "gpu_median_throughput_samples_per_s": 184.92539499660964,
+      "gpu_p95_latency_ms": 5.821576149999999,
+      "p95_latency_speedup_cpu_over_gpu": 1.9415216272658395,
+      "target_id": "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "throughput_ratio_gpu_over_cpu": 1.6422557307153363
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cpu1_median_throughput_samples_per_s": 580.4252995555269,
+      "cpu1_p95_latency_ms": 2.28030105,
+      "gpu_median_throughput_samples_per_s": 808.6061612385726,
+      "gpu_p95_latency_ms": 1.44409055,
+      "p95_latency_speedup_cpu_over_gpu": 1.579056832689612,
+      "target_id": "FT_BALANCED_SINGLE_RESOURCE_REFERENCE",
+      "throughput_ratio_gpu_over_cpu": 1.3931270085190637
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cpu1_median_throughput_samples_per_s": 4868.080746724058,
+      "cpu1_p95_latency_ms": 0.2391954999999999,
+      "gpu_median_throughput_samples_per_s": 729.8654875122697,
+      "gpu_p95_latency_ms": 1.47844135,
+      "p95_latency_speedup_cpu_over_gpu": 0.16178896782073898,
+      "target_id": "STAGE16_CATBOOST_TUNED",
+      "throughput_ratio_gpu_over_cpu": 0.1499287964776319
+    },
+    {
+      "comparison_group": "GROUP_A_DUPSAFE70",
+      "cpu1_median_throughput_samples_per_s": 2274.459048084583,
+      "cpu1_p95_latency_ms": 0.5937109499999996,
+      "gpu_median_throughput_samples_per_s": 585.0197346144234,
+      "gpu_p95_latency_ms": 2.2911625,
+      "p95_latency_speedup_cpu_over_gpu": 0.25913087788404343,
+      "target_id": "STAGE16_XGBOOST_TUNED",
+      "throughput_ratio_gpu_over_cpu": 0.25721269200564106
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "cpu1_median_throughput_samples_per_s": 132.03665745731684,
+      "cpu1_p95_latency_ms": 9.532039499999998,
+      "gpu_median_throughput_samples_per_s": 1263.0907269750303,
+      "gpu_p95_latency_ms": 0.8778458999999998,
+      "p95_latency_speedup_cpu_over_gpu": 10.858442808697973,
+      "target_id": "STAGE20_MASKED_CNN_V1",
+      "throughput_ratio_gpu_over_cpu": 9.566212529905542
+    },
+    {
+      "comparison_group": "GROUP_B_PACKET_IMAGE",
+      "cpu1_median_throughput_samples_per_s": 521.4145194484133,
+      "cpu1_p95_latency_ms": 2.1051985,
+      "gpu_median_throughput_samples_per_s": 545.358416401908,
+      "gpu_p95_latency_ms": 2.0079754,
+      "p95_latency_speedup_cpu_over_gpu": 1.0484184716605593,
+      "target_id": "STAGE21_MASKED_VIT_V1",
+      "throughput_ratio_gpu_over_cpu": 1.0459210399028092
+    }
+  ],
+  "cpu_closure_anchor": "304e5613627a744cbd5d369857f8ac5667a520eb",
+  "created_at_utc": "2026-08-20T10:49:44.223359+00:00",
+  "figures": [
+    {
+      "claim_boundary": "DESCRIPTIVE_POINT_ESTIMATE_SPEEDUP_ONLY__NO_RATIO_CI__GROUPS_SEPARATE",
+      "files": [
+        "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_CPU1_GPU_P95_SPEEDUP.png",
+        "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_CPU1_GPU_P95_SPEEDUP.pdf"
+      ],
+      "id": "F26_CPU1_GPU_P95_SPEEDUP"
+    },
+    {
+      "claim_boundary": "GPU_PROCESS_MEMORY_COMPONENT_ONLY__NONPASS_NOT_IMPUTED",
+      "files": [
+        "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_GPU_DELTA_PEAK_MEMORY.png",
+        "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/F26_GPU_DELTA_PEAK_MEMORY.pdf"
+      ],
+      "id": "F26_GPU_DELTA_PEAK_MEMORY"
+    }
+  ],
+  "gpu_bootstrap_contract_sha256": "09dfeb386f462597d4fca76aad5676d20901017c6f8175d221d2f85e108d59b7",
+  "gpu_status_counts": {
+    "BACKEND_UNAVAILABLE": 10,
+    "PASS": 29,
+    "RESOURCE_LIMIT_OOM": 1
+  },
+  "matched_cpu1_gpu_pass_rows": 26,
+  "measurement_protocol_sha256": "d79cddec0cc353ed0e02031134ebdf14dffbc3de73ffd1f1e1feff061d08c625",
+  "new_measurement_executed": false,
+  "schema": "stage26_g2_final_gpu_publication_closure_index_v1",
+  "scientific_parent": "79b9c23c91ef7185d35b700e6f6f84aefb54ab35",
+  "source_policy": "DURABLE_CPU_8D3_TABLE_PLUS_DURABLE_GPU_G1_PACKAGE_ONLY",
+  "tables": [
+    {
+      "id": "T26_GPU_WARM_INFERENCE_MEMORY",
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_GPU_WARM_INFERENCE_MEMORY.csv",
+      "rows": 40
+    },
+    {
+      "id": "T26_CPU1_GPU_MATCHED_COMPARISON",
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_CPU1_GPU_MATCHED_COMPARISON.csv",
+      "rows": 26
+    },
+    {
+      "id": "T26_GPU_BACKEND_RESOURCE_STATUS",
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_GPU_BACKEND_RESOURCE_STATUS.csv",
+      "rows": 8
+    },
+    {
+      "id": "T26_CPU1_GPU_BATCH1_ANCHOR",
+      "path": "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/T26_CPU1_GPU_BATCH1_ANCHOR.csv",
+      "rows": 6
+    }
+  ]
+}

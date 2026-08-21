@@ -1,0 +1,83 @@
+{
+  "stage": "Stage28-1C",
+  "type": "MODEL_INPUT_IDENTITY_AND_COMPONENT_BINDING_FREEZE",
+  "created_at_utc": "2026-08-21T19:01:57.480528+00:00",
+  "parent_commit": "ba011ec01f1399939111b24664ebd5d66c630f95",
+  "status": "FROZEN_BEFORE_FIRST_STAGE28_MODEL_FIT",
+  "execution_manifest": {
+    "path": "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest.csv",
+    "sha256": "47e7ffbf357fee3d86830282ae0e69663f84849971e3caeb151168e9bb50b505",
+    "components": 120,
+    "scientific_evaluation_cells": 110,
+    "existing_reused": 12,
+    "new_fit_budget": 108,
+    "new_fits_consumed": 0,
+    "new_fits_remaining": 108,
+    "compute": "CPU",
+    "gpu_authorized": false
+  },
+  "model_input_contracts": {
+    "document": "stage28_model_input_contracts.json",
+    "document_sha256": "c53eeed1fc0d3c29c6d29b1ec221ca75d9f46635b16ecce1f548ab65a4d6f604",
+    "stage22": {
+      "contract_id": "STAGE22R_1C_BYTE_EXACT_70F_DEVELOPMENT_CACHE",
+      "contract_sha256": "975113373af098bb12b274248dfa012a536c3e6a8270d7b37dd4f3d9bf79b9f2",
+      "rows": 14412403,
+      "files": 8,
+      "byte_exact_historical_cache": true
+    },
+    "cicids2017": {
+      "contract_id": "CICIDS2017_STAGE24_FLAG_CORRECTED_STAGE27_FLOAT32_GLOBAL",
+      "contract_sha256": "6f4bf806ed3b1d0cf3520c9e95888c5279e18bbf3f3c9dc1c04fbc42f1fa9630",
+      "rows": 2830743,
+      "features": 70,
+      "dtype": "float32",
+      "logical_content_sha256": "c303a01a12657284cbc7269a34464b9f037b5a6feb9fac8d790452a504b76344",
+      "historical_stage27_monwed_float32_sha256": "fc3137b10bbb2542240df3d380286b88f6ea282aba200fd893e6445391855ccf",
+      "stage27_monwed_crosscheck": "EXACT_MATCH",
+      "all_eight_stage24_float64_hashes": "EXACT_MATCH"
+    }
+  },
+  "component_input_binding": {
+    "path": "stage28_component_input_binding.csv",
+    "rows": 120,
+    "sha256": "56fabff100c5a4c65a975f83f0c733b600c0d28fb7f8ae0c083ce05dcf8e8e3f",
+    "stage22_bound_components": 20,
+    "cicids2017_bound_components": 100
+  },
+  "runtime_recovery_provenance": {
+    "stage22_runtime_receipt": {
+      "path": "/kaggle/working/stage28_1c_b_stage22_cache_recovery_receipt.json",
+      "sha256": "b7de9d8873c8845a858839d0d26b1092bcf1afdc03eb4e90b5b081a8808d4e5a",
+      "committed_to_git": false
+    },
+    "cicids2017_runtime_receipt": {
+      "path": "/kaggle/working/stage28_1c_c_cicids2017_70f_recovery_receipt.json",
+      "sha256": "08bcb84167b43d85a7e3f1c64f50f0d26f65be1cd52a9a4993413b6189dcdd98",
+      "committed_to_git": false
+    }
+  },
+  "scientific_accounting": {
+    "stage22_raw_predictor_recomputation": 0,
+    "stage22_predictor_rows_reopened_during_recovery": 0,
+    "cicids2017_predictor_rows_reproduced_from_already_opened_stage24_population": 2830743,
+    "new_scientific_target_openings": 0,
+    "target_adaptive_choices": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "bootstrap": 0
+  },
+  "invariants": {
+    "protocol_changed": false,
+    "model_configuration_changed": false,
+    "membership_rule_changed": false,
+    "threshold_rule_changed": false,
+    "feature_mapping_changed": false,
+    "population_changed": false,
+    "fit_budget_changed": false,
+    "execution_manifest_changed": false,
+    "runtime_large_files_committed": false
+  },
+  "next_authorized_step": "Stage28-2A — begin the frozen Stage22 FULL CPU training-seed stability execution. FIT #1 may occur only after re-verifying this Stage28-1C freeze and the 120-component manifest."
+}

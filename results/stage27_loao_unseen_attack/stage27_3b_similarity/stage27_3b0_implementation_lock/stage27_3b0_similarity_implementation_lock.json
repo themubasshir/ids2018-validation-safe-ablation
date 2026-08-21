@@ -1,0 +1,235 @@
+{
+  "stage": "Stage27-3B0",
+  "status": "FROZEN_BEFORE_ANY_STAGE27_3B_DESCRIPTOR_VALUE_ACCESS",
+  "created_at_utc": "2026-08-21T05:30:56.341002+00:00",
+  "scientific_parent_commit": "17b734f778c4881d200c90967a19baf367347116",
+  "frozen_similarity_spec": {
+    "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/similarity_spec.json",
+    "sha256": "2c4feeb305f22402270cf821754af729efa605760d1682d435ce055bb6d8d952",
+    "descriptor_feature_sha256": "b378d1e13e60b55b076440a749ee3275243dd7a7a674f30bb4172293706a9aba",
+    "scientific_question": "Is unseen-family transfer descriptively associated with behavioral similarity between the held-out family and attack families represented in that fold's training set?",
+    "statistical_claim": "EXPLORATORY_DESCRIPTIVE_ASSOCIATION_ONLY",
+    "causal_claim": false,
+    "strong_correlation_inference": false
+  },
+  "descriptor_features": [
+    "Flow Duration",
+    "Tot Fwd Pkts",
+    "Tot Bwd Pkts",
+    "TotLen Fwd Pkts",
+    "TotLen Bwd Pkts",
+    "Pkt Len Mean",
+    "Pkt Len Std",
+    "Flow Byts/s",
+    "Flow Pkts/s",
+    "Down/Up Ratio",
+    "Protocol"
+  ],
+  "descriptor_source_columns": {
+    "Flow Duration": "Flow Duration",
+    "Tot Fwd Pkts": "Total Fwd Packets",
+    "Tot Bwd Pkts": "Total Backward Packets",
+    "TotLen Fwd Pkts": "Total Length of Fwd Packets",
+    "TotLen Bwd Pkts": "Total Length of Bwd Packets",
+    "Pkt Len Mean": "Packet Length Mean",
+    "Pkt Len Std": "Packet Length Std",
+    "Flow Byts/s": "Flow Bytes/s",
+    "Flow Pkts/s": "Flow Packets/s",
+    "Down/Up Ratio": "Down/Up Ratio",
+    "Protocol": "Protocol"
+  },
+  "population_semantics": {
+    "training_population": "EXACT_FROZEN_CURRENT_FOLD_TRAINING_MEMBERSHIP",
+    "training_rows_include": [
+      "BENIGN",
+      "PRIMARY_STAGE27_ATTACK_FAMILIES_PRESENT_IN_FOLD_TRAINING"
+    ],
+    "training_rows_exclude": [
+      "HELDOUT_FAMILY",
+      "TARGET_ONLY_UNSEEN",
+      "OTHER_ATTACK_UNSEEN_LABEL"
+    ],
+    "heldout_centroid_population": "EXACT_FROZEN_PRIMARY_TARGET_HELDOUT_ATTACK_ROWS_ONLY",
+    "seen_family_centroids": "PRIMARY_STAGE27_ATTACK_FAMILIES_PRESENT_IN_EXACT_FOLD_TRAINING",
+    "minimum_seen_family_support_for_centroid": 1
+  },
+  "numeric_implementation": {
+    "source_parse_dtype": "float64",
+    "positive_infinity": "CONVERT_TO_NAN",
+    "negative_infinity": "CONVERT_TO_NAN",
+    "other_nonnumeric_token": "FAIL_CLOSED",
+    "training_median": "NUMPY_NANMEDIAN_PER_DESCRIPTOR_ON_EXACT_TRAINING_ROWS",
+    "missing_fill": "TRAINING_MEDIAN_PER_DESCRIPTOR",
+    "training_mean": "ARITHMETIC_MEAN_AFTER_TRAINING_MEDIAN_FILL",
+    "training_standard_deviation": "POPULATION_STANDARD_DEVIATION_DDOF_0",
+    "standard_deviation_ddof": 0,
+    "zero_standard_deviation_rule": "USE_SCALE_1.0_AND_RECORD_ZERO_VARIANCE_DESCRIPTOR",
+    "centroid_dtype": "float64",
+    "distance_dtype": "float64",
+    "euclidean_distance": "SQRT_SUM_SQUARED_STANDARDIZED_DESCRIPTOR_DIFFERENCES"
+  },
+  "label_normalization": {
+    "source_label_column": "Label",
+    "steps_in_order": [
+      "CONVERT_TO_STRING",
+      "STRIP_LEADING_TRAILING_WHITESPACE",
+      "CASEFOLD",
+      "REPLACE_U+0096_WITH_ASCII_HYPHEN",
+      "REPLACE_EN_DASH_WITH_ASCII_HYPHEN",
+      "REPLACE_EM_DASH_WITH_ASCII_HYPHEN",
+      "COLLAPSE_INTERNAL_WHITESPACE_TO_SINGLE_SPACE"
+    ],
+    "benign_literal_after_normalization": "benign",
+    "attack_mapping": {
+      "bot": "BOT",
+      "ddos": "DDOS",
+      "dos goldeneye": "DOS",
+      "dos hulk": "DOS",
+      "dos slowhttptest": "DOS",
+      "dos slowloris": "DOS",
+      "ftp-patator": "AUTH_BRUTE_FORCE",
+      "heartbleed": "TARGET_ONLY_UNSEEN",
+      "infiltration": "INFILTRATION",
+      "portscan": "PORT_SCAN",
+      "ssh-patator": "AUTH_BRUTE_FORCE",
+      "web attack - brute force": "WEB_ATTACK",
+      "web attack - sql injection": "WEB_ATTACK",
+      "web attack - xss": "WEB_ATTACK"
+    },
+    "heartbleed_policy": "TARGET_ONLY_UNSEEN",
+    "unknown_nonbenign_family_policy": "OTHER_ATTACK_UNSEEN_LABEL"
+  },
+  "nearest_seen_implementation": {
+    "distance": "EUCLIDEAN_DISTANCE",
+    "nearest_seen_distance": "MINIMUM EUCLIDEAN DISTANCE FROM HELDOUT CENTROID TO ANY ATTACK-FAMILY CENTROID PRESENT IN TRAINING",
+    "nearest_seen_family": "LEXICOGRAPHICALLY_SMALLEST_FAMILY_ON_EXACT_DISTANCE_TIE",
+    "exact_distance_tie_rule": "LEXICOGRAPHICALLY_SMALLEST_FAMILY",
+    "similarity_score": "1 / (1 + nearest_seen_distance)",
+    "benign_distance": "EUCLIDEAN_DISTANCE_TO_TRAINING_BENIGN_CENTROID"
+  },
+  "association_reporting_lock": {
+    "unit": "FAMILY_X_LEARNER_POINT_WITH_FAMILY_LEVEL_SIMILARITY_REUSED_ACROSS_THE_TWO_LEARNERS",
+    "performance_points": [
+      "UNSEEN_PRIMARY_TARGET_ROC_AUC",
+      "UNSEEN_PRIMARY_TARGET_PR_AUC",
+      "UNSEEN_PRIMARY_TARGET_PR_EXCESS"
+    ],
+    "figures": [
+      "NEAREST_SEEN_SIMILARITY_VS_UNSEEN_ROC_AUC",
+      "NEAREST_SEEN_SIMILARITY_VS_UNSEEN_PR_AUC"
+    ],
+    "formal_hypothesis_test": false,
+    "p_values": false,
+    "regression_inference": false,
+    "correlation_significance_inference": false,
+    "coefficient_reporting": "NONE_PRIMARY; FIGURE_AND_POINT_TABLE_ONLY",
+    "claim": "EXPLORATORY_DESCRIPTIVE_ASSOCIATION_ONLY"
+  },
+  "source_access_lock": {
+    "source_contract_path": "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/source_effective_population_receipt.json",
+    "source_contract_sha256": "69792afdf534ed014c1c1f95e21b90190e1461a1a6cdbfe702c0fdfc57a928b5",
+    "source_assets": [
+      {
+        "day": "Monday",
+        "basename": "Monday-WorkingHours.pcap_ISCX.csv.parquet",
+        "sha256": "dfdcef4b8670e52af54dc4f82174834365a393473e877174cca46d17b12dfd02",
+        "size_bytes": 65465382,
+        "physical_rows": 529918,
+        "effective_rows": 529918,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      },
+      {
+        "day": "Tuesday",
+        "basename": "Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+        "sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+        "size_bytes": 52701751,
+        "physical_rows": 445909,
+        "effective_rows": 445909,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      },
+      {
+        "day": "Wednesday",
+        "basename": "Wednesday-workingHours.pcap_ISCX.csv.parquet",
+        "sha256": "d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140",
+        "size_bytes": 76512727,
+        "physical_rows": 692703,
+        "effective_rows": 692703,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      },
+      {
+        "day": "Thursday",
+        "basename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+        "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+        "size_bytes": 27901448,
+        "physical_rows": 288602,
+        "effective_rows": 288602,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      },
+      {
+        "day": "Thursday",
+        "basename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+        "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+        "size_bytes": 19674280,
+        "physical_rows": 458968,
+        "effective_rows": 170366,
+        "inclusion_rule": "INCLUDE_PHYSICAL_ORDINALS_1_THROUGH_170366;EXCLUDE_FROZEN_ALL_85_COLUMN_NULL_EOF_SUFFIX_170367_THROUGH_458968"
+      },
+      {
+        "day": "Friday",
+        "basename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+        "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+        "size_bytes": 23048086,
+        "physical_rows": 225745,
+        "effective_rows": 225745,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      },
+      {
+        "day": "Friday",
+        "basename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+        "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+        "size_bytes": 18632427,
+        "physical_rows": 286467,
+        "effective_rows": 286467,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      },
+      {
+        "day": "Friday",
+        "basename": "Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+        "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+        "size_bytes": 21999571,
+        "physical_rows": 191033,
+        "effective_rows": 191033,
+        "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS"
+      }
+    ],
+    "columns_authorized_for_stage27_3b1": [
+      "Label",
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Down/Up Ratio",
+      "Protocol"
+    ],
+    "all_other_predictor_columns": "FORBIDDEN_TO_READ_IN_STAGE27_3B1",
+    "model_inference_on_descriptor_rows": "FORBIDDEN",
+    "target_opening_semantics": "DESCRIPTOR_ONLY_PREREGISTERED_ANALYSIS_DOES_NOT_SUPPLY_TARGET_MATRIX_TO_A_LEARNER"
+  },
+  "scientific_actions_completed_at_lock": {
+    "source_predictor_rows_read": 0,
+    "target_descriptor_rows_read": 0,
+    "similarity_values_computed": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "target_reopenings": 0,
+    "threshold_reselection": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "next_authorized_step_after_remote_freeze": "EXECUTE_STAGE27_3B1_EXACTLY_FROM_THIS_IMPLEMENTATION_LOCK_AND_THE_FROZEN_SIMILARITY_SPEC"
+}

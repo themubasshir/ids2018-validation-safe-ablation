@@ -1,0 +1,75 @@
+{
+  "stage": "Stage27-4A",
+  "type": "FINAL_STAGE27_SYNTHESIS_RECEIPT",
+  "created_at_utc": "2026-08-21T14:38:39.363091+00:00",
+  "scientific_parent_commit": "4195be1c4fde26f76a3426728c5dd3b12d389e82",
+  "input_artifacts": {
+    "fold_spec": {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/fold_spec.json",
+      "sha256": "37c029be97e56f8edadae45ee19add833e410cd1e489d8f7755943c62ce2104e"
+    },
+    "interpretation_matrix": {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/interpretation_matrix.json",
+      "sha256": "9348be50554e3c54283cd64a4b0ab49a6e36163b5f5fd17bf6939056ef873b78"
+    },
+    "thursday_primary_results": {
+      "path": "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/thursday_primary_target_results.json",
+      "sha256": "1d21757d5632fa5b28ea87b60d25943e5e9a8795ad26a06a97dcae64f7da5e97"
+    },
+    "friday_primary_results": {
+      "path": "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/friday_primary_target_results.json",
+      "sha256": "86b1d374e516dfbc9cefc859cae3ebfd5b1290a672fb4c83d43305f7f0a5855c"
+    },
+    "bootstrap_summary": {
+      "path": "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/bootstrap_summary.json",
+      "sha256": "855253e5a6f8331ee39c5bbdba60240fbf3c1d8262bd9818e66ad264aec17aed"
+    },
+    "similarity_results": {
+      "path": "results/stage27_loao_unseen_attack/stage27_3b_similarity/stage27_3b1_execution/family_similarity_results.json",
+      "sha256": "36d5bc89124d18efaee8b714fee7fde766ddd676e91859463b50504f98b02cb5"
+    }
+  },
+  "scope": {
+    "taxonomy_families": 7,
+    "eligible_folds": 5,
+    "structurally_ineligible_folds": 2,
+    "descriptive_only_eligible_folds": 1,
+    "family_x_learner_primary_rows": 10,
+    "operating_point_rows": 30,
+    "novelty_gap_rows": 10,
+    "similarity_family_rows": 5,
+    "bootstrap_replicates_per_family_learner": 2000
+  },
+  "high_level_outcomes_used": [
+    "SELECTIVE_FAMILY_TRANSFER",
+    "RANKING_THRESHOLD_DIVERGENCE",
+    "LEARNER_DEPENDENCE"
+  ],
+  "interpretation_guardrails": {
+    "formal_zero_day_detection_proof": false,
+    "infiltration_family_inferential_claim": false,
+    "behavioral_similarity_formal_correlation_inference": false,
+    "behavioral_similarity_causal_claim": false,
+    "raw_pr_auc_gap_primary_invariant_claim": false
+  },
+  "scientific_actions": {
+    "raw_predictor_rows_read": 0,
+    "model_loading": 0,
+    "model_fits": 0,
+    "model_refits": 0,
+    "model_inference": 0,
+    "target_reopenings": 0,
+    "threshold_selection": 0,
+    "threshold_reselection": 0,
+    "bootstrap_replicates": 0,
+    "new_formal_hypothesis_tests": 0,
+    "p_values_computed": 0,
+    "gpu_hours": 0
+  },
+  "target_opening_ledger": {
+    "consumed": 5,
+    "budget": 5,
+    "remaining": 0,
+    "reopening_authorized": false
+  }
+}

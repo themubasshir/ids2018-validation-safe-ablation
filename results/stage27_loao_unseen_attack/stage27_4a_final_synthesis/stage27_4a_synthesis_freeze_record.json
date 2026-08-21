@@ -1,0 +1,86 @@
+{
+  "stage": "Stage27-4A",
+  "status": "FINAL_STAGE27_SYNTHESIS_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "created_at_utc": "2026-08-21T14:38:39.367198+00:00",
+  "scientific_parent_commit": "4195be1c4fde26f76a3426728c5dd3b12d389e82",
+  "required_artifact_count": 10,
+  "artifact_hashes_before_freeze_record": {
+    "figures/stage27_balanced_recall_ci.png": {
+      "bytes": 110354,
+      "sha256": "441b3adc5f357c8d5b1ac1d6ce5fd3bd449fe9fdbaeea3a1c944a965b7b1e2b6"
+    },
+    "figures/stage27_primary_pr_auc_ci.png": {
+      "bytes": 96155,
+      "sha256": "3528a3f2854f2d40dc1e2c23c20f14fb8d3b9edb6870d32088504e23b02dfba8"
+    },
+    "figures/stage27_primary_roc_auc_ci.png": {
+      "bytes": 101850,
+      "sha256": "0e3659c1abb3a5ec9cb27af3e702f734f3c00266d695a672408c3d426e746152"
+    },
+    "stage27_final_novelty_gaps.csv": {
+      "bytes": 2651,
+      "sha256": "91c80319186fd3bbfc382e58cfc60e58fc75d23db15408564fd35c05d4fb316c"
+    },
+    "stage27_final_operating_points.csv": {
+      "bytes": 6574,
+      "sha256": "664a5aaaff718f20bf6d619ae1dd4871a07a37c81a1631590423ea0ae07240f4"
+    },
+    "stage27_final_primary_metrics.csv": {
+      "bytes": 3210,
+      "sha256": "42ea04b3f21e6026d5d69c8d5b59aa1edd2b57e94c42da3b9f70587349704634"
+    },
+    "stage27_final_similarity.csv": {
+      "bytes": 841,
+      "sha256": "8c110b4f1d6317d2a2125b4f24bfb8325cdeb699ce763d268d91f3bad6acc8d3"
+    },
+    "stage27_synthesis.md": {
+      "bytes": 6201,
+      "sha256": "50b44ce0740816a51464179817fb0de5111cbe942e2c18c52df8d41d48f194fb"
+    },
+    "stage27_synthesis_receipt.json": {
+      "bytes": 2863,
+      "sha256": "55a67c1173d8bb3ffe2b2200542c382296459ae24b3b96fc0767abb6cb01bd3f"
+    }
+  },
+  "scientific_actions_completed": {
+    "raw_predictor_rows_read": 0,
+    "model_loading": 0,
+    "model_fits": 0,
+    "model_refits": 0,
+    "model_inference": 0,
+    "target_reopenings": 0,
+    "threshold_selection": 0,
+    "threshold_reselection": 0,
+    "bootstrap_replicates": 0,
+    "new_formal_hypothesis_tests": 0,
+    "p_values_computed": 0,
+    "gpu_hours": 0
+  },
+  "target_opening_ledger": {
+    "consumed": 5,
+    "budget": 5,
+    "remaining": 0,
+    "reopening_authorized": false
+  },
+  "final_scope": {
+    "taxonomy_families": 7,
+    "eligible_folds": 5,
+    "structurally_ineligible_folds": 2,
+    "descriptive_only_eligible_folds": 1,
+    "family_x_learner_primary_rows": 10,
+    "operating_point_rows": 30,
+    "novelty_gap_rows": 10,
+    "similarity_family_rows": 5,
+    "bootstrap_replicates_per_family_learner": 2000
+  },
+  "final_high_level_outcomes": [
+    "SELECTIVE_FAMILY_TRANSFER",
+    "RANKING_THRESHOLD_DIVERGENCE",
+    "LEARNER_DEPENDENCE"
+  ],
+  "stage27_execution_complete": true,
+  "additional_model_fit_authorized": false,
+  "target_reopening_authorized": false,
+  "threshold_reselection_authorized": false,
+  "next_authorized_step_after_remote_verification": "USE THE REMOTELY FROZEN STAGE27 SYNTHESIS FOR PAPER RESULTS/DISCUSSION, FIGURE SELECTION, AND MANUSCRIPT INTEGRATION. NO FURTHER STAGE27 TARGET OR MODEL COMPUTATION."
+}

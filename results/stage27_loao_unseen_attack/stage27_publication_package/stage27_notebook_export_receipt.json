@@ -1,0 +1,54 @@
+{
+  "acquisition": {
+    "input_cells": 12,
+    "limitations": [
+      "original cell outputs are not recoverable from input history",
+      "unexecuted cells are not recoverable from input history",
+      "markdown-only cells are not recoverable unless executed as source"
+    ],
+    "mode": "RECONSTRUCTED_FROM_IPYTHON_INPUT_HISTORY",
+    "stage27_occurrences": 521
+  },
+  "git_operations": {
+    "commit": false,
+    "push": false
+  },
+  "notebook": {
+    "bytes": 377986,
+    "cells": {
+      "code": 12,
+      "code_with_outputs": 0,
+      "executed_code": 12,
+      "markdown": 0,
+      "raw": 0,
+      "total": 12
+    },
+    "path": "scripts/stage27/stage27_loao_unseen_attack.ipynb",
+    "sha256": "cc9387c8c41f70a6e38cef133b6230bda9b5aae20af6c13dc710c545754dad3b",
+    "stage27_source_occurrences": 521
+  },
+  "publication_closeout_parent": "3407ff3954abae9b0c8bfdaa14b704a05f31affe",
+  "python_export": {
+    "all_code_cell_sources_preserved": true,
+    "bytes": 275582,
+    "path": "scripts/stage27/stage27_loao_unseen_attack.py",
+    "sha256": "f25967bbbd463db3942037de02cfa35f2c02d79f94aeaa408615a7b1bd90e7df"
+  },
+  "repository": "themubasshir/ids2018-validation-safe-ablation",
+  "science_operations": {
+    "bootstrap_recomputation": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "new_formal_statistical_tests": 0,
+    "target_reopenings": 0,
+    "threshold_reselection": 0
+  },
+  "scientific_parent": "0e1439565aedc7da9b7ca1207262e9061422bc22",
+  "scientific_status": "CLOSED",
+  "secret_scan": {
+    "recognized_token_patterns": 0,
+    "status": "PASS"
+  },
+  "stage": "STAGE27-PUB3A",
+  "timestamp_utc": "2026-08-21T15:31:21.414772+00:00"
+}

@@ -152,3 +152,82 @@ claim-to-artifact consistency review across the already-frozen
 experimental stages.
 
 No further Stage27 scientific computation is authorized.
+
+## Post-Closeout Stage27 Notebook Reproducibility Addendum
+
+After the Stage27 manuscript-integration closeout, the executed source
+of the Stage27 Kaggle workflow was preserved as an additional
+reproducibility artifact.
+
+### Export Provenance
+
+Acquisition mode:
+
+`RECONSTRUCTED_FROM_IPYTHON_INPUT_HISTORY`
+
+The Kaggle runtime did not expose the original live notebook document
+through an exact notebook-file or Jupyter Contents API snapshot.
+Consequently, the repository notebook is an executed-source
+reconstruction rather than a byte-identical copy of the original
+Kaggle `.ipynb`.
+
+The reconstruction preserves:
+
+- all 12 executed code-cell sources;
+- execution ordering;
+- Stage27 scientific and publication source executed in this kernel;
+- 521 Stage27 source references;
+- the complete reconstructed source in both `.ipynb` and `.py` form.
+
+The reconstruction does not preserve:
+
+- original cell outputs;
+- unexecuted notebook cells;
+- notebook-only markdown that was never present in executable history;
+- the original Kaggle notebook user-interface metadata.
+
+These limitations concern notebook-container provenance only. They do
+not reopen or modify any Stage27 scientific result, because all
+scientific outputs remain independently frozen by the Stage27 result
+artifacts, receipts, source hashes, and the scientific freeze commit
+`0e1439565aedc7da9b7ca1207262e9061422bc22`.
+
+### Reproducibility Artifacts
+
+| Artifact | SHA256 |
+|---|---|
+| `scripts/stage27/stage27_loao_unseen_attack.ipynb` | `cc9387c8c41f70a6e38cef133b6230bda9b5aae20af6c13dc710c545754dad3b` |
+| `scripts/stage27/stage27_loao_unseen_attack.py` | `f25967bbbd463db3942037de02cfa35f2c02d79f94aeaa408615a7b1bd90e7df` |
+| `results/stage27_loao_unseen_attack/stage27_publication_package/stage27_notebook_export_receipt.json` | `e3723b70bcef74e59647eee9c05701e5272b16d001851e8a03ca6f699bb49162` |
+
+### Scientific Content Audit
+
+Before repository commit, the reconstructed source was required to
+contain evidence from each major Stage27 scientific section:
+
+- Stage27-1 family/fold preparation;
+- Stage27-2 model execution;
+- Stage27-3 uncertainty/similarity analysis;
+- Stage27-4 final synthesis;
+- Stage27-PUB0 bootstrap;
+- Stage27-PUB1 manuscript integration.
+
+The reconstruction was also checked for the frozen Stage27 families,
+both preregistered learners, TRAIN/VALIDATION/TARGET chronology,
+bootstrap terminology, and similarity analysis.
+
+### Status
+
+The notebook export is a **reproducibility addendum**, not a new
+scientific experiment.
+
+Publication-addendum science operations:
+
+- model fitting: 0
+- model inference: 0
+- target reopenings: 0
+- threshold reselections: 0
+- bootstrap recomputations: 0
+- new formal statistical tests: 0
+
+Stage27 remains scientifically closed.

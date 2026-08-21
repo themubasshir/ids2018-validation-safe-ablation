@@ -1,0 +1,71 @@
+{
+  "stage": "Stage28-0A",
+  "supersedes_for_execution": "stage28_0_protocol_lock/fit_budget.json",
+  "stage22_full_seed_stability": {
+    "scientific_unit": "ENS_LGBM_XGB_EQUAL",
+    "cells": [
+      "RANDOM_NATURAL",
+      "CHRONOLOGICAL_NATURAL"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "total_component_realizations": 20,
+    "reused": [
+      {
+        "cell": "RANDOM_NATURAL",
+        "learner": "LIGHTGBM",
+        "seed": 42,
+        "backend": "cpu"
+      },
+      {
+        "cell": "CHRONOLOGICAL_NATURAL",
+        "learner": "LIGHTGBM",
+        "seed": 42,
+        "backend": "cpu"
+      }
+    ],
+    "historical_not_reused": [
+      {
+        "cell": "RANDOM_NATURAL",
+        "learner": "XGBOOST",
+        "seed": 42,
+        "historical_backend": "cuda",
+        "reason": "BACKEND_MISMATCH_WITH_STAGE28_CPU_POLICY"
+      },
+      {
+        "cell": "CHRONOLOGICAL_NATURAL",
+        "learner": "XGBOOST",
+        "seed": 42,
+        "historical_backend": "cuda",
+        "reason": "BACKEND_MISMATCH_WITH_STAGE28_CPU_POLICY"
+      }
+    ],
+    "new_fits": 18,
+    "new_fit_breakdown": {
+      "seed42_xgboost_cpu_replacements": 2,
+      "seeds43_to_46_all_components": 16
+    }
+  },
+  "stage27_chronological_loao": {
+    "total_component_realizations": 50,
+    "existing_seed42_fits_reused": 10,
+    "new_fits": 40
+  },
+  "stage28b_random_loao": {
+    "total_component_realizations": 50,
+    "existing_fits_reused": 0,
+    "new_fits": 50
+  },
+  "totals": {
+    "existing_reused": 12,
+    "new_fit_budget": 108,
+    "total_component_realizations": 120,
+    "scientific_evaluation_cells": 110
+  },
+  "hard_limit": "No more than 108 new successful scientific model fits are authorized under Stage28."
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "Stage28-0A",
+  "compute_policy": "CPU",
+  "cells": [
+    "RANDOM_NATURAL",
+    "CHRONOLOGICAL_NATURAL"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "lightgbm": {
+    "configuration": "LGBM_11",
+    "backend": "cpu",
+    "seed42": "REUSE_DURABLE_PARENT_CPU_MODEL",
+    "seeds43_to_46": "NEW_CPU_FIT"
+  },
+  "xgboost": {
+    "configuration": "XGB_11",
+    "backend": "cpu",
+    "seed42": "NEW_CPU_REFIT_REQUIRED",
+    "seeds43_to_46": "NEW_CPU_FIT",
+    "historical_seed42_cuda_model": "NOT_USED_IN_STAGE28_SEED_VARIANCE"
+  },
+  "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+  "algorithmic_hyperparameters_changed": false,
+  "seed42_parent_result_usage": {
+    "historical_stage22_result": "RETAIN_FOR_PARENT_STAGE_REPORTING",
+    "stage28_seed_statistics": "USE_CPU_NORMALIZED_STAGE28_SEED42_ENSEMBLE",
+    "do_not_substitute_parent_cuda_xgb_result": true
+  }
+}

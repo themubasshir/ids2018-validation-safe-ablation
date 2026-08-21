@@ -1,0 +1,44 @@
+{
+  "stage": "Stage28-0A",
+  "status": "PRE_EXECUTION_AMENDMENT_FROZEN",
+  "timestamp_utc": "2026-08-21T16:08:55.149192+00:00",
+  "base_commit": "55a70a6e8c111339f087b8f5a0f20dc63f8adb13",
+  "effective_fit_budget": {
+    "reused": 12,
+    "new": 108,
+    "total": 120
+  },
+  "scientific_operations_consumed": {
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_openings": 0
+  },
+  "amendments": [
+    "STAGE22_SEED42_XGB_CPU_REFIT",
+    "STAGE28B_PRIMARY_SEVEN_ATTACK_POOL_EXPLICIT",
+    "LOAO_CLASS_WEIGHT_INHERITANCE_EXPLICIT"
+  ],
+  "unchanged": [
+    "SEED_SET",
+    "FEATURE_REPRESENTATION",
+    "MODEL_HYPERPARAMETERS",
+    "LEARNERS",
+    "ENSEMBLE_WEIGHTS",
+    "ELIGIBLE_FAMILIES",
+    "TARGET_BENIGN_FRACTION",
+    "RANDOM_MEMBERSHIP_SEED",
+    "THRESHOLD_RULES",
+    "METRICS",
+    "SUPPORT_THRESHOLD",
+    "INTERPRETATION_RULES"
+  ],
+  "file_sha256": {
+    "effective_fit_budget.json": "30c14fefc3af874cf00928107e03b2c32200ffff8d082dada965ec3b1b1ead14",
+    "effective_loao_class_weight_policy.json": "2f0730ae8ce3638404d2eb1a4517788ffb7fc4c69710cf8c97916756f56b9090",
+    "effective_random_loao_population_spec.json": "de52470a76fc06e72998b0e124bc12facece441cb6942e48f75be69c174e35b0",
+    "effective_stage22_execution_policy.json": "2b69feb3829c88ea2ac1b230de77a1693aa5fed3c69315cbb6d492d1b1259554",
+    "stage28_0a_amendment.json": "57929b0ef8d7e06a6788ce161fa9d1ed0be779df07870db70837f7b66851c5a5"
+  },
+  "next_authorized_step": "Stage28-1 membership reconstruction/materialization and execution-manifest freeze before first new fit."
+}

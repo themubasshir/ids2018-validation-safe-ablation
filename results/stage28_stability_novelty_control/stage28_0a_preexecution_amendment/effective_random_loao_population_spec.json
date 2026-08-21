@@ -1,0 +1,57 @@
+{
+  "stage": "Stage28-0A",
+  "base_spec": "stage28_0_protocol_lock/random_loao_split_spec.json",
+  "eligible_held_out_families": [
+    "BOT",
+    "DDOS",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "primary_seven_attack_families": [
+    "BOT",
+    "DDOS",
+    "DOS",
+    "AUTH_BRUTE_FORCE",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "per_held_out_family": {
+    "train_validation_attack_population": "PRIMARY_SEVEN_ATTACK_FAMILIES_EXCLUDING_HELD_OUT_FAMILY",
+    "excluded_attack_categories": [
+      "TARGET_ONLY_UNSEEN",
+      "OTHER_ATTACK_UNSEEN_LABEL"
+    ],
+    "held_out_family": {
+      "train_count": 0,
+      "validation_count": 0,
+      "all_attack_rows_assigned_to_primary_target": true
+    },
+    "target_only_unseen": {
+      "train_count": 0,
+      "validation_count": 0,
+      "primary_target_count": 0
+    },
+    "other_attack_unseen_label": {
+      "train_count": 0,
+      "validation_count": 0,
+      "primary_target_count": 0
+    },
+    "primary_target": "HELD_OUT_FAMILY_ATTACKS_PLUS_FROZEN_RANDOM_BENIGN_TARGET"
+  },
+  "benign_target_split": {
+    "fraction": 0.2,
+    "random_state": 42,
+    "shuffle": true,
+    "stratify": null
+  },
+  "development_train_validation_split": {
+    "validation_fraction": 0.2,
+    "random_state": 42,
+    "shuffle": true,
+    "stratify": "BINARY_LABEL"
+  },
+  "membership_fixed_across_training_seeds": true,
+  "interpretation": "Random LOAO control; not a deployment estimate."
+}

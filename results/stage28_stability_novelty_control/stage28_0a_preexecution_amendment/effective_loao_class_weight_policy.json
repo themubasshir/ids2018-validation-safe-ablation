@@ -1,0 +1,17 @@
+{
+  "stage": "Stage28-0A",
+  "source": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/class_weight_policy.json",
+  "applies_to": [
+    "STAGE28A_STAGE27_CHRONOLOGICAL_LOAO",
+    "STAGE28B_RANDOM_LOAO"
+  ],
+  "negative_class_weight": 1.0,
+  "positive_class_weight": "train_benign / train_attack",
+  "implementation": "Construct fit-time sample_weight with BENIGN=1.0 and ATTACK=(train_benign/train_attack) for both XGBoost and LightGBM.",
+  "stage28a_chronological": "Same frozen Stage27 memberships therefore same per-fold class-weight values as Stage27.",
+  "stage28b_random": "Recompute once from each final frozen random-LOAO TRAIN membership before fitting and reuse the result for all five model seeds of that family.",
+  "validation_rows_used": 0,
+  "target_rows_used": 0,
+  "weight_search": false,
+  "single_class_train": "HARD_SCIENTIFIC_INFEASIBILITY_BEFORE_MODEL_FIT"
+}

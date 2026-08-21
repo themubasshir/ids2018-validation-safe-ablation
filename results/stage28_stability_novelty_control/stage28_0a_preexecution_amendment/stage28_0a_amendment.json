@@ -1,0 +1,67 @@
+{
+  "stage": "Stage28-0A",
+  "type": "PRE_RESULT_MINIMAL_EXECUTION_SEMANTICS_AMENDMENT",
+  "timestamp_utc": "2026-08-21T16:08:55.149192+00:00",
+  "base_stage28_freeze_commit": "55a70a6e8c111339f087b8f5a0f20dc63f8adb13",
+  "status": "FROZEN_BEFORE_ANY_STAGE28_MODEL_FIT",
+  "reasons": {
+    "stage22_seed_backend_confound": {
+      "problem": "Stage28-0 required CPU execution for new Stage28 realizations while proposing reuse of Stage22 seed42 XGBoost artifacts that were executed on CUDA.",
+      "scientific_risk": "The seed42 versus seeds43-46 comparison would confound training seed with execution backend.",
+      "observed_parent_backends": {
+        "RANDOM_NATURAL": {
+          "LIGHTGBM": "cpu",
+          "XGBOOST": "cuda"
+        },
+        "CHRONOLOGICAL_NATURAL": {
+          "LIGHTGBM": "cpu",
+          "XGBOOST": "cuda"
+        }
+      },
+      "resolution": "Reuse the two seed42 LightGBM CPU models. Do NOT use the two inherited seed42 CUDA XGBoost models in Stage28 seed-stability statistics. Refit exactly those two XGB_11 seed42 components on CPU under the frozen Stage28 compute policy.",
+      "parent_stage22_cuda_models": "RETAINED_AS_HISTORICAL_PARENT_ARTIFACTS_BUT_EXCLUDED_FROM_STAGE28_SEED_STATISTICS",
+      "stage28_seed42_ensemble": "REUSED_SEED42_CPU_LIGHTGBM_PLUS_NEW_SEED42_CPU_XGBOOST_EQUAL_WEIGHT",
+      "algorithmic_hyperparameter_change": false,
+      "seed_change": false,
+      "feature_change": false,
+      "split_change": false,
+      "threshold_rule_change": false
+    },
+    "random_loao_attack_population_ambiguity": {
+      "problem": "The Stage28-0 phrase 'ALL_NON_HELD_OUT_ATTACK_ROWS' could be read to include TARGET_ONLY_UNSEEN rows.",
+      "observed_target_only_unseen_rows": 11,
+      "resolution": "For Stage28B TRAIN and VALIDATION, attack rows are restricted to the Stage27 PRIMARY SEVEN attack-family taxonomy excluding the currently held-out family.",
+      "target_only_unseen_train_count": 0,
+      "target_only_unseen_validation_count": 0,
+      "other_unseen_train_count": 0,
+      "other_unseen_validation_count": 0,
+      "held_out_family_train_count": 0,
+      "held_out_family_validation_count": 0,
+      "primary_target": "HELD_OUT_FAMILY_ATTACK_ROWS_PLUS_FROZEN_RANDOM_TARGET_BENIGN_ROWS_ONLY"
+    }
+  },
+  "fit_budget_revision": {
+    "before": {
+      "existing_reused": 14,
+      "new_fits": 106,
+      "total_components": 120
+    },
+    "after": {
+      "existing_reused": 12,
+      "new_fits": 108,
+      "total_components": 120
+    },
+    "net_new_fit_change": 2,
+    "reason": "Exactly two Stage22 seed42 XGBoost CPU replacement fits are newly authorized."
+  },
+  "science_operations_before_amendment": {
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_openings": 0,
+    "bootstrap_recomputation": 0,
+    "formal_tests": 0
+  },
+  "base_protocol_immutability": "Stage28-0 files are not modified. This amendment is additive and controls execution whenever it clarifies or supersedes conflicting execution semantics in Stage28-0.",
+  "post_result_adaptation": false
+}

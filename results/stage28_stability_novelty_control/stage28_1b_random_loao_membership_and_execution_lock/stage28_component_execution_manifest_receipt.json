@@ -1,0 +1,57 @@
+{
+  "stage": "Stage28-1B",
+  "type": "COMPLETE_COMPONENT_EXECUTION_MANIFEST_RECEIPT",
+  "created_at_utc": "2026-08-21T17:57:18.799258+00:00",
+  "scientific_parent_commit": "e7ad0283cbe1290a1a1b8ecf3c495ae142e6247b",
+  "manifest": {
+    "path": "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest.csv",
+    "rows": 120,
+    "sha256": "47e7ffbf357fee3d86830282ae0e69663f84849971e3caeb151168e9bb50b505",
+    "component_realizations": 120,
+    "scientific_evaluation_cells": 110
+  },
+  "budget": {
+    "existing_reused": 12,
+    "new_fit_budget": 108,
+    "new_fits_consumed_before_freeze": 0,
+    "new_fits_remaining": 108,
+    "hard_limit": 108
+  },
+  "breakdown": {
+    "stage22_full": {
+      "components": 20,
+      "reused": 2,
+      "new": 18,
+      "scientific_evaluation_cells": 10
+    },
+    "stage27_chronology_loao": {
+      "components": 50,
+      "reused": 10,
+      "new": 40,
+      "scientific_evaluation_cells": 50
+    },
+    "stage28b_random_loao": {
+      "components": 50,
+      "reused": 0,
+      "new": 50,
+      "scientific_evaluation_cells": 50
+    }
+  },
+  "seed_policy": {
+    "model_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "membership_seed": 42,
+    "random_loao_membership_fixed_across_model_seeds": true,
+    "only_model_parameter_changed_across_seeds": "random_state"
+  },
+  "compute": {
+    "primary_backend": "CPU",
+    "gpu_authorized": false
+  },
+  "status": "FROZEN_BEFORE_FIRST_MODEL_FIT"
+}

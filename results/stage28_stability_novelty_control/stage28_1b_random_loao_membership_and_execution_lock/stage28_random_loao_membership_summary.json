@@ -1,0 +1,81 @@
+{
+  "stage": "Stage28-1B",
+  "arm": "28B_RANDOM_SPLIT_LOAO_CONTROL",
+  "created_at_utc": "2026-08-21T17:57:18.800166+00:00",
+  "scientific_parent_commit": "e7ad0283cbe1290a1a1b8ecf3c495ae142e6247b",
+  "membership_seed": 42,
+  "model_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "membership_fixed_across_model_seeds": true,
+  "shared_target_benign": {
+    "rows": 454620,
+    "all_benign": 2273097,
+    "operator_return_order_sha256": "b6fb6bd3ba68eebd165773d0ad914cd9426728213596f9c7ff7c341229512479",
+    "canonical_idx_sha256": "0052318a8b2d08eada78347ac3bb3866c41fce1c342d177336568791613c75e8",
+    "membership_bitset_sha256": "f4954ce9a1a196893684575034f03c43a53f70fa0220876871015e1a2dceddaf"
+  },
+  "folds": {
+    "BOT": {
+      "train_rows": 1899316,
+      "validation_rows": 474830,
+      "target_rows": 456586,
+      "target_positive": 1966,
+      "positive_class_weight": 3.2725904596938373,
+      "train_ordered_sha256": "ac793a7df73a7d9b07b266b63df37794317be1a6169453f2011330dd8f8762ea",
+      "validation_ordered_sha256": "ba05e5da8b819ff5709399c79f639b5c804b34a49a3d11d6db12aa48aae63ec3",
+      "target_ordered_sha256": "e55dd2f4e18c23ef11b81ecfea7d049d2136a7f8278b82defcda4bb22a817cac",
+      "leakage_status": "PASS"
+    },
+    "DDOS": {
+      "train_rows": 1798468,
+      "validation_rows": 449617,
+      "target_rows": 582647,
+      "target_positive": 128027,
+      "positive_class_weight": 4.232881176422665,
+      "train_ordered_sha256": "ee1b51043e2a3110ae8e87b8e27edae1297590a97b5e0c70ec00f832c12450da",
+      "validation_ordered_sha256": "127f736f5a57ee7ae73849250865e3c0ee1ac5e9a3e54e8e765331cb79b66b7a",
+      "target_ordered_sha256": "be911114cb8d820328adcc12c8bfaf8656e69ec1a6a54e76de24163b49c63784",
+      "leakage_status": "PASS"
+    },
+    "INFILTRATION": {
+      "train_rows": 1900860,
+      "validation_rows": 475216,
+      "target_rows": 454656,
+      "target_positive": 36,
+      "positive_class_weight": 3.2612631394887455,
+      "train_ordered_sha256": "d08f05a87ba1b421143c1b8814c5d3188da276910ad0a5a2e1a5dcce4e89b268",
+      "validation_ordered_sha256": "927facbe3ffae4a7ac242815aa41f1418c0187b3dd911b073a645cd34d2ea3bf",
+      "target_ordered_sha256": "c1c05cbc9788d4bb53d392056a0aadfa6f52715c16fe038f7066d74cd1a88a5e",
+      "leakage_status": "PASS"
+    },
+    "PORT_SCAN": {
+      "train_rows": 1773745,
+      "validation_rows": 443437,
+      "target_rows": 613550,
+      "target_positive": 158930,
+      "positive_class_weight": 4.560956722388734,
+      "train_ordered_sha256": "f86d8fbeb6afd1cc0b026ce6e84ae40a66e1567631978af4d8265ea5f30dcb34",
+      "validation_ordered_sha256": "63d511a361bf37291c9320e47264ef681a702a7a8bf4f2bbd94b43cf997e8367",
+      "target_ordered_sha256": "f24e4281ad653702b874573ba7f8d0c5dc66a8fb4f290b3fe6a41933e75c9c75",
+      "leakage_status": "PASS"
+    },
+    "WEB_ATTACK": {
+      "train_rows": 1899145,
+      "validation_rows": 474787,
+      "target_rows": 456800,
+      "target_positive": 2180,
+      "positive_class_weight": 3.2738498168168437,
+      "train_ordered_sha256": "5c24d8cc2535db1012965c3a6ccba3574753f45e4a365c041f920d2981366587",
+      "validation_ordered_sha256": "36e17822323b6ccc02116b20eb47e40f35c4e610229db42a828aa5f2c185ce10",
+      "target_ordered_sha256": "da5685d219be458533d2b879ba4bb4689f5a54481a30a1d67f0158d84ee8576d",
+      "leakage_status": "PASS"
+    }
+  },
+  "interpretation_limit": "Random-evaluation control only; not a deployment-realistic estimate.",
+  "status": "FROZEN_BEFORE_FIRST_MODEL_FIT"
+}

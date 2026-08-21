@@ -1,0 +1,122 @@
+{
+  "stage": "Stage28-1B",
+  "arm": "28B_RANDOM_SPLIT_LOAO_CONTROL",
+  "type": "RANDOM_LOAO_MEMBERSHIP_RECEIPT",
+  "created_at_utc": "2026-08-21T17:57:17.475314+00:00",
+  "scientific_parent_commit": "e7ad0283cbe1290a1a1b8ecf3c495ae142e6247b",
+  "held_out_family": "PORT_SCAN",
+  "membership_seed": 42,
+  "membership_fixed_across_model_seeds": true,
+  "model_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "software": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "scikit_learn": "1.6.1",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35"
+  },
+  "construction": {
+    "canonical_population_order": "STAGE27_ZERO_BASED_GLOBAL_ROW_ID_ASCENDING",
+    "shared_target_benign": {
+      "operator": "sklearn.model_selection.train_test_split",
+      "input": "ALL_BENIGN_GLOBAL_IDS_CANONICAL_ASCENDING",
+      "test_size": 0.2,
+      "shuffle": true,
+      "random_state": 42,
+      "stratify": null,
+      "role": "TARGET_BENIGN"
+    },
+    "development_population": "REMAINING_BENIGN_PLUS_PRIMARY_SEVEN_ATTACKS_EXCLUDING_HELD_OUT_FAMILY",
+    "development_input_order": "CANONICAL_GLOBAL_ROW_ID_ASCENDING",
+    "train_validation": {
+      "operator": "sklearn.model_selection.train_test_split",
+      "test_size": 0.2,
+      "shuffle": true,
+      "random_state": 42,
+      "stratify": "BINARY_LABEL",
+      "train_order": "EXACT_OPERATOR_RETURN_ORDER",
+      "validation_order": "EXACT_OPERATOR_RETURN_ORDER"
+    },
+    "primary_target": "SHARED_RANDOM_TARGET_BENIGN_PLUS_ALL_HELD_OUT_FAMILY_ATTACKS",
+    "primary_target_order": "CANONICAL_GLOBAL_ROW_ID_ASCENDING"
+  },
+  "counts": {
+    "all_benign": 2273097,
+    "target_benign": 454620,
+    "benign_development": 1818477,
+    "known_attack_development": 398705,
+    "development_rows": 2217182,
+    "train_rows": 1773745,
+    "train_benign": 1454781,
+    "train_attack": 318964,
+    "validation_rows": 443437,
+    "validation_benign": 363696,
+    "validation_attack": 79741,
+    "primary_target_rows": 613550,
+    "primary_target_benign": 454620,
+    "primary_target_heldout_attack": 158930,
+    "eligible_population_rows": 2830732,
+    "excluded_target_only_unseen": 11,
+    "excluded_other_unseen": 0
+  },
+  "leakage_audit": {
+    "heldout_train": 0,
+    "heldout_validation": 0,
+    "heldout_primary_target": 158930,
+    "known_attack_primary_target": 0,
+    "target_only_unseen_train": 0,
+    "target_only_unseen_validation": 0,
+    "target_only_unseen_primary_target": 0,
+    "other_unseen_train": 0,
+    "other_unseen_validation": 0,
+    "other_unseen_primary_target": 0,
+    "train_validation_disjoint": true,
+    "train_target_disjoint": true,
+    "validation_target_disjoint": true,
+    "eligible_population_exactly_once": true,
+    "status": "PASS"
+  },
+  "class_weight": {
+    "formula": "train_benign / train_attack",
+    "benign_weight": 1.0,
+    "attack_weight": 4.560956722388734,
+    "train_benign": 1454781,
+    "train_attack": 318964,
+    "validation_rows_used": 0,
+    "target_rows_used": 0,
+    "fixed_across_model_seeds": true
+  },
+  "hashes": {
+    "train": {
+      "ordered_global_idx_content_sha256": "f86d8fbeb6afd1cc0b026ce6e84ae40a66e1567631978af4d8265ea5f30dcb34",
+      "membership_bitset_sha256": "c41b351afdfdb535f3e0325be4c8defe15c196549d7f98b1c526bcdeafdd3f5d"
+    },
+    "validation": {
+      "ordered_global_idx_content_sha256": "63d511a361bf37291c9320e47264ef681a702a7a8bf4f2bbd94b43cf997e8367",
+      "membership_bitset_sha256": "a5b7659924e32dc5e16ef8995f050eb3d33033a2301187f4b71927cc6dc3fe63"
+    },
+    "primary_target": {
+      "ordered_global_idx_content_sha256": "f24e4281ad653702b874573ba7f8d0c5dc66a8fb4f290b3fe6a41933e75c9c75",
+      "membership_bitset_sha256": "345c371082dff6c95299c9bfb2985989e430041c781f505e1124cafbbdfaa668"
+    }
+  },
+  "runtime_paths": {
+    "train_global_idx": "/kaggle/working/stage28_1b_runtime_cache/random_loao/PORT_SCAN/train_global_idx.npy",
+    "validation_global_idx": "/kaggle/working/stage28_1b_runtime_cache/random_loao/PORT_SCAN/validation_global_idx.npy",
+    "primary_target_global_idx": "/kaggle/working/stage28_1b_runtime_cache/random_loao/PORT_SCAN/primary_target_global_idx.npy"
+  },
+  "runtime_artifacts_committed_to_git": false,
+  "scientific_operations": {
+    "predictor_values_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_predictor_openings": 0
+  },
+  "status": "FROZEN_BEFORE_FIRST_MODEL_FIT"
+}

@@ -1,0 +1,55 @@
+{
+  "stage": "Stage28-1B",
+  "type": "RANDOM_LOAO_AND_EXECUTION_PRETRAINING_FREEZE",
+  "created_at_utc": "2026-08-21T17:57:18.800668+00:00",
+  "parent_commit": "e7ad0283cbe1290a1a1b8ecf3c495ae142e6247b",
+  "status": "FROZEN_BEFORE_FIRST_STAGE28_MODEL_FIT",
+  "random_loao": {
+    "families": [
+      "BOT",
+      "DDOS",
+      "INFILTRATION",
+      "PORT_SCAN",
+      "WEB_ATTACK"
+    ],
+    "membership_seed": 42,
+    "model_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "memberships_fixed_across_model_seeds": true,
+    "shared_target_benign_rows": 454620,
+    "heldout_train_count": 0,
+    "heldout_validation_count": 0,
+    "known_attack_primary_target_count": 0,
+    "target_only_unseen_assigned_count": 0,
+    "other_unseen_assigned_count": 0,
+    "eligible_population_rows_per_fold": 2830732,
+    "leakage_audit": "PASS_ALL_FIVE_FOLDS"
+  },
+  "execution_manifest": {
+    "component_rows": 120,
+    "scientific_evaluation_cells": 110,
+    "existing_reused": 12,
+    "new_fit_budget": 108,
+    "new_fits_consumed": 0,
+    "new_fits_remaining": 108,
+    "compute": "CPU"
+  },
+  "scientific_operations": {
+    "predictor_values_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_predictor_openings": 0
+  },
+  "runtime_membership_cache": {
+    "path": "/kaggle/working/stage28_1b_runtime_cache/random_loao",
+    "committed_to_git": false,
+    "recovery_rule": "Reconstruct from the exact Stage27 global-family content identity and frozen Stage28B sklearn split operators with membership seed 42; require the membership hashes frozen by Stage28-1B."
+  },
+  "next_authorized_step": "Stage28-1C — recover/materialize and verify the frozen 70-feature model inputs required by the execution manifest, still before the first Stage28 model fit."
+}

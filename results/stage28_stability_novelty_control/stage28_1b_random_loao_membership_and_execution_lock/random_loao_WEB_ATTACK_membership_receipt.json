@@ -1,0 +1,122 @@
+{
+  "stage": "Stage28-1B",
+  "arm": "28B_RANDOM_SPLIT_LOAO_CONTROL",
+  "type": "RANDOM_LOAO_MEMBERSHIP_RECEIPT",
+  "created_at_utc": "2026-08-21T17:57:18.667430+00:00",
+  "scientific_parent_commit": "e7ad0283cbe1290a1a1b8ecf3c495ae142e6247b",
+  "held_out_family": "WEB_ATTACK",
+  "membership_seed": 42,
+  "membership_fixed_across_model_seeds": true,
+  "model_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "software": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "scikit_learn": "1.6.1",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35"
+  },
+  "construction": {
+    "canonical_population_order": "STAGE27_ZERO_BASED_GLOBAL_ROW_ID_ASCENDING",
+    "shared_target_benign": {
+      "operator": "sklearn.model_selection.train_test_split",
+      "input": "ALL_BENIGN_GLOBAL_IDS_CANONICAL_ASCENDING",
+      "test_size": 0.2,
+      "shuffle": true,
+      "random_state": 42,
+      "stratify": null,
+      "role": "TARGET_BENIGN"
+    },
+    "development_population": "REMAINING_BENIGN_PLUS_PRIMARY_SEVEN_ATTACKS_EXCLUDING_HELD_OUT_FAMILY",
+    "development_input_order": "CANONICAL_GLOBAL_ROW_ID_ASCENDING",
+    "train_validation": {
+      "operator": "sklearn.model_selection.train_test_split",
+      "test_size": 0.2,
+      "shuffle": true,
+      "random_state": 42,
+      "stratify": "BINARY_LABEL",
+      "train_order": "EXACT_OPERATOR_RETURN_ORDER",
+      "validation_order": "EXACT_OPERATOR_RETURN_ORDER"
+    },
+    "primary_target": "SHARED_RANDOM_TARGET_BENIGN_PLUS_ALL_HELD_OUT_FAMILY_ATTACKS",
+    "primary_target_order": "CANONICAL_GLOBAL_ROW_ID_ASCENDING"
+  },
+  "counts": {
+    "all_benign": 2273097,
+    "target_benign": 454620,
+    "benign_development": 1818477,
+    "known_attack_development": 555455,
+    "development_rows": 2373932,
+    "train_rows": 1899145,
+    "train_benign": 1454781,
+    "train_attack": 444364,
+    "validation_rows": 474787,
+    "validation_benign": 363696,
+    "validation_attack": 111091,
+    "primary_target_rows": 456800,
+    "primary_target_benign": 454620,
+    "primary_target_heldout_attack": 2180,
+    "eligible_population_rows": 2830732,
+    "excluded_target_only_unseen": 11,
+    "excluded_other_unseen": 0
+  },
+  "leakage_audit": {
+    "heldout_train": 0,
+    "heldout_validation": 0,
+    "heldout_primary_target": 2180,
+    "known_attack_primary_target": 0,
+    "target_only_unseen_train": 0,
+    "target_only_unseen_validation": 0,
+    "target_only_unseen_primary_target": 0,
+    "other_unseen_train": 0,
+    "other_unseen_validation": 0,
+    "other_unseen_primary_target": 0,
+    "train_validation_disjoint": true,
+    "train_target_disjoint": true,
+    "validation_target_disjoint": true,
+    "eligible_population_exactly_once": true,
+    "status": "PASS"
+  },
+  "class_weight": {
+    "formula": "train_benign / train_attack",
+    "benign_weight": 1.0,
+    "attack_weight": 3.2738498168168437,
+    "train_benign": 1454781,
+    "train_attack": 444364,
+    "validation_rows_used": 0,
+    "target_rows_used": 0,
+    "fixed_across_model_seeds": true
+  },
+  "hashes": {
+    "train": {
+      "ordered_global_idx_content_sha256": "5c24d8cc2535db1012965c3a6ccba3574753f45e4a365c041f920d2981366587",
+      "membership_bitset_sha256": "ccb97c552a1829855c072414ea384bf858229136514827329e5e34d3f66f791a"
+    },
+    "validation": {
+      "ordered_global_idx_content_sha256": "36e17822323b6ccc02116b20eb47e40f35c4e610229db42a828aa5f2c185ce10",
+      "membership_bitset_sha256": "e61af915a930796c4892967220224fe70abdbecc3f8e337612db03e07d599d35"
+    },
+    "primary_target": {
+      "ordered_global_idx_content_sha256": "da5685d219be458533d2b879ba4bb4689f5a54481a30a1d67f0158d84ee8576d",
+      "membership_bitset_sha256": "f08f68e7397b3154d8103ac377f8b3e84af7b92201a3237b204a2064d40d0930"
+    }
+  },
+  "runtime_paths": {
+    "train_global_idx": "/kaggle/working/stage28_1b_runtime_cache/random_loao/WEB_ATTACK/train_global_idx.npy",
+    "validation_global_idx": "/kaggle/working/stage28_1b_runtime_cache/random_loao/WEB_ATTACK/validation_global_idx.npy",
+    "primary_target_global_idx": "/kaggle/working/stage28_1b_runtime_cache/random_loao/WEB_ATTACK/primary_target_global_idx.npy"
+  },
+  "runtime_artifacts_committed_to_git": false,
+  "scientific_operations": {
+    "predictor_values_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_predictor_openings": 0
+  },
+  "status": "FROZEN_BEFORE_FIRST_MODEL_FIT"
+}

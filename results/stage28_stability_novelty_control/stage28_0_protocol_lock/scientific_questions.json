@@ -1,0 +1,23 @@
+{
+  "stage": "Stage28-0",
+  "stage_role": "FINAL_EXPERIMENTAL_STAGE_OF_CURRENT_MANUSCRIPT",
+  "arms": {
+    "28A": {
+      "name": "TRAINING_SEED_STABILITY",
+      "question": "Are the paper's headline temporal and unseen-family conclusions stable across independently seeded training realizations?"
+    },
+    "28B": {
+      "name": "RANDOM_SPLIT_LOAO_CONTROL",
+      "question": "How much of observed LOAO degradation remains when attack-family novelty is tested without the chronology-first separation used in Stage27?"
+    }
+  },
+  "joint_question": "Do the major conclusions survive model realization, and can attack-family novelty be distinguished more clearly from temporal distribution shift?",
+  "success_does_not_require_stability": true,
+  "optimization_stage": false,
+  "new_architectures": 0,
+  "new_hyperparameter_search": 0,
+  "new_feature_search": 0,
+  "new_threshold_rules": 0,
+  "new_taxonomy": 0,
+  "new_attack_families": 0
+}

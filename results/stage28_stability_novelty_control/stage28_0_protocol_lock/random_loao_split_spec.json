@@ -1,0 +1,86 @@
+{
+  "stage": "Stage28-0",
+  "arm": "28B",
+  "name": "RANDOM_SPLIT_LOAO_CONTROL",
+  "dataset_universe": "STAGE27_FULL_EFFECTIVE_TARGET_POPULATION_CICIDS2017",
+  "taxonomy": "INHERIT_EXACT_STAGE27_TAXONOMY",
+  "eligible_families": [
+    "BOT",
+    "DDOS",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "membership_seed": 42,
+  "membership_seed_fixed_across_model_seeds": true,
+  "canonical_input_order": "Use the exact inherited Stage27 effective-population row order. No value-based resorting, label-based resorting, or model-seed-dependent reordering is authorized before membership generation.",
+  "construction_per_held_out_family": {
+    "step_1_remove_held_out_family": {
+      "rule": "Every positive row belonging to held-out family h is excluded from TRAIN and VALIDATION and assigned to TARGET_POSITIVE.",
+      "held_out_family_train_count": 0,
+      "held_out_family_validation_count": 0
+    },
+    "step_2_random_target_benign": {
+      "population": "ALL_ELIGIBLE_BENIGN_ROWS_IN_STAGE27_EFFECTIVE_UNIVERSE",
+      "operator": "sklearn.model_selection.train_test_split",
+      "test_size": 0.2,
+      "shuffle": true,
+      "random_state": 42,
+      "stratify": null,
+      "selected_test_partition_role": "TARGET_BENIGN",
+      "remaining_partition_role": "BENIGN_DEVELOPMENT_POOL"
+    },
+    "step_3_development_pool": {
+      "population": "BENIGN_DEVELOPMENT_POOL + ALL_NON_HELD_OUT_ATTACK_ROWS",
+      "target_known_attack_rows": 0
+    },
+    "step_4_train_validation": {
+      "operator": "sklearn.model_selection.train_test_split",
+      "test_size": 0.2,
+      "shuffle": true,
+      "random_state": 42,
+      "stratify": "BINARY_LABEL",
+      "train_partition_role": "TRAIN",
+      "test_partition_role": "VALIDATION"
+    },
+    "step_5_target": {
+      "composition": [
+        "ALL_HELD_OUT_FAMILY_ATTACK_ROWS",
+        "RANDOMLY_SELECTED_TARGET_BENIGN_ROWS"
+      ],
+      "known_attack_families_in_primary_target": 0
+    }
+  },
+  "approximate_benign_geometry": {
+    "train_fraction_of_all_benign": 0.64,
+    "validation_fraction_of_all_benign": 0.16,
+    "target_fraction_of_all_benign": 0.2
+  },
+  "approximate_nonheldout_attack_geometry": {
+    "train_fraction": 0.8,
+    "validation_fraction": 0.2,
+    "target_fraction": 0.0
+  },
+  "held_out_attack_geometry": {
+    "train_fraction": 0.0,
+    "validation_fraction": 0.0,
+    "target_fraction": 1.0
+  },
+  "reason_for_fixed_membership_seed": "Stage28B is intended to compare random versus chronology-first LOAO without adding random split membership as a second varying factor across training seeds.",
+  "leakage_safeguards": {
+    "inherit_stage27_effective_population_cleaning": true,
+    "inherit_available_duplicate_controls": true,
+    "inherit_flow_identity_safeguards": true,
+    "introduce_new_session_group_definition": false,
+    "row_level_random_control": true
+  },
+  "interpretation_limit": "Stage28B is a random-evaluation control intended to isolate the effect of chronology relative to the chronology-first LOAO experiment. It is NOT treated as a deployment-realistic estimate.",
+  "membership_outputs_required_before_first_fit": [
+    "per_family_membership_receipt.json",
+    "train_membership_sha256",
+    "validation_membership_sha256",
+    "target_membership_sha256",
+    "class_counts",
+    "held_out_family_exclusion_assertions"
+  ]
+}

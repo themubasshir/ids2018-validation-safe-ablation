@@ -1,0 +1,53 @@
+{
+  "stage": "Stage28-0",
+  "output_required": "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/conclusion_stability.csv",
+  "required_fields": [
+    "claim_id",
+    "parent_stage",
+    "family_if_applicable",
+    "learner_if_applicable",
+    "seed",
+    "claim_condition",
+    "condition_met"
+  ],
+  "stability_rate": "number_of_frozen_seeds_supporting_condition / 5",
+  "stage22_directional_claims": [
+    {
+      "claim_id": "STAGE22_PR_RANDOM_LT_CHRONO_ON_SHARED_FINAL_HOLDOUT",
+      "condition": "PR_AUC_RANDOM_NATURAL < PR_AUC_CHRONOLOGICAL_NATURAL",
+      "reason": "This freezes the direction observed in the already-frozen Stage22R shared final holdout rather than assuming the common but unsupported direction that random must outperform chronology."
+    },
+    {
+      "claim_id": "STAGE22_ROC_RANDOM_LT_CHRONO_ON_SHARED_FINAL_HOLDOUT",
+      "condition": "ROC_AUC_RANDOM_NATURAL < ROC_AUC_CHRONOLOGICAL_NATURAL"
+    }
+  ],
+  "loao_qualitative_conditions": [
+    {
+      "id": "ROC_ABOVE_CHANCE",
+      "condition": "ROC_AUC > 0.5"
+    },
+    {
+      "id": "PR_ABOVE_CHANCE",
+      "condition": "PR_AUC > PR_CHANCE_ANCHOR"
+    },
+    {
+      "id": "STANDARD_DETECTION_PRESENT",
+      "condition": "STANDARD_RECALL > 0"
+    },
+    {
+      "id": "BALANCED_DETECTION_PRESENT",
+      "condition": "BALANCED_RECALL > 0"
+    },
+    {
+      "id": "SECURITY_DETECTION_PRESENT_WHERE_FEASIBLE",
+      "condition": "SECURITY_THRESHOLD_FEASIBLE AND SECURITY_RECALL > 0"
+    },
+    {
+      "id": "LEARNER_ORDER_ROC_STABILITY",
+      "condition": "sign(XGB_ROC_AUC - LGBM_ROC_AUC) equals the frozen seed42 sign for the same family"
+    }
+  ],
+  "interpretation": "Conclusion-stability analysis is descriptive robustness analysis, not a newly optimized significance test.",
+  "post_result_condition_creation": "FORBIDDEN"
+}

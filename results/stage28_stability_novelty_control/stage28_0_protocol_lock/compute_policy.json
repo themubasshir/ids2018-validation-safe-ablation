@@ -1,0 +1,21 @@
+{
+  "stage": "Stage28-0",
+  "primary_device": "CPU",
+  "gpu_required": false,
+  "gpu_authorized_for_primary_stage28": false,
+  "reason": "Stage28 is a controlled robustness experiment. CPU execution is frozen to minimize backend heterogeneity relative to the Stage27 CPU execution and to avoid introducing GPU/CPU backend as an additional factor.",
+  "xgboost": {
+    "device": "cpu",
+    "tree_method": "hist"
+  },
+  "lightgbm": {
+    "device_type": "cpu"
+  },
+  "backend_only_change_policy": "No further backend substitution is permitted after Stage28-0 unless an operational failure requires a PRE-RESULT, MINIMAL, DOCUMENTED, COMMITTED, REMOTELY VERIFIED protocol amendment.",
+  "algorithmic_hyperparameter_change_authorized": false,
+  "thread_policy": {
+    "n_jobs": -1,
+    "record_actual_runtime_cpu_count": true,
+    "record_actual_thread_configuration_per_fit": true
+  }
+}

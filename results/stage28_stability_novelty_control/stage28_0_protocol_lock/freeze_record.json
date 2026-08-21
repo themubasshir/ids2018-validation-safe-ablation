@@ -1,0 +1,90 @@
+{
+  "stage": "Stage28-0",
+  "status": "PROTOCOL_FROZEN_PRE_FIT",
+  "timestamp_utc": "2026-08-21T16:01:15.439678+00:00",
+  "repository": "themubasshir/ids2018-validation-safe-ablation",
+  "branch": "main",
+  "parent_commit": "66597724a692da577efd19c1ca070fb27750f3ee",
+  "arms": [
+    "28A_TRAINING_SEED_STABILITY",
+    "28B_RANDOM_SPLIT_LOAO_CONTROL"
+  ],
+  "frozen_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "eligible_loao_families": [
+    "BOT",
+    "DDOS",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "fit_budget": {
+    "existing_seed42_fits_reused": 14,
+    "new_fit_budget": 106,
+    "total_component_realizations": 120
+  },
+  "science_operations_before_freeze": {
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_openings": 0,
+    "bootstrap_recomputation": 0,
+    "new_formal_statistical_tests": 0
+  },
+  "anti_adaptation_rules": [
+    "NO_ADDING_SEEDS_AFTER_RESULTS",
+    "NO_REMOVING_SEEDS_AFTER_RESULTS",
+    "NO_BEST_SEED_SELECTION",
+    "NO_HYPERPARAMETER_CHANGE",
+    "NO_LEARNER_CHANGE",
+    "NO_FEATURE_REPRESENTATION_CHANGE",
+    "NO_FAMILY_ELIGIBILITY_CHANGE",
+    "NO_TARGET_POPULATION_CHANGE",
+    "NO_THRESHOLD_GRID_CHANGE",
+    "NO_TARGET_DERIVED_THRESHOLD_SELECTION",
+    "NO_METRIC_ADDITION_OR_REMOVAL_AFTER_RESULTS",
+    "NO_SUPPORT_THRESHOLD_CHANGE",
+    "NO_NEW_RANDOM_SPLIT_AFTER_RESULTS",
+    "NO_NEURAL_ARCHITECTURE_ADDITION",
+    "NO_STAGE27_TARGET_REOPENING_FOR_OPTIMIZATION"
+  ],
+  "failure_handling": {
+    "record_failure": true,
+    "operational_retry_of_exact_frozen_fit": true,
+    "preserve_failed_attempt_receipt": true,
+    "parameter_change_to_obtain_success": false,
+    "amendment_if_needed": [
+      "PRE_RESULT",
+      "MINIMAL",
+      "DOCUMENTED",
+      "COMMITTED",
+      "REMOTELY_VERIFIED"
+    ]
+  },
+  "final_stopping_rule": "Stage28 is the final experimental stage authorized for the current manuscript. After Stage28 closure, no additional model architecture, dataset, ablation, stress test, seed expansion, threshold experiment, feature analysis, or evaluation axis may be added to the current empirical study without opening a separately scoped future research project.",
+  "after_stage28": "STOP_EXPERIMENTS_AND_MOVE_TO_MANUSCRIPT_SYNTHESIS",
+  "protocol_file_sha256_before_freeze_record": {
+    "compute_policy.json": "80318f44c412da463220d37f66452b3b4e5b0bc2d442876bfda861107611b810",
+    "conclusion_stability_spec.json": "bf834ffbb0f67601be43dd2b6d4eeaf5bb4a5afd505587c7dd305ed30a8eaf41",
+    "fit_budget.json": "b4417addc417b81656190927e4d404e11623b956c7861f6de47289cd5836bf2f",
+    "inherited_receipts.json": "ecfc4a0a732e6ecc32d12d103dc552e08da497d503526e0a212aa8bc6eaf76ea",
+    "interpretation_matrix.json": "ec2caf6936363bc77bb36c536fe35910562f606520899ddced6fc900ed3694a0",
+    "loao_family_spec.json": "fe930b641fdacb1d1c0005ea0814a12a8bf4a2ed504bc22dcf49da6273dd90c8",
+    "metric_spec.json": "ecad4021b84c9a11f95b59cfd52a2e691127ccbb2ef0e0bfcce40193e150f223",
+    "model_inventory.json": "838338e50be6d61909192042b33b74c61f099fd3557d3bc158dbac7351e742c9",
+    "prohibited_claims.json": "415a3c41938f46d668581829babe1973d0112e209c50f9818716b2dbf1eac62c",
+    "random_loao_split_spec.json": "773bd8be6ef5f95af0a0588e5f8b9bec98bcb43ac89ff9c71c3a74f731f58b4f",
+    "scientific_questions.json": "134f3e3c364661c415b3b9e37689afb01f2fd88447d6b582560c07abc02a8cb9",
+    "seed_spec.json": "b0b365ac814c9a25366298fa9900c766e38330e1b402e0550014176f7ce29352",
+    "seed_uncertainty_spec.json": "2ee9f1c1b84fbea94bdce2996c955496b15790571d09fee7672f46e9193df580",
+    "stage22_cell_spec.json": "9ad3a665ffbaf7c9525c2592ea759ac26446bf3e3a0b40719da78e00cbc1ad1f",
+    "support_policy.json": "1da4e5ad17c6ca8ed19b598cbe6c878dbc465ff69d27a2bb738368d4b35fdf0c",
+    "target_population_spec.json": "00ad7294e3a2189f01c9edecda1bea959adedf63b74c95b8b80d55feb2db3811",
+    "threshold_policy.json": "46c6871be83843e7737e20463b9ad98ac5715347592b5aa35241a80ce41a308e"
+  }
+}

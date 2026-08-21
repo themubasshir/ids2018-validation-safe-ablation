@@ -1,0 +1,35 @@
+{
+  "stage": "Stage28-0",
+  "eligible_families": [
+    "BOT",
+    "DDOS",
+    "INFILTRATION",
+    "PORT_SCAN",
+    "WEB_ATTACK"
+  ],
+  "structurally_ineligible_families_not_resurrected": [
+    "DOS",
+    "AUTH_BRUTE_FORCE"
+  ],
+  "learners": [
+    "XGBOOST",
+    "LIGHTGBM"
+  ],
+  "stage28a_chronological": {
+    "rule": "INHERIT_EXACT_STAGE27_ELIGIBLE_FOLDS_AND_MEMBERSHIPS",
+    "family_train_count": 0,
+    "family_validation_count": 0,
+    "target_population": "INHERIT_EXACT_STAGE27_TARGET_POPULATION"
+  },
+  "stage28b_random": {
+    "family_train_count": 0,
+    "family_validation_count": 0,
+    "held_out_family_all_positive_rows_assigned_to_target": true
+  },
+  "machine_assertions_required_before_every_loao_fit": [
+    "held_out_family_train_count == 0",
+    "held_out_family_validation_count == 0"
+  ],
+  "family_specific_results_primary": true,
+  "single_aggregate_zero_day_score": "FORBIDDEN"
+}

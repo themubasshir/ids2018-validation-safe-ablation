@@ -1,0 +1,70 @@
+{
+  "stage": "Stage28-0",
+  "stage22": {
+    "ranking_metrics": [
+      "PR_AUC",
+      "ROC_AUC"
+    ],
+    "operating_metrics": [
+      "PRECISION",
+      "RECALL",
+      "FPR",
+      "F1",
+      "F2_WHERE_NATIVE",
+      "TP",
+      "FP",
+      "TN",
+      "FN"
+    ],
+    "operating_points": [
+      "STANDARD",
+      "BALANCED",
+      "SECURITY"
+    ]
+  },
+  "loao": {
+    "ranking_metrics": [
+      "ROC_AUC",
+      "PR_AUC",
+      "PR_CHANCE_ANCHOR",
+      "PR_EXCESS_WHERE_DEFINED",
+      "PR_LIFT_WHERE_DEFINED"
+    ],
+    "operating_metrics": [
+      "STANDARD_RECALL",
+      "BALANCED_RECALL",
+      "SECURITY_RECALL",
+      "FPR",
+      "PRECISION",
+      "F1",
+      "TP",
+      "FP",
+      "TN",
+      "FN"
+    ],
+    "comparative_metrics": [
+      "KNOWN_FAMILY_CONTROL_WHERE_NATIVE",
+      "NOVELTY_GENERALIZATION_GAP_WHERE_MATHEMATICALLY_COMPATIBLE",
+      "RANDOM_VS_CHRONOLOGICAL_LOAO_CONTRAST"
+    ],
+    "undefined_metric_policy": "PRESERVE_AS_NAN_DO_NOT_COERCE"
+  },
+  "seed_summary_statistics": {
+    "mean": true,
+    "median": true,
+    "standard_deviation": {
+      "enabled": true,
+      "definition": "SAMPLE_STANDARD_DEVIATION",
+      "ddof": 1
+    },
+    "minimum": true,
+    "maximum": true,
+    "range": "MAX_MINUS_MIN",
+    "iqr": {
+      "enabled": true,
+      "definition": "Q75_MINUS_Q25",
+      "percentile_method": "linear"
+    }
+  },
+  "aggregation_rule": "Family-specific LOAO results remain primary. No single aggregate zero-day score is authorized."
+}

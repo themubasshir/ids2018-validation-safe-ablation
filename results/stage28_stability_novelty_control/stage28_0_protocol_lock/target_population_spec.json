@@ -1,0 +1,31 @@
+{
+  "stage": "Stage28-0",
+  "stage28a_stage22": {
+    "target": "STAGE22R_SHARED_FINAL_SINGLE_HOLDOUT",
+    "same_target_across_training_seeds": true,
+    "target_used_for_training": false,
+    "target_used_for_threshold_selection": false
+  },
+  "stage28a_stage27": {
+    "target": "INHERIT_EXACT_STAGE27_FAMILY_SPECIFIC_TARGET_POPULATIONS",
+    "same_target_across_training_seeds": true,
+    "target_used_for_training": false,
+    "target_used_for_threshold_selection": false
+  },
+  "stage28b_random_loao": {
+    "target_positive": "ALL_ROWS_OF_HELD_OUT_ATTACK_FAMILY",
+    "target_negative": "FIXED_20_PERCENT_RANDOM_SAMPLE_OF_ELIGIBLE_BENIGN_ROWS",
+    "known_attack_rows_in_primary_target": 0,
+    "same_target_across_five_model_seeds": true,
+    "positive_only_target_forbidden": true,
+    "prevalence_and_pr_chance_anchor_must_be_recorded": true
+  },
+  "expected_held_out_attack_support": {
+    "BOT": 1966,
+    "DDOS": 128027,
+    "INFILTRATION": 36,
+    "PORT_SCAN": 158930,
+    "WEB_ATTACK": 2180
+  },
+  "target_optimization": "FORBIDDEN"
+}

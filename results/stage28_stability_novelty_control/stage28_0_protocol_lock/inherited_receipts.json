@@ -1,0 +1,128 @@
+{
+  "stage": "Stage28-0",
+  "parent_commit": "66597724a692da577efd19c1ca070fb27750f3ee",
+  "repository": "themubasshir/ids2018-validation-safe-ablation",
+  "artifacts": [
+    {
+      "path": "results/stage22r_training/stage22r_2a_random_natural/stage22r_2a_random_natural_result.json",
+      "bytes": 9290,
+      "sha256": "dd7951f6d9c92538944a04357bab14fcc28f82ade748d37ad710fff2051abf73"
+    },
+    {
+      "path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_lightgbm_model.txt",
+      "bytes": 5613877,
+      "sha256": "9a92f4b8cd26738a470a7ff6fb72f51422a803e10b36bb32ac4bfc91373e6e50"
+    },
+    {
+      "path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_xgboost_model.json",
+      "bytes": 3989273,
+      "sha256": "ac9e630c8a479f073953b7f05eccf8bc94d24eaf0d8bc6bf77f5954979235b4e"
+    },
+    {
+      "path": "results/stage22r_training/stage22r_2c_chronological_natural/stage22r_2c_chronological_natural_result.json",
+      "bytes": 8932,
+      "sha256": "f43b5fa5031946029d8bf58ad153a838efaa2dcffcccd98111f694984a8c2d51"
+    },
+    {
+      "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/stage22r_1b1_membership_summary.json",
+      "bytes": 4713,
+      "sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d"
+    },
+    {
+      "path": "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_development_model_input_manifest.json",
+      "bytes": 8338,
+      "sha256": "05fe6226afd37c3ab434140e1164643eecc7abc75c295a2d6fb0280d4f42127e"
+    },
+    {
+      "path": "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_report.md",
+      "bytes": 1669,
+      "sha256": "3850bc1a605f6772875a32b5074ca986a8efce89b84ce65cf2a597826e6410e1"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/fold_spec.json",
+      "bytes": 11848,
+      "sha256": "37c029be97e56f8edadae45ee19add833e410cd1e489d8f7755943c62ce2104e"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/model_inventory.json",
+      "bytes": 3240,
+      "sha256": "9d7de1c37c3910d403887533df1388ed2c4b8ce9fb2937a1f08b6daadb9a9bc2"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/feature_representation.json",
+      "bytes": 6323,
+      "sha256": "a8f5a639e49632be5b1b85c742dd7103960273e34519c76443601ae715a0b783"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/threshold_policy.json",
+      "bytes": 1165,
+      "sha256": "fd4bbca2af2bb3ba1d6a780b85c4fb14f63123db3d6d5964cedcc38df889980c"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/target_population_spec.json",
+      "bytes": 6725,
+      "sha256": "224ac47ed1d8a5e15f1cbd56d2e421fe2419fa94fc91f4f378d23b49bdbe438e"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/support_rules.json",
+      "bytes": 536,
+      "sha256": "17cc91aca155b2075eb8a48077e9edf124bf84070d96fa148de9bd9242e22dce"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/metric_spec.json",
+      "bytes": 2026,
+      "sha256": "7be29658735730d9ce6f2cbd6c813d1e001ebf19a2bc175c9a21c57c881b924b"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/class_weight_policy.json",
+      "bytes": 1252,
+      "sha256": "e8c6e493af857c8d3da305cae839e0b5b6eedc593129e418a810afb105eb8fc7"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/inherited_receipts.json",
+      "bytes": 3504,
+      "sha256": "fe0c4b01e2121fe025cf145e8ee99d16c5946f78b103dc0373ee74c6c20c0f66"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/model_artifact_manifest.json",
+      "bytes": 12809,
+      "sha256": "7ecbb0bda5926403a72a9f9e46936492f2d33613ab86a376d4fad7c4d9dcdf18"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/fit_execution_receipt.json",
+      "bytes": 11307,
+      "sha256": "de6be674354b0ae65d593bb6cf8f859b93ac805206915544c174c248138b5c36"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_final_primary_metrics.csv",
+      "bytes": 3210,
+      "sha256": "42ea04b3f21e6026d5d69c8d5b59aa1edd2b57e94c42da3b9f70587349704634"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_final_operating_points.csv",
+      "bytes": 6574,
+      "sha256": "664a5aaaff718f20bf6d619ae1dd4871a07a37c81a1631590423ea0ae07240f4"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_final_novelty_gaps.csv",
+      "bytes": 2651,
+      "sha256": "91c80319186fd3bbfc382e58cfc60e58fc75d23db15408564fd35c05d4fb316c"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_synthesis_receipt.json",
+      "bytes": 2863,
+      "sha256": "55a67c1173d8bb3ffe2b2200542c382296459ae24b3b96fc0767abb6cb01bd3f"
+    },
+    {
+      "path": "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_synthesis.md",
+      "bytes": 6201,
+      "sha256": "50b44ce0740816a51464179817fb0de5111cbe942e2c18c52df8d41d48f194fb"
+    },
+    {
+      "path": "docs/STAGE27_PUBLICATION_CLOSEOUT.md",
+      "bytes": 7666,
+      "sha256": "6bba902e9c045d6d2f6e93e6a16fe21931654fc7b60a4b494330b120ace54e4d"
+    }
+  ],
+  "inheritance_rule": "These artifacts are frozen provenance inputs. Stage28 may not silently alter their memberships, taxonomy, feature representation, model hyperparameters, target semantics, or threshold-selection rules."
+}

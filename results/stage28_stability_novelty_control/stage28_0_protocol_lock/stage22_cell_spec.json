@@ -1,0 +1,40 @@
+{
+  "stage": "Stage28-0",
+  "arm": "28A",
+  "representation": "FULL",
+  "feature_count": 70,
+  "cells": [
+    "RANDOM_NATURAL",
+    "CHRONOLOGICAL_NATURAL"
+  ],
+  "membership": {
+    "rule": "INHERIT_EXACT_STAGE22R_TRAIN_VALIDATION_MEMBERSHIPS",
+    "new_random_split": false,
+    "membership_may_change_by_training_seed": false
+  },
+  "scientific_unit": {
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "component_learners": [
+      "LIGHTGBM",
+      "XGBOOST"
+    ],
+    "probability_rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST"
+  },
+  "reference_seed": 42,
+  "reference_seed_retraining": "FORBIDDEN_IF_DURABLE_ARTIFACT_IS_SCIENTIFICALLY_EQUIVALENT",
+  "evaluation_population": {
+    "name": "STAGE22R_SHARED_FINAL_SINGLE_HOLDOUT",
+    "rule": "All five seed realizations are evaluated on the same frozen Stage22R final holdout geometry used for the parent random-vs-chronological scientific comparison.",
+    "threshold_selection_on_final_holdout": "FORBIDDEN",
+    "model_selection_on_final_holdout": "FORBIDDEN",
+    "stage28_reuse_status": "PRE-REGISTERED ROBUSTNESS INFERENCE ONLY; parent holdout is no longer blind, so Stage28 does not represent a new untouched holdout claim."
+  },
+  "forbidden": [
+    "RANDOM_REBALANCED",
+    "CHRONOLOGICAL_REBALANCED",
+    "STAGE23_FEATURE_ABLATIONS",
+    "SHAP_RECOMPUTATION",
+    "SUBSET_SEARCH",
+    "NEW_HOLDOUT"
+  ]
+}

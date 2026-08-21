@@ -1,0 +1,22 @@
+{
+  "stage": "Stage28-0",
+  "bootstrap_uncertainty": {
+    "meaning": "Target-sampling uncertainty conditional on an already fitted model."
+  },
+  "training_seed_uncertainty": {
+    "meaning": "Sensitivity to fitted-model realization under the frozen training procedure."
+  },
+  "combine_into_single_synthetic_ci": false,
+  "report_separately": true,
+  "five_seed_statistics": [
+    "mean",
+    "median",
+    "sample_standard_deviation_ddof_1",
+    "minimum",
+    "maximum",
+    "range",
+    "IQR_Q75_minus_Q25_linear"
+  ],
+  "best_seed_reporting": "FORBIDDEN",
+  "seed42_only_reporting_if_other_seeds_exist": "FORBIDDEN"
+}

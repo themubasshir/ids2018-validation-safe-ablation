@@ -1,0 +1,77 @@
+{
+  "stage": "Stage28-0",
+  "stage22_full": {
+    "source": "results/stage22r_training/stage22r_2a_random_natural/stage22r_2a_random_natural_result.json",
+    "selection_population": "EACH_PARENT_CELL_FROZEN_DEVELOPMENT_VALIDATION",
+    "standard": {
+      "threshold": 0.5,
+      "selected": false
+    },
+    "balanced": {
+      "objective": "MAX_F1",
+      "tie_break_order": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "CLOSER_TO_0_50",
+        "LOWER_THRESHOLD"
+      ]
+    },
+    "security": {
+      "constraint": "FPR <= 0.05 EXACT",
+      "objective": "MAX_F2",
+      "tie_break_order": [
+        "LOWER_FPR",
+        "HIGHER_RECALL",
+        "LOWER_THRESHOLD"
+      ],
+      "no_relaxation": true
+    },
+    "grid": {
+      "integer_percent_start": 5,
+      "integer_percent_stop_inclusive": 95,
+      "integer_step": 1,
+      "count": 91
+    },
+    "selected_separately_per_training_seed": true,
+    "final_holdout_threshold_search": "FORBIDDEN"
+  },
+  "loao_stage27_and_stage28b": {
+    "source": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/threshold_policy.json",
+    "selection_population": "KNOWN_FAMILY_VALIDATION_ONLY_WITH_ZERO_HELD_OUT_FAMILY_POSITIVES",
+    "standard": {
+      "threshold": 0.5,
+      "selected": false
+    },
+    "balanced": {
+      "objective": "MAXIMIZE_F1",
+      "tie_break_order": [
+        "MINIMIZE_FPR",
+        "CHOOSE_HIGHER_THRESHOLD"
+      ]
+    },
+    "security": {
+      "constraint": "FPR <= 0.05",
+      "objective": "MAXIMIZE_F2",
+      "tie_break_order": [
+        "MINIMIZE_FPR",
+        "CHOOSE_HIGHER_THRESHOLD"
+      ],
+      "if_no_feasible_threshold": "SECURITY_THRESHOLD_INFEASIBLE_NO_RELAXATION"
+    },
+    "grid": {
+      "construction": "INTEGER_PERCENT / 100",
+      "integer_start": 1,
+      "integer_stop_inclusive": 99,
+      "integer_step": 1,
+      "count": 99
+    },
+    "selected_separately_per": [
+      "HELD_OUT_FAMILY",
+      "LEARNER",
+      "TRAINING_SEED"
+    ],
+    "held_out_family_in_threshold_selection": "FORBIDDEN",
+    "target_threshold_search": "FORBIDDEN",
+    "post_target_threshold_change": "FORBIDDEN"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "stage": "Stage28-0",
+  "stage22_full_seed_stability": {
+    "scientific_unit": "ENS_LGBM_XGB_EQUAL",
+    "split_cells": [
+      "RANDOM_NATURAL",
+      "CHRONOLOGICAL_NATURAL"
+    ],
+    "component_learners": [
+      "LIGHTGBM",
+      "XGBOOST"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "total_component_realizations": 20,
+    "existing_seed42_component_fits_reused": 4,
+    "new_component_fits": 16
+  },
+  "stage27_chronological_loao_seed_stability": {
+    "families": [
+      "BOT",
+      "DDOS",
+      "INFILTRATION",
+      "PORT_SCAN",
+      "WEB_ATTACK"
+    ],
+    "learners": [
+      "XGBOOST",
+      "LIGHTGBM"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "total_component_realizations": 50,
+    "existing_seed42_fits_reused": 10,
+    "new_fits": 40
+  },
+  "stage28b_random_loao": {
+    "families": [
+      "BOT",
+      "DDOS",
+      "INFILTRATION",
+      "PORT_SCAN",
+      "WEB_ATTACK"
+    ],
+    "learners": [
+      "XGBOOST",
+      "LIGHTGBM"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "total_component_realizations": 50,
+    "existing_fits_reused": 0,
+    "new_fits": 50
+  },
+  "totals": {
+    "existing_seed42_fits_reused": 14,
+    "new_fit_budget": 106,
+    "total_component_realizations_including_reuse": 120,
+    "scientific_evaluation_cells_including_reuse": 110
+  },
+  "hard_rule": "No model fit outside the frozen new_fit_budget=106 is authorized. An operational retry of the exact same frozen fit does not create a new scientific realization but must retain a failed-attempt receipt.",
+  "reuse_failure_rule": "If any expected seed-42 artifact cannot establish scientific equivalence, execution must stop. A PRE-RESULT protocol amendment must account for any replacement fit before the affected fit is executed."
+}

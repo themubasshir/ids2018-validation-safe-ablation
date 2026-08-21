@@ -1,0 +1,21 @@
+{
+  "stage": "Stage28-0",
+  "source": "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/support_rules.json",
+  "minimum_positive_support_for_inferential_family_claim": 50,
+  "below_threshold_rule": "DESCRIPTIVE_ONLY_NOT_DROPPED",
+  "expected_held_out_positive_support": {
+    "BOT": 1966,
+    "DDOS": 128027,
+    "INFILTRATION": 36,
+    "PORT_SCAN": 158930,
+    "WEB_ATTACK": 2180
+  },
+  "family_status": {
+    "BOT": "INFERENTIAL_SUPPORT_ELIGIBLE",
+    "DDOS": "INFERENTIAL_SUPPORT_ELIGIBLE",
+    "INFILTRATION": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+    "PORT_SCAN": "INFERENTIAL_SUPPORT_ELIGIBLE",
+    "WEB_ATTACK": "INFERENTIAL_SUPPORT_ELIGIBLE"
+  },
+  "infiltration_rule": "INFILTRATION remains descriptive-only because frozen held-out positive support is 36 < 50. Random splitting may not be used to manufacture a stronger inferential status."
+}

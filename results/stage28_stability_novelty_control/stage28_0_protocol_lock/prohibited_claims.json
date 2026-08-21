@@ -1,0 +1,20 @@
+{
+  "stage": "Stage28-0",
+  "prohibited": [
+    "Five seeds prove universal reproducibility.",
+    "Random LOAO represents deployment.",
+    "The random-vs-chronological difference is purely caused by temporal drift.",
+    "Stage28 completely separates novelty and chronology.",
+    "Seed stability proves causal behavioral learning.",
+    "Seed instability invalidates the model.",
+    "LOAO equals real zero-day detection."
+  ],
+  "preferred_language": [
+    "robust across the five tested seeds",
+    "realization-sensitive",
+    "random-vs-chronological LOAO contrast",
+    "consistent with chronology compounding novelty difficulty",
+    "unseen-family proxy",
+    "conditional on the benchmark and frozen protocol"
+  ]
+}

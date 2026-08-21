@@ -1,0 +1,53 @@
+{
+  "stage": "Stage28-0",
+  "rules": [
+    {
+      "result": "TEMPORAL_GAP_STABLE_ACROSS_ALL_TESTED_SEEDS",
+      "permitted_interpretation": "Stage22 temporal conclusion is robust to the five tested training realizations."
+    },
+    {
+      "result": "TEMPORAL_GAP_CHANGES_SIGN_ACROSS_SEEDS",
+      "permitted_interpretation": "Temporal conclusion is materially realization-sensitive."
+    },
+    {
+      "result": "LOAO_FAMILY_RESULT_STABLE_ACROSS_SEEDS",
+      "permitted_interpretation": "Family-specific novelty result is robust under the five tested seeds."
+    },
+    {
+      "result": "LOAO_VARIES_STRONGLY_BY_SEED",
+      "permitted_interpretation": "Unseen-family performance is realization-sensitive."
+    },
+    {
+      "result": "LEARNER_GAP_MUCH_GREATER_THAN_SEED_SPREAD",
+      "permitted_interpretation": "Stage27 learner dependence is unlikely to be explained merely by training-seed realization."
+    },
+    {
+      "result": "LEARNER_GAP_COMPARABLE_TO_SEED_SPREAD",
+      "permitted_interpretation": "Stage27 learner dependence should be interpreted cautiously relative to realization variability."
+    },
+    {
+      "result": "RANDOM_LOAO_MUCH_GREATER_THAN_CHRONOLOGICAL_LOAO",
+      "permitted_interpretation": "Chronology/distribution shift materially compounds unseen-family difficulty for that family under the frozen benchmark."
+    },
+    {
+      "result": "RANDOM_AND_CHRONOLOGICAL_LOAO_BOTH_COLLAPSE",
+      "permitted_interpretation": "Poor unseen-family transfer persists even without the chronology-first evaluation geometry."
+    },
+    {
+      "result": "RANDOM_AND_CHRONOLOGICAL_LOAO_BOTH_SURVIVE",
+      "permitted_interpretation": "Transfer for that family survives both tested evaluation geometries."
+    },
+    {
+      "result": "FAMILY_SPECIFIC_MIXTURE",
+      "permitted_interpretation": "The novelty–chronology relationship is family dependent."
+    },
+    {
+      "result": "RANKING_STABLE_THRESHOLD_RECALL_UNSTABLE",
+      "permitted_interpretation": "Ranking robustness does not imply stable deployment operating points."
+    },
+    {
+      "result": "UNEXPECTED_REVERSAL",
+      "permitted_interpretation": "Report the reversal as observed; do not modify the protocol."
+    }
+  ]
+}

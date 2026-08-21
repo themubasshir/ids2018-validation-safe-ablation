@@ -1,0 +1,47 @@
+{
+  "stage": "Stage28-0",
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "reference_seed": 42,
+  "new_training_seeds": [
+    43,
+    44,
+    45,
+    46
+  ],
+  "number_of_training_seeds": 5,
+  "stage28a": {
+    "stage22_membership": "INHERIT_EXACT_STAGE22R_MEMBERSHIPS",
+    "stage27_membership": "INHERIT_EXACT_STAGE27_FOLD_MEMBERSHIPS",
+    "membership_changes_across_training_seed": false,
+    "intended_varying_factor": "TRAINING_REALIZATION_ONLY"
+  },
+  "stage28b": {
+    "random_membership_seed": 42,
+    "membership_seed_varies_with_model_seed": false,
+    "random_membership_materialized_once_per_family": true,
+    "same_membership_reused_for_all_five_model_seeds": true,
+    "reason": "Training-seed uncertainty must not be confounded with split-membership uncertainty. Random LOAO geometry is frozen once; only learner training realization changes across seeds."
+  },
+  "per_fit_seed_receipt_required": [
+    "model_seed",
+    "library_random_state",
+    "data_order_seed",
+    "thread_count",
+    "determinism_controls"
+  ],
+  "data_order_policy": "Do not deliberately reshuffle parent memberships for Stage28A. For Stage28B preserve the exact frozen materialized row order after membership creation. No additional seed-dependent row-order perturbation is authorized.",
+  "forbidden": [
+    "ADD_SEED_AFTER_RESULTS",
+    "REMOVE_SEED_AFTER_RESULTS",
+    "BEST_SEED_SELECTION",
+    "SEED_SPECIFIC_HYPERPARAMETER_CHANGE",
+    "SEED_SPECIFIC_FEATURE_CHANGE",
+    "SEED_SPECIFIC_THRESHOLD_RULE_CHANGE"
+  ]
+}

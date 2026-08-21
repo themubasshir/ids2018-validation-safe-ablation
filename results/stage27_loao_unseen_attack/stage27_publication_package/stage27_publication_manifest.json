@@ -1,0 +1,71 @@
+{
+  "figure_policy": {
+    "main": [
+      "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/figures/stage27_primary_roc_auc_ci.png",
+      "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/figures/stage27_balanced_recall_ci.png"
+    ],
+    "supplementary": [
+      "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/figures/stage27_primary_pr_auc_ci.png"
+    ]
+  },
+  "frozen_source_sha256": {
+    "figures/stage27_balanced_recall_ci.png": "441b3adc5f357c8d5b1ac1d6ce5fd3bd449fe9fdbaeea3a1c944a965b7b1e2b6",
+    "figures/stage27_primary_pr_auc_ci.png": "3528a3f2854f2d40dc1e2c23c20f14fb8d3b9edb6870d32088504e23b02dfba8",
+    "figures/stage27_primary_roc_auc_ci.png": "0e3659c1abb3a5ec9cb27af3e702f734f3c00266d695a672408c3d426e746152",
+    "stage27_4a_synthesis_freeze_record.json": "35135f1979518b36e614c7a0c2c7db9e4bd9bb78eb4d70346255684d0a4ae1db",
+    "stage27_final_novelty_gaps.csv": "91c80319186fd3bbfc382e58cfc60e58fc75d23db15408564fd35c05d4fb316c",
+    "stage27_final_operating_points.csv": "664a5aaaff718f20bf6d619ae1dd4871a07a37c81a1631590423ea0ae07240f4",
+    "stage27_final_primary_metrics.csv": "42ea04b3f21e6026d5d69c8d5b59aa1edd2b57e94c42da3b9f70587349704634",
+    "stage27_final_similarity.csv": "8c110b4f1d6317d2a2125b4f24bfb8325cdeb699ce763d268d91f3bad6acc8d3",
+    "stage27_synthesis.md": "50b44ce0740816a51464179817fb0de5111cbe942e2c18c52df8d41d48f194fb",
+    "stage27_synthesis_receipt.json": "55a67c1173d8bb3ffe2b2200542c382296459ae24b3b96fc0767abb6cb01bd3f"
+  },
+  "generated_artifacts": {
+    "docs/STAGE27_MANUSCRIPT_INTEGRATION.md": {
+      "bytes": 20363,
+      "sha256": "dbce1fe919533ba271ffc3748863ed1290121428e4a242fb9b4d2252d589e83a"
+    },
+    "docs/STAGE27_MANUSCRIPT_INTEGRATION.tex": {
+      "bytes": 5066,
+      "sha256": "8b9d7a82654a1a0e7171e86714fcaf5a9d9e4d211a7e537a16e4c28d7d67f5ea"
+    },
+    "docs/STAGE27_PUBLICATION_TABLES.md": {
+      "bytes": 7312,
+      "sha256": "7d269c5bb92d3af0dcab7b8720b42296005411ab34423e92f4245e25c999dd7e"
+    },
+    "docs/STAGE27_PUBLICATION_TABLES.tex": {
+      "bytes": 7170,
+      "sha256": "eb8f6e490fbd9cc3882a2100e19770fdf955800ca97300e251f6ee90af12d444"
+    },
+    "scripts/stage27/stage27_publication_integration.py": {
+      "bytes": 63451,
+      "sha256": "ad763a2ab7ab9ebe0705abbc5af19ad5670d57c1b3d55e8a96f1546be189ff6b"
+    }
+  },
+  "generation_head": "0e1439565aedc7da9b7ca1207262e9061422bc22",
+  "high_level_outcomes": [
+    "SELECTIVE_FAMILY_TRANSFER",
+    "RANKING_THRESHOLD_DIVERGENCE",
+    "LEARNER_DEPENDENCE"
+  ],
+  "publication_date": "2026-08-21",
+  "publication_package_status": "PUBLICATION_CONTENT_FROZEN",
+  "reporting_guards": {
+    "formal_zero_day_proof": false,
+    "infiltration_inferential_claim": false,
+    "similarity_significance_inference": false,
+    "target_threshold_search": false,
+    "universal_unseen_family_generalization": false
+  },
+  "science_operations": {
+    "bootstrap_recomputation": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "new_formal_statistical_tests": 0,
+    "target_reopenings": 0,
+    "threshold_reselection": 0
+  },
+  "scientific_parent": "0e1439565aedc7da9b7ca1207262e9061422bc22",
+  "scientific_status": "CLOSED",
+  "stage": "STAGE27-PUB1"
+}

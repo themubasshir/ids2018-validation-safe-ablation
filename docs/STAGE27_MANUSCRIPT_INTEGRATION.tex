@@ -1,0 +1,56 @@
+% =====================================================================
+% Stage27 Manuscript Integration
+% Generated only from frozen Stage27-4A artifacts.
+% =====================================================================
+
+\subsection{Unseen Attack-Family Generalization}
+
+\subsubsection{Chronology-first audit design}
+
+Stage27 evaluated zero-training-exposure attack-family generalization under a strict \texttt{TRAIN < VALIDATION < TARGET} protocol. The held-out family was absent from both training and validation, thresholds were selected only on known-family validation data, and the target was not used for model selection, threshold tuning, or adaptation. The experiment is therefore described as an unseen attack-family generalization audit rather than as formal proof of zero-day detection.
+
+Seven primary families were preregistered. Five were structurally executable. DOS was ineligible because the available earlier day-atomic training period contained no known-family attack positives, whereas AUTH\_BRUTE\_FORCE was ineligible because insufficient earlier weekday depth existed for separate training and validation periods. INFILTRATION was executable but is reported descriptively only because the held-out support was 36.
+
+\subsubsection{Primary unseen-family ranking}
+
+Unseen-family ranking was strongly family dependent. DDoS retained near-perfect discrimination: XGBoost reached ROC-AUC 0.9982 and PR-AUC 0.9925, while LightGBM reached ROC-AUC 0.9986 and PR-AUC 0.9940. Web Attack also transferred strongly, with XGBoost ROC-AUC 0.9693 and PR-AUC 0.7206 and LightGBM ROC-AUC 0.9901 and PR-AUC 0.7605.
+
+Bot traffic showed substantial collapse. XGBoost produced ROC-AUC 0.3224 and PR-AUC 0.003256, while LightGBM produced ROC-AUC 0.5591 and PR-AUC 0.004879. The XGBoost PR-AUC was below the target prevalence anchor, giving negative PR-excess -0.001467. Port Scan was materially learner-dependent: XGBoost reached ROC-AUC 0.5506 compared with 0.7559 for LightGBM.
+
+The overall Stage27 outcome is therefore selective family transfer rather than universal unseen-family generalization.
+
+\subsubsection{Frozen operating-point transfer}
+
+Threshold-independent ranking did not guarantee useful frozen-threshold detection. At the BALANCED operating point, DDoS recall was 66.20\% for XGBoost and 26.25\% for LightGBM despite ROC-AUC above 0.998 for both learners. Similarly, LightGBM retained Port Scan ROC-AUC 0.7559 while BALANCED recall was only 1.17\%.
+
+These results distinguish ranking generalization from operating-point transfer and support the frozen Stage27 outcome of ranking--threshold divergence.
+
+\subsubsection{Behavioral similarity}
+
+The secondary behavioral-similarity audit did not show a monotonic relationship with transfer. BOT had the highest observed similarity to a seen family (0.6994) but weak generalization, whereas DDoS had lower similarity (0.3834) and near-perfect ranking. Behavioral proximity under the frozen 11-descriptor centroid definition therefore does not appear sufficient by itself to explain the transfer pattern.
+
+\subsection{Discussion of Attack-Family Novelty}
+
+Stage27 shows that strong performance on known attack families cannot be interpreted as evidence of uniform robustness to attack-family novelty. DDoS and Web Attack retained strong ranking for both learners, Bot collapsed, and Port Scan exhibited substantial learner dependence.
+
+The experiment also reinforces a broader finding across the study: threshold-independent discrimination and fixed operating-point behavior are distinct properties. Representation-specific chronological evaluation, the temporal-validation stress test, cross-dataset transfer, and now unseen-family transfer each expose cases in which ranking and frozen-threshold behavior diverge. Reporting only ROC-AUC or PR-AUC would therefore provide an incomplete description of deployment robustness.
+
+The evidence does not establish a universal learner winner. XGBoost and LightGBM agree closely on DDoS and Web Attack ranking but differ substantially for Port Scan and Bot. Learner dependence is therefore itself family-dependent.
+
+\subsection{Stage27 Limitations}
+
+\begin{itemize}
+\item Only five of seven preregistered families were structurally executable under strict chronology.
+\item INFILTRATION is descriptive only because the held-out support was 36.
+\item The design is chronology-first zero-training-exposure evaluation rather than textbook LOAO in which every other family is necessarily represented in training.
+\item The 95\% bootstrap intervals quantify target-sampling uncertainty conditional on the fitted model and do not include retraining, seed, model-selection, or broader population uncertainty.
+\item Behavioral similarity uses only 11 preregistered aggregate descriptors and is descriptive only.
+\item The benchmark-specific results do not establish universal real-world zero-day detection.
+\end{itemize}
+
+% Main Stage27 figures:
+% stage27_primary_roc_auc_ci.png
+% stage27_balanced_recall_ci.png
+%
+% Supplementary:
+% stage27_primary_pr_auc_ci.png

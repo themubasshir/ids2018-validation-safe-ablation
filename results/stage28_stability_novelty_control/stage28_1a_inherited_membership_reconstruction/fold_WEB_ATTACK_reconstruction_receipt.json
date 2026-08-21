@@ -1,0 +1,108 @@
+{
+  "stage": "Stage28-1A-R1",
+  "type": "INHERITED_STAGE27_CHRONOLOGY_FOLD_RECONSTRUCTION_RECEIPT",
+  "created_at_utc": "2026-08-21T16:29:16.575605+00:00",
+  "stage28_parent_commit": "0029c28c417d63ffb45ad4096ab7c44cbd875116",
+  "held_out_family": "WEB_ATTACK",
+  "historical_receipt": {
+    "path": "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_WEB_ATTACK_membership_receipt.json",
+    "sha256": "f09a6364929a3b2d5afe64afea70b31fe17bb8c7f639b67402a5cc5ee5d21fd6"
+  },
+  "train_days": [
+    "Monday",
+    "Tuesday"
+  ],
+  "validation_days": [
+    "Wednesday"
+  ],
+  "target_days": [
+    "Thursday"
+  ],
+  "membership_semantics": {
+    "global_row_id": "ZERO_BASED_INDEX_IN_CONCATENATION_OF_THE_8_FROZEN_EFFECTIVE_SOURCE_SEGMENTS_IN_STAGE24_PUBLISHED_POPULATION_ORDER",
+    "train": "BENIGN + PRIMARY-SEVEN KNOWN ATTACK FAMILIES ON FROZEN TRAIN DAYS; HELD-OUT FAMILY EXCLUDED; HEARTBLEED/OTHER UNKNOWN EXCLUDED",
+    "validation": "BENIGN + PRIMARY-SEVEN KNOWN ATTACK FAMILIES ON FROZEN VALIDATION DAY; HELD-OUT FAMILY EXCLUDED; HEARTBLEED/OTHER UNKNOWN EXCLUDED",
+    "primary_target": "SAME-TARGET-DAY BENIGN + HELD-OUT FAMILY ONLY",
+    "operational_target": "SAME-TARGET-DAY BENIGN + ALL PRIMARY-SEVEN ATTACK FAMILIES"
+  },
+  "counts": {
+    "train_rows": 975827,
+    "train_benign": 961992,
+    "train_attack": 13835,
+    "validation_rows": 692692,
+    "validation_benign": 440031,
+    "validation_attack": 252661,
+    "primary_target_rows": 458932,
+    "primary_target_benign": 456752,
+    "primary_target_heldout_attack": 2180,
+    "operational_target_rows": 458968,
+    "operational_target_benign": 456752,
+    "operational_target_attack": 2216
+  },
+  "heldout_exclusion": {
+    "train_count": 0,
+    "validation_count": 0,
+    "status": "PASS"
+  },
+  "target_only_and_other_unseen_exclusion": {
+    "train_count": 0,
+    "validation_count": 0,
+    "status": "PASS"
+  },
+  "arrays": {
+    "train_global_idx": {
+      "dtype": "int32",
+      "count": 975827,
+      "content_sha256": "60f15d9416646473ffcae8073cd1fa9af3dd80c5025b42644e8df657438e1eae",
+      "historical_content_sha256": "60f15d9416646473ffcae8073cd1fa9af3dd80c5025b42644e8df657438e1eae",
+      "exact_match": true
+    },
+    "validation_global_idx": {
+      "dtype": "int32",
+      "count": 692692,
+      "content_sha256": "75b18c272ba39cf96fc4b5adec3d51165c3ee1e11a003d6329ff9eef643ef1a3",
+      "historical_content_sha256": "75b18c272ba39cf96fc4b5adec3d51165c3ee1e11a003d6329ff9eef643ef1a3",
+      "exact_match": true
+    },
+    "primary_target_global_idx": {
+      "dtype": "int32",
+      "count": 458932,
+      "content_sha256": "e62a92c55352d614f88c6c5482bcc27cae02b97100ade66366b3c3777213039a",
+      "historical_content_sha256": "e62a92c55352d614f88c6c5482bcc27cae02b97100ade66366b3c3777213039a",
+      "exact_match": true
+    },
+    "operational_target_global_idx": {
+      "dtype": "int32",
+      "count": 458968,
+      "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+      "historical_content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+      "exact_match": true
+    }
+  },
+  "class_weight": {
+    "formula": "train_benign / train_attack",
+    "recomputed_value": 69.53321286591977,
+    "historical_value": 69.53321286591977,
+    "exact_reproduction": true,
+    "validation_rows_used": 0,
+    "target_rows_used": 0
+  },
+  "runtime_cache": {
+    "directory": "/kaggle/working/stage28_1a_runtime_cache/stage27_chronological_memberships/WEB_ATTACK",
+    "paths": {
+      "train_global_idx": "/kaggle/working/stage28_1a_runtime_cache/stage27_chronological_memberships/WEB_ATTACK/train_global_idx.npy",
+      "validation_global_idx": "/kaggle/working/stage28_1a_runtime_cache/stage27_chronological_memberships/WEB_ATTACK/validation_global_idx.npy",
+      "primary_target_global_idx": "/kaggle/working/stage28_1a_runtime_cache/stage27_chronological_memberships/WEB_ATTACK/primary_target_global_idx.npy",
+      "operational_target_global_idx": "/kaggle/working/stage28_1a_runtime_cache/stage27_chronological_memberships/WEB_ATTACK/operational_target_global_idx.npy"
+    },
+    "committed_to_git": false
+  },
+  "scientific_operations": {
+    "predictor_values_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_predictor_openings": 0
+  },
+  "status": "PASS_EXACT_HISTORICAL_CONTENT_REPRODUCTION"
+}

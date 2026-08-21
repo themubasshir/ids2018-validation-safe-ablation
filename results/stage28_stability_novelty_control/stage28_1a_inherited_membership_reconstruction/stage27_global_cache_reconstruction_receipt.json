@@ -1,0 +1,212 @@
+{
+  "stage": "Stage28-1A-R1",
+  "type": "STAGE27_GLOBAL_MEMBERSHIP_CACHE_RECONSTRUCTION_RECEIPT",
+  "created_at_utc": "2026-08-21T16:29:16.576865+00:00",
+  "stage28_parent_commit": "0029c28c417d63ffb45ad4096ab7c44cbd875116",
+  "recovered_source_map": {
+    "runtime_path": "/kaggle/working/stage28_1a_exact_source_map.json",
+    "sha256": "8a52dc284cf4900aafc0b3b653c045689415dc84422d2d44955a27e381891556",
+    "committed_to_git": false
+  },
+  "source_population": {
+    "identity": "STAGE24_FULL_EFFECTIVE_CICIDS2017_POPULATION",
+    "physical_rows": 3119345,
+    "effective_rows": 2830743,
+    "structural_null_excluded_rows": 288602
+  },
+  "source_assets": [
+    {
+      "source_index": 0,
+      "day": "Monday",
+      "basename": "Monday-WorkingHours.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+      "size_bytes": 65465382,
+      "sha256": "dfdcef4b8670e52af54dc4f82174834365a393473e877174cca46d17b12dfd02",
+      "physical_rows": 529918,
+      "effective_rows": 529918,
+      "global_start_zero_based": 0,
+      "global_stop_exclusive": 529918,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 529918
+      }
+    },
+    {
+      "source_index": 1,
+      "day": "Tuesday",
+      "basename": "Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "size_bytes": 52701751,
+      "sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+      "physical_rows": 445909,
+      "effective_rows": 445909,
+      "global_start_zero_based": 529918,
+      "global_stop_exclusive": 975827,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 432074,
+        "AUTH_BRUTE_FORCE": 13835
+      }
+    },
+    {
+      "source_index": 2,
+      "day": "Wednesday",
+      "basename": "Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "size_bytes": 76512727,
+      "sha256": "d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140",
+      "physical_rows": 692703,
+      "effective_rows": 692703,
+      "global_start_zero_based": 975827,
+      "global_stop_exclusive": 1668530,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 440031,
+        "DOS": 252661,
+        "TARGET_ONLY_UNSEEN": 11
+      }
+    },
+    {
+      "source_index": 3,
+      "day": "Thursday",
+      "basename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "size_bytes": 27901448,
+      "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+      "physical_rows": 288602,
+      "effective_rows": 288602,
+      "global_start_zero_based": 1668530,
+      "global_stop_exclusive": 1957132,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 288566,
+        "INFILTRATION": 36
+      }
+    },
+    {
+      "source_index": 4,
+      "day": "Thursday",
+      "basename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "size_bytes": 19674280,
+      "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+      "physical_rows": 458968,
+      "effective_rows": 170366,
+      "global_start_zero_based": 1957132,
+      "global_stop_exclusive": 2127498,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 168186,
+        "WEB_ATTACK": 2180
+      }
+    },
+    {
+      "source_index": 5,
+      "day": "Friday",
+      "basename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "size_bytes": 23048086,
+      "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+      "physical_rows": 225745,
+      "effective_rows": 225745,
+      "global_start_zero_based": 2127498,
+      "global_stop_exclusive": 2353243,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 97718,
+        "DDOS": 128027
+      }
+    },
+    {
+      "source_index": 6,
+      "day": "Friday",
+      "basename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "size_bytes": 18632427,
+      "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+      "physical_rows": 286467,
+      "effective_rows": 286467,
+      "global_start_zero_based": 2353243,
+      "global_stop_exclusive": 2639710,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 127537,
+        "PORT_SCAN": 158930
+      }
+    },
+    {
+      "source_index": 7,
+      "day": "Friday",
+      "basename": "Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "runtime_path": "/kaggle/working/stage27_cicids2017_sources/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "size_bytes": 21999571,
+      "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+      "physical_rows": 191033,
+      "effective_rows": 191033,
+      "global_start_zero_based": 2639710,
+      "global_stop_exclusive": 2830743,
+      "label_column": "Label",
+      "family_counts": {
+        "BENIGN": 189067,
+        "BOT": 1966
+      }
+    }
+  ],
+  "membership_label_access": {
+    "physical_label_rows_read": 3119345,
+    "effective_label_rows_used": 2830743,
+    "predictor_columns_read": 0,
+    "predictor_values_read": 0,
+    "purpose": "MEMBERSHIP_RECONSTRUCTION_ONLY"
+  },
+  "global_arrays": {
+    "global_family_codes": {
+      "count": 2830743,
+      "dtype": "uint8",
+      "historical_content_sha256": "b0e9fb8b0eba74fdb66b0f1ab06c03dea5ab2b91bf280a28055b68c8f01ad632",
+      "reconstructed_content_sha256": "b0e9fb8b0eba74fdb66b0f1ab06c03dea5ab2b91bf280a28055b68c8f01ad632",
+      "exact_match": true,
+      "runtime_path": "/kaggle/working/stage28_1a_runtime_cache/stage27_global_cache/global_family_codes.npy"
+    },
+    "global_day_codes": {
+      "count": 2830743,
+      "dtype": "uint8",
+      "historical_content_sha256": "a474d277f5b22df628e55e40a73222d993db532e4cdbfa2d9baaf7cc6a7e0533",
+      "reconstructed_content_sha256": "a474d277f5b22df628e55e40a73222d993db532e4cdbfa2d9baaf7cc6a7e0533",
+      "exact_match": true,
+      "runtime_path": "/kaggle/working/stage28_1a_runtime_cache/stage27_global_cache/global_day_codes.npy"
+    },
+    "global_source_codes": {
+      "count": 2830743,
+      "dtype": "uint8",
+      "historical_content_sha256": "9fd9281a18aa9b7cb43b643d431f80a75b4d695eb7119a4fdbbed5318d07e6d0",
+      "reconstructed_content_sha256": "9fd9281a18aa9b7cb43b643d431f80a75b4d695eb7119a4fdbbed5318d07e6d0",
+      "exact_match": true,
+      "runtime_path": "/kaggle/working/stage28_1a_runtime_cache/stage27_global_cache/global_source_codes.npy"
+    }
+  },
+  "family_counts": {
+    "BENIGN": 2273097,
+    "BOT": 1966,
+    "DDOS": 128027,
+    "DOS": 252661,
+    "AUTH_BRUTE_FORCE": 13835,
+    "INFILTRATION": 36,
+    "PORT_SCAN": 158930,
+    "WEB_ATTACK": 2180,
+    "TARGET_ONLY_UNSEEN": 11,
+    "OTHER_ATTACK_UNSEEN_LABEL": 0
+  },
+  "runtime_cache": {
+    "directory": "/kaggle/working/stage28_1a_runtime_cache/stage27_global_cache",
+    "committed_to_git": false
+  },
+  "scientific_operations": {
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "predictor_values_read": 0,
+    "target_predictor_openings": 0
+  },
+  "status": "PASS_EXACT_HISTORICAL_CONTENT_REPRODUCTION"
+}

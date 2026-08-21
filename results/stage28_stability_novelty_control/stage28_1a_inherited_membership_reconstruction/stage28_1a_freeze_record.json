@@ -1,0 +1,50 @@
+{
+  "stage": "Stage28-1A-R1",
+  "type": "INHERITED_MEMBERSHIP_RECONSTRUCTION_FREEZE",
+  "created_at_utc": "2026-08-21T16:29:16.578641+00:00",
+  "parent_commit": "0029c28c417d63ffb45ad4096ab7c44cbd875116",
+  "status": "INHERITED_MEMBERSHIPS_RECONSTRUCTED_AND_VERIFIED",
+  "stage22": {
+    "RANDOM_NATURAL": "PASS_EXACT",
+    "CHRONOLOGICAL_NATURAL": "PASS_EXACT",
+    "membership_change": false
+  },
+  "stage27": {
+    "source_assets": "8_OF_8_BYTE_EXACT",
+    "global_family_codes": "PASS_EXACT_CONTENT_SHA256",
+    "global_day_codes": "PASS_EXACT_CONTENT_SHA256",
+    "global_source_codes": "PASS_EXACT_CONTENT_SHA256",
+    "chronology_folds": {
+      "BOT": "PASS_EXACT_CONTENT_SHA256",
+      "DDOS": "PASS_EXACT_CONTENT_SHA256",
+      "INFILTRATION": "PASS_EXACT_CONTENT_SHA256",
+      "PORT_SCAN": "PASS_EXACT_CONTENT_SHA256",
+      "WEB_ATTACK": "PASS_EXACT_CONTENT_SHA256"
+    },
+    "eligible_family_count": 5
+  },
+  "fit_budget": {
+    "new_fits_authorized": 108,
+    "new_fits_consumed": 0,
+    "new_fits_remaining": 108,
+    "existing_reused": 12,
+    "component_universe": 120,
+    "scientific_evaluation_cells": 110
+  },
+  "scientific_access": {
+    "membership_label_rows_read_physical": 3119345,
+    "membership_label_rows_used_effective": 2830743,
+    "predictor_values_read": 0,
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_predictor_openings": 0
+  },
+  "runtime_cache_policy": {
+    "global_cache": "/kaggle/working/stage28_1a_runtime_cache/stage27_global_cache",
+    "chronology_memberships": "/kaggle/working/stage28_1a_runtime_cache/stage27_chronological_memberships",
+    "committed_to_git": false,
+    "recovery_rule": "Recover the same 8 byte-exact frozen CICIDS2017 source assets and require historical global-array and fold-membership content SHA256 before use."
+  },
+  "next_authorized_step": "Stage28-1B — materialize and freeze the five Stage28B random-LOAO memberships using fixed membership seed 42; audit zero held-out-family and target-only-unseen leakage; freeze the 120-component execution manifest before fit #1."
+}

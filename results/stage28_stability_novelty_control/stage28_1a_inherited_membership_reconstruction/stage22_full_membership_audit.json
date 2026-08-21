@@ -1,0 +1,35 @@
+{
+  "stage": "Stage28-1A-R1",
+  "type": "STAGE22R_INHERITED_FULL_MEMBERSHIP_AUDIT",
+  "created_at_utc": "2026-08-21T16:29:16.577777+00:00",
+  "stage28_parent_commit": "0029c28c417d63ffb45ad4096ab7c44cbd875116",
+  "membership_summary": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/stage22r_1b1_membership_summary.json",
+    "sha256": "b4dc00345ba8ca91a1d194949ca0321225676664c84a11b45cf4ee4bfcfa799d"
+  },
+  "random_validation_membership": {
+    "path": "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/random_validation.packbits",
+    "expected_sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad",
+    "actual_sha256": "8a308aa5c28008895559a87ba2335a82eac69a4a3b99303d42d598f7afbe2fad",
+    "logical_length": 14412403,
+    "population": 2882481,
+    "exact_match": true
+  },
+  "RANDOM_NATURAL": {
+    "train_rows": 11529922,
+    "validation_rows": 2882481,
+    "membership_changed": false
+  },
+  "CHRONOLOGICAL_NATURAL": {
+    "train_rows": 13818623,
+    "validation_rows": 593780,
+    "membership_changed": false
+  },
+  "scientific_operations": {
+    "model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "holdout_predictor_openings": 0
+  },
+  "status": "PASS_EXACT_INHERITED_MEMBERSHIP"
+}

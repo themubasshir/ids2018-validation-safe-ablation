@@ -1,0 +1,334 @@
+{
+  "stage": "Stage27-3B1",
+  "type": "PREREGISTERED_BEHAVIORAL_SIMILARITY_RESULTS",
+  "scientific_parent_commit": "283690948d44345123d838fd47a8764441f491c2",
+  "created_at_utc": "2026-08-21T14:25:42.532951+00:00",
+  "scientific_question": "Is unseen-family transfer descriptively associated with behavioral similarity between the held-out family and attack families represented in that fold's training set?",
+  "status": "SECONDARY_DESCRIPTIVE_ONLY",
+  "formal_hypothesis_test": false,
+  "p_values": false,
+  "correlation_significance_inference": false,
+  "causal_claim": false,
+  "strong_correlation_inference": false,
+  "families": {
+    "BOT": {
+      "heldout_family": "BOT",
+      "preprocessor": "MON_TUE_WED",
+      "train_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "target_days": [
+        "Friday"
+      ],
+      "heldout_support": 1966,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "heldout_raw_filled_centroid": [
+        350942.67141403863,
+        3.193794506612411,
+        3.3438453713123093,
+        2645.4486266531026,
+        63.8001017293998,
+        51.260683970335705,
+        95.73646024682606,
+        305549.6787457431,
+        46603.45285835999,
+        0.6536113936927772,
+        6.0
+      ],
+      "heldout_standardized_centroid": [
+        -0.4787562031886492,
+        -0.00870783942892247,
+        -0.007518580942956768,
+        0.34732739755220066,
+        -0.0074179421467250855,
+        -0.4394077679932298,
+        -0.3511396391943141,
+        -0.048840718523299145,
+        -0.11482685044735555,
+        0.06405024252748097,
+        -0.774480172729945
+      ],
+      "heldout_missing_fill_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        10,
+        0,
+        0
+      ],
+      "seen_family_support": {
+        "DOS": 252661,
+        "AUTH_BRUTE_FORCE": 13835
+      },
+      "distance_to_seen_family": {
+        "AUTH_BRUTE_FORCE": 0.4296997852059631,
+        "DOS": 3.1119679227149426
+      },
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 0.4296997852059631,
+      "similarity_score": 0.6994475416081423,
+      "benign_distance": 1.0513355872581185
+    },
+    "DDOS": {
+      "heldout_family": "DDOS",
+      "preprocessor": "MON_TUE_WED",
+      "train_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "target_days": [
+        "Friday"
+      ],
+      "heldout_support": 128027,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "heldout_raw_filled_centroid": [
+        16955591.772891656,
+        4.47243940731252,
+        3.2558210377498495,
+        31.908597405234833,
+        7373.6349988674265,
+        736.8852831962374,
+        1577.7754840792813,
+        61116.96806427515,
+        172.78721745224456,
+        0.6241417825927343,
+        6.0
+      ],
+      "heldout_standardized_centroid": [
+        -0.02329510513062946,
+        -0.007163595303168024,
+        -0.007598717631310512,
+        -0.08405615865406403,
+        -0.004482458266160018,
+        1.9592264028973414,
+        2.243427932330315,
+        -0.05807900469017642,
+        -0.2839512083214585,
+        0.011253345383335764,
+        -0.774480172729945
+      ],
+      "heldout_missing_fill_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "seen_family_support": {
+        "DOS": 252661,
+        "AUTH_BRUTE_FORCE": 13835
+      },
+      "distance_to_seen_family": {
+        "AUTH_BRUTE_FORCE": 3.688011528978721,
+        "DOS": 1.6080513740288278
+      },
+      "nearest_seen_family": "DOS",
+      "nearest_seen_distance": 1.6080513740288278,
+      "similarity_score": 0.38342802981493207,
+      "benign_distance": 3.478910262941095
+    },
+    "INFILTRATION": {
+      "heldout_family": "INFILTRATION",
+      "preprocessor": "MON_TUE",
+      "train_days": [
+        "Monday",
+        "Tuesday"
+      ],
+      "target_days": [
+        "Thursday"
+      ],
+      "heldout_support": 36,
+      "support_status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50",
+      "heldout_raw_filled_centroid": [
+        78407720.5,
+        830.2222222222222,
+        829.6111111111111,
+        376725.77777777775,
+        5013.666666666667,
+        161.10129235988887,
+        256.938563423,
+        20188.219030217413,
+        2820.0630398796666,
+        0.6388888888888888,
+        6.0
+      ],
+      "heldout_standardized_centroid": [
+        2.3294460319817083,
+        0.9299193363849259,
+        0.6966312517045667,
+        62.87896638654455,
+        -0.0055398413559460315,
+        0.3216190596574603,
+        0.4980058130505877,
+        -0.06195830988081509,
+        -0.2581889861061671,
+        -0.04073225615668112,
+        -0.8749371563553617
+      ],
+      "heldout_missing_fill_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seen_family_support": {
+        "AUTH_BRUTE_FORCE": 13835
+      },
+      "distance_to_seen_family": {
+        "AUTH_BRUTE_FORCE": 62.962761929999644
+      },
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 62.962761929999644,
+      "similarity_score": 0.01563409661850425,
+      "benign_distance": 62.94211383193508
+    },
+    "PORT_SCAN": {
+      "heldout_family": "PORT_SCAN",
+      "preprocessor": "MON_TUE_WED",
+      "train_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "target_days": [
+        "Friday"
+      ],
+      "heldout_support": 158930,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "heldout_raw_filled_centroid": [
+        82820.22837098094,
+        1.0175800666960297,
+        1.0049581576794815,
+        1.0891713332913862,
+        12.237865727049645,
+        3.2460249950283644,
+        3.881058569755948,
+        220187.0113703445,
+        62640.931553076734,
+        0.992927704020638,
+        5.999842698043164
+      ],
+      "heldout_standardized_centroid": [
+        -0.4861107303199406,
+        -0.011336095611215777,
+        -0.009647886194673983,
+        -0.08914312631875182,
+        -0.007438648512157506,
+        -0.6073854074359526,
+        -0.5119485265638263,
+        -0.0520669837272618,
+        -0.05641010692830768,
+        0.6719594638230705,
+        -0.7745096739284966
+      ],
+      "heldout_missing_fill_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        126,
+        126,
+        0,
+        0
+      ],
+      "seen_family_support": {
+        "DOS": 252661,
+        "AUTH_BRUTE_FORCE": 13835
+      },
+      "distance_to_seen_family": {
+        "AUTH_BRUTE_FORCE": 0.5370217063197129,
+        "DOS": 3.4312334945279366
+      },
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 0.5370217063197129,
+      "similarity_score": 0.6506088989428962,
+      "benign_distance": 1.223807463090658
+    },
+    "WEB_ATTACK": {
+      "heldout_family": "WEB_ATTACK",
+      "preprocessor": "MON_TUE",
+      "train_days": [
+        "Monday",
+        "Tuesday"
+      ],
+      "target_days": [
+        "Thursday"
+      ],
+      "heldout_support": 2180,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT",
+      "heldout_raw_filled_centroid": [
+        6533718.760550459,
+        10.945412844036698,
+        5.281192660550459,
+        1820.8798165137614,
+        3772.894036697248,
+        25.568070797596327,
+        33.88601429004587,
+        157.91352179851378,
+        3138.9125099951034,
+        0.10917431192660551,
+        6.0
+      ],
+      "heldout_standardized_centroid": [
+        -0.138511111130009,
+        -0.00010134913503647744,
+        -0.006248421571010034,
+        0.21552826902868097,
+        -0.006007550600114549,
+        -0.45408634709771106,
+        -0.41466154586291526,
+        -0.0627932449915355,
+        -0.2568208972407315,
+        -1.0127524229958687,
+        -0.8749371563553617
+      ],
+      "heldout_missing_fill_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seen_family_support": {
+        "AUTH_BRUTE_FORCE": 13835
+      },
+      "distance_to_seen_family": {
+        "AUTH_BRUTE_FORCE": 1.173885572269472
+      },
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 1.173885572269472,
+      "similarity_score": 0.46000581298123694,
+      "benign_distance": 1.528111100564871
+    }
+  }
+}

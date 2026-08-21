@@ -1,0 +1,762 @@
+{
+  "stage": "Stage27-3B1",
+  "scientific_parent_commit": "283690948d44345123d838fd47a8764441f491c2",
+  "created_at_utc": "2026-08-21T14:25:42.529710+00:00",
+  "authorized_columns": [
+    "Label",
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "Packet Length Mean",
+    "Packet Length Std",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Down/Up Ratio",
+    "Protocol"
+  ],
+  "forbidden_other_predictor_columns_read": 0,
+  "effective_population_rows": 2830743,
+  "source_segments": {
+    "0": {
+      "day": "Monday",
+      "basename": "Monday-WorkingHours.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Monday-WorkingHours.pcap_ISCX.csv.parquet",
+      "sha256": "dfdcef4b8670e52af54dc4f82174834365a393473e877174cca46d17b12dfd02",
+      "size_bytes": 65465382,
+      "physical_rows": 529918,
+      "effective_rows": 529918,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 529918,
+        "BOT": 0,
+        "DDOS": 0,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": true,
+      "descriptor_numeric_audit_training_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 373,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 64,
+          "nan_after_inf_conversion": 437
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 437,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 437
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "1": {
+      "day": "Tuesday",
+      "basename": "Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Tuesday-WorkingHours.pcap_ISCX.csv.parquet",
+      "sha256": "27e83d518cb093faefd0f883cb4df3ad8b353f150934004f28d0e7962f9f31c4",
+      "size_bytes": 52701751,
+      "physical_rows": 445909,
+      "effective_rows": 445909,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 432074,
+        "BOT": 0,
+        "DDOS": 0,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 13835,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": true,
+      "descriptor_numeric_audit_training_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 63,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 201,
+          "nan_after_inf_conversion": 264
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 264,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 264
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "2": {
+      "day": "Wednesday",
+      "basename": "Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Wednesday-workingHours.pcap_ISCX.csv.parquet",
+      "sha256": "d23a259820b16e1ad54f9f3b58d5727c5032d383015f90bc7c07cebbdf8a7140",
+      "size_bytes": 76512727,
+      "physical_rows": 692703,
+      "effective_rows": 692703,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 440031,
+        "BOT": 0,
+        "DDOS": 0,
+        "DOS": 252661,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 11,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": true,
+      "descriptor_numeric_audit_training_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 289,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 1008,
+          "nan_after_inf_conversion": 1297
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 1297,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 1297
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "3": {
+      "day": "Thursday",
+      "basename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv.parquet",
+      "sha256": "5da010354f0fc1040fd1fe65967096e1063475de8dd30ae4f657c07201d728a7",
+      "size_bytes": 27901448,
+      "physical_rows": 288602,
+      "effective_rows": 288602,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 288566,
+        "BOT": 0,
+        "DDOS": 0,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 36,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": false,
+      "descriptor_numeric_audit_training_pass": null,
+      "descriptor_values_read_in_target_pass": true,
+      "descriptor_numeric_audit_target_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 189,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 18,
+          "nan_after_inf_conversion": 207
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 207,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 207
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "4": {
+      "day": "Thursday",
+      "basename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv.parquet",
+      "sha256": "d8110c04a7af91124ada1c5ad901c4210879df1af8882dc637767532e7165350",
+      "size_bytes": 19674280,
+      "physical_rows": 458968,
+      "effective_rows": 170366,
+      "inclusion_rule": "INCLUDE_PHYSICAL_ORDINALS_1_THROUGH_170366;EXCLUDE_FROZEN_ALL_85_COLUMN_NULL_EOF_SUFFIX_170367_THROUGH_458968",
+      "family_counts_effective": {
+        "BENIGN": 168186,
+        "BOT": 0,
+        "DDOS": 0,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 2180,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": false,
+      "descriptor_numeric_audit_training_pass": null,
+      "descriptor_values_read_in_target_pass": true,
+      "descriptor_numeric_audit_target_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 115,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 20,
+          "nan_after_inf_conversion": 135
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 135,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 135
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "5": {
+      "day": "Friday",
+      "basename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv.parquet",
+      "sha256": "7c5876d52189fc01af54bad6cf23afe9f7fbc0e3ca6c3595920754f0c3ba8f66",
+      "size_bytes": 23048086,
+      "physical_rows": 225745,
+      "effective_rows": 225745,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 97718,
+        "BOT": 0,
+        "DDOS": 128027,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": false,
+      "descriptor_numeric_audit_training_pass": null,
+      "descriptor_values_read_in_target_pass": true,
+      "descriptor_numeric_audit_target_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 30,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 4,
+          "nan_after_inf_conversion": 34
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 34,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 34
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "6": {
+      "day": "Friday",
+      "basename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv.parquet",
+      "sha256": "4d78cee297c27f1a9947b9384793e587a46c7a3ea89db199553dabddc9835d4a",
+      "size_bytes": 18632427,
+      "physical_rows": 286467,
+      "effective_rows": 286467,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 127537,
+        "BOT": 0,
+        "DDOS": 0,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 158930,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": false,
+      "descriptor_numeric_audit_training_pass": null,
+      "descriptor_values_read_in_target_pass": true,
+      "descriptor_numeric_audit_target_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 356,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 15,
+          "nan_after_inf_conversion": 371
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 371,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 371
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    },
+    "7": {
+      "day": "Friday",
+      "basename": "Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "resolved_path": "/kaggle/working/stage27_cicids2017_sources/Friday-WorkingHours-Morning.pcap_ISCX.csv.parquet",
+      "sha256": "2c00236b13a69f4b1c222b8f4a89451dc2148cb04a8cd0c45c2a87af51471774",
+      "size_bytes": 21999571,
+      "physical_rows": 191033,
+      "effective_rows": 191033,
+      "inclusion_rule": "INCLUDE_ALL_PHYSICAL_ROWS",
+      "family_counts_effective": {
+        "BENIGN": 189067,
+        "BOT": 1966,
+        "DDOS": 0,
+        "DOS": 0,
+        "AUTH_BRUTE_FORCE": 0,
+        "INFILTRATION": 0,
+        "PORT_SCAN": 0,
+        "WEB_ATTACK": 0,
+        "TARGET_ONLY_UNSEEN": 0,
+        "OTHER_ATTACK_UNSEEN_LABEL": 0
+      },
+      "descriptor_values_read_in_this_pass": false,
+      "descriptor_numeric_audit_training_pass": null,
+      "descriptor_values_read_in_target_pass": true,
+      "descriptor_numeric_audit_target_pass": {
+        "Flow Duration": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Backward Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Fwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Total Length of Bwd Packets": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Mean": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Packet Length Std": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Flow Bytes/s": {
+          "positive_inf_to_nan": 94,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 28,
+          "nan_after_inf_conversion": 122
+        },
+        "Flow Packets/s": {
+          "positive_inf_to_nan": 122,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 122
+        },
+        "Down/Up Ratio": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        },
+        "Protocol": {
+          "positive_inf_to_nan": 0,
+          "negative_inf_to_nan": 0,
+          "nan_before_inf_conversion": 0,
+          "nan_after_inf_conversion": 0
+        }
+      }
+    }
+  },
+  "unknown_nonbenign_labels": {}
+}

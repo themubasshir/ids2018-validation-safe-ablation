@@ -1,0 +1,194 @@
+{
+  "stage": "Stage27-3B1",
+  "type": "BEHAVIORAL_SIMILARITY_EXECUTION_RECEIPT",
+  "scientific_parent_commit": "283690948d44345123d838fd47a8764441f491c2",
+  "created_at_utc": "2026-08-21T14:25:43.419697+00:00",
+  "stage27_3b0_implementation_lock_sha256": "0bcfd61b9e4f397f1f2c8bc60f50059ee8d320cb75481ab11c7dd49ad68e8376",
+  "stage27_0_similarity_spec_sha256": "2c4feeb305f22402270cf821754af729efa605760d1682d435ce055bb6d8d952",
+  "membership_reconstruction": {
+    "method": "RECONSTRUCT_FROM_FROZEN_EFFECTIVE_SOURCE_ORDER_DAY_GEOMETRY_AND_TAXONOMY",
+    "arrays_verified": 20,
+    "expected_arrays": 20,
+    "verification": "EXACT_INT32_CONTENT_SHA256_MATCH_STAGE27_1A",
+    "folds": {
+      "BOT": {
+        "train": {
+          "count": 1668519,
+          "content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+          "frozen_content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+          "status": "PASS_EXACT"
+        },
+        "validation": {
+          "count": 458968,
+          "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "frozen_content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "status": "PASS_EXACT"
+        },
+        "primary_target": {
+          "count": 416288,
+          "content_sha256": "023d4b9ec7cd5a0e006c12aba105cc4ebea06372d9b00e7b50c87ac2a4a88a99",
+          "frozen_content_sha256": "023d4b9ec7cd5a0e006c12aba105cc4ebea06372d9b00e7b50c87ac2a4a88a99",
+          "status": "PASS_EXACT"
+        },
+        "operational_target": {
+          "count": 703245,
+          "content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+          "frozen_content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+          "status": "PASS_EXACT"
+        }
+      },
+      "DDOS": {
+        "train": {
+          "count": 1668519,
+          "content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+          "frozen_content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+          "status": "PASS_EXACT"
+        },
+        "validation": {
+          "count": 458968,
+          "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "frozen_content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "status": "PASS_EXACT"
+        },
+        "primary_target": {
+          "count": 542349,
+          "content_sha256": "2c9a3b51e1e3cb4782a79b1ead7ba0f7001b4fc1c0f353ff004b0150f0ba510a",
+          "frozen_content_sha256": "2c9a3b51e1e3cb4782a79b1ead7ba0f7001b4fc1c0f353ff004b0150f0ba510a",
+          "status": "PASS_EXACT"
+        },
+        "operational_target": {
+          "count": 703245,
+          "content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+          "frozen_content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+          "status": "PASS_EXACT"
+        }
+      },
+      "INFILTRATION": {
+        "train": {
+          "count": 975827,
+          "content_sha256": "60f15d9416646473ffcae8073cd1fa9af3dd80c5025b42644e8df657438e1eae",
+          "frozen_content_sha256": "60f15d9416646473ffcae8073cd1fa9af3dd80c5025b42644e8df657438e1eae",
+          "status": "PASS_EXACT"
+        },
+        "validation": {
+          "count": 692692,
+          "content_sha256": "75b18c272ba39cf96fc4b5adec3d51165c3ee1e11a003d6329ff9eef643ef1a3",
+          "frozen_content_sha256": "75b18c272ba39cf96fc4b5adec3d51165c3ee1e11a003d6329ff9eef643ef1a3",
+          "status": "PASS_EXACT"
+        },
+        "primary_target": {
+          "count": 456788,
+          "content_sha256": "a6c39d9e4adb802223b66ae53c0af56c73894de44b6b205a4b568ea91a88daa5",
+          "frozen_content_sha256": "a6c39d9e4adb802223b66ae53c0af56c73894de44b6b205a4b568ea91a88daa5",
+          "status": "PASS_EXACT"
+        },
+        "operational_target": {
+          "count": 458968,
+          "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "frozen_content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "status": "PASS_EXACT"
+        }
+      },
+      "PORT_SCAN": {
+        "train": {
+          "count": 1668519,
+          "content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+          "frozen_content_sha256": "b001047298984aa5db11b80ebbdb12fe48a2277ee7ed62ad1a27817ef67adc7e",
+          "status": "PASS_EXACT"
+        },
+        "validation": {
+          "count": 458968,
+          "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "frozen_content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "status": "PASS_EXACT"
+        },
+        "primary_target": {
+          "count": 573252,
+          "content_sha256": "ae25707af10a5a670670db235a1ae8ff7ad92aa9f89f0a1916267e04930e7e4b",
+          "frozen_content_sha256": "ae25707af10a5a670670db235a1ae8ff7ad92aa9f89f0a1916267e04930e7e4b",
+          "status": "PASS_EXACT"
+        },
+        "operational_target": {
+          "count": 703245,
+          "content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+          "frozen_content_sha256": "186f5050d27da2968d034c83492cd2677290c7ecd5497906cf6de2964c9b9201",
+          "status": "PASS_EXACT"
+        }
+      },
+      "WEB_ATTACK": {
+        "train": {
+          "count": 975827,
+          "content_sha256": "60f15d9416646473ffcae8073cd1fa9af3dd80c5025b42644e8df657438e1eae",
+          "frozen_content_sha256": "60f15d9416646473ffcae8073cd1fa9af3dd80c5025b42644e8df657438e1eae",
+          "status": "PASS_EXACT"
+        },
+        "validation": {
+          "count": 692692,
+          "content_sha256": "75b18c272ba39cf96fc4b5adec3d51165c3ee1e11a003d6329ff9eef643ef1a3",
+          "frozen_content_sha256": "75b18c272ba39cf96fc4b5adec3d51165c3ee1e11a003d6329ff9eef643ef1a3",
+          "status": "PASS_EXACT"
+        },
+        "primary_target": {
+          "count": 458932,
+          "content_sha256": "e62a92c55352d614f88c6c5482bcc27cae02b97100ade66366b3c3777213039a",
+          "frozen_content_sha256": "e62a92c55352d614f88c6c5482bcc27cae02b97100ade66366b3c3777213039a",
+          "status": "PASS_EXACT"
+        },
+        "operational_target": {
+          "count": 458968,
+          "content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "frozen_content_sha256": "0b4a69d61627e91eff65bdf1479c2f03fc58c3b25fcedd91f948a37dbf680a40",
+          "status": "PASS_EXACT"
+        }
+      }
+    }
+  },
+  "preprocessing": {
+    "fit_population": "CURRENT_FOLD_TRAINING_ROWS_ONLY",
+    "training_median_fill": true,
+    "training_mean_after_fill": true,
+    "training_standard_deviation_ddof": 0,
+    "zero_std_scale": 1.0,
+    "target_fitted_preprocessing": false
+  },
+  "similarity": {
+    "descriptor_count": 11,
+    "family_centroid": "ARITHMETIC_MEAN_STANDARDIZED_DESCRIPTOR_VECTOR",
+    "distance": "EUCLIDEAN_DISTANCE",
+    "nearest_tie_rule": "LEXICOGRAPHICALLY_SMALLEST_FAMILY_ON_EXACT_TIE",
+    "similarity_score": "1 / (1 + nearest_seen_distance)",
+    "benign_distance": "EUCLIDEAN_DISTANCE_TO_TRAINING_BENIGN_CENTROID"
+  },
+  "association_reporting": {
+    "family_similarity_values": 5,
+    "family_x_learner_points": 10,
+    "figures": 2,
+    "formal_hypothesis_test": false,
+    "p_values": false,
+    "regression_inference": false,
+    "correlation_significance_inference": false,
+    "causal_claim": false,
+    "strong_correlation_inference": false,
+    "status": "EXPLORATORY_DESCRIPTIVE_ASSOCIATION_ONLY"
+  },
+  "scientific_actions": {
+    "source_assets_read": 8,
+    "authorized_descriptor_columns_read": 11,
+    "other_predictor_columns_read": 0,
+    "model_fits": 0,
+    "model_refits": 0,
+    "model_loading": 0,
+    "model_inference": 0,
+    "target_reopenings": 0,
+    "threshold_selection": 0,
+    "threshold_reselection": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "target_opening_ledger": {
+    "consumed": 5,
+    "budget": 5,
+    "remaining": 0,
+    "reopening_authorized": false
+  }
+}

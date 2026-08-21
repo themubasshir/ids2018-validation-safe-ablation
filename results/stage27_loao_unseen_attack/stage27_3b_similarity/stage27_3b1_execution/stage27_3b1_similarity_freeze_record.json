@@ -1,0 +1,116 @@
+{
+  "stage": "Stage27-3B1",
+  "status": "PREREGISTERED_SECONDARY_BEHAVIORAL_SIMILARITY_FROZEN_LOCALLY_PENDING_COMMIT_PUSH_REMOTE_VERIFICATION",
+  "scientific_parent_commit": "283690948d44345123d838fd47a8764441f491c2",
+  "created_at_utc": "2026-08-21T14:25:43.422351+00:00",
+  "required_artifact_count": 8,
+  "artifact_hashes_before_freeze_record": {
+    "descriptor_source_audit.json": {
+      "bytes": 25643,
+      "sha256": "1faa00ca98af467c4d380d7ca2b19435b7c0810c249f82f719871d9be871d70f"
+    },
+    "family_similarity_results.json": {
+      "bytes": 8533,
+      "sha256": "36d5bc89124d18efaee8b714fee7fde766ddd676e91859463b50504f98b02cb5"
+    },
+    "figures/similarity_vs_unseen_pr_auc.png": {
+      "bytes": 85982,
+      "sha256": "7f231a2133555900e2b3ee21b5a3cd0723fd53ba0f238ae622213ca35466b0ff"
+    },
+    "figures/similarity_vs_unseen_roc_auc.png": {
+      "bytes": 94107,
+      "sha256": "e4c13dde9c38ba23d2ffdbf32c2f609478eb70cc711d5dc927e96f00d11cf517"
+    },
+    "fold_preprocessing_centroids.json": {
+      "bytes": 21229,
+      "sha256": "d2897cde6943ca28e3e42bd1223b1245bd50c3d7b3a6558d1705da47361f9a3e"
+    },
+    "similarity_execution_receipt.json": {
+      "bytes": 8284,
+      "sha256": "601763f74b96eb8c06f1316fd2fbc0f426260b3a8db984cf2b190ac34338b369"
+    },
+    "similarity_performance_points.csv": {
+      "bytes": 2229,
+      "sha256": "d2889afa65dfc225a7992298b78e108135c383eca260530d169ec51a75e06524"
+    }
+  },
+  "membership_verification": {
+    "folds": 5,
+    "roles_per_fold": 4,
+    "arrays_verified": 20,
+    "verification": "PASS_EXACT_CONTENT_SHA256"
+  },
+  "similarity_results": {
+    "BOT": {
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 0.4296997852059631,
+      "similarity_score": 0.6994475416081423,
+      "benign_distance": 1.0513355872581185,
+      "heldout_support": 1966,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT"
+    },
+    "DDOS": {
+      "nearest_seen_family": "DOS",
+      "nearest_seen_distance": 1.6080513740288278,
+      "similarity_score": 0.38342802981493207,
+      "benign_distance": 3.478910262941095,
+      "heldout_support": 128027,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT"
+    },
+    "INFILTRATION": {
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 62.962761929999644,
+      "similarity_score": 0.01563409661850425,
+      "benign_distance": 62.94211383193508,
+      "heldout_support": 36,
+      "support_status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50"
+    },
+    "PORT_SCAN": {
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 0.5370217063197129,
+      "similarity_score": 0.6506088989428962,
+      "benign_distance": 1.223807463090658,
+      "heldout_support": 158930,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT"
+    },
+    "WEB_ATTACK": {
+      "nearest_seen_family": "AUTH_BRUTE_FORCE",
+      "nearest_seen_distance": 1.173885572269472,
+      "similarity_score": 0.46000581298123694,
+      "benign_distance": 1.528111100564871,
+      "heldout_support": 2180,
+      "support_status": "INFERENTIAL_ELIGIBLE_SUPPORT"
+    }
+  },
+  "scientific_actions_completed": {
+    "source_assets_read": 8,
+    "authorized_descriptor_columns_read": 11,
+    "other_predictor_columns_read": 0,
+    "model_fits": 0,
+    "model_refits": 0,
+    "model_loading": 0,
+    "model_inference": 0,
+    "target_reopenings": 0,
+    "threshold_selection": 0,
+    "threshold_reselection": 0,
+    "bootstrap_replicates": 0,
+    "gpu_hours": 0
+  },
+  "target_opening_ledger": {
+    "consumed": 5,
+    "budget": 5,
+    "remaining": 0,
+    "reopening_authorized": false
+  },
+  "interpretation": {
+    "status": "SECONDARY_EXPLORATORY_DESCRIPTIVE_ASSOCIATION_ONLY",
+    "formal_correlation_inference": false,
+    "causal_claim": false,
+    "strong_correlation_claim": false,
+    "infiltration_family_result": "DESCRIPTIVE_ONLY_SUPPORT_LT_50"
+  },
+  "next_authorized_step_after_remote_verification": "SYNTHESIZE_STAGE27_RESULTS_FROM_REMOTELY_FROZEN PRIMARY_TARGET_RESULTS_BOOTSTRAP_UNCERTAINTY_AND_SECONDARY SIMILARITY_ARTIFACTS. NO TARGET REOPENING, MODEL INFERENCE, REFITTING, OR THRESHOLD RESELECTION.",
+  "additional_model_fit_authorized": false,
+  "target_reopening_authorized": false,
+  "threshold_reselection_authorized": false
+}

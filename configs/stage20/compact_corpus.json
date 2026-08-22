@@ -1,0 +1,22 @@
+{
+  "stage": 20,
+  "substage": "compact_corpus",
+  "scientific_execution_enabled": false,
+  "source_cells": [423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434],
+  "format": "STAGE20_1E0_COMPACT_VARIABLE_AUTHENTIC_BYTES",
+  "encoder_sha256": "9883fe2b27020aaff707a753123b35eb3223d21abf295d056ec233e532f94222",
+  "loader_sha256": "a1ba15881afeb1cf4de9225a06df9ae676b95f596c8ddced7734a445ba7624d0",
+  "dense_padding_persisted": false,
+  "padding_mask_persisted": false,
+  "padding_mask_reconstructed_from_lengths": true,
+  "components": ["encoded_bytes.bin", "flow_offsets.npy", "labels.npy", "packet_lengths.npy"],
+  "receipts": {
+    "Monday": {"split": "TRAIN", "flows": 528509, "encoded_authentic_bytes": 522845159, "roundtrip_first_n": 128, "roundtrip_pass": true},
+    "Tuesday": {"split": "TRAIN", "flows": 4170, "encoded_authentic_bytes": 4078271, "roundtrip_first_n": 128, "roundtrip_pass": true},
+    "Wednesday": {"split": "TRAIN", "flows": 12951, "encoded_authentic_bytes": 13824937, "roundtrip_first_n": 128, "roundtrip_pass": true},
+    "Thursday": {"split": "VALIDATION", "flows": 8197, "encoded_authentic_bytes": 7586531, "roundtrip_first_n": 128, "roundtrip_pass": true}
+  },
+  "join": {"signature": "FROZEN_DIRECTED_S4_EXACT_21_FIELD_SIGNATURE", "matching": "EXACT_ONLY", "fuzzy": false, "nearest": false, "label_guided_repair": false},
+  "thursday_erratum": {"structural_all_column_null_suffix_rows": 288602, "frozen_before_thursday_pcap_or_join": true, "actual_record_null_label_action": "FAIL_UNCHANGED"},
+  "scientific_boundaries": {"corpus_materialization_authorized": false, "corpus_regeneration_authorized": false, "raw_source_open_authorized": false, "model_training_authorized": false, "validation_inference_authorized": false, "friday_access_authorized": false}
+}

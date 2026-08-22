@@ -1,0 +1,40 @@
+{
+  "stage": 20,
+  "substage": "packet_representation",
+  "scientific_execution_enabled": false,
+  "source_cells": [312, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422],
+  "topology": {"rows": "packet order within flow", "columns": "IPv4 byte offset", "channels": 1, "packet_order": "original capture order", "cross_flow_concatenation": false},
+  "byte_origin": "Captured IPv4 byte 0; Ethernet/VLAN/PCAP metadata/timestamps excluded",
+  "dimension_selection": {
+    "source": "TRAIN Monday+Tuesday+Wednesday exact histogram sum only",
+    "quantile": 0.95,
+    "definition": "NEAREST_RANK",
+    "flow_raw_p95": 38,
+    "packet_length_raw_p95": 2960,
+    "packets_per_flow": 64,
+    "bytes_per_packet": 256,
+    "channels": 1,
+    "area": 16384,
+    "validation_or_holdout_statistics_used": false
+  },
+  "encoding": {
+    "stored_dtype": "uint8",
+    "model_scaling": "byte / 255",
+    "dataset_normalization": false,
+    "packet_truncation": "earliest 64 packets",
+    "byte_truncation": "earliest 256 IPv4 bytes",
+    "row_padding": "bottom zero rows",
+    "byte_padding": "right zero bytes",
+    "padding_mask": "Boolean authentic-position mask independent of byte value"
+  },
+  "masking": {
+    "ipv4": ["identification", "header checksum", "source address", "destination address"],
+    "tcp": ["sequence number", "acknowledgement number", "checksum"],
+    "udp": ["checksum"],
+    "transport_mask_only_for_direct_initial_tcp_or_udp": true,
+    "mask_before_truncation": true,
+    "preserve_packet_length": true
+  },
+  "combined_train_geometry": {"exportable_flows": 1667759, "retained_packets": 36661560, "flow_truncation_rate": 0.021487517081304912, "packet_byte_truncation_rate": 0.42889238755797626, "captured_ipv4_byte_loss_rate": 0.8415597517796901},
+  "scientific_boundaries": {"pcap_parse_authorized": false, "packet_image_regeneration_authorized": false, "real_encoder_execution_authorized": false, "dimension_reselection_authorized": false}
+}

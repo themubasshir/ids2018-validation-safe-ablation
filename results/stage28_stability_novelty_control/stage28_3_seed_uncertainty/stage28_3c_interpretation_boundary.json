@@ -1,0 +1,19 @@
+{
+  "stage": "Stage28-3C",
+  "contrast": "RANDOM_MINUS_CHRONOLOGICAL_LOAO",
+  "qualitative_interpretation_matrix_present": true,
+  "automatic_interpretation_labels_assigned": false,
+  "reason": "The frozen interpretation matrix contains labels such as RANDOM_LOAO_MUCH_GREATER_THAN_CHRONOLOGICAL_LOAO and RANDOM_AND_CHRONOLOGICAL_LOAO_BOTH_COLLAPSE, but no frozen numeric cutoffs operationalize 'MUCH_GREATER', 'COLLAPSE', or 'SURVIVE'. Assigning thresholds after observing Stage28 results would constitute a post-result condition.",
+  "authorized_output": "Continuous matched seed-level contrasts, frozen five-seed summary statistics, and numeric sign counts only.",
+  "causal_claim_prohibited": "The random-vs-chronological difference is purely caused by temporal drift.",
+  "preferred_interpretive_language": [
+    "random-vs-chronological LOAO contrast",
+    "consistent with chronology compounding novelty difficulty",
+    "conditional on the benchmark and frozen protocol"
+  ],
+  "infiltration": "DESCRIPTIVE_ONLY_SUPPORT_36_LT_50",
+  "aggregate_zero_day_score": "NOT_AUTHORIZED_AND_NOT_CREATED",
+  "shared_stage22_final_holdout_openings_this_stage": 0,
+  "new_formal_statistical_tests_this_stage": 0,
+  "post_result_condition_creation": 0
+}

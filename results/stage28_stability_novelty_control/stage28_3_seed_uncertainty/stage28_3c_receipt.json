@@ -1,0 +1,98 @@
+{
+  "stage": "Stage28-3C",
+  "type": "RANDOM_VS_CHRONOLOGICAL_LOAO_CONTRAST",
+  "created_at_utc": "2026-08-22T17:46:47.529488+00:00",
+  "scientific_parent_commit": "aefeb93e3d2e7e6e965e1c5178347505e57f165f",
+  "input": {
+    "path": "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_loao_seed_level_metrics.csv",
+    "sha256": "0ad43a29d07259d1566a0a4d5d28dade934516b8dd04db92a5ec59c32350ac4f",
+    "chronology_seed_realizations": 50,
+    "random_seed_realizations": 50
+  },
+  "contrast_design": {
+    "pairing": "EXACT_FAMILY_LEARNER_MODEL_SEED",
+    "contrast": "RANDOM_VALUE_MINUS_CHRONOLOGICAL_VALUE",
+    "families": [
+      "BOT",
+      "DDOS",
+      "INFILTRATION",
+      "PORT_SCAN",
+      "WEB_ATTACK"
+    ],
+    "learners": [
+      "XGBOOST",
+      "LIGHTGBM"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "metrics": [
+      "ROC_AUC",
+      "PR_AUC",
+      "PR_CHANCE_ANCHOR",
+      "PR_EXCESS",
+      "PR_LIFT",
+      "STANDARD_RECALL",
+      "STANDARD_FPR",
+      "STANDARD_PRECISION",
+      "STANDARD_F1",
+      "STANDARD_TP",
+      "STANDARD_FP",
+      "STANDARD_TN",
+      "STANDARD_FN",
+      "BALANCED_RECALL",
+      "BALANCED_FPR",
+      "BALANCED_PRECISION",
+      "BALANCED_F1",
+      "BALANCED_TP",
+      "BALANCED_FP",
+      "BALANCED_TN",
+      "BALANCED_FN",
+      "SECURITY_RECALL",
+      "SECURITY_FPR",
+      "SECURITY_PRECISION",
+      "SECURITY_F1",
+      "SECURITY_TP",
+      "SECURITY_FP",
+      "SECURITY_TN",
+      "SECURITY_FN"
+    ],
+    "five_seed_statistics": [
+      "mean",
+      "median",
+      "sample_standard_deviation_ddof_1",
+      "minimum",
+      "maximum",
+      "range",
+      "IQR_Q75_minus_Q25_linear"
+    ],
+    "numeric_sign_counts": true,
+    "best_seed_reporting": "FORBIDDEN",
+    "new_qualitative_cutoff": false,
+    "new_formal_statistical_test": false,
+    "aggregate_zero_day_score": false
+  },
+  "scientific_operations": {
+    "new_model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_openings": 0,
+    "shared_stage22_final_holdout_openings": 0,
+    "bootstrap_recomputation": 0,
+    "new_formal_statistical_tests": 0
+  },
+  "support_policy": {
+    "INFILTRATION": "DESCRIPTIVE_ONLY_SUPPORT_36_LT_50",
+    "other_families": "INFERENTIAL_SUPPORT_ELIGIBLE"
+  },
+  "interpretation_boundary": {
+    "automatic_interpretation_matrix_category_assignment": false,
+    "reason": "NO_FROZEN_NUMERIC_CUTOFF_FOR_MUCH_GREATER_COLLAPSE_OR_SURVIVE",
+    "causal_temporal_drift_attribution": "PROHIBITED"
+  },
+  "next_authorized_step": "Stage28-4 \u2014 preregistered one-time Stage22 shared-final-holdout inference for all five seed realizations and final Stage22 directional conclusion-stability evaluation. ZERO new fits; threshold selection on the final holdout remains forbidden."
+}

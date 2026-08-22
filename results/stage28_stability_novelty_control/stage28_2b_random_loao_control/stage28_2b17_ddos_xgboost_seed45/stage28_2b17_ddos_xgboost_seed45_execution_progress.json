@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B17",
   "component_id": "C087",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::DDOS::XGBOOST::SEED45",
   "fit_ordinal": 75,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T15:38:10.862600+00:00",
+  "held_out_family": "DDOS",
+  "learner": "XGBOOST",
+  "seed": 45,
+  "membership_seed": 42,
   "model_sha256": "7a290f8df92f5e5ee2cfced2f73d32e56ea742554cd724870c58b77cc0626406",
-  "completed_at_utc": "2026-08-22T15:38:01.692088+00:00",
+  "validation_probability_sha256": "8ed01bb03234d9495ad910f3eeee56a6f9af8a6bdcd8b673dd4b48f629029b34",
+  "primary_target_probability_sha256": "f629e50abd72f0e684ceda3f936cc47d80a8dfaf259226485a241de705750d17",
+  "threshold_grid_sha256": "14da62bc378b7a6c0bba492daea7e723845a87fccd8cdc6518c4db74d46fb160",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

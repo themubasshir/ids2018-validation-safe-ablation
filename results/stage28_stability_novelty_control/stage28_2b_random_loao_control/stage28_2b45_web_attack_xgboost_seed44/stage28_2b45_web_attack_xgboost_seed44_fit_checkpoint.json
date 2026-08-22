@@ -1,0 +1,26 @@
+{
+  "stage": "Stage28-2B45",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C115",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::WEB_ATTACK::XGBOOST::SEED44",
+  "fit_ordinal": 103,
+  "pre_component_new_fits_consumed": 102,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 103,
+  "new_fits_remaining": 5,
+  "held_out_family": "WEB_ATTACK",
+  "learner": "XGBOOST",
+  "training_seed": 44,
+  "membership_seed": 42,
+  "model_artifact": "web_attack_xgboost_seed44_cpu_model.json",
+  "model_sha256": "bc16d91919576d43a2c64be9a6a7218fc4075491e832716a9cd8e34d3de84ee4",
+  "fit_seconds": 118.10348830899966,
+  "model_structure": {
+    "boosted_rounds": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

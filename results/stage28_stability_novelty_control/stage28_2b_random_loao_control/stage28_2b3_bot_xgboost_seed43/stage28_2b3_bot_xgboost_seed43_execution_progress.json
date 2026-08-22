@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B3",
   "component_id": "C073",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::BOT::XGBOOST::SEED43",
   "fit_ordinal": 61,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T15:05:02.459777+00:00",
+  "held_out_family": "BOT",
+  "learner": "XGBOOST",
+  "seed": 43,
+  "membership_seed": 42,
   "model_sha256": "4302562084261ba288aa4c4faa73e3b624d36a980ad17a2c0b429d3b436507c5",
-  "completed_at_utc": "2026-08-22T15:04:53.949643+00:00",
+  "validation_probability_sha256": "2d95d2fd3db10f2a83f3681cdfa7ebfda18d39f0d8c840b2aa926dff5ce80823",
+  "primary_target_probability_sha256": "82d0119c97a3e87a8a877e42b93561e711cd6905a4b00eb1effd1e600bc392a0",
+  "threshold_grid_sha256": "0d5c94071abeb9ec6fca182a9a526341157488ea7418ffc450c62c6271c57a55",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

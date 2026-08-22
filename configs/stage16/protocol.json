@@ -1,0 +1,124 @@
+{
+  "stage": 16,
+  "name": "Duplicate-safe classical benchmark and frozen equal-weight ensemble",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [171, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222],
+    "cell_171_stage": 16
+  },
+  "environment": {
+    "proven": {},
+    "unproven": {
+      "python": "VERSION_NOT_PROVEN",
+      "numpy": "VERSION_NOT_PROVEN",
+      "pandas": "VERSION_NOT_PROVEN",
+      "scikit-learn": "VERSION_NOT_PROVEN",
+      "xgboost": "VERSION_NOT_PROVEN",
+      "lightgbm": "VERSION_NOT_PROVEN",
+      "catboost": "VERSION_NOT_PROVEN",
+      "joblib": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "Stage15 duplicate-safe split, ordered 70-feature representation, and training-only StandardScaler",
+    "Stage16 locked 12-candidate inventory and five-candidate finite tuning protocol",
+    "Frozen validation probabilities, model artifacts, multi-seed receipts, ensemble lock, and holdout receipts"
+  ],
+  "outputs": [
+    "results/stage16_classical_benchmark_checkpoint/ baseline tuning confirmation ensemble and holdout locks",
+    "results/stage16_classical_benchmark_checkpoint/checksums.sha256"
+  ],
+  "verification_artifacts": [
+    "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_0_classical_benchmark_protocol.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_1_locked_classical_candidate_set.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_1b_pretraining_protocol_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_2b_baseline_selection_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_3a_tuning_protocol_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_4a_multiseed_confirmation_protocol_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_4c_confirmation_selection_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_5a_ensemble_protocol_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_5c_final_classical_strategy_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_6a_one_time_holdout_authorization_lock.json",
+    "results/stage16_classical_benchmark_checkpoint/stage16_6c_final_classical_holdout_lock.json"
+  ],
+  "hash_verification_artifacts": {
+    "results/stage15_transformer_checkpoint/stage15_1_duplicate_safe_split_indices.npz": {"size_bytes": 2250161, "sha256": "fd66772bc17e6e629f561bc6a2c5e188d1cf2f923c14830646f4af684400417e"},
+    "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib": {"size_bytes": 2295, "sha256": "ac1e3a9b0a2409edcd98c293f31c22b9c140cc882518881565d16eb1e2a573b5"},
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib": {"size_bytes": 2420416, "sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2"},
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib": {"size_bytes": 864264, "sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f"}
+  },
+  "methodology": {
+    "stage15_relationship": {
+      "split_identity": "Exact Stage15 duplicate-safe train/validation/holdout membership",
+      "rows": {"train": 154686, "validation": 37835, "holdout": 46849},
+      "feature_count": 70,
+      "feature_order_source": "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+      "scaler": "Stage15 StandardScaler fitted on duplicate-safe training rows only"
+    },
+    "baseline": {
+      "seed": 42,
+      "candidate_ids": ["LOGISTIC_REGRESSION", "GAUSSIAN_NAIVE_BAYES", "K_NEAREST_NEIGHBORS", "LINEAR_SVM", "DECISION_TREE", "RANDOM_FOREST", "EXTRA_TREES", "ADABOOST", "GRADIENT_BOOSTING", "XGBOOST", "LIGHTGBM", "CATBOOST"],
+      "scaled_candidates": ["LOGISTIC_REGRESSION", "GAUSSIAN_NAIVE_BAYES", "K_NEAREST_NEIGHBORS", "LINEAR_SVM"],
+      "raw_candidates": ["DECISION_TREE", "RANDOM_FOREST", "EXTRA_TREES", "ADABOOST", "GRADIENT_BOOSTING", "XGBOOST", "LIGHTGBM", "CATBOOST"],
+      "fit_data": "duplicate-safe training only",
+      "selection_data": "duplicate-safe validation only"
+    },
+    "tuning": {
+      "candidate_ids": ["XGBOOST", "LIGHTGBM", "CATBOOST", "K_NEAREST_NEIGHBORS", "RANDOM_FOREST"],
+      "configurations_per_candidate": 12,
+      "total_configurations": 60,
+      "search": "Deterministic predeclared finite configuration search",
+      "seed": 42,
+      "class_weighting": "No global weighting; candidate-specific parameters only. Frozen final LightGBM, XGBoost, and confirmation Random Forest use no class weighting."
+    },
+    "threshold": {
+      "grid": {"minimum": 0.05, "maximum": 0.95, "step": 0.005, "count": 181},
+      "objective": "maximum validation F1",
+      "tie_breakers": ["maximum validation F2", "maximum validation recall", "minimum validation FPR", "minimum threshold"]
+    },
+    "confirmation": {
+      "candidate_ids": ["LIGHTGBM", "XGBOOST", "RANDOM_FOREST"],
+      "configuration_ids": ["LGBM_11", "XGB_11", "RF_11"],
+      "seeds": [7, 29, 101, 313, 997],
+      "standard_deviation_ddof": 0,
+      "single_model_reference": "LIGHTGBM / LGBM_11 / seed42 / threshold0.47"
+    },
+    "limited_ensembles": [
+      {"id": "ENS_LGBM_XGB_EQUAL", "members": ["LIGHTGBM", "XGBOOST"], "weights": [0.5, 0.5]},
+      {"id": "ENS_LGBM_RF_EQUAL", "members": ["LIGHTGBM", "RANDOM_FOREST"], "weights": [0.5, 0.5]},
+      {"id": "ENS_LGBM_XGB_RF_EQUAL", "members": ["LIGHTGBM", "XGBOOST", "RANDOM_FOREST"], "weights": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]}
+    ],
+    "final_strategy": {
+      "id": "ENS_LGBM_XGB_EQUAL",
+      "members": ["LIGHTGBM / LGBM_11 / seed42", "XGBOOST / XGB_11 / seed42"],
+      "weights": [0.5, 0.5],
+      "input_representation": "raw ordered 70-feature representation",
+      "threshold": 0.46,
+      "probability_rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "selected_and_frozen_before_holdout": true
+    },
+    "historical_holdout": {
+      "authorized_openings": 1,
+      "consumed_openings": 1,
+      "rows": 46849,
+      "post_holdout_strategy_selection": false,
+      "post_holdout_threshold_or_weight_search": false,
+      "post_holdout_retraining": false,
+      "opened_during_extraction": false
+    },
+    "model_fitting_authorized": false,
+    "model_deserialization_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false
+  },
+  "holdout_policy": {
+    "historically_opened_once_for_stage16": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "model_artifact_verification": "streaming byte count and SHA-256 only"
+  }
+}

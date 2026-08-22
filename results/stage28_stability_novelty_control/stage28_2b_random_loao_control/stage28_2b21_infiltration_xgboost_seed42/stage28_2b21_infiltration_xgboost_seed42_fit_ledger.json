@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2B21",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C091",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::INFILTRATION::XGBOOST::SEED42",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 78,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 79,
+  "new_fits_remaining": 29,
+  "stage28b_random_loao_new_fits_consumed": 21,
+  "stage28b_random_loao_new_fits_remaining": 29,
+  "status": "FIT_079_SUCCESSFULLY_CONSUMED"
+}

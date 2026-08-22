@@ -1,0 +1,20 @@
+{
+  "stage": "Stage28-2A6",
+  "execution_mode": "STAGE28_AUTO_A",
+  "evaluation_cell_id": "28A_STAGE22::CHRONOLOGICAL_NATURAL::SEED44",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_cell_new_fits_consumed": 8,
+  "this_cell": {
+    "successful_new_fits": 2,
+    "new_fit_components": [
+      "C015",
+      "C016"
+    ],
+    "reused_components": []
+  },
+  "cumulative_new_fits_consumed": 10,
+  "new_fits_remaining": 98,
+  "stage22_new_fits_consumed": 10,
+  "stage22_new_fits_remaining": 8,
+  "status": "FITS_009_AND_010_SUCCESSFULLY_CONSUMED"
+}

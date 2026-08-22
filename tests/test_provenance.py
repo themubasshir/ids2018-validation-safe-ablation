@@ -11,13 +11,27 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from ids_validation.common.provenance import has_required_provenance_fields
 from ids_validation.data import ids2018
-from ids_validation.evaluation import metrics, thresholds
+from ids_validation.evaluation import bootstrap, calibration, metrics, operating_cost, thresholds
+from ids_validation.explainability import shap_analysis
 from ids_validation.models import baselines, neural, tuning
+from ids_validation.stages.stage07 import publication
 
 
 class ExtractedFunctionProvenanceTests(unittest.TestCase):
     def test_all_public_extracted_functions_have_required_fields(self) -> None:
-        modules = (ids2018, metrics, thresholds, baselines, neural, tuning)
+        modules = (
+            ids2018,
+            metrics,
+            thresholds,
+            baselines,
+            neural,
+            tuning,
+            shap_analysis,
+            publication,
+            bootstrap,
+            calibration,
+            operating_cost,
+        )
         missing = []
         for module in modules:
             for name, function in inspect.getmembers(module, inspect.isfunction):

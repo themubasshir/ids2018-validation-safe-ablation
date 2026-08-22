@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B29",
   "component_id": "C099",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::INFILTRATION::XGBOOST::SEED46",
   "fit_ordinal": 87,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T16:05:36.105349+00:00",
+  "held_out_family": "INFILTRATION",
+  "learner": "XGBOOST",
+  "seed": 46,
+  "membership_seed": 42,
   "model_sha256": "4b1190a5fc923c8451eedbcccd1925065d39a9eb53a87c1edc30ca0ddd7dd669",
-  "completed_at_utc": "2026-08-22T16:05:27.897764+00:00",
+  "validation_probability_sha256": "f503db4195e468f4d5c3f5fcb8e8290436b7992635a6637b18713dde72cc6631",
+  "primary_target_probability_sha256": "fad5beff92b0fee0ae95eb5013b24a94f5ea2ad6c73d5532d28304b3910f36da",
+  "threshold_grid_sha256": "e1f2da1a75f07bb326768a6ce1ccba6563fbcc3a99e0a157fc16fca3ed7663e4",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

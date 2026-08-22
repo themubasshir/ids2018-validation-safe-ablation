@@ -1,0 +1,169 @@
+{
+  "stage": 17,
+  "name": "Frozen five-checkpoint Transformer attention diagnostics and cross-method agreement",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239]
+  },
+  "environment": {
+    "proven": {},
+    "unproven": {
+      "python": "VERSION_NOT_PROVEN",
+      "numpy": "VERSION_NOT_PROVEN",
+      "pandas": "VERSION_NOT_PROVEN",
+      "pytorch": "VERSION_NOT_PROVEN",
+      "scipy": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "Five frozen Stage15 FT_BALANCED checkpoints and archived validation probabilities",
+    "Stage15 duplicate-safe validation membership, training-only scaler, and ordered 70-feature representation",
+    "Frozen Stage17 attention arrays and Stage14/earlier TreeSHAP and Integrated Gradients vectors"
+  ],
+  "outputs": [
+    "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/",
+    "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/",
+    "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/",
+    "results/stage17_attention_explainability_checkpoint/stage17_final_scientific_closure.json"
+  ],
+  "verification_artifacts": [
+    "results/stage17_attention_explainability_checkpoint/stage17_0_attention_protocol_lock.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_1a_attention_extraction_freeze_lock.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_attention_arrays.npz",
+    "results/stage17_attention_explainability_checkpoint/stage17_1_attention_extraction_package/stage17_1_attention_extraction_result.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_2a_attention_analysis_freeze_lock.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_2_attention_analysis_package/stage17_2_attention_analysis_result.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_3a_cross_method_source_protocol_lock.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_3b_cross_method_agreement_package/stage17_3b_cross_method_agreement.csv",
+    "results/stage17_attention_explainability_checkpoint/stage17_3c_cross_method_agreement_freeze_lock.json",
+    "results/stage17_attention_explainability_checkpoint/stage17_final_scientific_closure.json"
+  ],
+  "hash_verification_artifacts": {
+    "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt": {"size_bytes": 1968137, "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31"},
+    "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_29_best.pt": {"size_bytes": 1966137, "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c"},
+    "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_101_best.pt": {"size_bytes": 1966315, "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552"},
+    "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_313_best.pt": {"size_bytes": 1966315, "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739"},
+    "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_997_best.pt": {"size_bytes": 1966315, "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66"}
+  },
+  "methodology": {
+    "frozen_transformer": {
+      "candidate_id": "FT_BALANCED",
+      "checkpoint_seeds": [7, 29, 101, 313, 997],
+      "feature_tokens": 70,
+      "cls_tokens": 1,
+      "sequence_length": 71,
+      "encoder_layers": 3,
+      "heads_per_layer": 8,
+      "token_dimension": 64,
+      "feedforward_dimension": 256,
+      "dropout": 0.1,
+      "positional_encoding": false,
+      "trainable_parameters": 159169,
+      "input": "Stage15 training-only StandardScaler-transformed validation predictors in frozen feature order"
+    },
+    "case_panel": {
+      "partition": "duplicate-safe validation only",
+      "frozen_threshold": 0.73,
+      "confusion_states": ["TP", "TN", "FP", "FN"],
+      "cases_per_state": 16,
+      "total_cases": 64,
+      "ordering": "Ascending absolute ensemble-probability margin from threshold 0.73, then ascending validation row position",
+      "coverage": "floor(linspace(0, group_size - 1, 16))",
+      "replacement": false,
+      "manual_selection": false,
+      "attention_based_selection": false,
+      "same_cases_for_all_seeds": true
+    },
+    "private_attention_hook": {
+      "framework_sensitive": true,
+      "module": "torch.nn.MultiheadAttention in each frozen TransformerEncoderLayer",
+      "forward_pre_hook": "Set need_weights=True and average_attn_weights=False for analysis only",
+      "forward_hook": "Capture returned per-head weights",
+      "expected_shape": "[batch, 8, 71, 71]",
+      "analysis_batch_size": 16,
+      "expected_batches_per_checkpoint": 4,
+      "expected_total_batches": 20,
+      "parameter_checkpoint_architecture_or_logit_modification": false,
+      "compatibility_failure_policy": "Stop rather than substitute a different extraction implementation"
+    },
+    "historical_extraction": {
+      "execution_device": "CPU",
+      "initial_cuda_attempt": "Aborted before any checkpoint because no kernel image was available for the assigned device",
+      "first_cpu_attempt": "Aborted after seed 7 because the original 1e-5 implementation-equivalence tolerance was too strict",
+      "continuation": "Reused in-memory seed-7 attention and ran seeds 29, 101, 313, and 997 without reselecting cases or reopening dataset archives",
+      "scientific_protocol_changed": false,
+      "cross_device_verification": {
+        "purpose": "Implementation equivalence only; never a performance or selection criterion",
+        "maximum_absolute_delta_limit": 0.0005,
+        "mean_absolute_delta_limit": 0.0001,
+        "observed_global_maximum_absolute_delta": 0.000335693359375
+      },
+      "direct_attention_shape": [5, 64, 3, 8, 70],
+      "entropy_shape": [5, 64, 3, 8],
+      "rollout_shape": [5, 64, 70],
+      "head_level_matrices": 7680,
+      "rollout_vectors": 320
+    },
+    "direct_cls_attention": {
+      "query": "CLS token index 0",
+      "keys": "feature-token indices 1 through 70",
+      "cls_self_attention_excluded": true,
+      "renormalization": "Divide remaining 70 weights by their sum"
+    },
+    "rollout": {
+      "head_aggregation": "Arithmetic mean across eight heads",
+      "residual": "Add 71x71 identity and row-normalize",
+      "initialization": "71x71 identity",
+      "layer_order": "1 then 2 then 3",
+      "update": "normalized_layer_attention @ rollout",
+      "finalization": "Take CLS row 0, remove CLS column 0, and renormalize 70 features"
+    },
+    "diagnostics": {
+      "top_k": [5, 10, 20],
+      "entropy": "Shannon entropy divided by log(70)",
+      "groups": ["TP", "TN", "FP", "FN", "TRUE_ATTACK", "TRUE_BENIGN", "PREDICTED_ATTACK", "PREDICTED_BENIGN", "ALL"],
+      "cross_seed_metrics": ["Spearman rank correlation", "cosine similarity", "top-10 Jaccard"],
+      "seed_weighting": "equal",
+      "pairwise_seed_comparisons": 10,
+      "head_redundancy": "Within-layer pairwise cosine, Spearman, and top-10 Jaccard"
+    },
+    "frozen_headlines": {
+      "global_top3_rollout_features": ["Fwd Seg Size Min", "Init Fwd Win Byts", "Dst Port"],
+      "mean_cross_seed_cosine": 0.9706380849108985,
+      "mean_cross_seed_spearman": 0.44848219753302426,
+      "mean_cross_seed_top10_jaccard": 0.3847985347985349,
+      "layer_mean_entropy": [0.6041218275113899, 0.728813432804148, 0.8883000368632565],
+      "layer_mean_head_redundancy_cosine": [0.329222828779302, 0.6704221076926874, 0.9023169014775265]
+    },
+    "cross_method_agreement": {
+      "feature_alignment": "Exact frozen-name intersection in Stage17 order; 70 shared features",
+      "sources": ["XGBoost TreeSHAP", "LightGBM TreeSHAP", "MLP Integrated Gradients", "CNN Integrated Gradients"],
+      "metrics": ["Spearman", "cosine similarity", "top-10 Jaccard", "top-20 Jaccard"],
+      "ranking_tie_break": "Descending value then ascending frozen feature position",
+      "frozen_results": {
+        "XGBoost TreeSHAP": {"spearman": 0.4562505467588137, "cosine": 0.5851326125585813, "top10_jaccard": 0.3333333333333333, "top20_jaccard": 0.42857142857142855},
+        "LightGBM TreeSHAP": {"spearman": 0.3982713522272269, "cosine": 0.5680610446124249, "top10_jaccard": 0.3333333333333333, "top20_jaccard": 0.3333333333333333},
+        "MLP Integrated Gradients": {"spearman": 0.7156504242848394, "cosine": 0.7449643090331907, "top10_jaccard": 0.42857142857142855, "top20_jaccard": 0.48148148148148145},
+        "CNN Integrated Gradients": {"spearman": 0.6956080516560847, "cosine": 0.7794458515499862, "top10_jaccard": 0.3333333333333333, "top20_jaccard": 0.48148148148148145}
+      },
+      "same_case_or_same_model_comparison": false,
+      "used_for_model_or_method_selection": false
+    },
+    "interpretation": "Attention is a model-behavior diagnostic, not causal feature importance or explanation ground truth.",
+    "model_loading_authorized": false,
+    "inference_authorized": false,
+    "attention_extraction_authorized": false,
+    "shap_recomputation_authorized": false,
+    "integrated_gradients_recomputation_authorized": false,
+    "threshold_or_checkpoint_selection_authorized": false
+  },
+  "holdout_policy": {
+    "historically_opened_during_stage17": false,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "model_artifact_verification": "Streaming byte count and SHA-256 only"
+  }
+}

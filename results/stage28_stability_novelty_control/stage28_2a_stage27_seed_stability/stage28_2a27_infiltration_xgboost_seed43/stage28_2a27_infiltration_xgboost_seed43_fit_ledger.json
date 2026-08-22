@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2A27",
+  "execution_mode": "STAGE28_AUTO_B",
+  "component_id": "C043",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::INFILTRATION::XGBOOST::SEED43",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 34,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 35,
+  "new_fits_remaining": 73,
+  "stage28a_stage27_new_fits_consumed": 17,
+  "stage28a_stage27_new_fits_remaining": 23,
+  "status": "FIT_035_SUCCESSFULLY_CONSUMED"
+}

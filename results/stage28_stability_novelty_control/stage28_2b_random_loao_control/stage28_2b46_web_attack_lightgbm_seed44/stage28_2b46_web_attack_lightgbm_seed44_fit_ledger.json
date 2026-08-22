@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2B46",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C116",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::WEB_ATTACK::LIGHTGBM::SEED44",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 103,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 104,
+  "new_fits_remaining": 4,
+  "stage28b_random_loao_new_fits_consumed": 46,
+  "stage28b_random_loao_new_fits_remaining": 4,
+  "status": "FIT_104_SUCCESSFULLY_CONSUMED"
+}

@@ -1,0 +1,202 @@
+{
+  "stage": 15,
+  "name": "Duplicate-safe FT-Transformer feasibility and one-time locked holdout evaluation",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [162, 163, 164, 165, 166, 167, 168, 169, 170, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189],
+    "explicitly_excluded_cell": 171,
+    "excluded_cell_stage": 16
+  },
+  "environment": {
+    "proven_stage15_runtime": {
+      "python": "3.12.13",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.6.1"
+    },
+    "proven_stage15_isolated_gpu_runtime": {
+      "pytorch": "2.7.1+cu118",
+      "cuda_runtime": "11.8",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "device_capability": [6, 0],
+      "required_compiled_architecture": "sm_60",
+      "required_compiled_architecture_present": true,
+      "system_pytorch_modified": false,
+      "scope": "Stage 15 only"
+    },
+    "superseded_incompatible_runtime_receipt": {
+      "pytorch": "2.10.0+cu128",
+      "required_p100_architecture": "sm_60",
+      "required_architecture_present": false,
+      "gpu_training_readiness": "NOT YET PASSED"
+    }
+  },
+  "inputs": [
+    "Processed IDS2018 dataset and original seed-42 split indices",
+    "results/stage15_transformer_checkpoint/stage15_1_duplicate_safe_split_indices.npz",
+    "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+    "Five frozen FT_BALANCED checkpoints and validation probability receipts",
+    "Frozen architecture, threshold, pre-holdout lock, and one-time holdout receipts"
+  ],
+  "outputs": [
+    "results/stage15_transformer_checkpoint/ duplicate-safety, preprocessing, environment, architecture, threshold, checkpoint, and holdout receipts",
+    "results/stage15_transformer_checkpoint/checksums.sha256"
+  ],
+  "verification_artifacts": [
+    "results/stage15_transformer_checkpoint/stage15_1_duplicate_safe_split_metadata.json",
+    "results/stage15_transformer_checkpoint/stage15_1_feature_configuration.json",
+    "results/stage15_transformer_checkpoint/stage15_1_cross_split_verification.csv",
+    "results/stage15_transformer_checkpoint/stage15_2_preprocessing_and_compatibility_metadata.json",
+    "results/stage15_transformer_checkpoint/stage15_2_standard_scaler.joblib",
+    "results/stage15_transformer_checkpoint/stage15_2g_isolated_environment.json",
+    "results/stage15_transformer_checkpoint/stage15_4c_frozen_architecture.json",
+    "results/stage15_transformer_checkpoint/stage15_5a_frozen_operating_threshold.json",
+    "results/stage15_transformer_checkpoint/stage15_5b_preholdout_decision_lock.json",
+    "results/stage15_transformer_checkpoint/stage15_6a_holdout_execution_state.json",
+    "results/stage15_transformer_checkpoint/stage15_6a_holdout_evaluation_metadata.json",
+    "results/stage15_transformer_checkpoint/stage15_6b_transformer_experiment_completion.json",
+    "results/stage15_transformer_checkpoint/checksums.sha256"
+  ],
+  "hash_verification_artifacts": {
+    "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt": {
+      "size_bytes": 1968137,
+      "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31"
+    },
+    "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_29_best.pt": {
+      "size_bytes": 1966137,
+      "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c"
+    },
+    "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_101_best.pt": {
+      "size_bytes": 1966315,
+      "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552"
+    },
+    "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_313_best.pt": {
+      "size_bytes": 1966315,
+      "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739"
+    },
+    "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_997_best.pt": {
+      "size_bytes": 1966315,
+      "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66"
+    }
+  },
+  "methodology": {
+    "duplicate_safe_split": {
+      "seed": 42,
+      "priority_order": ["train", "validation", "holdout"],
+      "hashing": "pandas deterministic 64-bit row hashes over all 78 predictors with index=False",
+      "hash_collision_note": "Theoretical collision is possible but extremely unlikely",
+      "conflicting_binary_patterns": "Excluded globally",
+      "within_split_duplicates": "Retain the smallest original row index",
+      "validation_policy": "Exclude every exact pattern retained in training",
+      "holdout_policy": "Exclude every exact pattern retained in training or validation",
+      "original_sizes": {"train": 192593, "validation": 48149, "holdout": 60186},
+      "safe_sizes": {"train": 154686, "validation": 37835, "holdout": 46849},
+      "conflicting_binary_pattern_count": 1176,
+      "conflicting_binary_row_count": 3482,
+      "category_inconsistent_attack_pattern_count": 16,
+      "category_inconsistent_attack_row_count": 27116,
+      "category_inconsistent_binary_policy": "Retain for binary classification and flag for category interpretation",
+      "post_processing_cross_split_overlap": 0,
+      "post_processing_within_split_duplicates": 0
+    },
+    "features": {
+      "original_count": 78,
+      "removed_constant_count": 8,
+      "removed_constant_indices": [32, 34, 56, 57, 58, 59, 60, 61],
+      "removed_constants": ["Bwd PSH Flags", "Bwd URG Flags", "Fwd Byts/b Avg", "Fwd Pkts/b Avg", "Fwd Blk Rate Avg", "Bwd Byts/b Avg", "Bwd Pkts/b Avg", "Bwd Blk Rate Avg"],
+      "retained_count": 70,
+      "retained_ordered": [
+        "Dst Port", "Protocol", "Flow Duration", "Tot Fwd Pkts", "Tot Bwd Pkts", "TotLen Fwd Pkts", "TotLen Bwd Pkts", "Fwd Pkt Len Max", "Fwd Pkt Len Min", "Fwd Pkt Len Mean", "Fwd Pkt Len Std", "Bwd Pkt Len Max", "Bwd Pkt Len Min", "Bwd Pkt Len Mean", "Bwd Pkt Len Std", "Flow Byts/s", "Flow Pkts/s", "Flow IAT Mean", "Flow IAT Std", "Flow IAT Max", "Flow IAT Min", "Fwd IAT Tot", "Fwd IAT Mean", "Fwd IAT Std", "Fwd IAT Max", "Fwd IAT Min", "Bwd IAT Tot", "Bwd IAT Mean", "Bwd IAT Std", "Bwd IAT Max", "Bwd IAT Min", "Fwd PSH Flags", "Fwd URG Flags", "Fwd Header Len", "Bwd Header Len", "Fwd Pkts/s", "Bwd Pkts/s", "Pkt Len Min", "Pkt Len Max", "Pkt Len Mean", "Pkt Len Std", "Pkt Len Var", "FIN Flag Cnt", "SYN Flag Cnt", "RST Flag Cnt", "PSH Flag Cnt", "ACK Flag Cnt", "URG Flag Cnt", "CWE Flag Count", "ECE Flag Cnt", "Down/Up Ratio", "Pkt Size Avg", "Fwd Seg Size Avg", "Bwd Seg Size Avg", "Subflow Fwd Pkts", "Subflow Fwd Byts", "Subflow Bwd Pkts", "Subflow Bwd Byts", "Init Fwd Win Byts", "Init Bwd Win Byts", "Fwd Act Data Pkts", "Fwd Seg Size Min", "Active Mean", "Active Std", "Active Max", "Active Min", "Idle Mean", "Idle Std", "Idle Max", "Idle Min"
+      ],
+      "near_constant_policy": "Retain nonzero-variance predictors",
+      "low_cardinality_policy": "Treat as numerical tokens"
+    },
+    "preprocessing": {
+      "scaler": "StandardScaler",
+      "fit_split": "duplicate-safe training split only",
+      "clipping": false,
+      "imputation": false,
+      "training_benign_count": 110161,
+      "training_attack_count": 44525,
+      "positive_class_weight": 2.4741381246490737
+    },
+    "frozen_model": {
+      "candidate_id": "FT_BALANCED",
+      "input_predictor_count": 70,
+      "input_representation": "Feature-specific numerical tokenizer plus CLS token",
+      "positional_encoding": false,
+      "d_token": 64,
+      "n_heads": 8,
+      "n_layers": 3,
+      "d_ff": 256,
+      "dropout": 0.1,
+      "activation": "gelu",
+      "output": "single binary logit",
+      "parameter_count": 159169,
+      "seeds": [7, 29, 101, 313, 997],
+      "screening_seed_excluded": 42,
+      "ensemble": "Unweighted arithmetic mean probabilities"
+    },
+    "training": {
+      "optimizer": "AdamW",
+      "learning_rate": 0.0005,
+      "weight_decay": 0.00001,
+      "loss": "BCEWithLogitsLoss with training-derived positive-class weight",
+      "precision": "float32",
+      "batch_size": 1024,
+      "architecture_screening_maximum_epochs": 15,
+      "three_seed_confirmation_maximum_epochs": 40,
+      "seed_7_repair_maximum_total_epochs": 70,
+      "final_seed_confirmation_maximum_epochs": 70,
+      "early_stopping_patience": 6,
+      "early_stopping_metric": "validation PR-AUC",
+      "checkpoint_improvement_tolerance": 0.0000001,
+      "scheduler": {"type": "ReduceLROnPlateau", "mode": "max", "factor": 0.5, "patience": 2, "minimum_learning_rate": 0.00001},
+      "gradient_clip_norm": 1.0,
+      "training_authorized": false
+    },
+    "threshold": {
+      "frozen": 0.73,
+      "grid": {"minimum": 0.05, "maximum": 0.95, "step": 0.005},
+      "validation_seed_specific_objective": "maximum F1",
+      "near_optimal_mean_f1_tolerance": 0.0005,
+      "eligible_threshold_count": 24,
+      "robust_ranking": ["highest worst-seed F1", "lowest F1 standard deviation", "highest mean F2", "highest mean recall", "lowest mean FPR", "smallest distance from median seed-specific optimum", "lowest threshold"],
+      "seed_specific_optima": {"7": 0.695, "29": 0.655, "101": 0.73, "313": 0.62, "997": 0.675},
+      "same_threshold_for_every_checkpoint": true,
+      "threshold_selection_authorized": false
+    },
+    "checkpoint_naming": {
+      "7": "stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt",
+      "29": "stage15_4a_models/FT_BALANCED_seed_29_best.pt",
+      "101": "stage15_4a_models/FT_BALANCED_seed_101_best.pt",
+      "313": "stage15_4c_models/FT_BALANCED_seed_313_best.pt",
+      "997": "stage15_4c_models/FT_BALANCED_seed_997_best.pt"
+    },
+    "historical_holdout": {
+      "preholdout_architecture_frozen": true,
+      "preholdout_threshold_frozen": true,
+      "preholdout_checkpoint_set_frozen": true,
+      "historical_opening_count": 1,
+      "historical_status": "EVALUATED_ONCE",
+      "ensemble_method": "Unweighted arithmetic mean probabilities",
+      "operating_threshold": 0.73,
+      "architecture_search_during_holdout": false,
+      "checkpoint_selection_during_holdout": false,
+      "threshold_search_or_adjustment_during_holdout": false,
+      "calibration_or_retraining_during_holdout": false,
+      "opened_during_extraction": false,
+      "inference_authorized": false
+    }
+  },
+  "holdout_policy": {
+    "historically_opened_once": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "checkpoint_deserialization_by_verify_only": false,
+    "checkpoint_verification": "streaming byte count and SHA-256 only"
+  }
+}

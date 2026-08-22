@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B45",
   "component_id": "C115",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::WEB_ATTACK::XGBOOST::SEED44",
   "fit_ordinal": 103,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T16:40:55.669067+00:00",
+  "held_out_family": "WEB_ATTACK",
+  "learner": "XGBOOST",
+  "seed": 44,
+  "membership_seed": 42,
   "model_sha256": "bc16d91919576d43a2c64be9a6a7218fc4075491e832716a9cd8e34d3de84ee4",
-  "completed_at_utc": "2026-08-22T16:40:47.392879+00:00",
+  "validation_probability_sha256": "598f49807b27df51d0932eda47d4eca454ce3eac5fb79b69cc7a2d21dfc7ad97",
+  "primary_target_probability_sha256": "f3769dc299ce2c3fba7aa7d5642c58bffd6fe53f2a4db1d57461b3df45c1440a",
+  "threshold_grid_sha256": "1b049426903a0f0967b49f811b239c26b9029cba4afbe5d4b9fba6d4c6ba4028",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

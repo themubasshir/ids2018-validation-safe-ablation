@@ -1,0 +1,44 @@
+{
+  "stage": 20,
+  "substage": "directed_s4_and_reconstruction",
+  "scientific_execution_enabled": false,
+  "source_cells": [320, 321, 322, 323, 324, 325, 328, 329, 336, 337, 338, 339, 345, 346, 347, 351, 352, 353, 356, 357, 358, 363, 364, 366, 367, 371, 372, 373, 374, 375, 376, 377, 378, 379, 387, 388, 389, 390, 391, 392, 395, 396, 399, 400, 401, 404, 405, 406, 407, 408, 409, 410, 411],
+  "signature": {
+    "name": "S4_PACKET_REPRODUCIBLE_DIRECTED_FLOW_SIGNATURE",
+    "fields": ["Source IP", "Source Port", "Destination IP", "Destination Port", "Protocol", "Timestamp", "Flow Duration", "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets", "Fwd Packet Length Min", "Fwd Packet Length Max", "Bwd Packet Length Min", "Bwd Packet Length Max", "FIN Flag Count", "SYN Flag Count", "RST Flag Count", "PSH Flag Count", "ACK Flag Count", "URG Flag Count"],
+    "matching": "EXACT_ONLY",
+    "direction": "First packet defines forward direction; exact reverse is backward",
+    "bidirectional_canonicalization": false,
+    "mixed_binary_signature_action": "ABORT",
+    "same_binary_signature_duplicates": "ALLOWED",
+    "signed_duration_preserved": true
+  },
+  "flow_reconstruction": {"flow_timeout_microseconds": 120000000, "activity_timeout_microseconds": 5000000, "timeout_search": false},
+  "development_audit": {"flows": 2127498, "negative_duration": 68, "nonpositive_duration": 2408, "nonpositive_attack": 952, "s4_deterministic_rate": 1.0, "s4_mixed_groups": 0, "bidirectional_mixed_groups": 9024},
+  "historical_bounded_raw_exact": {"packets": 50000, "finished_flows": 675, "membership_exact": 637, "rate": 0.9437037037037037, "scope": "C9/C11 historical raw exact only"},
+  "d5_source_faithful_baseline": {"population": 675, "membership_exact": 635, "length_only_tcp_residuals": 37, "duration_export_inconsistencies": 2, "protocol0_anchor_inconsistencies": 1},
+  "v1_global_payload_validation": {
+    "rule": "IPv4.total_length - IPv4.header_length - TCP.header_length",
+    "status": "PRE_FROZEN_HYPOTHESIS_REJECTED_AS_GLOBAL_RECONSTRUCTION_RULE",
+    "membership_exact": 318,
+    "absent": 357,
+    "changed_flows": 379,
+    "changed_positions_only": [9, 10, 11, 12, 13, 14],
+    "resolved_of_d5_length_residuals": 23,
+    "remaining_of_d5_length_residuals": 14,
+    "transition_counts": {"exact_to_exact": 295, "exact_to_absent": 340, "absent_to_exact": 23, "absent_to_absent": 17}
+  },
+  "c16_mechanism_closure": {
+    "bounded_disagreement_packets": 5093,
+    "capture_beyond_declared_ipv4": 4930,
+    "capture_shorter_than_declared_ipv4": 163,
+    "both_preregistered_candidates_passed": true,
+    "mechanism_search_closed": true,
+    "v1_adopted": false,
+    "hybrid_rule_adopted": false,
+    "published_label_reconstruction_rule_adopted": false,
+    "third_candidate_allowed": false
+  },
+  "recovery_provenance": {"scientific_state_recovered": true, "historical_bytes_recovered": false, "lost_expected_sha256": "06082ffa231c105618c3702549edcbb68b91b8164361640d5c27a4fb5e73dcf3"},
+  "scientific_boundaries": {"pcap_parse_authorized": false, "reconstruction_rerun_authorized": false, "label_matching_authorized": false, "payload_rule_application_authorized": false, "friday_access_authorized": false}
+}

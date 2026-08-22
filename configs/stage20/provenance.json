@@ -1,0 +1,49 @@
+{
+  "stage": 20,
+  "substage": "provenance_and_extractor_forensics",
+  "scientific_execution_enabled": false,
+  "source_cells": [313, 314, 315, 316, 317, 318, 319, 326, 327, 330, 331, 332, 333, 334, 335, 340, 341, 348, 349, 350, 354, 355, 365, 368, 369, 370, 380, 381, 382, 383, 384, 385, 386, 393, 394, 397, 398],
+  "dataset": {
+    "identity": "CICIDS2017 from UNB/CIC, distinct from the CICIDS2018 flow-table dataset",
+    "pcap_repository": "bvsam/cic-ids-2017",
+    "pcap_revision": "e810c1cc98270ec271a1df917b9de0786c33f343",
+    "label_revision": "b7e532345512edcd530cb1770dc76636aeb52802",
+    "split": {"TRAIN": ["Monday", "Tuesday", "Wednesday"], "VALIDATION": ["Thursday"], "HOLDOUT": ["Friday"]},
+    "pcap_sha256": {
+      "Monday": "f6eac599358f216b074338813a1cf7be3cc4e91d116e13efc0dc71f2cca11972",
+      "Tuesday": "080c2250154c5a174c03660ed0f75a3858d41a27511ba716e780d7bcb1ec4c57",
+      "Wednesday": "cd2674db7559a53f24bc03be3239b315700174ccaef72d10f5edc4c1a08f6186",
+      "Thursday": "38f8b1bb276849bf1721f7c4de22bebfa7f59a74e52286d4c0a37edbb118fe01",
+      "Friday": {"value": "beff0dcce1eebc9b2454582f4dc8ed0ba0112b2c619a710bf03af93147254cd0", "provenance": "LATER_FROZEN_EVIDENCE_NOTEBOOK_CELL_NOT_MAPPED"}
+    }
+  },
+  "label_hygiene": {
+    "canonical_rows": {"Monday": 529918, "Tuesday": 445909, "Wednesday": 692703, "Thursday morning": 170366, "Thursday afternoon": 288602},
+    "canonical_content_sha256": {
+      "Monday": "2ab16b8d851e002c1b149ede2b952777cedae6e57f815441ad4c6090ea96ac70",
+      "Tuesday": "28ca517d154a672dd9dd5a61e34e663e968b15f9d28b43a79076cf67854366c6",
+      "Wednesday": "898c16c2bf6eef3e757a25bad7e56c531cc1de1ecb65e538679ef34d9a400b22",
+      "Thursday morning": "a183fb9a4f569e694ec6f296d2c396db436999bd55813fc2443597b3462e2b4f",
+      "Thursday afternoon": "1dd0b69281b8ddb6cf53c00a0391c81424b513b1f69709e7c89d6b540c3c3c56"
+    },
+    "thursday_morning_physical_rows": 458968,
+    "thursday_morning_structural_all_column_null_suffix_rows": 288602,
+    "drop_rule": "Only rows whose complete 85-field record is NULL/NaN/empty are structural padding; any partially missing actual record aborts"
+  },
+  "extractor_source": {
+    "repository": "ahlashkari/CICFlowMeter",
+    "commit": "eaa853dd82f08ba5288bb7f295b471de7313f883",
+    "status": "EARLIEST_PUBLIC_SNAPSHOT_INSPECTED_NOT_CLAIMED_BYTE_IDENTICAL_TO_JULY_2017_BUILD",
+    "flag_header_order": ["FIN", "SYN", "RST", "PSH", "ACK", "URG", "CWE", "ECE"],
+    "java8_serialized_semantic_order": ["RST", "PSH", "ECE", "SYN", "ACK", "FIN", "URG", "CWR"],
+    "source_derived_exact": "484/484",
+    "literal_header_exact": "254/484",
+    "permutation_search": false
+  },
+  "environment": {
+    "historical_java_jnetpcap": {"java": "VERSION_NOT_PROVEN", "jnetpcap": "VERSION_NOT_PROVEN"},
+    "python_reconstruction": {"python": "VERSION_NOT_PROVEN", "scapy": "VERSION_NOT_PROVEN", "numpy": "VERSION_NOT_PROVEN", "pyarrow": "VERSION_NOT_PROVEN"},
+    "separation_rule": "Do not merge these sessions with the later isolated CNN runtime"
+  },
+  "scientific_boundaries": {"dataset_download_authorized": false, "pcap_open_authorized": false, "forensic_reconstruction_authorized": false, "friday_access_authorized": false}
+}

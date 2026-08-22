@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2A46",
+  "execution_mode": "STAGE28_AUTO_B",
+  "component_id": "C066",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::WEB_ATTACK::LIGHTGBM::SEED44",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 53,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 54,
+  "new_fits_remaining": 54,
+  "stage28a_stage27_new_fits_consumed": 36,
+  "stage28a_stage27_new_fits_remaining": 4,
+  "status": "FIT_054_SUCCESSFULLY_CONSUMED"
+}

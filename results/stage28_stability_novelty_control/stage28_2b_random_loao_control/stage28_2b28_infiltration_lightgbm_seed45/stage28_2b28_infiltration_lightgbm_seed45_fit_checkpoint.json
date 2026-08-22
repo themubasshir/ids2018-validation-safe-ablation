@@ -1,0 +1,27 @@
+{
+  "stage": "Stage28-2B28",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C098",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::INFILTRATION::LIGHTGBM::SEED45",
+  "fit_ordinal": 86,
+  "pre_component_new_fits_consumed": 85,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 86,
+  "new_fits_remaining": 22,
+  "held_out_family": "INFILTRATION",
+  "learner": "LIGHTGBM",
+  "training_seed": 45,
+  "membership_seed": 42,
+  "model_artifact": "infiltration_lightgbm_seed45_cpu_model.txt",
+  "model_sha256": "abe3b66025d8f007c6db41f362a27ebe5777a11d76f42112012af0eea81d2d7c",
+  "fit_seconds": 113.01898422499926,
+  "model_structure": {
+    "iterations": 400,
+    "trees": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

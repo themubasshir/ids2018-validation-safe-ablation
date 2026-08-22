@@ -1,0 +1,62 @@
+{
+  "stage": "Stage28-FINAL",
+  "type": "ZERO_FIT_FINAL_SYNTHESIS_AND_MANUSCRIPT_READY_RESULTS_FREEZE",
+  "created_at_utc": "2026-08-22T18:21:47.656944+00:00",
+  "scientific_parent_commit": "f5de70d25a5714ae2b70a18819bde97eb3e38354",
+  "empirical_closure": {
+    "authorized_new_fits": 108,
+    "consumed_new_fits": 108,
+    "remaining_new_fits": 0,
+    "historical_reuses": 12,
+    "stage22_shared_holdout_ensemble_evaluations": 10,
+    "stage22_shared_holdout_component_model_inferences": 20,
+    "chronology_loao_seed_realizations": 50,
+    "random_loao_seed_realizations": 50,
+    "stage29_authorized": false
+  },
+  "scientific_operations_this_stage": {
+    "new_model_fits": 0,
+    "model_inferences": 0,
+    "threshold_selections": 0,
+    "model_selections": 0,
+    "target_openings": 0,
+    "shared_final_holdout_openings": 0,
+    "bootstrap_recomputations": 0,
+    "shap_recomputations": 0,
+    "new_formal_statistical_tests": 0,
+    "new_post_result_qualitative_cutoffs": 0
+  },
+  "final_stage22_stability": {
+    "PR_RANDOM_LT_CHRONO": "5_OF_5",
+    "ROC_RANDOM_LT_CHRONO": "5_OF_5"
+  },
+  "loao": {
+    "family_specific_primary": true,
+    "aggregate_zero_day_score": false,
+    "infiltration": "DESCRIPTIVE_ONLY_SUPPORT_36_LT_50",
+    "random_loao": "CONTROL_NOT_DEPLOYMENT_ESTIMATE"
+  },
+  "input_sha256": {
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_seed_level_metrics.csv": "98c783c42f983e992dee501bde7708cdbbcd336732725b39d7431911a50371f3",
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_random_vs_chronological_seedwise.csv": "68eaa112b8165dbc0e8bf5649d00c67e3e0ff7f1350faefca3f07c002d2e1a75",
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_stage22_directional_stability_summary.csv": "faed97a3a2e13e5a206adb691e60e3a862a7f4272302dcec6904ad87bfde5332",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_loao_seed_level_metrics.csv": "0ad43a29d07259d1566a0a4d5d28dade934516b8dd04db92a5ec59c32350ac4f",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_loao_five_seed_summary.csv": "d9ba5f6163a6543b8676228b8dfc3debe82b3bf7ca9faf9a7c1d4fe96b082817",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_loao_stability_summary.csv": "5eabe926cd1732c9b904d5fe4ca44b59f67e49ef0f86687bac852f98e154162b",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3c_random_vs_chronological_five_seed_summary.csv": "a7a41822bc4e489bc08fd27d0354a2be93146ca2ea29afdfdffd5d05bb964578",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3c_numeric_direction_summary.csv": "d0137de47cc81087408210d5c541baf85892fb0af33f6eb6fa05be2714ead229",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/conclusion_stability.csv": "fae9f9c0c44a379772798ee17714e6ed9086d191744879dce5e334e836bfd119"
+  },
+  "outputs": [
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_stage22_shared_holdout_five_seed_summary.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_stage22_random_minus_chronological_summary.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_loao_key_metric_summary.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_loao_stability_registry.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_random_vs_chronological_key_contrasts.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_claim_registry.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_manuscript_numbers.json",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_manuscript_results.md"
+  ],
+  "status": "STAGE28_FINAL_SYNTHESIS_COMPLETE",
+  "next_authorized_work": "MANUSCRIPT_INTEGRATION_ONLY; NO_NEW_MODEL_FITS; NO_NEW_EMPIRICAL_STAGE; NO_STAGE29"
+}

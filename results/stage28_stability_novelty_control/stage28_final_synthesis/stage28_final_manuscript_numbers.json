@@ -1,0 +1,98 @@
+{
+  "stage28_empirical_closure": {
+    "authorized_new_fits": 108,
+    "consumed_new_fits": 108,
+    "remaining_new_fits": 0,
+    "stage22_final_holdout_ensemble_evaluations": 10,
+    "stage22_final_holdout_component_inferences": 20,
+    "chronology_loao_seed_realizations": 50,
+    "random_loao_seed_realizations": 50,
+    "stage29_authorized": false
+  },
+  "stage22_shared_holdout": {
+    "rows": 1374133,
+    "benign": 998788,
+    "attack": 375345,
+    "random_natural": {
+      "roc_auc": {
+        "mean": 0.517614647243098,
+        "sd": 0.007323190182949349,
+        "minimum": 0.5062882193209911,
+        "maximum": 0.5249739204837016
+      },
+      "pr_auc": {
+        "mean": 0.2599205730704394,
+        "sd": 0.0033971898405051274,
+        "minimum": 0.2546407237668386,
+        "maximum": 0.2628136077204115
+      }
+    },
+    "chronological_natural": {
+      "roc_auc": {
+        "mean": 0.8208996100575046,
+        "sd": 0.008474680782780885,
+        "minimum": 0.8086321982991498,
+        "maximum": 0.8311701639478524
+      },
+      "pr_auc": {
+        "mean": 0.6387520850005519,
+        "sd": 0.03224750180107352,
+        "minimum": 0.5874645243588383,
+        "maximum": 0.676863118925335
+      }
+    },
+    "PR_RANDOM_LT_CHRONO": {
+      "supporting_seeds": 5,
+      "frozen_seeds": 5,
+      "stability_rate": 1.0
+    },
+    "ROC_RANDOM_LT_CHRONO": {
+      "supporting_seeds": 5,
+      "frozen_seeds": 5,
+      "stability_rate": 1.0
+    }
+  },
+  "loao": {
+    "fully_ranking_stable_inferential_families_both_learners_both_arms": [
+      "DDOS",
+      "PORT_SCAN",
+      "WEB_ATTACK"
+    ],
+    "bot_frozen_condition_pattern": {
+      "STAGE27_CHRONOLOGY_LOAO": {
+        "XGBOOST": {
+          "ROC_ABOVE_CHANCE": 0,
+          "PR_ABOVE_CHANCE": 0
+        },
+        "LIGHTGBM": {
+          "ROC_ABOVE_CHANCE": 5,
+          "PR_ABOVE_CHANCE": 5
+        }
+      },
+      "STAGE28B_RANDOM_LOAO": {
+        "XGBOOST": {
+          "ROC_ABOVE_CHANCE": 5,
+          "PR_ABOVE_CHANCE": 5
+        },
+        "LIGHTGBM": {
+          "ROC_ABOVE_CHANCE": 5,
+          "PR_ABOVE_CHANCE": 5
+        }
+      }
+    },
+    "infiltration": {
+      "heldout_positive_support": 36,
+      "status": "DESCRIPTIVE_ONLY_SUPPORT_LT_50"
+    },
+    "aggregation": "FAMILY_SPECIFIC_PRIMARY_NO_AGGREGATE_ZERO_DAY_SCORE"
+  },
+  "interpretation_guardrails": [
+    "Training-seed robustness and bootstrap/sampling uncertainty remain separate.",
+    "No best-seed result is selected or reported.",
+    "Random LOAO is a control, not a deployment-realistic estimate.",
+    "Random-vs-chronological differences do not prove temporal drift is the sole cause.",
+    "Infiltration is descriptive only because support is 36.",
+    "No aggregate zero-day score is authorized.",
+    "No post-result cutoff is assigned to terms such as 'much greater', 'collapse', or 'survive'."
+  ]
+}

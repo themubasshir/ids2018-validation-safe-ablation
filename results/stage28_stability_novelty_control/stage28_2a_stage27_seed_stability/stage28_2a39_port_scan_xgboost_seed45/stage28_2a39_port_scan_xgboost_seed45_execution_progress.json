@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A39",
+  "component_id": "C057",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::PORT_SCAN::XGBOOST::SEED45",
+  "fit_ordinal": 47,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T10:27:48.282516+00:00",
+  "durable_parent": "247344763367603f404f49df655df34d8af794c4",
+  "held_out_family": "PORT_SCAN",
+  "learner": "XGBOOST",
+  "seed": 45,
+  "model_sha256": "c12640aaaa1c8584558d41893cf7ff8694438eaac304d34b78d009765585e644",
+  "validation_probability_sha256": "6b5dfaea20b6c64c5d170ee12fb2d66d9a896266078a40f6fcb8ca7fe1a56131",
+  "operational_target_probability_sha256": "3a304f92fb3b7530424358a1b0482121942c616091b94ba6642fffeb89776cda",
+  "threshold_grid_sha256": "a61575911f41a863a7d86a082f70ad575bb3c941f9ce7bd9003a4771df696a3d",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

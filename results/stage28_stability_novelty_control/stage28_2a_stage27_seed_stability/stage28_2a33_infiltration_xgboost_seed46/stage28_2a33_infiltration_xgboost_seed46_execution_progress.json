@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A33",
+  "component_id": "C049",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::INFILTRATION::XGBOOST::SEED46",
+  "fit_ordinal": 41,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T10:17:45.594182+00:00",
+  "durable_parent": "08ca62b628c49bbd598be8b709fad171ca31a3e3",
+  "held_out_family": "INFILTRATION",
+  "learner": "XGBOOST",
+  "seed": 46,
+  "model_sha256": "804dd2ac565e6d46694267a16e8c911a590aef7273042d6ae9538867be634395",
+  "validation_probability_sha256": "169e0632d2bb14cbede196f6312cbc7ebcfa84faabe9998beb3308e5a6fedc04",
+  "operational_target_probability_sha256": "6f2e037e692aa3006ff1e6bf2af5ba7167a5eaa1fea48ed35817c50299550835",
+  "threshold_grid_sha256": "02b793957387e2174beff30c4ef4b03f0e94c6143d90333704bef2bae6019f63",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

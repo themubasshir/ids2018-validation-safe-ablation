@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A48",
+  "component_id": "C068",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::WEB_ATTACK::LIGHTGBM::SEED45",
+  "fit_ordinal": 56,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T10:38:15.994031+00:00",
+  "durable_parent": "19ef2db9a4c204041c7a6d6da24f44d234fec8cc",
+  "held_out_family": "WEB_ATTACK",
+  "learner": "LIGHTGBM",
+  "seed": 45,
+  "model_sha256": "620c362840ab5f8b018e3b1abaec62ca741ea7d731c2491b5cb014175a4a68cb",
+  "validation_probability_sha256": "9ced101aa4a4775320a03c31d2ad95fb9ab00207fd00234bb9001761e0308117",
+  "operational_target_probability_sha256": "ac95571e8451c9b1fac500c03764fada7b0aaa887d1b7bb1f5001bd70148d180",
+  "threshold_grid_sha256": "f92f0be3ef1ba7dc3922f86f58840eeb117817ae9611f4383343df8006ea7d00",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

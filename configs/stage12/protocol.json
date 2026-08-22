@@ -1,0 +1,84 @@
+{
+  "stage": 12,
+  "name": "Fixed-hyperparameter multi-seed robustness",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [121, 122, 123, 124, 125, 126, 127, 128, 129]
+  },
+  "environment": {
+    "proven": {
+      "python": "3.12.13",
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.6.1",
+      "xgboost": "3.2.0",
+      "lightgbm": "4.6.0"
+    },
+    "unproven": {
+      "joblib": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN",
+      "tar": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "Processed 300928-row 78-feature IDS2018 dataset",
+    "Frozen Stage03 XGBoost and LightGBM Joblib estimator templates",
+    "metadata/multiseed/fixed_model_parameters.json"
+  ],
+  "outputs": [
+    "results/multiseed/multiseed_model_operating_points.csv",
+    "results/multiseed/multiseed_selected_winners.csv",
+    "results/multiseed/multiseed_metric_summary.csv",
+    "results/multiseed/multiseed_winner_frequency.csv",
+    "results/multiseed/multiseed_threshold_stability.csv",
+    "results/multiseed/multiseed_paired_model_differences.csv",
+    "results/multiseed/multiseed_split_summary.csv",
+    "metadata/multiseed/fixed_model_parameters.json",
+    "metadata/multiseed/multiseed_methodology.json",
+    "four figures under figures/multiseed/",
+    "historical complete-working inventory and final archive"
+  ],
+  "verification_artifacts": [
+    "results/multiseed/multiseed_model_operating_points.csv",
+    "results/multiseed/multiseed_selected_winners.csv",
+    "results/multiseed/multiseed_metric_summary.csv",
+    "results/multiseed/multiseed_winner_frequency.csv",
+    "results/multiseed/multiseed_threshold_stability.csv",
+    "results/multiseed/multiseed_paired_model_differences.csv",
+    "results/multiseed/multiseed_split_summary.csv",
+    "metadata/multiseed/fixed_model_parameters.json",
+    "metadata/multiseed/multiseed_methodology.json"
+  ],
+  "methodology": {
+    "seeds": [42, 52, 62, 72, 82],
+    "models": ["XGBoost Tuned", "LightGBM Tuned"],
+    "feature_count": 78,
+    "split_protocol": "For each seed reserve stratified 20 percent test; split remaining 80 percent with stratified 20 percent validation to obtain 64/16/20",
+    "split_sizes": {"training": 192593, "validation": 48149, "test": 60186},
+    "hyperparameter_search_repeated": false,
+    "uncertainty_scope": "Repeated split and fixed-hyperparameter training robustness only; not full pipeline or HPO uncertainty",
+    "fixed_parameters_source": "metadata/multiseed/fixed_model_parameters.json copied from seed-42 tuned estimators",
+    "threshold_grid": {"minimum": 0.05, "maximum": 0.95, "step": 0.01, "count": 91},
+    "balanced_selection": ["F1 descending", "Recall descending", "Precision descending", "FPR ascending", "Threshold descending"],
+    "security_constraint": "FPR <= 0.05",
+    "security_selection": ["F2 descending", "Recall descending", "F1 descending", "FPR ascending", "Threshold descending"],
+    "per_seed_model_winner_balanced": ["Validation F1 descending", "Validation Recall descending", "Validation Precision descending", "Validation FPR ascending"],
+    "per_seed_model_winner_security": ["Validation F2 descending", "Validation Recall descending", "Validation F1 descending", "Validation FPR ascending"],
+    "aggregation": ["mean", "sample std", "min", "max", "median"],
+    "paired_difference_convention": "XGBoost minus LightGBM aligned by seed",
+    "cpu_threads": 4,
+    "historical_zip_cleanup_exposed_by_extraction": false,
+    "historical_archive_creation_exposed_by_extraction": false,
+    "scientific_recomputation_authorized": false
+  },
+  "holdout_policy": {
+    "historically_opened_per_repeated_split": true,
+    "holdout_based_selection": false,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

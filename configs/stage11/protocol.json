@@ -1,0 +1,101 @@
+{
+  "stage": 11,
+  "name": "Attack-category holdout analysis",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [120]
+  },
+  "environment": {
+    "proven": {},
+    "unproven": {
+      "python": "VERSION_NOT_PROVEN",
+      "numpy": "VERSION_NOT_PROVEN",
+      "pandas": "VERSION_NOT_PROVEN",
+      "scipy": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "Stage01 frozen split indices and original processed Label column",
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/threshold/all_top5_selected_validation_operating_points.csv"
+  ],
+  "outputs": [
+    "results/attack_category/attack_category_support_summary.csv",
+    "results/attack_category/attack_category_operating_point_metrics.csv",
+    "results/attack_category/paired_xgboost_balanced_vs_lightgbm_security.csv",
+    "results/attack_category/paired_xgboost_security_vs_lightgbm_security.csv",
+    "results/attack_category/within_model_attack_category_threshold_effects.csv",
+    "results/attack_category/hardest_attack_categories.csv",
+    "results/attack_category/holdout_attack_category_prediction_manifest.csv",
+    "metadata/attack_category/attack_category_methodology.json",
+    "four figures under figures/attack_category/"
+  ],
+  "verification_artifacts": [
+    "results/attack_category/attack_category_support_summary.csv",
+    "results/attack_category/attack_category_operating_point_metrics.csv",
+    "results/attack_category/paired_xgboost_balanced_vs_lightgbm_security.csv",
+    "results/attack_category/paired_xgboost_security_vs_lightgbm_security.csv",
+    "results/attack_category/within_model_attack_category_threshold_effects.csv",
+    "results/attack_category/hardest_attack_categories.csv",
+    "results/attack_category/holdout_attack_category_prediction_manifest.csv",
+    "metadata/attack_category/attack_category_methodology.json"
+  ],
+  "methodology": {
+    "random_state": 42,
+    "paired_bootstrap_replicates": 1000,
+    "confidence_level": 0.95,
+    "detection_rate_interval": "Wilson score interval",
+    "paired_difference_interval": "Paired percentile bootstrap at 2.5 and 97.5 percent",
+    "paired_test": "Exact two-sided McNemar/binomial test on discordant predictions",
+    "multiple_testing": "Benjamini-Hochberg FDR correction",
+    "minimum_support_for_hardest_category_ranking": 20,
+    "minimum_support_for_labelled_figures": 20,
+    "attack_categories": [
+      "Bot",
+      "Brute Force -Web",
+      "Brute Force -XSS",
+      "DDOS attack-HOIC",
+      "DDOS attack-LOIC-UDP",
+      "DoS attacks-GoldenEye",
+      "DoS attacks-Hulk",
+      "DoS attacks-SlowHTTPTest",
+      "DoS attacks-Slowloris",
+      "FTP-BruteForce",
+      "Infilteration",
+      "SQL Injection"
+    ],
+    "support_counts": {
+      "Bot": 3998,
+      "Brute Force -Web": 134,
+      "Brute Force -XSS": 50,
+      "DDOS attack-HOIC": 3970,
+      "DDOS attack-LOIC-UDP": 75,
+      "DoS attacks-GoldenEye": 3141,
+      "DoS attacks-Hulk": 347,
+      "DoS attacks-SlowHTTPTest": 3721,
+      "DoS attacks-Slowloris": 820,
+      "FTP-BruteForce": 3950,
+      "Infilteration": 3967,
+      "SQL Injection": 13
+    },
+    "low_support_categories": ["SQL Injection"],
+    "operating_points": {
+      "xgboost_balanced": 0.51,
+      "xgboost_security": 0.27,
+      "lightgbm_balanced": 0.5,
+      "lightgbm_security": 0.26
+    },
+    "category_reconstruction": "Strip original Label strings; derive binary label as normalized lowercase label != benign; require exact equality with archived holdout target; retain sorted original attack spellings",
+    "scientific_recomputation_authorized": false
+  },
+  "holdout_policy": {
+    "historically_reconstructed_and_opened": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

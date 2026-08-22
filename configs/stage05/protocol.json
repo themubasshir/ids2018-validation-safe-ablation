@@ -1,0 +1,40 @@
+{
+  "stage": 5,
+  "name": "Frozen operating points on untouched holdout",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [105, 107]
+  },
+  "environment": {
+    "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "xgboost": "3.2.0", "lightgbm": "4.6.0"},
+    "unproven": ["joblib", "scipy"]
+  },
+  "inputs": ["Frozen XGBoost and LightGBM artifacts", "Stage 1 untouched test arrays", "Stage 4 validation-selected operating points"],
+  "outputs": [
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/xgboost_final_test_operating_points.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/holdout/objective_specific_final_test_results.csv"
+  ],
+  "verification_artifacts": [
+    "metadata/final_test_evaluation_metadata.json",
+    "metadata/objective_specific_test_metadata.json",
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/xgboost_final_test_operating_points.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/holdout/objective_specific_final_test_results.csv"
+  ],
+  "methodology": {
+    "training_performed": false,
+    "model_selection_using_test": false,
+    "threshold_selection_using_test": false,
+    "cell_105": {"model": "XGBoost Tuned", "standard_threshold": 0.50, "constrained_security_threshold": 0.27, "validation_fpr_constraint": 0.05},
+    "cell_107": {"balanced_model": "XGBoost Tuned", "balanced_threshold": 0.51, "security_model": "LightGBM Tuned", "security_threshold": 0.26, "standard_reference_threshold": 0.50},
+    "test_records": 60186,
+    "test_benign": 36000,
+    "test_attack": 24186
+  },
+  "holdout_policy": {"one_time_historical_evaluation": true, "opened_by_dry_run": false, "opened_by_verify_only": false, "opened_during_extraction": false}
+}

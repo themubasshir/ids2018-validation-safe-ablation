@@ -1,0 +1,45 @@
+{
+  "stage": 1,
+  "name": "Validation-safe stratified data split and scaling",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [93]
+  },
+  "environment": {
+    "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "python_hash_seed": 42},
+    "unproven": []
+  },
+  "inputs": [
+    "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv"
+  ],
+  "outputs": [
+    "metadata/split_indices.npz",
+    "metadata/standard_scaler.joblib",
+    "metadata/feature_names.json",
+    "metadata/split_metadata.json",
+    "metadata/split_summary.csv"
+  ],
+  "verification_artifacts": [
+    "metadata/split_indices.npz",
+    "metadata/standard_scaler.joblib",
+    "metadata/feature_names.json",
+    "metadata/split_metadata.json",
+    "metadata/split_summary.csv"
+  ],
+  "methodology": {
+    "dataset_shape": [300928, 80],
+    "target": "binary_label",
+    "excluded_columns": ["Label", "binary_label"],
+    "feature_count": 78,
+    "random_state": 42,
+    "test_fraction": 0.20,
+    "validation_fraction_of_remaining_pool": 0.20,
+    "final_ratios": {"training": 0.64, "validation": 0.16, "test": 0.20},
+    "stratified": true,
+    "scaler": "StandardScaler fitted on training only",
+    "feature_signature": "SHA-256 of newline-joined feature names in source-column order"
+  },
+  "holdout_policy": {"selection_use": false, "opened_by_dry_run": false, "opened_by_verify_only": false}
+}

@@ -39,6 +39,9 @@ source hashes, classifications and detected path references, is in
 - Outputs: split indices, feature names, scaler, split summary, split metadata
   and SHA256 feature-order signature.
 - Dependencies: none of the later model or threshold cells.
+- Extracted safe interfaces: `src/ids_validation/data/ids2018.py`,
+  `src/ids_validation/stages/stage01/protocol.py`,
+  `configs/stage01/protocol.json` and `scripts/reproduce_stage01.py`.
 
 ### Stage02 — cells 94-95
 
@@ -50,6 +53,10 @@ source hashes, classifications and detected path references, is in
 - Outputs: per-model validation results, saved models, histories,
   configurations, environment versions and the 16-model merged ranking.
 - Holdout dependency: none; Stage02 does not use the test partition.
+- Extracted safe interfaces: `src/ids_validation/models/baselines.py`,
+  `src/ids_validation/models/neural.py`,
+  `src/ids_validation/evaluation/metrics.py`, the Stage02 protocol/config and
+  `scripts/reproduce_stage02.py`.
 
 ### Stage03 — cells 96-101
 
@@ -62,6 +69,9 @@ source hashes, classifications and detected path references, is in
 - Outputs: search logs, selected parameters, native/joblib/Keras models,
   validation probabilities, histories and combined artifact manifest.
 - Holdout dependency: none.
+- Extracted safe interfaces: `src/ids_validation/models/tuning.py`, the tuned
+  builders in `src/ids_validation/models/neural.py`, the Stage03
+  protocol/config and `scripts/reproduce_stage03.py`.
 
 ### Stage04 — cells 102-104 and 106
 
@@ -76,6 +86,9 @@ source hashes, classifications and detected path references, is in
 - Outputs: full sweeps, selected operating points, neighborhood tables and
   threshold provenance metadata.
 - Holdout dependency: none.
+- Extracted safe interfaces: `src/ids_validation/evaluation/metrics.py`,
+  `src/ids_validation/evaluation/thresholds.py`, the Stage04 protocol/config
+  and `scripts/reproduce_stage04.py`.
 
 ### Stage05 — cells 105 and 107
 
@@ -87,6 +100,9 @@ source hashes, classifications and detected path references, is in
   arrays.
 - Outputs: frozen holdout probabilities, operating-point metrics and metadata.
 - Governance: extraction and verification must not call these inference paths.
+- Extracted safe interfaces: Stage05 metric-record constructors in
+  `src/ids_validation/evaluation/metrics.py`, the Stage05 protocol/config and
+  `scripts/reproduce_stage05.py`. The entry point has no execution mode.
 
 ## Stage06-Stage20 map
 

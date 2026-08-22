@@ -127,9 +127,12 @@ cell. Every archived cell remains immutable.
 Detailed inventories are in `NOTEBOOK_INVENTORY.csv` and
 `STAGE_CODE_INVENTORY.csv`.
 
-Key findings:
+Key findings after the approved Stage01-Stage05 extraction checkpoint:
 
-- Stages01-14 are executable primarily through the authoritative notebook.
+- Stages01-05 now have provenance-bearing methodology modules, explicit JSON
+  protocols and dry-run/verify-only entry points. Scientific execution is not
+  exposed by those entry points.
+- Stages06-14 remain executable primarily through the authoritative notebook.
 - Stage15 preserves nine Python sources and extensive checkpoints.
 - Stage16-18 remain notebook-centric.
 - Stage19 preserves a window constructor and two model implementations.
@@ -166,8 +169,8 @@ fact.
 ## Audit conclusion
 
 The repository contains extensive frozen evidence and strong closure records,
-but executable coverage is uneven. The authoritative notebook closes the
-largest source-preservation gap for Stages01-20. Extraction must proceed in
-small stage blocks with explicit source-cell provenance and the strongest
-honest equivalence level available. Scientific execution remains prohibited
-during extraction.
+but executable coverage remains uneven. The authoritative notebook closes the
+largest source-preservation gap for Stages01-20, and the approved Stage01-05
+block is now represented by explicit, safety-gated code and configuration.
+Further extraction still requires a new approval after this stop point.
+Scientific execution remained prohibited throughout this extraction.

@@ -1,0 +1,42 @@
+{
+  "stage": 2,
+  "name": "Sixteen-model validation baseline",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [94, 95]
+  },
+  "environment": {
+    "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "xgboost": "3.2.0", "lightgbm": "4.6.0", "catboost": "1.2.10"},
+    "unproven": ["tensorflow", "keras", "joblib", "scipy"]
+  },
+  "inputs": ["Stage 1 train/validation arrays only; test arrays remain unused"],
+  "outputs": [
+    "metadata/baseline_model_configurations.json",
+    "metadata/neural_baseline_configurations.json",
+    "results/baseline/baseline12_validation_results.csv",
+    "results/baseline/baseline4_neural_validation_results.csv",
+    "results/baseline/final_16_model_validation_ablation.csv",
+    "results/baseline/validation_selected_top5_models.csv"
+  ],
+  "verification_artifacts": [
+    "metadata/baseline_model_configurations.json",
+    "metadata/neural_baseline_configurations.json",
+    "results/baseline/baseline12_validation_results.csv",
+    "results/baseline/baseline4_neural_validation_results.csv",
+    "results/baseline/final_16_model_validation_ablation.csv",
+    "results/baseline/validation_selected_top5_models.csv"
+  ],
+  "methodology": {
+    "random_state": 42,
+    "classical_models": ["Logistic Regression", "Naive Bayes", "KNN", "Linear SVM", "Decision Tree", "Random Forest", "Extra Trees", "AdaBoost", "Gradient Boosting", "XGBoost", "LightGBM", "CatBoost"],
+    "neural_models": ["MLP", "1D-CNN", "LSTM", "Transformer Encoder"],
+    "neural_max_epochs": 30,
+    "neural_early_stopping_patience": 4,
+    "neural_internal_early_stopping_fraction": 0.15,
+    "default_threshold": 0.50,
+    "validation_ranking": ["F1-score descending", "Recall descending", "Precision descending"]
+  },
+  "holdout_policy": {"selection_use": false, "opened_by_dry_run": false, "opened_by_verify_only": false}
+}

@@ -1,0 +1,46 @@
+{
+  "stage": 4,
+  "name": "Validation-only operating-point selection",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [102, 103, 104, 106]
+  },
+  "environment": {
+    "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1"},
+    "unproven": ["matplotlib", "scipy"]
+  },
+  "inputs": ["results/tuning/top5_tuned_validation_results.csv", "Stage 3 validation probability artifacts"],
+  "outputs": [
+    "results/threshold/winning_model_validation_threshold_sweep.csv",
+    "results/threshold/selected_validation_operating_points.csv",
+    "results/threshold/final_validation_threshold_selection.csv",
+    "results/threshold/all_top5_validation_threshold_sweep.csv",
+    "results/threshold/all_top5_selected_validation_operating_points.csv",
+    "results/threshold/cross_model_threshold_leaders.csv"
+  ],
+  "verification_artifacts": [
+    "metadata/threshold_selection_metadata.json",
+    "metadata/all_models_threshold_analysis_metadata.json",
+    "results/threshold/winning_model_validation_threshold_sweep.csv",
+    "results/threshold/selected_validation_operating_points.csv",
+    "results/threshold/final_validation_threshold_selection.csv",
+    "results/threshold/all_top5_validation_threshold_sweep.csv",
+    "results/threshold/all_top5_selected_validation_operating_points.csv",
+    "results/threshold/cross_model_threshold_leaders.csv"
+  ],
+  "methodology": {
+    "threshold_grid": {"expression": "np.round(np.arange(0.05, 0.951, 0.01), 2)", "minimum": 0.05, "maximum": 0.95, "step": 0.01, "count": 91},
+    "fpr_limit": 0.05,
+    "winning_model_ranking": ["F1-score descending", "Recall descending", "Precision descending"],
+    "maximum_f1_tie_break": ["F1-score descending", "Recall descending", "FPR ascending", "Threshold descending"],
+    "single_winner_maximum_f2_tie_break": ["F2-score descending", "F1-score descending", "Recall descending", "FPR ascending", "Threshold descending"],
+    "all_model_maximum_f2_tie_break": ["F2-score descending", "Recall descending", "F1-score descending", "FPR ascending", "Threshold descending"],
+    "constrained_f2_tie_break": ["F2-score descending", "Recall descending", "F1-score descending", "FPR ascending", "Threshold descending"],
+    "frozen_winner": "XGBoost Tuned",
+    "frozen_single_winner_thresholds": {"standard": 0.50, "maximum_validation_f1": 0.51, "unconstrained_maximum_f2": 0.16, "constrained_security": 0.27},
+    "frozen_cross_model_security": {"model": "LightGBM Tuned", "threshold": 0.26}
+  },
+  "holdout_policy": {"selection_use": false, "opened_by_dry_run": false, "opened_by_verify_only": false}
+}

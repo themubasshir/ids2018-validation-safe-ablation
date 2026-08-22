@@ -1,0 +1,41 @@
+{
+  "stage": 3,
+  "name": "Validation-safe top-five tuning",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [96, 97, 98, 99, 100, 101]
+  },
+  "environment": {
+    "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "xgboost": "3.2.0", "lightgbm": "4.6.0", "catboost": "1.2.10"},
+    "unproven": ["tensorflow", "keras", "joblib", "scipy"]
+  },
+  "inputs": ["Stage 1 training and validation arrays", "results/baseline/validation_selected_top5_models.csv"],
+  "outputs": [
+    "results/tuning/xgboost/xgboost_best_parameters.json",
+    "results/tuning/lightgbm/lightgbm_best_parameters.json",
+    "results/tuning/catboost/catboost_best_parameters.json",
+    "results/tuning/mlp/mlp_best_parameters.json",
+    "results/tuning/cnn/cnn_best_parameters.json",
+    "results/tuning/top5_tuned_validation_results.csv",
+    "results/tuning/stage03_artifact_manifest.csv"
+  ],
+  "verification_artifacts": [
+    "results/tuning/xgboost/xgboost_best_parameters.json",
+    "results/tuning/lightgbm/lightgbm_best_parameters.json",
+    "results/tuning/catboost/catboost_best_parameters.json",
+    "results/tuning/mlp/mlp_best_parameters.json",
+    "results/tuning/cnn/cnn_best_parameters.json",
+    "results/tuning/top5_tuned_validation_results.csv",
+    "results/tuning/stage03_artifact_manifest.csv"
+  ],
+  "methodology": {
+    "random_state": 42,
+    "boosting_search": {"random_candidates": 15, "cv_folds": 3, "shuffle": true, "scoring": "f1", "refit": true, "n_jobs": 1, "pre_dispatch": 1, "error_score": "raise"},
+    "neural_search": {"candidates_per_architecture": 6, "maximum_epochs": 50, "early_stopping_patience": 5, "internal_training_fraction_for_early_stopping": 0.15, "selection_threshold": 0.50},
+    "neural_candidate_ranking": ["F1-score descending", "Recall descending", "Precision descending"],
+    "accelerator_policy": "Probe accelerator and use the source cell's CPU fallback"
+  },
+  "holdout_policy": {"selection_use": false, "opened_by_dry_run": false, "opened_by_verify_only": false}
+}

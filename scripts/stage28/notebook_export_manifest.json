@@ -1,0 +1,50 @@
+{
+  "artifact": "STAGE28_COMPLETE_KAGGLE_NOTEBOOK_ARCHIVE",
+  "created_at_utc": "2026-08-22T18:30:26.142192+00:00",
+  "scientific_final_parent_commit": "94bbebfe6b18249166ac6bc89deadc8a2d6dc627",
+  "scientific_status": "STAGE28_SCIENTIFICALLY_CLOSED",
+  "stage29_authorized": false,
+  "archive_commit_type": "DOCUMENTATION_AND_REPRODUCIBILITY_ONLY",
+  "source_mode": "IPYTHON_RAW_EXECUTION_HISTORY_RECONSTRUCTION",
+  "source_detail": "15 executed code cells",
+  "fidelity": {
+    "code_cell_source_preserved": true,
+    "cell_order_preserved": true,
+    "markdown_preserved": false,
+    "outputs_preserved": false,
+    "fallback_warning": "Live notebook model was unavailable. The .ipynb was reconstructed from raw IPython execution history; markdown and rich outputs are therefore not available."
+  },
+  "notebook": {
+    "path": "scripts/stage28/stage28_full_kaggle_notebook.ipynb",
+    "sha256": "92ef3cb56ab5eb78e8630c8b960d5f1961af961cc658cd324d4a3cd3f7a4e9ee",
+    "bytes": 587970,
+    "total_cells": 15,
+    "code_cells": 15,
+    "markdown_cells": 0
+  },
+  "python_export": {
+    "path": "scripts/stage28/stage28_full_kaggle_notebook.py",
+    "sha256": "3c5688d40858b6e358d0f8b2dbd3af7e32b32eaa111f0ea2d33505ae37eab4cd",
+    "bytes": 547589
+  },
+  "required_markers_verified": [
+    "STAGE28-3A",
+    "STAGE28-3B",
+    "STAGE28-3C",
+    "STAGE28-4",
+    "STAGE28-FINAL"
+  ],
+  "scientific_operations_performed_by_archive": {
+    "model_fits": 0,
+    "model_inferences": 0,
+    "threshold_selections": 0,
+    "model_selections": 0,
+    "target_openings": 0,
+    "final_holdout_openings": 0
+  },
+  "final_stage28_receipt": {
+    "path": "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_synthesis_receipt.json",
+    "sha256": "c60c69cefd865dff99c38cb858e11707ec98a00777ac86614149699be76cc282",
+    "status": "STAGE28_FINAL_SYNTHESIS_COMPLETE"
+  }
+}

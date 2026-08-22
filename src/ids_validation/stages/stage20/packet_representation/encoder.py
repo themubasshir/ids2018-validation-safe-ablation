@@ -40,12 +40,12 @@ def _mask_authentic_headers(row: np.ndarray, packet: bytes, authentic_length: in
 def encode_packet_rows(packets: Sequence[bytes]) -> tuple[np.ndarray, np.ndarray]:
     """Encode toy captured-IPv4 packet bytes as one 64x256 uint8 image.
 
-    Source notebook: physical cells 412, 420–422 (Stage20-1D0/1D3/1D4).
-    Frozen artifacts: stage20_1d0_packet_image_representation_selection_lock.json
-    and stage20_1d4a_fixed_encoder_verification_protocol_lock.json.
-    Earliest packets/bytes are retained.  Header identity fields are zeroed,
-    while the independent Boolean mask remains true at authentic zero or masked
-    positions and false only for right/bottom padding.
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 412, 420, 421, 422
+    Original stage: Stage20-1D0/1D3/1D4
+    Frozen artifacts generated: stage20_1d0_packet_image_representation_selection_lock.json, stage20_1d4a_fixed_encoder_verification_protocol_lock.json
+    Notes: Earliest packets/bytes are retained. The mask remains true at
+    authentic zero or masked positions and false only for right/bottom padding.
     """
 
     image = np.zeros((PACKET_ROWS, BYTE_COLUMNS), dtype=np.uint8)
@@ -61,7 +61,15 @@ def encode_packet_rows(packets: Sequence[bytes]) -> tuple[np.ndarray, np.ndarray
 
 
 def scale_for_model(image: np.ndarray) -> np.ndarray:
-    """Apply only the frozen model-boundary byte/255 scaling to a toy image."""
+    """Apply only the frozen model-boundary byte/255 scaling to a toy image.
+
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 412, 421, 422, 423
+    Original stage: Stage20-1D0/1D4 and Stage20-1E0
+    Frozen artifacts generated: stage20_1d4a_fixed_encoder_verification_protocol_lock.json, stage20_1e0_architecture_training_protocol_lock.json
+    Notes: This accepts only an already-encoded toy uint8 image; it performs no
+    packet parsing, corpus loading, model forward pass, or inference.
+    """
 
     array = np.asarray(image)
     if array.shape != (PACKET_ROWS, BYTE_COLUMNS) or array.dtype != np.uint8:

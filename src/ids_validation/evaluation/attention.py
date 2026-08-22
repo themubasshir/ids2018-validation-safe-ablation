@@ -104,6 +104,7 @@ def deterministic_top_indices(values: Sequence[float], k: int) -> np.ndarray:
     Original physical cell(s): 230, 235
     Original stage: Stage 17.2–17.3
     Frozen artifacts generated: stage17_2_global_rollout_feature_ranking.csv, stage17_3b_topk_overlap_detail.csv
+    Notes: Synthetic/static ranking helper only; no attention is recomputed.
     """
 
     array = np.asarray(values, dtype=np.float64).reshape(-1)
@@ -114,7 +115,14 @@ def deterministic_top_indices(values: Sequence[float], k: int) -> np.ndarray:
 
 
 def cosine_similarity(first: Sequence[float], second: Sequence[float]) -> float:
-    """Calculate cosine similarity for two frozen-method vectors."""
+    """Calculate cosine similarity for two caller-supplied toy vectors.
+
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 230, 235
+    Original stage: Stage 17.2–17.3
+    Frozen artifacts generated: stage17_2_attention_analysis_result.json, stage17_3b_cross_method_agreement.csv
+    Notes: No checkpoint is loaded and no scientific attribution is computed.
+    """
 
     left = np.asarray(first, dtype=np.float64).reshape(-1)
     right = np.asarray(second, dtype=np.float64).reshape(-1)
@@ -125,7 +133,14 @@ def cosine_similarity(first: Sequence[float], second: Sequence[float]) -> float:
 
 
 def jaccard_similarity(first: Iterable[int], second: Iterable[int]) -> float:
-    """Calculate top-k Jaccard similarity, returning NaN for an empty union."""
+    """Calculate toy top-k Jaccard similarity; return NaN for an empty union.
+
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 230, 235
+    Original stage: Stage 17.2–17.3
+    Frozen artifacts generated: stage17_2_topk_overlap.csv, stage17_3b_topk_overlap_detail.csv
+    Notes: Caller-supplied feature-index sets only; no attention is recomputed.
+    """
 
     left = {int(value) for value in first}
     right = {int(value) for value in second}

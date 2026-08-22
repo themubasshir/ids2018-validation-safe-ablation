@@ -31,9 +31,12 @@ def _next_power_of_two(value: int) -> int:
 def select_geometry(flow_packet_histogram: Mapping[int, int], packet_length_histogram: Mapping[int, int]) -> tuple[int, int, int]:
     """Apply the Stage20-1D frozen dimension rule to toy TRAIN histograms.
 
-    Source notebook: physical cells 412–420.  Frozen artifacts: Stage20-1D0,
-    1D1-S, and 1D3.  The historical exact daily histograms were integer-summed
-    before one combined nearest-rank p95; daily quantiles were never averaged.
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 412, 413, 414, 417, 418, 419, 420
+    Original stage: Stage20-1D0 through Stage20-1D3
+    Frozen artifacts generated: stage20_1d0_packet_image_representation_selection_lock.json, stage20_1d3_combined_train_geometry_numeric_dimension_freeze.json
+    Notes: Exact daily histograms were integer-summed before one combined
+    nearest-rank p95; daily quantiles were never averaged.
     """
 
     flow_p95 = _nearest_rank(flow_packet_histogram)

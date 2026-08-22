@@ -22,10 +22,12 @@ TRANSITION_COUNTS = {
 def classify_transition(source_faithful_exact: bool, v1_exact: bool) -> str:
     """Classify a toy pair under the frozen C15/C16 transition vocabulary.
 
-    Source notebook: physical cells 376–379 and 406 (Stage20-1C15-D5,
-    1C15-V1/V2, and 1C16-A-R2).  This helper evaluates no packet, flow,
-    signature, or label.  V1 was a pre-frozen global payload hypothesis whose
-    validation regressed exact membership; it is not an accepted rule.
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 376, 377, 378, 379, 406
+    Original stage: Stage20-1C15-D5/V1/V2 and Stage20-1C16-A-R2
+    Frozen artifacts generated: stage20_1c15r_v1_frozen_tcp_payload_residual_validation.json, stage20_1c16a_manifest_recovery_status.json
+    Notes: This evaluates no packet, flow, signature, or label. V1 regressed
+    exact membership and is not an accepted global reconstruction rule.
     """
 
     before = "exact" if source_faithful_exact else "absent"

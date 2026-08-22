@@ -52,6 +52,11 @@ class ProtocolSafetyTests(unittest.TestCase):
         13: [130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146],
         14: [147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161],
         15: [162, 163, 164, 165, 166, 167, 168, 169, 170, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189],
+        16: [171, *range(190, 223)],
+        17: list(range(223, 240)),
+        18: list(range(240, 290)),
+        19: list(range(290, 312)),
+        20: list(range(312, 462)),
     }
 
     def test_all_protocols_are_execution_disabled_and_mapped(self) -> None:
@@ -83,7 +88,7 @@ class ProtocolSafetyTests(unittest.TestCase):
     def test_equivalence_matrix_uses_only_approved_levels(self) -> None:
         with (ROOT / "docs/reproducibility/EQUIVALENCE_MATRIX.csv").open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
-        self.assertEqual(len(rows), 52)
+        self.assertEqual(len(rows), 73)
         self.assertEqual({row["status"] for row in rows}, {"PASS"})
         self.assertTrue({row["equivalence_level"] for row in rows} <= {"A", "B", "C", "D"})
 

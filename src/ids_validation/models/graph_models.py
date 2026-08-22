@@ -46,6 +46,7 @@ def threshold_grid() -> np.ndarray:
     Original physical cell(s): 270, 273, 282
     Original stage: Stage 18.3E, 18.3H, 18.3J
     Frozen artifacts generated: stage18_3h_validation_threshold_sweep.csv, stage18_3j_validation_threshold_sweep.csv
+    Notes: Static grid only; accepts no scientific probabilities.
     """
 
     return np.arange(1, 100, dtype=np.int64) / 100.0

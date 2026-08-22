@@ -35,12 +35,12 @@ SIGNATURE_FIELDS = (
 def build_signature(record: Mapping[str, Any]) -> tuple[Any, ...]:
     """Format an already-canonical toy record in exact S4 field order.
 
-    Source notebook: physical cells 320–325 (Stage20-1B4 through 1B4E).
-    Frozen artifact: stage20_1b4e_packet_label_reconstruction_spec.json.
-    Values are neither coerced nor canonicalized: signed duration, timestamp,
-    endpoint direction, and exact numeric identity are caller responsibilities.
-    No tolerance, nearest match, label guidance, or bidirectional endpoint swap
-    is implemented here.
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 320, 321, 322, 323, 324, 325
+    Original stage: Stage20-1B4 through 1B4E
+    Frozen artifacts generated: stage20_1b4e_packet_label_reconstruction_spec.json
+    Notes: Values are neither coerced nor canonicalized; no tolerance, nearest
+    match, label guidance, or bidirectional endpoint swap is implemented.
     """
 
     missing = [field for field in SIGNATURE_FIELDS if field not in record]

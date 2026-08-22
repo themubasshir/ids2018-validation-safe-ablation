@@ -95,7 +95,14 @@ def construct_fine_only(
     flow_count: Sequence[int],
     target_local_index: int,
 ) -> np.ndarray:
-    """Return the frozen single-scale control's fine branch for toy arrays."""
+    """Return the frozen single-scale control's fine branch for toy arrays.
+
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 299, 300, 301
+    Original stage: Stage 19.2A–19.3
+    Frozen artifacts generated: stage19_2a_representation_spec.json, stage19_3_training_config.json
+    Notes: Caller-supplied toy arrays only; no temporal data is materialized.
+    """
 
     fine, _, _ = construct_multiscale(base_standardized, flow_count, target_local_index)
     return fine

@@ -12,7 +12,14 @@ SECURITY_THRESHOLD = 0.17
 
 
 def threshold_grid() -> tuple[float, ...]:
-    """Return the predeclared 0.05–0.95 integer-percent grid."""
+    """Return the predeclared 0.05–0.95 integer-percent grid.
+
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 423, 449
+    Original stage: Stage20-1E0/1E3
+    Frozen artifacts generated: stage20_1e0_architecture_training_protocol_lock.json, stage20_1e3_validation_execution_semantics_lock.json
+    Notes: This returns static values and accepts no scientific probabilities.
+    """
 
     return tuple(value / 100 for value in range(5, 96))
 
@@ -34,8 +41,12 @@ def _rates(row: Mapping[str, int]) -> tuple[Fraction, Fraction, Fraction, Fracti
 def select_balanced(rows: Sequence[Mapping[str, int]]) -> Mapping[str, int]:
     """Apply the frozen balanced tie rule to caller-supplied toy counts only.
 
-    Source notebook: physical cells 423 and 449.  The repository entry point
-    exposes no probability input and cannot reselect a scientific threshold.
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 423, 449
+    Original stage: Stage20-1E0/1E3
+    Frozen artifacts generated: stage20_1e3_validation_execution_semantics_lock.json, stage20_1e3_thursday_validation_evaluation.json
+    Notes: The repository entry point exposes no probability input and cannot
+    reselect a scientific threshold.
     """
 
     if not rows:
@@ -50,7 +61,15 @@ def select_balanced(rows: Sequence[Mapping[str, int]]) -> Mapping[str, int]:
 
 
 def select_security(rows: Sequence[Mapping[str, int]]) -> Mapping[str, int] | None:
-    """Apply frozen FPR<=0.05/F2 rules to caller-supplied toy counts only."""
+    """Apply frozen FPR<=0.05/F2 rules to caller-supplied toy counts only.
+
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 423, 449
+    Original stage: Stage20-1E0/1E3
+    Frozen artifacts generated: stage20_1e3_validation_execution_semantics_lock.json, stage20_1e3_thursday_validation_evaluation.json
+    Notes: Exact rational comparisons are used only on caller-supplied toy
+    confusion counts; scientific threshold reselection is not exposed.
+    """
 
     eligible = [row for row in rows if _rates(row)[2] <= Fraction(1, 20)]
     if not eligible:

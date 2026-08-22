@@ -13,10 +13,12 @@ PHYSICAL_COLUMN_TO_SEMANTIC_FLAG = dict(zip(CSV_HEADER_ORDER, JAVA8_SERIALIZED_O
 def serialize_semantic_flags(semantic_counts: Mapping[str, int]) -> tuple[int, ...]:
     """Place caller-supplied toy semantic counts in historical physical order.
 
-    Source notebook: physical cells 340–341 (Stage20-1C7/1C8).
-    Frozen artifact: stage20_1c8_flag_serialization_correction.json.
-    This is the source-derived mapping, not a searched permutation.  It does
-    not modify any physical source column or label.
+    Source notebook: notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb
+    Original physical cell(s): 340, 341
+    Original stage: Stage20-1C7/1C8
+    Frozen artifacts generated: stage20_1c8_flag_serialization_correction.json
+    Notes: This is the source-derived mapping, not a searched permutation. It
+    does not modify any physical source column or label.
     """
 
     missing = [name for name in JAVA8_SERIALIZED_ORDER if name not in semantic_counts]

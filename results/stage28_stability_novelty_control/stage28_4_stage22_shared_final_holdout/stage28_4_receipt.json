@@ -1,0 +1,230 @@
+{
+  "stage": "Stage28-4",
+  "type": "STAGE22_FIVE_SEED_SHARED_FINAL_HOLDOUT_ROBUSTNESS_INFERENCE",
+  "created_at_utc": "2026-08-22T18:16:45.406697+00:00",
+  "scientific_lineage": {
+    "stage28_3c_parent": "2679d0c208d514b381caa12e96c959f4f2ee5ee7",
+    "materialization_checkpoint_commit": "515b93076bc3538455c77eb9672a1c21b492b2e9"
+  },
+  "recovery": {
+    "status": "RECOVERED_AFTER_POST_MATERIALIZATION_PRE_INFERENCE_SCHEMA_FAILURE",
+    "raw_source_files_re_read": false,
+    "additional_holdout_materialization": false,
+    "model_inference_before_failure": 0,
+    "schema_repairs": [
+      "models.ensemble_probability may be omitted in compact AUTO-A receipts; frozen Stage22 protocol is authoritative.",
+      "Stage28 local model path may be stored under model_path or model."
+    ]
+  },
+  "holdout": {
+    "name": "STAGE22R_SHARED_FINAL_SINGLE_HOLDOUT",
+    "rows": 1374133,
+    "benign": 998788,
+    "attack": 375345,
+    "features": 70,
+    "dtype": "float64",
+    "X_logical_sha256": "50979ff283ddebaceb6442004c5b80b85e4fb40d02041a5150f730683b3d7c8e",
+    "y_logical_sha256": "b99cf695a49ad2b0a8811fa269a55dcfb99cb700f473ceae8c9ecac2c8661a78",
+    "blind_status": "NOT_NEW_BLIND_HOLDOUT; PARENT_STAGE22R_ALREADY_HISTORICALLY_OPENED"
+  },
+  "scientific_unit": {
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "probability_rule": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "component_combination_dtype": "float64",
+    "ensemble_storage_dtype": "float32"
+  },
+  "design": {
+    "units": [
+      "RANDOM_NATURAL",
+      "CHRONOLOGICAL_NATURAL"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "ensemble_realizations": 10,
+    "component_model_inferences": 20
+  },
+  "threshold_policy": {
+    "selection_population": "FROZEN_DEVELOPMENT_VALIDATION_ONLY",
+    "final_holdout_threshold_search": "FORBIDDEN_AND_NOT_PERFORMED",
+    "model_selection_on_final_holdout": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "probabilities": {
+    "artifact": "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_shared_holdout_ensemble_probabilities.npz",
+    "artifact_sha256": "ef1944bcc37fce1777e40b54cf8da120ca8f8571d27bc30a9515e1b94197e00e",
+    "arrays": {
+      "random_natural_seed42": {
+        "unit": "RANDOM_NATURAL",
+        "seed": 42,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "4865ae1f9085d8df1be32f7134fba1c95373b31ae01b96f76609a9df7d56f3f3",
+        "minimum": 6.4965202000166755e-06,
+        "maximum": 0.998977780342102,
+        "xgboost_inference_seconds": 7.19750837599895,
+        "lightgbm_inference_seconds": 23.5091335649995,
+        "cell_total_seconds": 31.720055986999796
+      },
+      "random_natural_seed43": {
+        "unit": "RANDOM_NATURAL",
+        "seed": 43,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "96910c9dc11f0ab81242db004395b3bd4e2c4ada57394b296297099b3ce87055",
+        "minimum": 6.096253855503164e-06,
+        "maximum": 0.9957860708236694,
+        "xgboost_inference_seconds": 7.193082740999671,
+        "lightgbm_inference_seconds": 23.63914128900069,
+        "cell_total_seconds": 31.835755580001205
+      },
+      "random_natural_seed44": {
+        "unit": "RANDOM_NATURAL",
+        "seed": 44,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "97789e260537c371d00e0879e80344fbeebe20cb97aca2123f671655f73fb13f",
+        "minimum": 6.2324616010300815e-06,
+        "maximum": 0.9966190457344055,
+        "xgboost_inference_seconds": 7.1560147239997605,
+        "lightgbm_inference_seconds": 23.531518011001026,
+        "cell_total_seconds": 31.681952191000164
+      },
+      "random_natural_seed45": {
+        "unit": "RANDOM_NATURAL",
+        "seed": 45,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "052d4f8e38e689e9b2fdaf7d266a961de035eab40faee9d9611aa2ff4984c3df",
+        "minimum": 7.86766304372577e-06,
+        "maximum": 0.9953157305717468,
+        "xgboost_inference_seconds": 7.145579347999956,
+        "lightgbm_inference_seconds": 23.77109677699991,
+        "cell_total_seconds": 31.928151456000705
+      },
+      "random_natural_seed46": {
+        "unit": "RANDOM_NATURAL",
+        "seed": 46,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "dd8b6e099a1efc0355c3a9438fb6fffd76a135c5054a509bafb72d6fe55d98ae",
+        "minimum": 5.721603884012438e-06,
+        "maximum": 0.9973035454750061,
+        "xgboost_inference_seconds": 7.1335105010002735,
+        "lightgbm_inference_seconds": 23.880695748999642,
+        "cell_total_seconds": 32.02324176899856
+      },
+      "chronological_natural_seed42": {
+        "unit": "CHRONOLOGICAL_NATURAL",
+        "seed": 42,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "e8a5339b108aeec12ff6e57735a2a155d143cb17584a791495988863a5d3de30",
+        "minimum": 9.825653179973415e-09,
+        "maximum": 0.9960079193115234,
+        "xgboost_inference_seconds": 6.9592556999996305,
+        "lightgbm_inference_seconds": 20.636046101999455,
+        "cell_total_seconds": 28.458939594000185
+      },
+      "chronological_natural_seed43": {
+        "unit": "CHRONOLOGICAL_NATURAL",
+        "seed": 43,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "51dfbce1cad15b2cb07228114a61f91a6d43923c6f3170e0d61eb8596b709d3e",
+        "minimum": 1.1284114087573016e-08,
+        "maximum": 0.9964215755462646,
+        "xgboost_inference_seconds": 6.866401552999378,
+        "lightgbm_inference_seconds": 20.176570283998444,
+        "cell_total_seconds": 27.931665370999326
+      },
+      "chronological_natural_seed44": {
+        "unit": "CHRONOLOGICAL_NATURAL",
+        "seed": 44,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "c4b40690f86e293ef7f6f68eb0bb913395df43c660c36883124481e0b1db9b9c",
+        "minimum": 1.220206335972307e-08,
+        "maximum": 0.9974423050880432,
+        "xgboost_inference_seconds": 6.930515071000627,
+        "lightgbm_inference_seconds": 20.043113491999975,
+        "cell_total_seconds": 27.827514679998785
+      },
+      "chronological_natural_seed45": {
+        "unit": "CHRONOLOGICAL_NATURAL",
+        "seed": 45,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "0403dd23195f16c5d35b12484580968c7050b831c5851f948bf0e7a1cda70425",
+        "minimum": 9.857661353862568e-09,
+        "maximum": 0.997778594493866,
+        "xgboost_inference_seconds": 6.967500261998794,
+        "lightgbm_inference_seconds": 20.385705992999647,
+        "cell_total_seconds": 28.21327509100047
+      },
+      "chronological_natural_seed46": {
+        "unit": "CHRONOLOGICAL_NATURAL",
+        "seed": 46,
+        "rows": 1374133,
+        "dtype": "float32",
+        "logical_sha256": "e22559b6213b918145c2d021865d1eddf2403f3cb93c95636a976d550eef7d57",
+        "minimum": 9.62864543652131e-09,
+        "maximum": 0.9981518983840942,
+        "xgboost_inference_seconds": 6.95389595800043,
+        "lightgbm_inference_seconds": 20.50284832700163,
+        "cell_total_seconds": 28.31688609199955
+      }
+    }
+  },
+  "seed_level_metrics": {
+    "path": "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_seed_level_metrics.csv",
+    "rows": 10
+  },
+  "stage22_directional_stability": {
+    "claim_path": "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_stage22_directional_claims.csv",
+    "summary_path": "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_stage22_directional_stability_summary.csv",
+    "claims": {
+      "STAGE22_PR_RANDOM_LT_CHRONO_ON_SHARED_FINAL_HOLDOUT": {
+        "supporting": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "STAGE22_ROC_RANDOM_LT_CHRONO_ON_SHARED_FINAL_HOLDOUT": {
+        "supporting": 5,
+        "total": 5,
+        "rate": 1.0
+      }
+    },
+    "stability_denominator": 5,
+    "post_result_condition_creation": 0,
+    "new_significance_tests": 0
+  },
+  "combined_conclusion_stability": {
+    "path": "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/conclusion_stability.csv",
+    "loao_rows": 550,
+    "stage22_rows": 10,
+    "combined_rows": 560
+  },
+  "scientific_operations": {
+    "new_model_fits": 0,
+    "component_model_inferences": 20,
+    "ensemble_evaluations": 10,
+    "threshold_selections": 0,
+    "model_selections": 0,
+    "new_formal_statistical_tests": 0,
+    "shap_recomputation": 0,
+    "subset_search": 0,
+    "new_holdout_creation": 0,
+    "stage28_shared_final_holdout_materializations": 1
+  },
+  "fit_budget": {
+    "authorized": 108,
+    "consumed": 108,
+    "remaining": 0
+  },
+  "status": "STAGE28_4_COMPLETE",
+  "next_authorized_step": "ZERO_FIT_FINAL_SYNTHESIS_AND_MANUSCRIPT_INTEGRATION; NO_FURTHER_MODEL_FITTING; NO_STAGE29"
+}

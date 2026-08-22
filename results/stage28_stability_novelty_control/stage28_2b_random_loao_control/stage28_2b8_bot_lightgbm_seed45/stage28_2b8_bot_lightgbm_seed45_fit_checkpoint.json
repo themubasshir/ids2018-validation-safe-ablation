@@ -1,0 +1,27 @@
+{
+  "stage": "Stage28-2B8",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C078",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::BOT::LIGHTGBM::SEED45",
+  "fit_ordinal": 66,
+  "pre_component_new_fits_consumed": 65,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 66,
+  "new_fits_remaining": 42,
+  "held_out_family": "BOT",
+  "learner": "LIGHTGBM",
+  "training_seed": 45,
+  "membership_seed": 42,
+  "model_artifact": "bot_lightgbm_seed45_cpu_model.txt",
+  "model_sha256": "244862255d7e7371af93d22f3348086c3d8d4f8882827523627ca7c7ef4805d1",
+  "fit_seconds": 123.26500036700008,
+  "model_structure": {
+    "iterations": 400,
+    "trees": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

@@ -1,0 +1,10 @@
+{
+  "stage": "Stage28-2B7",
+  "component_id": "C077",
+  "fit_ordinal": 65,
+  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "model_sha256": "0682d8f05d2df0a3dc213067f4106feb8418488110a2158d8a0a11ddb374de0d",
+  "completed_at_utc": "2026-08-22T15:14:27.428404+00:00",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

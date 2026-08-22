@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A40",
+  "component_id": "C058",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::PORT_SCAN::LIGHTGBM::SEED45",
+  "fit_ordinal": 48,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T10:29:45.288329+00:00",
+  "durable_parent": "586d04818a2a5dbab58e66c1abe776810eec0328",
+  "held_out_family": "PORT_SCAN",
+  "learner": "LIGHTGBM",
+  "seed": 45,
+  "model_sha256": "079dfcbcb3643c7ff06a6fe3db87f9f5cf6f4995a07054b88e487c2d4b9e9f02",
+  "validation_probability_sha256": "0b8787c895701f599ed5aa930631ef2671a098e16baaaa91bb852dc40440d3db",
+  "operational_target_probability_sha256": "a6eba34d10de71adc6a15e445383db4efc6f22cecea247af02d7ef5f77bc8f45",
+  "threshold_grid_sha256": "2f3d54544b45515965bd682a5d74d956ed15296a6059f22c72531f03bd30d541",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

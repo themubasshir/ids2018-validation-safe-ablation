@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2A40",
+  "execution_mode": "STAGE28_AUTO_B",
+  "component_id": "C058",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::PORT_SCAN::LIGHTGBM::SEED45",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 47,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 48,
+  "new_fits_remaining": 60,
+  "stage28a_stage27_new_fits_consumed": 30,
+  "stage28a_stage27_new_fits_remaining": 10,
+  "status": "FIT_048_SUCCESSFULLY_CONSUMED"
+}

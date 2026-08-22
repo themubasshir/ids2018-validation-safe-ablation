@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2A47",
+  "execution_mode": "STAGE28_AUTO_B",
+  "component_id": "C067",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::WEB_ATTACK::XGBOOST::SEED45",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 54,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 55,
+  "new_fits_remaining": 53,
+  "stage28a_stage27_new_fits_consumed": 37,
+  "stage28a_stage27_new_fits_remaining": 3,
+  "status": "FIT_055_SUCCESSFULLY_CONSUMED"
+}

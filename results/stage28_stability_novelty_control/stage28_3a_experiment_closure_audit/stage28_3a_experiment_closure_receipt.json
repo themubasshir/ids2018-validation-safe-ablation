@@ -1,0 +1,97 @@
+{
+  "stage": "Stage28-3A",
+  "type": "EXPERIMENT_CLOSURE_AND_108_FIT_AUDIT",
+  "created_at_utc": "2026-08-22T17:30:17.397150+00:00",
+  "scientific_parent_commit": "9fddb8d8c34ba8f81b71f24eea15c90151053d6b",
+  "frozen_component_manifest": {
+    "path": "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest.csv",
+    "sha256": "47e7ffbf357fee3d86830282ae0e69663f84849971e3caeb151168e9bb50b505",
+    "components": 120,
+    "new_fit_components": 108,
+    "reuse_components": 12
+  },
+  "fit_budget_closure": {
+    "authorized_new_fits": 108,
+    "consumed_new_fits": 108,
+    "remaining_new_fits": 0,
+    "fit_ordinals": "FIT_001_THROUGH_FIT_108_CONTIGUOUS",
+    "new_fit_component_coverage": "EXACT_108_OF_108",
+    "reuse_component_coverage": "EXACT_12_OF_12",
+    "new_model_artifacts": {
+      "stage22": 18,
+      "stage27": 40,
+      "stage28b": 50,
+      "total": 108
+    }
+  },
+  "execution_root_closure": {
+    "stage22_output_directories": 10,
+    "stage27_new_fit_output_directories": 40,
+    "stage28b_output_directories": 50,
+    "total_stage28_output_directories_checksum_audited": 100,
+    "checksum_payload_files_verified": 742,
+    "checksum_payload_bytes_verified": 823773037
+  },
+  "component_obligations": {
+    "stage22": {
+      "components": 20,
+      "new": 18,
+      "reuse": 2
+    },
+    "stage27": {
+      "components": 50,
+      "new": 40,
+      "reuse": 10
+    },
+    "stage28b": {
+      "components": 50,
+      "new": 50,
+      "reuse": 0
+    },
+    "all_120_component_model_identities_reconciled": true,
+    "all_12_reused_model_sha256_verified": true,
+    "all_108_new_fit_ledger_components_verified": true,
+    "all_stage28_result_parameter_sha256_reconciled": true,
+    "all_stage28_result_model_sha256_reconciled": true,
+    "all_compute_backends_cpu": true
+  },
+  "anti_adaptation": {
+    "shared_stage22_final_holdout_openings_during_stage28_execution": 0,
+    "shared_stage22_final_holdout_predictor_rows_read_during_stage28_execution": 0,
+    "shared_stage22_final_holdout_labels_read_during_stage28_execution": 0,
+    "stage22_final_holdout_threshold_search": "FORBIDDEN",
+    "target_derived_fit_or_threshold_adaptation": 0,
+    "recorded_false_key_occurrences": {
+      "target_used_for_fit": 90,
+      "target_used_for_class_weight": 90,
+      "target_used_for_threshold_selection": 90,
+      "target_threshold_search": 180,
+      "post_target_parameter_change": 90,
+      "post_target_fit_branching": 90,
+      "target_adaptive_choices": 100
+    },
+    "recorded_target_rows_used_occurrences_verified_zero": 180
+  },
+  "stage28b_two_phase_durability": {
+    "fit_checkpoint_receipts": 50,
+    "execution_progress_receipts": 50,
+    "final_fit_ledgers": 50,
+    "final_results": 50,
+    "status": "50_OF_50_COMPLETE"
+  },
+  "scientific_scope": {
+    "new_model_fits_this_stage": 0,
+    "model_inference_this_stage": 0,
+    "threshold_selection_this_stage": 0,
+    "target_openings_this_stage": 0,
+    "shared_final_holdout_openings_this_stage": 0,
+    "data_dependent_model_changes_this_stage": 0,
+    "new_model_fits_authorized_after_closure": 0,
+    "infiltration_status": "DESCRIPTIVE_ONLY_SUPPORT_36_LT_50",
+    "random_loao_status": "CONTROL_NOT_DEPLOYMENT_ESTIMATE",
+    "family_specific_loao_primary": true,
+    "aggregate_zero_day_score_created": false
+  },
+  "closure_status": "PASS_STAGE28_NEW_MODEL_FITTING_PERMANENTLY_CLOSED",
+  "next_authorized_step": "Stage28-3B \u2014 seed uncertainty and conclusion-stability synthesis. ZERO new fits. The shared Stage22 final holdout remains closed until the separately preregistered one-time Stage28-4 inference."
+}

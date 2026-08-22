@@ -14,8 +14,8 @@ from .paths import repository_root
 def load_protocol(stage_number: int) -> dict[str, Any]:
     """Load a repository-owned Stage 1–5 protocol file."""
 
-    if stage_number not in range(1, 6):
-        raise ValueError("Only Stages 1–5 are extracted in this checkpoint")
+    if stage_number not in range(1, 11):
+        raise ValueError("Only Stages 1–10 are extracted in the current approved checkpoints")
     root = repository_root()
     return read_json(root / "configs" / f"stage{stage_number:02d}" / "protocol.json")
 
@@ -61,7 +61,7 @@ def verify_only_report(protocol: dict[str, Any]) -> dict[str, Any]:
 def run_protocol_cli(stage_number: int, argv: list[str] | None = None) -> int:
     """Run one Stage 1–5 safety-gated command line."""
 
-    parser = argparse.ArgumentParser(description=f"Stage {stage_number} reproducibility protocol (execution disabled)")
+    parser = argparse.ArgumentParser(description=f"Stage {stage_number} reproducibility protocol (scientific execution disabled)")
     modes = parser.add_mutually_exclusive_group(required=True)
     modes.add_argument("--dry-run", action="store_true", help="describe the scientific operation without performing it")
     modes.add_argument("--verify-only", action="store_true", help="verify declarations and artifact presence without opening scientific data")

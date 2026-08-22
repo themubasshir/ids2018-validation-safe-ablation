@@ -1,0 +1,94 @@
+{
+  "stage": 7,
+  "name": "Publication assets and complete-working archive packaging",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [109, 110, 111, 112, 113, 114, 115]
+  },
+  "environment": {
+    "proven": {},
+    "unproven": {
+      "python": "VERSION_NOT_PROVEN",
+      "numpy": "VERSION_NOT_PROVEN",
+      "pandas": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN",
+      "scikit-learn": "VERSION_NOT_PROVEN",
+      "tar": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "results/baseline/final_16_model_validation_ablation.csv",
+    "results/tuning/top5_tuned_validation_results.csv",
+    "results/threshold/all_top5_validation_threshold_sweep.csv",
+    "results/threshold/all_top5_selected_validation_operating_points.csv",
+    "results/holdout/objective_specific_final_test_results.csv",
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/shap/xgboost_lightgbm_shap_global_comparison.csv",
+    "Stage 6 SHAP figures"
+  ],
+  "outputs": [
+    "9 generated publication figures under figures/",
+    "6 copied Stage 6 SHAP figures under figures/",
+    "4 CSV publication tables under tables/",
+    "4 LaTeX publication tables under tables/",
+    "metadata/publication_assets_metadata.json",
+    "/kaggle/working/complete_working_manifest.json",
+    "/kaggle/working/ids2018_validation_safe_complete_working.tar.gz",
+    "/kaggle/working/ids2018_validation_safe_complete_working.tar.gz.sha256"
+  ],
+  "verification_artifacts": [
+    "figures/figure01_baseline16_f1_comparison.png",
+    "figures/figure02_tuned_top5_f1_comparison.png",
+    "figures/figure03_constrained_security_f2_comparison.png",
+    "figures/figure04_xgboost_threshold_tradeoff.png",
+    "figures/figure05_lightgbm_threshold_tradeoff.png",
+    "figures/figure06_final_holdout_objective_comparison.png",
+    "figures/figure07_xgboost_holdout_confusion_matrix.png",
+    "figures/figure08_lightgbm_security_confusion_matrix.png",
+    "figures/figure09_shap_rank_agreement.png",
+    "figures/xgboost_shap_summary_plot.png",
+    "figures/xgboost_shap_top20_bar_plot.png",
+    "figures/xgboost_shap_attack_waterfall.png",
+    "figures/lightgbm_shap_summary_plot.png",
+    "figures/lightgbm_shap_top20_bar_plot.png",
+    "figures/lightgbm_shap_attack_waterfall.png",
+    "tables/table01_baseline16_validation_results.csv",
+    "tables/table02_tuned_top5_validation_results.csv",
+    "tables/table03_constrained_security_validation_results.csv",
+    "tables/table04_objective_specific_holdout_results.csv",
+    "tables/table01_baseline16_validation_results.tex",
+    "tables/table02_tuned_top5_validation_results.tex",
+    "tables/table03_constrained_security_validation_results.tex",
+    "tables/table04_objective_specific_holdout_results.tex",
+    "metadata/publication_assets_metadata.json",
+    "metadata/source_archive.sha256"
+  ],
+  "known_missing_artifacts": [
+    "complete_working_manifest.json",
+    "ids2018_validation_safe_complete_working.tar.gz",
+    "ids2018_validation_safe_complete_working.tar.gz.sha256"
+  ],
+  "methodology": {
+    "figures_generated": 15,
+    "csv_tables_generated": 4,
+    "latex_tables_generated": 4,
+    "figure_dpi": 300,
+    "latex_float_format": "%.4f",
+    "archive_source": "/kaggle/working",
+    "archive_command": ["tar", "-czf", "/tmp/ids2018_validation_safe_complete_working.tar.gz", "-C", "/kaggle/working", "."],
+    "archive_verification_command": ["tar", "-tzf", "/kaggle/working/ids2018_validation_safe_complete_working.tar.gz"],
+    "historical_archive_sha256": "36cf443c6cd76ca21e63518acb01b626648c1df87beda0e41ea3db87837b7e45",
+    "historical_zip_cleanup": "Cell 110 unlinked every *.zip beneath /kaggle/working before inventory/archive creation",
+    "zip_cleanup_exposed_by_extraction": false,
+    "canonical_outputs_overwritten_by_extraction": false
+  },
+  "holdout_policy": {
+    "historical_derived_inputs_read": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

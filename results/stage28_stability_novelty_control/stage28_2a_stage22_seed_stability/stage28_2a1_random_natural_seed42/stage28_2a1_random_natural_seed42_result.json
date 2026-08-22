@@ -1,0 +1,170 @@
+{
+  "stage": "Stage28-2A1",
+  "status": "RANDOM_NATURAL_SEED42_VALIDATION_CHECKPOINT_FROZEN",
+  "created_at_utc": "2026-08-22T04:33:02.894729+00:00",
+  "parent_commit": "738e3ee29d098d4132828aeaaacfa12a8cfd7b52",
+  "arm": "28A_TRAINING_SEED_STABILITY",
+  "experiment": "STAGE22_FULL",
+  "unit": "RANDOM_NATURAL",
+  "training_seed": 42,
+  "evaluation_cell_id": "28A_STAGE22::RANDOM_NATURAL::SEED42",
+  "membership": {
+    "train_rows": 11529922,
+    "train_attack": 1577839,
+    "train_benign": 9952083,
+    "validation_rows": 2882481,
+    "validation_attack": 394460,
+    "validation_benign": 2488021,
+    "membership_changed_by_training_seed": false
+  },
+  "models": {
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+    "component_combination_dtype": "float64",
+    "ensemble_storage_dtype": "float32",
+    "xgboost": {
+      "component_id": "C001",
+      "fit_action": "NEW_FIT_AUTHORIZED",
+      "configuration": "XGB_11",
+      "seed": 42,
+      "backend": "cpu",
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "device": "cpu",
+        "eval_metric": "logloss",
+        "gamma": 0.0,
+        "learning_rate": 0.06,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "n_estimators": 400,
+        "n_jobs": -1,
+        "objective": "binary:logistic",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 3.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      },
+      "parameter_sha256": "1eb12cc88f3e1b455da9882d8439938fda175c66435940a5e2a6850cbcda63ff",
+      "library_version": "3.2.0",
+      "boosted_rounds": 400,
+      "fit_seconds": 610.6413844009999,
+      "training_materialization_seconds": 4.707454021000103,
+      "model_path": "random_natural_seed42_xgboost_cpu_model.json",
+      "model_sha256": "7bdb5fc3b0b464d2fb27785ad6bc7cf54de772c8e983f8fc0d51d638ec8c7907"
+    },
+    "lightgbm": {
+      "component_id": "C002",
+      "fit_action": "REUSE_EXISTING",
+      "configuration": "LGBM_11",
+      "seed": 42,
+      "backend": "cpu",
+      "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+      "historical_model_path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_lightgbm_model.txt",
+      "historical_model_sha256": "9a92f4b8cd26738a470a7ff6fb72f51422a803e10b36bb32ac4bfc91373e6e50",
+      "library_version": "4.6.0",
+      "iterations": 400,
+      "trees": 400,
+      "new_fit_budget_consumed": 0
+    }
+  },
+  "historical_semantics_self_test": {
+    "historical_probability_artifact": "results/stage22r_training/stage22r_2a_random_natural/random_natural_validation_ensemble_probabilities.npz",
+    "historical_probability_sha256": "9dc64ccdb6580dad727668ff3e511e0a8572cbb1de49b9ffe8999b0c3d190394",
+    "historical_probability_key": "ensemble_probability",
+    "historical_roc_auc": 0.9986245647735994,
+    "historical_pr_auc": 0.9955900418992819,
+    "pr_auc_definition": "SKLEARN_AVERAGE_PRECISION_SCORE",
+    "historical_standard_threshold": 0.5,
+    "historical_balanced_threshold": 0.46,
+    "historical_security_threshold": 0.1,
+    "status": "EXACT_REPRODUCTION"
+  },
+  "validation_probability": {
+    "rows": 2882481,
+    "roc_auc": 0.9986179102431227,
+    "pr_auc": 0.995581616244094,
+    "pr_auc_definition": "SKLEARN_AVERAGE_PRECISION_SCORE",
+    "artifact": "random_natural_seed42_validation_ensemble_probabilities.npz",
+    "artifact_sha256": "41bfa21977d550e389487e516ae697efa7a19d7b96883c3c30ef1a8a87632161",
+    "inference_seconds": 74.42507200200043
+  },
+  "threshold_selection": {
+    "selection_population": "FROZEN_RANDOM_NATURAL_DEVELOPMENT_VALIDATION",
+    "final_holdout_threshold_search": "FORBIDDEN",
+    "prediction_rule": "ATTACK_IF_PERSISTED_FLOAT32_ENSEMBLE_PROBABILITY_GTE_THRESHOLD",
+    "grid_integer_percent": [
+      5,
+      95
+    ],
+    "grid_points": 91,
+    "balanced": "MAX_F1; TIES LOWER_FPR, HIGHER_RECALL, CLOSER_TO_0_50, LOWER_THRESHOLD",
+    "security": "FPR<=0.05 EXACT; MAX_F2; TIES LOWER_FPR, HIGHER_RECALL, LOWER_THRESHOLD; NO_RELAXATION",
+    "grid_artifact": "random_natural_seed42_validation_threshold_grid.csv",
+    "grid_sha256": "389d77be0f717cc0a6225d20d9fa8fdb7c5eab685569c628aa6bec57326e29c2"
+  },
+  "operating_points": {
+    "standard": {
+      "accuracy": 0.9956530502716237,
+      "precision": 0.9997880091705662,
+      "recall": 0.9684403995335396,
+      "fpr": 3.2555995307113565e-05,
+      "f1": 0.9838645705632076,
+      "f2": 0.974551668119098,
+      "tp": 382011,
+      "fp": 81,
+      "tn": 2487940,
+      "fn": 12449,
+      "threshold_integer_percent": 50,
+      "threshold": 0.5,
+      "threshold_float32_runtime": 0.5
+    },
+    "balanced": {
+      "accuracy": 0.9956582541220567,
+      "precision": 0.9996154238578481,
+      "recall": 0.9686457435481418,
+      "fpr": 5.9083102594391285e-05,
+      "f1": 0.9838869368957601,
+      "f2": 0.9746852040147361,
+      "tp": 382092,
+      "fp": 147,
+      "tn": 2487874,
+      "fn": 12368,
+      "threshold_integer_percent": 46,
+      "threshold": 0.46,
+      "threshold_float32_runtime": 0.46000000834465027
+    },
+    "security": {
+      "status": "AVAILABLE",
+      "result": {
+        "accuracy": 0.992032904987058,
+        "precision": 0.9582409232537887,
+        "recall": 0.9846929980226132,
+        "fpr": 0.006803399167450757,
+        "f1": 0.9712868947461206,
+        "f2": 0.979286391765989,
+        "tp": 388422,
+        "fp": 16927,
+        "tn": 2471094,
+        "fn": 6038,
+        "threshold_integer_percent": 10,
+        "threshold": 0.1,
+        "threshold_float32_runtime": 0.10000000149011612
+      }
+    }
+  },
+  "scientific_accounting": {
+    "new_model_fits_this_cell": 1,
+    "new_model_fits_cumulative": 1,
+    "new_model_fits_remaining": 107,
+    "existing_models_reused_this_cell": 1,
+    "development_validation_model_inference": true,
+    "threshold_selection_completed": true,
+    "shared_final_holdout_openings": 0,
+    "shared_final_holdout_predictor_rows_read": 0,
+    "shared_final_holdout_labels_read": 0,
+    "new_target_openings": 0,
+    "target_adaptive_choices": 0
+  },
+  "next_authorized_step": "Stage28-2A2 — CHRONOLOGICAL_NATURAL seed42. FIT #2 = C011 CPU XGBoost seed42. C012 = exact historical CPU LightGBM reuse. Shared final holdout remains closed."
+}

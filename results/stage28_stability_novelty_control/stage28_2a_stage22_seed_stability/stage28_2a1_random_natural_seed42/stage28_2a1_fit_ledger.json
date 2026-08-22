@@ -1,0 +1,24 @@
+{
+  "stage": "Stage28-2A1",
+  "durable_parent": "738e3ee29d098d4132828aeaaacfa12a8cfd7b52",
+  "evaluation_cell_id": "28A_STAGE22::RANDOM_NATURAL::SEED42",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_cell_new_fits_consumed": 0,
+  "this_cell": {
+    "successful_new_fits": 1,
+    "successful_reused_components": 1,
+    "new_fit_components": [
+      "C001"
+    ],
+    "reused_components": [
+      "C002"
+    ]
+  },
+  "cumulative_new_fits_consumed": 1,
+  "new_fits_remaining": 107,
+  "stage22_new_fits_consumed": 1,
+  "stage22_new_fits_remaining": 17,
+  "model_fits_attempted": 1,
+  "model_fits_successful": 1,
+  "status": "FIT_001_SUCCESSFULLY_CONSUMED"
+}

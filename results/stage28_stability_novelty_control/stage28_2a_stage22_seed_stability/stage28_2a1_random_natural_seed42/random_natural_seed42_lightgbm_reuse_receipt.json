@@ -1,0 +1,26 @@
+{
+  "stage": "Stage28-2A1",
+  "component_id": "C002",
+  "evaluation_cell_id": "28A_STAGE22::RANDOM_NATURAL::SEED42",
+  "experiment": "STAGE22_FULL",
+  "unit": "RANDOM_NATURAL",
+  "learner": "LIGHTGBM",
+  "configuration_id": "LGBM_11",
+  "seed": 42,
+  "compute_backend": "CPU",
+  "fit_action": "REUSE_EXISTING",
+  "historical_model": {
+    "path": "results/stage22r_training/stage22r_2a_random_natural/random_natural_lightgbm_model.txt",
+    "sha256": "9a92f4b8cd26738a470a7ff6fb72f51422a803e10b36bb32ac4bfc91373e6e50",
+    "expected_sha256": "9a92f4b8cd26738a470a7ff6fb72f51422a803e10b36bb32ac4bfc91373e6e50",
+    "iterations": 400,
+    "trees": 400,
+    "features": 70,
+    "library_version": "4.6.0"
+  },
+  "parameter_set_id": "STAGE22_FULL::LIGHTGBM::SEED42",
+  "parameter_sha256": "dbb7ac185b3ac6aa8e3ac915cfa2b2080ee54bec8e7a38cab83537faad2f2754",
+  "new_fit_budget_consumed": 0,
+  "validation_inference_performed": true,
+  "status": "EXACT_HISTORICAL_CPU_LIGHTGBM_REUSED"
+}

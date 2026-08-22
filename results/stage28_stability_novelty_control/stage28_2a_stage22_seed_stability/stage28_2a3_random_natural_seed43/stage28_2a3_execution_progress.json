@@ -1,0 +1,21 @@
+{
+  "stage": "Stage28-2A3",
+  "evaluation_cell_id": "28A_STAGE22::RANDOM_NATURAL::SEED43",
+  "durable_parent": "d597370a59ba7fc93b2da1720fd3faebf9cfa1ba",
+  "updated_at_utc": "2026-08-22T05:17:29.222752+00:00",
+  "state": "FIT_003_AND_004_AND_VALIDATION_SUCCESS",
+  "pre_cell_new_fits_consumed": 2,
+  "fit_3": {
+    "component_id": "C003",
+    "learner": "XGBOOST",
+    "state": "SUCCESS",
+    "model_sha256": "7bbd868a8d648eef93fb9cae10ada55ab62853ef33538225e49da2b956b7302c"
+  },
+  "fit_4": {
+    "component_id": "C004",
+    "learner": "LIGHTGBM",
+    "state": "SUCCESS",
+    "model_sha256": "77af40e0b85e19e1347380eb9f59caf2c1d91ca5ec202005faaf45fd038d082d"
+  },
+  "shared_final_holdout_openings": 0
+}

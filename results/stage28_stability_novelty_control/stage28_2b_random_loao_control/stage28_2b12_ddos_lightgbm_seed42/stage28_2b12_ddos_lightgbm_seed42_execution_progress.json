@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B12",
   "component_id": "C082",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::DDOS::LIGHTGBM::SEED42",
   "fit_ordinal": 70,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T15:26:38.853460+00:00",
+  "held_out_family": "DDOS",
+  "learner": "LIGHTGBM",
+  "seed": 42,
+  "membership_seed": 42,
   "model_sha256": "ce5e0524c5393268caff3bd084647826fa7c4cd53e12ae1ba0674667997bed95",
-  "completed_at_utc": "2026-08-22T15:26:13.699318+00:00",
+  "validation_probability_sha256": "31f72cb3c2e58b7b358fee0c204e0540bd6320e81ee7cb8587cb588d95ec2f26",
+  "primary_target_probability_sha256": "d20d27c54aaa80b4be5ecc805e513b1376e87c327c7d665b8a31eaffe1195db9",
+  "threshold_grid_sha256": "bb2113d03fc956cc943f607f423d46281505dff7ba9866a43fbc29a4e4ac63e9",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

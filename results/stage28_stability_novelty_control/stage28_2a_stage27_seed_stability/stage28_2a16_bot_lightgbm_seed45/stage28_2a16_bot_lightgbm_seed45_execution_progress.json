@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A16",
+  "component_id": "C028",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::BOT::LIGHTGBM::SEED45",
+  "fit_ordinal": 24,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T09:52:51.762253+00:00",
+  "durable_parent": "cd78bba0649c148943648b513a3c33de9ca0e2bf",
+  "held_out_family": "BOT",
+  "learner": "LIGHTGBM",
+  "seed": 45,
+  "model_sha256": "b100a69bd80f0d69c6e386a5eafd394e72a09fe0a5d4e687440221771f17e834",
+  "validation_probability_sha256": "0b8787c895701f599ed5aa930631ef2671a098e16baaaa91bb852dc40440d3db",
+  "operational_target_probability_sha256": "a6eba34d10de71adc6a15e445383db4efc6f22cecea247af02d7ef5f77bc8f45",
+  "threshold_grid_sha256": "2f3d54544b45515965bd682a5d74d956ed15296a6059f22c72531f03bd30d541",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

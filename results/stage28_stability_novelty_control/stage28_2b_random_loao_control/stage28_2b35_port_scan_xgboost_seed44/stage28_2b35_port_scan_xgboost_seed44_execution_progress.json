@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B35",
   "component_id": "C105",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::PORT_SCAN::XGBOOST::SEED44",
   "fit_ordinal": 93,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T16:18:31.322411+00:00",
+  "held_out_family": "PORT_SCAN",
+  "learner": "XGBOOST",
+  "seed": 44,
+  "membership_seed": 42,
   "model_sha256": "e5378273775f9c817cf93b26c09c72f949a3b00a58c69d452aeaa474f48526bd",
-  "completed_at_utc": "2026-08-22T16:18:21.792188+00:00",
+  "validation_probability_sha256": "4e144aa8a840f5853ee0c2241cd89e79c3479604fc61eb45ae86d229f95700d9",
+  "primary_target_probability_sha256": "f5dc2069642740929a7297c9005b612233693917ba697565775994d72443fc9b",
+  "threshold_grid_sha256": "f441834279726c95dd51bb3c341ce3da6fab9cd4a703ce8499d4ac746ec5cfc1",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

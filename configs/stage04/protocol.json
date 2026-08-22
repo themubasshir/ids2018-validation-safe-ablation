@@ -9,7 +9,7 @@
   },
   "environment": {
     "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1"},
-    "unproven": ["matplotlib", "scipy"]
+    "unproven": {"matplotlib": "VERSION_NOT_PROVEN", "scipy": "VERSION_NOT_PROVEN"}
   },
   "inputs": ["results/tuning/top5_tuned_validation_results.csv", "Stage 3 validation probability artifacts"],
   "outputs": [

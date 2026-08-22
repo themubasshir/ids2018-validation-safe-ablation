@@ -9,7 +9,7 @@
   },
   "environment": {
     "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "xgboost": "3.2.0", "lightgbm": "4.6.0"},
-    "unproven": ["joblib", "scipy"]
+    "unproven": {"joblib": "VERSION_NOT_PROVEN", "scipy": "VERSION_NOT_PROVEN"}
   },
   "inputs": ["Frozen XGBoost and LightGBM artifacts", "Stage 1 untouched test arrays", "Stage 4 validation-selected operating points"],
   "outputs": [

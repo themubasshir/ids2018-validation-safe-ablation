@@ -166,6 +166,20 @@ Joblib are `VERSION_NOT_PROVEN` unless a more specific stage receipt is later
 identified. No convenient modern version may be substituted as historical
 fact.
 
+## Stage01-Stage05 equivalence checkpoint
+
+The initial non-scientific suite contains 22 tests and passes in full. The 17
+rows in `EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence
+levels as follows: one Level A byte-identity check, eight Level B exact
+static/numerical checks, three Level C fixture/tolerance checks and five Level
+D structural/provenance checks.
+
+The lower equivalence levels are intentional. The external processed dataset
+is not in the repository, TensorFlow and several exact historical dependency
+versions are unproven, and estimator libraries are not installed in the audit
+runtime. No model was constructed or fitted, no target inference occurred, no
+threshold sweep was rerun and no holdout result payload was opened.
+
 ## Audit conclusion
 
 The repository contains extensive frozen evidence and strong closure records,

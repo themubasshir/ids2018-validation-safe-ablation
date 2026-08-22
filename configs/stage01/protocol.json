@@ -9,7 +9,7 @@
   },
   "environment": {
     "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "python_hash_seed": 42},
-    "unproven": []
+    "unproven": {}
   },
   "inputs": [
     "/kaggle/input/datasets/jmmubasshirrahman/ids2018-balanced-binary-dataset/merged_balanced_ids2018_safe.csv"

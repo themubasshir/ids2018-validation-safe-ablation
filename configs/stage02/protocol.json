@@ -9,7 +9,7 @@
   },
   "environment": {
     "proven": {"numpy": "2.4.6", "pandas": "2.3.3", "scikit-learn": "1.6.1", "xgboost": "3.2.0", "lightgbm": "4.6.0", "catboost": "1.2.10"},
-    "unproven": ["tensorflow", "keras", "joblib", "scipy"]
+    "unproven": {"tensorflow": "VERSION_NOT_PROVEN", "keras": "VERSION_NOT_PROVEN", "joblib": "VERSION_NOT_PROVEN", "scipy": "VERSION_NOT_PROVEN"}
   },
   "inputs": ["Stage 1 train/validation arrays only; test arrays remain unused"],
   "outputs": [

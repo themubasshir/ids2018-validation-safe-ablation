@@ -14,9 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from ids_validation.common.protocol_cli import load_protocol, verify_only_report
-from ids_validation.data import graph_snapshots
+from ids_validation.data import graph_snapshots, temporal_bins
 from ids_validation.evaluation import attention
-from ids_validation.models import classical, graph_models
+from ids_validation.models import classical, graph_models, temporal_models
 
 
 def read_csv(relative_path: str) -> list[dict[str, str]]:
@@ -134,6 +134,56 @@ class Stage18EquivalenceTests(unittest.TestCase):
     def test_all_six_graph_checkpoint_hashes_match_without_deserialization(self) -> None:
         report = verify_only_report(load_protocol(18))
         self.assertEqual(len(report["hashes"]), 6)
+        self.assertTrue(all(row["status"] == "MATCH" for row in report["hashes"]))
+        self.assertTrue(all(row["artifact_deserialized"] is False for row in report["hashes"]))
+
+
+class Stage19EquivalenceTests(unittest.TestCase):
+    def test_dates_one_second_representation_and_train_only_preprocessing_are_exact(self) -> None:
+        methodology = load_protocol(19)["methodology"]
+        self.assertEqual(methodology["partition"]["train_range"], "2018-02-14 through 2018-02-23")
+        self.assertEqual(methodology["partition"]["validation_files"], ["02-28-2018.csv"])
+        self.assertEqual(methodology["partition"]["holdout_files"], ["03-01-2018.csv", "03-02-2018.csv"])
+        self.assertEqual(methodology["one_second_materialization"]["base_resolution_seconds"], 1)
+        self.assertIs(methodology["train_only_preprocessing"]["validation_or_holdout_statistics_used"], False)
+
+    def test_toy_train_transform_and_multiscale_shapes(self) -> None:
+        raw = np.full((1201, temporal_bins.BASE_FEATURE_COUNT), np.nan)
+        means = np.arange(temporal_bins.BASE_FEATURE_COUNT, dtype=np.float64)
+        scales = np.ones(temporal_bins.BASE_FEATURE_COUNT)
+        standardized = temporal_bins.standardize_base(raw, means, scales)
+        np.testing.assert_array_equal(standardized, np.zeros_like(standardized))
+        fine, medium, coarse = temporal_bins.construct_multiscale(standardized, np.arange(1201) % 3, 1200)
+        self.assertEqual(fine.shape, (60, 80))
+        self.assertEqual(medium.shape, (20, 80))
+        self.assertEqual(coarse.shape, (20, 80))
+        np.testing.assert_array_equal(temporal_bins.construct_fine_only(standardized, np.arange(1201) % 3, 1200), fine)
+
+    def test_temporal_architecture_seed_threshold_and_governance_are_exact(self) -> None:
+        methodology = load_protocol(19)["methodology"]
+        self.assertEqual(tuple(methodology["training"]["seeds"]), temporal_models.SEEDS)
+        self.assertEqual(temporal_models.SINGLE_SCALE_SPEC.input_dimension, 80)
+        self.assertEqual(temporal_models.MTEMPORAL_SPEC.layers_per_branch, 2)
+        self.assertEqual(len(temporal_models.threshold_grid()), 99)
+        self.assertEqual((temporal_models.threshold_grid()[0], temporal_models.threshold_grid()[-1]), (0.01, 0.99))
+        self.assertEqual(methodology["threshold"]["single_scale_frozen"], 0.01)
+        self.assertEqual(methodology["threshold"]["mtemporal_frozen"], 0.01)
+        self.assertEqual(methodology["holdout_governance"]["status"], "PERMANENTLY_CLOSED")
+
+    def test_toy_temporal_threshold_tie_rule_and_frozen_reversal(self) -> None:
+        rows = [
+            {"f1": 0.7, "recall": 0.8, "threshold": 0.01},
+            {"f1": 0.7, "recall": 0.8, "threshold": 0.02},
+        ]
+        self.assertEqual(temporal_models.select_validation_threshold(rows)["threshold"], 0.01)
+        findings = load_protocol(19)["methodology"]["frozen_findings"]
+        self.assertLess(findings["validation"]["mtemporal_pr_auc"], findings["validation"]["single_scale_pr_auc"])
+        self.assertLess(findings["march_1"]["mtemporal_f1"], findings["march_1"]["single_scale_f1"])
+        self.assertGreater(findings["march_2"]["mtemporal_f1"], findings["march_2"]["single_scale_f1"])
+
+    def test_scaler_and_six_model_hashes_match_without_deserialization(self) -> None:
+        report = verify_only_report(load_protocol(19))
+        self.assertEqual(len(report["hashes"]), 7)
         self.assertTrue(all(row["status"] == "MATCH" for row in report["hashes"]))
         self.assertTrue(all(row["artifact_deserialized"] is False for row in report["hashes"]))
 

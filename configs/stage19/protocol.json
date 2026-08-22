@@ -1,0 +1,243 @@
+{
+  "stage": 19,
+  "name": "Chronological one-second SingleScale and MTemporal-IDS experiment",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311],
+    "substage_cells": {
+      "protocol": [290],
+      "source_and_chronology_audit": [291, 292, 293, 294, 295, 296, 297, 298],
+      "materialization_and_preprocessing": [299, 300],
+      "single_scale_and_runtime_recovery": [301, 302, 303, 304, 305, 306],
+      "mtemporal_training": [307],
+      "threshold_freeze": [308],
+      "one_time_holdout": [309, 310],
+      "closure": [311]
+    }
+  },
+  "environment": {
+    "proven": {
+      "python": "3.12.13",
+      "pytorch": "2.10.0+cu126",
+      "cuda_build": "12.6",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "gpu_driver": "580.159.04",
+      "compute_capability": "6.0",
+      "compiled_architecture": "sm_60",
+      "basic_matmul_transformer_amp_backward_optimizer_probes": "PASS"
+    },
+    "proven_source": "Notebook cell 306 post-kernel-reconnect verification before any Stage19 models were trained",
+    "unproven": {
+      "numpy": "VERSION_NOT_PROVEN",
+      "pandas": "VERSION_NOT_PROVEN",
+      "scikit_learn": "VERSION_NOT_PROVEN",
+      "scipy": "VERSION_NOT_PROVEN"
+    },
+    "separation_note": "This Stage19 runtime is separately proven and is not inferred from or merged with Stage15 or Stage20 environments."
+  },
+  "inputs": [
+    "Seven chronological TRAIN daily files spanning Feb 14–23, 2018; Feb 28 validation; Mar 1–2 holdout",
+    "Frozen 78-feature one-second representation, TRAIN-only preprocessing, and temporal indices",
+    "Three SingleScale and three MTemporal-IDS checkpoints with frozen validation probabilities and thresholds",
+    "One-time persisted chronological holdout capture and frozen evaluation receipts"
+  ],
+  "outputs": [
+    "results/stage19_mtemporal_checkpoint/stage19_1c_corrected_chronology_audit/",
+    "results/stage19_mtemporal_checkpoint/stage19_2a_one_second_materialization/",
+    "results/stage19_mtemporal_checkpoint/stage19_2b_preprocessing_and_index_freeze/",
+    "results/stage19_mtemporal_checkpoint/stage19_3_single_scale_temporal_control/",
+    "results/stage19_mtemporal_checkpoint/stage19_4_mtemporal_multiscale/",
+    "results/stage19_mtemporal_checkpoint/stage19_5_validation_threshold_freeze/",
+    "results/stage19_mtemporal_checkpoint/stage19_6a_one_time_holdout_capture/",
+    "results/stage19_mtemporal_checkpoint/stage19_6b_frozen_holdout_evaluation/",
+    "results/stage19_mtemporal_checkpoint/stage19_7_temporal_experiment_closure/"
+  ],
+  "verification_artifacts": [
+    "results/stage19_mtemporal_checkpoint/stage19_0_mtemporal_protocol_lock.json",
+    "results/stage19_mtemporal_checkpoint/stage19_1c_corrected_chronology_audit/stage19_1c_corrected_audit_result.json",
+    "results/stage19_mtemporal_checkpoint/stage19_2a_one_second_materialization/stage19_2a_representation_spec.json",
+    "results/stage19_mtemporal_checkpoint/stage19_2b_preprocessing_and_index_freeze/stage19_2b_preprocessing_and_window_spec.json",
+    "results/stage19_mtemporal_checkpoint/stage19_3_single_scale_temporal_control/stage19_3_training_config.json",
+    "results/stage19_mtemporal_checkpoint/stage19_4_mtemporal_multiscale/stage19_4_training_config.json",
+    "results/stage19_mtemporal_checkpoint/stage19_5_validation_threshold_freeze/results/stage19_5_frozen_operating_points.json",
+    "results/stage19_mtemporal_checkpoint/stage19_6a_one_time_holdout_capture/stage19_6a_holdout_opening_freeze.json",
+    "results/stage19_mtemporal_checkpoint/stage19_6b_frozen_holdout_evaluation/results/stage19_6b_temporal_holdout_comparison.json",
+    "results/stage19_mtemporal_checkpoint/stage19_7_temporal_experiment_closure/stage19_7_scientific_closure.json"
+  ],
+  "hash_verification_artifacts": {
+    "results/stage19_mtemporal_checkpoint/stage19_2b_preprocessing_and_index_freeze/stage19_2b_train_only_scaler.npz": {"size_bytes": 3863, "sha256": "bd5158d89bcb8aa0c23830dc87e8da5f116a128fc98d4ad1be0fe3009f6fa771"},
+    "results/stage19_mtemporal_checkpoint/stage19_3_single_scale_temporal_control/models/single_scale_seed_7_best.pt": {"size_bytes": 336869, "sha256": "0151212fbec48631e38218053b876b2c743e1b96275e145fa5d7f9f0093daaf0"},
+    "results/stage19_mtemporal_checkpoint/stage19_3_single_scale_temporal_control/models/single_scale_seed_29_best.pt": {"size_bytes": 336909, "sha256": "09bfd03f4d331a32e7344e40482d10bf9a652f6cc78bc8ddc7d275ba9fe7d14b"},
+    "results/stage19_mtemporal_checkpoint/stage19_3_single_scale_temporal_control/models/single_scale_seed_101_best.pt": {"size_bytes": 336949, "sha256": "129f22c62bdf25ec6d09b9b7a73b3c141802d90678a2ba4b9a4cc502bc2cba5f"},
+    "results/stage19_mtemporal_checkpoint/stage19_4_mtemporal_multiscale/models/mtemporal_seed_7_best.pt": {"size_bytes": 997101, "sha256": "c0df77d93ec7ebd3f6d0d31cc220114869ed3397dabcaae51849b9f44bf8aa56"},
+    "results/stage19_mtemporal_checkpoint/stage19_4_mtemporal_multiscale/models/mtemporal_seed_29_best.pt": {"size_bytes": 997269, "sha256": "695e0df216951a26546a46233e0f4163c48646403b8003a265287b6ae31a8fd8"},
+    "results/stage19_mtemporal_checkpoint/stage19_4_mtemporal_multiscale/models/mtemporal_seed_101_best.pt": {"size_bytes": 997373, "sha256": "2cbc992a20c156e0066935b416dc3624b9cd95ff0faffba0a438041a29f19552"}
+  },
+  "methodology": {
+    "partition": {
+      "principle": "STRICT_FORWARD_CHRONOLOGY",
+      "train_range": "2018-02-14 through 2018-02-23",
+      "train_files": ["02-14-2018.csv", "02-15-2018.csv", "02-16-2018.csv", "02-20-2018.csv", "02-21-2018.csv", "02-22-2018.csv", "02-23-2018.csv"],
+      "validation_files": ["02-28-2018.csv"],
+      "holdout_files": ["03-01-2018.csv", "03-02-2018.csv"],
+      "prior_stage_membership_or_holdout_reused": false,
+      "cross_day_or_cross_partition_sequences": false
+    },
+    "chronology_corrections": {
+      "embedded_headers_removed": 34,
+      "1970_calendar_dates_corrected": 14,
+      "correction": "Only parsed year-1970 timestamps received the source-file calendar date while preserving time of day",
+      "label_or_model_output_used": false,
+      "other_wrong_source_dates": 0,
+      "traffic_rows_dropped_for_timestamp_reason": 0
+    },
+    "task": {
+      "unit": "one-second wall-clock bin",
+      "target": "positive when at least one non-BENIGN flow occurs in the current second",
+      "prediction_time": "after completion of the current one-second interval",
+      "same_second_flows": "unordered simultaneous",
+      "raw_row_order_used": false,
+      "directly_comparable_to_per_flow_Stage15_16": false
+    },
+    "one_second_materialization": {
+      "base_resolution_seconds": 1,
+      "base_numeric_features": 78,
+      "aggregation": "Arithmetic mean of finite flow values within each second",
+      "nonfinite": "+/- infinity and NaN excluded from each feature mean without dropping flow rows",
+      "missing_seconds": "Explicit empty bins",
+      "empty_numeric_state_before_preprocessing": "NaN",
+      "activity_channels": ["log1p_flow_count", "occupied_bin_indicator"],
+      "token_feature_count": 80,
+      "warmup_seconds_per_day": 1200,
+      "warmup_as_context_not_target": true
+    },
+    "train_only_preprocessing": {
+      "imputation": "TRAIN finite second-level feature mean",
+      "standardization": "TRAIN population z-score after mean imputation",
+      "fit_scope": "All materialized TRAIN seconds including warmup context",
+      "fit_seconds": 290729,
+      "validation_or_holdout_statistics_used": false,
+      "zero_variance_features": 10,
+      "zero_variance_scale": 1.0,
+      "flow_count_activity_channels_standardized": false
+    },
+    "windows": {
+      "fine": {"seconds_per_token": 1, "tokens": 60, "context_seconds": 60, "start": "t-59"},
+      "medium": {"seconds_per_token": 15, "tokens": 20, "context_seconds": 300, "start": "t-299"},
+      "coarse": {"seconds_per_token": 60, "tokens": 20, "context_seconds": 1200, "start": "t-1199"},
+      "all_end_at_current_second": true,
+      "future_cross_day_or_cross_partition_context": false
+    },
+    "single_scale_control": {
+      "name": "SingleScaleTemporalTransformer",
+      "input_shape": [60, 80],
+      "position_encoding": "Deterministic relative sinusoidal lags -59 through 0",
+      "model_dimension": 64,
+      "heads": 4,
+      "layers": 2,
+      "feedforward_dimension": 128,
+      "dropout": 0.1,
+      "activation": "GELU",
+      "attention": "strict causal with current token visible",
+      "summary": "final causal token state",
+      "classifier": "Linear 64->64, GELU, Dropout, Linear 64->1"
+    },
+    "mtemporal": {
+      "name": "MTemporal-IDS",
+      "canonical_external_architecture_claim": false,
+      "branches": ["fine 60x1-second", "medium 20x15-second", "coarse 20x60-second"],
+      "model_dimension": 64,
+      "heads": 4,
+      "layers_per_branch": 2,
+      "feedforward_dimension": 128,
+      "dropout": 0.1,
+      "activation": "GELU",
+      "attention": "strict causal with current token visible",
+      "branch_summary": "final causal token state",
+      "fusion": "Learned softmax-gated weighted sum from concatenated 192-dimensional branch summaries",
+      "gate_network": "192->64, GELU, 64->3, softmax",
+      "classifier": "Linear 64->64, GELU, Dropout, Linear 64->1"
+    },
+    "training": {
+      "seeds": [7, 29, 101],
+      "models_per_family": 3,
+      "ensemble": "Unweighted arithmetic mean probability",
+      "hyperparameter_or_seed_search": false,
+      "loss": "BCEWithLogitsLoss",
+      "train_only_positive_weight": 10.739739698116345,
+      "optimizer": "AdamW",
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "batch_size": 256,
+      "maximum_epochs": 20,
+      "gradient_clip_norm": 1.0,
+      "amp": "FP16 on CUDA",
+      "scheduler": null,
+      "early_stopping": "Maximum validation PR-AUC; patience 4; minimum delta 0.0001"
+    },
+    "threshold": {
+      "grid": {"minimum": 0.01, "maximum": 0.99, "step": 0.01, "count": 99},
+      "selection": "Validation ensemble only; maximum F1; tie higher recall; tie lower threshold",
+      "single_scale_frozen": 0.01,
+      "mtemporal_frozen": 0.01,
+      "fixed_0_50_reported": true,
+      "grid_extended_posthoc": false,
+      "holdout_selection_or_recalibration": false
+    },
+    "holdout_governance": {
+      "maximum_raw_openings": 1,
+      "consumed_raw_openings": 1,
+      "capture_before_model_evaluation": true,
+      "raw_reopen_permitted": false,
+      "persisted_sufficient_representation": true,
+      "status": "PERMANENTLY_CLOSED",
+      "post_opening_model_preprocessing_representation_threshold_calibration_or_seed_changes": false
+    },
+    "frozen_findings": {
+      "decision": "SUPPORTED_WITH_CONSTRAINTS",
+      "validation": {
+        "single_scale_pr_auc": 0.3108128771362852,
+        "mtemporal_pr_auc": 0.2856097446256688,
+        "single_scale_f1": 0.3370329478761113,
+        "mtemporal_f1": 0.30242395756395624
+      },
+      "pooled_holdout": {
+        "samples": 84000,
+        "positive": 27502,
+        "single_scale_pr_auc": 0.7599570946733909,
+        "mtemporal_pr_auc": 0.8013780402555105,
+        "single_scale_f1": 0.6526175687666371,
+        "mtemporal_f1": 0.7176209461958979,
+        "single_scale_recall": 0.6418442295105811,
+        "mtemporal_recall": 0.6348265580685041,
+        "single_scale_fpr": 0.15827108924209707,
+        "mtemporal_fpr": 0.06543594463520833
+      },
+      "negative_and_reversal_findings": [
+        "MTemporal validation PR-AUC was lower than the single-scale control",
+        "MTemporal underperformed the control on March 1 PR-AUC, ROC-AUC, and F1",
+        "Scale-gate dominance differed across all three seeds",
+        "MTemporal pooled Brier score and log loss were worse",
+        "Both frozen thresholds landed at the predeclared 0.01 grid boundary"
+      ],
+      "march_1": {"single_scale_pr_auc": 0.2906398532308066, "mtemporal_pr_auc": 0.2413295131804692, "single_scale_f1": 0.2222222222222222, "mtemporal_f1": 0.0582852595981698},
+      "march_2": {"single_scale_pr_auc": 0.9091175830343734, "mtemporal_pr_auc": 0.9578482350502562, "single_scale_f1": 0.7944747579019811, "mtemporal_f1": 0.8893378924463786},
+      "causal_or_universal_superiority_claim": false
+    },
+    "raw_temporal_materialization_authorized": false,
+    "model_fitting_authorized": false,
+    "model_deserialization_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false
+  },
+  "holdout_policy": {
+    "historically_opened_once": true,
+    "raw_holdout_permanently_closed": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA-256 only"
+  }
+}

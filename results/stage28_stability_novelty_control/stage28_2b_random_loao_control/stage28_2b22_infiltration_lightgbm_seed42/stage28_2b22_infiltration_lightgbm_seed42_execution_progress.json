@@ -1,10 +1,18 @@
 {
   "stage": "Stage28-2B22",
   "component_id": "C092",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::INFILTRATION::LIGHTGBM::SEED42",
   "fit_ordinal": 80,
-  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "state": "FIT_VALIDATION_RANDOM_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T15:49:45.885137+00:00",
+  "held_out_family": "INFILTRATION",
+  "learner": "LIGHTGBM",
+  "seed": 42,
+  "membership_seed": 42,
   "model_sha256": "34978287cf4280a7e86713479cbeb606246c03daa85fab6429dbccf370152925",
-  "completed_at_utc": "2026-08-22T15:49:22.587491+00:00",
+  "validation_probability_sha256": "3835bdd501e265867a9441cf83781db96ec6003146432e55dc93cf7ba09f0198",
+  "primary_target_probability_sha256": "abab7e494ab18e5db4b5f7e30619a3eb18aa84879c68f895ecad7aa40d0c83e1",
+  "threshold_grid_sha256": "019133d61d8c3615c5e4d7c01b396e95e0800d742a416c468576cb0454feab82",
   "target_used_for_fit": false,
   "target_used_for_threshold_selection": false
 }

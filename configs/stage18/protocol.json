@@ -1,0 +1,243 @@
+{
+  "stage": 18,
+  "name": "Representation feasibility: temporal, historical ViT, and source-restricted graph branches",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289],
+    "substage_cells": {
+      "protocol": [240, 241],
+      "temporal_feasibility": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260],
+      "vit_feasibility": [261, 262, 263, 264, 265],
+      "graph": [266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287],
+      "synthesis_and_manuscript": [288, 289]
+    }
+  },
+  "environment": {
+    "proven": {
+      "stage18_3f_numpy": "2.4.6",
+      "stage18_3f_pandas": "2.3.3",
+      "stage18_3f_scikit_learn": "1.6.1",
+      "initial_incompatible_pytorch": "2.10.0+cu128",
+      "initial_incompatible_cuda_build": "12.8",
+      "repaired_graph_training_pytorch": "2.10.0+cu126",
+      "repaired_graph_training_cuda_build": "12.6",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "compute_capability": "6.0",
+      "required_compiled_architecture": "sm_60",
+      "repaired_cuda_kernel_probe": "PASS"
+    },
+    "proven_sources": {
+      "preprocessing_versions": "stage18_3f_preprocessing_summary.json",
+      "cuda_failure_and_repair": "notebook cells 274–280; fresh-process and final post-reconnect verification"
+    },
+    "unproven": {
+      "python_patch_version": "VERSION_NOT_PROVEN",
+      "scipy": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN"
+    },
+    "separation_note": "Stage18 graph PyTorch 2.10.0+cu126 is a distinct environment from Stage15 PyTorch 2.7.1+cu118 and must not be merged with it."
+  },
+  "inputs": [
+    "Original ten CSE-CIC-IDS2018 timestamped CSV sources for read-only historical feasibility audits",
+    "Stage15 authorized non-holdout feature hashes and retained 70-feature schema",
+    "Endpoint-rich 02-20-2018.csv for the separate frozen graph experiment",
+    "Frozen Stage18 feasibility, graph tensor, model, threshold, and holdout receipts"
+  ],
+  "outputs": [
+    "results/stage18_representation_feasibility_checkpoint/stage18_1_temporal_feasibility_package/",
+    "results/stage18_representation_feasibility_checkpoint/stage18_2_vit_feasibility_package/",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3_graph_protocol_package/ and graph result locks",
+    "results/stage18_representation_feasibility_checkpoint/stage18_4_overall_representation_synthesis/",
+    "results/stage18_representation_feasibility_checkpoint/stage18_5_manuscript_integration/"
+  ],
+  "verification_artifacts": [
+    "results/stage18_representation_feasibility_checkpoint/stage18_0_representation_feasibility_protocol.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_1_temporal_feasibility_package/stage18_1_temporal_feasibility_closure.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_2_vit_feasibility_package/stage18_2_vit_feasibility_closure.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3_graph_protocol_package/stage18_3c_graph_development_protocol.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3d_graph_development_model_lock/stage18_3e_graph_transformer_model_protocol.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3f_graph_tensor_identity_lock/compact_evidence/stage18_3f_graph_tensor_summary.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3h_edgeonly_control_result_lock/compact_evidence/stage18_3h_edgeonly_training_result.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3j_graph_transformer_result_lock/compact_evidence/stage18_3j_graph_transformer_training_result.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3l_final_graph_holdout_lock/compact_evidence/stage18_3l_IRREVERSIBLE_opening_lock.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3l_final_graph_holdout_lock/compact_evidence/stage18_3l_final_graph_holdout_result.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_3n_graph_experiment_closure/stage18_3n_graph_scientific_synthesis.json",
+    "results/stage18_representation_feasibility_checkpoint/stage18_4_overall_representation_synthesis/stage18_4_overall_representation_synthesis.json"
+  ],
+  "hash_verification_artifacts": {
+    "results/stage18_representation_feasibility_checkpoint/stage18_3h_edgeonly_control_result_lock/checkpoints/seed_7/best_checkpoint.pt": {"size_bytes": 73461, "sha256": "ade352e9239df7084c2a409489d355fa66333e517456769680ab922904eb3b40"},
+    "results/stage18_representation_feasibility_checkpoint/stage18_3h_edgeonly_control_result_lock/checkpoints/seed_29/best_checkpoint.pt": {"size_bytes": 73461, "sha256": "2e6c178cfb4192797fcc4044fc1c8b213aa964bfe9d8ef7627b214faab07dfd0"},
+    "results/stage18_representation_feasibility_checkpoint/stage18_3h_edgeonly_control_result_lock/checkpoints/seed_101/best_checkpoint.pt": {"size_bytes": 73461, "sha256": "eb341f2306b2d4e568af3347d864291a09f608a5ce17d21d1de6376dc53b5352"},
+    "results/stage18_representation_feasibility_checkpoint/stage18_3j_graph_transformer_result_lock/checkpoints/seed_7/best_checkpoint.pt": {"size_bytes": 476119, "sha256": "9bdd64a64c0bf5fe52280126a2cd23a7adc5e898687f9c3c9a96bcbfc7fb3dca"},
+    "results/stage18_representation_feasibility_checkpoint/stage18_3j_graph_transformer_result_lock/checkpoints/seed_29/best_checkpoint.pt": {"size_bytes": 476119, "sha256": "5be91ee407537f357782bf1080ac9d3594545c20d5b1142942eb4a832d786666"},
+    "results/stage18_representation_feasibility_checkpoint/stage18_3j_graph_transformer_result_lock/checkpoints/seed_101/best_checkpoint.pt": {"size_bytes": 476119, "sha256": "5b1a1e45d70f21ae21410bf2c14480e57b0c6dca420f7dd5a03825d9b3c7d695"}
+  },
+  "methodology": {
+    "chronology_of_knowledge": "Stage18 conclusions reflect only artifacts available during Stage18. Stage20 packet-image evidence must not retroactively change the Stage18 ViT decision.",
+    "temporal_feasibility": {
+      "decision": "SUPPORTED_WITH_CONSTRAINTS",
+      "model_training_or_inference": false,
+      "timestamp_resolution": "1 second",
+      "raw_csv_row_order_is_chronology": false,
+      "same_timestamp_flows_treated_as_simultaneous": true,
+      "within_second_order_proven": false,
+      "authorized_non_holdout_hashes": 192521,
+      "raw_recovery": {"recovered": 192521, "unmatched": 0, "rate": 1.0},
+      "unique_temporal_provenance": {"patterns": 164351, "rate": 0.8536783000296072},
+      "ambiguous_multiple_bin_hashes": 28170,
+      "stage15_split_status": "Valid for the existing tabular experiment but not safe for temporal windows",
+      "mixed_train_validation_bins": 9841,
+      "mixed_bin_rate": 0.15552008596984734,
+      "validation_bins_within_30_seconds_of_train_rate": 0.9976558337773042,
+      "future_requirement": "Use only unique temporal-bin patterns and a separately precommitted chronological leakage-safe experiment; keep prior holdouts closed"
+    },
+    "vit_feasibility": {
+      "historical_decision": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+      "candidate_representations_audited": 7,
+      "candidates_passing_all_hard_criteria": 0,
+      "native_image_or_packet_byte_representation_available_then": false,
+      "arbitrary_tabular_grid": "PROHIBITED",
+      "images_or_matrices_constructed": 0,
+      "vit_models_fit": 0,
+      "interpretation": "Representation-feasibility rejection, not evidence that ViTs generally perform poorly"
+    },
+    "graph_branch": {
+      "scope": {
+        "source": "02-20-2018.csv only",
+        "reason": "Only this source retained authenticated SrcIP/DstIP and other endpoint metadata",
+        "dataset_wide_replacement": false
+      },
+      "chronology": {
+        "snapshot_seconds": 60,
+        "alignment": "recorded clock-minute boundaries",
+        "train": "2018-02-20 01:00:00 through 08:59:59",
+        "validation": "2018-02-20 09:00:00 through 10:59:59",
+        "holdout": "2018-02-20 11:00:00 through 12:59:59",
+        "partition_basis": "source time only",
+        "label_stratification_or_random_shuffle": false
+      },
+      "construction": {
+        "graph_type": "directed temporal multigraph snapshots",
+        "node": "authenticated host identity",
+        "edge": "one observed directed SrcIP -> DstIP flow event",
+        "parallel_edges": "PRESERVED",
+        "authentic_self_loops": "PRESERVED",
+        "artificial_reverse_edges": false,
+        "node_order_semantics": "arbitrary implementation index only",
+        "message_passing": "within the current 60-second snapshot only",
+        "cross_snapshot_cross_split_or_future_to_past_messages": false
+      },
+      "edge_features": {
+        "count": 70,
+        "schema": "Frozen Stage15 retained numeric predictors",
+        "identifiers_labels_predictions_or_xai_as_features": false,
+        "imputation": "TRAIN per-feature median after converting +/- infinity to NaN; no row dropping",
+        "scaling": "TRAIN-only StandardScaler",
+        "train_rows_fit": 4068165
+      },
+      "node_features": {
+        "count": 5,
+        "names": ["constant_one", "log1p_snapshot_in_degree", "log1p_snapshot_out_degree", "log1p_snapshot_incident_flow_count", "log1p_snapshot_unique_peer_count"],
+        "scope": "current snapshot only",
+        "normalization": "TRAIN-only mean/std for four structural counts; constant remains unchanged",
+        "node_identity_or_numeric_ip_embedding": false
+      },
+      "tensor_counts": {
+        "train": {"snapshots": 480, "edges": 4068165, "attacks": 797, "node_snapshot_observations": 505300},
+        "validation": {"snapshots": 120, "edges": 2166254, "attacks": 423621, "node_snapshot_observations": 211466},
+        "holdout": {"snapshots": 120, "edges": 1714329, "attacks": 151773, "node_snapshot_observations": 204427}
+      },
+      "replication": {
+        "seeds": [7, 29, 101],
+        "runs_per_model_family": 3,
+        "hyperparameter_search": false,
+        "ensemble": "Unweighted arithmetic mean of three seed probabilities"
+      },
+      "edge_only_control": {
+        "name": "EdgeOnlyMLPControl",
+        "layers": ["Linear(70,128)", "GELU", "Dropout(0.10)", "Linear(128,64)", "GELU", "Dropout(0.10)", "Linear(64,1)"],
+        "parameter_count": 17409
+      },
+      "graph_transformer": {
+        "name": "EdgeAwareDirectedGraphTransformer",
+        "implementation": "custom PyTorch edge-aware directed attention; no external graph library",
+        "node_encoder": "Linear(5,64), LayerNorm, GELU",
+        "edge_encoder": "Linear(70,64), LayerNorm, GELU",
+        "layers": 2,
+        "heads": 4,
+        "model_dimension": 64,
+        "head_dimension": 16,
+        "feedforward_dimension": 128,
+        "dropout": 0.1,
+        "aggregation": "softmax over incoming directed edges for each destination node and head",
+        "edge_attention_bias_and_message_projection": true,
+        "residual_and_layer_normalization": true,
+        "parameter_count": 113993
+      },
+      "training": {
+        "loss": "BCEWithLogitsLoss",
+        "train_only_positive_weight": 5103.347553324968,
+        "positive_weight_formula": "TRAIN benign / TRAIN attack",
+        "optimizer": "AdamW",
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001,
+        "gradient_clip_norm": 1.0,
+        "maximum_epochs": 20,
+        "early_stopping": "Validation PR-AUC; patience 4; minimum delta 0.0001",
+        "graph_gradient_accumulation_snapshots": 8,
+        "graph_snapshot_order": "strict chronological, no shuffle",
+        "edge_only_batch_size": 65536,
+        "synthetic_sampling_or_resampling": false
+      },
+      "threshold": {
+        "grid": "0.01 through 0.99 inclusive by 0.01",
+        "selection_partition": "three-seed validation ensemble only",
+        "rule": "maximum F1; tie higher recall; tie lower threshold",
+        "selected_edge_only": 0.01,
+        "selected_graph_transformer": 0.01,
+        "fixed_0_50_also_reported": true
+      },
+      "holdout_governance": {
+        "authorized_openings": 1,
+        "consumed_openings": 1,
+        "future_openings": 0,
+        "status": "PERMANENTLY_CLOSED_AFTER_SINGLE_OPENING",
+        "post_holdout_training_threshold_calibration_or_preprocessing_changes": false
+      },
+      "frozen_findings": {
+        "graph_validation_pr_auc": 0.9838755704548996,
+        "graph_holdout_pr_auc": 0.9735953918848133,
+        "graph_holdout_roc_auc": 0.9986766395630168,
+        "graph_holdout_f1_at_frozen_threshold": 0.0,
+        "graph_holdout_true_positives": 0,
+        "graph_holdout_false_negatives": 151773,
+        "edge_only_holdout_pr_auc": 0.42976973171668154,
+        "edge_only_holdout_f1_at_frozen_threshold": 0.6559877841940602,
+        "interpretation": "Strong graph ranking utility but failed operational threshold transfer; no deployment-ready or causal graph-context superiority claim",
+        "unseen_topology_attack_generalization": "NOT_ESTIMABLE because validation and holdout unseen-topology slices contained zero attacks"
+      }
+    },
+    "overall_decisions": {
+      "temporal_mtemporal": "SUPPORTED_WITH_CONSTRAINTS",
+      "vision_transformer": "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS",
+      "graph_transformer": "SUPPORTED_WITH_CONSTRAINTS"
+    },
+    "raw_dataset_access_authorized": false,
+    "graph_or_temporal_materialization_authorized": false,
+    "model_fitting_authorized": false,
+    "model_deserialization_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false
+  },
+  "holdout_policy": {
+    "historical_graph_holdout_opened_once": true,
+    "historical_graph_holdout_permanently_closed": true,
+    "prior_stage_holdouts_reopened_during_stage18": false,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "model_artifact_verification": "Streaming byte count and SHA-256 only"
+  }
+}

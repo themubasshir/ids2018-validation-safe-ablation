@@ -4,6 +4,7 @@ import csv
 import json
 import sys
 import unittest
+from datetime import datetime
 from pathlib import Path
 
 import numpy as np
@@ -13,8 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from ids_validation.common.protocol_cli import load_protocol, verify_only_report
+from ids_validation.data import graph_snapshots
 from ids_validation.evaluation import attention
-from ids_validation.models import classical
+from ids_validation.models import classical, graph_models
 
 
 def read_csv(relative_path: str) -> list[dict[str, str]]:
@@ -90,6 +92,48 @@ class Stage17EquivalenceTests(unittest.TestCase):
 
     def test_checkpoint_verification_hashes_bytes_without_deserialization(self) -> None:
         report = verify_only_report(load_protocol(17))
+        self.assertTrue(all(row["status"] == "MATCH" for row in report["hashes"]))
+        self.assertTrue(all(row["artifact_deserialized"] is False for row in report["hashes"]))
+
+
+class Stage18EquivalenceTests(unittest.TestCase):
+    def test_three_historical_branch_decisions_and_chronology_are_frozen(self) -> None:
+        methodology = load_protocol(18)["methodology"]
+        self.assertEqual(methodology["overall_decisions"]["temporal_mtemporal"], "SUPPORTED_WITH_CONSTRAINTS")
+        self.assertEqual(methodology["overall_decisions"]["vision_transformer"], "NOT_SUPPORTED_BY_CURRENT_ARTIFACTS")
+        self.assertEqual(methodology["overall_decisions"]["graph_transformer"], "SUPPORTED_WITH_CONSTRAINTS")
+        self.assertIn("must not retroactively change", methodology["chronology_of_knowledge"])
+        self.assertIs(methodology["vit_feasibility"]["vit_models_fit"], 0)
+
+    def test_toy_graph_partition_snapshot_and_shape_helpers(self) -> None:
+        self.assertEqual(graph_snapshots.chronological_partition(datetime.fromisoformat("2018-02-20 08:59:59")), "train")
+        self.assertEqual(graph_snapshots.chronological_partition(datetime.fromisoformat("2018-02-20 09:00:00")), "validation")
+        self.assertEqual(graph_snapshots.chronological_partition(datetime.fromisoformat("2018-02-20 11:00:00")), "holdout")
+        np.testing.assert_array_equal(graph_snapshots.wall_clock_snapshot_indices([0, 59, 60, 119]), [0, 0, 1, 1])
+        shape = graph_snapshots.validate_directed_multigraph_shapes([0, 0, 1], [1, 1, 0], np.zeros((3, 70)))
+        self.assertEqual(shape, {"nodes": 2, "edges": 3, "edge_feature_dim": 70})
+
+    def test_graph_seed_architecture_threshold_and_negative_finding_are_exact(self) -> None:
+        graph = load_protocol(18)["methodology"]["graph_branch"]
+        self.assertEqual(tuple(graph["replication"]["seeds"]), graph_models.SEEDS)
+        self.assertEqual(graph["chronology"]["snapshot_seconds"], graph_snapshots.SNAPSHOT_SECONDS)
+        self.assertEqual(graph_models.EDGE_ONLY_SPEC.parameter_count, 17_409)
+        self.assertEqual(graph_models.GRAPH_TRANSFORMER_SPEC.parameter_count, 113_993)
+        self.assertEqual(len(graph_models.threshold_grid()), 99)
+        self.assertEqual((graph_models.threshold_grid()[0], graph_models.threshold_grid()[-1]), (0.01, 0.99))
+        self.assertEqual(graph["frozen_findings"]["graph_holdout_true_positives"], 0)
+        self.assertEqual(graph["frozen_findings"]["graph_holdout_false_negatives"], 151_773)
+
+    def test_toy_graph_threshold_tie_rule(self) -> None:
+        rows = [
+            {"f1": 0.8, "recall": 0.7, "threshold": 0.01},
+            {"f1": 0.8, "recall": 0.8, "threshold": 0.02},
+        ]
+        self.assertEqual(graph_models.select_validation_threshold(rows)["threshold"], 0.02)
+
+    def test_all_six_graph_checkpoint_hashes_match_without_deserialization(self) -> None:
+        report = verify_only_report(load_protocol(18))
+        self.assertEqual(len(report["hashes"]), 6)
         self.assertTrue(all(row["status"] == "MATCH" for row in report["hashes"]))
         self.assertTrue(all(row["artifact_deserialized"] is False for row in report["hashes"]))
 

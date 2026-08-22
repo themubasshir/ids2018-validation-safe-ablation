@@ -1,0 +1,10 @@
+{
+  "stage": "Stage28-2B38",
+  "component_id": "C108",
+  "fit_ordinal": 96,
+  "state": "FIT_SUCCESS_MODEL_SAVED",
+  "model_sha256": "03801c308c1337367a170645d0bd6c12447e4f0bca65de27f28808242d0d258e",
+  "completed_at_utc": "2026-08-22T16:24:37.701866+00:00",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

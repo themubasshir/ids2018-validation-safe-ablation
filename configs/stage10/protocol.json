@@ -1,0 +1,81 @@
+{
+  "stage": 10,
+  "name": "Historical operational cost and alert-burden analysis",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [119]
+  },
+  "environment": {
+    "proven": {},
+    "unproven": {
+      "python": "VERSION_NOT_PROVEN",
+      "numpy": "VERSION_NOT_PROVEN",
+      "pandas": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "results/threshold/all_top5_validation_threshold_sweep.csv",
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/statistical_confidence/bootstrap_replicates.npz"
+  ],
+  "outputs": [
+    "results/operational_cost/validation_cost_ratio_threshold_selection.csv",
+    "results/operational_cost/holdout_cost_ratio_evaluation.csv",
+    "results/operational_cost/frozen_operating_point_costs.csv",
+    "results/operational_cost/break_even_cost_analysis.csv",
+    "results/operational_cost/validation_fp_fn_pareto_frontier.csv",
+    "results/operational_cost/normalized_operational_burden.csv",
+    "4 operational-cost figures under figures/operational_cost/",
+    "metadata/operational_cost/operational_cost_methodology.json",
+    "docs/OPERATIONAL_COST_ANALYSIS.md"
+  ],
+  "verification_artifacts": [
+    "results/operational_cost/validation_cost_ratio_threshold_selection.csv",
+    "results/operational_cost/holdout_cost_ratio_evaluation.csv",
+    "results/operational_cost/frozen_operating_point_costs.csv",
+    "results/operational_cost/break_even_cost_analysis.csv",
+    "results/operational_cost/validation_fp_fn_pareto_frontier.csv",
+    "results/operational_cost/normalized_operational_burden.csv",
+    "figures/operational_cost/figure_break_even_cost_ratios.png",
+    "figures/operational_cost/figure_cost_ratio_selected_thresholds.png",
+    "figures/operational_cost/figure_holdout_cost_by_ratio.png",
+    "figures/operational_cost/figure_validation_fp_fn_pareto_frontier.png",
+    "metadata/operational_cost/operational_cost_methodology.json",
+    "docs/OPERATIONAL_COST_ANALYSIS.md"
+  ],
+  "methodology": {
+    "false_positive_unit_cost": 1.0,
+    "fn_to_fp_cost_ratios": [1, 2, 5, 10, 20, 50, 100],
+    "cost_function": "C_FP * FP + C_FN * FN",
+    "threshold_grid": {"minimum": 0.05, "maximum": 0.95, "step": 0.01, "count": 91, "source": "frozen Stage 4 all-model validation sweep"},
+    "threshold_selection_split": "Validation",
+    "cost_selection_constraint": "Unconstrained by FPR in physical cell 119",
+    "fpr_constraint_provenance": "The 0.05 FPR constraint applies only to Stage 4 frozen security operating points 0.27/0.26; it is not reapplied to cost-ratio selection",
+    "selection_tie_break": ["Operational Cost ascending", "FN ascending", "FP ascending", "F2-score descending", "Threshold descending"],
+    "validation_selected_thresholds": {
+      "XGBoost Tuned": {"1": 0.51, "2": 0.35, "5": 0.16, "10": 0.08, "20": 0.05, "50": 0.05, "100": 0.05},
+      "LightGBM Tuned": {"1": 0.50, "2": 0.32, "5": 0.14, "10": 0.08, "20": 0.05, "50": 0.05, "100": 0.05}
+    },
+    "frozen_operating_points": {
+      "xgboost_standard": 0.50,
+      "xgboost_balanced": 0.51,
+      "xgboost_security": 0.27,
+      "lightgbm_balanced": 0.50,
+      "lightgbm_security": 0.26
+    },
+    "break_even_formula": "(security FP - reference FP) / (reference FN - security FN) when FN reduction > 0 else NaN",
+    "pareto_rule": "Sort FP/FN ascending and retain strict improvements in best FN seen",
+    "stage25_semantics_imported": false,
+    "scientific_recomputation_authorized": false
+  },
+  "holdout_policy": {
+    "historical_use": "Descriptive evaluation of validation-selected thresholds",
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

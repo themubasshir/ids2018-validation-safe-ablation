@@ -1,0 +1,95 @@
+{
+  "stage": 9,
+  "name": "Descriptive holdout calibration assessment without recalibration",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [118]
+  },
+  "environment": {
+    "proven": {
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.0",
+      "joblib": "1.5.3"
+    },
+    "unproven": {}
+  },
+  "inputs": [
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/threshold/all_top5_selected_validation_operating_points.csv"
+  ],
+  "outputs": [
+    "results/calibration/calibration_metric_point_estimates.csv",
+    "results/calibration/calibration_bootstrap_intervals.csv",
+    "results/calibration/paired_calibration_differences.csv",
+    "results/calibration/calibration_bins_equal_width.csv",
+    "results/calibration/calibration_bins_equal_frequency.csv",
+    "results/calibration/calibration_bin_sensitivity.csv",
+    "results/calibration/brier_score_decomposition.csv",
+    "results/calibration/probability_distribution_summary.csv",
+    "results/calibration/calibration_bootstrap_replicates.npz",
+    "7 calibration figures under figures/calibration/",
+    "metadata/calibration/calibration_assessment_methodology.json",
+    "docs/CALIBRATION_ASSESSMENT.md"
+  ],
+  "verification_artifacts": [
+    "results/calibration/calibration_metric_point_estimates.csv",
+    "results/calibration/calibration_bootstrap_intervals.csv",
+    "results/calibration/paired_calibration_differences.csv",
+    "results/calibration/calibration_bins_equal_width.csv",
+    "results/calibration/calibration_bins_equal_frequency.csv",
+    "results/calibration/calibration_bin_sensitivity.csv",
+    "results/calibration/brier_score_decomposition.csv",
+    "results/calibration/probability_distribution_summary.csv",
+    "results/calibration/calibration_bootstrap_replicates.npz",
+    "figures/calibration/figure_calibration_bin_sensitivity.png",
+    "figures/calibration/figure_calibration_metric_intervals.png",
+    "figures/calibration/figure_calibration_reliability_equal_frequency.png",
+    "figures/calibration/figure_calibration_reliability_equal_width.png",
+    "figures/calibration/figure_lightgbm_probability_distribution.png",
+    "figures/calibration/figure_paired_calibration_differences.png",
+    "figures/calibration/figure_xgboost_probability_distribution.png",
+    "metadata/calibration/calibration_assessment_methodology.json",
+    "docs/CALIBRATION_ASSESSMENT.md"
+  ],
+  "methodology": {
+    "assessment_type": "Descriptive post-selection calibration assessment without recalibration",
+    "recalibration_performed": false,
+    "model_selection_performed": false,
+    "threshold_selection_performed": false,
+    "balanced_model": "XGBoost Tuned",
+    "balanced_threshold": 0.51,
+    "security_model": "LightGBM Tuned",
+    "security_threshold": 0.26,
+    "primary_bin_count": 15,
+    "bin_sensitivity_counts": [10, 15, 20],
+    "uniform_edges": "np.linspace(0.0, 1.0, n_bins + 1)",
+    "quantile_edges": "np.quantile(probabilities, np.linspace(0.0, 1.0, n_bins + 1)); force endpoints 0/1; np.unique; fallback [0,1]",
+    "bin_assignment": "np.digitize(probabilities, edges[1:-1], right=True)",
+    "empty_bins": "omitted",
+    "brier_score": "mean((probabilities - labels) ** 2)",
+    "log_loss_clipping": [1e-15, 0.999999999999999],
+    "ece": "sum(bin_weight * abs(mean_probability - observed_frequency))",
+    "mce": "max(abs(calibration_gap))",
+    "rmsce": "sqrt(sum(bin_weight * calibration_gap ** 2))",
+    "bootstrap_method": "Paired class-stratified percentile bootstrap",
+    "bootstrap_replicates": 2000,
+    "successful_bootstrap_replicates": 2000,
+    "random_state": 42,
+    "confidence_level": 0.95,
+    "parallel_workers_historical": 3,
+    "scientific_recomputation_authorized": false
+  },
+  "holdout_policy": {
+    "historically_used": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

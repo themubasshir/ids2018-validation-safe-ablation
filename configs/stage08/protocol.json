@@ -1,0 +1,90 @@
+{
+  "stage": 8,
+  "name": "Paired class-stratified bootstrap confidence analysis",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [116, 117]
+  },
+  "environment": {
+    "proven": {
+      "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.6.1",
+      "matplotlib": "3.10.0",
+      "joblib": "1.5.3"
+    },
+    "unproven": {}
+  },
+  "inputs": [
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "results/threshold/all_top5_selected_validation_operating_points.csv"
+  ],
+  "outputs": [
+    "results/statistical_confidence/bootstrap_point_estimates.csv",
+    "results/statistical_confidence/operating_point_bootstrap_intervals.csv",
+    "results/statistical_confidence/paired_balanced_model_differences.csv",
+    "results/statistical_confidence/paired_security_model_differences.csv",
+    "results/statistical_confidence/paired_auc_differences.csv",
+    "results/statistical_confidence/within_model_threshold_tradeoffs.csv",
+    "results/statistical_confidence/bootstrap_replicates.npz",
+    "figures/statistical_confidence/figure_bootstrap_operating_point_intervals.png",
+    "figures/statistical_confidence/figure_paired_balanced_differences.png",
+    "figures/statistical_confidence/figure_paired_security_differences.png",
+    "figures/statistical_confidence/figure_auc_difference_intervals.png",
+    "metadata/statistical_confidence/bootstrap_methodology.json",
+    "docs/STATISTICAL_CONFIDENCE.md"
+  ],
+  "verification_artifacts": [
+    "results/statistical_confidence/bootstrap_point_estimates.csv",
+    "results/statistical_confidence/operating_point_bootstrap_intervals.csv",
+    "results/statistical_confidence/paired_balanced_model_differences.csv",
+    "results/statistical_confidence/paired_security_model_differences.csv",
+    "results/statistical_confidence/paired_auc_differences.csv",
+    "results/statistical_confidence/within_model_threshold_tradeoffs.csv",
+    "results/statistical_confidence/bootstrap_replicates.npz",
+    "figures/statistical_confidence/figure_bootstrap_operating_point_intervals.png",
+    "figures/statistical_confidence/figure_paired_balanced_differences.png",
+    "figures/statistical_confidence/figure_paired_security_differences.png",
+    "figures/statistical_confidence/figure_auc_difference_intervals.png",
+    "metadata/statistical_confidence/bootstrap_methodology.json",
+    "docs/STATISTICAL_CONFIDENCE.md"
+  ],
+  "methodology": {
+    "method": "Paired class-stratified percentile bootstrap",
+    "bootstrap_replicates": 2000,
+    "successful_bootstrap_replicates": 2000,
+    "random_state": 42,
+    "confidence_level": 0.95,
+    "lower_percentile": 2.500000000000002,
+    "upper_percentile": 97.5,
+    "parallel_workers_historical": 3,
+    "parallel_worker_formula": "min(4, max(1, (os.cpu_count() or 2) - 1))",
+    "holdout_records": 60186,
+    "benign_records": 36000,
+    "attack_records": 24186,
+    "seed_generation": "np.random.SeedSequence(42).generate_state(2000, dtype=np.uint64)",
+    "sampling": "Sample benign and attack positions separately with replacement at original class counts; concatenate without shuffle",
+    "pairing": "Reuse the same sampled indices for XGBoost and LightGBM within every replicate",
+    "ci_semantics": "np.percentile at 2.5 and 97.5; standard error np.std(ddof=1)",
+    "difference_convention": "First minus second",
+    "thresholds": {
+      "xgboost_standard": 0.50,
+      "xgboost_balanced": 0.51,
+      "xgboost_security": 0.27,
+      "lightgbm_balanced": 0.50,
+      "lightgbm_security": 0.26
+    },
+    "scientific_recomputation_authorized": false
+  },
+  "holdout_policy": {
+    "historically_used": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

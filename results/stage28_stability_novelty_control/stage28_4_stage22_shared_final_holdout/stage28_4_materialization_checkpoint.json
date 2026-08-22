@@ -1,0 +1,61 @@
+{
+  "stage": "Stage28-4",
+  "checkpoint": "MATERIALIZATION_COMPLETE_BEFORE_MODEL_INFERENCE",
+  "created_at_utc": "2026-08-22T18:11:36.654908+00:00",
+  "scientific_parent_commit": "2679d0c208d514b381caa12e96c959f4f2ee5ee7",
+  "recovery_reason": "Initial Stage28-4 execution successfully materialized the exact frozen shared final holdout, then stopped during Stage22 receipt-schema auditing before any model inference. R1 salvaged the already-materialized in-memory matrix without re-reading either March source file.",
+  "holdout": {
+    "population": "STAGE22R_SHARED_FINAL_SINGLE_HOLDOUT",
+    "rows": 1374133,
+    "features": 70,
+    "dtype": "float64",
+    "benign": 998788,
+    "attack": 375345,
+    "attack_prevalence": 0.2731504155711274,
+    "X_logical_sha256": "50979ff283ddebaceb6442004c5b80b85e4fb40d02041a5150f730683b3d7c8e",
+    "y_logical_sha256": "b99cf695a49ad2b0a8811fa269a55dcfb99cb700f473ceae8c9ecac2c8661a78",
+    "output_nan_cells": 13922,
+    "positive_infinity_to_nan": 9530,
+    "negative_infinity_to_nan": 0
+  },
+  "source_materialization": {
+    "day_8": {
+      "file": "03-01-2018.csv",
+      "bytes": 107842858,
+      "sha256": "b0534c5d7d8b41e03df71c6966c995d116a8ed28e61f377c8b14cdf5d28f4edf",
+      "physical_rows": 331125,
+      "embedded_header_rows": 25,
+      "effective_rows": 331100,
+      "retained_rows": 331017,
+      "retained_benign": 237982,
+      "retained_attack": 93035,
+      "row_index_semantics": "RAW_PHYSICAL_ROW_INDEX",
+      "positive_infinity_to_nan": 4000,
+      "negative_infinity_to_nan": 0
+    },
+    "day_9": {
+      "file": "03-02-2018.csv",
+      "bytes": 352368373,
+      "sha256": "d96f38e7496aba83475031e6fb8c6fdf1abf6aa1b71325a917798f3c7de93de1",
+      "physical_rows": 1048575,
+      "embedded_header_rows": 0,
+      "effective_rows": 1048575,
+      "retained_rows": 1043116,
+      "retained_benign": 760806,
+      "retained_attack": 282310,
+      "row_index_semantics": "RAW_EQUALS_EFFECTIVE_NO_EMBEDDED_HEADERS",
+      "positive_infinity_to_nan": 5530,
+      "negative_infinity_to_nan": 0
+    },
+    "raw_source_read_passes_in_initial_authorized_materialization": 1,
+    "raw_source_reads_performed_by_recovery_cell": 0
+  },
+  "scientific_operations_completed_before_checkpoint": {
+    "new_model_fits": 0,
+    "model_inferences": 0,
+    "threshold_selections": 0,
+    "model_selections": 0,
+    "stage28_shared_final_holdout_materializations": 1
+  },
+  "status": "PASS_SHARED_FINAL_HOLDOUT_MATERIALIZATION_DURABLY_FROZEN"
+}

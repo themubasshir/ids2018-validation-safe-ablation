@@ -1,0 +1,27 @@
+{
+  "stage": "Stage28-2B16",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C086",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::DDOS::LIGHTGBM::SEED44",
+  "fit_ordinal": 74,
+  "pre_component_new_fits_consumed": 73,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 74,
+  "new_fits_remaining": 34,
+  "held_out_family": "DDOS",
+  "learner": "LIGHTGBM",
+  "training_seed": 44,
+  "membership_seed": 42,
+  "model_artifact": "ddos_lightgbm_seed44_cpu_model.txt",
+  "model_sha256": "0cefc65b3e1a24b99051c2a7a60e6b29d0d52fc97c69e8d0f9034f79272a4855",
+  "fit_seconds": 120.49089612900025,
+  "model_structure": {
+    "iterations": 400,
+    "trees": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A43",
+  "component_id": "C063",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::WEB_ATTACK::XGBOOST::SEED43",
+  "fit_ordinal": 51,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T10:34:17.283198+00:00",
+  "durable_parent": "ffbf1e79cac3595d6d3617114c7b6bf1af5eb67a",
+  "held_out_family": "WEB_ATTACK",
+  "learner": "XGBOOST",
+  "seed": 43,
+  "model_sha256": "4a831f5fc932c27fae778db8181441ddb232da989e2a4c7780d315cd4528c934",
+  "validation_probability_sha256": "52b1449e035dc305f3158c32af81298a360865d4d75edcdd709799e1f005d558",
+  "operational_target_probability_sha256": "78aded4a30b5e2164f6acc2507721ab9bb8e21f05592ddf004c6bf552b8631c9",
+  "threshold_grid_sha256": "52895bf608b3c199efc2c5f06282e1c6c5a79b5cd5b940e3cf5b7a721f47915e",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

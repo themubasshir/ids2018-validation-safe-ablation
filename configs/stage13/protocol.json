@@ -1,0 +1,122 @@
+{
+  "stage": 13,
+  "name": "Local explanation reliability",
+  "scientific_execution_enabled": false,
+  "source": {
+    "notebook": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+    "notebook_sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+    "physical_cells_1_based": [130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146]
+  },
+  "environment": {
+    "proven": {
+      "python": "3.12.13",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.6.1",
+      "xgboost": "3.2.0",
+      "lightgbm": "4.6.0",
+      "lime": "0.2.0.1"
+    },
+    "unproven": {
+      "shap": "VERSION_NOT_PROVEN",
+      "scipy": "VERSION_NOT_PROVEN",
+      "matplotlib": "VERSION_NOT_PROVEN"
+    }
+  },
+  "inputs": [
+    "Processed IDS2018 dataset and exact Stage01 split reconstruction inputs",
+    "models/xgboost/xgboost_tuned.json",
+    "models/lightgbm/lightgbm_tuned.txt",
+    "results/holdout/xgboost_final_test_probabilities.csv",
+    "results/holdout/lightgbm_final_test_probabilities.csv",
+    "Training-only LIME background and deterministic case panels"
+  ],
+  "outputs": [
+    "results/lime/ local explanation and reliability tables",
+    "metadata/lime/ reconstructed split background scaler SHAP arrays and methodology metadata",
+    "tables/lime/ six publication table pairs",
+    "figures/lime/ five publication figures",
+    "metadata/lime/stage13_repository_package_manifest.json"
+  ],
+  "verification_artifacts": [
+    "metadata/lime/stage13_3_case_selection_metadata.json",
+    "metadata/lime/stage13_4_lime_configuration.json",
+    "metadata/lime/stage13_5_lime_metadata.json",
+    "metadata/lime/stage13_6a_selected_lime_configuration.json",
+    "metadata/lime/stage13_6b_lime_stability_metadata.json",
+    "metadata/lime/stage13_7a_shap_lime_metadata.json",
+    "metadata/lime/stage13_7b_full_panel_metadata.json",
+    "metadata/lime/lime_background_manifest.csv",
+    "metadata/lime/lime_background_data.npz",
+    "metadata/lime/local_shap_disagreement_values.npz",
+    "results/lime/lime_full_panel_summary.csv",
+    "results/lime/lime_seed_stability_model_summary.csv",
+    "results/lime/local_shap_lime_agreement.csv",
+    "results/lime/lime_shap_full_panel_agreement.csv",
+    "metadata/lime/stage13_repository_package_manifest.json"
+  ],
+  "methodology": {
+    "random_state": 42,
+    "artifact_discovery": "Search /kaggle/working and /kaggle/input; shortest matching path is preferred",
+    "holdout_reconstruction": "Repeat seed-42 stratified 64/16/20 split and require archived target probability and metric agreement",
+    "holdout_reconstruction_authorized_in_extraction": false,
+    "models_and_thresholds": {"xgboost": 0.51, "lightgbm": 0.26},
+    "case_selection": {
+      "outcomes": ["TP", "TN", "FP", "FN"],
+      "cases_per_model_outcome": 8,
+      "model_specific_cases": 64,
+      "unique_shared_cases": 60,
+      "disagreement_pool": 2253,
+      "selected_disagreement_cases": 12,
+      "nearest_threshold": 2,
+      "probability_quantiles": [0.1, 0.25, 0.5, 0.75, 0.9],
+      "maximum_prediction_confidence": 1,
+      "tie_breaker": "holdout_position"
+    },
+    "background": {
+      "source": "training partition only",
+      "sampling": "StratifiedShuffleSplit",
+      "size": 20000,
+      "class_counts": {"benign": 11963, "attack": 8037},
+      "feature_count": 78,
+      "representation": "raw unscaled tabular flow features"
+    },
+    "initial_lime": {
+      "samples": 5000,
+      "features": 15,
+      "base_seed": 130500,
+      "paired_model_seed": true,
+      "discretizer": "quartile",
+      "sample_around_instance": false,
+      "distance_metric": "euclidean"
+    },
+    "selected_lime": {
+      "config_id": "continuous_wide_10k",
+      "samples": 10000,
+      "features": 15,
+      "discretize_continuous": false,
+      "sample_around_instance": true,
+      "kernel_width": 8.831760866327848,
+      "selection_base_seed": 136000
+    },
+    "perturbation_base_seeds": [137000, 138000, 139000, 140000, 141000],
+    "perturbation_replicates_per_case_model": 5,
+    "top_k_values": [5, 10, 15],
+    "tree_shap_output_space": "raw model score/log-odds",
+    "agreement_metrics": ["top-k Jaccard", "absolute and signed cosine", "absolute and signed Spearman", "shared-feature sign agreement"],
+    "full_panel_base_seed": 137700,
+    "reliability_rule": {
+      "fidelity": "decision agreement and local R2 >= 0.30 and fidelity gap <= 0.10",
+      "cross_method": "top-10 Jaccard >= 0.40 and absolute attribution cosine >= 0.50",
+      "warning": "Study-specific descriptive criteria; not universal XAI standards"
+    },
+    "lime_execution_authorized": false,
+    "shap_execution_authorized": false
+  },
+  "holdout_policy": {
+    "historically_reconstructed_and_opened": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false
+  }
+}

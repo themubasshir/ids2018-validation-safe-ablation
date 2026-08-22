@@ -1,0 +1,26 @@
+{
+  "stage": "Stage28-2B11",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C081",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::DDOS::XGBOOST::SEED42",
+  "fit_ordinal": 69,
+  "pre_component_new_fits_consumed": 68,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 69,
+  "new_fits_remaining": 39,
+  "held_out_family": "DDOS",
+  "learner": "XGBOOST",
+  "training_seed": 42,
+  "membership_seed": 42,
+  "model_artifact": "ddos_xgboost_seed42_cpu_model.json",
+  "model_sha256": "795a3e42c2c4210a9eb8f9354f930a1361b993d1c95be3c510e7a2fb6409b0f7",
+  "fit_seconds": 119.28847396400033,
+  "model_structure": {
+    "boosted_rounds": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

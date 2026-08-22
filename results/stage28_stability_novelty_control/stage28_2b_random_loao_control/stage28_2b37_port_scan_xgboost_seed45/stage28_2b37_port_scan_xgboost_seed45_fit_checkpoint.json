@@ -1,0 +1,26 @@
+{
+  "stage": "Stage28-2B37",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C107",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::PORT_SCAN::XGBOOST::SEED45",
+  "fit_ordinal": 95,
+  "pre_component_new_fits_consumed": 94,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 95,
+  "new_fits_remaining": 13,
+  "held_out_family": "PORT_SCAN",
+  "learner": "XGBOOST",
+  "training_seed": 45,
+  "membership_seed": 42,
+  "model_artifact": "port_scan_xgboost_seed45_cpu_model.json",
+  "model_sha256": "5fc4ae95b37577a997a68ea0fece291bcc1c37d3b57cd3da02d80995e0fd0874",
+  "fit_seconds": 111.50552680100009,
+  "model_structure": {
+    "boosted_rounds": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

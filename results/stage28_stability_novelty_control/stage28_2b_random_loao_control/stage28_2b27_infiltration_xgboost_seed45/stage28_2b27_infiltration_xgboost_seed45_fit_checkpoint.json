@@ -1,0 +1,26 @@
+{
+  "stage": "Stage28-2B27",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C097",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::INFILTRATION::XGBOOST::SEED45",
+  "fit_ordinal": 85,
+  "pre_component_new_fits_consumed": 84,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 85,
+  "new_fits_remaining": 23,
+  "held_out_family": "INFILTRATION",
+  "learner": "XGBOOST",
+  "training_seed": 45,
+  "membership_seed": 42,
+  "model_artifact": "infiltration_xgboost_seed45_cpu_model.json",
+  "model_sha256": "178180193ee123206fafe5e6901a5c531a17b3aa937dabf21786fb77a2c11b53",
+  "fit_seconds": 117.40709138700004,
+  "model_structure": {
+    "boosted_rounds": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

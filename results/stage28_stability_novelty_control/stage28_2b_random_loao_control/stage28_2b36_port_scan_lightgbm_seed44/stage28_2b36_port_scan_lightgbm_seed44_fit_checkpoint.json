@@ -1,0 +1,27 @@
+{
+  "stage": "Stage28-2B36",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "component_id": "C106",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::PORT_SCAN::LIGHTGBM::SEED44",
+  "fit_ordinal": 94,
+  "pre_component_new_fits_consumed": 93,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 94,
+  "new_fits_remaining": 14,
+  "held_out_family": "PORT_SCAN",
+  "learner": "LIGHTGBM",
+  "training_seed": 44,
+  "membership_seed": 42,
+  "model_artifact": "port_scan_lightgbm_seed44_cpu_model.txt",
+  "model_sha256": "10c44919e36cb48c1b642ab85e067aefa92ba1d9f43a6040d7f629a687fa17db",
+  "fit_seconds": 103.98008452799968,
+  "model_structure": {
+    "iterations": 400,
+    "trees": 400,
+    "features": 70
+  },
+  "target_used_for_fit": false,
+  "target_used_for_class_weight": false,
+  "validation_used_during_fit": false,
+  "status": "FIT_SUCCESS_MODEL_SAVED_PENDING_EVALUATION"
+}

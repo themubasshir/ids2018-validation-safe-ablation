@@ -127,13 +127,18 @@ cell. Every archived cell remains immutable.
 Detailed inventories are in `NOTEBOOK_INVENTORY.csv` and
 `STAGE_CODE_INVENTORY.csv`.
 
-Key findings after the approved Stage01-Stage10 extraction checkpoint:
+Key findings after the approved Stage01-Stage15 extraction checkpoint:
 
-- Stages01-10 now have provenance-bearing methodology modules, explicit JSON
+- Stages01-15 now have provenance-bearing methodology modules, explicit JSON
   protocols and dry-run/verify-only entry points. Scientific execution is not
   exposed by those entry points.
-- Stages11-14 remain executable primarily through the authoritative notebook.
-- Stage15 preserves nine Python sources and extensive checkpoints.
+- Stages11-14 preserve exact configuration and frozen-output structure, but
+  their scientific category, multi-seed, LIME/SHAP and IG operations were not
+  rerun during extraction.
+- Stage15 preserves its historical Python sources and extensive checkpoints;
+  the extraction adds thin duplicate-policy and FT-Transformer architecture
+  wrappers. Verify-only byte-hashes the five locked checkpoints without
+  deserializing them.
 - Stage16-18 remain notebook-centric.
 - Stage19 preserves a window constructor and two model implementations.
 - Stage20 preserves four reusable Python modules, but extensive forensic and
@@ -161,21 +166,35 @@ Examples proven by receipts include:
   scikit-learn 1.6.1, Matplotlib 3.10.0 and Joblib 1.5.3;
 - Stage09 calibration: the Stage08 versions plus SciPy 1.16.3, with no
   scikit-learn dependency recorded by that receipt;
-- Stage15 isolated runtime: PyTorch 2.7.1+cu118 on a Tesla P100;
+- Stage12 multi-seed: Python 3.12.13, NumPy 2.4.6, pandas 2.3.3,
+  scikit-learn 1.6.1, XGBoost 3.2.0 and LightGBM 4.6.0;
+- Stage13 LIME receipt: Python 3.12.13, NumPy 2.4.6, pandas 2.3.3,
+  scikit-learn 1.6.1, XGBoost 3.2.0, LightGBM 4.6.0 and LIME 0.2.0.1;
+- Stage14 IG receipt: Python 3.12.13, TensorFlow 2.19.0, NumPy 2.4.6 and
+  pandas 2.3.3;
+- Stage15 isolated runtime: PyTorch 2.7.1+cu118 and CUDA 11.8 on a Tesla
+  P100-PCIE-16GB with required `sm_60` kernels;
 - Stage20 final holdout runtime amendment: PyTorch 2.10.0+cu126 on a Tesla T4;
 - Stage26 GPU receipt: PyTorch 2.10.0+cu128 on a Tesla T4.
 
-The unpinned historical versions of TensorFlow and SHAP are
-`VERSION_NOT_PROVEN`. SciPy, Matplotlib and Joblib are likewise unproven except
-where a stage-specific receipt such as Stage08/09 identifies them. No
-convenient modern version may be substituted as historical fact.
+The historical TensorFlow version is unproven for the early neural stages but
+proven as 2.19.0 for Stage14 only. Standalone Keras remains unproven for
+Stage14. SHAP is `VERSION_NOT_PROVEN` for Stages06 and 13. SciPy, Matplotlib
+and Joblib are likewise unproven except where a stage-specific receipt such as
+Stage08/09 identifies them. No convenient modern version may be substituted
+as historical fact.
 
-## Stage01-Stage10 equivalence checkpoint
+The Stage15 environment history also contains a superseded system PyTorch
+2.10.0+cu128 receipt that lacked P100 `sm_60` kernels. It must not be confused
+with the isolated 2.7.1+cu118 environment that passed matrix, forward,
+backward and optimizer checks. See `STAGE15_ENVIRONMENT_PROVENANCE.md`.
 
-The non-scientific suite contains 42 tests and passes in full. The 34 rows in
+## Stage01-Stage15 equivalence checkpoint
+
+The non-scientific suite contains 66 tests and passes in full. The 52 rows in
 `EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence levels
-as follows: one Level A byte-identity check, 17 Level B exact static/numerical
-checks, nine Level C fixture/tolerance checks and seven Level D
+as follows: two Level A byte-identity checks, 28 Level B exact static/numerical
+checks, 14 Level C fixture/tolerance checks and eight Level D
 structural/provenance checks.
 
 The lower equivalence levels are intentional. The external processed dataset
@@ -188,6 +207,22 @@ target/probability input was opened. Stage08/09 NPZ artifacts were opened only
 for key/schema/shape validation, and frozen Stage10 validation selections were
 checked statically.
 
+For Stages11-15, frozen CSV/JSON schemas and values were checked statically and
+mathematical helpers were exercised only on synthetic inputs. No category
+analysis, multi-seed fit, LIME, SHAP, IG or FT-Transformer training/inference
+was executed. Stage15 verify-only streamed checkpoint bytes for SHA256 and size
+checks only; no checkpoint was deserialized. The historical receipts record
+one Stage15 holdout opening after architecture, threshold and checkpoint locks.
+Extraction did not reconstruct, open or reevaluate that holdout.
+
+Reproducibility classification at this checkpoint is **partially
+reproducible** for each of Stages11-15. Exact source, configuration and frozen
+evidence are preserved, but a full scientific rerun is neither authorized nor
+demonstrated. Stage11 additionally lacks a proven runtime; Stage13 retains
+unproven SHAP/SciPy/Matplotlib versions; Stage14 retains unproven standalone
+Keras/scikit-learn/Joblib/Matplotlib versions; and Stage15 depends on an
+external processed dataset despite complete locked checkpoint provenance.
+
 Stage10 source review also resolves an important methodological boundary: its
 cost-ratio threshold search does not apply an FPR filter. The 5% FPR constraint
 is provenance for the frozen Stage04 security points only; the safe extraction
@@ -197,8 +232,8 @@ preserves that distinction.
 
 The repository contains extensive frozen evidence and strong closure records,
 but executable coverage remains uneven. The authoritative notebook closes the
-largest source-preservation gap for Stages01-20, and the approved Stage01-10
+largest source-preservation gap for Stages01-20, and the approved Stage01-15
 block is now represented by explicit, safety-gated code and configuration.
-Further extraction, beginning with Stage11, requires a new approval after this
-stop point. Scientific execution remained prohibited throughout this
-extraction.
+Cell 171 remains mapped only to Stage16 and was not included in Stage15.
+Further extraction, beginning with Stage16, requires a new explicit approval.
+Scientific execution remained prohibited throughout this extraction.

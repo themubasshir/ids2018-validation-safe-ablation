@@ -25,7 +25,7 @@ source hashes, classifications and detected path references, is in
 | 73-91 | superseded | Earlier validation-safe stage drafts replaced by the `ids2018_clean_validation_v2` cells. |
 | 92 | precursor | Notebook-global state probe immediately before the canonical Stage01 cell. |
 
-## Stage01-Stage10 approved extraction map
+## Stage01-Stage15 approved extraction map
 
 ### Stage01 — cell 93
 
@@ -174,15 +174,97 @@ source hashes, classifications and detected path references, is in
 - Extraction verification checks the frozen 14-row validation-selection table
   only; it performs no threshold search and opens no holdout inputs.
 
-## Stage11-Stage20 map
+### Stage11 — cell 120
+
+- Reconstruct the original attack taxonomy from stripped `Label` strings and
+  apply the already-frozen XGBoost 0.51/0.27 and LightGBM 0.50/0.26 operating
+  points.
+- Preserve 12 exact categories, their 24,186 total attack support, 1,000 paired
+  bootstrap replicates at seed 42, Wilson intervals, exact paired
+  McNemar/binomial tests and Benjamini-Hochberg correction.
+- SQL Injection support remains 13 and is explicitly labelled low support
+  under the historical minimum-support-20 presentation/ranking rule.
+- Extracted safe interfaces: `src/ids_validation/evaluation/attack_categories.py`,
+  the Stage11 protocol/config and `scripts/reproduce_stage11.py`.
+- Extraction did not reconstruct/open the holdout or recompute category
+  metrics.
+
+### Stage12 — cells 121-129
+
+- Cell 121 repairs constructor keyword collisions. Cell 122 repeats the
+  stratified 64/16/20 split for seeds 42, 52, 62, 72 and 82, fits fixed
+  seed-42 hyperparameters, and selects validation operating points on the
+  0.05-0.95 grid by 0.01 using the historical tie chains.
+- This estimates repeated-split/fixed-fit robustness only; hyperparameter
+  search is not repeated and full-pipeline/HPO uncertainty is not estimated.
+- Cells 123-129 contain presence, inventory, destructive cleanup and archival
+  packaging operations. The safe extraction exposes none of the cleanup or
+  archive mutations.
+- Extracted safe interfaces: `src/ids_validation/evaluation/multiseed.py`, the
+  Stage12 protocol/config and `scripts/reproduce_stage12.py`.
+- No estimator was fitted and no split or threshold was scientifically rerun.
+
+### Stage13 — cells 130-146
+
+- Preserve shortest-path artifact discovery, exact holdout reconstruction and
+  archived-probability verification logic, the 20,000-row training-only LIME
+  background, outcome/disagreement panels, 5,000-sample initial LIME with 15
+  terms, the selected 10,000-sample continuous wider-kernel configuration and
+  five perturbation seeds 137000-141000.
+- Preserve local SHAP-LIME top-k, cosine, Spearman and sign-agreement formulas,
+  paired explanation seeds and study-specific fidelity/reliability labels.
+- Extracted safe interfaces: `src/ids_validation/explainability/lime_analysis.py`,
+  `src/ids_validation/explainability/local_agreement.py`, the Stage13
+  protocol/config and `scripts/reproduce_stage13.py`.
+- LIME 0.2.0.1 is proven; SHAP, SciPy and Matplotlib versions remain
+  `VERSION_NOT_PROVEN`. Neither LIME nor SHAP was run and the holdout was not
+  reconstructed or opened.
+
+### Stage14 — cells 147-161
+
+- Preserve MLP/CNN input compatibility, repository-scaler provenance, the
+  outcome-stratified 64-case panel, pre-sigmoid attack-logit target, zero,
+  benign-median and 32-reference benign baselines, and 16/32/64/128-step
+  trapezoidal convergence audit with 128 steps selected.
+- Extracted mathematical helpers accept only caller-supplied toy gradient
+  grids. They do not import TensorFlow, load neural artifacts or compute
+  gradients.
+- Extracted safe interfaces:
+  `src/ids_validation/explainability/integrated_gradients.py`, the Stage14
+  protocol/config and `scripts/reproduce_stage14.py`.
+- TensorFlow 2.19.0 is proven for this stage only; standalone Keras,
+  scikit-learn, Joblib and Matplotlib remain `VERSION_NOT_PROVEN`.
+
+### Stage15 — cells 162-170 and 172-189
+
+- Cell 163 constructs the deterministic train-priority duplicate-safe split:
+  globally exclude binary-conflicting patterns, retain the minimum original
+  row per pattern, then exclude train patterns from validation and prior-split
+  patterns from holdout. Frozen safe sizes are 154,686/37,835/46,849 with zero
+  post-processing overlap or within-split duplicates.
+- Remove eight exact constant predictors and retain the frozen ordered 70
+  numerical features. Fit `StandardScaler` and derive the positive-class
+  weight from duplicate-safe training rows only.
+- Frozen `FT_BALANCED` uses a feature-specific numerical tokenizer plus CLS,
+  no positional encoding, 64-dimensional tokens, eight heads, three layers,
+  feed-forward width 256, dropout 0.1 and 159,169 parameters. AdamW uses
+  learning rate 0.0005 and weight decay 0.00001; batch size is 1,024.
+- The locked seeds are 7, 29, 101, 313 and 997. Threshold 0.73 is frozen from
+  the validation-only robust plateau and applied to the unweighted mean of the
+  five checkpoint probabilities.
+- The Stage15.5B lock records architecture, threshold and checkpoint hashes
+  before the historical Stage15.6A one-time holdout opening. Extraction checks
+  checkpoint bytes only and performs no training, deserialization, inference,
+  threshold selection or holdout access.
+- Extracted safe interfaces: `src/ids_validation/data/duplicate_safe_split.py`,
+  `src/ids_validation/models/ft_transformer.py`, the Stage15 protocol/config
+  and `scripts/reproduce_stage15.py`.
+- Physical cell 171 is explicitly excluded; it belongs to Stage16.
+
+## Stage16-Stage20 map
 
 | Stage | Physical cells | Purpose; main dependencies and frozen decisions |
 |---:|---:|---|
-| 11 | 120 | Attack-category reconstruction and frozen operating-point analysis; 1,000 paired bootstrap replicates. |
-| 12 | 121-129 | Constructor patch, seeds 42/52/62/72/82, fixed hyperparameters, per-seed split/fitting/validation threshold selection and packaging. |
-| 13 | 130-146 | Artifact discovery, holdout reconstruction checks, LIME background/case analysis, configuration and seed sensitivity, local SHAP-LIME agreement and packaging. |
-| 14 | 147-161 | Neural artifact compatibility, scaler reconstruction, MLP/CNN Integrated Gradients, convergence/reference sensitivity and recovery/package cells. |
-| 15 | 162-170; 172-189 | Duplicate-safe 70-feature FT-Transformer; P100-compatible isolated runtime; candidates and convergence repairs; seeds 7/29/101/313/997; `FT_BALANCED`; threshold 0.73; one holdout opening. |
 | 16 | 171; 190-222 | Twelve-model duplicate-safe classical benchmark, top-five tuning, multi-seed confirmation, limited ensemble comparison and one holdout. Cell 171 is the approved out-of-sequence Stage16 source. Final ensemble is 0.5 LightGBM + 0.5 XGBoost at 0.46. |
 | 17 | 223-239 | Post-result five-checkpoint attention analysis on a deterministic 64-case validation panel and cross-method comparison. No training or holdout access. |
 | 18 | 240-289 | Representation-first temporal/ViT/graph feasibility; temporal supported with constraints, ViT rejected, graph experiment restricted to Feb-20 directed 60-second snapshots with seeds 7/29/101. |

@@ -1,0 +1,64 @@
+{
+  "stage": "Stage28-3B",
+  "type": "SEED_UNCERTAINTY_AND_PREFINAL_CONCLUSION_STABILITY_SYNTHESIS",
+  "created_at_utc": "2026-08-22T17:40:20.741289+00:00",
+  "scientific_parent_commit": "3318e0bf30b14280347d9d28b6c8ab928231b13b",
+  "closure_gate": {
+    "stage28_3a_status": "PASS_STAGE28_NEW_MODEL_FITTING_PERMANENTLY_CLOSED",
+    "authorized_new_fits": 108,
+    "consumed_new_fits": 108,
+    "remaining_new_fits": 0
+  },
+  "scientific_operations": {
+    "new_model_fits": 0,
+    "model_inference": 0,
+    "threshold_selection": 0,
+    "target_openings": 0,
+    "shared_stage22_final_holdout_openings": 0,
+    "bootstrap_recomputation": 0,
+    "new_formal_statistical_tests": 0
+  },
+  "seed_uncertainty": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "statistics": [
+      "mean",
+      "median",
+      "sample_standard_deviation_ddof_1",
+      "minimum",
+      "maximum",
+      "range",
+      "IQR_Q75_minus_Q25_linear"
+    ],
+    "best_seed_reporting": "FORBIDDEN",
+    "combine_with_bootstrap_ci": false,
+    "stage22_validation_groups": 2,
+    "chronology_loao_seed_level_realizations": 50,
+    "random_loao_seed_level_realizations": 50,
+    "family_specific_reporting": true,
+    "aggregate_zero_day_score_created": false
+  },
+  "conclusion_stability": {
+    "loao_conditions": [
+      "ROC_ABOVE_CHANCE",
+      "PR_ABOVE_CHANCE",
+      "STANDARD_DETECTION_PRESENT",
+      "BALANCED_DETECTION_PRESENT",
+      "SECURITY_DETECTION_PRESENT_WHERE_FEASIBLE",
+      "LEARNER_ORDER_ROC_STABILITY"
+    ],
+    "stability_denominator": 5,
+    "stage22_final_holdout_claims_status": "DEFERRED_TO_STAGE28_4",
+    "post_result_condition_creation": "FORBIDDEN"
+  },
+  "support_policy": {
+    "INFILTRATION": "DESCRIPTIVE_ONLY_SUPPORT_36_LT_50",
+    "other_eligible_families": "INFERENTIAL_SUPPORT_ELIGIBLE"
+  },
+  "next_authorized_step": "Stage28-3C \u2014 random-vs-chronological LOAO contrast from durable seed-level metrics. ZERO new fits and ZERO shared-final-holdout openings."
+}

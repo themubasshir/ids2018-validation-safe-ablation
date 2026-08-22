@@ -1,0 +1,19 @@
+{
+  "stage": "Stage28-3B",
+  "status": "DEFERRED_TO_STAGE28_4_SHARED_FINAL_HOLDOUT_INFERENCE",
+  "reason": "The frozen Stage22 directional claims are defined on the shared final holdout. Stage28-3B is not authorized to open that holdout or substitute development-validation metrics.",
+  "shared_final_holdout_openings_this_stage": 0,
+  "claims": [
+    {
+      "claim_id": "STAGE22_PR_RANDOM_LT_CHRONO_ON_SHARED_FINAL_HOLDOUT",
+      "condition": "PR_AUC_RANDOM_NATURAL < PR_AUC_CHRONOLOGICAL_NATURAL",
+      "reason": "This freezes the direction observed in the already-frozen Stage22R shared final holdout rather than assuming the common but unsupported direction that random must outperform chronology."
+    },
+    {
+      "claim_id": "STAGE22_ROC_RANDOM_LT_CHRONO_ON_SHARED_FINAL_HOLDOUT",
+      "condition": "ROC_AUC_RANDOM_NATURAL < ROC_AUC_CHRONOLOGICAL_NATURAL"
+    }
+  ],
+  "canonical_conclusion_stability_output": "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/conclusion_stability.csv",
+  "canonical_output_status": "NOT_FINALIZED_UNTIL_STAGE28_4"
+}

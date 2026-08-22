@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A11",
+  "component_id": "C023",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::BOT::XGBOOST::SEED43",
+  "fit_ordinal": 19,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T09:37:28.755370+00:00",
+  "durable_parent": "4757827c9e845a862113f96339ada0b9e95a948f",
+  "held_out_family": "BOT",
+  "learner": "XGBOOST",
+  "seed": 43,
+  "model_sha256": "3eda9722dc50b8056b9e1a951513d0b6153913c155f91aec02b8cae1006112a9",
+  "validation_probability_sha256": "6c7d2fe26cb1a80883d001e635a088b329f49c300e74bb7b4dac2164cc58426b",
+  "operational_target_probability_sha256": "35f78dc14c9f4901a5307766b9d999471ac15430077cf451afe2db5abf6b5398",
+  "threshold_grid_sha256": "f157fb5e9e585012dc72174155c0eeaa1b3d9c2a82e2e7bb5a4ae53aceb5f2f2",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

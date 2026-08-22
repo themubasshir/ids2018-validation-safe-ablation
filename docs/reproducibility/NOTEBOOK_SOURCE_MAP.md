@@ -25,7 +25,7 @@ source hashes, classifications and detected path references, is in
 | 73-91 | superseded | Earlier validation-safe stage drafts replaced by the `ids2018_clean_validation_v2` cells. |
 | 92 | precursor | Notebook-global state probe immediately before the canonical Stage01 cell. |
 
-## Stage01-Stage05 approved extraction map
+## Stage01-Stage10 approved extraction map
 
 ### Stage01 — cell 93
 
@@ -104,15 +104,80 @@ source hashes, classifications and detected path references, is in
   `src/ids_validation/evaluation/metrics.py`, the Stage05 protocol/config and
   `scripts/reproduce_stage05.py`. The entry point has no execution mode.
 
-## Stage06-Stage20 map
+### Stage06 — cell 108
+
+- Construct one shared class-balanced sample using seed 42: 2,500 benign and
+  2,500 attack rows, sampled without replacement and shuffled once.
+- Explain the frozen XGBoost and LightGBM models with TreeSHAP, normalize the
+  binary-output shapes, rank each model's top 20 features and compare the
+  shared top 15. Frozen decision thresholds remain 0.51 and 0.26.
+- Inputs: Stage01 holdout arrays and Stage03 serialized model artifacts.
+- Outputs: SHAP arrays, five result tables, six figures and metadata.
+- Extracted safe interfaces: `src/ids_validation/explainability/shap_analysis.py`,
+  the Stage06 protocol/config and `scripts/reproduce_stage06.py`.
+- Verification limitation: the exact historical Joblib model inputs and SHAP
+  matrices are absent. Native JSON/TXT models are not asserted to be identical
+  substitutes, and the historical SHAP version is `VERSION_NOT_PROVEN`.
+
+### Stage07 — cells 109-115
+
+- Cell 109 generates publication figures/tables and assembles publication
+  assets using frozen Stage02-Stage06 results.
+- Cells 110-114 are archival operations: historical ZIP deletion, inventory,
+  SHA256 manifest creation, tar creation and archive verification.
+- Cell 115 is a required-file presence check.
+- Expected publication set: 15 figures, four CSV tables and four LaTeX tables.
+- Extracted safe interfaces: `src/ids_validation/stages/stage07/publication.py`,
+  the Stage07 protocol/config and `scripts/reproduce_stage07.py`.
+- Safety divergence: the extracted path reports ZIP cleanup candidates but
+  never deletes them, renders archive/checksum commands without executing them,
+  and verifies asset presence only. The complete historical archive and its
+  file manifest are absent; only `metadata/source_archive.sha256` remains.
+
+### Stage08 — cells 116-117
+
+- Perform 2,000 paired class-stratified bootstrap replicates with seed 42 and
+  95% percentile intervals. Each replicate shares sampled benign and attack
+  indices across models and operating points.
+- Evaluate the frozen standard and objective-specific thresholds: XGBoost
+  0.50/0.51/0.27 and LightGBM 0.50/0.26.
+- Cell 117 is a required-file presence check.
+- Extracted safe interfaces: `src/ids_validation/evaluation/bootstrap.py`, the
+  Stage08 protocol/config and `scripts/reproduce_stage08.py`.
+- Extraction verification opens frozen bootstrap NPZ files only for key,
+  schema and shape checks; it does not generate bootstrap replicates or read
+  holdout target/probability inputs.
+
+### Stage09 — cell 118
+
+- Assess calibration without recalibration using a primary 15-bin analysis and
+  10/15/20-bin sensitivity, plus ECE, MCE, RMSCE, Brier score, log loss,
+  Brier decomposition and calibration intercept/slope methodology.
+- Confidence intervals use the same 2,000-replicate paired stratified bootstrap
+  design as Stage08.
+- Extracted safe interfaces: `src/ids_validation/evaluation/calibration.py`, the
+  Stage09 protocol/config and `scripts/reproduce_stage09.py`.
+- Extraction verification is structural only and does not execute calibration
+  or bootstrap computations on frozen holdout inputs.
+
+### Stage10 — cell 119
+
+- Evaluate relative FN:FP cost ratios 1, 2, 5, 10, 20, 50 and 100 using
+  `FP + ratio * FN`, select thresholds on validation data, and report holdout
+  results descriptively at frozen thresholds.
+- The cost-ratio threshold search is unconstrained and uses the exact tie chain:
+  cost ascending, FN ascending, FP ascending, F2 descending, threshold
+  descending. The Stage04 5% FPR constraint applies only to the separately
+  frozen security operating points (XGBoost 0.27, LightGBM 0.26).
+- Extracted safe interfaces: `src/ids_validation/evaluation/operating_cost.py`,
+  the Stage10 protocol/config and `scripts/reproduce_stage10.py`.
+- Extraction verification checks the frozen 14-row validation-selection table
+  only; it performs no threshold search and opens no holdout inputs.
+
+## Stage11-Stage20 map
 
 | Stage | Physical cells | Purpose; main dependencies and frozen decisions |
 |---:|---:|---|
-| 06 | 108 | Dual-model TreeSHAP using frozen XGBoost/LightGBM, seed 42, 2,500 benign + 2,500 attack samples, top 20 features and thresholds 0.51/0.26. Depends on Stages01/03/05. |
-| 07 | 109-115 | Publication tables/figures, manifests and complete-working archive verification. No model fitting. |
-| 08 | 116-117 | Paired class-stratified bootstrap, 2,000 replicates, seed 42, 95% intervals over frozen probabilities and thresholds. |
-| 09 | 118 | Calibration without recalibration; 2,000 bootstrap replicates; primary 15 bins with 10/15/20-bin sensitivity. |
-| 10 | 119 | Relative operational costs for FN:FP ratios 1, 2, 5, 10, 20, 50 and 100; validation selection with descriptive holdout evaluation. |
 | 11 | 120 | Attack-category reconstruction and frozen operating-point analysis; 1,000 paired bootstrap replicates. |
 | 12 | 121-129 | Constructor patch, seeds 42/52/62/72/82, fixed hyperparameters, per-seed split/fitting/validation threshold selection and packaging. |
 | 13 | 130-146 | Artifact discovery, holdout reconstruction checks, LIME background/case analysis, configuration and seed sensitivity, local SHAP-LIME agreement and packaging. |

@@ -127,12 +127,12 @@ cell. Every archived cell remains immutable.
 Detailed inventories are in `NOTEBOOK_INVENTORY.csv` and
 `STAGE_CODE_INVENTORY.csv`.
 
-Key findings after the approved Stage01-Stage05 extraction checkpoint:
+Key findings after the approved Stage01-Stage10 extraction checkpoint:
 
-- Stages01-05 now have provenance-bearing methodology modules, explicit JSON
+- Stages01-10 now have provenance-bearing methodology modules, explicit JSON
   protocols and dry-run/verify-only entry points. Scientific execution is not
   exposed by those entry points.
-- Stages06-14 remain executable primarily through the authoritative notebook.
+- Stages11-14 remain executable primarily through the authoritative notebook.
 - Stage15 preserves nine Python sources and extensive checkpoints.
 - Stage16-18 remain notebook-centric.
 - Stage19 preserves a window constructor and two model implementations.
@@ -151,40 +151,54 @@ itself sufficient evidence of stage ownership.
 
 ## Environment evidence
 
-Historical environments are stage-specific.
+Historical environments are stage-specific. Stage08 and Stage09 receipts prove
+their analysis runtimes directly; Stage06, Stage07 and Stage10 do not preserve
+complete stage-specific runtime receipts.
 
 Examples proven by receipts include:
 
-- core seed-42 tree environment: Python 3.12.13, NumPy 2.4.6, pandas 2.3.3,
-  scikit-learn 1.6.1, XGBoost 3.2.0, LightGBM 4.6.0 and CatBoost 1.2.10;
+- Stage08 bootstrap: Python 3.12.13, NumPy 2.4.6, pandas 2.3.3,
+  scikit-learn 1.6.1, Matplotlib 3.10.0 and Joblib 1.5.3;
+- Stage09 calibration: the Stage08 versions plus SciPy 1.16.3, with no
+  scikit-learn dependency recorded by that receipt;
 - Stage15 isolated runtime: PyTorch 2.7.1+cu118 on a Tesla P100;
 - Stage20 final holdout runtime amendment: PyTorch 2.10.0+cu126 on a Tesla T4;
 - Stage26 GPU receipt: PyTorch 2.10.0+cu128 on a Tesla T4.
 
-The unpinned historical versions of TensorFlow, SHAP, SciPy, Matplotlib and
-Joblib are `VERSION_NOT_PROVEN` unless a more specific stage receipt is later
-identified. No convenient modern version may be substituted as historical
-fact.
+The unpinned historical versions of TensorFlow and SHAP are
+`VERSION_NOT_PROVEN`. SciPy, Matplotlib and Joblib are likewise unproven except
+where a stage-specific receipt such as Stage08/09 identifies them. No
+convenient modern version may be substituted as historical fact.
 
-## Stage01-Stage05 equivalence checkpoint
+## Stage01-Stage10 equivalence checkpoint
 
-The initial non-scientific suite contains 22 tests and passes in full. The 17
-rows in `EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence
-levels as follows: one Level A byte-identity check, eight Level B exact
-static/numerical checks, three Level C fixture/tolerance checks and five Level
-D structural/provenance checks.
+The non-scientific suite contains 42 tests and passes in full. The 34 rows in
+`EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence levels
+as follows: one Level A byte-identity check, 17 Level B exact static/numerical
+checks, nine Level C fixture/tolerance checks and seven Level D
+structural/provenance checks.
 
 The lower equivalence levels are intentional. The external processed dataset
-is not in the repository, TensorFlow and several exact historical dependency
-versions are unproven, and estimator libraries are not installed in the audit
-runtime. No model was constructed or fitted, no target inference occurred, no
-threshold sweep was rerun and no holdout result payload was opened.
+is not in the repository, several exact historical dependency versions are
+unproven, and the exact Stage06 Joblib inputs and SHAP arrays are absent. No
+model was constructed or fitted, no inference or target reconstruction
+occurred, no threshold sweep or cost selection was rerun, no calibration or
+2,000-replicate bootstrap computation was performed, and no holdout
+target/probability input was opened. Stage08/09 NPZ artifacts were opened only
+for key/schema/shape validation, and frozen Stage10 validation selections were
+checked statically.
+
+Stage10 source review also resolves an important methodological boundary: its
+cost-ratio threshold search does not apply an FPR filter. The 5% FPR constraint
+is provenance for the frozen Stage04 security points only; the safe extraction
+preserves that distinction.
 
 ## Audit conclusion
 
 The repository contains extensive frozen evidence and strong closure records,
 but executable coverage remains uneven. The authoritative notebook closes the
-largest source-preservation gap for Stages01-20, and the approved Stage01-05
+largest source-preservation gap for Stages01-20, and the approved Stage01-10
 block is now represented by explicit, safety-gated code and configuration.
-Further extraction still requires a new approval after this stop point.
-Scientific execution remained prohibited throughout this extraction.
+Further extraction, beginning with Stage11, requires a new approval after this
+stop point. Scientific execution remained prohibited throughout this
+extraction.

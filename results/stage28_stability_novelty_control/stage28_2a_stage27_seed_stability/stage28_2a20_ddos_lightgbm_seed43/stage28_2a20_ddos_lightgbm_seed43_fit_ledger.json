@@ -1,0 +1,14 @@
+{
+  "stage": "Stage28-2A20",
+  "execution_mode": "STAGE28_AUTO_B",
+  "component_id": "C034",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::DDOS::LIGHTGBM::SEED43",
+  "authorized_stage28_new_fit_budget": 108,
+  "pre_component_new_fits_consumed": 27,
+  "this_component_successful_new_fits": 1,
+  "cumulative_new_fits_consumed": 28,
+  "new_fits_remaining": 80,
+  "stage28a_stage27_new_fits_consumed": 10,
+  "stage28a_stage27_new_fits_remaining": 30,
+  "status": "FIT_028_SUCCESSFULLY_CONSUMED"
+}

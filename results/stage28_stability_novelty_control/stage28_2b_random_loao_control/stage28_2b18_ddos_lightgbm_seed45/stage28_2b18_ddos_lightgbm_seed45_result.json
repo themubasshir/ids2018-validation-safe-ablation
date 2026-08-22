@@ -1,0 +1,316 @@
+{
+  "stage": "Stage28-2B18",
+  "execution_mode": "STAGE28_AUTO_C_TWO_PHASE",
+  "status": "STAGE28B_RANDOM_LOAO_COMPONENT_FROZEN",
+  "created_at_utc": "2026-08-22T15:40:35.921088+00:00",
+  "fit_checkpoint_parent_commit": "190e68c0d639ab60c101537f7ced924eb4aa8ceb",
+  "arm": "28B_RANDOM_SPLIT_LOAO_CONTROL",
+  "experiment": "STAGE28B_RANDOM_LOAO",
+  "component_id": "C088",
+  "evaluation_cell_id": "28B_RANDOM_LOAO::DDOS::LIGHTGBM::SEED45",
+  "held_out_family": "DDOS",
+  "support_status": "INFERENTIAL_SUPPORT_ELIGIBLE",
+  "inferential_family_claim_authorized": true,
+  "learner": "LIGHTGBM",
+  "configuration_id": "LGBM_11",
+  "training_seed": 45,
+  "membership_seed": 42,
+  "compute_backend": "CPU",
+  "interpretation_scope": "RANDOM_LOAO_CONTROL_NOT_DEPLOYMENT_ESTIMATE",
+  "membership": {
+    "reference": "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/random_loao_DDOS_membership_receipt.json",
+    "train_rows": 1798468,
+    "validation_rows": 449617,
+    "primary_target_rows": 582647,
+    "primary_target_benign": 454620,
+    "primary_target_heldout_attack": 128027,
+    "train_global_idx_content_sha256": "ee1b51043e2a3110ae8e87b8e27edae1297590a97b5e0c70ec00f832c12450da",
+    "validation_global_idx_content_sha256": "127f736f5a57ee7ae73849250865e3c0ee1ac5e9a3e54e8e765331cb79b66b7a",
+    "primary_target_global_idx_content_sha256": "be911114cb8d820328adcc12c8bfaf8656e69ec1a6a54e76de24163b49c63784",
+    "held_out_family_train_count": 0,
+    "held_out_family_validation_count": 0,
+    "known_attack_primary_target_count": 0,
+    "target_only_unseen_primary_target_count": 0
+  },
+  "class_weight": {
+    "formula": "train_benign / train_attack",
+    "negative": 1.0,
+    "positive": 4.232881176422665,
+    "sample_weight_dtype": "float64",
+    "validation_rows_used": 0,
+    "target_rows_used": 0
+  },
+  "model": {
+    "parameters": {
+      "boosting_type": "gbdt",
+      "colsample_bytree": 1.0,
+      "device_type": "cpu",
+      "learning_rate": 0.06,
+      "max_depth": 12,
+      "min_child_samples": 20,
+      "n_estimators": 400,
+      "n_jobs": -1,
+      "num_leaves": 127,
+      "objective": "binary",
+      "random_state": 45,
+      "reg_alpha": 0.0,
+      "reg_lambda": 3.0,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "verbosity": -1
+    },
+    "parameter_sha256": "6daf64f6e8034953ca426e6241177a45ee5cc6bdf5434bfa5a8f3789e34f431c",
+    "model_artifact": "ddos_lightgbm_seed45_cpu_model.txt",
+    "model_sha256": "86d75b4cd17ebe39b2c8321036f0f01b743eea9ac86a118775468c1b141939a7",
+    "fit_seconds": 117.18875457400009,
+    "structure": {
+      "iterations": 400,
+      "trees": 400,
+      "features": 70
+    }
+  },
+  "known_family_validation": {
+    "rows": 449617,
+    "benign": 363695,
+    "known_attack": 85922,
+    "heldout_attack": 0,
+    "probability_dtype": "float32",
+    "probability_artifact": "ddos_lightgbm_seed45_known_validation_prob_float32.npy",
+    "probability_npy_sha256": "918034db6632117ae2453643b1f92364c38625797a98d536580e313402300b2c",
+    "ranking_metrics": {
+      "ROC_AUC": 0.9999682597604055,
+      "PR_AUC": 0.9998587245348372,
+      "prevalence": 0.1911004254732361,
+      "PR_CHANCE_ANCHOR": 0.1911004254732361,
+      "PR_EXCESS": 0.808758299061601,
+      "PR_LIFT": 5.2321114516559195
+    },
+    "threshold_selection": {
+      "population": "KNOWN_FAMILY_VALIDATION_ONLY_WITH_ZERO_HELD_OUT_FAMILY_POSITIVES",
+      "grid": "INTEGER_PERCENT_1_THROUGH_99",
+      "standard": {
+        "threshold": 0.5,
+        "tp": 85882,
+        "fp": 344,
+        "tn": 363351,
+        "fn": 40,
+        "precision": 0.9960104840767285,
+        "recall": 0.9995344614883266,
+        "fpr": 0.0009458474820935124,
+        "f1": 0.9977693612472989,
+        "f2": 0.9988276725112465,
+        "threshold_integer_percent": 50
+      },
+      "balanced": {
+        "threshold": 0.76,
+        "tp": 85842,
+        "fp": 281,
+        "tn": 363414,
+        "fn": 80,
+        "precision": 0.996737224667046,
+        "recall": 0.9990689229766533,
+        "fpr": 0.000772625414151968,
+        "f1": 0.9979017117614578,
+        "f2": 0.9986017109845956,
+        "threshold_integer_percent": 76
+      },
+      "security_status": "AVAILABLE",
+      "security": {
+        "threshold": 0.14,
+        "tp": 85915,
+        "fp": 397,
+        "tn": 363298,
+        "fn": 7,
+        "precision": 0.9954004078227825,
+        "recall": 0.9999185307604571,
+        "fpr": 0.0010915739836951292,
+        "f1": 0.9976543539603098,
+        "f2": 0.9990116279069767,
+        "threshold_integer_percent": 14
+      },
+      "target_rows_used": 0
+    },
+    "operating_points": {
+      "STANDARD": {
+        "threshold": 0.5,
+        "tp": 85882,
+        "fp": 344,
+        "tn": 363351,
+        "fn": 40,
+        "precision": 0.9960104840767285,
+        "recall": 0.9995344614883266,
+        "fpr": 0.0009458474820935124,
+        "f1": 0.9977693612472989,
+        "f2": 0.9988276725112465,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      },
+      "BALANCED": {
+        "threshold": 0.76,
+        "tp": 85842,
+        "fp": 281,
+        "tn": 363414,
+        "fn": 80,
+        "precision": 0.996737224667046,
+        "recall": 0.9990689229766533,
+        "fpr": 0.000772625414151968,
+        "f1": 0.9979017117614578,
+        "f2": 0.9986017109845956,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      },
+      "SECURITY": {
+        "threshold": 0.14,
+        "tp": 85915,
+        "fp": 397,
+        "tn": 363298,
+        "fn": 7,
+        "precision": 0.9954004078227825,
+        "recall": 0.9999185307604571,
+        "fpr": 0.0010915739836951292,
+        "f1": 0.9976543539603098,
+        "f2": 0.9990116279069767,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      }
+    },
+    "inference_seconds": 8.694166553000287,
+    "threshold_grid_artifact": "ddos_lightgbm_seed45_validation_threshold_grid.csv",
+    "threshold_grid_sha256": "751eb7a74ff023820952110e244ae2e06154813b4bb2c5735dd6685417f8acfa"
+  },
+  "primary_isolation_target": {
+    "rows": 582647,
+    "benign": 454620,
+    "heldout_attack": 128027,
+    "prevalence_chance_anchor": 0.21973338917045826,
+    "ranking_metrics": {
+      "ROC_AUC": 0.9082068681558081,
+      "PR_AUC": 0.8398894354018954,
+      "prevalence": 0.21973338917045826,
+      "PR_CHANCE_ANCHOR": 0.21973338917045826,
+      "PR_EXCESS": 0.6201560462314372,
+      "PR_LIFT": 3.8223113864154294
+    },
+    "operating_point_metrics": {
+      "STANDARD": {
+        "threshold": 0.5,
+        "tp": 80715,
+        "fp": 414,
+        "tn": 454206,
+        "fn": 47312,
+        "precision": 0.9948970158636246,
+        "recall": 0.6304529513305787,
+        "fpr": 0.00091065065329286,
+        "f1": 0.7718162519841649,
+        "f2": 0.6802930363412936,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      },
+      "BALANCED": {
+        "threshold": 0.76,
+        "tp": 80395,
+        "fp": 343,
+        "tn": 454277,
+        "fn": 47632,
+        "precision": 0.9957516906537195,
+        "recall": 0.6279534785631156,
+        "fpr": 0.0007544762658923936,
+        "f1": 0.7701961535698034,
+        "f2": 0.6780428644201023,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      },
+      "SECURITY": {
+        "threshold": 0.14,
+        "tp": 80877,
+        "fp": 477,
+        "tn": 454143,
+        "fn": 47150,
+        "precision": 0.994136735747474,
+        "recall": 0.6317183094191069,
+        "fpr": 0.0010492279266200344,
+        "f1": 0.7725342796146737,
+        "f2": 0.6813999885418106,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      }
+    },
+    "probability_dtype": "float32",
+    "probability_artifact": "ddos_lightgbm_seed45_primary_target_prob_float32.npy",
+    "probability_npy_sha256": "acb049d08eb18583f1b08839546dace374eb6fcbc693b9f1c43f32e3ec369093",
+    "inference_seconds": 10.5922066359999,
+    "threshold_source": "FROZEN_RANDOM_VALIDATION_KNOWN_FAMILY_POPULATION_ONLY",
+    "target_threshold_search": false
+  },
+  "known_family_control": {
+    "source": "CURRENT_RANDOM_SPLIT_VALIDATION_KNOWN_FAMILY_POPULATION",
+    "ranking_metrics": {
+      "ROC_AUC": 0.9999682597604055,
+      "PR_AUC": 0.9998587245348372,
+      "prevalence": 0.1911004254732361,
+      "PR_CHANCE_ANCHOR": 0.1911004254732361,
+      "PR_EXCESS": 0.808758299061601,
+      "PR_LIFT": 5.2321114516559195
+    },
+    "operating_points": {
+      "STANDARD": {
+        "threshold": 0.5,
+        "tp": 85882,
+        "fp": 344,
+        "tn": 363351,
+        "fn": 40,
+        "precision": 0.9960104840767285,
+        "recall": 0.9995344614883266,
+        "fpr": 0.0009458474820935124,
+        "f1": 0.9977693612472989,
+        "f2": 0.9988276725112465,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      },
+      "BALANCED": {
+        "threshold": 0.76,
+        "tp": 85842,
+        "fp": 281,
+        "tn": 363414,
+        "fn": 80,
+        "precision": 0.996737224667046,
+        "recall": 0.9990689229766533,
+        "fpr": 0.000772625414151968,
+        "f1": 0.9979017117614578,
+        "f2": 0.9986017109845956,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      },
+      "SECURITY": {
+        "threshold": 0.14,
+        "tp": 85915,
+        "fp": 397,
+        "tn": 363298,
+        "fn": 7,
+        "precision": 0.9954004078227825,
+        "recall": 0.9999185307604571,
+        "fpr": 0.0010915739836951292,
+        "f1": 0.9976543539603098,
+        "f2": 0.9990116279069767,
+        "status": "EVALUATED_AT_FROZEN_THRESHOLD"
+      }
+    }
+  },
+  "novelty_generalization_gap_known_minus_unseen": {
+    "ROC_AUC": 0.0917613916045974,
+    "PR_EXCESS": 0.18860225283016385,
+    "RECALL_STANDARD": 0.3690815101577479,
+    "RECALL_BALANCED": 0.3711154444135377,
+    "RECALL_SECURITY": 0.3682002213413502
+  },
+  "random_vs_chronological_loao_contrast": "DEFERRED_TO_STAGE28_SYNTHESIS_FROM_DURABLE_COMPONENT_RESULTS",
+  "anti_adaptation": {
+    "target_used_for_fit": false,
+    "target_used_for_class_weight": false,
+    "target_used_for_threshold_selection": false,
+    "target_threshold_search": false,
+    "post_target_parameter_change": false,
+    "post_target_fit_branching": false,
+    "membership_seed_changed_across_model_seeds": false
+  },
+  "scientific_accounting": {
+    "new_model_fits_before_component": 75,
+    "new_model_fits_this_component": 1,
+    "new_model_fits_cumulative": 76,
+    "new_model_fits_remaining": 32,
+    "stage22_shared_final_holdout_openings": 0,
+    "target_adaptive_choices": 0
+  }
+}

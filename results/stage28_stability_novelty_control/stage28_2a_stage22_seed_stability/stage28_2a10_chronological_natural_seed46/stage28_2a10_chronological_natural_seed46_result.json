@@ -1,0 +1,105 @@
+{
+  "stage": "Stage28-2A10",
+  "execution_mode": "STAGE28_AUTO_A",
+  "status": "CHRONOLOGICAL_NATURAL_SEED46_VALIDATION_CHECKPOINT_FROZEN",
+  "created_at_utc": "2026-08-22T09:08:59.057781+00:00",
+  "parent_commit": "b49ade7c554da8d5be682d91895e434cffddd299",
+  "arm": "28A_TRAINING_SEED_STABILITY",
+  "experiment": "STAGE22_FULL",
+  "unit": "CHRONOLOGICAL_NATURAL",
+  "training_seed": 46,
+  "membership_seed": 42,
+  "evaluation_cell_id": "28A_STAGE22::CHRONOLOGICAL_NATURAL::SEED46",
+  "models": {
+    "strategy": "ENS_LGBM_XGB_EQUAL",
+    "component_combination_dtype": "float64",
+    "ensemble_storage_dtype": "float32",
+    "xgboost": {
+      "component_id": "C019",
+      "seed": 46,
+      "backend": "cpu",
+      "parameter_sha256": "f0f79c993ba61a0d11f6abb3fe34419203768a8f65df0dbcee72f3fa9d93f676",
+      "model": "chronological_natural_seed46_xgboost_cpu_model.json",
+      "model_sha256": "6138cc648393cc3576f22e41e45928efe2a6d55b4e10535f505f6556c49e2e3b",
+      "fit_seconds": 736.2857825800002
+    },
+    "lightgbm": {
+      "component_id": "C020",
+      "seed": 46,
+      "backend": "cpu",
+      "parameter_sha256": "7847b3ccffa8bdc77842ddf8ae34dddfec4d7b468b41824b2603d47828190d9c",
+      "model": "chronological_natural_seed46_lightgbm_cpu_model.txt",
+      "model_sha256": "9f57664a7b8bea66067125bd19c1cc1b460b9f8ba4d1bb2fc7ca7b13cbfcf6e4",
+      "fit_seconds": 620.7253623310007
+    }
+  },
+  "validation_probability": {
+    "rows": 593780,
+    "roc_auc": 0.515509674202732,
+    "pr_auc": 0.10631798297301229,
+    "pr_auc_definition": "SKLEARN_AVERAGE_PRECISION_SCORE",
+    "artifact": "chronological_natural_seed46_validation_ensemble_probabilities.npz",
+    "artifact_sha256": "aaf0731084ee3deca51e7c3a2ec176a06f1943673768b0a9adc3faf28da37090",
+    "inference_seconds": 19.2105074709998
+  },
+  "operating_points": {
+    "standard": {
+      "accuracy": 0.8951059314897774,
+      "precision": 0.0625,
+      "recall": 3.2125417630429196e-05,
+      "fpr": 5.6441477713141835e-05,
+      "f1": 6.421782686873876e-05,
+      "f2": 4.015161248875755e-05,
+      "tp": 2,
+      "fp": 30,
+      "tn": 531494,
+      "fn": 62254,
+      "threshold_integer_percent": 50,
+      "threshold": 0.5,
+      "threshold_float32_runtime": 0.5
+    },
+    "balanced": {
+      "accuracy": 0.8943312337902927,
+      "precision": 0.013944223107569721,
+      "recall": 0.00011243896170650219,
+      "fpr": 0.0009312843822668402,
+      "f1": 0.0002230791293540266,
+      "f2": 0.00014026594423026056,
+      "tp": 7,
+      "fp": 495,
+      "tn": 531029,
+      "fn": 62249,
+      "threshold_integer_percent": 6,
+      "threshold": 0.06,
+      "threshold_float32_runtime": 0.05999999865889549
+    },
+    "security": {
+      "status": "AVAILABLE",
+      "result": {
+        "accuracy": 0.8943312337902927,
+        "precision": 0.013944223107569721,
+        "recall": 0.00011243896170650219,
+        "fpr": 0.0009312843822668402,
+        "f1": 0.0002230791293540266,
+        "f2": 0.00014026594423026056,
+        "tp": 7,
+        "fp": 495,
+        "tn": 531029,
+        "fn": 62249,
+        "threshold_integer_percent": 6,
+        "threshold": 0.06,
+        "threshold_float32_runtime": 0.05999999865889549
+      }
+    }
+  },
+  "scientific_accounting": {
+    "new_model_fits_before_cell": 16,
+    "new_model_fits_this_cell": 2,
+    "new_model_fits_cumulative": 18,
+    "new_model_fits_remaining": 90,
+    "shared_final_holdout_openings": 0,
+    "shared_final_holdout_predictor_rows_read": 0,
+    "shared_final_holdout_labels_read": 0,
+    "target_adaptive_choices": 0
+  }
+}

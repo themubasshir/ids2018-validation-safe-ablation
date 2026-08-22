@@ -1,0 +1,18 @@
+{
+  "stage": "Stage28-2A28",
+  "component_id": "C044",
+  "evaluation_cell_id": "28A_STAGE27_CHRONO::INFILTRATION::LIGHTGBM::SEED43",
+  "fit_ordinal": 36,
+  "state": "FIT_VALIDATION_TARGET_AND_ARTIFACTS_SUCCESS",
+  "completed_at_utc": "2026-08-22T10:13:30.673066+00:00",
+  "durable_parent": "74ddc011246f59b07595e1c6111e3d5c38c1d52f",
+  "held_out_family": "INFILTRATION",
+  "learner": "LIGHTGBM",
+  "seed": 43,
+  "model_sha256": "f1000df7facbc46ac5d54781357ec279700b25336d109f09dfb6c5592f074bd1",
+  "validation_probability_sha256": "cd6b2822195c7d0bf29a8ab3d896685481c3c1ce2d0571043c5df654cba16e49",
+  "operational_target_probability_sha256": "71cb3378d1e94f200ac9e18790a21c5fa6e23b407de6f3e6efb3f35119824fe7",
+  "threshold_grid_sha256": "35ac8a86b3a137d6781f41abec61ce573c04159b893147683713a0fb3b343059",
+  "target_used_for_fit": false,
+  "target_used_for_threshold_selection": false
+}

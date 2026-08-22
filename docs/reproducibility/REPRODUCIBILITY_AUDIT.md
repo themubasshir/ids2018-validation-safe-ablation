@@ -127,7 +127,7 @@ cell. Every archived cell remains immutable.
 Detailed inventories are in `NOTEBOOK_INVENTORY.csv` and
 `STAGE_CODE_INVENTORY.csv`.
 
-Key findings after the approved Stage01-Stage15 extraction checkpoint:
+Key findings after the approved Stage01-Stage20 extraction checkpoint:
 
 - Stages01-15 now have provenance-bearing methodology modules, explicit JSON
   protocols and dry-run/verify-only entry points. Scientific execution is not
@@ -139,10 +139,20 @@ Key findings after the approved Stage01-Stage15 extraction checkpoint:
   the extraction adds thin duplicate-policy and FT-Transformer architecture
   wrappers. Verify-only byte-hashes the five locked checkpoints without
   deserializing them.
-- Stage16-18 remain notebook-centric.
-- Stage19 preserves a window constructor and two model implementations.
-- Stage20 preserves four reusable Python modules, but extensive forensic and
-  recovery logic remains notebook-only.
+- Stage16 now has a static duplicate-safe classical registry and protocol;
+  its frozen scaler/model artifacts are verified by bytes without loading.
+- Stage17 exposes only toy attention mathematics and frozen result metadata;
+  checkpoint loading, attention extraction and holdout access remain disabled.
+- Stage18 keeps the temporal, historical ViT and graph conclusions separate.
+  The later Stage20 packet recovery does not retroactively alter the Stage18
+  ViT conclusion. Six graph checkpoints are byte-verified only.
+- Stage19 preserves one-second materialization/window contracts and static
+  model registries. Its scaler and six checkpoints are byte-verified only.
+- Stage20 is split into provenance, extractor forensics, directed-S4,
+  reconstruction, runtime recovery, packet representation, compact corpus,
+  CNN, evaluation and governance namespaces. No raw forensic or learning path
+  is exposed. Its authoritative per-cell detail is in
+  `STAGE20_SUBSTAGE_MAP.md` and `STAGE20_CELL_MAP.csv`.
 - Stage21 preserves eight Python sources in addition to the embedded notebook
   cells.
 - Stage22/Stage22R has extensive frozen evidence but no standalone scientific
@@ -174,7 +184,12 @@ Examples proven by receipts include:
   pandas 2.3.3;
 - Stage15 isolated runtime: PyTorch 2.7.1+cu118 and CUDA 11.8 on a Tesla
   P100-PCIE-16GB with required `sm_60` kernels;
-- Stage20 final holdout runtime amendment: PyTorch 2.10.0+cu126 on a Tesla T4;
+- Stage18 graph repair and Stage19 temporal runtime: PyTorch 2.10.0+cu126 on
+  a Tesla P100 with `sm_60` support;
+- Stage20 isolated CNN training/Thursday runtime: Python 3.12.13, NumPy 2.4.6,
+  PyTorch 2.10.0+cu126, CUDA 12.6 and cuDNN 9.1.0.2 on a Tesla P100;
+- Stage20 later final-holdout amendment: PyTorch 2.10.0+cu126 on a Tesla T4,
+  recorded as `NOTEBOOK_CELL_NOT_MAPPED` rather than assigned to cells 455-461;
 - Stage26 GPU receipt: PyTorch 2.10.0+cu128 on a Tesla T4.
 
 The historical TensorFlow version is unproven for the early neural stages but
@@ -189,12 +204,12 @@ The Stage15 environment history also contains a superseded system PyTorch
 with the isolated 2.7.1+cu118 environment that passed matrix, forward,
 backward and optimizer checks. See `STAGE15_ENVIRONMENT_PROVENANCE.md`.
 
-## Stage01-Stage15 equivalence checkpoint
+## Stage01-Stage20 equivalence checkpoint
 
-The non-scientific suite contains 66 tests and passes in full. The 52 rows in
+The non-scientific suite contains 93 tests and passes in full. The 73 rows in
 `EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence levels
-as follows: two Level A byte-identity checks, 28 Level B exact static/numerical
-checks, 14 Level C fixture/tolerance checks and eight Level D
+as follows: six Level A byte-identity checks, 40 Level B exact static/numerical
+checks, 18 Level C fixture/tolerance checks and nine Level D
 structural/provenance checks.
 
 The lower equivalence levels are intentional. The external processed dataset
@@ -223,6 +238,25 @@ unproven SHAP/SciPy/Matplotlib versions; Stage14 retains unproven standalone
 Keras/scikit-learn/Joblib/Matplotlib versions; and Stage15 depends on an
 external processed dataset despite complete locked checkpoint provenance.
 
+Stages16-20 are also classified **partially reproducible**. Their authoritative
+cells, extracted configurations, static methodology and frozen receipts are
+preserved, but full scientific reruns were neither authorized nor attempted.
+Stage16 and Stage17 runtime versions remain unproven. Stage18 and Stage19 have
+stage-specific P100 runtime evidence but were not rerun. Stage20 has unusually
+strong source hashes, exact artifact-byte checks and protocol locks, while its
+raw PCAP reconstruction, compact-corpus components and scientific execution
+remain external or intentionally unopened. The C16 historical manifest's
+scientific state was recovered but its original bytes were not.
+
+For Stage20, historical raw exactness (637/675), the D5 source-faithful accepted
+baseline (635/675), and the rejected global V1 result (318/675) are separate
+states. C16's two pre-registered packet-geometry mechanisms passed within the
+bounded disagreement population, but neither V1 nor a selective hybrid became
+the published-label reconstruction rule. The direct notebook E4 lineage stops
+at the prelock/Kaggle storage-gate attempt. Seven later Colab/Xet and completed
+Friday artifacts exist as frozen evidence but have no execution cell in the
+accepted 312-461 boundary.
+
 Stage10 source review also resolves an important methodological boundary: its
 cost-ratio threshold search does not apply an FPR filter. The 5% FPR constraint
 is provenance for the frozen Stage04 security points only; the safe extraction
@@ -232,8 +266,9 @@ preserves that distinction.
 
 The repository contains extensive frozen evidence and strong closure records,
 but executable coverage remains uneven. The authoritative notebook closes the
-largest source-preservation gap for Stages01-20, and the approved Stage01-15
+largest source-preservation gap for Stages01-20, and the approved Stage01-20
 block is now represented by explicit, safety-gated code and configuration.
-Cell 171 remains mapped only to Stage16 and was not included in Stage15.
-Further extraction, beginning with Stage16, requires a new explicit approval.
-Scientific execution remained prohibited throughout this extraction.
+Cell 171 remains mapped only to Stage16 and was not included in Stage15. Cells
+462-488 remain Stage21 and were not extracted. Further work must begin only
+with a new explicit Stage21 approval. Scientific execution remained prohibited
+throughout this extraction.

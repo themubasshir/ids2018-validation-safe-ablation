@@ -25,7 +25,7 @@ source hashes, classifications and detected path references, is in
 | 73-91 | superseded | Earlier validation-safe stage drafts replaced by the `ids2018_clean_validation_v2` cells. |
 | 92 | precursor | Notebook-global state probe immediately before the canonical Stage01 cell. |
 
-## Stage01-Stage15 approved extraction map
+## Stage01-Stage20 approved extraction map
 
 ### Stage01 — cell 93
 
@@ -269,7 +269,80 @@ source hashes, classifications and detected path references, is in
 | 17 | 223-239 | Post-result five-checkpoint attention analysis on a deterministic 64-case validation panel and cross-method comparison. No training or holdout access. |
 | 18 | 240-289 | Representation-first temporal/ViT/graph feasibility; temporal supported with constraints, ViT rejected, graph experiment restricted to Feb-20 directed 60-second snapshots with seeds 7/29/101. |
 | 19 | 290-311 | Chronological one-second bins; train Feb14-23, validate Feb28, holdout Mar01-02; train-only preprocessing; single-scale and MTemporal seeds 7/29/101; threshold grid 0.01-0.99 by 0.01. |
-| 20 | 312-461 | CICIDS2017 source/label forensics, directed-S4 reconstruction and errata, 64x256x1 packet image, compact corpora, fixed Stage20MaskedCNNv1 seed 42 for 10 epochs, Thursday threshold freeze and one Friday holdout opening. |
+| 20 | 312-461 | CICIDS2017 source/label forensics, directed-S4 reconstruction and errata, 64x256x1 packet image, compact corpora, fixed Stage20MaskedCNNv1 seed 42 for 10 epochs, Thursday threshold freeze and Friday governance. The later completed Friday opening is frozen evidence without a mapped notebook execution cell. |
+
+### Stage16 — cell 171 and cells 190-222
+
+- Inherits the exact Stage15 duplicate-safe 70-feature representation and
+  split memberships; it does not create another split.
+- Preserves the twelve classical candidates, five-candidate tuning budget,
+  five-seed confirmation, limited ensemble comparison and final equal-weight
+  LightGBM/XGBoost strategy at threshold 0.46.
+- Extracted interfaces are `src/ids_validation/models/classical.py`, the
+  Stage16 protocol/config and `scripts/reproduce_stage16.py`.
+- Verification hashes frozen artifacts only. It does not construct, load or
+  fit an estimator and does not reopen the historical holdout.
+
+### Stage17 — cells 223-239
+
+- Uses the five already-frozen Stage15 checkpoints as historical inputs for a
+  deterministic 64-case validation panel, head/layer/rollout summaries,
+  stability and cross-method comparisons.
+- Extracted attention helpers accept toy tensors only. The historical private
+  attention hook remains explicitly framework-sensitive.
+- Extracted interfaces are `src/ids_validation/evaluation/attention.py`, the
+  Stage17 protocol/config and `scripts/reproduce_stage17.py`.
+- No training, holdout access, checkpoint load or attention recomputation was
+  performed.
+
+### Stage18 — cells 240-289
+
+- Preserves three historically distinct conclusions: temporal supported with
+  constraints; ViT unsupported by the then-available artifacts; graph
+  supported with constraints.
+- The graph branch uses source-restricted Feb-20 data, directed 60-second
+  snapshots, EdgeOnlyMLP and Graph Transformer controls, and seeds 7/29/101.
+- Extracted interfaces are `src/ids_validation/data/graph_snapshots.py`,
+  `src/ids_validation/models/graph_models.py`, the Stage18 protocol/config and
+  `scripts/reproduce_stage18.py`.
+- Stage20 evidence is later in the chronology and must not rewrite the Stage18
+  ViT conclusion.
+
+### Stage19 — cells 290-311
+
+- Freezes forward chronology: Feb 14-23 TRAIN, Feb 28 VALIDATION and Mar 1-2
+  HOLDOUT; one-second wall-clock bins; train-only imputation/scaling; and no
+  cross-day or cross-partition windows.
+- Preserves the fine 60-second control and three-branch 60/300/1200-second
+  MTemporal model for seeds 7/29/101, plus the 0.01-0.99 threshold grid.
+- Extracted interfaces are `src/ids_validation/data/temporal_bins.py`,
+  `src/ids_validation/models/temporal_models.py`, the Stage19 protocol/config
+  and `scripts/reproduce_stage19.py`.
+- Only synthetic window/shape checks and artifact-byte verification are
+  exposed; temporal materialization, fitting and inference remain disabled.
+
+### Stage20 — cells 312-461
+
+- The required fine-grained historical map is in
+  `STAGE20_SUBSTAGE_MAP.md` and `STAGE20_CELL_MAP.csv`.
+- Cells 312-411 cover source/label provenance, exact directed-S4 semantics,
+  historical extractor forensics, C8 flag serialization, D5 baseline erratum,
+  negative global V1 validation, C16 recovery and stopped mechanism search.
+- Cells 412-434 freeze the train-only 64x256x1 packet representation and the
+  Monday-Wednesday TRAIN plus Thursday VALIDATION compact-corpus receipts.
+- Cells 435-454 preserve the sole masked-CNN architecture, seed 42, ten fixed
+  epochs, isolated P100 runtime, one Thursday pass and frozen thresholds 0.50
+  and 0.17.
+- Cells 455-461 map only to the E4 prelock, one Kaggle opening attempt stopped
+  by the operational storage gate, and subsequent diagnostics/cleanup audits.
+  Seven later Colab/Xet and completed Friday artifacts are frozen repository
+  evidence with status `NOTEBOOK_CELL_NOT_MAPPED`.
+- Extracted interfaces are the ten subpackages under
+  `src/ids_validation/stages/stage20/`, the static masked-CNN model spec, six
+  Stage20 config files and `scripts/reproduce_stage20.py`.
+- No source download, PCAP parse, flow reconstruction, packet-image or corpus
+  regeneration, checkpoint load, training, inference, threshold selection, or
+  Thursday/Friday opening is exposed or performed.
 
 ## Stage21 cells embedded in the archive
 

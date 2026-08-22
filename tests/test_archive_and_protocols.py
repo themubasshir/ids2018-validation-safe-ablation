@@ -47,6 +47,11 @@ class ProtocolSafetyTests(unittest.TestCase):
         8: [116, 117],
         9: [118],
         10: [119],
+        11: [120],
+        12: [121, 122, 123, 124, 125, 126, 127, 128, 129],
+        13: [130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146],
+        14: [147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161],
+        15: [162, 163, 164, 165, 166, 167, 168, 169, 170, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189],
     }
 
     def test_all_protocols_are_execution_disabled_and_mapped(self) -> None:
@@ -72,13 +77,13 @@ class ProtocolSafetyTests(unittest.TestCase):
 
     def test_unknown_versions_are_explicitly_not_proven(self) -> None:
         for stage in self.EXPECTED_CELLS:
-            for status in load_protocol(stage)["environment"]["unproven"].values():
+            for status in load_protocol(stage)["environment"].get("unproven", {}).values():
                 self.assertEqual(status, "VERSION_NOT_PROVEN")
 
     def test_equivalence_matrix_uses_only_approved_levels(self) -> None:
         with (ROOT / "docs/reproducibility/EQUIVALENCE_MATRIX.csv").open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
-        self.assertEqual(len(rows), 34)
+        self.assertEqual(len(rows), 52)
         self.assertEqual({row["status"] for row in rows}, {"PASS"})
         self.assertTrue({row["equivalence_level"] for row in rows} <= {"A", "B", "C", "D"})
 

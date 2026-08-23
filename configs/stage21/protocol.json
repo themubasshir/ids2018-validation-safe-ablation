@@ -1,0 +1,196 @@
+{
+  "stage": 21,
+  "name": "Packet-image masked-ViT continuation and controlled CNN comparison",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb:462-488",
+      "notebooks/archive/stage21_stage22_research_continues.ipynb:2-85"
+    ],
+    "notebooks": [
+      {
+        "path": "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb",
+        "sha256": "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce",
+        "cells": "462-488"
+      },
+      {
+        "path": "notebooks/archive/stage21_stage22_research_continues.ipynb",
+        "sha256": "dab6efa73600d36b1a6324ffa4036d6b02453b3b6c4ea84f995875d74a35a5db",
+        "cells": "2-85"
+      }
+    ],
+    "historical_sources": [
+      "scripts/stage21_masked_vit.py",
+      "results/stage21_architecture/stage21_2_train_fast_executed.py",
+      "results/stage21_architecture/stage21_3_thursday_eval_executed.py",
+      "results/stage21_architecture/stage21_4_friday_eval_executed.py",
+      "results/stage21_architecture/stage21_5_cnn_vit_compare_executed.py",
+      "scripts/stage21_xai1b_locked_ig.py",
+      "scripts/stage21_generate_publication_figures.py"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_PLUS_SCRIPT",
+    "reason": "Restoration chronology spans two executed notebooks; exact Stage21 workers and model/XAI/publication scripts are already preserved and must be reused rather than rewritten.",
+    "registry": "docs/reproducibility/STAGE21_24_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "ad0b38ec908686fe46616c4a8ee0a3ec36092492",
+    "57ce1530559fadae3126ef6adfb2ecc097c1a4c6",
+    "297c45aa7bc82a724e9f83a88042c6f9aa002e4d",
+    "ba2db6a70e195ef97b05f2e51e5d27dae0e26c73",
+    "a2f1bde102b98ae031e0dfea47a02d016fb9235d",
+    "9726ec87c4931ce3d8dec8bdbe932e741bc3cc1c",
+    "3994cfd4b8cc757f0f5821146b0023ebed2a45f7"
+  ],
+  "inputs": [
+    "Frozen Stage20 compact-corpus identities and representation locks",
+    "Monday-Wednesday TRAIN and Thursday VALIDATION compact corpora",
+    "Frozen Stage20 CNN Thursday/Friday probability evidence",
+    "Frozen Stage21 ViT checkpoint, probabilities, comparison and XAI receipts"
+  ],
+  "outputs": [
+    "results/stage21_architecture/",
+    "figures/stage21_architecture/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Restore or source-faithfully reconstitute exact Stage20 compact corpora",
+    "Train one frozen masked ViT for exactly ten epochs",
+    "Run one Thursday validation pass and freeze operating points",
+    "Run one locked nonconfirmatory Friday reuse-benchmark pass",
+    "Compare frozen CNN and ViT probabilities with a paired bootstrap",
+    "Run the locked post-result Integrated Gradients harness"
+  ],
+  "would_touch_frozen_target": true,
+  "expected_compute_runtime": {
+    "historical_training_hardware": "Tesla T4",
+    "historical_training_epoch_seconds_total": 1051.4570376873,
+    "historical_training_epochs": 10,
+    "historical_optimizer_steps": 21320,
+    "verification_mode": "Metadata/presence plus streaming SHA256 only; no scientific compute"
+  },
+  "verification_artifacts": [
+    "docs/reproducibility/STAGE21_24_SOURCE_RECONCILIATION.md",
+    "scripts/stage21_masked_vit.py",
+    "results/stage21_architecture/stage21_0_cnn_vit_followup_protocol_lock.json",
+    "results/stage21_architecture/stage21_2_training_manifest.json",
+    "results/stage21_architecture/stage21_3_thursday_validation_evaluation.json",
+    "results/stage21_architecture/stage21_4_friday_reuse_evaluation.json",
+    "results/stage21_architecture/stage21_5_cnn_vit_descriptive_comparison.json",
+    "results/stage21_architecture/stage21_xai1b_integrated_gradients_result.json",
+    "results/stage21_architecture/stage21_publication_figure_manifest.json"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage21_stage22_research_continues.ipynb": {
+      "size_bytes": 24673089,
+      "sha256": "dab6efa73600d36b1a6324ffa4036d6b02453b3b6c4ea84f995875d74a35a5db"
+    },
+    "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt": {
+      "size_bytes": 378999,
+      "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8"
+    },
+    "results/stage21_architecture/stage21_2_training_manifest.json": {
+      "size_bytes": 9014,
+      "sha256": "dd6238c881e23329c54ed74871bfc7fb4e5e76ea7824f6d8fc2c4acafd6364fb"
+    },
+    "results/stage21_architecture/stage21_3_thursday_validation_evaluation.json": {
+      "size_bytes": 48374,
+      "sha256": "6826349c5dc5d5d949ce1ad2b43d5399142b036b1ac8abfe429780cb1490e7ac"
+    },
+    "results/stage21_architecture/stage21_4_friday_reuse_evaluation.json": {
+      "size_bytes": 3627,
+      "sha256": "f19e822771612780bc8ee79b7dc1ab556be406e8c9a92ab8c776814d6a6746e0"
+    },
+    "results/stage21_architecture/stage21_5_cnn_vit_descriptive_comparison.json": {
+      "size_bytes": 5248,
+      "sha256": "6e7317e065b522301d336325bc24ed8c620861c1ae0d747783456291a76f5b04"
+    },
+    "results/stage21_architecture/stage21_xai1b_integrated_gradients_result.json": {
+      "size_bytes": 26446,
+      "sha256": "6ccda398494df98e3dc6881902c0f42cfd7bb79fb47a3405b14f983666860118"
+    }
+  },
+  "methodology": {
+    "chronology": {
+      "Stage18": "ViT infeasible under then-available artifacts",
+      "Stage20_21": "Later source-faithful restoration enabled a controlled packet-image architecture test"
+    },
+    "representation": {
+      "shape": [64, 256, 1],
+      "stored_dtype": "uint8",
+      "model_scaling": "byte/255",
+      "padding_mask_required": true
+    },
+    "model": {
+      "name": "Stage21MaskedViTv1",
+      "trainable_parameters": 91969,
+      "patch": [8, 16],
+      "patch_tokens": 128,
+      "embedding_dimension": 64,
+      "attention_heads": 4,
+      "depth": 2,
+      "mlp_dimension": 160,
+      "external_pretraining": false
+    },
+    "training": {
+      "seed": 42,
+      "epochs": 10,
+      "batch_size": 256,
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "automatic_mixed_precision": false,
+      "TF32": false,
+      "train_days": ["Monday", "Tuesday", "Wednesday"],
+      "validation_during_training": false
+    },
+    "validation": {
+      "day": "Thursday",
+      "flows": 8197,
+      "balanced_threshold": 0.42,
+      "security_threshold": 0.24,
+      "standard_threshold": 0.5
+    },
+    "friday": {
+      "role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+      "flows": 12088,
+      "threshold_reselection": false,
+      "architecture_selection": false,
+      "inference_passes_historical": 1
+    },
+    "comparison": {
+      "paired_bootstrap_replicates": 10000,
+      "seed": 21042,
+      "confirmatory": false,
+      "general_architecture_superiority_claim": false
+    },
+    "scientific_execution_authorized": false,
+    "model_construction_authorized": false,
+    "checkpoint_deserialization_authorized": false,
+    "training_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false,
+    "bootstrap_generation_authorized": false,
+    "integrated_gradients_authorized": false,
+    "corpus_reconstruction_authorized": false
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.4.6",
+    "pytorch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "cudnn_integer": 91002,
+    "gpu": "Tesla T4",
+    "compute_capability": "7.5",
+    "evidence": "stage21_2_exact_runtime_preflight.json and stage21_2_training_manifest.json"
+  },
+  "holdout_policy": {
+    "historically_opened_once": true,
+    "historical_role": "LOCKED_REUSE_BENCHMARK_NON_CONFIRMATORY",
+    "raw_target_permanently_closed_for_extraction": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only"
+  }
+}

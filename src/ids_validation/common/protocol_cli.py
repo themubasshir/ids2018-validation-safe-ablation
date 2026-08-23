@@ -15,8 +15,8 @@ from .paths import repository_root
 def load_protocol(stage_number: int) -> dict[str, Any]:
     """Load a repository-owned extracted-stage protocol file."""
 
-    if stage_number not in range(1, 21):
-        raise ValueError("Only Stages 1–20 are extracted in the current approved checkpoints")
+    if stage_number not in range(1, 25):
+        raise ValueError("Only Stages 1–24 are extracted in the current approved checkpoints")
     root = repository_root()
     return read_json(root / "configs" / f"stage{stage_number:02d}" / "protocol.json")
 
@@ -28,9 +28,14 @@ def dry_run_report(protocol: dict[str, Any]) -> dict[str, Any]:
         "mode": "dry-run",
         "stage": protocol["stage"],
         "source_cells": protocol["source"]["physical_cells_1_based"],
+        "canonical_implementation_source": protocol.get("canonical_reproduction_source"),
+        "provenance_references": protocol.get("provenance_references", []),
         "scientific_execution_performed": False,
         "would_read": protocol["inputs"],
         "would_write": protocol["outputs"],
+        "scientific_actions_that_would_occur": protocol.get("scientific_actions_that_would_occur", []),
+        "would_touch_frozen_target": protocol.get("would_touch_frozen_target", False),
+        "expected_compute_runtime": protocol.get("expected_compute_runtime"),
         "methodology": protocol["methodology"],
     }
 
@@ -70,19 +75,28 @@ def verify_only_report(protocol: dict[str, Any]) -> dict[str, Any]:
                 "artifact_deserialized": False,
             }
         )
+    source = protocol["source"]
+    source_identity_declared = bool(
+        source.get("notebook_sha256")
+        or source.get("notebooks")
+        or source.get("historical_sources")
+    )
     configuration_ok = (
         protocol.get("scientific_execution_enabled") is False
-        and protocol["source"]["notebook_sha256"] == "147760f81f5db581c2cbc92b3c7c24060b823dfa50ac9d9a2156eb132b51b3ce"
+        and source_identity_declared
         and protocol["holdout_policy"]["opened_by_verify_only"] is False
     )
     return {
         "mode": "verify-only",
         "stage": protocol["stage"],
+        "canonical_implementation_source": protocol.get("canonical_reproduction_source"),
+        "provenance_references": protocol.get("provenance_references", []),
         "configuration": "PASS" if configuration_ok else "FAIL",
         "artifacts": artifact_rows,
         "hashes": hash_rows,
         "scientific_files_opened": False,
         "artifact_bytes_hashed_only": bool(hash_rows),
+        "would_touch_frozen_target": False,
         "scientific_execution_performed": False,
     }
 

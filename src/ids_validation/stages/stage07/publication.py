@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-import hashlib
 from pathlib import Path
 from typing import Any
+
+from ids_validation.common.hashing import sha256_file
 
 
 GENERATED_FIGURES = (
@@ -81,11 +82,13 @@ def inventory_files(root: Path | str) -> list[dict[str, Any]]:
     for path in sorted(base.rglob("*")):
         if not path.is_file():
             continue
-        file_hash = hashlib.sha256()
-        with path.open("rb") as handle:
-            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-                file_hash.update(chunk)
-        inventory.append({"path": path.relative_to(base).as_posix(), "size_bytes": path.stat().st_size, "sha256": file_hash.hexdigest()})
+        inventory.append(
+            {
+                "path": path.relative_to(base).as_posix(),
+                "size_bytes": path.stat().st_size,
+                "sha256": sha256_file(path),
+            }
+        )
     return inventory
 
 

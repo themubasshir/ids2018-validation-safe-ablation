@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
 from typing import Any
 
+from .hashing import sha256_file
 from .io import read_json
 from .paths import repository_root
 
@@ -56,11 +56,7 @@ def verify_only_report(protocol: dict[str, Any]) -> dict[str, Any]:
         if not candidate.is_file():
             hash_rows.append({"path": relative, "status": "MISSING"})
             continue
-        digest = hashlib.sha256()
-        with candidate.open("rb") as handle:
-            for block in iter(lambda: handle.read(1024 * 1024), b""):
-                digest.update(block)
-        actual_hash = digest.hexdigest()
+        actual_hash = sha256_file(candidate)
         actual_size = candidate.stat().st_size
         hash_rows.append(
             {

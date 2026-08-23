@@ -331,7 +331,7 @@ Accordingly, the transfer result supports neither universal compatibility nor un
 
 ### 6.4 Ranking Quality and Operating-Point Utility Are Distinct
 
-Ranking and operating-point utility diverge repeatedly across the evidence chain. The source-restricted graph experiment achieved strong PR-AUC and ROC-AUC while detecting no target attacks at its frozen threshold. Chronological tree ensembles ranked the shared forward population substantially better than random ensembles but almost never fired at the transferred development thresholds. Cross-dataset and leave-one-family-out analyses produced similar cases in which useful ranking did not imply useful recall or FPR at a fixed operating point.
+Ranking and operating-point utility diverge repeatedly across the evidence chain. Chronological tree ensembles ranked the shared forward population substantially better than random ensembles but almost never fired at the transferred development thresholds. Cross-dataset and leave-one-family-out analyses produced similar cases in which useful ranking did not imply useful recall or FPR at a fixed operating point.
 
 The distinction follows from what each quantity measures. ROC-AUC and PR-AUC describe ordering across thresholds. Precision, recall, F1, and FPR describe one selected point on a score scale. PPV and workload then place that operating point inside a prevalence and traffic scenario. A change in score calibration or prevalence can therefore leave ranking intact while rendering a threshold unsuitable, or produce manageable alert volume only because true detection is negligible.
 

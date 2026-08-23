@@ -1,0 +1,234 @@
+{
+  "stage": 22,
+  "name": "Temporal session-safe four-cell validation and shared forward holdout",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage21_stage22_research_continues.ipynb:86-139"
+    ],
+    "notebooks": [
+      {
+        "path": "notebooks/archive/stage21_stage22_research_continues.ipynb",
+        "sha256": "dab6efa73600d36b1a6324ffa4036d6b02453b3b6c4ea84f995875d74a35a5db",
+        "cells": "86-139"
+      }
+    ],
+    "historical_sources": [
+      "Notebook cells 86-97: original Stage22 protocol/provenance path",
+      "Notebook cells 98-139: effective Stage22R protocol, development and final-holdout execution",
+      "No standalone historical Stage22/Stage22R scientific Python script is preserved"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_CANONICAL",
+    "reason": "The executed notebook and complete frozen artifacts preserve the historical implementation; no standalone scientific script exists, so the safe consolidation exposes static contracts rather than inventing an execution rewrite.",
+    "registry": "docs/reproducibility/STAGE21_24_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "77beddbd7ae82aa53f703fe9441cc473d064ca2b",
+    "5f8062935f67ca509a97101d126c0b6f3db39268",
+    "c094a5559b1c290f29bc2861ca4ade08878cd04f",
+    "f95cf7107d1163dab50b23511ffcf668d31750f4",
+    "3cd41c5fa96a8993cc9d77e7ead503c99fdb0f42",
+    "a9da375fa9c0d45199d4530877f6c1ac90947c72",
+    "0f4bc7d7c49f31d511bb777899dc0315806f734d",
+    "3e8c056421d865358a5151e90ef0d49afa1bff43",
+    "2802766bd62afe2219c5608d083e9ea9a570bc7a",
+    "0bf5b9652ee918cad673af4a33597ad143edd113",
+    "b5e44615269198426cc8a9aa3b3e701c2ca9e48e"
+  ],
+  "inputs": [
+    "Frozen K79-clean Stage22R development memberships",
+    "Frozen ordered 70-feature development model-input contract",
+    "Frozen four-cell source-validation model and threshold artifacts",
+    "Single shared Mar1-Mar2 final-holdout geometry, historically opened once and now permanently closed"
+  ],
+  "outputs": [
+    "results/stage22_temporal_session_safe/",
+    "results/stage22r_protocol_recovery/",
+    "results/stage22r_training/",
+    "figures/stage22r_temporal_validation/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Recover and K79-clean the eight-day development universe",
+    "Generate frozen random and chronological natural/rebalanced memberships",
+    "Materialize the shared ordered 70-feature development representation",
+    "Fit equal LightGBM/XGBoost ensembles for four development cells",
+    "Select balanced/security thresholds on each source validation membership",
+    "Open the shared Mar1-Mar2 holdout once for all four frozen cells"
+  ],
+  "would_touch_frozen_target": true,
+  "expected_compute_runtime": {
+    "historical_four_cell_component_fit_seconds_total": 1602.22496414185,
+    "historical_model_fits": 8,
+    "historical_final_holdout_openings": 1,
+    "verification_mode": "Metadata/presence plus streaming SHA256 only; no data materialization, fitting, inference or target access"
+  },
+  "verification_artifacts": [
+    "results/stage22_temporal_session_safe/stage22_0_protocol_lock.json",
+    "results/stage22r_protocol_recovery/stage22r_0i_kaggle_faithful_protocol_amendment/stage22r_0i_kaggle_faithful_protocol_lock.json",
+    "results/stage22r_protocol_recovery/stage22r_1b0_membership_execution_lock/stage22r_1b0_membership_execution_lock.json",
+    "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/stage22r_1b1_membership_summary.json",
+    "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_development_model_input_manifest.json",
+    "results/stage22r_training/stage22r_2a_random_natural/random_natural_lightgbm_model.txt",
+    "results/stage22r_training/stage22r_2b_random_rebalanced/random_rebalanced_lightgbm_model.txt",
+    "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_lightgbm_model.txt",
+    "results/stage22r_training/stage22r_2d_chronological_rebalanced/chronological_rebalanced_lightgbm_model.txt",
+    "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_result.json",
+    "results/stage28_stability_novelty_control/stage28_0_protocol_lock/stage22_cell_spec.json",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_stage22_shared_holdout_five_seed_summary.csv"
+  ],
+  "hash_verification_artifacts": {
+    "results/stage22r_protocol_recovery/stage22r_0i_kaggle_faithful_protocol_amendment/stage22r_0i_kaggle_faithful_protocol_lock.json": {
+      "size_bytes": 16794,
+      "sha256": "1095dd1b20018e977650f77ae35927e3ca08fba5a812f3def6250ad550a50f3a"
+    },
+    "results/stage22r_protocol_recovery/stage22r_1b1_development_memberships/stage22r_1b1_membership_summary.json": {
+      "size_bytes": 4859,
+      "sha256": "a30e876df7a5ed3e8c89d8cb3058c9005680027633982d47ee88f4cab7e06b4a"
+    },
+    "results/stage22r_protocol_recovery/stage22r_1c_development_model_inputs/stage22r_1c_development_model_input_manifest.json": {
+      "size_bytes": 8599,
+      "sha256": "ab4a7d3ba9d5fb8627d40341538914d00d4c3d65b5c8678d73db2f367e51ec09"
+    },
+    "results/stage22r_training/stage22r_2a_random_natural/random_natural_xgboost_model.json": {
+      "size_bytes": 3989273,
+      "sha256": "ac9e630c8a479f073953b7f05eccf8bc94d24eaf0d8bc6bf77f5954979235b4e"
+    },
+    "results/stage22r_training/stage22r_2b_random_rebalanced/random_rebalanced_xgboost_model.json": {
+      "size_bytes": 3834277,
+      "sha256": "411db4b57c76d31aa4619067231fb83d1f032b961a42832ff9493e8d6ca11084"
+    },
+    "results/stage22r_training/stage22r_2c_chronological_natural/chronological_natural_xgboost_model.json": {
+      "size_bytes": 1607301,
+      "sha256": "38499d0edcdc5c6d0b2c3afee913558973d35d5ebf1cb2ae888a16b8da98756c"
+    },
+    "results/stage22r_training/stage22r_2d_chronological_rebalanced/chronological_rebalanced_xgboost_model.json": {
+      "size_bytes": 1511307,
+      "sha256": "15614a2fec9dd3ac3a3081f54a28d9ef12a133f66be2aab254a261ae24bb6c3b"
+    },
+    "results/stage22r_training/stage22r_2a_random_natural/stage22r_2a_random_natural_result.json": {
+      "size_bytes": 9587,
+      "sha256": "dc0a5dcf3943f8f1e8c7edc1d372d5a170ad2bd396e046af94ddfefe81fcaeae"
+    },
+    "results/stage22r_training/stage22r_2b_random_rebalanced/stage22r_2b_random_rebalanced_result.json": {
+      "size_bytes": 9422,
+      "sha256": "46b92fbda5267ecb8b4ac51530e7ae0a19c89b0de8eb0ec35f8a5fcc6cbf3d94"
+    },
+    "results/stage22r_training/stage22r_2c_chronological_natural/stage22r_2c_chronological_natural_result.json": {
+      "size_bytes": 9228,
+      "sha256": "785965ba5089fe8b34fa8f6a235412aac6efc345bd58929c1d851c1f8166d5b0"
+    },
+    "results/stage22r_training/stage22r_2d_chronological_rebalanced/stage22r_2d_chronological_rebalanced_result.json": {
+      "size_bytes": 9579,
+      "sha256": "032763942e2ae439a04d346bbb3f01d99dab9c4c6128a6a03109dcd271ca2675"
+    },
+    "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_result.json": {
+      "size_bytes": 17715,
+      "sha256": "a088fda8fd1840ed92f517115dbc92af2cf19061f9efd0df2aeda5de24e33764"
+    },
+    "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_metrics.csv": {
+      "size_bytes": 2767,
+      "sha256": "5b85e67e3ea42bf43d8b92da64f3c640c1c52a7fd5cabcb6b9a34fea2d89caa4"
+    }
+  },
+  "methodology": {
+    "effective_protocol": "Stage22R Kaggle-faithful amendment",
+    "cells": [
+      "RANDOM_NATURAL",
+      "RANDOM_REBALANCED",
+      "CHRONOLOGICAL_NATURAL",
+      "CHRONOLOGICAL_REBALANCED"
+    ],
+    "memberships": {
+      "RANDOM_NATURAL": {"train": [11529922, 1577839, 9952083], "validation": [2882481, 394460, 2488021]},
+      "RANDOM_REBALANCED": {"train": [3926435, 1577839, 2348596], "validation": [2882481, 394460, 2488021]},
+      "CHRONOLOGICAL_NATURAL": {"train": [13818623, 1910043, 11908580], "validation": [593780, 62256, 531524]},
+      "CHRONOLOGICAL_REBALANCED": {"train": [4753121, 1910043, 2843078], "validation": [593780, 62256, 531524]}
+    },
+    "representation": {
+      "feature_count": 70,
+      "feature_order_sha256": "0b10de946862903618202956587d1dee6cadaeda7baa3f081cb471f81416af25",
+      "parse_dtype": "float64",
+      "scaling": "NONE",
+      "explicit_imputation": "NONE",
+      "positive_and_negative_infinity": "CONVERT_TO_NAN",
+      "other_nonnumeric_token": "FAIL_CLOSED"
+    },
+    "model": {
+      "strategy": "ENS_LGBM_XGB_EQUAL",
+      "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "lightgbm_configuration": "LGBM_11",
+      "lightgbm_backend": "CPU after prospectively frozen backend-only amendment",
+      "xgboost_configuration": "XGB_11",
+      "xgboost_backend": "CUDA",
+      "seed": 42,
+      "hyperparameter_search": false
+    },
+    "validation": {
+      "threshold_grid_integer_percent": [5, 95],
+      "grid_points": 91,
+      "threshold_selection_source": "DEVELOPMENT_VALIDATION_ONLY",
+      "thresholds": {
+        "RANDOM_NATURAL": {"standard": 0.5, "balanced": 0.46, "security": 0.1, "pr_auc": 0.9955900418992819, "roc_auc": 0.9986245647735994},
+        "RANDOM_REBALANCED": {"standard": 0.5, "balanced": 0.7, "security": 0.26, "pr_auc": 0.9953050759692031, "roc_auc": 0.9985208506833615},
+        "CHRONOLOGICAL_NATURAL": {"standard": 0.5, "balanced": 0.07, "security": 0.07, "pr_auc": 0.10621515513397227, "roc_auc": 0.5149184263937692},
+        "CHRONOLOGICAL_REBALANCED": {"standard": 0.5, "balanced": 0.07, "security": 0.07, "pr_auc": 0.10373918030582996, "roc_auc": 0.49937019584531306}
+      }
+    },
+    "forward_final_holdout": {
+      "rows": 1374133,
+      "attack": 375345,
+      "benign": 998788,
+      "attack_prevalence": 0.2731504155711274,
+      "same_rows_for_all_four_cells": true,
+      "resampling": "NONE",
+      "results": {
+        "RANDOM_NATURAL": {"pr_auc": 0.26295321962777995, "roc_auc": 0.5204903284767843},
+        "RANDOM_REBALANCED": {"pr_auc": 0.273297716217507, "roc_auc": 0.5419818375800015},
+        "CHRONOLOGICAL_NATURAL": {"pr_auc": 0.6107344875615713, "roc_auc": 0.8064180161824033},
+        "CHRONOLOGICAL_REBALANCED": {"pr_auc": 0.6926302657182113, "roc_auc": 0.8321639645817649}
+      },
+      "maximum_authorized_openings": 1,
+      "openings_consumed": 1,
+      "permanently_closed": true,
+      "post_holdout_adaptation": false
+    },
+    "later_stage28_five_seed_linkage": {
+      "cells": ["RANDOM_NATURAL", "CHRONOLOGICAL_NATURAL"],
+      "reference_seed": 42,
+      "same_stage22r_holdout_geometry": true,
+      "new_untouched_holdout_claim": false,
+      "artifact": "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_stage22_shared_holdout_five_seed_summary.csv"
+    },
+    "scientific_execution_authorized": false,
+    "model_deserialization_authorized": false,
+    "model_fitting_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false,
+    "data_materialization_authorized": false,
+    "final_holdout_access_authorized": false
+  },
+  "environment": {
+    "python": "VERSION_NOT_PROVEN",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.2.0",
+    "xgboost_backend": "CUDA",
+    "lightgbm_backend": "CPU",
+    "gpu_model": "VERSION_NOT_PROVEN",
+    "separation_note": "No Stage20 runtime is inherited. Package/backend claims come from Stage22R protocol and result receipts only."
+  },
+  "holdout_policy": {
+    "historically_opened_once": true,
+    "maximum_authorized_openings": 1,
+    "openings_consumed": 1,
+    "permanently_closed": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only"
+  }
+}

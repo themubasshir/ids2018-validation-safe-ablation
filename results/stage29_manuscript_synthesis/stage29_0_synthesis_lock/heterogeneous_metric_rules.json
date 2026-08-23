@@ -1,0 +1,21 @@
+{
+  "normalization_or_composite_score_authorized": false,
+  "cross_axis_averaging_authorized": false,
+  "native_metrics": [
+    "precision, recall, F1 and F2",
+    "PR-AUC and ROC-AUC",
+    "FPR and confusion counts",
+    "calibration and cost metrics",
+    "PPV, NPV, alert workload and capacity",
+    "latency, throughput, memory and package size",
+    "family-specific LOAO metrics",
+    "seed-level directional stability"
+  ],
+  "rules": [
+    "Each validity axis remains in its native metric and population.",
+    "Delta-F1, Delta-PR-AUC, milliseconds, PPV, workload and ROC-AUC are not commensurable.",
+    "No ranking may combine heterogeneous stages through rescaling or qualitative cutoffs.",
+    "Cross-stage synthesis may compare conclusions and scope, not manufacture a shared numerical degradation score.",
+    "Any apparent conflict must first be checked for population, split, learner, threshold, seed, target and metric differences."
+  ]
+}

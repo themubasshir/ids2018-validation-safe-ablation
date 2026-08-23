@@ -1,0 +1,19 @@
+{
+  "prohibited": [
+    "model fitting or refitting",
+    "model loading for scientific inference",
+    "inference or probability-array analysis",
+    "target or holdout opening",
+    "threshold selection or reselection",
+    "bootstrap generation, significance testing, or new confidence intervals",
+    "SHAP, LIME, IG, feature-importance, or feature-analysis recomputation",
+    "timing or profiling",
+    "dataset reconstruction or PCAP processing",
+    "new prevalence, LOAO, seed, metric, average, composite score, or qualitative cutoff computation",
+    "new scientific figures",
+    "new hypotheses, datasets, architectures, or unsupported reinterpretations",
+    "manuscript rewriting"
+  ],
+  "large_binary_policy": "Models, checkpoints and scientific probability arrays may be referenced or byte-hashed only; they may not be deserialized.",
+  "violation_policy": "Stop synthesis and record the blocked operation rather than approximating or substituting evidence."
+}

@@ -1,0 +1,30 @@
+{
+  "allowed_statuses": [
+    "PRIMARY",
+    "SUPPORTING",
+    "SENSITIVITY",
+    "DESCRIPTIVE",
+    "NEGATIVE_RESULT",
+    "PARTIAL",
+    "LOW_SUPPORT",
+    "HARDWARE_SPECIFIC",
+    "CONDITIONAL",
+    "CANCELLED",
+    "HISTORICAL_CONTEXT"
+  ],
+  "status_rules": {
+    "PRIMARY": "Direct frozen evidence necessary to answer a central validity question within its stated scope.",
+    "SUPPORTING": "Frozen evidence that strengthens or explains a primary finding without carrying it alone.",
+    "SENSITIVITY": "Frozen evidence showing dependence on a controlled analytic choice, representation, subset, seed, or partition.",
+    "DESCRIPTIVE": "Observed frozen result without inferential or causal authority.",
+    "NEGATIVE_RESULT": "A completed frozen analysis whose result rejects, fails to support, or closes a proposed path.",
+    "PARTIAL": "Evidence limited by incomplete artifacts, execution provenance, environment, or coverage.",
+    "LOW_SUPPORT": "Evidence whose sample/support boundary requires explicit qualification.",
+    "HARDWARE_SPECIFIC": "Historical measurement conditional on a frozen hardware/runtime environment.",
+    "CONDITIONAL": "Claim valid only under explicitly frozen assumptions or uncertainty conditions.",
+    "CANCELLED": "Prospectively planned analysis not executed; never treated as a result.",
+    "HISTORICAL_CONTEXT": "Chronology or benchmark context not promoted to a final central claim."
+  },
+  "multiple_rows_per_finding_allowed": true,
+  "strongest_evidence_ceiling_applies": true
+}

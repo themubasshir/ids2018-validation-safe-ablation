@@ -1,0 +1,32 @@
+{
+  "source_priority": [
+    "frozen results, manifests, receipts, protocol locks, tables and figures",
+    "original executed notebooks and historically executed scripts",
+    "stage configs and extracted canonical methodology",
+    "reproducibility and equivalence registries",
+    "current manuscript sources and integration documents",
+    "interpretation constrained by the preceding evidence"
+  ],
+  "required_reproducibility_inputs": [
+    "docs/reproducibility/FINAL_REPRODUCIBILITY_AUDIT.md",
+    "docs/reproducibility/MANUSCRIPT_CRITICAL_TRACEABILITY.csv",
+    "docs/reproducibility/MANUSCRIPT_REPRODUCTION_INDEX.csv",
+    "docs/reproducibility/STAGE_REPRODUCIBILITY_STATUS.csv",
+    "docs/reproducibility/EXTERNAL_CRITICISM_RESPONSE.md",
+    "docs/reproducibility/SCIENTIFIC_EXECUTION_BOUNDARY.md",
+    "docs/reproducibility/EQUIVALENCE_MATRIX.csv",
+    "docs/reproducibility/REPRODUCIBILITY_GAPS.csv",
+    "docs/reproducibility/DISCREPANCY_REGISTER.csv",
+    "REPRODUCE.md",
+    "README.md"
+  ],
+  "additional_allowed_inputs": [
+    "current manuscript sources already in the repository",
+    "manuscript-integration and publication-package documents",
+    "final synthesis and interpretation artifacts from Stages1-28",
+    "protocol locks, configs and source registries",
+    "existing figure and table directories",
+    "static JSON, CSV, Markdown, TeX, text, image metadata and checksum files"
+  ],
+  "model_or_probability_deserialization_allowed": false
+}

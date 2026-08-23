@@ -1,0 +1,39 @@
+{
+  "principles": [
+    "No claim may exceed its strongest supporting evidence.",
+    "Contradictory evidence must remain visible.",
+    "Cancelled analyses remain cancelled.",
+    "Low-support analyses remain qualified.",
+    "Hardware-specific results remain hardware-specific.",
+    "Conditional confidence intervals remain conditional.",
+    "No causal language is allowed without direct causal evidence.",
+    "Stage28 remains the final empirical boundary."
+  ],
+  "preferred_qualifiers": [
+    "under the evaluated conditions",
+    "in this benchmark",
+    "for the eligible families",
+    "under the frozen prior-shift assumption",
+    "on the measured hardware",
+    "the results indicate",
+    "the audit reveals",
+    "performance did not consistently survive"
+  ],
+  "claim_strengths": [
+    "DIRECTLY_DEMONSTRATED",
+    "SUPPORTED_WITHIN_SCOPE",
+    "DESCRIPTIVE",
+    "HYPOTHESIS_GENERATING",
+    "NOT_SUPPORTED"
+  ],
+  "prohibited_unqualified_phrases": [
+    "the model generalizes",
+    "the model detects zero-day attacks",
+    "temporal splitting always causes catastrophic collapse",
+    "shortcut features cause all transfer failure",
+    "deep learning is universally inferior",
+    "the model is operationally useless in all real SOCs",
+    "the IDS literature is invalid",
+    "this proves supervised IDS cannot detect novel attacks"
+  ]
+}

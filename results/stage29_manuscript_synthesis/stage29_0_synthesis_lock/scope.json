@@ -1,0 +1,19 @@
+{
+  "stage": 29,
+  "name": "Final evidence synthesis and manuscript architecture",
+  "experimental_stage": false,
+  "scientific_execution_authorized": false,
+  "accepted_baseline": "06d91a6",
+  "branch": "manuscript-reproducibility-cleanup",
+  "objective": "Map frozen Stage1-28 evidence into claims, exhibits, limitations, and a manuscript architecture without producing or recomputing scientific evidence.",
+  "empirical_boundary": "Stage28",
+  "permitted_outputs": [
+    "static evidence and source registries",
+    "claim classification and wording decisions",
+    "existing figure and table selection",
+    "limitations and contribution matrices",
+    "manuscript architecture blueprints",
+    "static consistency tests and closeout receipts"
+  ],
+  "manuscript_rewrite_authorized": false
+}

@@ -1,0 +1,16 @@
+{
+  "stage": 29,
+  "record_type": "NON_EXPERIMENTAL_SYNTHESIS_FREEZE",
+  "frozen_on": "2026-08-23",
+  "accepted_input_head": "06d91a6",
+  "branch": "manuscript-reproducibility-cleanup",
+  "new_scientific_evidence_authorized": 0,
+  "new_scientific_operations_authorized": 0,
+  "stage28_final_empirical_stage": true,
+  "stage29_experimental": false,
+  "manuscript_rewrite_authorized": false,
+  "synthesis_outputs_must_be_traceable": true,
+  "contradictory_negative_partial_cancelled_and_limitation_evidence_must_be_preserved": true,
+  "frozen_artifact_modification_authorized": false,
+  "closeout_required": true
+}

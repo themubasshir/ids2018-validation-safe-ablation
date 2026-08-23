@@ -287,6 +287,12 @@ The evidence supports a sequence of claim checks rather than a prescribed archit
 
 The axes remain modular. Temporal evidence cannot substitute for cross-dataset transfer; a feature ablation cannot establish causality; a deployment profile cannot validate PPV; and a withheld-family result cannot establish arbitrary future-attack capability. Choices that can adapt to target evidence should be fixed before evaluation, cancelled analyses should remain visible, and reused targets should not be relabeled as fresh blind holdouts. Claim-level provenance then makes these boundaries auditable without implying that every historical computation is locally rerunnable.
 
+The retained tensions are also a practical reporting device. Benchmark and forward evidence should appear together so a strong reference result is neither discarded nor overextended. Ranking and threshold metrics should be paired because they can support different operational conclusions. Both cross-dataset directions should remain visible because one-way success does not imply reciprocal transportability. Named feature interventions should be reported beside placebo interventions, and explanation stability beside fidelity, to prevent an appealing diagnostic from acquiring causal or reconstructive meaning it has not earned. Likewise, projected PPV should be accompanied by workload and true-alert yield, while family summaries should retain learner and support strata. Presenting these contrasts adjacently makes disagreement interpretable instead of treating it as editorial noise.
+
+This structure also clarifies the role of uncertainty. Conditional resampling, training-seed variation, direction counts, scenario sensitivity, and hardware repetitions arise from different sources and should not be pooled into a common confidence statement. A five-seed ordering can strengthen a fixed-recipe conclusion without becoming a significance test; a paired interval can resolve a within-target contrast without describing external population variation; and a hardware ratio can compare compatible paths without establishing a deployment constant. Reviewers can then evaluate the evidence actually available for each claim rather than infer precision from an unrelated axis.
+
+Finally, the claim-to-artifact layer should be viewed as part of scientific communication rather than an appendix-only software feature. A concise main paper can point to the population, frozen decision, evidence source, and claim ceiling, while the supplement and repository retain hashes, configs, complete grids, and equivalence receipts. That division supports editorial compression without weakening auditability. It also exposes genuine gaps—cancelled cells, unavailable artifacts, uncertain environments, or low support—instead of smoothing them into narrative completeness.
+
 ## 7. Limitations
 
 The following 18 limitations define the manuscript's claim ceilings. Grouping removes repeated caveats but does not merge distinct evidence constraints.
@@ -334,3 +340,43 @@ A processed benchmark score is a necessary reference, not a complete capability 
 Other conclusions remained conditional. Frozen thresholds transferred poorly even when ranking survived, reverse cross-dataset transfer was near its anchor, shortcut and placebo interactions did not isolate one mechanism, operational projections depended on prevalence and workload assumptions, and withheld-family behavior varied by learner and support.
 
 Future IDS evaluations should therefore name the validity condition, population, metric, operating rule, uncertainty, and adaptation boundary attached to each claim. Reporting benchmark, temporal, shortcut, domain, operational, computational, unknown-family, and realization evidence separately preserves both failures and non-collapse findings. The resulting account is narrower than a universal performance verdict, but it is more useful: it states which capability was observed, where it survived, and what the available evidence does not establish.
+
+Stronger validation thus narrows or qualifies a claim; it does not require a monotonic performance decline, a single failure label, or a universal deployment verdict.
+
+## References
+
+The canonical bibliography for the Pandoc citation keys in this candidate is `manuscript/references.bib`. Its 27 entries and claim-level support boundaries were verified in Pass 2A; Pass 2B introduced no reference or literature expansion.
+
+## Supplementary Material Plan
+
+The supplement is organized into seven evidence groups. Its purpose is to preserve reviewer-facing detail without reproducing the repository or changing evidence status.
+
+### S1. Reference evaluation, uncertainty, and explanation reliability
+
+This section contains frozen membership and duplicate checks; full baseline inventories and tuning records; validation threshold curves; holdout confusion matrices; known-category support; paired operating-point and calibration uncertainty; and fixed-recipe seed tables. It also contains the complete deterministic LIME panel, representative local cases, surrogate-fidelity and decision-agreement diagnostics, and TreeSHAP comparisons. These materials support Table 1 and the stable-but-unfaithful explanation result. Conditional intervals remain conditional, and the supplementary detail does not create a general learner-winner claim.
+
+### S2. Shortcut, representation, and architecture diagnostics
+
+This section provides all seven Stage23 feature subsets, secondary metrics, matched-size placebos, depth-one controls, component attribution summaries, behavior-restricted representations, and attack-family composition tables. It also routes the detailed Integrated Gradients sensitivity, attention diagnostics, source-restricted graph evidence, and descriptive CNN/ViT comparison outside the main narrative. The latter items retain their supplement-only claim status: source restriction, zero frozen-threshold detection, or single-comparison design prevents them from supporting architecture or deployment conclusions. Figure 2 remains the sole main shortcut exhibit.
+
+### S3. Cross-dataset contracts and sensitivities
+
+This section documents bridge62 and bridge70 semantics, direction-specific source and target populations, full ranking and frozen-threshold tables, and the published-versus-corrected aggregate-flag contrasts. It includes their conditional paired intervals, population-governance records, and the exact cancellation receipts for both `GROUNDED_S4` cells. The material supports Figure 3 and Table 3 while keeping directions separate, preserving metric-specific changes, and refusing replacement of missing membership with a post-freeze heuristic.
+
+### S4. Prevalence, workload, capacity, and cost
+
+This section contains the complete prevalence grids, PPV and NPV thresholds, true- and false-alert volumes, analyst-time and capacity scenarios, required-FPR calculations, break-even conditions, relative-cost decisions, and formula checks. It supports Figure 4 and Table 4. Every quantity remains a prior-shift scenario that holds sensitivity and FPR fixed; none is labeled as measured field, organization-specific economic, or live analyst performance.
+
+### S5. Deployment profiling
+
+This section reports warm and cold inference, throughput, memory, package size, component timing, batch schedules, capacity, representation comparisons, Pareto summaries, and all compatible CPU/GPU profiles. Hardware, software, and timing-boundary receipts accompany the tables, while unsupported, incompatible, timed-out, and resource-limited paths retain their statuses. It supports Figure 5 but does not extend the prepared-input-to-probability boundary to capture, feature extraction, alert aggregation, or analyst response.
+
+### S6. Family eligibility and realization stability
+
+This section preserves family aliases, day-atomic chronology, eligibility decisions, support, target construction, full LOAO native metrics, frozen operating points, conditional intervals, and descriptive similarity diagnostics. It includes all seed-level family tables, registered stability classifications, random-split LOAO controls, and the detailed temporal seed and family-aware controls behind Table 2. DDoS, Port Scan, Web Attack, Bot, and Infiltration remain separate; Infiltration remains descriptive at support 36; DOS and AUTH_BRUTE_FORCE remain ineligible; and no aggregate novelty score is formed.
+
+### S7. Provenance, equivalence, and reproduction
+
+This section collects the minimum configs, source maps, archived notebooks and scripts, hashes, environment records, target-opening ledgers, canonical implementation links, equivalence matrices, reproduction indexes, execution boundaries, and static validation reports needed to audit the manuscript. Detailed Stage20 forensic records appear only when they explain a scientific artifact, source identity, or bridge restriction. External datasets, closed artifacts, `VERSION_NOT_PROVEN` environments, and non-rerunnable paths remain disclosed. Repository links carry the full inventory; the supplement does not duplicate it.
+
+Supplementary figures and tables should receive `S` numbering only after a venue template is approved. Existing scientific assets remain unchanged, and later panel assembly must follow the frozen Pass 2B figure registry. No supplementary item may introduce a new claim, number, comparison, metric, or analysis.

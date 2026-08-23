@@ -1,0 +1,2 @@
+location,term,sentence_summary,supported,action,replacement
+"Discussion 6.2, line 264","proven","The sentence explicitly rejects treating a feature as proven leakage or as the cause of domain transfer.","YES_NEGATED_AND_BOUNDARY_PRESERVING","KEEP_REVIEWED","No replacement; the occurrence is a scoped denial of unsupported causal language."

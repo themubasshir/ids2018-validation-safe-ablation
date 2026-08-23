@@ -63,33 +63,111 @@ Finally, reproducibility work in machine learning emphasizes executable methods,
 
 ### 3.1 CSE-CIC-IDS2018 reference and source-faithful roles
 
+CSE-CIC-IDS2018 serves two related but non-equivalent roles. The conventional reference analysis uses a processed, rebalanced binary table preserved by the original experiment. Its frozen memberships contain 192,593 training rows, 48,149 validation rows, and 60,186 holdout rows. This representation supports controlled model selection, operating-point selection, and within-table holdout reporting. It is not presented as a natural-prevalence, session-independent, or forward-temporal population.
+
+Later temporal analyses use source-faithful dated IDS2018 exports and independently governed membership artifacts. “Source-faithful” means that the representation follows authenticated source columns, cleaning rules, and temporal roles recovered from the original research lineage; it does not mean that every raw packet or historical execution environment is available. The temporal target is therefore scientifically distinct from the processed reference holdout even when both derive from the IDS2018 benchmark family. In particular, the source-faithful audit preserves collection order and a common forward target rather than treating rows as exchangeable samples.
+
+This distinction prevents two common conflations. First, high discrimination on the processed reference table cannot be described as temporal validation. Second, a later source-faithful result does not retroactively make the original processed table naturalistic. The two populations answer different questions and remain separate throughout the manuscript.
+
 ### 3.2 CICIDS2017 cross-dataset role
+
+CICIDS2017 supplies the second benchmark domain, the packet/flow provenance needed for selected representation audits, and the attack-family chronology used by the leave-one-family-out analysis. The primary cross-dataset direction trains on the frozen IDS2018 source representation and evaluates on an effective CICIDS2017 target containing 2,830,743 rows. The reciprocal direction trains under the frozen CICIDS2017 source protocol and evaluates on the IDS2018 February 28 target. Because source learners, target prevalence, feature availability, and extractor semantics differ by direction, the two transfers are never averaged.
+
+Cross-dataset comparability is defined by frozen semantic bridges rather than by nominal column-name equality. The primary bridge62 contract retains the shared predictors whose semantics could be defended in both domains. A bridge70 variant adds the frozen aggregate-flag fields and supports a serialization-sensitivity audit. “Published” denotes the field interpretation present in the released feature artifact; “corrected” denotes the preregistered correction to the aggregate TCP-flag serialization. Both are retained because changing the interpretation after seeing target performance would erase an important provenance dependency.
+
+Two planned GROUNDED_S4 target cells were cancelled before target opening. Exact durable physical-row membership could not be reconstructed without introducing a new post-freeze matching heuristic. The cells were neither approximated nor replaced, and their absence is treated as a limitation rather than an unfavorable result.
 
 ### 3.3 Attack-family mapping and evaluation populations
 
+The early reference analysis reports known attack categories within the processed IDS2018 holdout. Those categories describe error concentration under a familiar label distribution; they are not novelty tests. The later leave-one-attack-family-out protocol instead uses CICIDS2017 family/day structure and requires zero exposure to the target family in both training and validation.
+
+Five families satisfied the frozen eligibility rules. DDoS, Port Scan, Web Attack, Bot, and Infiltration could be assigned to distinct development and target periods under the day-atomic chronology. DOS and AUTH_BRUTE_FORCE were structurally ineligible because the required training, validation, and target ordering could not be constructed without post hoc folds. Infiltration remained executable but its target contained only 36 positive examples, so it is descriptive throughout the manuscript. Family mappings, aliases, chronology, and support gates were locked before inferential reporting.
+
+The principal target for each eligible family combines the held-out family with temporally matched benign traffic. A broader context target that also includes known attacks is secondary and descriptive. This separation allows the primary result to ask whether the score distinguishes a genuinely withheld family from benign traffic without converting the experiment into a claim about arbitrary future attacks.
+
 ### 3.4 Provenance states and target governance
+
+The repository uses several provenance terms that must remain distinct. **Raw-exact** identifies immutable source bytes whose hashes and identities are preserved. **Published** identifies the semantics serialized in an originally released table or extractor output. **Corrected** identifies a frozen, documented correction applied without changing the raw source. **Source-faithful** identifies a derived representation whose construction follows authenticated source semantics and locked cleaning rules. **Reconstructed** identifies an artifact recovered from surviving lineage evidence; it is never treated as raw-exact unless byte identity is proven.
+
+The Stage20 forensic program is relevant where it establishes source identities, packet/flow alignment boundaries, compact-corpus lineage, and the aggregate-flag serialization correction used by later bridge analyses. Detailed parser investigations, transport receipts, storage events, and failed mechanism searches remain repository or supplementary provenance rather than main-text scientific results.
+
+Target governance is role-specific. Development data may support fitting, validation-based operating-point selection, or protocol checks only as declared by the frozen design. Final targets are opened under terminal ledgers, with no target-guided model fitting, feature search, calibration, or threshold reselection. Some target populations were historically opened in earlier phases and later reused for preregistered stability analysis; they are not relabeled as new blind holdouts. Current reproducibility interfaces verify identities, schemas, and receipts without reopening scientific targets or deserializing models.
 
 ## 4. Validation Framework and Methods
 
 ### 4.1 Reference Evaluation and Governance
 
+**Question and population.** The reference evaluation asks what conventional validation-selected models and operating points achieve on the processed CSE-CIC-IDS2018 binary table. Frozen stratified memberships separate training, validation, and holdout roles. Scaling is fitted on training data and applied only to models whose historical protocol requires scaled inputs; tree boosting retains its recorded tabular preprocessing. A single universal preprocessing pipeline would be historically inaccurate.
+
+**Protocol and learner scope.** A broad baseline inventory is narrowed through validation-only tuning to the recorded XGBoost and LightGBM reference learners. Validation selects two operating roles: a balanced XGBoost point at threshold 0.51 and a constrained-security LightGBM point at threshold 0.26. The holdout is descriptive after those decisions and is not used to revise the model or threshold.
+
+**Metrics, uncertainty, and boundary.** Ranking is reported with ROC-AUC and PR-AUC; operating behavior is reported with F1, F2, precision, recall, FPR, and error counts. Historical paired uncertainty and calibration analyses compare the selected learners on the same frozen holdout. The security constraint belongs to the validation selection rule; later unconstrained cost analyses do not inherit it. The result establishes a conventional within-table reference, not natural prevalence, temporal validity, cross-dataset portability, or deployment utility.
+
 ### 4.2 Temporal Validation
+
+**Question and population.** Temporal validation asks whether the development geometry changes ranking and operating-point transfer on one common forward IDS2018 target. Four frozen development cells cross random versus chronological membership with natural versus training-only rebalanced prevalence. All cells are evaluated on the same final population of 1,374,133 rows, containing 375,345 attack and 998,788 benign rows.
+
+**Protocol and learner scope.** The temporal design uses the frozen tree-ensemble recipe, source-faithful cleaning, and predeclared development roles. Random cells estimate performance under exchangeable membership assumptions. Chronological cells preserve the source order and separate earlier development periods from later evaluation. Rebalancing applies only to training. No model, feature, calibration, or threshold is adapted after the shared target is opened.
+
+**Metrics, uncertainty, and boundary.** PR-AUC and ROC-AUC quantify ranking because target prevalence differs across development cells; frozen-threshold precision, recall, F1, and FPR quantify operating-point transfer. The final stability layer repeats the designated random-natural and chronological-natural linkage across a fixed seed set and reports frozen means, standard deviations, and directional consistency. That analysis is descriptive conclusion stability, not a new significance test. Family-aware controls assess whether chronology alone explains the contrast. The axis establishes sensitivity to validation geometry under the evaluated source chronology; it does not establish session independence, universal temporal superiority, or concept drift as a sole cause.
 
 ### 4.3 Shortcut-Feature Audit
 
+**Question and population.** The shortcut audit asks whether ranking changes when plausible identity-, protocol-, window-, or behavior-related predictors are removed from the frozen Stage22 development populations. The primary design contains seven preregistered feature subsets, evaluated separately under random-natural and chronological-natural geometry and across the frozen tree learners.
+
+**Protocol and controls.** Primary removals are paired with matched-size placebo removals, depth-one single-feature controls, feature-importance redistribution checks, behavior-restricted representations, and attack-family composition tables. These controls distinguish sensitivity to a named removal from sensitivity to removing any similarly sized block. They also expose whether chronological outcomes coincide with a narrower attack-family population.
+
+**Metrics, uncertainty, and boundary.** PR-AUC and ROC-AUC remain the primary ranking metrics, supplemented by frozen operating-point results and conditional paired intervals where available. Component-specific TreeSHAP summaries are descriptive proxies rather than exact attributions for an averaged-probability ensemble. A separate local-explanation audit evaluates LIME decision agreement, surrogate fidelity, perturbation stability, and agreement with exact TreeSHAP on a deterministic panel. No target-guided subset search occurs. The axis establishes feature and split sensitivity; it does not prove that a tested feature is leakage or that one shortcut causes cross-domain failure.
+
 ### 4.4 Cross-Dataset Transfer
+
+**Question and population.** Cross-dataset evaluation asks how source-trained rankings and frozen operating points behave when transferred between IDS2018 and CICIDS2017 under explicit shared-feature contracts. Forward and reverse directions have separate source models, targets, prevalence anchors, and interpretation.
+
+**Protocol and learner scope.** Bridge62 is the primary semantic intersection. Bridge70 is a preregistered sensitivity representation that includes aggregate-flag fields under both published and corrected serialization. Source training, validation-based thresholds, feature contracts, and target cleaning are frozen independently of target results. No target labels guide fitting, feature selection, thresholding, or calibration.
+
+**Metrics, uncertainty, and boundary.** Direction-specific PR-AUC and ROC-AUC characterize ranking. Frozen threshold metrics characterize operating transfer, and Brier score is included in the serialization sensitivity. Conditional paired bootstrap intervals quantify within-target published-versus-corrected contrasts without converting them into an unconditional population claim. The two cancelled GROUNDED_S4 cells remain absent. This axis establishes bridge- and direction-specific transfer for two related benchmark families; it does not establish portability to arbitrary datasets or a unique causal mechanism.
 
 ### 4.5 Prevalence and Operational Stress
 
+**Question and population.** Operational stress asks how frozen sensitivity and false-positive rates translate when the assumed attack prior, traffic volume, analyst service time, capacity, or relative error cost changes. It inherits operating points from the temporal and cross-dataset evaluations and performs no new fitting or target access.
+
+**Protocol.** Under the frozen prior-probability-shift model, sensitivity and specificity remain fixed while prevalence varies over a preregistered grid. PPV and NPV are derived from the inherited rates and assumed prior. Alert counts translate those rates under frozen daily traffic scenarios; workload applies the declared analyst service-time and capacity assumptions; relative cost compares false alerts and missed attacks under scenario-specific weights.
+
+**Metrics, uncertainty, and boundary.** PPV, NPV, true and false alerts, analyst-hours, capacity exceedance, required FPR, and relative cost are operational projections, not predictive ranking metrics. Their uncertainty is inherited from the frozen operating points and scenario definitions; no new bootstrap is introduced for the projections. The axis shows how the character of a fixed operating point changes under stated assumptions. It does not measure field performance under covariate, protocol, topology, attacker, or behavior shift, and it does not establish a universal SOC preference.
+
 ### 4.6 Deployment Profiling
+
+**Question and population.** Deployment profiling asks which frozen, compatible model paths are computationally feasible on the recorded Stage26 hardware and software. The measurement boundary begins with prepared model input and ends with materialized model probabilities; it is not complete packet-capture-to-alert latency.
+
+**Protocol and learner scope.** Eligible tree, ensemble, and packet-image artifacts are profiled under frozen batch schedules for warm inference, cold start, throughput, memory, package size, component timing, and matched CPU/GPU conditions. Groups with different representations remain separate. A missing backend, incompatible artifact, timeout, or resource-limit outcome is reported as a status rather than imputed as a latency value.
+
+**Metrics, uncertainty, and boundary.** Latency percentiles, throughput, memory, and artifact size remain in their native units. Repeated measurements provide condition-level summaries; CPU/GPU ratios are descriptive point estimates without ratio-level confidence intervals. No batch is retrospectively selected as optimal. The axis establishes measured component feasibility for compatible paths on one recorded environment, not universal latency, complete end-to-end IDS cost, or performance on unsupported backends.
 
 ### 4.7 Leave-One-Attack-Family-Out Evaluation
 
+**Question and population.** The leave-one-attack-family-out design asks whether a learner with zero training and validation exposure to an eligible target family can rank that family above temporally matched benign traffic and detect it at frozen operating points. Eligibility requires a day-atomic TRAIN < VALIDATION < TARGET ordering and sufficient target support.
+
+**Protocol and learner scope.** XGBoost and LightGBM are evaluated independently for each eligible family. Source memberships, feature space, fitting recipes, validation thresholds, family aliases, and target roles are frozen before target evaluation. DOS and AUTH_BRUTE_FORCE remain ineligible; Infiltration is retained only as descriptive evidence because its target support is 36.
+
+**Metrics, uncertainty, and boundary.** ROC-AUC and PR-AUC assess ranking relative to chance and target prevalence. Recall and related metrics at standard, balanced, and security thresholds assess operating-point transfer. Family-specific conditional intervals and support accompany the primary results; a behavioral-similarity analysis remains descriptive and non-causal. This axis tests eligible benchmark-family withholding. It does not demonstrate detection of arbitrary future exploits, establish universal zero-day capability, or authorize a pooled novelty score.
+
 ### 4.8 Seed and Control Stability
+
+**Question and protocol.** Stability analysis asks whether the principal temporal direction and eligible-family conclusions are artifacts of one training realization. The frozen seed registry repeats the designated temporal and LOAO cells without selecting a best seed and without repeating the entire historical hyperparameter search. A random-split LOAO arm serves as a control for the additional difficulty associated with chronology.
+
+**Metrics and boundary.** Seed-level PR-AUC, ROC-AUC, and operating-point outcomes are summarized with frozen means, standard deviations, directional counts, and family/learner stability classifications. Training-seed variation remains separate from sampling/bootstrap uncertainty. The control is not a deployment estimate and does not identify one causal temporal mechanism. Stability over the frozen seed set strengthens conclusions within scope but does not create a population guarantee over all model realizations.
 
 ### 4.9 Statistical Uncertainty and Anti-Adaptation Controls
 
+Historical uncertainty analyses use paired, class-stratified resampling so compared learners or representations share each resampled population. Calibration, operating-point, feature-subset, and serialization contrasts retain the uncertainty type declared by their frozen protocols. Conditional intervals are described as conditional; intervals containing zero are not converted into evidence of equivalence, and intervals excluding zero do not broaden the target population.
+
+Anti-adaptation rules are enforced at each evaluation boundary. Model families, hyperparameters, feature subsets, semantic bridges, operating points, target roles, and eligible families are frozen before their corresponding target result. No later target result is used to retune an earlier protocol. Cancelled analyses stay cancelled. Training-seed summaries are not combined with bootstrap distributions, and heterogeneous metrics are never normalized into a common degradation score.
+
 ### 4.10 Reproducibility and Provenance
+
+Every substantive manuscript claim is mapped to a Stage29 claim identifier and supporting evidence identifiers. Every scientific number is mapped to a frozen number identifier, source artifact, and manuscript location. Source maps connect each scientific subsection to protocols, canonical code, archived notebooks or scripts, equivalence evidence, and the manuscript reproduction index.
+
+Reproducibility classes remain explicit. The repository can verify source identities, configs, schemas, scalar values, hashes, toy formulas, and approved read-only equivalence checks. It does not claim that every historical environment can be reconstructed or every empirical stage can be rerun end to end. Raw datasets, some historical artifacts, and closed targets remain external, unavailable, or intentionally inaccessible through the validation-safe interface. This limitation is part of the paper's provenance claim rather than hidden behind a single requirements file.
 
 ## 5. Results
 

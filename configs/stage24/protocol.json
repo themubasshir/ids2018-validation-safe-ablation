@@ -1,0 +1,224 @@
+{
+  "stage": 24,
+  "name": "Cross-dataset generalization and artifact-sensitivity audit",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage24_cross_dataset_executed.ipynb:1-62",
+      "scripts/stage24/stage24_cross_dataset_generalization.py:recovered code-only export"
+    ],
+    "notebooks": [
+      {
+        "path": "notebooks/archive/stage24_cross_dataset_executed.ipynb",
+        "sha256": "395465a0b72d718c997583ac3838fe12731d990799cadb134c20a548e669b8ac",
+        "cells": "1-62"
+      },
+      {
+        "path": "scripts/stage24/stage24_cross_dataset_generalization.ipynb",
+        "cells": "sanitized repository export"
+      }
+    ],
+    "historical_sources": [
+      "Supplied executed notebook cells 1-17 preserve pre-opening protocol and source-only work absent from the sanitized repository export",
+      "Repository sanitized code cells 2-45 map exactly to supplied executed cells 18-60 after accounting for one duplicated Stage24-1C-EX1 cell",
+      "Supplied executed cells 61-62 preserve publication repair and package operations absent from the repository export"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_PLUS_SCRIPT",
+    "reason": "The executed notebook is canonical for complete chronology and outputs; the recovered code-only script preserves the later methodology but omits the pre-opening cells and final publication repair.",
+    "path": "scripts/stage24/stage24_cross_dataset_generalization.py",
+    "registry": "docs/reproducibility/STAGE21_24_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "9433af1",
+    "c5c96de",
+    "683fe85",
+    "a90a422",
+    "d624db8",
+    "1390cf5",
+    "ce2913d",
+    "a4b6a38",
+    "ad5a01a"
+  ],
+  "inputs": [
+    "Frozen Stage22R chronological-natural source memberships and bridge70 ensemble",
+    "Frozen CICIDS2017 eight-file exact source contract",
+    "Prospectively frozen bridge62 and bridge70 semantic mappings",
+    "Frozen Stage20 flag-serialization correction and exact GROUNDED_S4 requirements"
+  ],
+  "outputs": [
+    "results/stage24_cross_dataset/",
+    "results/stage24_cross_dataset/stage24_6_final_synthesis/",
+    "results/stage24_cross_dataset/stage24_publication_package/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Run primary source-only sanity and bridge62 LightGBM/XGBoost refit",
+    "Evaluate bridge62 and bridge70 PUBLISHED and FLAG_CORRECTED CICIDS2017 targets",
+    "Cancel both GROUNDED_S4 cells if the exact durable membership cannot be recovered without approximation",
+    "Fit source-only bridge62 and bridge70 XGBoost models on CICIDS2017 Monday-Wednesday",
+    "Select thresholds on CICIDS2017 Thursday source validation only",
+    "Evaluate both frozen secondary models once on IDS2018 February 28",
+    "Report both transfer directions separately with frozen paired-bootstrap evidence"
+  ],
+  "would_touch_frozen_target": true,
+  "expected_compute_runtime": {
+    "historical_model_fit_seconds_total": 767.391972064972,
+    "historical_model_fits": 4,
+    "historical_evaluable_target_openings": 6,
+    "historical_cancelled_before_opening": 2,
+    "verification_mode": "Metadata/presence plus streaming SHA256 only; no source/target materialization, mapping changes, fitting, inference or bootstrap"
+  },
+  "verification_artifacts": [
+    "scripts/stage24/stage24_cross_dataset_generalization.py",
+    "scripts/stage24/stage24_cross_dataset_generalization.ipynb",
+    "notebooks/archive/stage24_cross_dataset_executed.ipynb",
+    "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0_bootstrap_environment_receipt.json",
+    "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json",
+    "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.json",
+    "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/stage24_1b_bridge62_source_refit_result.json",
+    "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1c_grounded_s4_membership/stage24_1c_ex1_grounded_s4_durable_artifact_infeasibility_amendment.json",
+    "results/stage24_cross_dataset/stage24_3_primary_results_freeze/stage24_3a_primary_paired_bootstrap/stage24_3a_primary_results_freeze.json",
+    "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4a_bridge62_xgboost/stage24_4a_secondary_bridge62_result.json",
+    "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4b_bridge70_xgboost/stage24_4b_secondary_bridge70_result.json",
+    "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5a_bridge62_ids2018_feb28/stage24_5a_secondary_bridge62_ids2018_feb28_result.json",
+    "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5b_bridge70_ids2018_feb28/stage24_5b_secondary_bridge70_ids2018_feb28_result.json",
+    "results/stage24_cross_dataset/stage24_6_final_synthesis/stage24_6_final_synthesis.json",
+    "results/stage24_cross_dataset/stage24_publication_package/stage24_publication_package_manifest.json"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage24_cross_dataset_executed.ipynb": {"size_bytes": 2688147, "sha256": "395465a0b72d718c997583ac3838fe12731d990799cadb134c20a548e669b8ac"},
+    "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0_bootstrap_environment_receipt.json": {"size_bytes": 11911, "sha256": "d84af907d38574b3c97d6afe8a2fb8c822e0f2903012cd1418085ad928340f7b"},
+    "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_final_preopening_protocol_lock.json": {"size_bytes": 20805, "sha256": "ca194ce797405bf1664f074d70a49e2e1ca2adae3d47e22af24aabe99847f638"},
+    "results/stage24_cross_dataset/stage24_0_protocol_lock/stage24_0c_semantic_bridge_spec.json": {"size_bytes": 31611, "sha256": "481834afbf545f78aa622dfc4715a10f134d01d9de9be75b7ecebdc4fef5d709"},
+    "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1b_bridge62_source_refit/stage24_1b_bridge62_source_refit_result.json": {"size_bytes": 7956, "sha256": "90ff2576ef015a1e2534a4129615e488f007e1c5e0b56fe007a4f328c6724c00"},
+    "results/stage24_cross_dataset/stage24_1_primary_source_sanity/stage24_1c_grounded_s4_membership/stage24_1c_ex1_grounded_s4_durable_artifact_infeasibility_amendment.json": {"size_bytes": 5196, "sha256": "1af24175c46d3d17932fb6eadf4a9041e88dfc9cf8f2c9d8b2039760381a4204"},
+    "results/stage24_cross_dataset/stage24_3_primary_results_freeze/stage24_3a_primary_paired_bootstrap/stage24_3a_primary_results_freeze.json": {"size_bytes": 8864, "sha256": "37717b2c2de204007ccaa1a600299b09a55c8b1d65ecb09a023a5323427b31d1"},
+    "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4a_bridge62_xgboost/stage24_4a_secondary_bridge62_result.json": {"size_bytes": 10988, "sha256": "4f2779314c4998f71c093e9694dd0a5c7dfda9a80bedcd83c3e76e29e9a7d249"},
+    "results/stage24_cross_dataset/stage24_4_secondary_source_training/stage24_4b_bridge70_xgboost/stage24_4b_secondary_bridge70_result.json": {"size_bytes": 14613, "sha256": "82141618491dd007d3618621f6e9529c63317ddac57c75f7bfb00fcb9ac43f8c"},
+    "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5a_bridge62_ids2018_feb28/stage24_5a_secondary_bridge62_ids2018_feb28_result.json": {"size_bytes": 10290, "sha256": "67c1fc3f6404848a3544e92aaa7dacbc6defaa535fa6eb09342310562352dcc8"},
+    "results/stage24_cross_dataset/stage24_5_secondary_target_openings/stage24_5b_bridge70_ids2018_feb28/stage24_5b_secondary_bridge70_ids2018_feb28_result.json": {"size_bytes": 11276, "sha256": "91edafd3be7056f8e4075bde4a959b3070fd663f934a29735ec9650c21212fa5"},
+    "results/stage24_cross_dataset/stage24_6_final_synthesis/stage24_6_final_synthesis.json": {"size_bytes": 11697, "sha256": "60b7221fe92a7c0fdb6aec75fc0ad1f153cb62c8053debaa4f2958ef766445fb"},
+    "results/stage24_cross_dataset/stage24_publication_package/stage24_publication_package_manifest.json": {"size_bytes": 4911, "sha256": "e06e5cad75f1113b5d039ea5199e8cb571813b0506dbc51a7a04fc1fc1544549"}
+  },
+  "methodology": {
+    "semantic_bridges": {
+      "bridge62": {
+        "feature_count": 62,
+        "excluded_aggregate_flag_features": ["FIN Flag Cnt", "SYN Flag Cnt", "RST Flag Cnt", "PSH Flag Cnt", "ACK Flag Cnt", "URG Flag Cnt", "CWE Flag Count", "ECE Flag Cnt"],
+        "published_equals_flag_corrected": true
+      },
+      "bridge70": {
+        "feature_count": 70,
+        "published_and_flag_corrected_kept_distinct": true,
+        "exact_semantic_mapping": true
+      },
+      "mapping_search_performed": false,
+      "fuzzy_mapping": false,
+      "target_labels_used_to_build_mapping": false,
+      "target_values_used_to_build_mapping": false,
+      "modification_authorized": false
+    },
+    "fit_budget": {
+      "primary_bridge62_lightgbm": 1,
+      "primary_bridge62_xgboost": 1,
+      "primary_bridge70_inherited_component_fits": 0,
+      "secondary_bridge62_xgboost": 1,
+      "secondary_bridge70_xgboost": 1,
+      "total": 4,
+      "consumed": 4,
+      "additional_fits_authorized": 0
+    },
+    "opening_ledger": {
+      "original_budget": 8,
+      "evaluable_budget": 6,
+      "evaluable_consumed": 6,
+      "grounded_s4_administratively_cancelled_before_opening": 2,
+      "cancelled_slots_reallocated": false,
+      "remaining_evaluable_openings": 0
+    },
+    "grounded_s4": {
+      "status": "NOT_EVALUABLE",
+      "reason": "DURABLE_ARTIFACT_INFEASIBILITY",
+      "fuzzy_substitute_used": false,
+      "inferred_values_used": false
+    },
+    "primary_direction": {
+      "direction": "IDS2018_TO_CICIDS2017",
+      "target": {
+        "rows": 2830743,
+        "attack": 557646,
+        "benign": 2273097,
+        "prevalence": 0.196996336297573
+      },
+      "results": {
+        "bridge62_published": {"pr_auc": 0.6674827010666808, "roc_auc": 0.7339464251813748, "brier": 0.14575561948280363},
+        "bridge62_flag_corrected": {"identity": "BITWISE_IDENTICAL_TO_BRIDGE62_PUBLISHED", "pr_auc": 0.6674827010666808, "roc_auc": 0.7339464251813748, "brier": 0.14575561948280363},
+        "bridge70_published": {"pr_auc": 0.6639810751980307, "roc_auc": 0.7418914673891956, "brier": 0.1429117123245476},
+        "bridge70_flag_corrected": {"pr_auc": 0.6562523506197266, "roc_auc": 0.7440833611037603, "brier": 0.14799829569416523}
+      }
+    },
+    "secondary_direction": {
+      "direction": "CICIDS2017_TO_IDS2018",
+      "source_train_days": ["Monday", "Tuesday", "Wednesday"],
+      "source_validation_days": ["Thursday"],
+      "target": {
+        "day": "02-28-2018",
+        "rows": 593780,
+        "attack": 62256,
+        "benign": 531524,
+        "prevalence": 0.10484691299808009
+      },
+      "results": {
+        "bridge62": {"pr_auc": 0.10817592573968819, "roc_auc": 0.5251666999050302, "brier": 0.10575815701309531},
+        "bridge70": {"pr_auc": 0.10741914378003477, "roc_auc": 0.5253021473786115, "brier": 0.10565203888025436}
+      },
+      "mar01_status": "CLOSED_NOT_RESCUE_TARGET",
+      "mar02_status": "CLOSED_NOT_RESCUE_TARGET"
+    },
+    "reporting": {
+      "directions_reported_separately": true,
+      "directions_averaged": false,
+      "reason": "Different source models, target populations and target prevalence structures"
+    },
+    "bootstrap": {
+      "method": "paired stratified row bootstrap",
+      "replicates": 2000,
+      "seed": 42,
+      "regeneration_authorized": false
+    },
+    "scientific_execution_authorized": false,
+    "model_deserialization_authorized": false,
+    "model_fitting_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false,
+    "bootstrap_generation_authorized": false,
+    "data_materialization_authorized": false,
+    "target_access_authorized": false
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "pyarrow": "24.0.0",
+    "scikit_learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.2.0",
+    "catboost": "1.2.10",
+    "gpu_models": ["Tesla T4", "Tesla T4"],
+    "runtime": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "separation_note": "Stage24 runtime comes from its own bootstrap receipt and is not inherited from Stage20. Backends changed only under prospectively frozen backend amendments."
+  },
+  "holdout_policy": {
+    "evaluable_openings_consumed": 6,
+    "evaluable_openings_remaining": 0,
+    "grounded_s4_cancelled_before_opening": 2,
+    "cancelled_slots_reallocated": false,
+    "mar1_rescue_target": false,
+    "mar2_rescue_target": false,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only"
+  }
+}

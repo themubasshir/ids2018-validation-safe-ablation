@@ -1,0 +1,187 @@
+{
+  "stage": 28,
+  "name": "Five-seed stability and random-LOAO control",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage28_stability_novelty_control_executed.ipynb:1-47",
+      "scripts/stage28/stage28_full_kaggle_notebook.ipynb:exact supplied cells 33-47 after newline normalization",
+      "scripts/stage28/stage28_full_kaggle_notebook.py:cell-ordered archival linearization of those 15 cells"
+    ],
+    "notebook_sha256": "3d67dacd97050683de6b2d797e76cdefc4b35ed4f6bc13bb91992ea5c43e9f95",
+    "historical_sources": [
+      "Supplied notebook is the only complete 47-cell execution history",
+      "Repository raw-history reconstruction preserves supplied cells 33-47 without outputs or markdown",
+      "Supplied filename mentioned Stage29 but all identified cells are Stage28 and no Stage29 scientific section exists",
+      "Frozen closure, claim registry and manuscript-number artifacts are terminal scientific evidence"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_PLUS_SCRIPT",
+    "reason": "The complete executed notebook is canonical for chronology and outputs; repository script/notebook archives are exact only for late cells 33-47.",
+    "path": "notebooks/archive/stage28_stability_novelty_control_executed.ipynb",
+    "registry": "docs/reproducibility/STAGE25_28_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "55a70a6",
+    "0029c28",
+    "e7ad028",
+    "ba011ec",
+    "738e3ee",
+    "3318e0b",
+    "aefeb93",
+    "2679d0c",
+    "515b930",
+    "f5de70d",
+    "94bbebf",
+    "ca538fa"
+  ],
+  "inputs": [
+    "Frozen Stage22R and Stage27 memberships, model recipes, validation thresholds and seed-42 artifacts",
+    "Frozen five-seed and random-membership specifications",
+    "Frozen component manifests, fit ledgers, seed-level summaries, shared-holdout receipt and final synthesis"
+  ],
+  "outputs": [
+    "results/stage28_stability_novelty_control/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Execute five-seed Stage22 validation stability for random-natural and chronological-natural ensembles",
+    "Execute five-seed chronology LOAO stability for five families and two learners",
+    "Execute matched five-seed random-LOAO controls on one membership per family",
+    "Close the 108-new-fit ledger and reconcile 12 historical reuses",
+    "Summarize learner-versus-seed variability and matched random-minus-chronological contrasts",
+    "Evaluate ten ensembles once on the historically opened shared Stage22R final holdout",
+    "Freeze the final claim registry, manuscript-number artifact and Stage28 synthesis receipt"
+  ],
+  "would_touch_frozen_target": true,
+  "expected_compute_runtime": {
+    "historical_new_model_fits": 108,
+    "historical_reused_model_fits": 12,
+    "historical_chronology_loao_realizations": 50,
+    "historical_random_loao_realizations": 50,
+    "historical_shared_holdout_component_inferences": 20,
+    "historical_shared_holdout_ensemble_evaluations": 10,
+    "verification_mode": "Presence and streaming SHA256 only; no models/probability arrays deserialized and no target or holdout accessed"
+  },
+  "verification_artifacts": [
+    "notebooks/archive/stage28_stability_novelty_control_executed.ipynb",
+    "scripts/stage28/stage28_full_kaggle_notebook.ipynb",
+    "scripts/stage28/stage28_full_kaggle_notebook.py",
+    "scripts/stage28/notebook_export_manifest.json",
+    "results/stage28_stability_novelty_control/stage28_0_protocol_lock/seed_spec.json",
+    "results/stage28_stability_novelty_control/stage28_0a_preexecution_amendment/effective_fit_budget.json",
+    "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest.csv",
+    "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest_receipt.json",
+    "results/stage28_stability_novelty_control/stage28_1c_model_input_identity_freeze/stage28_component_input_binding.csv",
+    "results/stage28_stability_novelty_control/stage28_3a_experiment_closure_audit/stage28_3a_component_closure_audit.csv",
+    "results/stage28_stability_novelty_control/stage28_3a_experiment_closure_audit/stage28_3a_new_fit_ledger_audit.csv",
+    "results/stage28_stability_novelty_control/stage28_3a_experiment_closure_audit/stage28_3a_experiment_closure_receipt.json",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_loao_seed_level_metrics.csv",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_receipt.json",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3c_random_vs_chronological_five_seed_summary.csv",
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3c_receipt.json",
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_receipt.json",
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_seed_level_metrics.csv",
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_stage22_directional_stability_summary.csv",
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_shared_holdout_ensemble_probabilities.npz",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_claim_registry.csv",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_manuscript_numbers.json",
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_synthesis_receipt.json"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage28_stability_novelty_control_executed.ipynb": {"size_bytes": 2973910, "sha256": "3d67dacd97050683de6b2d797e76cdefc4b35ed4f6bc13bb91992ea5c43e9f95"},
+    "scripts/stage28/notebook_export_manifest.json": {"size_bytes": 1935, "sha256": "f95fdb77c41ef94042ffa82591deb6bc31a66d22807c88a4b03909166426f155"},
+    "results/stage28_stability_novelty_control/stage28_0_protocol_lock/seed_spec.json": {"size_bytes": 1583, "sha256": "6463c649f0a104ffd1aeba9e784df1dca41626be3b10099e9768e22c9b4d622c"},
+    "results/stage28_stability_novelty_control/stage28_0a_preexecution_amendment/effective_fit_budget.json": {"size_bytes": 1825, "sha256": "141398ed13f791bdd5c6ed4a896442aa54773c836ea61b3e6e8890a61d19346c"},
+    "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest.csv": {"size_bytes": 48418, "sha256": "8782c812647f2e96901766f10435e45f7e20d70f9af9afa72753f81c5449dfc1"},
+    "results/stage28_stability_novelty_control/stage28_1b_random_loao_membership_and_execution_lock/stage28_component_execution_manifest_receipt.json": {"size_bytes": 1591, "sha256": "363e5cc8c2e744cf1945be7af6facdaf61e6834704a902c8f9ebe58ea492eeb8"},
+    "results/stage28_stability_novelty_control/stage28_1c_model_input_identity_freeze/stage28_component_input_binding.csv": {"size_bytes": 63479, "sha256": "554a551820928ecec904bfe4633cadb2d603e345d4a9e06d03da9a4b35d1fc8a"},
+    "results/stage28_stability_novelty_control/stage28_3a_experiment_closure_audit/stage28_3a_component_closure_audit.csv": {"size_bytes": 88302, "sha256": "59f2d5cf3652731247d217b9cc1984be0c7a946b28164a86c27147d9f1835170"},
+    "results/stage28_stability_novelty_control/stage28_3a_experiment_closure_audit/stage28_3a_new_fit_ledger_audit.csv": {"size_bytes": 22597, "sha256": "aa40c5cc6d953c9a23b183ac6d768cdeb90a91db8230eed093f2d15d1c33fae1"},
+    "results/stage28_stability_novelty_control/stage28_3a_experiment_closure_audit/stage28_3a_experiment_closure_receipt.json": {"size_bytes": 3783, "sha256": "e0d4b42c303ed8a382104dd27b2ab97f1d08411cbb6f00e9b5753d8ec53e6345"},
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_loao_seed_level_metrics.csv": {"size_bytes": 85597, "sha256": "0ad43a29d07259d1566a0a4d5d28dade934516b8dd04db92a5ec59c32350ac4f"},
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3b_receipt.json": {"size_bytes": 2073, "sha256": "616760ba14ee63c5b3538a83b73a28ad7f69666608bb9496946ab654fda03fd1"},
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3c_random_vs_chronological_five_seed_summary.csv": {"size_bytes": 59409, "sha256": "a7a41822bc4e489bc08fd27d0354a2be93146ca2ea29afdfdffd5d05bb964578"},
+    "results/stage28_stability_novelty_control/stage28_3_seed_uncertainty/stage28_3c_receipt.json": {"size_bytes": 2932, "sha256": "a4ebba8feff23f47a03c963a14789bd7632f18af967d7df6c5b2b66952b4a70e"},
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_receipt.json": {"size_bytes": 9133, "sha256": "d066313fbe89930193349390db9defa88d6ff3d647e81dfda3b62960bc0c5e2f"},
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_seed_level_metrics.csv": {"size_bytes": 9783, "sha256": "061b556eff7139de9b68e235dd5193bf6922668d78b16294cb360c2db785c27c"},
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_stage22_directional_stability_summary.csv": {"size_bytes": 297, "sha256": "6f1a1a846a3b16a4423a66c19d18e5e93015d9c96eb0dac73e9faf967997f4da"},
+    "results/stage28_stability_novelty_control/stage28_4_stage22_shared_final_holdout/stage28_4_shared_holdout_ensemble_probabilities.npz": {"size_bytes": 37068834, "sha256": "ef1944bcc37fce1777e40b54cf8da120ca8f8571d27bc30a9515e1b94197e00e"},
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_claim_registry.csv": {"size_bytes": 13778, "sha256": "c14f65dcd5623bbab13e78f1f2c532ceb63ae031d67f41f432bccd2be6c548ad"},
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_manuscript_numbers.json": {"size_bytes": 2962, "sha256": "7d9ae5f60c5cae7c1950c1dd595829f152e56b6041d898014911be36b4e04c47"},
+    "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_synthesis_receipt.json": {"size_bytes": 4220, "sha256": "0d23f8a9afd0ced148e21d5c389f883b63df7e7b109645b48019eabe01ecc15e"}
+  },
+  "methodology": {
+    "reproducibility_classification": "PARTIALLY_REPRODUCIBLE_STATIC_SCIENTIFIC_EVIDENCE",
+    "seeds": [42, 43, 44, 45, 46],
+    "reference_seed": 42,
+    "random_membership_seed": 42,
+    "random_membership_fixed_across_model_seeds": true,
+    "families": ["BOT", "DDOS", "INFILTRATION", "PORT_SCAN", "WEB_ATTACK"],
+    "learners": ["XGBOOST", "LIGHTGBM"],
+    "component_manifest": {
+      "total": 120,
+      "authorized_new_fits": 108,
+      "consumed_new_fits": 108,
+      "remaining_new_fits": 0,
+      "historical_reuses": 12,
+      "scientific_evaluation_cells": 110
+    },
+    "arms": {
+      "stage22_seed_stability_components": 20,
+      "chronology_loao_seed_realizations": 50,
+      "random_loao_seed_realizations": 50,
+      "shared_holdout_ensemble_evaluations": 10,
+      "shared_holdout_component_inferences": 20
+    },
+    "seed_uncertainty": {
+      "training_seed_and_bootstrap_uncertainty_separate": true,
+      "best_seed_reporting": false,
+      "new_qualitative_cutoff": false,
+      "new_formal_statistical_test": false
+    },
+    "shared_holdout": {
+      "historically_opened_stage22r_holdout": true,
+      "rows": 1374133,
+      "ensemble": "ENS_LGBM_XGB_EQUAL",
+      "threshold_source": "FROZEN_DEVELOPMENT_VALIDATION_ONLY",
+      "final_holdout_threshold_search": false,
+      "PR_RANDOM_LT_CHRONO": {"supporting": 5, "total": 5},
+      "ROC_RANDOM_LT_CHRONO": {"supporting": 5, "total": 5}
+    },
+    "final_wall": {
+      "stage28_final_empirical_stage": true,
+      "stage29_authorized": false,
+      "new_fits_authorized": 0,
+      "target_reopenings_authorized": 0,
+      "threshold_reselection_authorized": 0,
+      "new_significance_tests_authorized": 0,
+      "new_qualitative_cutoffs_authorized": 0
+    },
+    "scientific_execution_authorized": false,
+    "model_fitting_authorized": false,
+    "inference_authorized": false,
+    "target_access_authorized": false,
+    "probability_array_deserialization_authorized": false,
+    "threshold_selection_authorized": false,
+    "bootstrap_generation_authorized": false
+  },
+  "environment": {
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "scikit_learn": "1.6.1",
+    "xgboost": "VERSION_NOT_PROVEN",
+    "lightgbm": "VERSION_NOT_PROVEN",
+    "execution_device": "CPU",
+    "note": "Membership receipts prove Python/NumPy/scikit-learn. Stage28 execution receipts do not independently freeze the XGBoost/LightGBM package versions."
+  },
+  "holdout_policy": {
+    "shared_holdout_ensemble_evaluations_consumed": 10,
+    "additional_openings_remaining": 0,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only; NPZ bytes may be hashed but never deserialized"
+  }
+}

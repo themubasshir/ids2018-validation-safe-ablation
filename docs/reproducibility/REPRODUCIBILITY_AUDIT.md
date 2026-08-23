@@ -5,6 +5,11 @@
 This audit was materialized on branch `manuscript-reproducibility-cleanup`
 from starting HEAD `ca538faa4d39ef7f8921d98399c261944c905f28`.
 
+The approved Stage21-Stage24 reconciliation extends the accepted Stage20
+checkpoint `f5e4e5b` on the same branch. It inventories later user-supplied
+executed notebooks before consolidation and applies the evidence order below
+without modifying accepted Stage01-Stage20 commits.
+
 The scientific program is closed through Stage28. This work is source
 preservation, provenance mapping and reproducibility engineering only. It does
 not authorize model fitting, inference, threshold selection, holdout access,
@@ -153,11 +158,24 @@ Key findings after the approved Stage01-Stage20 extraction checkpoint:
   CNN, evaluation and governance namespaces. No raw forensic or learning path
   is exposed. Its authoritative per-cell detail is in
   `STAGE20_SUBSTAGE_MAP.md` and `STAGE20_CELL_MAP.csv`.
-- Stage21 preserves eight Python sources in addition to the embedded notebook
-  cells.
-- Stage22/Stage22R has extensive frozen evidence but no standalone scientific
-  script or notebook in the repository.
-- Stages23-28 have substantially stronger script/notebook preservation.
+- Stage21 is `NOTEBOOK_PLUS_SCRIPT`: initial restoration is in NB001 cells
+  462-488, continuation is in NB007 cells 2-85, and exact executed workers plus
+  model/XAI/publication scripts are preserved. The Stage18 feasibility finding
+  remains historically distinct from the later Stage20/21 recovery.
+- Stage22 is `NOTEBOOK_CANONICAL`: NB007 cells 86-139 and complete frozen
+  Stage22R artifacts preserve four development cells and the permanently
+  closed shared forward holdout. No standalone historical scientific Python
+  script exists, so the new interface exposes static contracts only.
+- Stage23 is `SCRIPT_CANONICAL` for methodology and notebook-canonical for
+  execution/output evidence. The 50-of-50 fit budget, fixed subsets, placebo
+  and stump controls, bootstrap/SHAP evidence and final closure are preserved
+  without importing the monolithic worker.
+- Stage24 is `NOTEBOOK_PLUS_SCRIPT`: the full executed NB009 supplies chronology
+  absent from the sanitized NB003/script. Four fits and six evaluable openings
+  are closed; two GROUNDED_S4 cells remain administratively cancelled before
+  opening and their slots were not reallocated.
+- Stages25-28 remain outside this approved extraction block and were not
+  changed by the Stage21-Stage24 work.
 
 Stages01-13 use functional result roots such as `results/baseline`,
 `results/tuning`, `results/threshold` and `results/holdout`, whereas later
@@ -190,6 +208,17 @@ Examples proven by receipts include:
   PyTorch 2.10.0+cu126, CUDA 12.6 and cuDNN 9.1.0.2 on a Tesla P100;
 - Stage20 later final-holdout amendment: PyTorch 2.10.0+cu126 on a Tesla T4,
   recorded as `NOTEBOOK_CELL_NOT_MAPPED` rather than assigned to cells 455-461;
+- Stage21 training/evaluation: Python 3.12.13, NumPy 2.4.6, PyTorch
+  2.10.0+cu126, CUDA 12.6 and cuDNN 9.1.0.2 on a Tesla T4;
+- Stage22R: NumPy 2.0.2, pandas 2.3.3, scikit-learn 1.6.1, LightGBM 4.6.0 and
+  XGBoost 3.2.0, with LightGBM on CPU and XGBoost on CUDA; Python version and
+  GPU model are `VERSION_NOT_PROVEN`;
+- Stage23: NumPy 2.0.2, pandas 2.3.3, scikit-learn 1.6.1, LightGBM 4.6.0,
+  XGBoost 3.2.0 and SHAP 0.51.0, with Python version and GPU model
+  `VERSION_NOT_PROVEN`;
+- Stage24: its own bootstrap receipt proves Python 3.12.13, NumPy 2.0.2,
+  pandas 2.3.3, PyArrow 24.0.0, scikit-learn 1.6.1, LightGBM 4.6.0,
+  XGBoost 3.2.0 and CatBoost 1.2.10 on two Tesla T4 GPUs;
 - Stage26 GPU receipt: PyTorch 2.10.0+cu128 on a Tesla T4.
 
 The historical TensorFlow version is unproven for the early neural stages but
@@ -204,11 +233,11 @@ The Stage15 environment history also contains a superseded system PyTorch
 with the isolated 2.7.1+cu118 environment that passed matrix, forward,
 backward and optimizer checks. See `STAGE15_ENVIRONMENT_PROVENANCE.md`.
 
-## Stage01-Stage20 equivalence checkpoint
+## Stage01-Stage24 equivalence checkpoint
 
-The non-scientific suite contains 93 tests and passes in full. The 73 rows in
+The non-scientific suite contains 108 tests and passes in full. The 93 rows in
 `EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence levels
-as follows: six Level A byte-identity checks, 40 Level B exact static/numerical
+as follows: 11 Level A byte-identity checks, 55 Level B exact static/numerical
 checks, 18 Level C fixture/tolerance checks and nine Level D
 structural/provenance checks.
 
@@ -262,13 +291,35 @@ cost-ratio threshold search does not apply an FPR filter. The 5% FPR constraint
 is provenance for the frozen Stage04 security points only; the safe extraction
 preserves that distinction.
 
+Stages21-24 are classified **partially reproducible**. Each now has an
+execution-disabled protocol, a dry-run/verify-only public entry point, exact
+source classification and static equivalence coverage. Stage21 has strong
+worker/checkpoint provenance but depends on external restored corpora. Stage22
+has strong notebook/result coverage and 13 byte anchors, but lacks a standalone
+historical scientific script and has unproven Python/GPU identity. Stage23 has
+the strongest preserved executable methodology of this block, but the safe
+interface intentionally does not import or run it and Python/GPU identity is
+unproven. Stage24 has a complete executed chronology, frozen semantic bridges,
+terminal fit/opening ledgers and stage-specific runtime evidence, while both
+GROUNDED_S4 cells remain correctly non-evaluable.
+
+The Stage21-Stage24 tests read notebook JSON and source text, inspect static
+JSON/CSV metadata and stream 44 declared artifact identities. They never
+deserialize a model/checkpoint/probability array. No training, inference,
+threshold reselection, bootstrap generation, SHAP computation, corpus/data
+materialization, target opening, source refit, feature-bridge modification or
+cross-dataset evaluation occurred.
+
 ## Audit conclusion
 
 The repository contains extensive frozen evidence and strong closure records,
-but executable coverage remains uneven. The authoritative notebook closes the
-largest source-preservation gap for Stages01-20, and the approved Stage01-20
-block is now represented by explicit, safety-gated code and configuration.
-Cell 171 remains mapped only to Stage16 and was not included in Stage15. Cells
-462-488 remain Stage21 and were not extracted. Further work must begin only
-with a new explicit Stage21 approval. Scientific execution remained prohibited
-throughout this extraction.
+but executable coverage remains uneven. The approved Stage01-Stage24 boundary
+is now represented by provenance-bearing code/configuration and safety-gated
+interfaces. Cell 171 remains mapped only to Stage16. Cells 462-488 remain the
+initial Stage21 restoration range and are explicitly reconciled with the later
+NB007 continuation rather than treated as a complete program.
+
+Stage22 central temporal claims, Stage23 shortcut-audit claims and Stage24
+bidirectional transfer claims now have 29 rows of manuscript-critical
+traceability. Scientific execution remained prohibited throughout. This work
+stops after Stage24; Stage25 requires new explicit approval.

@@ -365,3 +365,29 @@ Notes:
 Recovery, repair, superseded and packaging code must not be promoted into a
 canonical scientific path without an explicit evidence-backed decision in the
 discrepancy register.
+
+## Stage21-Stage24 reconciled source map
+
+The later executed notebook archives are inventoried in
+`NOTEBOOK_INVENTORY.csv`; substage-level notebook/script/result/commit decisions
+are in `STAGE21_24_SOURCE_REGISTRY.csv`. These sources complement rather than
+replace the 488-cell archive above.
+
+| Stage | Physical cells and sources | Canonical classification | Safe interface |
+|---:|---|---|---|
+| 21 | NB001 cells 462-488; NB007 cells 2-85; exact Stage21 worker/model/XAI/publication scripts | `NOTEBOOK_PLUS_SCRIPT` | `configs/stage21/protocol.json`; `scripts/reproduce_stage21.py` |
+| 22 | NB007 cells 86-139; Stage22/Stage22R frozen artifacts; no standalone historical scientific script | `NOTEBOOK_CANONICAL` | `configs/stage22/protocol.json`; `scripts/reproduce_stage22.py` |
+| 23 | NB008 cells 1-78; 75-cell historical methodology export; frozen results | `SCRIPT_CANONICAL` for methodology and notebook-canonical for outputs | `configs/stage23/protocol.json`; `scripts/reproduce_stage23.py` |
+| 24 | NB009 cells 1-62; NB003/sanitized script cover the recovered continuation | `NOTEBOOK_PLUS_SCRIPT` | `configs/stage24/protocol.json`; `scripts/reproduce_stage24.py` |
+
+Stage21's two notebook ranges are chronological complements: cells 462-488
+are the initial Monday/Tuesday restoration only. Stage22 development
+validation and the shared forward final holdout remain separate evidence
+layers. Stage23 notebook cells 76-78 are post-closure export operations, not
+part of the 75-cell scientific export. Stage24 NB003 code cells 2-45 map to
+NB009 cells 18-60, with full cell 40 duplicated once; NB009 cells 1-17 and
+61-62 uniquely preserve pre-opening and packaging chronology.
+
+No safe entry point exposes scientific execution. `--dry-run` discloses the
+historical operations and target-touch boundary; `--verify-only` performs
+presence and streaming SHA256 checks only.

@@ -15,7 +15,7 @@ Branch: `manuscript-reproducibility-cleanup`
 | 5 | `REPRODUCE.md` current | PASS | Declares Stage 28 terminality, Stage 29 non-experimental status, safe modes, classifications, setup, and verification commands. |
 | 6 | `references.bib` current | PASS | 27 unique entries; SHA-256 `b42b3796eda26209d3296a0449b19a92291dd9b1579641c6ec91215d9f15c8ec`. |
 | 7 | All JSON configs parse | PASS | 33/33 tracked JSON files under `configs/` parse. |
-| 8 | All CSV registries parse | PASS | 53/53 governed registry/audit CSVs under the documentation, environment, manuscript, and Stage 29 synthesis surfaces parse with consistent row widths. |
+| 8 | All CSV registries parse | PASS | 54/54 governed registry/audit CSVs under the documentation, environment, manuscript, and Stage 29 synthesis surfaces parse with consistent row widths. |
 | 9 | All tests pass | PASS | Focused pre-release tests pass 18/18; full approved suite passes 205/205. |
 | 10 | No internal draft-status prose in canonical manuscript | PASS | Static scan finds no manuscript/pass/status metadata targeted by Pass 2C. |
 | 11 | No unresolved reference gaps | PASS | 27/27 citation-audit rows are resolved; no new reference was added. |

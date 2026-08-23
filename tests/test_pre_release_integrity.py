@@ -255,7 +255,7 @@ class PreReleaseIntegrityTests(unittest.TestCase):
             STAGE29,
         )
         paths = sorted({path for root in roots for path in root.rglob("*.csv")})
-        self.assertEqual(len(paths), 53)
+        self.assertEqual(len(paths), 54)
         for path in paths:
             with self.subTest(path=path.relative_to(ROOT).as_posix()):
                 with path.open(encoding="utf-8-sig", newline="") as handle:

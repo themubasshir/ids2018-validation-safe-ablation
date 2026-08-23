@@ -1,0 +1,181 @@
+{
+  "stage": 27,
+  "name": "Leave-one-attack-family-out unseen-family generalization audit",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage27_loao_unseen_attack_executed.ipynb:1-47",
+      "scripts/stage27/stage27_loao_unseen_attack.py:exact supplied cells 34-45 after newline normalization",
+      "scripts/stage27/stage27_publication_integration.py:frozen-result publication generator"
+    ],
+    "notebook_sha256": "9180523c74e91fcb5b15a2ae6563db7567faa06d0e94710d718a197de4ff15cf",
+    "historical_sources": [
+      "Supplied executed notebook is the only complete 47-cell history",
+      "Repository notebook and script preserve only supplied cells 34-45",
+      "Supplied cells 2-33 preserve the scientific protocol and execution absent from the repository script",
+      "Supplied cells 46-47 are post-scientific source-export recovery"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_PLUS_SCRIPT",
+    "reason": "The complete executed notebook is canonical for scientific history; scripts cover only late recovery/synthesis and frozen-result publication scopes.",
+    "path": "notebooks/archive/stage27_loao_unseen_attack_executed.ipynb",
+    "registry": "docs/reproducibility/STAGE25_28_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "da1cc26",
+    "1ea6bed",
+    "c5ad77b",
+    "9bdf2c1",
+    "8994c42",
+    "bffa77c",
+    "9771631",
+    "17b734f",
+    "4195be1",
+    "0e14395",
+    "9254170",
+    "6659772"
+  ],
+  "inputs": [
+    "Frozen seven-family taxonomy and family-by-day feasibility evidence",
+    "Frozen five eligible-fold memberships and 70-feature input receipts",
+    "Frozen learner/model, threshold, opening, bootstrap and similarity artifacts"
+  ],
+  "outputs": [
+    "results/stage27_loao_unseen_attack/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Construct five chronology-valid LOAO folds with zero held-out-family train and validation exposure",
+    "Fit XGBoost and LightGBM once per eligible fold under CPU-only backend policy",
+    "Select balanced and security thresholds using known-family validation only",
+    "Consume one target opening per eligible fold for held-out-family and known-family controls",
+    "Generate fixed 2000-replicate stratified row-bootstrap uncertainty and descriptive behavioral similarity",
+    "Freeze qualified selective-family-transfer, learner-dependence and ranking/threshold-divergence conclusions"
+  ],
+  "would_touch_frozen_target": true,
+  "expected_compute_runtime": {
+    "historical_model_fits": 10,
+    "historical_target_openings": 5,
+    "historical_bootstrap_replicates_per_family_learner": 2000,
+    "verification_mode": "Static JSON/CSV declarations and streaming hashes only; no memberships materialized, models loaded, inference run, targets opened or bootstrap generated"
+  },
+  "verification_artifacts": [
+    "notebooks/archive/stage27_loao_unseen_attack_executed.ipynb",
+    "scripts/stage27/stage27_loao_unseen_attack.py",
+    "scripts/stage27/stage27_publication_integration.py",
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/taxonomy.json",
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/fold_spec.json",
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/model_inventory.json",
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/threshold_policy.json",
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/uncertainty_spec.json",
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_BOT_membership_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_DDOS_membership_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_INFILTRATION_membership_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_PORT_SCAN_membership_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_WEB_ATTACK_membership_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/model_artifact_manifest.json",
+    "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/wednesday_validation_threshold_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/thursday_target_opening_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/friday_target_opening_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/bootstrap_execution_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/bootstrap_summary.json",
+    "results/stage27_loao_unseen_attack/stage27_3b_similarity/stage27_3b1_execution/family_similarity_results.json",
+    "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_final_primary_metrics.csv",
+    "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_synthesis_receipt.json",
+    "results/stage27_loao_unseen_attack/stage27_publication_package/stage27_publication_manifest.json"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage27_loao_unseen_attack_executed.ipynb": {"size_bytes": 5058625, "sha256": "9180523c74e91fcb5b15a2ae6563db7567faa06d0e94710d718a197de4ff15cf"},
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/taxonomy.json": {"size_bytes": 1420, "sha256": "f3451436dab5c206ce98896c3d0d08ebdbfedb08b8e8144691181e42dc4883a1"},
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/fold_spec.json": {"size_bytes": 12165, "sha256": "5120a0fefe9535b0d15f4746aaa97ea617d031c6d55c97dd0555caa67f943cc5"},
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/model_inventory.json": {"size_bytes": 3360, "sha256": "6b1ddbb2a273e24ea391e621ae9ba400a0c4c552aae47f60277947a5a989df3e"},
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/threshold_policy.json": {"size_bytes": 1204, "sha256": "8e89a8e939bf870204c1a5ea0790cba6b8a5c1ab30a63517ef39e7ec775837c0"},
+    "results/stage27_loao_unseen_attack/stage27_0_protocol_lock/uncertainty_spec.json": {"size_bytes": 1070, "sha256": "93b2943e352da0ada766d9c571519d1e2535228a36a05d4dcf28fc35358e25cb"},
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_BOT_membership_receipt.json": {"size_bytes": 5198, "sha256": "dbf699f2532368bf17d3138e951cd6923d41aff4bcd2f69c839ccb88c54ddfce"},
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_DDOS_membership_receipt.json": {"size_bytes": 5205, "sha256": "247141d3c8455d4dda8139443f0836dc1041896064baffeb5241933cccecab0d"},
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_INFILTRATION_membership_receipt.json": {"size_bytes": 5223, "sha256": "baa888cfdd2ad3258e52e8a883cef559af24987e3198dd29a46336b880b45771"},
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_PORT_SCAN_membership_receipt.json": {"size_bytes": 5230, "sha256": "a9535b93d520e9aa9ff9756fb04365d5687a7627b7e6dee168e1e95ebfcbb376"},
+    "results/stage27_loao_unseen_attack/stage27_1a_fold_membership/fold_WEB_ATTACK_membership_receipt.json": {"size_bytes": 5196, "sha256": "2a22d3a3390c1d48e5ae4ac46ff3b88157d67697fe42ccd39b7c2be47cfdf621"},
+    "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/model_artifact_manifest.json": {"size_bytes": 13134, "sha256": "0512e37fee0112d148a69c3999a74eb17a2ae19350ad11aa5f25010991ff0c5a"},
+    "results/stage27_loao_unseen_attack/stage27_2a_preopening_models/wednesday_validation_threshold_receipt.json": {"size_bytes": 154017, "sha256": "7f474c69d6a7e1368ac9d900faffce2775d73244491359b0dc15167bc4d9e177"},
+    "results/stage27_loao_unseen_attack/stage27_2b_thursday_openings/thursday_target_opening_receipt.json": {"size_bytes": 3254, "sha256": "d491cc204486cb7312d1281736428ce77c1fcd4b4af032334d040e40e5e3c7ac"},
+    "results/stage27_loao_unseen_attack/stage27_2c_friday_openings/friday_target_opening_receipt.json": {"size_bytes": 4487, "sha256": "eedcb8942582bf042b3a2fd948f287b690125a031450d94d24e2037bbf2869f6"},
+    "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/bootstrap_execution_receipt.json": {"size_bytes": 23789, "sha256": "41c1a7575fb725fd91cb9a8053f9bae6f332b1c1a4f5ee8b2416531c542aaa9d"},
+    "results/stage27_loao_unseen_attack/stage27_3a_bootstrap_uncertainty/bootstrap_summary.json": {"size_bytes": 76929, "sha256": "b240029cc8ad981423ec53bd6170ce1148960216b74c8a0ea044decc8f74cc4f"},
+    "results/stage27_loao_unseen_attack/stage27_3b_similarity/stage27_3b1_execution/family_similarity_results.json": {"size_bytes": 8867, "sha256": "cccfe4982bbaba7ddc2bd0ba60a894eafa37f6bdebb3a73d67402adb6bc00119"},
+    "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_final_primary_metrics.csv": {"size_bytes": 3210, "sha256": "42ea04b3f21e6026d5d69c8d5b59aa1edd2b57e94c42da3b9f70587349704634"},
+    "results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/stage27_synthesis_receipt.json": {"size_bytes": 2938, "sha256": "c72736272c0bf2577ff6ec13483e3de41f971fd7df3ce9b9293e46fb93a79662"},
+    "results/stage27_loao_unseen_attack/stage27_publication_package/stage27_publication_manifest.json": {"size_bytes": 3304, "sha256": "a1b5e4f1a2d54aff4e5c581cf7aced61abc657d3565c342877596e29fd487ae2"}
+  },
+  "methodology": {
+    "reproducibility_classification": "PARTIALLY_REPRODUCIBLE_STATIC_SCIENTIFIC_EVIDENCE",
+    "taxonomy": {
+      "family_order": ["BOT", "DDOS", "DOS", "AUTH_BRUTE_FORCE", "INFILTRATION", "PORT_SCAN", "WEB_ATTACK"],
+      "eligible_folds": ["BOT", "DDOS", "INFILTRATION", "PORT_SCAN", "WEB_ATTACK"],
+      "structurally_ineligible_folds": ["DOS", "AUTH_BRUTE_FORCE"],
+      "inferential_folds": ["BOT", "DDOS", "PORT_SCAN", "WEB_ATTACK"],
+      "descriptive_only_folds": ["INFILTRATION"],
+      "minimum_positive_support_for_inferential_claim": 50,
+      "literal_zero_day_claim": false
+    },
+    "fold_invariant": {
+      "held_out_family_train_count": 0,
+      "held_out_family_validation_count": 0,
+      "eligible_fold_receipts_passing": 5
+    },
+    "learners": ["XGBOOST", "LIGHTGBM"],
+    "execution_device": "CPU",
+    "fit_budget": {"authorized": 10, "completed": 10, "remaining": 0, "additional_authorized": 0},
+    "class_weight": {
+      "negative": 1.0,
+      "positive_formula": "train_benign/train_attack",
+      "validation_rows_used": 0,
+      "target_rows_used": 0
+    },
+    "thresholds": {
+      "selection_population": "KNOWN_FAMILY_VALIDATION_ONLY",
+      "standard": 0.5,
+      "grid_start": 0.01,
+      "grid_stop": 0.99,
+      "grid_step": 0.01,
+      "grid_count": 99,
+      "target_search": false,
+      "post_target_change": false
+    },
+    "opening_ledger": {"budget": 5, "consumed": 5, "remaining": 0, "reopening_authorized": false},
+    "bootstrap": {"replicates": 2000, "seed": 42, "method": "STRATIFIED_ROW_BOOTSTRAP", "regeneration_authorized": false},
+    "final_synthesis": {
+      "family_learner_primary_rows": 10,
+      "operating_point_rows": 30,
+      "novelty_gap_rows": 10,
+      "similarity_family_rows": 5,
+      "conclusion_labels": ["SELECTIVE_FAMILY_TRANSFER", "RANKING_THRESHOLD_DIVERGENCE", "LEARNER_DEPENDENCE"]
+    },
+    "scientific_execution_authorized": false,
+    "model_fitting_authorized": false,
+    "inference_authorized": false,
+    "target_access_authorized": false,
+    "threshold_selection_authorized": false,
+    "bootstrap_generation_authorized": false,
+    "similarity_regeneration_authorized": false
+  },
+  "environment": {
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "scikit_learn": "1.6.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "joblib": "1.5.3",
+    "execution_device": "CPU",
+    "cuda_visible_devices": ""
+  },
+  "holdout_policy": {
+    "eligible_openings_consumed": 5,
+    "eligible_openings_remaining": 0,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only"
+  }
+}

@@ -296,43 +296,31 @@ These checks are modular. The appropriate subset depends on the claim, populatio
 
 ## 7. Limitations
 
-The following 18 limitations define the manuscript's claim ceilings. Grouping removes repeated caveats but does not merge distinct evidence constraints.
+The 18 governed limitations fall into six conceptual groups. The complete limitation-to-claim-ceiling matrix is provided with the supplementary and repository materials.
 
-### 7.1 Dataset and provenance
+### 7.1 Dataset and benchmark scope
 
-- **Benchmark-family scope (`LIM29-001`).** The empirical chain covers CSE-CIC-IDS2018 and a restricted CICIDS2017 bridge, not live enterprise, cloud, industrial, ISP, or IoT traffic. It cannot support portability claims for arbitrary operational networks or current attacks.
-- **Processed reference (`LIM29-002`).** The rebalanced binary reference and stratified split do not reproduce natural prevalence, session structure, or forward chronology. Its high metrics cannot serve as deployment evidence.
-- **Semantic bridge (`LIM29-004`).** Cross-dataset results depend on frozen bridge62/70 semantics, preprocessing, learners, direction, and targets. They cannot establish bridge-independent or symmetric portability.
-- **Cancelled memberships (`LIM29-005`).** Two `GROUNDED_S4` cells lacked recoverable exact physical-row membership and were cancelled before target opening. The study cannot claim that every preregistered cross-dataset sensitivity was executed.
-- **Unavailable artifacts (`LIM29-015`).** Raw datasets and some historical models, probabilities, explanation arrays, or source relationships are external, unavailable, or intentionally closed. Early metrics and exact relationships cannot all be regenerated through the safe interface.
-- **Source-restricted graph evidence (`LIM29-016`).** The graph experiment uses an endpoint-authenticated February 20 source, and unseen topology was not estimable. It cannot support graph deployment, unseen-host, or full-reference equivalence claims.
-- **Descriptive architecture comparison (`LIM29-017`).** The CNN/ViT comparison is one frozen restored-target contrast rather than a replicated architecture study. It cannot establish universal architecture superiority.
+The evidence covers two related benchmark families, CSE-CIC-IDS2018 and CICIDS2017, rather than current operational networks (`LIM29-001`). The processed reference is rebalanced and stratified, so its high metrics do not establish natural-prevalence, session, temporal, or deployment validity (`LIM29-002`). Some raw data and historical scientific artifacts are unavailable or intentionally closed (`LIM29-015`). The graph result is restricted to one authenticated source and cannot establish unseen-host or full-reference capability (`LIM29-016`). The CNN/ViT comparison is a single descriptive contrast, not evidence of general architecture superiority (`LIM29-017`).
 
-### 7.2 Evaluation and protocol
+### 7.2 Temporal and family-composition confounding
 
-- **Temporal/family entanglement (`LIM29-003`).** Chronological memberships also change family composition, and controls are mixed. The temporal contrast cannot be attributed solely to chronology or concept drift.
-- **LOAO eligibility (`LIM29-006`).** DOS and AUTH_BRUTE_FORCE cannot satisfy the day-atomic ordering, and eligible-family support is heterogeneous. The results cannot cover every benchmark family or define uniform unknown-family capability.
-- **Low-support Infiltration (`LIM29-007`).** Infiltration has 36 held-out positives and remains descriptive. It cannot carry family-level inference or pooled primary evidence.
-- **Historically reused target (`LIM29-018`).** Stage28 re-evaluates the already opened Stage22 target under a frozen stability protocol. This supports conclusion stability, not independent blind replication.
+Chronological memberships also change attack-family composition. Mixed controls therefore prevent attribution of the temporal contrast to chronology or concept drift alone (`LIM29-003`). The stability analysis reuses the historically opened shared target; it strengthens the frozen conclusion across realizations but is not an independent blind replication (`LIM29-018`).
 
-### 7.3 Statistical
+### 7.3 Cross-dataset and family-support constraints
 
-- **Conditional resampling (`LIM29-008`).** Historical paired intervals are conditional on frozen samples, arrays, and implementations. They cannot provide unconditional deployment uncertainty or population-wide significance.
-- **Finite seed scope (`LIM29-009`).** Five seeds test the frozen recipe without repeating full hyperparameter optimization. The 5/5 ordering is descriptive and cannot establish a population guarantee or optimization-process stability.
+Cross-dataset conclusions depend on bridge62/70 semantics, preprocessing, learners, direction, and target roles; they do not establish bridge-independent or symmetric portability (`LIM29-004`). Two `GROUNDED_S4` cells were cancelled because exact membership was unrecoverable, so not every planned sensitivity was executed (`LIM29-005`). LOAO coverage is also incomplete: DOS and AUTH_BRUTE_FORCE were structurally ineligible (`LIM29-006`), and Infiltration remains descriptive at 36 held-out positives (`LIM29-007`). These constraints preclude uniform conclusions across datasets or attack families.
 
-### 7.4 Operational
+### 7.4 Statistical and realization uncertainty
 
-- **Prior-probability shift (`LIM29-012`).** Stage25 holds true- and false-positive rates fixed while prevalence changes. It characterizes sensitivity to prevalence, not measured performance under simultaneous covariate, protocol, topology, user, or attacker shift.
-- **Workload and cost assumptions (`LIM29-013`).** Traffic, analyst service time, capacity, and relative costs are scenarios rather than organization-specific measurements. They cannot establish universal workload, utility, or economic preference.
+Paired confidence intervals are conditional on the frozen target samples, fitted models or arrays, and implementations; they do not describe unconditional deployment uncertainty (`LIM29-008`). Five registered seeds assess a fixed recipe without repeating full hyperparameter optimization. The 5/5 ordering is descriptive, not a significance test or population guarantee (`LIM29-009`).
 
-### 7.5 Hardware and computation
+### 7.5 Operational and hardware assumptions
 
-- **Measured component boundary (`LIM29-011`).** Stage26 covers compatible inference components on one hardware/software environment and omits complete capture-to-alert processing. It cannot establish universal latency, throughput, speedup, energy, or end-to-end deployment cost.
+The prior-shift analysis holds true- and false-positive rates fixed while prevalence changes. It measures sensitivity to that assumption, not performance under simultaneous covariate, protocol, topology, user, or attacker shift (`LIM29-012`). Traffic, analyst time, capacity, and relative costs are scenarios rather than organization-specific measurements (`LIM29-013`). Profiling covers compatible inference components on one hardware/software environment and omits complete capture-to-alert processing (`LIM29-011`). It cannot establish universal workload, economic value, latency, throughput, energy, or end-to-end cost.
 
-### 7.6 Reproducibility
+### 7.6 Historical reproducibility
 
-- **Historical environment ambiguity (`LIM29-010`).** Some dependencies and execution environments remain `VERSION_NOT_PROVEN`; adjacent receipts are not generalized. Bit-for-bit reconstruction of every historical environment is not supported.
-- **Incomplete full reruns (`LIM29-014`).** Static provenance, scalar evidence, configurations, canonical methods, archives, and equivalence tests make the manuscript chain auditable, but missing data or closed artifacts prevent some end-to-end reruns. The repository cannot claim that every result is locally regenerable.
+Some dependencies and execution environments remain `VERSION_NOT_PROVEN`, so bit-for-bit reconstruction of every historical environment is unsupported (`LIM29-010`). Static provenance, scalar evidence, configurations, archives, and equivalence tests make the manuscript chain auditable, but missing data and closed artifacts prevent some end-to-end reruns (`LIM29-014`). The repository therefore supports claim-level traceability, not complete local regeneration of every result.
 
 ## 8. Conclusion
 

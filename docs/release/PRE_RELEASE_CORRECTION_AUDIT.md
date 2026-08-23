@@ -14,7 +14,7 @@ The requested display changes are **not authorized by the frozen scientific-numb
 | `NUM29-091` | 0.667483 | 0.667483 | 0.67 | 6 decimals | BLOCKED; retain 0.667483 |
 | `NUM29-094` | 0.108176 | 0.108176 | 0.11 | 6 decimals | BLOCKED; retain 0.108176 |
 
-The authoritative rows are in `results/stage29_manuscript_synthesis/evidence/final_manuscript_numbers.csv`. The frozen Pass 2C protocol additionally states that these values must not be shortened to two decimals. Neither source values, Table 4, evidence artifacts, nor the registry were modified. Two-decimal abstract presentation requires an explicit scientific-number governance amendment before release.
+The authoritative rows are in `results/stage29_manuscript_synthesis/evidence/final_manuscript_numbers.csv`. The frozen Pass 2C protocol additionally states that these values must not be shortened to two decimals. Neither source values, the cross-dataset transfer table, evidence artifacts, nor the registry were modified. The request calls this Table 4, but it is Table 3 in the canonical manuscript; Table 4 is the operating-point translation table. Two-decimal abstract presentation requires an explicit scientific-number governance amendment before release.
 
 ## Limitations opening
 

@@ -14,7 +14,7 @@ Accepted pre-release baseline: `07e6b4a692d93501a4e2aad331e427b9a115dc0d`
 - Abstract word count: 201
 - Canonical bibliography: `manuscript/references.bib`
 
-The canonical manuscript differs from the immutable Pass 2C candidate only by removal of the explicit count “18” from the opening sentence of Section 7. The requested abstract displays `0.67` and `0.11` are not authorized by the frozen six-decimal registry rules, so the canonical abstract retains `0.667483` and `0.108176`. Full precision is also preserved in Table 4 and the registered source.
+The canonical manuscript differs from the immutable Pass 2C candidate only by removal of the explicit count “18” from the opening sentence of Section 7. The requested abstract displays `0.67` and `0.11` are not authorized by the frozen six-decimal registry rules, so the canonical abstract retains `0.667483` and `0.108176`. Full precision is also preserved in the cross-dataset transfer table (Table 3; the request called it Table 4) and the registered source.
 
 ## Resolution inventory
 

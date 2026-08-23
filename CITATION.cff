@@ -1,0 +1,23 @@
+cff-version: "1.2.0"
+message: "Please cite this research software using these metadata. A preferred manuscript citation will be added after the manuscript author list and publication metadata are finalized."
+title: "IDS Validation Under Distribution, Operational, and Provenance Constraints"
+type: software
+authors:
+  - family-names: "Rahman"
+    given-names: "J. M. Mubasshir"
+version: "pre-release"
+license: MIT
+repository-code: "https://github.com/themubasshir/ids2018-validation-safe-ablation"
+url: "https://github.com/themubasshir/ids2018-validation-safe-ablation"
+abstract: >-
+  Research software, safety-gated reproducibility interfaces, and frozen
+  evidence supporting the canonical manuscript “A Multi-Axis Validation
+  Framework for Machine-Learning Intrusion Detection.” Stage 28 is the final
+  empirical wall; current public interfaces expose static and non-scientific
+  verification rather than unrestricted experiment execution.
+keywords:
+  - intrusion detection
+  - machine learning
+  - reproducibility
+  - validation
+  - dataset shift

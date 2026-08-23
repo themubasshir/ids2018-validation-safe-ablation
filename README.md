@@ -153,9 +153,11 @@ the current reproduction guide.
 
 ## Citation
 
-A final manuscript citation is not yet available. Until then, cite the
-repository, commit hash, and the specific frozen artifact or equivalence row
-used in an analysis.
+Repository citation metadata are provided in [`CITATION.cff`](CITATION.cff).
+A preferred manuscript citation is intentionally deferred until its author
+list and publication metadata are finalized. Until then, cite the repository,
+commit hash, and the specific frozen artifact or equivalence row used in an
+analysis.
 
 ## License
 

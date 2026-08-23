@@ -1,0 +1,54 @@
+{
+  "schema_version": "stage29.static_consistency_audit.v1",
+  "audit_date": "2026-08-23",
+  "status": "PASS",
+  "scope": "Static synthesis integrity only; no model fitting, model deserialization, inference, target opening, probability-array analysis, threshold selection, bootstrap generation, timing, or new scientific metric computation.",
+  "inventory": {
+    "evidence_rows": 41,
+    "claim_rows": 20,
+    "figure_families": 105,
+    "main_figure_candidates": 9,
+    "supplement_figure_candidates": 41,
+    "excluded_figure_candidates": 55,
+    "table_candidates": 35,
+    "main_tables": 6,
+    "supplement_tier_tables": 29,
+    "limitations": 18,
+    "manuscript_numbers": 144,
+    "validity_axes": 9
+  },
+  "checks": {
+    "all_stage29_csv_json_parse": "PASS",
+    "duplicate_evidence_claim_number_figure_table_limitation_ids": "PASS",
+    "classification_matches_master_evidence_matrix": "PASS",
+    "all_nonremoved_claims_resolve_to_evidence": "PASS",
+    "all_claim_map_entries_resolve": "PASS",
+    "all_graph_evidence_figure_table_limitation_ids_resolve": "PASS",
+    "all_main_figures_support_claims": "PASS",
+    "all_main_tables_support_claims": "PASS",
+    "all_manuscript_numbers_resolve_to_pre_stage29_artifacts": "PASS",
+    "cancelled_evidence_only_supports_explicit_cancellation_claim": "PASS",
+    "low_support_evidence_remains_descriptive_or_qualified": "PASS",
+    "contradictory_evidence_requires_qualification_rewrite_or_removal": "PASS",
+    "prohibited_claims_do_not_survive": "PASS",
+    "no_heterogeneous_composite_score": "PASS",
+    "stage28_empirical_boundary_preserved": "PASS"
+  },
+  "test_results": {
+    "stage29_static_tests": {
+      "command": "python -m unittest tests.test_stage29_synthesis_consistency -v",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "repository_regression_suite": {
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 138,
+      "passed": 138,
+      "failed": 0,
+      "note": "Existing checks are read-only hash/schema/presence, toy-formula, or frozen-scalar equivalence tests; they do not fit/load models, open targets, analyze probability arrays, or create evidence."
+    }
+  },
+  "stage28_final_empirical_wall": true,
+  "stage29_new_scientific_evidence": false
+}

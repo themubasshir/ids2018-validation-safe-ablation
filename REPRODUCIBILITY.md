@@ -1,29 +1,73 @@
-# Reproducibility
+# Reproducibility Status
 
-The archive uses random state `42` and a stratified 64/16/20 split: 192,593 training records, 48,149 validation records, and 60,186 holdout test records. The full processed dataset has 300,928 rows, 78 predictor features, and excludes `Label` and `binary_label` from model inputs.
+The Stage1–28 reproducibility extraction is complete. The repository now has:
 
-`StandardScaler` is fit only on the training data. Scaled two-dimensional inputs are used for models that require scaling, raw tabular inputs are used for tree boosting where recorded, and neural models use their saved two-dimensional or three-dimensional representations according to the stage metadata and result tables.
+- 28 stage-specific configs;
+- 28 safety-gated public wrappers;
+- 28 extracted stage namespaces;
+- eight immutable executed notebook archives, plus separately classified
+  partial/export notebooks;
+- frozen result, environment, source and manuscript-claim registries;
+- an approved static equivalence/test suite.
 
-Boosting models were selected and tuned without holdout feedback. The available metadata records training-only cross-validation for boosting models and training-only early-stopping style selection for neural candidates. Final threshold selection was performed on validation outputs only.
+The complete user guide is [REPRODUCE.md](REPRODUCE.md). The reviewer-facing
+audit is
+`docs/reproducibility/FINAL_REPRODUCIBILITY_AUDIT.md`.
 
-The holdout test split is used only after model and threshold selection. Reported holdout metrics are descriptive final estimates, not selection criteria.
+## Scientific boundary
 
-CPU/GPU differences are documented in the result tables. Several archived runs used GPU acceleration for XGBoost, LightGBM, CatBoost, MLP, and 1D-CNN; CPU-only reruns can differ in timing and, for some libraries, tiny numeric details.
+Stage28 is the final empirical wall. Reproducibility engineering does not
+authorize fits, inference, target/holdout openings, threshold selection,
+bootstrap or explanation generation, timing, data reconstruction, feature
+analysis, new statistics, or Stage29 experiments.
 
-To restore artifacts, install `requirements.txt`, place the processed dataset locally if rerunning from data, and use the files in `metadata/` for feature names, split metadata, split indices, and scaler state. Verify the source archive checksum with the companion `.sha256` file when available.
+Every `scripts/reproduce_stageXX.py` wrapper requires exactly one of:
 
-Notebook availability: the archive bundle included `notebook9662bff2fb.ipynb`, copied here as `notebooks/original_kaggle_working_notebook.ipynb`. Stage-specific notebooks were not present, so this repository provides maintainable validation and report-generation scripts rather than reconstructed notebooks.
+```text
+--dry-run
+--verify-only
+```
 
-## Journal-Extension Reproducibility
+There is no default scientific execution mode.
 
-Stage 8 uses paired class-stratified percentile bootstrap confidence intervals with random state `42`, 2,000 successful replicates, and identical bootstrap indices for paired XGBoost/LightGBM comparisons.
+## Current classifications
 
-Stage 9 assesses calibration on the frozen holdout probabilities without recalibration. It uses 15-bin equal-width and equal-frequency reliability summaries, sensitivity checks with 10, 15, and 20 bins, Brier decomposition, and 2,000 paired bootstrap replicates.
+- Stage25 is fully reproducible from final frozen scalar inputs.
+- Stage26 methodology is reproducible; historical timings are archival and
+  hardware-specific.
+- Stages01–24 and 27–28 preserve partial/static scientific evidence and do not
+  claim end-to-end rerun reproducibility.
 
-Stage 10 uses a relative operational cost model where false-negative cost is expressed as a multiple of false-positive investigation cost. It evaluates validation-selected thresholds on the holdout set and reports break-even FN:FP ratios for switching to security operating points.
+Exact per-stage limitations are published in
+`docs/reproducibility/STAGE_REPRODUCIBILITY_STATUS.csv`.
 
-Stage 11 reconstructs holdout attack-category labels for category-level analysis. The included prediction manifest contains original dataset indices, category labels, binary labels, probabilities, and predictions; it does not contain raw predictor features.
+## Notebook availability
 
-Stage 12 is a fixed-hyperparameter multi-seed robustness study using seeds `42`, `52`, `62`, `72`, and `82`. For every seed, the split, model fitting, validation threshold selection, and holdout evaluation are repeated. The complete hyperparameter search is not repeated for every seed. The stage metadata records Linux CPU execution with 4 CPU threads for the robustness extension.
+The earlier statement that stage-specific notebooks were unavailable is no
+longer current. The repository now preserves complete executed archives for
+the Stage01–20 backbone and the Stage21–28 continuation notebooks. Their byte
+identities, sizes, cell counts and canonical roles are in
+`docs/reproducibility/NOTEBOOK_ARCHIVE_REGISTRY.csv`.
 
-Limitations: the extension quantifies uncertainty, calibration, operational trade-offs, category-level performance, and split/training robustness, but it remains a single-dataset study and does not establish cross-dataset generalization.
+Partial and sanitized exports remain separately classified; a smaller export
+must never replace a fuller historical execution archive.
+
+## Environments
+
+The modern tooling environment is defined under `environment/`. Historical
+environments remain stage-scoped and use `VERSION_NOT_PROVEN` wherever exact
+evidence is absent. P100, T4 and CPU records are not merged into one fictional
+runtime.
+
+## Data and targets
+
+Raw/processed source datasets and several historically materialized corpora
+remain external. Closed targets, holdouts, model artifacts and probability
+arrays are not automatically opened or deserialized. Static verification
+checks declarations, schemas and byte identities only.
+
+## Historical note
+
+The former pre-extraction reproducibility document is preserved at
+`docs/research_history/REPRODUCIBILITY_PRE_EXTRACTION.md` so its earlier state
+is auditable rather than silently rewritten.

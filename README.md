@@ -13,6 +13,14 @@ with a public, safety-gated reproducibility layer. Stage28 is the final
 experimental wall; current tooling verifies frozen evidence and provenance
 without reopening scientific targets.
 
+## Canonical manuscript
+
+The canonical scientific content is
+[`manuscript/manuscript_final_content.md`](manuscript/manuscript_final_content.md).
+The other manuscript candidates are preserved editorial baselines and must not
+be used for formatting or submission. See [`manuscript/README.md`](manuscript/README.md)
+for the canonicalization record.
+
 ## Research question
 
 Benchmark metrics are useful but insufficient evidence of deployment validity.
@@ -81,6 +89,7 @@ timings; other stages are honestly classified as partial/static evidence.
 
 | Path | Contents |
 |---|---|
+| `manuscript/` | Canonical scientific content, historical editorial baselines and bibliography |
 | `src/` | Reusable methodology and non-scientific infrastructure |
 | `configs/` | Stage1–28 protocols and Stage20 scoped subconfigs |
 | `scripts/` | Safety-gated wrappers and preserved historical scripts |

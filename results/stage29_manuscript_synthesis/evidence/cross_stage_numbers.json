@@ -1,0 +1,142 @@
+{
+  "schema_version": "stage29.cross_stage_numbers.v1",
+  "stage29_operation": "verbatim extraction and organization of frozen Stage1-28 values; no scientific recomputation",
+  "heterogeneous_metric_policy": "Values remain in native metrics and are never normalized or averaged across validity axes.",
+  "numbers": {
+    "reference_split": {
+      "evidence_id": "E29-001",
+      "train_rows": 192593,
+      "validation_rows": 48149,
+      "holdout_rows": 60186,
+      "source": "docs/RESULTS_SUMMARY.md"
+    },
+    "reference_benchmark": {
+      "evidence_ids": ["E29-003", "E29-004", "E29-005", "E29-006", "E29-007"],
+      "baseline_xgb_validation_f1": 0.925288775482207,
+      "tuned_xgb_validation_f1": 0.9269482744442312,
+      "balanced_xgb_threshold": 0.51,
+      "balanced_xgb_holdout_f1": 0.9285008671218141,
+      "balanced_xgb_holdout_fpr": 0.006083333333333333,
+      "balanced_xgb_holdout_roc_auc": 0.9801912125472036,
+      "balanced_xgb_holdout_pr_auc": 0.9776433333080397,
+      "security_lgb_threshold": 0.26,
+      "security_lgb_holdout_f1": 0.9177721052851823,
+      "security_lgb_holdout_f2": 0.9111605955862803,
+      "security_lgb_holdout_fpr": 0.04655555555555556,
+      "security_lgb_holdout_false_negatives": 2254,
+      "source": "docs/RESULTS_SUMMARY.md"
+    },
+    "uncertainty_calibration_cost": {
+      "evidence_ids": ["E29-009", "E29-010", "E29-011", "E29-012"],
+      "balanced_f1_difference": 0.000185061470508896,
+      "balanced_f1_difference_ci": [-0.0004952955263602676, 0.0008619090916325816],
+      "security_recall_difference": -0.0013644257008186278,
+      "security_false_negative_difference": 33,
+      "xgb_brier": 0.04277372026730192,
+      "lgb_brier": 0.04275382352223183,
+      "lgb_security_vs_balanced_break_even_fn_fp": 1.8407079646017699,
+      "break_even_ci": [1.6987043925893093, 1.9973514290693621],
+      "source": "docs/RESULTS_SUMMARY.md"
+    },
+    "local_explanation_reliability": {
+      "evidence_id": "E29-015",
+      "panel_size": 64,
+      "fully_qualified": 2,
+      "local_decision_failures": 31,
+      "xgb_mean_shap_lime_top10_jaccard": 0.304,
+      "lgb_mean_shap_lime_top10_jaccard": 0.360,
+      "source": "docs/STAGE13_LOCAL_EXPLANATION_RELIABILITY.md"
+    },
+    "stage18_feasibility": {
+      "evidence_ids": ["E29-016", "E29-017", "E29-018"],
+      "timestamp_recovered_rows": 192521,
+      "unique_temporal_provenance": 0.8536783,
+      "mixed_temporal_bin_rate": 0.1555201,
+      "validation_bins_within_30s_of_train": 0.9976558,
+      "vit_representations_passing": 0,
+      "vit_representations_audited": 7,
+      "graph_pr_auc": 0.9735953918848133,
+      "graph_roc_auc": 0.9986766395630168,
+      "graph_f1_at_frozen_threshold": 0,
+      "edge_only_pr_auc": 0.42976973171668154,
+      "source": "docs/STAGE18_MANUSCRIPT_INTEGRATION.md"
+    },
+    "stage21_architecture": {
+      "evidence_id": "E29-019",
+      "cnn_pr_auc": 0.48945269459245255,
+      "cnn_roc_auc": 0.43921400808023464,
+      "vit_pr_auc": 0.606536911289453,
+      "vit_roc_auc": 0.5686939700294255,
+      "pr_auc_delta": 0.11708421669700042,
+      "roc_auc_delta": 0.1294799619491908,
+      "inferential_status": "DESCRIPTIVE"
+    },
+    "stage22_temporal": {
+      "evidence_ids": ["E29-020", "E29-021"],
+      "shared_holdout_rows": 1374133,
+      "shared_holdout_attack_rows": 375345,
+      "shared_holdout_benign_rows": 998788,
+      "shared_holdout_prevalence": 0.2731504155711274,
+      "random_natural_pr_auc": 0.26295321962777995,
+      "random_natural_roc_auc": 0.5204903284767843,
+      "chronological_natural_pr_auc": 0.6107344875615713,
+      "chronological_natural_roc_auc": 0.8064180161824033,
+      "chronological_rebalanced_pr_auc": 0.6926302657182113,
+      "chronological_rebalanced_roc_auc": 0.8321639645817649,
+      "source": "results/stage22r_training/stage22r_final_single_holdout/stage22r_final_holdout_result.json"
+    },
+    "stage24_cross_dataset": {
+      "evidence_ids": ["E29-024", "E29-025", "E29-026", "E29-027"],
+      "forward_effective_rows": 2830743,
+      "forward_bridge62_pr_auc": 0.667483,
+      "forward_bridge62_roc_auc": 0.733946,
+      "reverse_target_prevalence": 0.104847,
+      "reverse_bridge62_pr_auc": 0.108176,
+      "reverse_bridge62_roc_auc": 0.525167,
+      "flag_correction_delta_pr_auc": -0.007729,
+      "flag_correction_delta_roc_auc": 0.002192,
+      "flag_correction_delta_brier": 0.005087,
+      "grounded_s4_cancelled_cells": 2,
+      "source": "docs/STAGE24_MANUSCRIPT_INTEGRATION.md"
+    },
+    "stage25_operational": {
+      "evidence_ids": ["E29-028", "E29-029", "E29-030", "E29-031"],
+      "reference_prevalence": 0.001,
+      "random_standard_ppv": 0.965572,
+      "random_standard_analyst_hours_per_day": 33.5,
+      "chronological_standard_ppv": 0.000551068,
+      "chronological_standard_true_alerts_per_day": 0.0322,
+      "forward_standard_ppv_range": [0.039233, 0.060313],
+      "reverse_standard_ppv_range": [0.000257610, 0.000287993],
+      "cost_1_to_100_model_favored_at_0_1_percent": "15/24",
+      "cost_1_to_100_model_favored_at_0_01_percent": "3/24",
+      "source": "docs/STAGE25_MANUSCRIPT_INTEGRATION.md"
+    },
+    "stage27_unseen_family": {
+      "evidence_ids": ["E29-034", "E29-035", "E29-036"],
+      "eligible_families": 5,
+      "ineligible_families": ["DOS", "AUTH_BRUTE_FORCE"],
+      "infiltration_positive_support": 36,
+      "stable_both_learners": ["DDOS", "PORT_SCAN", "WEB_ATTACK"],
+      "learner_dependent": ["BOT"],
+      "source": "docs/STAGE27_MANUSCRIPT_INTEGRATION.md"
+    },
+    "stage28_final_empirical_wall": {
+      "evidence_ids": ["E29-037", "E29-038", "E29-039", "E29-040", "E29-041"],
+      "new_fits_completed": "108/108",
+      "frozen_reuses": 12,
+      "remaining_cells": 0,
+      "random_roc_auc_mean": 0.5176,
+      "random_roc_auc_sd": 0.0073,
+      "random_pr_auc_mean": 0.2599,
+      "random_pr_auc_sd": 0.0034,
+      "chronological_roc_auc_mean": 0.8209,
+      "chronological_roc_auc_sd": 0.0085,
+      "chronological_pr_auc_mean": 0.6388,
+      "chronological_pr_auc_sd": 0.0322,
+      "random_below_chronological_pr_auc": "5/5",
+      "random_below_chronological_roc_auc": "5/5",
+      "source": "results/stage28_stability_novelty_control/stage28_final_synthesis/stage28_final_manuscript_results.md"
+    }
+  }
+}

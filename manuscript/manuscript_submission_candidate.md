@@ -130,3 +130,121 @@ The stability program tests whether the central temporal ordering and eligible-f
 Paired historical resampling keeps compared learners or representations on the same class-stratified draw. Each contrast retains its declared uncertainty type. An interval containing zero is not evidence of equivalence; an interval excluding zero does not broaden the population. Training-seed variation is not combined with bootstrap distributions, and unlike metrics are not normalized into a composite score.
 
 At each boundary, model families, hyperparameters, subsets, bridges, operating points, targets, and eligible families are frozen before the corresponding result. Later target evidence cannot retune an earlier protocol, and cancelled analyses remain cancelled. Manuscript claims and numbers map to Stage29 claim, evidence, number, source-artifact, limitation, and exhibit registries. The repository verifies source identities, configurations, schemas, scalar values, hashes, toy formulas, and approved read-only equivalence checks. It does not claim complete end-to-end reruns where raw data, historical environments, models, arrays, or closed targets are unavailable.
+
+## 5. Results
+
+### 5.1 How strong was the conventional reference?
+
+The processed reference condition produced strong within-table discrimination (Table 1). At the validation-selected balanced point, XGBoost achieved holdout F1 0.9285, FPR 0.0061, ROC-AUC 0.9802, and PR-AUC 0.9776. The LightGBM security point achieved F1 0.9178, F2 0.9112, FPR 0.0466, ROC-AUC 0.9802, and PR-AUC 0.9777. These values define the reference against which the remaining validation questions are interpreted.
+
+Neither learner was declared the overall winner. The frozen balanced XGBoost-minus-LightGBM F1 difference was 0.000185, with a conditional interval from -0.000495 to 0.000862. At the security points, LightGBM missed 33 fewer attacks, with the paired conditional difference spanning 2 to 64 fewer misses. Brier scores were 0.04277 for XGBoost and 0.04275 for LightGBM, and the retained calibration-difference intervals included zero.
+
+**Table 1. Conventional processed-reference holdout results.** Thresholds were selected on validation data. F1 and F2 are threshold-specific harmonic means; FPR is false-positive rate; ROC-AUC and PR-AUC are threshold-free ranking metrics. Dashes denote a metric not selected for this compact comparison.
+
+| Operating role | Learner | Threshold | F1 | F2 | FPR | ROC-AUC | PR-AUC |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Balanced | XGBoost | 0.51 | 0.9285 | — | 0.0061 | 0.9802 | 0.9776 |
+| Security | LightGBM | 0.26 | 0.9178 | 0.9112 | 0.0466 | 0.9802 | 0.9777 |
+
+### 5.2 Did temporal development change forward validity?
+
+On the common forward target, chronological-natural development ranked higher than random-natural development across all frozen seeds (Figure 1; Table 2). Random-natural models had mean ROC-AUC 0.5176 (SD 0.0073) and PR-AUC 0.2599 (SD 0.0034); chronological-natural models had mean ROC-AUC 0.8209 (SD 0.0085) and PR-AUC 0.6388 (SD 0.0322). Both metric orderings held in 5/5 seeds.
+
+Threshold transfer contradicted a simple ranking narrative. Chronological thresholds almost never fired on the common target, whereas the two random security points reached final FPR values of 0.2870 and 0.2685, far above the development constraint. Family-aware controls were mixed across family and learner, so the result does not isolate chronology as the sole mechanism.
+
+**Figure 1. Temporal ranking transfer on the shared forward IDS2018 target.** Existing panels report (a) [PR-AUC](../figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.png) and (b) [ROC-AUC](../figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.png) for frozen random and chronological development geometries. Stage28 seed summaries establish a 5/5 descriptive ordering, not a significance test; the target was historically opened, thresholds are evaluated separately, and chronology remains entangled with family composition.
+
+**Table 2. Five-seed temporal stability on the shared forward target.** SD is training-seed standard deviation under the frozen recipe; the directional count is descriptive over the five registered seeds.
+
+| Development geometry | Mean ROC-AUC | ROC-AUC SD | Mean PR-AUC | PR-AUC SD | Directional result |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Random-natural | 0.5176 | 0.0073 | 0.2599 | 0.0034 | Lower than chronological in 5/5 seeds for both metrics |
+| Chronological-natural | 0.8209 | 0.0085 | 0.6388 | 0.0322 | Higher than random in 5/5 seeds for both metrics |
+
+### 5.3 Were shortcut and explanation conclusions stable?
+
+Shortcut-subset effects varied by development geometry and learner (Figure 2). The behavior-restricted representation retained strong random-split discrimination but not the chronological result, and family composition was narrower in the chronological population. Matched-size placebo removals also produced non-zero split interactions, including frozen conditional intervals excluding zero. The observed interactions therefore establish feature-set sensitivity without identifying a named feature as leakage or a causal source of transfer behavior.
+
+Local explanations supplied a related counterexample. LIME rankings were comparatively stable across perturbation seeds, but only 2 of 64 explanations met all prespecified fidelity and cross-method criteria, and 31 of 64 failed to reproduce the model's local classification decision. Mean SHAP-LIME top-10 Jaccard agreement was 0.304 for XGBoost and 0.360 for LightGBM. Stable explanations were not necessarily faithful explanations.
+
+**Figure 2. Shortcut-subset sensitivity by validation geometry.** The [approved Stage23 asset](../results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/figures/figure_23_a_subset_split_interaction.png) reports native ranking behavior across seven frozen feature subsets, random-natural and chronological-natural splits, and the evaluated tree learners. Conditional subset effects do not identify leakage or a transfer mechanism; matched-size placebo interactions remain part of the interpretation.
+
+### 5.4 Was cross-dataset transfer symmetric?
+
+Bridge62 transfer was strongly directional (Figure 3; Table 3). IDS2018-to-CICIDS2017 evaluation achieved PR-AUC 0.667483 and ROC-AUC 0.733946 on 2,830,743 effective target rows. In the reciprocal direction, target attack prevalence was 0.104847, PR-AUC was 0.108176, and ROC-AUC was 0.525167. The reverse PR-AUC was therefore close to its prevalence anchor, while the forward bridge retained substantial ranking signal.
+
+A larger bridge did not yield one metric direction. Correcting aggregate-flag serialization in bridge70 changed PR-AUC by -0.007729, ROC-AUC by +0.002192, and Brier score by +0.005087; the frozen paired intervals excluded zero. The two `GROUNDED_S4` cells remained cancelled because exact membership was unavailable. Neither the metric-specific sensitivity nor the missing cells are hidden by averaging the directions.
+
+**Figure 3. Bidirectional cross-dataset ranking under bridge62.** Existing panels report (a) [normalized PR-AUC](../figures/stage24_cross_dataset/fig24_1_normalized_pr_auc_directionality.svg) and (b) [ROC-AUC](../figures/stage24_cross_dataset/fig24_2_roc_auc_directionality.svg). Each point uses its frozen direction-specific source learner, target population, prevalence, and semantic feature contract; the panels do not define an average transfer score.
+
+**Table 3. Primary bidirectional bridge62 transfer.** PR-AUC is interpreted against each target's attack prevalence; ROC-AUC is the direction-specific ranking metric. Different source and target protocols preclude pooling.
+
+| Direction | Target scope | Target prevalence | PR-AUC | ROC-AUC |
+| --- | --- | ---: | ---: | ---: |
+| IDS2018 to CICIDS2017 | 2,830,743 effective rows | Target-specific | 0.667483 | 0.733946 |
+| CICIDS2017 to IDS2018 | Frozen February 28 target | 0.104847 | 0.108176 | 0.525167 |
+
+### 5.5 Did projected precision imply operational utility?
+
+Projected PPV, workload, and yield did not align uniformly (Figure 4; Table 4). At 0.1% assumed attack prevalence, the Stage22 random STANDARD point retained PPV 0.965572 but required 33.5 analyst-hours per day under the frozen traffic and service-time scenario. The chronological STANDARD point projected PPV 0.000551068 and only 0.0322 true alerts per day: its small workload reflected negligible yield.
+
+Directionality persisted under the same prior-shift translation. Forward STANDARD transfer points projected PPV 0.039233-0.060313, while reverse points projected 0.000257610-0.000287993. Under the frozen 1:100 relative-cost scenario, 15/24 operating points favored the model at 0.1% prevalence and 3/24 at 0.01%. These are analytic projections with fixed sensitivity and FPR, not observations from a security operations center.
+
+**Figure 4. PPV under prevalence stress.** The [approved Stage25 curves](../figures/stage25_prevalence_stress/figure25_a_ppv_cliff.svg) translate frozen true- and false-positive rates across assumed attack prevalence. PPV is positive predictive value. The prior-shift model holds conditional rates fixed; traffic, service time, capacity, and relative costs are scenario assumptions rather than field measurements.
+
+**Table 4. Selected operating-point translations at 0.1% assumed prevalence.** PPV and workload/yield are conditional on the frozen rates, daily traffic, and analyst service-time assumptions; STANDARD denotes the inherited standard operating role.
+
+| Frozen condition | Projected PPV | Operational quantity | Interpretation boundary |
+| --- | ---: | --- | --- |
+| Stage22 random STANDARD | 0.965572 | 33.5 analyst-hours/day | High PPV does not ensure manageable workload |
+| Stage22 chronological STANDARD | 0.000551068 | 0.0322 true alerts/day | Low workload does not ensure useful yield |
+| Forward transfer STANDARD range | 0.039233-0.060313 | Direction-specific | Conditional prior-shift projection |
+| Reverse transfer STANDARD range | 0.000257610-0.000287993 | Direction-specific | Conditional prior-shift projection |
+
+### 5.6 Was one compute backend consistently faster?
+
+Backend advantage depended on architecture and measurement path (Figure 5). At batch one, the p95 CPU-over-GPU latency ratio was 1.94 for the five-checkpoint soft-voting ensemble and 1.58 for the single-resource reference, indicating a GPU advantage. Ratios of 0.16 for CatBoost and 0.26 for XGBoost indicated a CPU advantage under the same convention. The packet-image CNN ratio was 10.86, while the ViT ratio was 1.05. Unsupported LightGBM GPU execution and unavailable paths remained compatibility statuses rather than timing values.
+
+**Figure 5. Hardware-specific p95 CPU/GPU comparison.** The [approved Stage26 asset](../figures/stage26_deployment_profiling/F26_CPU1_GPU_P95_SPEEDUP.png) compares batch-one p95 latency ratios for compatible prepared-input-to-probability paths on the recorded hardware and software. Values are descriptive point estimates; unsupported backends, capture, flow extraction, alert aggregation, and analyst response are outside the comparison.
+
+### 5.7 Did eligible withheld families behave uniformly?
+
+LOAO results were selective (Figure 6; Table 5). DDoS ranking was strong for XGBoost (ROC-AUC 0.9982; PR-AUC 0.9925) and LightGBM (ROC-AUC 0.9986; PR-AUC 0.9940). Web Attack also retained ranking for XGBoost (ROC-AUC 0.9693; PR-AUC 0.7206) and LightGBM (ROC-AUC 0.9901; PR-AUC 0.7605).
+
+Other families were more conditional. Bot produced XGBoost ROC-AUC 0.3224 and PR-AUC 0.003256 but LightGBM ROC-AUC 0.5591. Port Scan ROC-AUC was 0.5506 for XGBoost and 0.7559 for LightGBM. Infiltration remained descriptive at 36 positives, and DOS and AUTH_BRUTE_FORCE were ineligible rather than model failures. Ranking and frozen-threshold recall could also disagree, so no pooled novelty score was formed.
+
+**Figure 6. Eligible-family ranking and balanced-threshold recall.** Existing panels report (a) [ROC-AUC with frozen conditional intervals](../results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/figures/stage27_primary_roc_auc_ci.png) and (b) [balanced-threshold recall](../results/stage27_loao_unseen_attack/stage27_4a_final_synthesis/figures/stage27_balanced_recall_ci.png) for separate eligible families and learners. Infiltration is descriptive at support 36; ineligible families are absent; the panels do not constitute an aggregate future-attack score.
+
+**Table 5. Frozen conclusion-stability classification for eligible families.** Classifications combine family-specific ranking, frozen-threshold behavior, support, learner contrast, and the five-seed stability rules; they are not pooled metrics.
+
+| Family | Frozen synthesis | Required qualification |
+| --- | --- | --- |
+| DDoS | Strong ranking for both learners | Eligible benchmark family only |
+| Web Attack | Ranking retained for both learners | Magnitude and thresholds remain learner-specific |
+| Port Scan | Qualitative conditions retained across seeds | Ranking magnitude is learner-dependent |
+| Bot | Learner-dependent | Frozen-threshold detection remains weak |
+| Infiltration | Descriptive only | Held-out positive support is 36 |
+
+### 5.8 Did central conclusions survive the frozen realizations?
+
+All 108/108 preregistered new fits in the frozen stability program completed, with 12 artifacts reused as declared and no planned execution outstanding. Completion did not enlarge inferential scope: no best seed was selected, seed variation was not combined with bootstrap uncertainty, and the shared temporal target remained historically opened.
+
+The chronological-over-random ranking direction held in all evaluated seeds. DDoS, Port Scan, and Web Attack met the registered qualitative conditions for both learners; Bot remained learner-dependent and Infiltration descriptive. Random LOAO controls were mixed and family-specific. The controls support an interaction between novelty difficulty and chronology in some comparisons but do not identify one mechanism.
+
+### 5.9 What survived across the validation axes?
+
+Table 6 synthesizes the frozen chain without treating unlike quantities as commensurable. Strong benchmark discrimination, chronological forward ranking, forward bridge signal, selected family transfer, and compatible computational paths survived within their declared scopes. Frozen thresholds, symmetric portability, simple shortcut causality, universal operational preference, and uniform family conclusions did not.
+
+**Table 6. Integrated native-metric validity matrix.** Each row preserves its population, metric family, and interpretation ceiling. The table summarizes frozen evidence and is not a normalized degradation, generalization, or composite performance score.
+
+| Validity axis | Principal observation | What survived | What remained conditional or unsupported | Claim ceiling |
+| --- | --- | --- | --- | --- |
+| Benchmark/reference | Strong F1 and ranking on the processed split | Within-reference discrimination | Inference to chronology, transfer, or deployment | Processed reference only |
+| Duplicate/split | Frozen memberships and target roles were auditable | Explicit role separation | Latent-session independence | Traceable memberships only |
+| Temporal | Chronological ranking exceeded random ranking across five seeds | Directional ranking contrast | Threshold transfer and sole mechanism | Evaluated chronology and recipe |
+| Shortcut | Subset effects depended on split and learner; placebos interacted | Representation sensitivity | Universal removal benefit or causal leakage | Preregistered subsets and controls |
+| Cross-dataset | Forward ranking signal contrasted with near-baseline reverse transfer | Direction-specific forward signal | Symmetry, arbitrary datasets, cancelled cells | Frozen bridges and targets |
+| Prevalence/operational | PPV, workload, yield, and cost preference diverged | Assumption-explicit translation | Field performance or universal preference | Frozen prior-shift scenarios |
+| Computational | Backend advantage varied by compatible model path | Measured component feasibility | Unsupported paths and end-to-end cost | Recorded hardware/software |
+| Unseen family | Several families transferred; others depended on learner or support | Selected eligible-family capability | Uniform future-attack detection | Eligible benchmark families |
+| Seed/control | Central directions survived selected seeds; controls were mixed | Finite-realization stability | Population guarantee or one causal account | Frozen seed registry |

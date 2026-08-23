@@ -1,0 +1,3 @@
+claim_id,claim_text,reason,evidence_boundary,replacement
+"CLM29-017","The model generalizes.","The scope is unbounded and contradicted by directional temporal cross-dataset operational and family-specific evidence.","E29-020;E29-021;E29-025;E29-030;E29-034;E29-040","Replace with axis-specific claims under evaluated conditions."
+"CLM29-018","The model detects zero-day attacks.","LOAO eligible-family evaluation is not a universal zero-day test and includes ineligible and low-support families.","E29-034;E29-035;E29-036;E29-039","Describe selective unseen-family transfer for eligible families."

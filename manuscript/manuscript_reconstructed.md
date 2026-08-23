@@ -307,20 +307,128 @@ Table 6 integrates the validation chain without treating unlike quantities as c
 
 ### 6.1 Benchmark Performance Is Not Deployment Evidence
 
+The reference experiment answers a legitimate but limited question. Given the processed binary representation, frozen stratified memberships, validation-selected models, and validation-selected operating points, the selected tree ensembles discriminate the held-out benchmark labels well. That result survives as the reference condition; later evidence does not invalidate its arithmetic or make benchmark evaluation useless.
+
+What changes is the scope of the inference. The forward temporal target, feature-subset controls, reciprocal dataset bridge, low-prevalence projections, hardware profiles, and withheld-family tests each alter a different part of the claim. A ranking may survive while its threshold does not. A model may transfer in one dataset direction but not the reverse. A projected stream may have high PPV but exceed analyst capacity. A family withheld from development may remain easy for both learners, while a different family becomes learner-dependent. “Benchmark performance” is therefore an observed property of a specified evaluation system; “validated capability” requires evidence under the validity condition named in the claim.
+
+This distinction also prevents a universal negative reading. The evidence includes strong reference performance, high forward ranking under chronological development, meaningful IDS2018-to-CICIDS2017 transfer, and strong withheld-family discrimination for DDoS and Web Attack. The contribution is not that the detector ceased to work whenever validation became harder. It is that the conclusions became axis-, population-, metric-, and operating-rule-specific.
+
 ### 6.2 Temporal and Shortcut Effects
+
+The temporal result reverses a simplistic expectation that random membership must provide an optimistic but still directionally similar estimate. Under the shared forward target, chronological development produced stronger ranking across every evaluated seed. Yet that result coexisted with poor threshold transfer. The likely scientific lesson is not “chronological is always better,” but that validation geometry can change both which patterns are learned and how score scales move between development and target populations.
+
+The shortcut audit narrows, but does not eliminate, possible explanations. Feature removals, behavior-restricted inputs, and depth-one controls show that some predictors carry split-specific discrimination. However, matched-size placebo removals also interact with split geometry, and chronological family composition differs from random composition. Those counterexamples block a claim that a named shortcut caused the temporal or cross-dataset result. Temporal separation and shortcut sensitivity are connected evaluation concerns, but neither is a proven causal explanation for the other.
+
+Explanation reliability reinforces the same discipline. LIME perturbation stability was compatible with poor local surrogate fidelity. A stable account of a local decision can therefore remain inaccurate. The implication is methodological: explanation studies should report reconstruction or fidelity diagnostics, distinguish exact decompositions from surrogate approximations, and avoid interpreting consistency alone as validity.
 
 ### 6.3 Transferability Is Conditional and Asymmetric
 
+The bidirectional bridge shows why cross-dataset validity should be a directional statement. IDS2018-trained models retained useful ranking on the CICIDS2017 target under the primary shared-feature contract, whereas reciprocal models evaluated on the IDS2018 target were close to their baseline anchors. This is not a software discrepancy to be averaged away. The directions use different source models, prevalence, collection periods, and target roles; their asymmetry is evidence about portability under those contracts.
+
+Feature semantics further condition the result. Correcting aggregate-flag serialization changes PR-AUC, ROC-AUC, and Brier score in different directions. A larger bridge is therefore not automatically a better bridge, and nominally matching columns do not guarantee matching semantics. The two cancelled GROUNDED_S4 cells add a governance constraint: when durable exact membership is unavailable, refusing a post-freeze heuristic protects interpretation at the cost of an incomplete sensitivity analysis.
+
+Accordingly, the transfer result supports neither universal compatibility nor universal incompatibility between the benchmark families. It supports substantial forward ranking, weak reverse ranking, metric-specific serialization sensitivity, and explicit uncertainty about unexecuted cells. External validity beyond these datasets remains open.
+
 ### 6.4 Ranking Quality and Operating-Point Utility Are Distinct
+
+Ranking and operating-point utility diverge repeatedly across the evidence chain. The source-restricted graph experiment achieved strong PR-AUC and ROC-AUC while detecting no target attacks at its frozen threshold. Chronological tree ensembles ranked the shared forward population substantially better than random ensembles but almost never fired at the transferred development thresholds. Cross-dataset and leave-one-family-out analyses produced similar cases in which useful ranking did not imply useful recall or FPR at a fixed operating point.
+
+The distinction follows from what each quantity measures. ROC-AUC and PR-AUC describe ordering across thresholds. Precision, recall, F1, and FPR describe one selected point on a score scale. PPV and workload then place that operating point inside a prevalence and traffic scenario. A change in score calibration or prevalence can therefore leave ranking intact while rendering a threshold unsuitable, or produce manageable alert volume only because true detection is negligible.
+
+This layered interpretation is more actionable than a single performance verdict. A system with transportable ranking may support recalibration or threshold governance in a prospective deployment, but such adaptation must be evaluated on new, appropriately governed data. The present study did not perform target-guided recalibration and therefore does not claim the performance that adaptation might achieve.
 
 ### 6.5 Novel-Family Performance Is Family- and Learner-Dependent
 
+Withholding an attack family did not yield one novelty outcome. DDoS and Web Attack retained strong ranking for both learners. Port Scan met the frozen stability conditions but showed a large learner difference. Bot was learner-dependent and weak at the frozen operating points. Infiltration remained too weakly supported for inferential use, and two additional families could not satisfy the chronological eligibility rule. This heterogeneity is scientifically preferable to an aggregate zero-day score because it reveals where the conclusion changes.
+
+Zero training exposure is a controlled benchmark condition, not a definition of real-world zero-day detection. Related families, shared infrastructure, extractor cues, and benchmark construction may still provide transferable information. Conversely, novelty can be confounded with chronology, support, and target prevalence. The random LOAO controls help separate some of these factors, but their mixed family-specific outcomes do not identify a universal mechanism.
+
+Future novelty evaluations should therefore publish eligibility before model results, preserve family-level support, report ranking and frozen-threshold behavior separately, include more than one learner or realization where feasible, and distinguish descriptive from inferential families. Strong transfer for some families should remain visible because it prevents an exaggerated claim that supervised models cannot recognize any unseen category.
+
 ### 6.6 Implications for IDS Evaluation Practice
+
+The framework suggests a sequence of claim checks rather than a mandatory model architecture. First, define the reference population and show how preprocessing, rebalancing, duplicate handling, and operating-point selection affect the benchmark claim. Second, evaluate chronology and target roles without treating temporal contrasts as automatically causal. Third, audit plausible shortcut features with placebos or other controls. Fourth, test domain transfer in both directions under explicit semantic bridges. Fifth, translate fixed rates under realistic prevalence, traffic, workload, and cost assumptions. Sixth, profile the actual inference component on declared hardware. Seventh, gate novelty evaluation by family eligibility and support. Finally, test whether central conclusions survive multiple model realizations and appropriate controls.
+
+These checks should remain modular. A temporal result cannot substitute for cross-dataset evidence; a deployment profile cannot validate PPV; a feature ablation cannot prove causality; and a family-withholding result cannot establish detection of arbitrary attacks. Native metrics and uncertainty types should remain visible, especially when they point in different directions.
+
+Protocol governance is equally important. Feature contracts, model scope, operating points, target roles, and interpretation rules should be fixed before target evidence is used. Cancelled analyses should be reported rather than silently replaced. Reused targets should not be presented as fresh blind holdouts. Finally, every paper-facing number and substantive claim should resolve to a frozen artifact and a disclosed limitation. These practices do not eliminate benchmark constraints, but they make the resulting claims auditable and appropriately bounded.
 
 ## 7. Limitations
 
+The study has material limitations that constrain both its empirical scope and its reproducibility claim.
+
+### 7.1 Dataset and provenance limitations
+
+**Benchmark-family scope.** The empirical chain centers on CSE-CIC-IDS2018 and a restricted CICIDS2017 bridge, both from the same broad research ecosystem. It does not include live enterprise, cloud, ISP, industrial, or IoT traffic. This prevents claims of portability to arbitrary operational networks.
+
+**Processed reference condition.** The initial reference uses a processed, rebalanced binary IDS2018 table and a stratified split. It supports controlled comparison but does not reproduce natural prevalence, session structure, or forward chronology. This prevents the high reference metrics from serving as direct deployment evidence.
+
+**Bridge restriction.** Cross-dataset conclusions depend on frozen shared-feature contracts, preprocessing, source learners, and direction-specific target roles. Nominally similar fields can differ in extractor semantics. This prevents bridge-independent or symmetric portability claims.
+
+**Cancelled membership cells.** Two GROUNDED_S4 cells were cancelled because exact physical-row membership could not be recovered without a new heuristic. Governance avoided an adapted substitute but left the intended sensitivity incomplete. This prevents a claim that every preregistered cross-dataset cell was executed.
+
+**Unavailable external artifacts.** Raw datasets are not redistributed, and some historical models, probabilities, explanation arrays, or source relationships are unavailable or intentionally closed. Frozen summaries, hashes, schemas, and provenance mitigate but do not eliminate this gap. This prevents complete regeneration of every early result.
+
+**Source-restricted graph evidence.** The graph experiment is limited to an endpoint-authenticated February 20 source; equivalent topology is not available across the main tabular benchmark, and unseen topology was not estimable. This prevents claims of graph deployment readiness, general unseen-host transfer, or interchangeability with the full reference evaluation.
+
+**Descriptive architecture comparison.** The Stage21 CNN/ViT result is one frozen comparison under a shared restored target, not a replicated architecture trial. This prevents universal claims that either architecture is superior.
+
+### 7.2 Protocol and scope limitations
+
+**Temporal/family entanglement.** Chronological memberships also change attack-family composition, and the available controls are mixed and family-specific. This prevents attribution of the temporal contrast solely to concept drift or chronology.
+
+**LOAO eligibility.** DOS and AUTH_BRUTE_FORCE cannot satisfy the frozen day-atomic development/target ordering. Their ineligibility narrows the family scope and prevents uniform claims across the benchmark taxonomy.
+
+**Low-support Infiltration.** The Infiltration target contains 36 positives. It remains descriptive even though the fold is executable. This prevents inferential claims for that family and prevents its use as primary pooled evidence.
+
+**Historically reused target.** The Stage28 temporal stability analysis re-evaluates the already historically opened Stage22 shared target. The reuse was preregistered and governed, but the population is not a new blind external holdout. This prevents a claim of independent blind replication.
+
+### 7.3 Statistical limitations
+
+**Conditional resampling uncertainty.** Historical paired bootstrap intervals are conditional on frozen samples, arrays, and implementations. They describe uncertainty within those target populations, not unconditional deployment variation. This prevents broad population significance claims.
+
+**Finite seed scope.** Stability is evaluated over a finite frozen seed set, and the full hyperparameter search is not repeated for every seed. The results support fixed-recipe realization stability, not HPO-process robustness or a population guarantee. Directional 5/5 results are descriptive rather than significance tests.
+
+### 7.4 Operational-assumption limitations
+
+**Prior-probability shift.** Stage25 holds sensitivity and FPR fixed while prevalence changes. Real deployments may also change features, protocols, topology, users, attackers, and extraction behavior. This prevents the projections from being interpreted as observed field performance.
+
+**Workload and cost scenarios.** Traffic volume, analyst service time, capacity, and relative error costs are frozen analytic assumptions rather than organization-specific measurements. This prevents universal workload, utility, or economic recommendations.
+
+### 7.5 Computational limitations
+
+**Hardware and component boundary.** Stage26 measures compatible inference components on one recorded hardware/software environment. It omits complete capture-to-alert latency, and some backends are unsupported. This prevents universal speed, throughput, energy, or end-to-end deployment claims.
+
+### 7.6 Reproducibility limitations
+
+**Historical environment ambiguity.** Some dependencies and execution environments remain `VERSION_NOT_PROVEN`; adjacent receipts are not generalized to unrecorded runs. This prevents bit-for-bit historical environment reconstruction for every stage.
+
+**Incomplete full-rerun reproducibility.** The repository provides strong static provenance, scalar evidence, configs, canonical methods, archived sources, and equivalence tests, but many scientific paths cannot be rerun end to end without external data or closed artifacts. This prevents a claim that all results are locally regenerable even though the manuscript evidence chain is auditable.
+
 ## 8. Conclusion
+
+The progressively stronger validation chain produced a bounded answer rather than a universal verdict. Strong discrimination survived under the processed reference condition. The central chronological-over-random ranking direction survived across the frozen model realizations, meaningful ranking survived in the forward cross-dataset bridge, several eligible withheld families transferred strongly, and compatible inference paths were computationally feasible on the measured hardware.
+
+Other inferences did not survive uniformly. Frozen operating thresholds transferred poorly even when ranking remained useful. Cross-dataset portability was asymmetric. Shortcut interventions were split- and learner-dependent and did not identify one causal leakage mechanism. Low-prevalence PPV, workload, yield, and relative-cost preference diverged under the frozen operational assumptions. Unseen-family outcomes varied by family, learner, support, metric, and threshold.
+
+The resulting discipline is straightforward: define the population and target roles; separate benchmark, temporal, shortcut, domain, prevalence, computational, novelty, and realization validity; report ranking and operating-point behavior independently; preserve native metrics and negative results; lock target-facing choices before evaluation; disclose cancelled and low-support analyses; and connect every claim to frozen evidence and limitations. This does not show that machine-learning intrusion detection is useless or that benchmark research is invalid. It shows that deployable capability is a stronger, more conditional claim than benchmark performance, and it specifies the evidence needed to make that claim responsibly.
 
 ## References
 
+Pass 1 uses no unverified external citations. Required literature support is marked in Section 2 with `[REFERENCE GAP: …]` placeholders and inventoried in `docs/manuscript/MANUSCRIPT_REFERENCE_AUDIT.md`. Citation verification and bibliography construction are deferred to an explicitly authorized Pass 2.
+
 ## Supplementary Material Plan
+
+The supplementary package should preserve the evidence required for audit without reproducing the repository in the main paper:
+
+- complete baseline inventories, tuning records, threshold curves, holdout confusion matrices, paired uncertainty, calibration, known-category support, and fixed-recipe seed tables;
+- full explanation-reliability analyses, representative local cases, Integrated Gradients sensitivity, attention diagnostics, source-restricted graph evidence, and descriptive CNN/ViT comparison;
+- temporal membership, duplicate-sanitization, development-cell, frozen-threshold, and target-opening receipts;
+- all shortcut subsets, matched placebos, stump controls, component attribution summaries, family composition, and secondary operating metrics;
+- bridge specifications, direction-specific cross-dataset tables, flag-serialization sensitivity, threshold transfer, population/governance tables, and GROUNDED_S4 cancellation receipts;
+- complete prevalence grids, PPV/NPV thresholds, alert/workload/capacity scenarios, relative-cost decisions, and sanity checks;
+- full warm/cold inference, throughput, memory, package, capacity, representation, Pareto, CPU/GPU, and backend-status profiles, with hardware receipts;
+- complete LOAO family metrics, conditional intervals, similarity diagnostics, eligibility records, seed-level stability, and random-control tables;
+- configs, environment records, immutable notebook/script archives, source maps, hashes, equivalence matrices, reproduction indexes, execution boundaries, and static validation reports.
+
+Supplementary inclusion does not change evidence status. Cancelled analyses remain cancelled, descriptive results remain descriptive, hardware measurements remain hardware-specific, and conditional uncertainty remains conditional.

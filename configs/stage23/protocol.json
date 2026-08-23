@@ -1,0 +1,241 @@
+{
+  "stage": 23,
+  "name": "Validation-safe shortcut-feature audit",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage23_research_executed.ipynb:1-78",
+      "scripts/stage23_shortcut_feature_audit_kaggle.py:75 exported scientific/notebook cells"
+    ],
+    "notebooks": [
+      {
+        "path": "notebooks/archive/stage23_research_executed.ipynb",
+        "sha256": "a33b83e09261aed6f7b772049bcfb7f4691e63e0cf2e13202c4cd00afeae007e",
+        "cells": "1-78"
+      }
+    ],
+    "historical_sources": [
+      "Notebook cells 1-75: complete scientific protocol and execution history",
+      "Notebook cells 76-78: post-closure script export/upload/commit operations",
+      "scripts/stage23_shortcut_feature_audit_kaggle.py: canonical 75-cell methodology export"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "SCRIPT_CANONICAL",
+    "reason": "The preserved script is the historical 75-cell scientific export. After newline normalization, 72 of 78 supplied notebook cells are exact; three synthesis cells differ only because future imports were hoisted, while cells 76-78 are post-closure export operations.",
+    "path": "scripts/stage23_shortcut_feature_audit_kaggle.py",
+    "registry": "docs/reproducibility/STAGE21_24_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "324ee4f",
+    "2c36cb6",
+    "359b6a2",
+    "eca21e3",
+    "f2cd2b5",
+    "1e687d9",
+    "b927499",
+    "3c874e3",
+    "f9661ac",
+    "963b2da"
+  ],
+  "inputs": [
+    "Frozen Stage22R RANDOM_NATURAL and CHRONOLOGICAL_NATURAL memberships",
+    "Frozen ordered 70-feature development representation",
+    "Frozen Stage22R FULL models and validation probabilities",
+    "Prospectively frozen Stage23 subset, placebo, stump, SHAP and uncertainty contracts"
+  ],
+  "outputs": [
+    "results/stage23_shortcut_feature_audit/",
+    "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/figures/",
+    "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/tables/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Reuse the two frozen Stage22R FULL references without refitting",
+    "Fit six reduced primary subsets under random-natural and chronological-natural validation",
+    "Fit five matched three-feature placebo subsets under both validation regimes",
+    "Fit three depth-one stump controls under both validation regimes",
+    "Run paired stratified bootstrap uncertainty on frozen cohorts",
+    "Compute component-specific TreeSHAP and descriptive proxy-absorption summaries",
+    "Synthesize attack-family, table and figure evidence without opening Mar1/Mar2"
+  ],
+  "would_touch_frozen_target": false,
+  "expected_compute_runtime": {
+    "historical_boosted_component_fit_seconds_total": 12240.607189919,
+    "historical_stump_fit_seconds_total": 8.36035995799989,
+    "historical_model_fit_seconds_total": 12248.967549877,
+    "historical_model_fits": 50,
+    "verification_mode": "Metadata/presence plus streaming SHA256 only; no data materialization, model loading, fitting, inference, bootstrap or SHAP"
+  },
+  "verification_artifacts": [
+    "scripts/stage23_shortcut_feature_audit_kaggle.py",
+    "notebooks/archive/stage23_research_executed.ipynb",
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/feature_subset_spec.json",
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/expected_model_count.json",
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/model_spec.json",
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/shap_spec.json",
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/uncertainty_spec.json",
+    "results/stage23_shortcut_feature_audit/stage23_3_stump_controls/stage23_3_stump_controls_summary.json",
+    "results/stage23_shortcut_feature_audit/stage23_4_uncertainty_analysis/stage23_4_uncertainty_summary.csv",
+    "results/stage23_shortcut_feature_audit/stage23_5b_treeshap_proxy_absorption/stage23_5b_proxy_absorption_summary.csv",
+    "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/stage23_final_closure_receipt.json",
+    "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/tables/table_23_1_primary_subset_performance.csv"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage23_research_executed.ipynb": {
+      "size_bytes": 3263936,
+      "sha256": "a33b83e09261aed6f7b772049bcfb7f4691e63e0cf2e13202c4cd00afeae007e"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/feature_subset_spec.json": {
+      "size_bytes": 16135,
+      "sha256": "dbeda313955f77a9caa25f100f01a48d134352bbf7bd42e55e4315374e10f335"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/expected_model_count.json": {
+      "size_bytes": 473,
+      "sha256": "bc41dcbc2edc20f128b37c61b47ddd6b577a034c1189e65175dd0c29fca3e07c"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/model_spec.json": {
+      "size_bytes": 1937,
+      "sha256": "cec27ee51cdb22f7b556f0b7c8da0d560b34d4f1f88aa937f4e65d1e70b533f5"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/shap_spec.json": {
+      "size_bytes": 1578,
+      "sha256": "801e0e88a5b64517dc14244d6f5dc7586094a9ca18342defbe211505a9139c4c"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_0_protocol_lock/uncertainty_spec.json": {
+      "size_bytes": 1789,
+      "sha256": "e1bc7021a23c5db10da4a56b28c8db7aedeacd504b5c79be05c16b67fc4a7613"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_3_stump_controls/stage23_3_stump_controls_summary.json": {
+      "size_bytes": 15147,
+      "sha256": "ccc241114f62571fe27a622343aab0d81ca236e8063a1a36a743af108a4ca7b2"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_4_uncertainty_analysis/stage23_4_uncertainty_summary.csv": {
+      "size_bytes": 3000,
+      "sha256": "d9ba4fe83bf2c48e8b5e354305135706b0ff8e8aacad0985f115025c7bafea22"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_5b_treeshap_proxy_absorption/stage23_5b_proxy_absorption_summary.csv": {
+      "size_bytes": 19212,
+      "sha256": "919dd0701668ccc2d0f2eb36598b2805afe565e9d5ad8b725f09146eb82c4649"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/stage23_final_closure_receipt.json": {
+      "size_bytes": 3317,
+      "sha256": "e60f4ffcb7585656e1d86ceb42ac4ff68b9b9d6f496afd23c8d7d257e0f90a40"
+    },
+    "results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/tables/table_23_1_primary_subset_performance.csv": {
+      "size_bytes": 2132,
+      "sha256": "e6776a6b2b9e3fe85ba5b8ac99ef6bdcff3bcef3d816f0bd3e1359ae669dc668"
+    }
+  },
+  "methodology": {
+    "inherited_splits": [
+      "RANDOM_NATURAL",
+      "CHRONOLOGICAL_NATURAL"
+    ],
+    "primary_subsets": {
+      "FULL": {"feature_count": 70, "removed": [], "new_component_fits": 0},
+      "NO_DST_PORT": {"feature_count": 69, "removed": ["Dst Port"], "new_component_fits": 4},
+      "NO_PORTS": {"feature_count": 68, "removed": ["Dst Port", "Protocol"], "new_component_fits": 4, "src_port_removed": false},
+      "NO_INIT_FWD_WIN_BYTS": {"feature_count": 69, "removed": ["Init Fwd Win Byts"], "new_component_fits": 4},
+      "NO_FWD_SEG_SIZE_MIN": {"feature_count": 69, "removed": ["Fwd Seg Size Min"], "new_component_fits": 4},
+      "NO_SUSPICIOUS_GROUP": {"feature_count": 67, "removed": ["Dst Port", "Init Fwd Win Byts", "Fwd Seg Size Min"], "new_component_fits": 4},
+      "BEHAVIOR_ONLY": {"feature_count": 63, "removed": ["Dst Port", "Protocol", "Fwd Header Len", "Bwd Header Len", "Init Fwd Win Byts", "Init Bwd Win Byts", "Fwd Seg Size Min"], "new_component_fits": 4}
+    },
+    "no_ports_resolution": {
+      "src_port_present_in_frozen_70_feature_space": false,
+      "dst_port_present": true,
+      "protocol_present": true,
+      "frozen_removal": ["Dst Port", "Protocol"],
+      "manuscript_rule": "Never state that Stage23 removed Src Port."
+    },
+    "model": {
+      "strategy": "ENS_LGBM_XGB_EQUAL",
+      "ensemble_probability": "0.5 * P_LIGHTGBM + 0.5 * P_XGBOOST",
+      "lightgbm_configuration": "LGBM_11",
+      "lightgbm_backend": "CPU",
+      "xgboost_configuration": "XGB_11",
+      "xgboost_backend": "CUDA",
+      "seed": 42,
+      "threshold_optimization": false,
+      "fixed_secondary_operating_threshold": 0.5,
+      "subset_specific_tuning": false
+    },
+    "fit_budget": {
+      "full_reference_component_fits": 0,
+      "new_primary_boosted_component_fits": 24,
+      "new_placebo_boosted_component_fits": 20,
+      "new_stump_fits": 6,
+      "total_new_model_fits": 50,
+      "consumed": 50,
+      "additional_fits_authorized": 0
+    },
+    "placebo_controls": {
+      "subsets": 5,
+      "removed_features_per_subset": 3,
+      "split_cells": 10,
+      "new_component_fits": 20
+    },
+    "stump_controls": {
+      "features": ["Dst Port", "Init Fwd Win Byts", "Fwd Seg Size Min"],
+      "splits": 2,
+      "max_depth": 1,
+      "fits": 6,
+      "threshold": 0.5,
+      "stump_only_imputation": "training median"
+    },
+    "uncertainty": {
+      "method": "paired stratified bootstrap",
+      "cohort_rows_per_split": 50000,
+      "replicates": 1000,
+      "seed": 42,
+      "regeneration_authorized": false
+    },
+    "shap": {
+      "method": "TreeSHAP separately for LightGBM and XGBoost components",
+      "rows_per_split": 5000,
+      "benign_per_split": 2500,
+      "attack_per_split": 2500,
+      "seed": 42,
+      "component_specific_reporting_primary": true,
+      "normalized_equal_weight_consensus": "DESCRIPTIVE_ONLY",
+      "exact_shap_for_probability_averaged_ensemble": false,
+      "regeneration_authorized": false
+    },
+    "final_synthesis": {
+      "primary_figure_pairs": 4,
+      "supplementary_figure_pairs": 2,
+      "publication_and_supplementary_tables": 10,
+      "status": "FINAL_PROTOCOL_CLOSURE_SEALED"
+    },
+    "scientific_execution_authorized": false,
+    "model_deserialization_authorized": false,
+    "model_fitting_authorized": false,
+    "inference_authorized": false,
+    "threshold_selection_authorized": false,
+    "bootstrap_generation_authorized": false,
+    "shap_generation_authorized": false,
+    "data_materialization_authorized": false,
+    "final_holdout_access_authorized": false
+  },
+  "environment": {
+    "python": "VERSION_NOT_PROVEN",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.2.0",
+    "shap": "0.51.0",
+    "xgboost_backend": "CUDA",
+    "lightgbm_backend": "CPU",
+    "gpu_model": "VERSION_NOT_PROVEN",
+    "separation_note": "No Stage20 runtime is inherited. Versions are limited to values recorded by Stage23 frozen receipts; Python and GPU model were not proven."
+  },
+  "holdout_policy": {
+    "mar1_accessed": false,
+    "mar2_accessed": false,
+    "stage22r_development_validation_only": true,
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only"
+  }
+}

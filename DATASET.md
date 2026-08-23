@@ -17,3 +17,5 @@ data/raw/merged_balanced_ids2018_safe.csv
 ```
 
 That path is ignored by Git to avoid accidental redistribution.
+
+The repository's MIT License does not apply to CSE-CIC-IDS2018, CICIDS2017, or derivative dataset files. The official CSE-CIC-IDS2018 terms require attribution and a link when the dataset is used or redistributed; consult the current upstream terms at <https://www.unb.ca/cic/datasets/ids-2018.html>.

@@ -159,6 +159,9 @@ used in an analysis.
 
 ## License
 
-No repository license file is currently present. Users must not assume rights
-beyond those granted by applicable law or by the owners of upstream datasets
-and dependencies. A formal project license should be added before broad reuse.
+Repository-authored source code and original documentation are available under
+the MIT License, subject to the scope stated in [`LICENSE`](LICENSE) and
+[`docs/release/LICENSE_AUDIT.md`](docs/release/LICENSE_AUDIT.md). This grant does
+not apply to external datasets, third-party dependencies, or frozen/data-derived
+artifacts whose rights are not owned by the repository author. Those materials
+remain governed by their own terms.

@@ -5,10 +5,10 @@
 This audit was materialized on branch `manuscript-reproducibility-cleanup`
 from starting HEAD `ca538faa4d39ef7f8921d98399c261944c905f28`.
 
-The approved Stage21-Stage24 reconciliation extends the accepted Stage20
-checkpoint `f5e4e5b` on the same branch. It inventories later user-supplied
-executed notebooks before consolidation and applies the evidence order below
-without modifying accepted Stage01-Stage20 commits.
+The approved Stage25-Stage28 reconciliation extends the accepted Stage24
+checkpoint `3951096` on the same branch. It inventories the final four
+user-supplied executed notebooks before consolidation and applies the evidence
+order below without modifying accepted Stage01-Stage24 commits.
 
 The scientific program is closed through Stage28. This work is source
 preservation, provenance mapping and reproducibility engineering only. It does
@@ -80,7 +80,7 @@ The ten paths in the Stage28 final-synthesis `checksums.sha256` file produce:
 behavior. This is a reproducibility-engineering discrepancy only. Frozen
 Stage28 artifacts must not be edited to make worktree hashes match.
 
-## Authoritative notebook
+## Authoritative notebooks
 
 The user-supplied notebook is archived byte-for-byte at:
 
@@ -109,6 +109,21 @@ The earlier repository file
 `notebooks/original_kaggle_working_notebook.ipynb` is a partial Stage01-Stage07
 source. It contains 109 exact source-cell matches with the authoritative
 notebook but is not a replacement for the complete archive.
+
+The final scientific block adds four immutable executed archives:
+
+| ID | Stage | Cells | Executed code cells | SHA256 | Canonical role |
+|---|---:|---:|---:|---|---|
+| NB010 | 25 | 8 code | 7 | `58f529ca1e1f4a94083e533b5251b8f7433cfe57909477869a71d2cfbe5b61a3` | Full execution/output chronology |
+| NB011 | 26 | 106 code + 2 markdown | 105 | `f26cf14b8f5b56c7e6cb882b075b26a2c575b1c722690591ba1e779fa4fe7177` | Full execution/output chronology |
+| NB012 | 27 | 47 code | 47 | `9180523c74e91fcb5b15a2ae6563db7567faa06d0e94710d718a197de4ff15cf` | Full execution/output chronology |
+| NB013 | 28 | 47 code | 45 | `3d67dacd97050683de6b2d797e76cdefc4b35ed4f6bc13bb91992ea5c43e9f95` | Full execution/output chronology and final wall |
+
+Their detailed substage mappings are in
+`STAGE25_28_SOURCE_RECONCILIATION.md` and
+`STAGE25_28_SOURCE_REGISTRY.csv`. The external Stage28 filename mentioned
+Stage29, but all 47 identifiable cells are Stage28 and no Stage29 scientific
+section was inspected or reconstructed.
 
 ## Notebook status vocabulary
 
@@ -174,8 +189,26 @@ Key findings after the approved Stage01-Stage20 extraction checkpoint:
   absent from the sanitized NB003/script. Four fits and six evaluable openings
   are closed; two GROUNDED_S4 cells remain administratively cancelled before
   opening and their slots were not reallocated.
-- Stages25-28 remain outside this approved extraction block and were not
-  changed by the Stage21-Stage24 work.
+- Stage25 is `NOTEBOOK_PLUS_SCRIPT`. Supplied cells 2-8 are exact matches to
+  the seven-cell repository export; supplied cell 1 is generic setup. Its
+  scalar formulas reproduce the frozen projections and break-even tables
+  exactly without predictions, targets, fitting or inference.
+- Stage26 is `NOTEBOOK_CANONICAL`. The complete 108-cell executed notebook is
+  canonical for chronology and outputs. Its byte-preserved Kaggle virtual
+  source is `ARCHIVAL_ONLY`, is not guaranteed to compile, and must never be
+  used as a timing runner. Historical CPU and T4 milliseconds remain static,
+  hardware-specific evidence.
+- Stage27 is `NOTEBOOK_PLUS_SCRIPT`. The complete 47-cell executed notebook is
+  canonical for chronology; the prior repository notebook/script preserves
+  only supplied cells 34-45. Taxonomy, five eligible folds, two ineligible
+  folds, membership isolation and the terminal target-opening ledger are
+  verified from frozen receipts only.
+- Stage28 is `NOTEBOOK_PLUS_SCRIPT`. The complete 47-cell executed notebook is
+  canonical; the prior repository archive/script preserves only supplied
+  cells 33-47. The 108/108 new-fit ledger, 12 historical reuses, 50/50 LOAO
+  arms, ten shared-holdout ensemble evaluations and final claim registry are
+  static terminal evidence. `SCIENTIFIC_EXECUTION_BOUNDARY.md` records the
+  final empirical wall.
 
 Stages01-13 use functional result roots such as `results/baseline`,
 `results/tuning`, `results/threshold` and `results/holdout`, whereas later
@@ -219,7 +252,20 @@ Examples proven by receipts include:
 - Stage24: its own bootstrap receipt proves Python 3.12.13, NumPy 2.0.2,
   pandas 2.3.3, PyArrow 24.0.0, scikit-learn 1.6.1, LightGBM 4.6.0,
   XGBoost 3.2.0 and CatBoost 1.2.10 on two Tesla T4 GPUs;
-- Stage26 GPU receipt: PyTorch 2.10.0+cu128 on a Tesla T4.
+- Stage25: Python 3.12.13 is preserved; other historical package versions are
+  `VERSION_NOT_PROVEN`. Scalar formula verification does not depend on a model
+  or hardware runtime.
+- Stage26 CPU: Linux/glibc 2.35, Python 3.12.13, 4 logical/2 physical cores,
+  31.348 GiB RAM, NumPy 2.0.2, pandas 2.3.3, scikit-learn 1.6.1,
+  LightGBM 4.6.0, XGBoost 3.2.0, CatBoost 1.2.10 and PyTorch 2.10.0+cpu;
+- Stage26 GPU: a separate Tesla T4 session with driver 580.159.04, 15,360 MiB,
+  PyTorch 2.10.0+cu128 and CUDA 12.8; other GPU-session package versions are
+  `VERSION_NOT_PROVEN`;
+- Stage27 CPU: Linux/glibc 2.35, Python 3.12.13, NumPy 2.0.2,
+  scikit-learn 1.6.1, XGBoost 3.2.0, LightGBM 4.6.0 and Joblib 1.5.3;
+- Stage28 CPU: Linux/glibc 2.35, Python 3.12.13, NumPy 2.0.2 and
+  scikit-learn 1.6.1. Its XGBoost and LightGBM versions are independently
+  `VERSION_NOT_PROVEN`.
 
 The historical TensorFlow version is unproven for the early neural stages but
 proven as 2.19.0 for Stage14 only. Standalone Keras remains unproven for
@@ -233,11 +279,11 @@ The Stage15 environment history also contains a superseded system PyTorch
 with the isolated 2.7.1+cu118 environment that passed matrix, forward,
 backward and optimizer checks. See `STAGE15_ENVIRONMENT_PROVENANCE.md`.
 
-## Stage01-Stage24 equivalence checkpoint
+## Stage01-Stage28 equivalence checkpoint
 
-The non-scientific suite contains 108 tests and passes in full. The 93 rows in
+The non-scientific suite contains 127 tests and passes in full. The 112 rows in
 `EQUIVALENCE_MATRIX.csv` are distributed across the approved evidence levels
-as follows: 11 Level A byte-identity checks, 55 Level B exact static/numerical
+as follows: 21 Level A byte-identity checks, 64 Level B exact static/numerical
 checks, 18 Level C fixture/tolerance checks and nine Level D
 structural/provenance checks.
 
@@ -310,16 +356,44 @@ threshold reselection, bootstrap generation, SHAP computation, corpus/data
 materialization, target opening, source refit, feature-bridge modification or
 cross-dataset evaluation occurred.
 
+Stage25 is classified **fully reproducible from frozen input scalars**. Exact
+formula checks regenerate all 144 Bayesian projection rows, all 144
+traffic/confusion and capacity rows, 120 PPV break-even rows, 720 required-FPR
+rows and 24 cost break-even rows. These calculations use only the locked
+operating-point scalar inputs; they do not regenerate upstream predictions or
+open targets.
+
+Stage26 is classified **methodology reproducible / historical timings
+archival**. Static verification covers the eight-target inventory, batch grid,
+warmup/timed schedule, CPU-affinity/thread policy, T4 synchronization rule,
+model/raw-timing hashes, condition counts and figure inventory. Timing helper
+tests use toy arrays only. No clock, profiler, model or measurement loop runs.
+
+Stages27 and 28 are classified **partially reproducible / static scientific
+evidence**. Stage27's five frozen membership receipts each prove zero held-out
+family rows in training and validation, and its 10/10 fit and 5/5 opening
+ledgers are terminal. Stage28's frozen manifests prove 108/108 new fits, 12
+reuses, 50 chronological plus 50 random LOAO realizations and ten shared-final-
+holdout ensemble evaluations. The frozen shared-holdout comparison records PR
+random below chronological for 5/5 seeds and ROC random below chronological
+for 5/5 seeds. None of these scientific results was recomputed.
+
+The Stage25-Stage28 tests parse notebook/source text and static JSON/CSV files,
+exercise pure Stage25 scalar equations and Stage26 timing-statistic helpers on
+toy values, and stream 77 configured artifact identities. The 37 MB Stage28
+probability NPZ is hash-verified only and is never deserialized.
+
 ## Audit conclusion
 
 The repository contains extensive frozen evidence and strong closure records,
-but executable coverage remains uneven. The approved Stage01-Stage24 boundary
-is now represented by provenance-bearing code/configuration and safety-gated
-interfaces. Cell 171 remains mapped only to Stage16. Cells 462-488 remain the
-initial Stage21 restoration range and are explicitly reconciled with the later
-NB007 continuation rather than treated as a complete program.
+but executable coverage remains stage-dependent. The approved Stage01-Stage28
+boundary is represented by provenance-bearing code/configuration and
+safety-gated interfaces. The final block adds 20 manuscript-critical
+traceability rows, bringing the total through Stage28 to 49.
 
-Stage22 central temporal claims, Stage23 shortcut-audit claims and Stage24
-bidirectional transfer claims now have 29 rows of manuscript-critical
-traceability. Scientific execution remained prohibited throughout. This work
-stops after Stage24; Stage25 requires new explicit approval.
+Stage25's analytic outputs are fully reproducible from frozen scalar inputs;
+Stage26's method is reproducible while historical measurements remain
+archival; Stages27-28 retain static scientific evidence without rerun claims.
+Scientific execution remained prohibited throughout. This work stops at the
+Stage28 final empirical wall. Stage29 and later work is non-experimental and
+requires separate explicit authorization even for manuscript synthesis.

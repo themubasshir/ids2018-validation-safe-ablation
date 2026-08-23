@@ -101,7 +101,7 @@ class ProtocolSafetyTests(unittest.TestCase):
     def test_equivalence_matrix_uses_only_approved_levels(self) -> None:
         with (ROOT / "docs/reproducibility/EQUIVALENCE_MATRIX.csv").open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
-        self.assertEqual(len(rows), 93)
+        self.assertEqual(len(rows), 112)
         self.assertEqual({row["status"] for row in rows}, {"PASS"})
         self.assertTrue({row["equivalence_level"] for row in rows} <= {"A", "B", "C", "D"})
 

@@ -391,3 +391,32 @@ NB009 cells 18-60, with full cell 40 duplicated once; NB009 cells 1-17 and
 No safe entry point exposes scientific execution. `--dry-run` discloses the
 historical operations and target-touch boundary; `--verify-only` performs
 presence and streaming SHA256 checks only.
+
+## Stage25-Stage28 reconciled source map
+
+The final scientific block is preserved in four additional immutable executed
+archives. Detailed substage decisions and historical commit anchors are in
+`STAGE25_28_SOURCE_REGISTRY.csv`.
+
+| Stage | Full executed archive and cells | Prior repository export coverage | Canonical classification | Safe interface |
+|---:|---|---|---|---|
+| 25 | NB010 cells 1-8 | NB004/script exactly preserve supplied cells 2-8; cell 1 is generic setup | `NOTEBOOK_PLUS_SCRIPT` | `configs/stage25/protocol.json`; `scripts/reproduce_stage25.py` |
+| 26 | NB011 cells 1-108 (106 code, 2 markdown) | Byte-preserved Kaggle virtual source; 66/106 code bodies occur verbatim, but the linearized file is non-compiling | `NOTEBOOK_CANONICAL`; virtual source `ARCHIVAL_ONLY` | `configs/stage26/protocol.json`; `scripts/reproduce_stage26.py` |
+| 27 | NB012 cells 1-47 | NB005/script exactly preserve supplied cells 34-45 | `NOTEBOOK_PLUS_SCRIPT` | `configs/stage27/protocol.json`; `scripts/reproduce_stage27.py` |
+| 28 | NB013 cells 1-47 | NB006/script exactly preserve supplied cells 33-47 | `NOTEBOOK_PLUS_SCRIPT` | `configs/stage28/protocol.json`; `scripts/reproduce_stage28.py` |
+
+NB010 is the strongest analytic case: its inherited final operating points are
+frozen scalar inputs, so the historical projection and break-even tables can
+be reproduced exactly without accessing predictions or targets. NB011 remains
+the authority for historical CPU/T4 observations and outputs; reproducibility
+of the measurement protocol does not imply machine-independent millisecond
+identity. NB012 is required for the early taxonomy, feasibility, memberships,
+fits/openings and bootstrap chronology missing from its late-cell export.
+NB013 is required for the early protocol, input locks and fit chronology
+missing from its late-cell reconstruction.
+
+The supplied Stage28 filename mentioned Stage29, but every identifiable cell
+belongs to Stage28 and no Stage29 scientific section is present. The source was
+therefore archived wholly as Stage28 evidence without beginning Stage29 work.
+All four safe entry points require exactly one of `--dry-run` or
+`--verify-only`; no default scientific execution path exists.

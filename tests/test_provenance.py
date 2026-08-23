@@ -20,6 +20,9 @@ from ids_validation.stages.stage20.evaluation import operating_points as stage20
 from ids_validation.stages.stage20.extractor_forensics import flags
 from ids_validation.stages.stage20.packet_representation import encoder, geometry
 from ids_validation.stages.stage20.reconstruction import transitions
+from ids_validation.stages.stage22 import registry as stage22_registry
+from ids_validation.stages.stage23 import registry as stage23_registry
+from ids_validation.stages.stage24 import registry as stage24_registry
 
 
 class ExtractedFunctionProvenanceTests(unittest.TestCase):
@@ -55,6 +58,9 @@ class ExtractedFunctionProvenanceTests(unittest.TestCase):
             geometry,
             encoder,
             stage20_operating_points,
+            stage22_registry,
+            stage23_registry,
+            stage24_registry,
         )
         missing = []
         for module in modules:

@@ -57,6 +57,19 @@ class ProtocolSafetyTests(unittest.TestCase):
         18: list(range(240, 290)),
         19: list(range(290, 312)),
         20: list(range(312, 462)),
+        21: [
+            "notebooks/archive/stage01_to_stage20_original_kaggle_notebook.ipynb:462-488",
+            "notebooks/archive/stage21_stage22_research_continues.ipynb:2-85",
+        ],
+        22: ["notebooks/archive/stage21_stage22_research_continues.ipynb:86-139"],
+        23: [
+            "notebooks/archive/stage23_research_executed.ipynb:1-78",
+            "scripts/stage23_shortcut_feature_audit_kaggle.py:75 exported scientific/notebook cells",
+        ],
+        24: [
+            "notebooks/archive/stage24_cross_dataset_executed.ipynb:1-62",
+            "scripts/stage24/stage24_cross_dataset_generalization.py:recovered code-only export",
+        ],
     }
 
     def test_all_protocols_are_execution_disabled_and_mapped(self) -> None:
@@ -88,7 +101,7 @@ class ProtocolSafetyTests(unittest.TestCase):
     def test_equivalence_matrix_uses_only_approved_levels(self) -> None:
         with (ROOT / "docs/reproducibility/EQUIVALENCE_MATRIX.csv").open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
-        self.assertEqual(len(rows), 73)
+        self.assertEqual(len(rows), 93)
         self.assertEqual({row["status"] for row in rows}, {"PASS"})
         self.assertTrue({row["equivalence_level"] for row in rows} <= {"A", "B", "C", "D"})
 

@@ -21,6 +21,17 @@ The authoritative inventories are:
 
 No new framework schematic is authorized in Pass 1. The integrated validity matrix is a table, not a newly plotted composite score.
 
+### Caption and evidence ledger
+
+| Manuscript figure | Source stage | Intended message | Caption draft | Evidence IDs |
+| --- | --- | --- | --- | --- |
+| Figure 1 | Stage22, with Stage28 stability closure | Ranking depends on frozen development geometry, while threshold transfer and causal attribution remain separate questions | **Temporal ranking transfer on the shared forward target.** Existing PR-AUC (a) and ROC-AUC (b) assets compare frozen development geometries. The chronological-over-random direction is stable in the finite Stage28 seed set, but the target was historically opened and chronology remains entangled with family composition. | `E29-020;E29-037;E29-038;E29-040` |
+| Figure 2 | Stage23 | Shortcut-removal effects depend on split, learner, and control context | **Shortcut-subset sensitivity by validation geometry.** The approved Stage23 interaction asset reports native ranking metrics across the frozen feature subsets and split cells. Differences establish conditional sensitivity, not that a removed field is leakage or that it caused cross-dataset transfer behavior; matched-size placebos constrain interpretation. | `E29-022;E29-023` |
+| Figure 3 | Stage24 | Cross-dataset transfer is directional under frozen semantic bridges | **Bidirectional cross-dataset ranking under bridge62.** Existing normalized PR-AUC (a) and ROC-AUC (b) assets retain the two source-to-target directions separately. Source learners, target populations, prevalence, and feature semantics differ, so the panels do not define one average transfer score. | `E29-024;E29-025` |
+| Figure 4 | Stage25 | Projected PPV changes with prevalence and does not alone determine workload or yield | **Projected PPV under frozen prevalence stress.** Curves apply prior-probability shift while holding TPR and FPR fixed. They are analytic scenario translations—not observed SOC outcomes—and must be interpreted with the frozen traffic, analyst-time, capacity, and relative-cost assumptions. | `E29-028;E29-029;E29-030;E29-031` |
+| Figure 5 | Stage26 | CPU/GPU advantage varies across compatible model paths | **Hardware-specific p95 CPU/GPU comparison at the frozen profiling boundary.** Ratios describe compatible probability-generation paths on the recorded hardware/software and batch conditions. Unsupported backends and capture-to-alert processing are outside the measurement boundary. | `E29-032;E29-033` |
+| Figure 6 | Stage27, with Stage28 stability closure | Withheld-family ranking and balanced-threshold recall are family- and learner-specific | **Eligible-family LOAO ranking and balanced-threshold recall.** Existing ROC-AUC (a) and recall (b) assets retain learners and families separately. DOS and AUTH_BRUTE_FORCE were ineligible; Infiltration has 36 positives and remains descriptive; the exhibit is not an aggregate zero-day score. | `E29-034;E29-035;E29-036;E29-039` |
+
 ## Main tables
 
 | Manuscript exhibit | Stage 29 candidate | Frozen source | Principal contents | Required boundary | Pass 1 treatment |

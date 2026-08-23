@@ -54,6 +54,7 @@ class ManuscriptPass1ProvenanceTests(unittest.TestCase):
             DOCS / "MANUSCRIPT_CLAIM_AUDIT.csv",
             DOCS / "MANUSCRIPT_FIGURE_TABLE_PLAN.md",
             DOCS / "MANUSCRIPT_REFERENCE_AUDIT.md",
+            DOCS / "PASS1_REWRITE_REPORT.md",
         )
         for path in required:
             with self.subTest(path=path.relative_to(ROOT).as_posix()):
@@ -165,6 +166,9 @@ class ManuscriptPass1ProvenanceTests(unittest.TestCase):
                 self.assertTrue(row["stage29_artifacts"].strip())
                 self.assertTrue(row["frozen_results"].strip())
                 self.assertTrue(row["reproduction_index_entries"].strip())
+                for relative in split_ids(row["stage29_artifacts"]):
+                    source = ROOT / relative if relative.startswith("docs/") else STAGE29 / relative
+                    self.assertTrue(source.is_file(), source.relative_to(ROOT).as_posix())
 
     def test_all_eighteen_stage29_limitation_concepts_are_present(self) -> None:
         limitation_section = self.text.split("## 7. Limitations", 1)[1].split(

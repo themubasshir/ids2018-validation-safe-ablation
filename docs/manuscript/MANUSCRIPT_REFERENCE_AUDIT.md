@@ -4,6 +4,16 @@ Status: intentionally unresolved. No web search, bibliography lookup, citation i
 
 The reconstructed manuscript contains ten active `[REFERENCE GAP: <specific requirement>]` placeholders, all in Section 2. The References section contains no asserted external citations. This preserves the distinction between frozen repository evidence and literature claims that require a later, explicitly authorized search-and-verification pass.
 
+## Existing reference inventory
+
+| Audit category | Pass 1 finding |
+| --- | --- |
+| Existing references reused | 0. No verified bibliography or citation-key set was available in the repository material used for the reconstruction. |
+| Potentially obsolete references | 0 identified. Obsolescence cannot be assessed until candidate sources are verified in Pass 2. |
+| Duplicate references | 0 identified. Deduplication cannot begin until a verified bibliography exists. |
+| Missing reference categories | 10, corresponding to `REF-GAP-001` through `REF-GAP-010`. |
+| Claims requiring external verification | All literature-synthesis statements covered by the ten gap entries; no frozen empirical result requires external literature to establish its repository provenance. |
+
 ## Gap inventory
 
 | Gap ID | Manuscript location | Specific reference requirement | Preferred source class | Verification needed before replacement | Pass 1 status |

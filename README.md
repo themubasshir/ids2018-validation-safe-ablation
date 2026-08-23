@@ -123,6 +123,7 @@ Useful starting points:
 - `docs/reproducibility/EQUIVALENCE_MATRIX.csv`
 - `docs/reproducibility/NOTEBOOK_ARCHIVE_REGISTRY.csv`
 - `environment/ENVIRONMENT_REGISTRY.csv`
+- `docs/release/ARTIFACT_EVALUATION_APPENDIX.md`
 
 ## Limitations
 

@@ -1,0 +1,2 @@
+# Modern reproducibility tooling; not a universal historical environment.
+numpy==2.4.6

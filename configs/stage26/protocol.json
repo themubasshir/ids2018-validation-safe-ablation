@@ -1,0 +1,225 @@
+{
+  "stage": 26,
+  "name": "Deployment and resource profiling",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage26_deployment_profiling_executed.ipynb:1-108",
+      "scripts/stage26/stage26_deployment_profiling_kaggle.py:archival Kaggle virtual source"
+    ],
+    "notebook_sha256": "f26cf14b8f5b56c7e6cb882b075b26a2c575b1c722690591ba1e779fa4fe7177",
+    "historical_sources": [
+      "The 108-cell executed notebook is canonical for execution chronology and outputs",
+      "The preserved virtual-source export is byte-exact at LF identity e042c75c86b5f43f0da34fdb1bd63f5cb35b744f7003eaf99559324b0738229a",
+      "The virtual-source export is not a standalone executable module",
+      "Frozen raw samples and environment receipts are authoritative for historical measurements"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_CANONICAL",
+    "reason": "The executed notebook preserves complete measurement history; the non-compiling virtual-source export is archival only.",
+    "path": "notebooks/archive/stage26_deployment_profiling_executed.ipynb",
+    "registry": "docs/reproducibility/STAGE25_28_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "f3957b9",
+    "46379b6",
+    "7ffdba3",
+    "347d93f",
+    "b41a055",
+    "ce6f51c",
+    "a484148",
+    "9b6c9d1",
+    "fd4497e",
+    "304e561",
+    "9e8354e",
+    "8767f38",
+    "e47f447"
+  ],
+  "inputs": [
+    "Frozen model/checkpoint bytes and deterministic synthetic profiling inputs",
+    "Frozen CPU and single-T4 execution plans",
+    "Frozen historical raw timing, memory, extraction and representation observations"
+  ],
+  "outputs": [
+    "results/stage26_deployment_profiling/",
+    "figures/stage26_deployment_profiling/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Run fresh-process cold-start and warm model inference timing under frozen CPU affinity/thread policies",
+    "Profile model/package memory in separate fresh processes",
+    "Measure extraction and representation components under separately frozen boundaries",
+    "Generate corrected timing uncertainty, Pareto and capacity summaries",
+    "Profile supported backends on one prospectively selected Tesla T4 with explicit device synchronization",
+    "Build frozen CPU/GPU publication tables and figures"
+  ],
+  "would_touch_frozen_target": false,
+  "expected_compute_runtime": {
+    "historical_cpu_conditions": 80,
+    "historical_gpu_conditions": 40,
+    "historical_cpu_raw_warm_observations": 8120,
+    "historical_gpu_raw_observations": 3100,
+    "verification_mode": "Presence and streaming SHA256 only; toy-array statistic tests never call a clock"
+  },
+  "verification_artifacts": [
+    "notebooks/archive/stage26_deployment_profiling_executed.ipynb",
+    "scripts/stage26/stage26_deployment_profiling_kaggle.py",
+    "scripts/stage26/stage26_notebook_export_receipt.json",
+    "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_bootstrap_manifest.json",
+    "results/stage26_deployment_profiling/stage26_0_protocol_lock/measurement_protocol.json",
+    "results/stage26_deployment_profiling/stage26_0_protocol_lock/cpu_execution_plan.json",
+    "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_raw.csv",
+    "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_raw.csv",
+    "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3_memory_execution_plan.json",
+    "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_extraction_protocol.json",
+    "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_protocol.json",
+    "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_protocol.json",
+    "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_8b_representation_sensitivity_protocol.json",
+    "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_environment.json",
+    "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_raw_timing.csv",
+    "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/stage26_g2_final_stage26_closure_receipt.json",
+    "results/stage26_deployment_profiling/stage26_publication_package/stage26_publication_package_manifest.json",
+    "figures/stage26_deployment_profiling/"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage26_deployment_profiling_executed.ipynb": {"size_bytes": 7101455, "sha256": "f26cf14b8f5b56c7e6cb882b075b26a2c575b1c722690591ba1e779fa4fe7177"},
+    "results/stage26_deployment_profiling/stage26_0_protocol_lock/stage26_bootstrap_manifest.json": {"size_bytes": 2285, "sha256": "f54db639b515f1dfc2ef89f8011a4fab8f5cdee0421173921d749b6801d7e6cd"},
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/XGBOOST_tuned.joblib": {"size_bytes": 864264, "sha256": "4f02e06fc6d855adc1e33ce47befda2bedb6c2a5b528338cc88f24e4184b705f"},
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/LIGHTGBM_tuned.joblib": {"size_bytes": 2420416, "sha256": "0e13bc2386e30a31aba765501011bd5b274714f77d3a8df481e374a461db55e2"},
+    "results/stage16_classical_benchmark_checkpoint/stage16_3_tuned_models/CATBOOST_tuned.joblib": {"size_bytes": 458589, "sha256": "85b2305676280fee6e620d94eb28a58ba9b607aff247b65ad462ab16f89c0cd6"},
+    "results/stage15_transformer_checkpoint/stage15_4b_models/FT_BALANCED_seed_7_best_extended.pt": {"size_bytes": 1968137, "sha256": "07ab2289b41ae933ce28f3d19a92cf44bb863439209c607254e400c6b0732c31"},
+    "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_29_best.pt": {"size_bytes": 1966137, "sha256": "b4f8fd466133fd519273bffd9a9db0fa486e77aadf1b3037887491de4415610c"},
+    "results/stage15_transformer_checkpoint/stage15_4a_models/FT_BALANCED_seed_101_best.pt": {"size_bytes": 1966315, "sha256": "0b93392ad23440818dd9f10ad4005f452331e3b52ff119fced4cf126e2f2a552"},
+    "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_313_best.pt": {"size_bytes": 1966315, "sha256": "51bc59b0d894ce4395a0c6cf0e54090daec4d132c358092263ba4f408c59a739"},
+    "results/stage15_transformer_checkpoint/stage15_4c_models/FT_BALANCED_seed_997_best.pt": {"size_bytes": 1966315, "sha256": "c0564a47ad4d1f7bd6ce91b06086c41043646b31aa3d751c24d8f44083114b66"},
+    "results/stage20_1e_training/stage20_1e2_epoch10_model_state_dict.pt": {"size_bytes": 376879, "sha256": "3ebc71e579dc8e0e545981b2d60eea643148fe53e0902f8df8e47556243ad30b"},
+    "results/stage21_architecture/stage21_2_epoch10_model_state_dict.pt": {"size_bytes": 378999, "sha256": "221e9c805fb663acacf2f0f2ca95dba7cb4b2ec4c4de5a3650cf4adeb99b5ef8"},
+    "results/stage26_deployment_profiling/stage26_0_protocol_lock/measurement_protocol.json": {"size_bytes": 22457, "sha256": "b4a801d03a505f89952e925815d7c678d6c605bc5ab95a8b40fb47e8af4243c1"},
+    "results/stage26_deployment_profiling/stage26_0_protocol_lock/cpu_execution_plan.json": {"size_bytes": 37222, "sha256": "4c392df54cce9bcd7bf3715201b9563e105f11ea0f1b565c182438ba35123c68"},
+    "results/stage26_deployment_profiling/stage26_1_cpu_cold_start/stage26_1_cold_start_raw.csv": {"size_bytes": 38427, "sha256": "bd545c56dd197e076ee68d11cfc1d3cbadd3020044c5fe663f3eca6984059c3d"},
+    "results/stage26_deployment_profiling/stage26_2_cpu_warm_inference/stage26_2_warm_raw.csv": {"size_bytes": 1262137, "sha256": "78c58289ccfc4598966d6516201028f43c4b1d16d8bd0268a0cf58129d4179fa"},
+    "results/stage26_deployment_profiling/stage26_3a_memory_implementation_lock/stage26_3_memory_execution_plan.json": {"size_bytes": 182132, "sha256": "0261140df7882c44e689715a0c9f174cc33717838989c39597830ecdb01bd59a"},
+    "results/stage26_deployment_profiling/stage26_4b_extraction_protocol_lock/stage26_extraction_protocol.json": {"size_bytes": 9340, "sha256": "0a4aa6a6fd82cdd011042aecb3ad01a1f6fe49995397db11185b3efa83eb4b25"},
+    "results/stage26_deployment_profiling/stage26_4c_representation_protocol_lock/stage26_representation_protocol.json": {"size_bytes": 8652, "sha256": "80be42cfd3697d85abffee755a909339fc30fd83cd371ecfa0537d2dcf011c30"},
+    "results/stage26_deployment_profiling/stage26_6f0_bootstrap_correction_protocol_lock/stage26_6f0_bootstrap_correction_protocol.json": {"size_bytes": 5057, "sha256": "bc4f27e75f965170890047108b67634453e0d9f80d12a4c2cf33dbd75946a3ca"},
+    "results/stage26_deployment_profiling/stage26_8b_representation_sensitivity_protocol_lock/stage26_8b_representation_sensitivity_protocol.json": {"size_bytes": 13778, "sha256": "87a0671a0468d77737c5f8cdd876a4e79c6c84e431b18d11b1686a582e8f285f"},
+    "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_environment.json": {"size_bytes": 859, "sha256": "d027d8cc3eb68982afeb2a2b91ef438db0165cd602d41566a3070013622bf145"},
+    "results/stage26_deployment_profiling/stage26_g1_gpu_warm_profile/stage26_g1_gpu_raw_timing.csv": {"size_bytes": 372477, "sha256": "c41ffa687b3b779762f0adae2808d5e6489c4402d57fd8029d1c45f601e5565c"},
+    "results/stage26_deployment_profiling/stage26_g2_final_gpu_publication_closure/stage26_g2_final_stage26_closure_receipt.json": {"size_bytes": 1910, "sha256": "c69c73b59a47de98541abe50efc11fe563dc86ee1aa612a99f1ce58156cb9bde"},
+    "results/stage26_deployment_profiling/stage26_publication_package/stage26_publication_package_manifest.json": {"size_bytes": 7759, "sha256": "196174fb870108765f9d243d2adbf2eb8e8e670775f5fef9ec1b08caca8fde6c"}
+  },
+  "methodology": {
+    "reproducibility_classification": "METHODOLOGY_REPRODUCIBLE_HISTORICAL_TIMINGS_ARCHIVAL",
+    "profile_targets": [
+      "STAGE16_XGBOOST_TUNED",
+      "STAGE16_LIGHTGBM_TUNED",
+      "STAGE16_CATBOOST_TUNED",
+      "FT_BALANCED_5_CHECKPOINT_SOFT_VOTING",
+      "STAGE20_MASKED_CNN_V1",
+      "STAGE21_MASKED_VIT_V1",
+      "ENS_LGBM_XGB_EQUAL",
+      "FT_BALANCED_SINGLE_RESOURCE_REFERENCE"
+    ],
+    "batch_sizes": [1, 64, 256, 1024, 8192],
+    "warmup_timed_runs": {
+      "1": [50, 200],
+      "64": [30, 150],
+      "256": [20, 100],
+      "1024": [10, 50],
+      "8192": [5, 20]
+    },
+    "cpu": {
+      "condition_count": 80,
+      "randomization_seed": 26042,
+      "cold_start_repetitions": 20,
+      "modes": {
+        "CPU_1_PHYSICAL_CORE": {"affinity": [0], "thread_count": 1},
+        "CPU_2_PHYSICAL_CORE": {"affinity": [0, 1], "thread_count": 2}
+      },
+      "thread_environment_keys": ["OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS", "NUMEXPR_NUM_THREADS", "BLIS_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"]
+    },
+    "gpu": {
+      "hardware_mode": "GPU_SINGLE_T4",
+      "gpu_name": "Tesla T4",
+      "selected_physical_gpu_index": 1,
+      "condition_count": 40,
+      "raw_timing_observations": 3100,
+      "synchronization": "DEVICE_SYNCHRONIZE_BEFORE_AND_AFTER_EVERY_TIMED_REGION",
+      "backend_unavailable_conditions": 10,
+      "pass_conditions": 29,
+      "resource_limit_oom_conditions": 1
+    },
+    "statistics": {
+      "bootstrap_replicates": 2000,
+      "bootstrap_seed": 26042,
+      "interval": "PERCENTILE_95_PERCENT",
+      "percentile_method": "linear",
+      "regeneration_authorized": false
+    },
+    "memory": {
+      "fresh_process_per_repetition": true,
+      "repetitions": 5,
+      "rss_sampling_interval_ms": 5,
+      "timing_and_memory_runs_separate": true
+    },
+    "publication_figure_stems": [
+      "F26_CAPACITY_SCALING",
+      "F26_COLD_START",
+      "F26_COMPONENT_BOUNDARY",
+      "F26_CPU1_GPU_P95_SPEEDUP",
+      "F26_GPU_DELTA_PEAK_MEMORY",
+      "F26_MEMORY_PACKAGE",
+      "F26_PARETO",
+      "F26_REPRESENTATION_SENSITIVITY",
+      "F26_WARM_LATENCY",
+      "F26_WARM_THROUGHPUT"
+    ],
+    "boundaries": {
+      "complete_end_to_end_measurement": "UNAVAILABLE",
+      "cross_group_pareto": "PROHIBITED",
+      "cpu_gpu_speedup_ratio_ci": "NOT_COMPUTED",
+      "hardware_specific_numbers_archival": true,
+      "methodology_reproducible": true
+    },
+    "scientific_execution_authorized": false,
+    "timing_execution_authorized": false,
+    "memory_profiling_authorized": false,
+    "model_deserialization_authorized": false,
+    "inference_authorized": false,
+    "extraction_authorized": false,
+    "representation_materialization_authorized": false,
+    "bootstrap_generation_authorized": false,
+    "figure_regeneration_authorized": false
+  },
+  "environment": {
+    "cpu": {
+      "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+      "python": "3.12.13",
+      "logical_cores": 4,
+      "physical_cores": 2,
+      "ram_total_gib": 31.348,
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "scikit_learn": "1.6.1",
+      "lightgbm": "4.6.0",
+      "xgboost": "3.2.0",
+      "catboost": "1.2.10",
+      "torch": "2.10.0+cpu"
+    },
+    "gpu": {
+      "model": "Tesla T4",
+      "driver": "580.159.04",
+      "memory_mib": 15360,
+      "torch": "2.10.0+cu128",
+      "cuda": "12.8",
+      "other_versions": "VERSION_NOT_PROVEN"
+    },
+    "separation_note": "CPU and single-T4 records are separate Stage26 sessions and are not Stage15/Stage20 P100 evidence."
+  },
+  "holdout_policy": {
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 only; raw timing CSVs are not analyzed by the wrapper"
+  }
+}

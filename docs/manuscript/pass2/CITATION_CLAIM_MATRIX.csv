@@ -1,0 +1,68 @@
+citation_key,literature_claim_ids,manuscript_locations,support_type,source_quality,notes,literature_claim_id,citation_keys,coverage_status,mapping_direction
+cse_cic_ids2018_official,"LC-014;LC-039","Related Work 2.1; Datasets 3.1",DIRECT_SUPPORT,TIER_3_OFFICIAL_SOURCE,"Official CSE-CIC-IDS2018 provenance and release documentation",,,,CITATION_TO_CLAIM
+sharafaldin2018toward,"LC-013;LC-014;LC-039;LC-040","Related Work 2.1; Datasets 3.1; Datasets 3.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Original associated CICIDS-family publication; scope kept to documented features scenarios and baseline algorithms",,,,CITATION_TO_CLAIM
+cicids2017_official,LC-040,"Datasets 3.2",DIRECT_SUPPORT,TIER_3_OFFICIAL_SOURCE,"Official CICIDS2017 dates scenarios PCAP/flow and tooling documentation",,,,CITATION_TO_CLAIM
+ring2019survey,"LC-001;LC-004;LC-013;LC-014;LC-015","Abstract; Introduction; Related Work 2.1",DIRECT_SUPPORT,TIER_2_HIGH_QUALITY_REVIEW,"Dataset-practice context only; no field-wide model-performance claim",,,,CITATION_TO_CLAIM
+he2009imbalanced,"LC-015;LC-016;LC-017","Related Work 2.1",DIRECT_SUPPORT,TIER_2_HIGH_QUALITY_REVIEW,"Class-imbalance and sampling context; combined with security-specific evaluation sources",,,,CITATION_TO_CLAIM
+saito2015precision,"LC-008;LC-012;LC-016;LC-030","Introduction; Related Work 2.1; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Ranking/precision-recall behavior under imbalance; not an operational workload study",,,,CITATION_TO_CLAIM
+sommer2010closed,"LC-002;LC-003;LC-004;LC-015;LC-017;LC-018;LC-030","Introduction; Related Work 2.1; Related Work 2.2; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"IDS-specific closed-world and operational-evaluation limits",,,,CITATION_TO_CLAIM
+engelen2021troubleshooting,"LC-006;LC-019;LC-022","Introduction; Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Direct CICIDS2017 artifact and dataset-construction audit",,,,CITATION_TO_CLAIM
+arp2022dos,"LC-002;LC-003;LC-005;LC-006;LC-018;LC-019;LC-020;LC-021;LC-022;LC-023;LC-024","Introduction; Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Security-ML pitfall analysis; combined with direct IDS evidence where needed",,,,CITATION_TO_CLAIM
+pendlebury2019tesseract,"LC-003;LC-005;LC-017;LC-018;LC-020;LC-021","Introduction; Related Work 2.1; Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Temporal and prevalence-related experimental-bias methodology in security ML",,,,CITATION_TO_CLAIM
+ribeiro2016lime,"LC-025;LC-026","Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Original LIME method and local-surrogate objective",,,,CITATION_TO_CLAIM
+lundberg2017shap,LC-025,"Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Original SHAP additive-attribution framework",,,,CITATION_TO_CLAIM
+lundberg2020trees,LC-025,"Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Tree-specific SHAP algorithms and explanation aggregation",,,,CITATION_TO_CLAIM
+yeh2019infidelity,LC-026,"Related Work 2.2",DIRECT_SUPPORT,TIER_1_PRIMARY,"Separate infidelity and sensitivity properties",,,,CITATION_TO_CLAIM
+dhooge2020interdataset,"LC-007;LC-027;LC-028","Introduction; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Direct CICIDS2017/CSE-CIC-IDS2018 inter-dataset study",,,,CITATION_TO_CLAIM
+layeghy2023crossdomain,"LC-006;LC-007;LC-027;LC-028;LC-029","Introduction; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Multi-dataset common-feature cross-domain study with explicit direction asymmetry",,,,CITATION_TO_CLAIM
+cantone2024crossdataset,"LC-028;LC-029","Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Recent CICIDS-family corroboration; not used to universalize failure",,,,CITATION_TO_CLAIM
+axelsson2000baserate,"LC-003;LC-009;LC-012;LC-030","Introduction; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Foundational IDS base-rate and Bayesian detection analysis",,,,CITATION_TO_CLAIM
+saerens2002prior,"LC-008;LC-031","Introduction; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Prior-probability shift method and conditional assumptions",,,,CITATION_TO_CLAIM
+layman2023falsealarms,"LC-009;LC-030","Introduction; Related Work 2.3",DIRECT_SUPPORT,TIER_1_PRIMARY,"Controlled analyst precision and time-on-task experiment",,,,CITATION_TO_CLAIM
+mattson2020mlperf,"LC-010;LC-012;LC-032;LC-033","Introduction; Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"Systems-benchmark measurement context and workload boundaries",,,,CITATION_TO_CLAIM
+mirsky2018kitsune,"LC-010;LC-032;LC-033","Introduction; Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"IDS-specific online/resource-constrained deployment example",,,,CITATION_TO_CLAIM
+scheirer2013openset,"LC-034;LC-036","Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"Foundational open-set definition; not IDS field evidence alone",,,,CITATION_TO_CLAIM
+zoppi2023unknown,"LC-011;LC-034;LC-035;LC-036","Introduction; Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"Broad IDS experiment simulating attacks unknown during training",,,,CITATION_TO_CLAIM
+shin2023openset,"LC-011;LC-034;LC-035","Introduction; Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"Explicit open-set IDS experiments across three datasets",,,,CITATION_TO_CLAIM
+pineau2021reproducibility,LC-037,"Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"Peer-reviewed NeurIPS reproducibility-program report",,,,CITATION_TO_CLAIM
+dwork2015holdout,LC-038,"Related Work 2.4",DIRECT_SUPPORT,TIER_1_PRIMARY,"Adaptive-analysis and reusable-holdout validity method",,,,CITATION_TO_CLAIM
+,,,,,"Broad frequency wording narrowed to benchmark-study context",LC-001,"ring2019survey;sommer2010closed",FULL,CLAIM_TO_CITATION
+,,,,,"Combined IDS evaluation-method support",LC-002,"sommer2010closed;arp2022dos",FULL,CLAIM_TO_CITATION
+,,,,,"Composite coverage across time domain prevalence deployment and unknown-class axes",LC-003,"sommer2010closed;arp2022dos;pendlebury2019tesseract;layeghy2023crossdomain;axelsson2000baserate;mattson2020mlperf;zoppi2023unknown",FULL,CLAIM_TO_CITATION
+,,,,,"Frequency claim removed; retained statement says stronger inference requires separate validation",LC-004,"ring2019survey;sommer2010closed",FULL,CLAIM_TO_CITATION
+,,,,,"Time-consistent evaluation wording narrowed",LC-005,"arp2022dos;pendlebury2019tesseract",FULL,CLAIM_TO_CITATION
+,,,,,"Dataset artifacts and domain dependence covered jointly",LC-006,"engelen2021troubleshooting;arp2022dos;layeghy2023crossdomain",FULL,CLAIM_TO_CITATION
+,,,,,"Nominal/common feature representation caveat narrowed to verified cross-domain protocols",LC-007,"dhooge2020interdataset;layeghy2023crossdomain",FULL,CLAIM_TO_CITATION
+,,,,,"Reworded as separation of ranking and operating-point/prior-shift questions",LC-008,"saito2015precision;saerens2002prior",FULL,CLAIM_TO_CITATION
+,,,,,"Base-rate and analyst workload evidence combined",LC-009,"axelsson2000baserate;layman2023falsealarms",FULL,CLAIM_TO_CITATION
+,,,,,"Systems and IDS deployment examples combined",LC-010,"mattson2020mlperf;mirsky2018kitsune",FULL,CLAIM_TO_CITATION
+,,,,,"Unknown-class protocol dependence; project eligibility remains internally supported",LC-011,"zoppi2023unknown;shin2023openset",FULL,CLAIM_TO_CITATION
+,,,,,"Metric categories supported by combined ranking base-rate and systems sources",LC-012,"saito2015precision;axelsson2000baserate;mattson2020mlperf",FULL,CLAIM_TO_CITATION
+,,,,,"Extensive/four-class wording removed",LC-013,"sharafaldin2018toward;ring2019survey",FULL,CLAIM_TO_CITATION
+,,,,,"Official provenance paired with original associated paper",LC-014,"cse_cic_ids2018_official;sharafaldin2018toward;ring2019survey",FULL,CLAIM_TO_CITATION
+,,,,,"Compound wording narrowed to documented construction balance and protocol conditions",LC-015,"ring2019survey;he2009imbalanced;sommer2010closed",FULL,CLAIM_TO_CITATION
+,,,,,"Class-prior change under rebalancing",LC-016,"he2009imbalanced;saito2015precision",FULL,CLAIM_TO_CITATION
+,,,,,"Improve claim removed; representativeness caveat retained",LC-017,"he2009imbalanced;sommer2010closed;pendlebury2019tesseract",FULL,CLAIM_TO_CITATION
+,,,,,"Future-use population assumption and time direction",LC-018,"sommer2010closed;arp2022dos;pendlebury2019tesseract",FULL,CLAIM_TO_CITATION
+,,,,,"Specific dependency list narrowed to artifacts near-duplicates and temporal/family dependence",LC-019,"engelen2021troubleshooting;arp2022dos",FULL,CLAIM_TO_CITATION
+,,,,,"Session-aware frequency claim removed; time-consistent design retained",LC-020,"arp2022dos;pendlebury2019tesseract",FULL,CLAIM_TO_CITATION
+,,,,,"Temporal contrast causal restraint",LC-021,"arp2022dos;pendlebury2019tesseract",FULL,CLAIM_TO_CITATION
+,,,,,"Unsupported feature enumeration removed",LC-022,"engelen2021troubleshooting;arp2022dos",FULL,CLAIM_TO_CITATION
+,,,,,"Sensitivity-to-intervention is not causal identification",LC-023,"arp2022dos",FULL,CLAIM_TO_CITATION
+,,,,,"Placebo precedent removed; competing-explanation controls retained",LC-024,"arp2022dos",FULL,CLAIM_TO_CITATION
+,,,,,"Original method sources",LC-025,"ribeiro2016lime;lundberg2017shap;lundberg2020trees",FULL,CLAIM_TO_CITATION
+,,,,,"Fidelity and sensitivity covered separately",LC-026,"ribeiro2016lime;yeh2019infidelity",FULL,CLAIM_TO_CITATION
+,,,,,"Common-response frequency wording removed",LC-027,"dhooge2020interdataset;layeghy2023crossdomain",FULL,CLAIM_TO_CITATION
+,,,,,"Narrowed to verified pairing representation and direction factors",LC-028,"dhooge2020interdataset;layeghy2023crossdomain;cantone2024crossdataset",FULL,CLAIM_TO_CITATION
+,,,,,"Direct asymmetry evidence",LC-029,"layeghy2023crossdomain;cantone2024crossdataset",FULL,CLAIM_TO_CITATION
+,,,,,"Economic-preference clause removed from external claim",LC-030,"axelsson2000baserate;layman2023falsealarms;saito2015precision",FULL,CLAIM_TO_CITATION
+,,,,,"Prior-shift assumptions and projection boundary",LC-031,"saerens2002prior",FULL,CLAIM_TO_CITATION
+,,,,,"Exhaustive deployment-factor list narrowed to measured system boundaries",LC-032,"mattson2020mlperf;mirsky2018kitsune",FULL,CLAIM_TO_CITATION
+,,,,,"Hardware/software/workload reporting boundary",LC-033,"mattson2020mlperf;mirsky2018kitsune",FULL,CLAIM_TO_CITATION
+,,,,,"Open-set and unknown-attack terminology supported without frequency overreach",LC-034,"scheirer2013openset;zoppi2023unknown;shin2023openset",FULL,CLAIM_TO_CITATION
+,,,,,"LOAO-standard wording removed; protocol dependence retained",LC-035,"zoppi2023unknown;shin2023openset",FULL,CLAIM_TO_CITATION
+,,,,,"Bounded unknown classes are not arbitrary future attacks",LC-036,"scheirer2013openset;zoppi2023unknown",FULL,CLAIM_TO_CITATION
+,,,,,"Code details reporting and independent regeneration context",LC-037,"pineau2021reproducibility",FULL,CLAIM_TO_CITATION
+,,,,,"Adaptive holdout risk",LC-038,"dwork2015holdout",FULL,CLAIM_TO_CITATION
+,,,,,"Official CSE-CIC-IDS2018 provenance; processed table distinctions remain internal",LC-039,"cse_cic_ids2018_official;sharafaldin2018toward",FULL,CLAIM_TO_CITATION
+,,,,,"Official CICIDS2017 provenance and original associated publication",LC-040,"cicids2017_official;sharafaldin2018toward",FULL,CLAIM_TO_CITATION

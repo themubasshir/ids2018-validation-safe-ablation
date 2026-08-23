@@ -18,14 +18,12 @@ We reconstruct that evaluation around CSE-CIC-IDS2018 and CICIDS2017. A conventi
 
 The evidence is heterogeneous. The reference result is strong, and chronological development retains substantially better forward ranking than random development across the evaluated seeds, but transferred operating thresholds remain poor. The forward cross-dataset bridge retains ranking signal while the reverse bridge does not. Shortcut interventions show split interactions, yet matched placebos prevent a causal leakage claim. Several withheld families remain discriminable, whereas others are learner-dependent, ineligible, or weakly supported. High projected PPV and manageable analyst workload also fail to align uniformly. These counterexamples identify which inference changes under each validity condition.
 
-This study makes six contributions:
+This study makes four contributions:
 
-1. It applies a connected, validation-safe framework in which benchmark, temporal, shortcut, cross-dataset, operational, computational, unseen-family, and realization validity remain distinct axes.
-2. It provides a source-faithful temporal and operating-point audit across a frozen seed set, separating ranking stability, threshold transfer, and causal interpretation.
-3. It combines controlled shortcut-feature evaluation with bidirectional dataset transfer while preserving placebo evidence, bridge restrictions, directionality, and cancelled analyses.
-4. It links prevalence, alert workload, relative cost, and measured computational profiles while distinguishing analytic assumptions from hardware measurements.
-5. It evaluates zero-training-exposure attack families through eligibility-gated, family-specific results that retain learner dependence and low-support classifications.
-6. It supplies a claim-to-provenance layer linking manuscript statements and numbers to frozen artifacts, protocols, canonical implementations, archived sources, equivalence evidence, and known gaps.
+1. It applies a connected framework that evaluates temporal validity, operating-point behavior, shortcut sensitivity, bidirectional cross-dataset transfer, prevalence stress, deployment profiling, unseen-family behavior, and realization stability as distinct axes with native metrics.
+2. It supplies a claim-to-provenance layer that traces manuscript statements and numbers to frozen evidence, protocols, artifacts, canonical source material, and explicitly classified reproducibility limits.
+3. It shows that benchmark capability did not translate uniformly across stronger validation conditions. The observed effects varied across time, datasets, operating points, feature controls, families, learners, development regimes, and operational assumptions.
+4. It distills the framework into an eight-item validation checklist that links each evaluation question to a native metric, a required control, and an interpretation boundary.
 
 The contribution is an evaluation discipline, not a new IDS architecture or a universal verdict on machine-learning detection. The study asks which benchmark capabilities survived each evaluated validity condition, which became conditional, and what remained unresolved.
 

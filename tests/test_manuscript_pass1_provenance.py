@@ -60,7 +60,7 @@ class ManuscriptPass1ProvenanceTests(unittest.TestCase):
             with self.subTest(path=path.relative_to(ROOT).as_posix()):
                 self.assertTrue(path.is_file())
                 self.assertGreater(path.stat().st_size, 0)
-        self.assertIn("Pass 1 evidence-governed reconstruction", self.text)
+        self.assertIn("Pass 2A literature-verified integration", self.text)
         self.assertIn("This document is not final", self.text)
 
     def test_integrated_manuscript_has_the_approved_section_structure(self) -> None:
@@ -225,16 +225,15 @@ class ManuscriptPass1ProvenanceTests(unittest.TestCase):
         self.assertIn("does not redraw, merge, crop, recolor, relabel, or recompute", self.figure_plan)
         self.assertIn("Do not combine in Pass 1", self.figure_plan)
 
-    def test_reference_gaps_are_complete_and_no_citations_are_invented(self) -> None:
+    def test_pass1_reference_gap_audit_is_preserved_after_pass2a(self) -> None:
         manuscript_gap_count = self.text.count("[REFERENCE GAP:")
         audit_gap_ids = re.findall(r"^\| (REF-GAP-\d{3}) \|", self.reference_audit, re.MULTILINE)
-        self.assertEqual(manuscript_gap_count, 10)
+        self.assertEqual(manuscript_gap_count, 0)
         self.assertEqual(len(audit_gap_ids), 10)
         self.assertEqual(len(audit_gap_ids), len(set(audit_gap_ids)))
         self.assertIn("External browsing performed: **no**", self.reference_audit)
-        for citation_pattern in (r"https?://", r"\[@[^\]]+\]", r"\\cite\{"):
-            with self.subTest(pattern=citation_pattern):
-                self.assertIsNone(re.search(citation_pattern, self.text))
+        self.assertIsNotNone(re.search(r"\[@[^\]]+\]", self.text))
+        self.assertIsNone(re.search(r"\\cite\{", self.text))
 
     def test_manuscript_remains_a_stage29_synthesis_not_new_science(self) -> None:
         prohibited_methods = (

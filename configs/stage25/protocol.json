@@ -1,0 +1,135 @@
+{
+  "stage": 25,
+  "name": "Prevalence and operational stress",
+  "scientific_execution_enabled": false,
+  "source": {
+    "physical_cells_1_based": [
+      "notebooks/archive/stage25_prevalence_operational_stress_executed.ipynb:1-8",
+      "scripts/stage25/stage25_prevalence_operational_stress.py:exact supplied cells 2-8 after newline normalization"
+    ],
+    "notebook_sha256": "58f529ca1e1f4a94083e533b5251b8f7433cfe57909477869a71d2cfbe5b61a3",
+    "historical_sources": [
+      "Supplied cell 1 is the generic Kaggle bootstrap and is absent from the repository export",
+      "Repository notebook and Python export preserve supplied cells 2-8 exactly after newline normalization",
+      "Executed notebook outputs and frozen result packages are the historical execution evidence"
+    ]
+  },
+  "canonical_reproduction_source": {
+    "status": "NOTEBOOK_PLUS_SCRIPT",
+    "reason": "The seven scientific cells are exactly preserved as a script; the executed notebook preserves complete output history.",
+    "path": "scripts/stage25/stage25_prevalence_operational_stress.py",
+    "registry": "docs/reproducibility/STAGE25_28_SOURCE_REGISTRY.csv"
+  },
+  "provenance_references": [
+    "988fc5d",
+    "bfcc417",
+    "e905a49",
+    "5d1f9b2",
+    "7820b98",
+    "f9307d5"
+  ],
+  "inputs": [
+    "Frozen Stage22R and Stage24 scalar TPR/FPR operating points only",
+    "Frozen prevalence, volume, analyst-capacity and relative-cost protocol scalars"
+  ],
+  "outputs": [
+    "results/stage25_prevalence_stress/",
+    "figures/stage25_prevalence_stress/"
+  ],
+  "scientific_actions_that_would_occur": [
+    "Apply the frozen prior-probability-shift PPV/NPV and likelihood-ratio equations to 24 inherited operating points",
+    "Project expected confusion counts and analyst workload at six frozen prevalences with one million benign flows per day",
+    "Apply exact PPV, required-FPR, relative-cost and capacity break-even equations",
+    "Run the seven frozen sanity-test semantics and seal the fixed-size tables"
+  ],
+  "would_touch_frozen_target": false,
+  "expected_compute_runtime": {
+    "historical_model_fits": 0,
+    "historical_inference_calls": 0,
+    "historical_target_openings": 0,
+    "verification_mode": "Pure scalar formula unit checks and static artifact/hash verification only"
+  },
+  "verification_artifacts": [
+    "notebooks/archive/stage25_prevalence_operational_stress_executed.ipynb",
+    "scripts/stage25/stage25_prevalence_operational_stress.py",
+    "results/stage25_prevalence_stress/stage25_0_protocol_lock/freeze_record.json",
+    "results/stage25_prevalence_stress/stage25_0_protocol_lock/inherited_operating_points.json",
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_bayesian_projection_grid.csv",
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_traffic_soc_projection.csv",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/ppv_break_even_points.csv",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/required_fpr_by_ppv.csv",
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/cost_break_even_points.csv",
+    "results/stage25_prevalence_stress/stage25_5_final_audit_and_seal/stage25_5_final_synthesis.json",
+    "results/stage25_prevalence_stress/stage25_publication_package/stage25_publication_package_manifest.json"
+  ],
+  "hash_verification_artifacts": {
+    "notebooks/archive/stage25_prevalence_operational_stress_executed.ipynb": {"size_bytes": 739572, "sha256": "58f529ca1e1f4a94083e533b5251b8f7433cfe57909477869a71d2cfbe5b61a3"},
+    "results/stage25_prevalence_stress/stage25_0_protocol_lock/freeze_record.json": {"size_bytes": 3756, "sha256": "19d71c2428a18259653e7b07f06099da14e6274480485a1060100a360562b1a1"},
+    "results/stage25_prevalence_stress/stage25_0_protocol_lock/inherited_operating_points.json": {"size_bytes": 36721, "sha256": "23c6e143ed42384e6c30ba2141198277c17b3f5a5b69eec495c52b911cb54195"},
+    "results/stage25_prevalence_stress/stage25_1_bayesian_projection/stage25_1_bayesian_projection_grid.csv": {"size_bytes": 60198, "sha256": "d3a2548dd93a302375418cc000694ecaebdc1c6cc8807ce453a5bc0080b51964"},
+    "results/stage25_prevalence_stress/stage25_2_traffic_soc_capacity/stage25_2_traffic_soc_projection.csv": {"size_bytes": 137744, "sha256": "058551091416d3eaf9fe147cef90c3089db1799082ab83c3da2a72070aee86d3"},
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/ppv_break_even_points.csv": {"size_bytes": 25804, "sha256": "8bbc3fc18928bd5bc11ed7019a8d8d02a22732f17374b2d61ef1b20bb87bf002"},
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/required_fpr_by_ppv.csv": {"size_bytes": 160795, "sha256": "e7906cd9166901c0acdcb2039e23ed271d07b5a837f95e1f668569d2160caa8e"},
+    "results/stage25_prevalence_stress/stage25_3_break_even_analysis/cost_break_even_points.csv": {"size_bytes": 13113, "sha256": "14c2b7d4a306b9471b3b08387a9fa766ca7b6a1ec8affea665ea6e9267b76122"},
+    "results/stage25_prevalence_stress/stage25_5_final_audit_and_seal/stage25_5_final_synthesis.json": {"size_bytes": 5867, "sha256": "872d33865dcf901f37817ef723cc04b5319a41c02f7c3b2fc73911178dbf34e1"},
+    "results/stage25_prevalence_stress/stage25_publication_package/stage25_publication_package_manifest.json": {"size_bytes": 4541, "sha256": "b2684ff429f85028344ebac384b8042d14f1f25236a183b49a2629a96ef1791e"}
+  },
+  "methodology": {
+    "reproducibility_classification": "FULLY_REPRODUCIBLE_FROM_FROZEN_INPUT_SCALARS",
+    "assumptions": {
+      "prior_probability_shift": true,
+      "tpr_fpr_held_fixed_within_each_operating_point": true,
+      "deployment_retuning": false,
+      "propagated_tpr_fpr_uncertainty": false
+    },
+    "scenario": {
+      "prevalence_grid": [0.1, 0.03, 0.01, 0.003, 0.001, 0.0001],
+      "ppv_targets": [0.1, 0.25, 0.5, 0.75, 0.9],
+      "benign_flows_per_day": 1000000,
+      "minutes_per_alert": 2,
+      "analyst_tiers": [1, 3, 10],
+      "alerts_per_analyst_day": 240,
+      "relative_cost": {"C_FP": 1, "C_FN": 100, "currency": false}
+    },
+    "formulas": {
+      "PPV": "TPR*pi / (TPR*pi + FPR*(1-pi))",
+      "NPV": "(1-FPR)*(1-pi) / ((1-FPR)*(1-pi) + (1-TPR)*pi)",
+      "LR_plus": "TPR/FPR",
+      "LR_minus": "(1-TPR)/(1-FPR)",
+      "attack_volume": "pi*B/(1-pi)",
+      "PPV_break_even": "q*FPR/(TPR*(1-q)+q*FPR)",
+      "required_FPR": "TPR*pi*(1-q)/(q*(1-pi))",
+      "cost_break_even": "C_FP*FPR/(C_FN*TPR+C_FP*FPR)",
+      "capacity_FPR_ceiling": "(480*k/s)/B - TPR*pi/(1-pi)"
+    },
+    "terminal_counts": {
+      "inherited_cells": 8,
+      "operating_points": 24,
+      "projection_rows": 144,
+      "ppv_break_even_rows": 120,
+      "required_fpr_rows": 720,
+      "cost_break_even_rows": 24,
+      "sanity_semantics": 7,
+      "sanity_passed": 7
+    },
+    "scientific_execution_authorized": false,
+    "model_fitting_authorized": false,
+    "inference_authorized": false,
+    "target_access_authorized": false,
+    "probability_array_access_authorized": false,
+    "bootstrap_generation_authorized": false,
+    "threshold_selection_authorized": false,
+    "figure_regeneration_authorized": false
+  },
+  "environment": {
+    "notebook_python": "3.12.13",
+    "other_versions": "VERSION_NOT_PROVEN",
+    "note": "Analytic scalar verification does not assert equivalence to model or hardware runtimes."
+  },
+  "holdout_policy": {
+    "opened_by_dry_run": false,
+    "opened_by_verify_only": false,
+    "opened_during_extraction": false,
+    "artifact_verification": "Streaming byte count and SHA256 plus pure scalar unit tests only"
+  }
+}

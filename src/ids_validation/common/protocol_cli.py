@@ -15,8 +15,8 @@ from .paths import repository_root
 def load_protocol(stage_number: int) -> dict[str, Any]:
     """Load a repository-owned extracted-stage protocol file."""
 
-    if stage_number not in range(1, 25):
-        raise ValueError("Only Stages 1–24 are extracted in the current approved checkpoints")
+    if stage_number not in range(1, 29):
+        raise ValueError("Only Stages 1–28 are extracted in the current approved checkpoints")
     root = repository_root()
     return read_json(root / "configs" / f"stage{stage_number:02d}" / "protocol.json")
 

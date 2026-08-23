@@ -415,7 +415,7 @@ The resulting discipline is straightforward: define the population and target ro
 
 ## References
 
-Pass 1 uses no unverified external citations. Required literature support is marked in Section 2 with `[REFERENCE GAP: …]` placeholders and inventoried in `docs/manuscript/MANUSCRIPT_REFERENCE_AUDIT.md`. Citation verification and bibliography construction are deferred to an explicitly authorized Pass 2.
+Pass 1 uses no unverified external citations. Required literature support is marked in Section 2 with explicit reference-gap placeholders and inventoried in `docs/manuscript/MANUSCRIPT_REFERENCE_AUDIT.md`. Citation verification and bibliography construction are deferred to an explicitly authorized Pass 2.
 
 ## Supplementary Material Plan
 

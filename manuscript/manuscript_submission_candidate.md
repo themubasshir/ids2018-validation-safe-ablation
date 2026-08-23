@@ -248,3 +248,89 @@ Table 6 synthesizes the frozen chain without treating unlike quantities as comme
 | Computational | Backend advantage varied by compatible model path | Measured component feasibility | Unsupported paths and end-to-end cost | Recorded hardware/software |
 | Unseen family | Several families transferred; others depended on learner or support | Selected eligible-family capability | Uniform future-attack detection | Eligible benchmark families |
 | Seed/control | Central directions survived selected seeds; controls were mixed | Finite-realization stability | Population guarantee or one causal account | Frozen seed registry |
+
+## 6. Discussion
+
+### 6.1 Stronger validation changed the claim, not every result
+
+The reference experiment remains a credible answer to a narrow question: selected tree ensembles discriminated the processed holdout labels well under frozen validation choices. Stronger validation did not erase that arithmetic or make benchmark evaluation uninformative. Instead, each axis changed the population, operating rule, representation, or resource assumption to test a broader inference.
+
+The resulting pattern was not monotonic. Chronological development retained substantially stronger forward ranking than random development; the forward semantic bridge retained cross-dataset signal; DDoS and Web Attack remained discriminable when withheld; and compatible model paths were computationally feasible on the measured system. At the same time, frozen thresholds transferred poorly, reverse cross-dataset ranking was near its anchor, and other family outcomes depended on learner or support. Benchmark performance is thus an observed property of one evaluation system. A capability claim must name the additional condition under which it was validated.
+
+### 6.2 Temporal, shortcut, and explanation evidence constrain mechanism claims
+
+The temporal evidence separates ranking from score-scale transfer. Chronological development ranked the shared forward population more effectively in every frozen realization, yet its inherited thresholds almost never fired. This is not evidence that chronological development is universally preferable; it shows that validation geometry can change both ordering and operating behavior. Family-aware controls remain mixed, preventing attribution to chronology or drift alone.
+
+Shortcut controls reinforce that restraint. Named removals altered results, but matched placebos also interacted with split geometry, and chronological family composition differed from random composition. The study can therefore report subset sensitivity without treating a particular field as proven leakage or as the cause of domain transfer. LIME supplies the same methodological lesson at a different level: perturbation rankings could be stable while local decision reconstruction and cross-method fidelity failed. Explanation reports should evaluate fidelity and agreement explicitly rather than equating repeatability with validity.
+
+### 6.3 Transfer is directional and threshold utility is a separate decision
+
+The bidirectional bridge makes dataset portability a source-to-target statement. IDS2018-trained models retained useful ranking on CICIDS2017 under bridge62, while the reciprocal evaluation was close to its target anchor. The directions use different source learners, prevalence, collection periods, and target roles; averaging them would remove the finding. Metric-specific responses to the aggregate-flag correction further show that a larger feature intersection is not automatically a better semantic bridge. The cancelled cells preserve an additional boundary: exact membership governance can leave a planned comparison unestimable.
+
+Ranking and operating utility also diverged across temporal, cross-dataset, and LOAO results. ROC-AUC and PR-AUC integrate score order across thresholds; precision, recall, F1, and FPR describe one selected point. A transported ranking can coexist with an unsuitable threshold when score scale or prevalence changes. Prospective recalibration might be useful, but it would require new governed data and evaluation; target-guided recalibration was not performed here.
+
+### 6.4 Operational projections and compute profiles answer different questions
+
+Prior-shift translation demonstrates that PPV alone does not determine workflow. Under the frozen scenarios, high projected PPV coexisted with analyst demand exceeding one day, while low demand could result from almost no true detections. Relative-cost preference also changed with assumed prevalence. Evaluation protocols should therefore report the rates inherited by the projection, prevalence, traffic, service time, capacity, and error-cost assumptions rather than label an operating point operationally useful in isolation.
+
+Stage26 answers a complementary systems question: can a compatible prepared-input-to-probability path run under a declared environment? CPU/GPU advantage varied by model family, and unsupported paths remained statuses. These measurements neither validate PPV nor cover capture-to-alert latency. Operational analysis and computational profiling belong in the same decision chain but retain separate evidence boundaries.
+
+### 6.5 Withheld-family evidence must remain heterogeneous
+
+Zero exposure during training and validation did not produce one family outcome. DDoS and Web Attack transferred strongly across learners; Port Scan retained qualitative stability but differed in magnitude; Bot was learner-dependent; Infiltration was descriptive; and two families were ineligible. Collapsing these outcomes into one novelty score would hide support, threshold, and learner dependence.
+
+This heterogeneity is informative. Strong family results prevent a universal negative conclusion, while weak and ineligible cases prevent a universal positive one. A withheld benchmark family can share infrastructure, extraction cues, or behavior with known classes and is not equivalent to an arbitrary future exploit. Future IDS evaluations should preregister eligibility, retain family support, report ranking and frozen-threshold behavior separately, and distinguish descriptive from inferential outcomes.
+
+### 6.6 Implications for IDS evaluation
+
+The evidence supports a sequence of claim checks rather than a prescribed architecture. Studies should define the reference population and duplicate or membership handling; test time direction and operating-point transfer; probe plausible shortcuts with controls; evaluate domain transfer in both directions under semantic contracts; translate fixed rates under explicit prevalence and workload assumptions; profile the declared inference boundary; gate unknown-family evaluation by eligibility and support; and examine realization stability without selecting favorable seeds.
+
+The axes remain modular. Temporal evidence cannot substitute for cross-dataset transfer; a feature ablation cannot establish causality; a deployment profile cannot validate PPV; and a withheld-family result cannot establish arbitrary future-attack capability. Choices that can adapt to target evidence should be fixed before evaluation, cancelled analyses should remain visible, and reused targets should not be relabeled as fresh blind holdouts. Claim-level provenance then makes these boundaries auditable without implying that every historical computation is locally rerunnable.
+
+## 7. Limitations
+
+The following 18 limitations define the manuscript's claim ceilings. Grouping removes repeated caveats but does not merge distinct evidence constraints.
+
+### 7.1 Dataset and provenance
+
+- **Benchmark-family scope (`LIM29-001`).** The empirical chain covers CSE-CIC-IDS2018 and a restricted CICIDS2017 bridge, not live enterprise, cloud, industrial, ISP, or IoT traffic. It cannot support portability claims for arbitrary operational networks or current attacks.
+- **Processed reference (`LIM29-002`).** The rebalanced binary reference and stratified split do not reproduce natural prevalence, session structure, or forward chronology. Its high metrics cannot serve as deployment evidence.
+- **Semantic bridge (`LIM29-004`).** Cross-dataset results depend on frozen bridge62/70 semantics, preprocessing, learners, direction, and targets. They cannot establish bridge-independent or symmetric portability.
+- **Cancelled memberships (`LIM29-005`).** Two `GROUNDED_S4` cells lacked recoverable exact physical-row membership and were cancelled before target opening. The study cannot claim that every preregistered cross-dataset sensitivity was executed.
+- **Unavailable artifacts (`LIM29-015`).** Raw datasets and some historical models, probabilities, explanation arrays, or source relationships are external, unavailable, or intentionally closed. Early metrics and exact relationships cannot all be regenerated through the safe interface.
+- **Source-restricted graph evidence (`LIM29-016`).** The graph experiment uses an endpoint-authenticated February 20 source, and unseen topology was not estimable. It cannot support graph deployment, unseen-host, or full-reference equivalence claims.
+- **Descriptive architecture comparison (`LIM29-017`).** The CNN/ViT comparison is one frozen restored-target contrast rather than a replicated architecture study. It cannot establish universal architecture superiority.
+
+### 7.2 Evaluation and protocol
+
+- **Temporal/family entanglement (`LIM29-003`).** Chronological memberships also change family composition, and controls are mixed. The temporal contrast cannot be attributed solely to chronology or concept drift.
+- **LOAO eligibility (`LIM29-006`).** DOS and AUTH_BRUTE_FORCE cannot satisfy the day-atomic ordering, and eligible-family support is heterogeneous. The results cannot cover every benchmark family or define uniform unknown-family capability.
+- **Low-support Infiltration (`LIM29-007`).** Infiltration has 36 held-out positives and remains descriptive. It cannot carry family-level inference or pooled primary evidence.
+- **Historically reused target (`LIM29-018`).** Stage28 re-evaluates the already opened Stage22 target under a frozen stability protocol. This supports conclusion stability, not independent blind replication.
+
+### 7.3 Statistical
+
+- **Conditional resampling (`LIM29-008`).** Historical paired intervals are conditional on frozen samples, arrays, and implementations. They cannot provide unconditional deployment uncertainty or population-wide significance.
+- **Finite seed scope (`LIM29-009`).** Five seeds test the frozen recipe without repeating full hyperparameter optimization. The 5/5 ordering is descriptive and cannot establish a population guarantee or optimization-process stability.
+
+### 7.4 Operational
+
+- **Prior-probability shift (`LIM29-012`).** Stage25 holds true- and false-positive rates fixed while prevalence changes. It characterizes sensitivity to prevalence, not measured performance under simultaneous covariate, protocol, topology, user, or attacker shift.
+- **Workload and cost assumptions (`LIM29-013`).** Traffic, analyst service time, capacity, and relative costs are scenarios rather than organization-specific measurements. They cannot establish universal workload, utility, or economic preference.
+
+### 7.5 Hardware and computation
+
+- **Measured component boundary (`LIM29-011`).** Stage26 covers compatible inference components on one hardware/software environment and omits complete capture-to-alert processing. It cannot establish universal latency, throughput, speedup, energy, or end-to-end deployment cost.
+
+### 7.6 Reproducibility
+
+- **Historical environment ambiguity (`LIM29-010`).** Some dependencies and execution environments remain `VERSION_NOT_PROVEN`; adjacent receipts are not generalized. Bit-for-bit reconstruction of every historical environment is not supported.
+- **Incomplete full reruns (`LIM29-014`).** Static provenance, scalar evidence, configurations, canonical methods, archives, and equivalence tests make the manuscript chain auditable, but missing data or closed artifacts prevent some end-to-end reruns. The repository cannot claim that every result is locally regenerable.
+
+## 8. Conclusion
+
+A processed benchmark score is a necessary reference, not a complete capability claim. Across the frozen validation chain, strong reference discrimination survived; chronological development retained higher forward ranking across five seeds; the forward cross-dataset bridge retained signal; several eligible withheld families remained discriminable; and compatible inference paths were feasible on the recorded hardware.
+
+Other conclusions remained conditional. Frozen thresholds transferred poorly even when ranking survived, reverse cross-dataset transfer was near its anchor, shortcut and placebo interactions did not isolate one mechanism, operational projections depended on prevalence and workload assumptions, and withheld-family behavior varied by learner and support.
+
+Future IDS evaluations should therefore name the validity condition, population, metric, operating rule, uncertainty, and adaptation boundary attached to each claim. Reporting benchmark, temporal, shortcut, domain, operational, computational, unknown-family, and realization evidence separately preserves both failures and non-collapse findings. The resulting account is narrower than a universal performance verdict, but it is more useful: it states which capability was observed, where it survived, and what the available evidence does not establish.

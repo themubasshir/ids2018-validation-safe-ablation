@@ -1,7 +1,5 @@
 # A Multi-Axis Validation Framework for Machine-Learning Intrusion Detection
 
-> **Manuscript status:** Pass 2B evidence-governed submission candidate. Scientific results remain frozen at Stage28; Stage29 and later passes provide synthesis, literature verification, editorial integration, and static audit only.
-
 ## Abstract
 
 Processed intrusion-detection benchmarks support controlled model comparison, but they do not establish capability across time, feature perturbations, datasets, rare-event prevalence, deployment constraints, or attacks withheld from development. We present a multi-axis framework that evaluates these validity questions separately while preserving native metrics, frozen operating rules, and claim-to-artifact provenance. On one shared forward target, mean PR-AUC across five registered seeds was 0.2599 after random-natural development and 0.6388 after chronological-natural development; the ordering held in all five realizations, although frozen thresholds transferred poorly and controls did not identify chronology as the sole mechanism. The processed CSE-CIC-IDS2018 reference condition provides a contrast: the selected balanced tree ensemble achieved F1 0.9285 and PR-AUC 0.9776. Cross-dataset ranking was directional, with IDS2018-to-CICIDS2017 PR-AUC 0.667483 and reciprocal PR-AUC 0.108176. At 0.1% assumed attack prevalence, one high-PPV projection required 33.5 analyst-hours per day, while a low-workload projection reflected negligible detection yield. Not every result deteriorated under stronger validation: several eligible attack families retained stable discrimination, whereas other outcomes depended on learner or support. Stronger validation instead narrowed the claims that the evidence could support. The conclusions remain conditional on two related benchmark families, frozen feature bridges and realizations, analytic operational assumptions, eligible attack families, and one measured hardware environment.
@@ -127,7 +125,7 @@ The stability program tests whether the central temporal ordering and eligible-f
 
 Paired historical resampling keeps compared learners or representations on the same class-stratified draw. Each contrast retains its declared uncertainty type. An interval containing zero is not evidence of equivalence; an interval excluding zero does not broaden the population. Training-seed variation is not combined with bootstrap distributions, and unlike metrics are not normalized into a composite score.
 
-At each boundary, model families, hyperparameters, subsets, bridges, operating points, targets, and eligible families are frozen before the corresponding result. Later target evidence cannot retune an earlier protocol, and cancelled analyses remain cancelled. Manuscript claims and numbers map to Stage29 claim, evidence, number, source-artifact, limitation, and exhibit registries. The repository verifies source identities, configurations, schemas, scalar values, hashes, toy formulas, and approved read-only equivalence checks. It does not claim complete end-to-end reruns where raw data, historical environments, models, arrays, or closed targets are unavailable.
+At each boundary, model families, hyperparameters, subsets, bridges, operating points, targets, and eligible families are frozen before the corresponding result. Later target evidence cannot retune an earlier protocol, and cancelled analyses remain cancelled. Manuscript claims and numbers map to frozen claim, evidence, number, source-artifact, limitation, and exhibit registries. The repository verifies source identities, configurations, schemas, scalar values, hashes, toy formulas, and approved read-only equivalence checks. It does not claim complete end-to-end reruns where raw data, historical environments, models, arrays, or closed targets are unavailable.
 
 ## 5. Results
 
@@ -150,7 +148,7 @@ On the common forward target, chronological-natural development ranked higher th
 
 Threshold transfer contradicted a simple ranking narrative. Chronological thresholds almost never fired on the common target, whereas the two random security points reached final FPR values of 0.2870 and 0.2685, far above the development constraint. Family-aware controls were mixed across family and learner, so the result does not isolate chronology as the sole mechanism.
 
-**Figure 1. Temporal ranking transfer on the shared forward IDS2018 target.** Existing panels report (a) [PR-AUC](../figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.png) and (b) [ROC-AUC](../figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.png) for frozen random and chronological development geometries. Stage28 seed summaries establish a 5/5 descriptive ordering, not a significance test; the target was historically opened, thresholds are evaluated separately, and chronology remains entangled with family composition.
+**Figure 1. Temporal ranking transfer on the shared forward IDS2018 target.** Existing panels report (a) [PR-AUC](../figures/stage22r_temporal_validation/fig22r_1_validation_to_final_pr_auc.png) and (b) [ROC-AUC](../figures/stage22r_temporal_validation/fig22r_2_validation_to_final_roc_auc.png) for frozen random and chronological development geometries. The five-seed stability summaries establish a 5/5 descriptive ordering, not a significance test; the target was historically opened, thresholds are evaluated separately, and chronology remains entangled with family composition.
 
 **Table 2. Five-seed temporal stability on the shared forward target.** SD is training-seed standard deviation under the frozen recipe; the directional count is descriptive over the five registered seeds.
 
@@ -165,7 +163,7 @@ Shortcut-subset effects varied by development geometry and learner (Figure 2). T
 
 Local explanations supplied a related counterexample. LIME rankings were comparatively stable across perturbation seeds, but only 2 of 64 explanations met all prespecified fidelity and cross-method criteria, and 31 of 64 failed to reproduce the model's local classification decision. Mean SHAP-LIME top-10 Jaccard agreement was 0.304 for XGBoost and 0.360 for LightGBM. Stable explanations were not necessarily faithful explanations.
 
-**Figure 2. Shortcut-subset sensitivity by validation geometry.** The [approved Stage23 asset](../results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/figures/figure_23_a_subset_split_interaction.png) reports native ranking behavior across seven frozen feature subsets, random-natural and chronological-natural splits, and the evaluated tree learners. Conditional subset effects do not identify leakage or a transfer mechanism; matched-size placebo interactions remain part of the interpretation.
+**Figure 2. Shortcut-subset sensitivity by validation geometry.** The [approved shortcut-interaction asset](../results/stage23_shortcut_feature_audit/stage23_7_final_synthesis/figures/figure_23_a_subset_split_interaction.png) reports native ranking behavior across seven frozen feature subsets, random-natural and chronological-natural splits, and the evaluated tree learners. Conditional subset effects do not identify leakage or a transfer mechanism; matched-size placebo interactions remain part of the interpretation.
 
 ### 5.4 Was cross-dataset transfer symmetric?
 
@@ -184,18 +182,18 @@ A larger bridge did not yield one metric direction. Correcting aggregate-flag se
 
 ### 5.5 Did projected precision imply operational utility?
 
-Projected PPV, workload, and yield did not align uniformly (Figure 4; Table 4). At 0.1% assumed attack prevalence, the Stage22 random STANDARD point retained PPV 0.965572 but required 33.5 analyst-hours per day under the frozen traffic and service-time scenario. The chronological STANDARD point projected PPV 0.000551068 and only 0.0322 true alerts per day: its small workload reflected negligible yield.
+Projected PPV, workload, and yield did not align uniformly (Figure 4; Table 4). At 0.1% assumed attack prevalence, the random-development STANDARD point retained PPV 0.965572 but required 33.5 analyst-hours per day under the frozen traffic and service-time scenario. The chronological-development STANDARD point projected PPV 0.000551068 and only 0.0322 true alerts per day: its small workload reflected negligible yield.
 
 Directionality persisted under the same prior-shift translation. Forward STANDARD transfer points projected PPV 0.039233-0.060313, while reverse points projected 0.000257610-0.000287993. Under the frozen 1:100 relative-cost scenario, 15/24 operating points favored the model at 0.1% prevalence and 3/24 at 0.01%. These are analytic projections with fixed sensitivity and FPR, not observations from a security operations center.
 
-**Figure 4. PPV under prevalence stress.** The [approved Stage25 curves](../figures/stage25_prevalence_stress/figure25_a_ppv_cliff.svg) translate frozen true- and false-positive rates across assumed attack prevalence. PPV is positive predictive value. The prior-shift model holds conditional rates fixed; traffic, service time, capacity, and relative costs are scenario assumptions rather than field measurements.
+**Figure 4. PPV under prevalence stress.** The [approved prevalence-stress curves](../figures/stage25_prevalence_stress/figure25_a_ppv_cliff.svg) translate frozen true- and false-positive rates across assumed attack prevalence. PPV is positive predictive value. The prior-shift model holds conditional rates fixed; traffic, service time, capacity, and relative costs are scenario assumptions rather than field measurements.
 
 **Table 4. Selected operating-point translations at 0.1% assumed prevalence.** PPV and workload/yield are conditional on the frozen rates, daily traffic, and analyst service-time assumptions; STANDARD denotes the inherited standard operating role.
 
 | Frozen condition | Projected PPV | Operational quantity | Interpretation boundary |
 | --- | ---: | --- | --- |
-| Stage22 random STANDARD | 0.965572 | 33.5 analyst-hours/day | High PPV does not ensure manageable workload |
-| Stage22 chronological STANDARD | 0.000551068 | 0.0322 true alerts/day | Low workload does not ensure useful yield |
+| Random-development STANDARD | 0.965572 | 33.5 analyst-hours/day | High PPV does not ensure manageable workload |
+| Chronological-development STANDARD | 0.000551068 | 0.0322 true alerts/day | Low workload does not ensure useful yield |
 | Forward transfer STANDARD range | 0.039233-0.060313 | Direction-specific | Conditional prior-shift projection |
 | Reverse transfer STANDARD range | 0.000257610-0.000287993 | Direction-specific | Conditional prior-shift projection |
 
@@ -203,7 +201,7 @@ Directionality persisted under the same prior-shift translation. Forward STANDAR
 
 Backend advantage depended on architecture and measurement path (Figure 5). At batch one, the p95 CPU-over-GPU latency ratio was 1.94 for the five-checkpoint soft-voting ensemble and 1.58 for the single-resource reference, indicating a GPU advantage. Ratios of 0.16 for CatBoost and 0.26 for XGBoost indicated a CPU advantage under the same convention. The packet-image CNN ratio was 10.86, while the ViT ratio was 1.05. Unsupported LightGBM GPU execution and unavailable paths remained compatibility statuses rather than timing values.
 
-**Figure 5. Hardware-specific p95 CPU/GPU comparison.** The [approved Stage26 asset](../figures/stage26_deployment_profiling/F26_CPU1_GPU_P95_SPEEDUP.png) compares batch-one p95 latency ratios for compatible prepared-input-to-probability paths on the recorded hardware and software. Values are descriptive point estimates; unsupported backends, capture, flow extraction, alert aggregation, and analyst response are outside the comparison.
+**Figure 5. Hardware-specific p95 CPU/GPU comparison.** The [approved profiling asset](../figures/stage26_deployment_profiling/F26_CPU1_GPU_P95_SPEEDUP.png) compares batch-one p95 latency ratios for compatible prepared-input-to-probability paths on the recorded hardware and software. Values are descriptive point estimates; unsupported backends, capture, flow extraction, alert aggregation, and analyst response are outside the comparison.
 
 ### 5.7 Did eligible withheld families behave uniformly?
 
@@ -334,7 +332,7 @@ Stronger validation narrows or qualifies a claim; it does not require a monotoni
 
 ## References
 
-The canonical bibliography for the Pandoc citation keys in this candidate is `manuscript/references.bib`. Its 27 entries and claim-level support boundaries were verified in Pass 2A; Pass 2B introduced no reference or literature expansion.
+The accompanying verified bibliography provides the sources cited in this manuscript.
 
 ## Supplementary Material Plan
 
@@ -346,7 +344,7 @@ This section contains frozen membership and duplicate checks; full baseline inve
 
 ### S2. Shortcut, representation, and architecture diagnostics
 
-This section provides all seven Stage23 feature subsets, secondary metrics, matched-size placebos, depth-one controls, component attribution summaries, behavior-restricted representations, and attack-family composition tables. It also routes the detailed Integrated Gradients sensitivity, attention diagnostics, source-restricted graph evidence, and descriptive CNN/ViT comparison outside the main narrative. The latter items retain their supplement-only claim status: source restriction, zero frozen-threshold detection, or single-comparison design prevents them from supporting architecture or deployment conclusions. Figure 2 remains the sole main shortcut exhibit.
+This section provides all seven shortcut-audit feature subsets, secondary metrics, matched-size placebos, depth-one controls, component attribution summaries, behavior-restricted representations, and attack-family composition tables. It also routes the detailed Integrated Gradients sensitivity, attention diagnostics, source-restricted graph evidence, and descriptive CNN/ViT comparison outside the main narrative. The latter items retain their supplement-only claim status: source restriction, zero frozen-threshold detection, or single-comparison design prevents them from supporting architecture or deployment conclusions. Figure 2 remains the sole main shortcut exhibit.
 
 ### S3. Cross-dataset contracts and sensitivities
 
@@ -366,6 +364,6 @@ This section preserves family aliases, day-atomic chronology, eligibility decisi
 
 ### S7. Provenance, equivalence, and reproduction
 
-This section collects the minimum configs, source maps, archived notebooks and scripts, hashes, environment records, target-opening ledgers, canonical implementation links, equivalence matrices, reproduction indexes, execution boundaries, and static validation reports needed to audit the manuscript. Detailed Stage20 forensic records appear only when they explain a scientific artifact, source identity, or bridge restriction. External datasets, closed artifacts, `VERSION_NOT_PROVEN` environments, and non-rerunnable paths remain disclosed. Repository links carry the full inventory; the supplement does not duplicate it.
+This section collects the minimum configs, source maps, archived notebooks and scripts, hashes, environment records, target-opening ledgers, canonical implementation links, equivalence matrices, reproduction indexes, execution boundaries, and static validation reports needed to audit the manuscript. Detailed forensic records appear only when they explain a scientific artifact, source identity, or bridge restriction. External datasets, closed artifacts, `VERSION_NOT_PROVEN` environments, and non-rerunnable paths remain disclosed. Repository links carry the full inventory; the supplement does not duplicate it.
 
-Supplementary figures and tables should receive `S` numbering only after a venue template is approved. Existing scientific assets remain unchanged, and later panel assembly must follow the frozen Pass 2B figure registry. No supplementary item may introduce a new claim, number, comparison, metric, or analysis.
+Supplementary figures and tables should receive `S` numbering only after a venue template is approved. Existing scientific assets remain unchanged, and later panel assembly must follow the final figure registry. No supplementary item may introduce a new claim, number, comparison, metric, or analysis.

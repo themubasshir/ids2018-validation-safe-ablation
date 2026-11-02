@@ -19,10 +19,13 @@ The repository contains approved provenance, configuration, audit, and static-ve
 AUTHOR_CONFIRMATION_REQUIRED — confirm whether any conference paper, preprint, repository manuscript, or other publication overlaps this submission. Describe qualifying overlap accurately; do not claim originality beyond the verified record.
 
 ## Generative-AI assistance
-AUTHOR_CONFIRMATION_REQUIRED — confirm whether generative-AI or AI-assisted tools were used in manuscript preparation or artwork. If used, provide the venue-compliant disclosure. AI tools are not authors.
+AUTHOR_CONFIRMATION_REQUIRED — author must confirm and approve the following policy-aligned draft. During the preparation of this work, the authors used Claude (Anthropic) to assist with manuscript organization, wording review, submission-document drafting, and production-report preparation. The authors reviewed and edited the output, verified claims and citations against the project record, and take full responsibility for the content of the publication. Claude was not an author and was not used to generate or alter primary research images. Any AI tools used during research computation must be described separately in Methods; none are inferred from repository tooling.
 
-## Ethics
-The present manuscript reports analysis of benchmark-derived cybersecurity data and does not report human or animal participant research, according to the current project record. AUTHOR_CONFIRMATION_REQUIRED — verify this statement against institutional/project records before submission.
+## Ethics applicability
+Draft basis: the manuscript reports analysis of benchmark-derived cybersecurity data and does not report human or animal participant research, according to the current project record. AUTHOR_CONFIRMATION_REQUIRED — verify against institutional/project records before submission; do not state that ethics approval was unnecessary unless authorized.
+
+## Originality and submission declaration
+AUTHOR_CONFIRMATION_REQUIRED — confirm that the manuscript is original, is not under consideration elsewhere, and that any prior publication, preprint, repository manuscript, or conference overlap is accurately disclosed. Confirm that all authors approve the submitted version and consent to submission.
 
 ## Authorship and affiliation
 AUTHOR_CONFIRMATION_REQUIRED — confirm the final author list, affiliations, corresponding author, email, ORCID identifiers, and author contributions. No personal contact details are committed until explicitly authorized.

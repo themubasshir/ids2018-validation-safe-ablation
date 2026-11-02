@@ -23,7 +23,7 @@
 - [x] Figures and tables cited/captioned in source
 - [x] Bibliography copied from authority
 - [ ] Confirm live portal article type
-- [ ] Confirm current length, artwork, upload, APC, and waiver rules
+- [ ] Confirm current length, artwork, upload, supplement, APC, tax, waiver, and access rules in the live portal
 
 ## Integrity
 
@@ -39,7 +39,7 @@
 - [x] Supplement compiled independently
 - [x] Flattened Elsevier export compiled independently
 - [x] Page-by-page visual inspection with PyMuPDF at 160 DPI
-- [x] Supplement quantitative exhibits transcribed with source traceability
+- [x] Supplement exhibits transcribed with source traceability: S1/S10 qualitative classifications; S2--S9 quantitative evidence
 - [x] Supplement numbering normalized: unnumbered S-sections; captions explicitly Table S1--S10
 
 ## Blocking items

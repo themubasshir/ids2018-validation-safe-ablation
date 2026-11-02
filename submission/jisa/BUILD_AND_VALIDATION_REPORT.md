@@ -1,6 +1,8 @@
 # Build and Validation Report
 
-**Date:** 2026-11-02\n**Target:** Journal of Information Security and Applications\n**Status:** Compiled production package; visual inspection and author metadata remain blocked.
+**Date:** 2026-11-02
+**Target:** Journal of Information Security and Applications
+**Status:** Technical package validated; author approval and declaration data remain blocked.
 
 ## Authority and preservation
 
@@ -40,7 +42,7 @@ PyMuPDF 2.0 rendered all 31 pages at 160 DPI to temporary storage outside the pa
 |---|---|---|
 | S1 | Populated | Reference population, metrics, uncertainty, explanation reliability; unavailable arrays remain dependencies. |
 | S2 | Populated | Stage 23 subset artifact and shortcut/representation qualifications. |
-| S3 | Populated | Directional bridge contract; Table S1 source record; cancelled `GROUNDED_S4` cells retained. |
+| S3 | Populated | Directional bridge contract; Tables S4–S5 source records; cancelled `GROUNDED_S4` cells retained. |
 | S4 | Populated | Frozen prior-shift operational translation and scenario qualifications. |
 | S5 | Populated | Stage 26 deployment boundary, compatible paths, statuses, and exclusions. |
 | S6 | Populated | LOAO eligibility, low-support Infiltration, ineligible DOS/AUTH_BRUTE_FORCE, two frozen figures, stability registry. |
@@ -54,7 +56,7 @@ The supplement documents unavailable, restricted, cancelled, descriptive, and un
 - 7 pages; final two `pdflatex` passes exited 0.
 - No fatal errors, missing references, unresolved citations, float overflow, or overfull-box warnings.
 - PyMuPDF rendered and inspected all 7 pages.
-- Ten quantitative tables included; no supplementary figures, avoiding Figure 6 duplication.
+- Ten supplementary tables included: S1 and S10 are qualitative classification tables; S2–S9 reproduce quantitative evidence. No supplementary figures, avoiding Figure 6 duplication.
 
 ## Flattened Elsevier export
 

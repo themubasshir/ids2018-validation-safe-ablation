@@ -5,8 +5,9 @@
 4. Are permissions and attribution requirements satisfied for reused/adapted material?
 5. Did any earlier collaborator make a qualifying contribution to the current manuscript or require acknowledgment?
 6. Is the sole-author CRediT list accurate, including governed Data curation?
-7. Exact affiliation and work location?
-8. Corresponding-author email and ORCID?
+7. Confirm proposed primary affiliation: **Independent Researcher, Dhaka, Bangladesh**.
+8. Confirm whether the Jahangirnagar University relationship is current enrollment or completed study; include an academic-background note only if accurate and permitted.
+9. Corresponding-author email and ORCID?
 9. Funding statement?
 10. Competing interests statement?
 11. Ethics applicability statement authorized by project/institutional records?

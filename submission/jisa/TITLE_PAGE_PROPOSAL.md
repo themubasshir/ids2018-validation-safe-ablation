@@ -14,9 +14,7 @@
 
 **Status:** PROVISIONAL — author approval required. This wording does not represent Jahangirnagar University as employer, sponsor, supervisor, funder, or approving institution.
 
-## Optional academic-background note
-
-`OPTIONAL_NOTE_PENDING_STATUS_CONFIRMATION`: The author has an academic association with Jahangirnagar University, Savar, Dhaka, Bangladesh. Use “student” only if current enrollment is confirmed; use “alumnus/alumna” only if completed attendance is confirmed. Omit this note unless the author confirms the accurate status and the journal permits an academic-background note.
+The optional Jahangirnagar University educational-background note is maintained separately in `ACADEMIC_BACKGROUND_NOTE.md`; it is not part of this proposed title page and is not a submission blocker.
 
 ## Corresponding author
 

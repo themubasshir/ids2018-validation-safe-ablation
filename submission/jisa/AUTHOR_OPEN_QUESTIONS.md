@@ -6,8 +6,7 @@
 5. Did any earlier collaborator make a qualifying contribution to the current manuscript or require acknowledgment?
 6. Is the sole-author CRediT list accurate, including governed Data curation?
 7. Confirm proposed primary affiliation: **Independent Researcher, Dhaka, Bangladesh**.
-8. Confirm whether the Jahangirnagar University relationship is current enrollment or completed study; include an academic-background note only if accurate and permitted.
-9. Corresponding-author email and ORCID?
+8. Corresponding-author email and ORCID?
 9. Funding statement?
 10. Competing interests statement?
 11. Ethics applicability statement authorized by project/institutional records?
@@ -16,3 +15,4 @@
 14. Has the author reviewed every final AI-assisted passage, citation, declaration, and report?
 15. Has the author approved the final manuscript, supplement, metadata, declarations, overlap disclosure, and submission?
 16. Has the live JISA portal been checked for article type, file limits, artwork, supplement, ORCID, access, APC, tax, and waiver requirements?
+17. Optional background note: confirm Jahangirnagar University status only if the note will be used; otherwise omit.

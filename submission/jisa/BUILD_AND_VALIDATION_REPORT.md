@@ -1,58 +1,77 @@
 # Build and Validation Report
 
-**Date:** 2026-11-02
-**Target:** Journal of Information Security and Applications
-**Status:** Production source assembled; PDF and complete supplement blocked.
+**Date:** 2026-11-02\n**Target:** Journal of Information Security and Applications\n**Status:** Compiled production package; visual inspection and author metadata remain blocked.
 
-## Source conversion
+## Authority and preservation
 
-- Authority: `manuscript/manuscript_journal_revision.md`
-- Bibliography authority: `manuscript/references_journal_revision.bib`
-- Output: `manuscript.tex`
-- Class/configuration: `elsarticle`, `preprint,12pt`; standard packages only.
-- Editable source generated without scientific recalculation.
-- Author, affiliation, ORCID, email, funding, overlap, and public repository fields remain `AUTHOR_CONFIRMATION_REQUIRED`.
+- Manuscript authority: `manuscript/manuscript_journal_revision.md`.
+- Bibliography authority: `manuscript/references_journal_revision.bib`.
+- Supplement authority: `docs/manuscript/pass2b/FINAL_SUPPLEMENT_PLAN.md` plus frozen Stage 23–29 artifacts.
+- Canonical research files unchanged.
+- No experiments, model loading, inference, target opening, new metrics, thresholds, figures, or results performed.
 
-## Static checks
+## LaTeX repair
 
-- Citation tokens extracted from authority: 32 unique tokens; bibliography-key check: PASS.
-- Main figures: 6 registered outputs assembled from 9 registered panel/source assets.
-- Main tables: 6 table blocks converted from the approved manuscript tables.
-- Abstract: under the verified 250-word limit.
-- Keywords: 5; within the verified 1–7 range.
-- Canonical scientific files: unchanged.
-- No experiments, target opening, model loading, inference, or scientific computation performed.
+- Removed eight manually embedded section numbers; hierarchy preserved.
+- Restored 13 lost bold labels, eight checklist headings, and five provenance terms: `Raw-exact`, `published`, `corrected`, `source-faithful`, `reconstructed`.
+- Restored exact citation-key underscores.
+- Corrected escaped identifiers and author placeholders.
+- Removed duplicate manual References heading and removed the in-body supplement plan.
+- Escaped literal percentage signs and repaired one malformed bibliography ampersand.
+- Static checks: no `\\textbf{\\1}`, no numbered `\\section{N. ...}`, no duplicate manual References heading, no escaped underscores inside citation keys; eight checklist items present.
 
-## Figure assembly
+## Main compilation
 
-- Figure 1: lossless vertical assembly of registered PR-AUC and ROC-AUC PNG panels.
-- Figure 2: source PNG copied unchanged.
-- Figure 3: registered SVG panels rasterized for package compatibility and vertically assembled; source SVGs retained only during assembly, not in final package.
-- Figure 4: registered SVG converted to PNG.
-- Figure 5: source PNG copied unchanged.
-- Figure 6: registered ROC-AUC and balanced-recall PNG panels vertically assembled.
+MiKTeX 25.12 installed per-user from official `MiKTeX.MiKTeX` winget package. Commands used: three `pdflatex` passes with `--enable-installer`, one `bibtex` pass, then two further `pdflatex` passes. All final passes exited 0.
 
-Visual page-level inspection remains blocked without a PDF renderer. Asset dimensions and file presence were checked; no plot was regenerated.
+- Output: `submission/jisa/manuscript.pdf`.
+- 31 pages; 1,916,579 bytes after table-layout repair.
+- BibTeX: exit 0; three existing empty-page-field warnings only (`lundberg2017shap`, `yeh2019infidelity`, `mirsky2018kitsune`).
+- Final logs: no fatal errors, unresolved citations, or missing-reference errors.
+- Six figures and six tables retained.
 
-## Tables
+## Main visual QA
 
-All six approved tables are present in the LaTeX source. Values originate from the approved revision manuscript. Table styling requires rendered-PDF inspection for width and readability.
+Not complete. ImageMagick is installed, but PDF rasterization failed because its Ghostscript delegate (`gswin64c.exe`) is unavailable. Source/PDF metadata and compiler logs were checked; page-by-page figure, table, glyph, and page-break inspection remains blocked. Main source still requires human visual review, despite successful compilation.
 
-## Supplement
+## Supplement S1–S7 matrix
 
-S1–S7 directory created but not populated. The approved plan references many frozen artifacts and unavailable/restricted dependencies. No completeness claim is made. Assembly remains pending source-by-source verification and redistribution-rights review.
+| Section | Status | Evidence / boundary |
+|---|---|---|
+| S1 | Populated | Reference population, metrics, uncertainty, explanation reliability; unavailable arrays remain dependencies. |
+| S2 | Populated | Stage 23 subset artifact and shortcut/representation qualifications. |
+| S3 | Populated | Directional bridge contract; Table S1 source record; cancelled `GROUNDED_S4` cells retained. |
+| S4 | Populated | Frozen prior-shift operational translation and scenario qualifications. |
+| S5 | Populated | Stage 26 deployment boundary, compatible paths, statuses, and exclusions. |
+| S6 | Populated | LOAO eligibility, low-support Infiltration, ineligible DOS/AUTH_BRUTE_FORCE, two frozen figures, stability registry. |
+| S7 | Populated with dependencies | Hash manifest, provenance/equivalence/reproduction boundary, redistribution restrictions. |
 
-## Compilation
+The supplement documents unavailable, restricted, cancelled, descriptive, and unsupported evidence as dependencies; it does not fabricate missing exhibits or redistribute restricted artifacts. `source-manifest.csv` records SHA-256 values for copied sources.
 
-No supported LaTeX engine was detected in PATH: `pdflatex`, `xelatex`, `lualatex`, `latexmk`, and `tectonic`. PDF compilation, citation resolution by LaTeX, overfull-box inspection, figure-placement inspection, and visual page review are therefore pending.
+## Supplement compilation and QA
 
-## Unresolved requirements
+- Output: `submission/jisa/supplement/supplement.pdf`.
+- 5 pages; final two `pdflatex` passes exited 0.
+- No fatal errors, missing references, or unresolved citations.
+- Final overfull-box warnings cleared after `microtype` and `\emergencystretch` adjustments.
+- Page-by-page visual inspection remains blocked by the missing Ghostscript PDF renderer.
 
-1. Install or provide an approved Elsevier-compatible LaTeX engine and `elsarticle` class.
-2. Compile and inspect every PDF page.
-3. Resolve all author and declaration placeholders.
-4. Assemble and verify S1–S7; do not include restricted data or unauthorized artifacts.
-5. Confirm live JISA portal rules for article type, length, artwork, uploads, APC, waivers, and reference style.
-6. Confirm public code/data links and overlap statement.
+## Flattened Elsevier export
 
-**Conclusion:** Source package is not finalized. No submission performed.
+`submission/jisa/elsevier_export/` contains same-level source, bibliography, six figures, and processing dependencies. Figure paths were rewritten from `figures/...` to flattened filenames. Independent three-pass `pdflatex`/`bibtex` compilation exited 0 and produced a 31-page PDF. Build intermediates remain in this development export for audit and must be excluded from any final upload selection.
+
+## Scientific integrity
+
+- Approved values retained; no scientific recomputation.
+- Seven evidence tensions, 18 limitations, LOAO qualifications, cancelled analyses, low-support families, and reproduction restrictions retained in source/supplement text.
+- No new claims promoted from supplement-only evidence.
+
+## Remaining blockers
+
+1. Page-level visual inspection requires an approved PDF renderer/Ghostscript installation.
+2. Author names, affiliations, corresponding-author email, ORCID, funding, conflicts, overlap, AI disclosure, and authorized public data/code URL remain `AUTHOR_CONFIRMATION_REQUIRED` or unresolved.
+3. Venue portal/article-type/artwork/upload/APC rules require current author confirmation.
+4. Supplement exhibits whose frozen source or redistribution permission is unavailable remain documented dependencies, not complete data releases.
+5. No submission, release, DOI, Zenodo archive, merge, or force-push performed.
+
+**Conclusion:** `SUBMISSION PACKAGE INCOMPLETE — SPECIFIC BLOCKERS`.

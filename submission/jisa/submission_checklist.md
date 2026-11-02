@@ -10,7 +10,7 @@
 - [x] Cover letter
 - [x] Declarations draft
 - [x] Data/code availability draft
-- [ ] S1–S7 evidence supplement assembled from frozen source artifacts
+- [x] Standalone S1–S7 supplement source, PDFs, copied frozen sources, and SHA-256 manifest
 - [ ] Final author metadata and approval
 - [ ] Final public data/code URL authorization
 
@@ -35,9 +35,11 @@
 - [x] Low-support Infiltration retained
 - [x] Cancelled `GROUNDED_S4` cells retained
 - [x] Reproducibility restrictions retained
-- [ ] Run supported LaTeX engine when available
-- [ ] Visually inspect rendered PDF when available
+- [x] Main manuscript compiled with MiKTeX 25.12
+- [x] Supplement compiled independently
+- [x] Flattened Elsevier export compiled independently
+- [ ] Page-by-page visual inspection with approved PDF renderer
 
 ## Blocking items
 
-`AUTHOR_CONFIRMATION_REQUIRED` placeholders must be resolved before submission. Current environment has no detected `pdflatex`, `xelatex`, `lualatex`, `latexmk`, or `tectonic`; PDF compilation and visual inspection remain blocked. Supplement assembly requires source-level extraction and verification before claiming completeness.
+`AUTHOR_CONFIRMATION_REQUIRED` placeholders remain in author and institutional metadata. ImageMagick PDF rasterization failed because `gswin64c.exe` is unavailable; page-level visual QA is therefore incomplete. Supplement unsupported/restricted dependencies remain explicitly documented. No submission performed.

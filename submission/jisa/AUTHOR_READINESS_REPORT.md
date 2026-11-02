@@ -16,11 +16,11 @@ Supplement inventory: 10 tables total. S1 and S10 are qualitative classification
 
 ## 3. Authorship readiness
 
-**Blocked.** Final roster, order, affiliations, corresponding author, ORCID, contribution roles, disputes, and unanimous approval are unknown. The authorship decision sheet records evidence without inferring authorship from Git, `CITATION.cff`, supervision, or repository ownership.
+**Proposed single author; approval pending.** J. M. Mubasshir Rahman is the sole proposed author and corresponding author. No other qualifying intellectual contributor is documented in the reviewed research history. Final affiliation, email, ORCID, contribution confirmation, and explicit final approval remain pending.
 
 ## 4. Declaration readiness
 
-**Blocked pending author confirmation.** Drafts cover funding, conflicts, contributions, data/code availability, overlap, ethics, originality, approval, and AI assistance. Actual Claude use is recorded as manuscript organization, wording review, submission-document drafting, and production-report preparation; no primary research images were generated or altered. Elsevier's June/July 2026 policy requires a manuscript declaration naming the tool, purpose, author review, and responsibility.
+**Blocked pending author confirmation.** Drafts cover funding, conflicts, contributions, data/code availability, overlap, ethics, originality, approval, and AI assistance. Actual ChatGPT and Claude use is recorded as manuscript drafting, organization, wording review, submission-document drafting, and production-report preparation; no primary research images were generated or altered. The author must review and verify all AI-assisted output before approval. Elsevier's June/July 2026 policy requires a manuscript declaration naming the tools, purpose, author review, and responsibility.
 
 ## 5. Journal portal compliance
 
@@ -31,9 +31,9 @@ Portal: https://submit.elsevier.com/JISAS
 
 ## 6. Exact remaining author decisions
 
-- Final author names and order.
-- Verified qualifying contributions and CRediT roles; resolve disputes.
-- Affiliations, corresponding author, email, ORCID, and work location.
+- Confirm sole-author decision and that no other person has a qualifying contribution requiring authorship.
+- Verify qualifying contributions and CRediT roles.
+- Affiliation, corresponding author, email, ORCID, and work location.
 - Funding and competing interests.
 - Public data/code URL and authorized release scope.
 - Prior publication, preprint, repository, and conference overlap.

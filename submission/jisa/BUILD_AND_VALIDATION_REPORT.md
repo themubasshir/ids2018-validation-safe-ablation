@@ -70,9 +70,9 @@ The supplement documents unavailable, restricted, cancelled, descriptive, and un
 
 ## Remaining blockers
 
-1. Author names, affiliations, corresponding-author email, ORCID, funding, conflicts, overlap, AI disclosure, and authorized public data/code URL remain `AUTHOR_CONFIRMATION_REQUIRED` or unresolved.
-3. Venue portal/article-type/artwork/upload/APC rules require current author confirmation.
-4. Supplement exhibits whose frozen source or redistribution permission is unavailable remain documented dependencies, not complete data releases.
-5. No submission, release, DOI, Zenodo archive, merge, or force-push performed.
+1. Proposed sole author is J. M. Mubasshir Rahman; affiliation, corresponding-author email, ORCID, funding, conflicts, overlap, AI disclosure approval, and authorized public data/code URL remain unresolved.
+2. Venue portal/article-type/artwork/upload/APC rules require current author confirmation.
+3. Supplement exhibits whose frozen source or redistribution permission is unavailable remain documented dependencies, not complete data releases.
+4. No submission, release, DOI, Zenodo archive, merge, or force-push performed.
 
 **Conclusion:** `SUBMISSION PACKAGE INCOMPLETE — SPECIFIC BLOCKERS`.

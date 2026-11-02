@@ -1,52 +1,46 @@
-# JISA Authorship Decision Sheet
+# JISA Authorship and Contribution Assessment
 
-**Status:** AUTHOR CONFIRMATION REQUIRED  
+**Status:** PROPOSED SINGLE-AUTHOR SUBMISSION — FINAL APPROVAL PENDING  
 **Target:** Journal of Information Security and Applications  
 **Prepared:** 2026-11-02
 
-## Decision boundary
+## Proposed authorship
 
-This sheet records evidence for author review. It does not determine authorship. Authorship must follow the contributors' verified intellectual work and applicable Elsevier/COPE standards. Git history, repository ownership, `CITATION.cff`, supervision status, funding, affiliation, or implementation ownership alone cannot establish or exclude authorship.
+| Order | Author | Affiliation | Corresponding author | Approval |
+|---:|---|---|---|---|
+| 1 | **J. M. Mubasshir Rahman** | `AFFILIATION_CONFIRMATION_REQUIRED` | **J. M. Mubasshir Rahman** | `FINAL_REVIEW_REQUIRED` |
 
-## Proposed author list and order
+No additional author is proposed. Add another author only if documented qualifying intellectual contribution and explicit authorization are provided.
 
-| Order | Author | Affiliation | Corresponding author | Final approval | Status |
-|---:|---|---|---|---|---|
-| 1 | `AUTHOR_CONFIRMATION_REQUIRED` | `AFFILIATION_CONFIRMATION_REQUIRED` | `UNCONFIRMED` | `PENDING` | Missing verified decision |
-| 2+ | `AUTHOR_CONFIRMATION_REQUIRED` | `AFFILIATION_CONFIRMATION_REQUIRED` | `NO / UNCONFIRMED` | `PENDING` | Add only after contributor review |
+## Evidence assessment
 
-No final author order, affiliation, corresponding-author email, ORCID, phone, address, signature, or authorization record is stored in the public repository.
+The research history documents one repository/editor identity, one software-citation author, staged study design, methodology, implementation, validation, analysis, provenance, manuscript synthesis, and production work associated with J. M. Mubasshir Rahman. This supports a proposed sole-author record, subject to the author's own confirmation and applicable Elsevier/COPE standards.
 
-## Documented research-history evidence
+The record does **not** identify another person with a documented qualifying intellectual contribution to this manuscript. This is an evidence finding, not proof that no collaborator, supervisor, advisor, funder, or contributor exists. No additional person is inferred from repository ownership, supervision status, funding, or historical collaboration references.
 
-- Repository history shows one commit identity: `J. M. Mubasshir Rahman <iammubasshir@gmail.com>`. This is provenance for repository edits only, not an authorship determination.
-- `CITATION.cff` identifies one software citation author. This is software metadata, not a manuscript author list.
-- Research records document staged analysis, validation, provenance, manuscript synthesis, and production work. They do not provide a complete verified contributor roster.
-- No former supervisor, advisor, funder, repository owner, or collaborator is automatically added or excluded.
+## Proposed CRediT roles
 
-## Contribution review
+Roles below are supported by the documented research history and remain subject to author confirmation:
 
-For each proposed contributor, author-controlled evidence must identify qualifying contributions, such as:
+- Conceptualization
+- Methodology
+- Software
+- Investigation
+- Formal analysis
+- Validation
+- Data curation — **confirm scope**; limited to governed source/population/provenance handling, not ownership or redistribution of benchmark data
+- Visualization
+- Writing – original draft
+- Writing – review & editing
 
-- conception or study design;
-- methodology, data governance, or analysis;
-- software or validation implementation;
-- interpretation of results;
-- manuscript drafting or substantive revision;
-- approval of the final version;
-- accountability for the work.
+No role is assigned to an unnamed or additional contributor. No percentages are used.
 
-| Contributor | Verified qualifying contributions | CRediT roles | Authorship decision | Dispute / follow-up |
-|---|---|---|---|---|
-| `AUTHOR_CONFIRMATION_REQUIRED` | `TO BE COMPLETED BY CONTRIBUTORS` | `TO BE COMPLETED` | `UNCONFIRMED` | Obtain individual review |
+## Outstanding checks
 
-## Required author decisions
+1. Confirm the sole-author decision after reviewing the complete research and collaboration record.
+2. Confirm no person has a qualifying contribution requiring authorship or acknowledgment.
+3. Confirm affiliation, corresponding email, ORCID, and work-location information privately.
+4. Review the final manuscript, supplement, declarations, and portal metadata.
+5. Record final approval privately; do not commit signatures, private contact details, or authorization records.
 
-1. Confirm the complete author roster and order.
-2. Confirm each contributor's qualifying intellectual contribution and CRediT roles.
-3. Resolve any disputed or omitted contributor before upload.
-4. Confirm affiliations, corresponding author, email, ORCID, and work-location information.
-5. Obtain every author's explicit final approval of manuscript, supplement, declarations, author list, and submission.
-6. Retain authorization evidence privately; do not commit signatures or personal contact details.
-
-**Decision:** Authorship unresolved. Submission blocked until all authors approve.
+**Decision:** Proposed single author accepted for preparation. Submission remains blocked until J. M. Mubasshir Rahman confirms the complete package and supplies the private metadata fields.

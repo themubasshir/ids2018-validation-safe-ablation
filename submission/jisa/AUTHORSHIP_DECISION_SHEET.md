@@ -1,7 +1,7 @@
 # JISA Authorship and Contribution Assessment
 
-**Status:** PROPOSED SINGLE-AUTHOR SUBMISSION — FINAL APPROVAL PENDING  
-**Target:** Journal of Information Security and Applications  
+**Status:** PROPOSED SINGLE-AUTHOR SUBMISSION — FINAL APPROVAL PENDING
+**Target:** Journal of Information Security and Applications
 **Prepared:** 2026-11-02
 
 ## Proposed authorship

@@ -1,6 +1,6 @@
 # Final Author-Approval Checklist
 
-**Proposed author:** J. M. Mubasshir Rahman  
+**Proposed author:** J. M. Mubasshir Rahman
 **Status:** TECHNICAL PACKAGE COMPLETE — AUTHOR APPROVAL PENDING
 
 ## Confirm before submission

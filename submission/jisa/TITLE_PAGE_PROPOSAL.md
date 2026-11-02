@@ -14,9 +14,9 @@
 
 ## Corresponding author
 
-J. M. Mubasshir Rahman  
-Email: `PRIVATE_CORRESPONDING_EMAIL_REQUIRED`  
-ORCID: `ORCID_CONFIRMATION_REQUIRED`  
+J. M. Mubasshir Rahman
+Email: `PRIVATE_CORRESPONDING_EMAIL_REQUIRED`
+ORCID: `ORCID_CONFIRMATION_REQUIRED`
 Address/work location: `PRIVATE_CONFIRMATION_REQUIRED`
 
 ## Author contribution

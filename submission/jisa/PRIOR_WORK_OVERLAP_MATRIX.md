@@ -2,13 +2,13 @@
 
 **Prepared:** 2026-11-02  
 **Target:** Journal of Information Security and Applications  
-**Status:** AUTHOR_CONFIRMATION_REQUIRED for publication/submission status and final overlap certification
+**Status:** AUTHOR-REPORTED: NOT PREVIOUSLY SUBMITTED OR PUBLISHED; final overlap certification pending
 
 ## Scope reviewed
 
 Reviewed repository history, archived research records, prior manuscript candidates, the validation-safe comparison record, current JISA manuscript, supplement plan, and available repository metadata. No new scientific computation or PDF compilation was performed.
 
-The earlier IDS2018 XGBoost/SHAP work is identified in the project record as the original threshold-ablation study and associated repository lineage. Its external repository URL is recorded historically as `https://github.com/themubasshir/ids2018-explainable-threshold-ablation`, but the URL was not available during this review. Publication, submission, rejection, withdrawal, acceptance, and conference status are therefore **AUTHOR_CONFIRMATION_REQUIRED**.
+The earlier IDS2018 XGBoost/SHAP work is identified in the project record as the original threshold-ablation study and associated repository lineage. The author reports: **AUTHOR-REPORTED: NOT PREVIOUSLY SUBMITTED OR PUBLISHED** to any journal or conference. This confirms publication/submission status only. It does not establish that the earlier research was never publicly shared as code or repository material. The historical repository URL is recorded as `https://github.com/themubasshir/ids2018-explainable-threshold-ablation`; its current availability and exact contents are not established here.
 
 ## Comparison
 
@@ -23,7 +23,7 @@ The earlier IDS2018 XGBoost/SHAP work is identified in the project record as the
 | SHAP/LIME | Earlier study documented SHAP evidence; exact figure/table/text reuse requires source comparison | Dual-model SHAP plus separate LIME reliability audit; stable explanations not treated as faithful | SHAP lineage reused; LIME and reliability framing expanded |
 | Scientific contribution | Original threshold-ablation/model-comparison study | Multi-axis validity audit across temporal, shortcut, transfer, prevalence, deployment, LOAO, stability, and provenance conditions | Current contribution substantially broader; no priority claim made |
 | Text | Prior text unavailable for line-level comparison | Current manuscript derived through documented repository editorial stages | Textual duplication status unresolved until prior manuscript/source is supplied |
-| Publication status | **AUTHOR_CONFIRMATION_REQUIRED** | Proposed JISA Research Article; not submitted by this workflow | Must not state published, rejected, withdrawn, or accepted |
+| Publication status | **AUTHOR-REPORTED: NOT PREVIOUSLY SUBMITTED OR PUBLISHED** | Proposed JISA Research Article; not submitted by this workflow | Earlier work may still have been publicly shared as code/repository material |
 
 ## Material likely reused
 
@@ -37,13 +37,13 @@ The earlier IDS2018 XGBoost/SHAP work is identified in the project record as the
 - Current temporal, bidirectional cross-dataset, prevalence/workload, hardware, eligibility-gated LOAO, five-seed, placebo, and claim-provenance chain.
 - Exact textual overlap with any earlier manuscript.
 - Exact figure/table file identity across the unavailable earlier source.
-- Any prior publication, conference paper, preprint, or editorial decision.
+- Any prior publication, conference paper, or editorial decision; the author has reported none.
+- Exact public code/repository contents and sharing history.
 
 ## Required author confirmation
 
-1. Provide the earlier manuscript/repository DOI, URL, submission record, or publication record if one exists.
-2. State whether the earlier work was published, submitted, rejected, withdrawn, accepted, or never submitted.
-3. Identify reused figures, tables, numerical results, text, notebook material, or repository artifacts.
+1. Identify the earlier repository/code locations and any public sharing that occurred.
+2. Identify reused figures, tables, numerical results, text, notebook material, or repository artifacts.
 4. Confirm permission and attribution requirements for reused or adapted material.
 5. Confirm whether any co-contributor to the earlier work has a qualifying contribution to the current manuscript.
 6. Approve the final overlap wording before JISA submission.

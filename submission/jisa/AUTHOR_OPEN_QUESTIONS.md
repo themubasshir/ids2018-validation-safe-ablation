@@ -1,8 +1,7 @@
 # Outstanding Author Decisions
 
-1. Earlier IDS2018 XGBoost/SHAP work: publication/submission status?
-2. Earlier work: exact URL, manuscript, DOI, preprint, conference record, or editorial record?
-3. Which current figures, tables, numbers, text, notebook material, or evidence are reused or adapted?
+1. Identify the earlier IDS2018 XGBoost/SHAP repository/code locations and any public sharing history; author-reported status is **NOT PREVIOUSLY SUBMITTED OR PUBLISHED**.
+2. Which current figures, tables, numbers, text, notebook material, or evidence are reused or adapted?
 4. Are permissions and attribution requirements satisfied for reused/adapted material?
 5. Did any earlier collaborator make a qualifying contribution to the current manuscript or require acknowledgment?
 6. Is the sole-author CRediT list accurate, including governed Data curation?

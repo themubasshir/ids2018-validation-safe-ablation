@@ -21,7 +21,7 @@ Draft basis: this manuscript analyzes benchmark-derived cybersecurity data and r
 
 ## Prior publication, overlap, and originality
 
-`AUTHOR_CONFIRMATION_REQUIRED` — confirm the earlier IDS2018 threshold-ablation work's status and provide accurate citation/disclosure. Confirm whether any manuscript, preprint, conference paper, repository version, figure, table, numerical result, text, or notebook material overlaps. Confirm that the JISA manuscript is original in its submitted form, is not under consideration elsewhere, and that any reused/adapted material has appropriate attribution and permission.
+The author reports: **AUTHOR-REPORTED: NOT PREVIOUSLY SUBMITTED OR PUBLISHED** — the earlier IDS2018 threshold-ablation work was not previously submitted to or published by a journal or conference. This does not establish that the research was never publicly shared as code or repository material. `AUTHOR_CONFIRMATION_REQUIRED` — identify exact reused/adapted figures, tables, numerical results, text, notebook material, repository artifacts, permissions, attribution, and qualifying contributors. Confirm that the JISA manuscript is original in its submitted form and is not under consideration elsewhere.
 
 ## Data availability
 

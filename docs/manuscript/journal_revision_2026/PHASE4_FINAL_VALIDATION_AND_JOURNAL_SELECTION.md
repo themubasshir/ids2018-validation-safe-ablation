@@ -91,3 +91,7 @@ Rank: JISA first; JNCA fallback; The Computer Journal third. Rankings are fit/de
 **READY WITH DOCUMENTED LIMITATIONS**
 
 Editorial validation complete. Remaining limitations are transparent: Berhili full article access is incomplete; JCR quartile details and some venue-specific length/charge fields require authenticated/current portal confirmation. No scientific integrity blocker. No submission performed.
+
+## Expanded publisher-neutral assessment
+
+The comprehensive international search, discovery matrix, finalist analysis, weighted ranking, shortlists, ethics checks, and updated recommendation are recorded in `COMPREHENSIVE_INTERNATIONAL_JOURNAL_ASSESSMENT.md`. It supersedes the earlier three-venue comparison for selection purposes. Current recommendation: **Computers & Security** primary; **JISA** cost-conscious target; **ACM TOPS** ambitious target; **IEEE Access** fallback.

@@ -7,7 +7,7 @@ AUTHOR_CONFIRMATION_REQUIRED — confirm whether this work received funding. If 
 AUTHOR_CONFIRMATION_REQUIRED — confirm all competing interests. If none: “The authors declare no competing interests.”
 
 ## Author contributions
-AUTHOR_CONFIRMATION_REQUIRED — insert only verified author names and contribution roles. Do not infer authorship or percentages.
+Proposed sole author J. M. Mubasshir Rahman: Conceptualization; Methodology; Software; Investigation; Formal analysis; Validation; Visualization; Writing – original draft; Writing – review & editing; Data curation limited to governed source, population, and provenance handling. AUTHOR_CONFIRMATION_REQUIRED — verify roles against the complete collaboration record; no additional author is inferred.
 
 ## Data availability
 The study uses governed benchmark-derived evidence. Restricted datasets, raw packet records, private information, closed scientific targets, and unauthorized artifacts are not redistributed. The manuscript reports source-faithful and reconstructed evidence only with their stated limits. AUTHOR_CONFIRMATION_REQUIRED — insert the approved public data-access statement and repository URL.
@@ -28,4 +28,4 @@ Draft basis: the manuscript reports analysis of benchmark-derived cybersecurity 
 AUTHOR_CONFIRMATION_REQUIRED — confirm that the manuscript is original, is not under consideration elsewhere, and that any prior publication, preprint, repository manuscript, or conference overlap is accurately disclosed. Confirm that all authors approve the submitted version and consent to submission.
 
 ## Authorship and affiliation
-AUTHOR_CONFIRMATION_REQUIRED — confirm the final author list, affiliations, corresponding author, email, ORCID identifiers, and author contributions. No personal contact details are committed until explicitly authorized.
+Proposed final author list: J. M. Mubasshir Rahman, sole author and corresponding author. `AFFILIATION_CONFIRMATION_REQUIRED`; `PRIVATE_CORRESPONDING_EMAIL_REQUIRED`; `ORCID_CONFIRMATION_REQUIRED`. AUTHOR_CONFIRMATION_REQUIRED — confirm metadata and final approval privately. No personal contact details are committed.

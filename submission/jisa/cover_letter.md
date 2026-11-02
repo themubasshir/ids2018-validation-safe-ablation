@@ -14,12 +14,12 @@ The contribution is fourfold. First, the study separates temporal validation, op
 
 These conditional and negative findings are directly relevant to applied information-security research. They identify where benchmark capability survived, where it became conditional, and where the evidence does not support a broader claim. The manuscript preserves reproducibility restrictions, closed-data boundaries, cancelled analyses, low-support and ineligible families, and the measured hardware boundary rather than presenting an artificial completeness claim.
 
-The work is original and is not under consideration elsewhere. Any prior repository or related-publication relationship is disclosed in the accompanying declarations. All authors will review and approve the final submission and author list before upload.
+The manuscript is proposed as a single-author submission by J. M. Mubasshir Rahman. It builds on an earlier IDS2018 threshold-ablation research lineage involving processed CSE-CIC-IDS2018 evidence, tree-based model evaluation, and SHAP analysis. The current work may reuse or adapt portions of that reference lineage and related evidence, while adding a substantially broader multi-axis validation and provenance audit. The earlier work's publication, submission, conference, preprint, and editorial status, together with exact text, figure, table, numerical, permission, and contributor overlap, remains subject to author confirmation and will be disclosed accurately before submission. The manuscript is not being represented as an independent dataset lineage or as a priority claim. The sole author will review and approve the final manuscript, supplement, declarations, overlap disclosure, metadata, and submission before upload.
 
-AUTHOR_CONFIRMATION_REQUIRED
+AUTHOR_CONFIRMATION_REQUIRED — final author review and approval required.
 
 Sincerely,
 
-AUTHOR_CONFIRMATION_REQUIRED
+J. M. Mubasshir Rahman
 Corresponding author
-AUTHOR_CONFIRMATION_REQUIRED
+PRIVATE_CORRESPONDING_EMAIL_REQUIRED

@@ -32,7 +32,7 @@ MiKTeX 25.12 installed per-user from official `MiKTeX.MiKTeX` winget package. Co
 
 ## Main visual QA
 
-Not complete. ImageMagick is installed, but PDF rasterization failed because its Ghostscript delegate (`gswin64c.exe`) is unavailable. Source/PDF metadata and compiler logs were checked; page-by-page figure, table, glyph, and page-break inspection remains blocked. Main source still requires human visual review, despite successful compilation.
+PyMuPDF 2.0 rendered all 31 pages at 160 DPI to temporary storage outside the package. Contact-sheet and page-level inspection found no clipped text, cut-off tables, missing glyphs, unexpected blank pages, or broken figure placement. Dense figures/tables remain zoom-dependent. Details: `VISUAL_QA_REPORT.md`.
 
 ## Supplement S1–S7 matrix
 
@@ -51,10 +51,10 @@ The supplement documents unavailable, restricted, cancelled, descriptive, and un
 ## Supplement compilation and QA
 
 - Output: `submission/jisa/supplement/supplement.pdf`.
-- 5 pages; final two `pdflatex` passes exited 0.
-- No fatal errors, missing references, or unresolved citations.
-- Final overfull-box warnings cleared after `microtype` and `\emergencystretch` adjustments.
-- Page-by-page visual inspection remains blocked by the missing Ghostscript PDF renderer.
+- 7 pages; final two `pdflatex` passes exited 0.
+- No fatal errors, missing references, unresolved citations, float overflow, or overfull-box warnings.
+- PyMuPDF rendered and inspected all 7 pages.
+- Ten quantitative tables included; no supplementary figures, avoiding Figure 6 duplication.
 
 ## Flattened Elsevier export
 
@@ -68,8 +68,7 @@ The supplement documents unavailable, restricted, cancelled, descriptive, and un
 
 ## Remaining blockers
 
-1. Page-level visual inspection requires an approved PDF renderer/Ghostscript installation.
-2. Author names, affiliations, corresponding-author email, ORCID, funding, conflicts, overlap, AI disclosure, and authorized public data/code URL remain `AUTHOR_CONFIRMATION_REQUIRED` or unresolved.
+1. Author names, affiliations, corresponding-author email, ORCID, funding, conflicts, overlap, AI disclosure, and authorized public data/code URL remain `AUTHOR_CONFIRMATION_REQUIRED` or unresolved.
 3. Venue portal/article-type/artwork/upload/APC rules require current author confirmation.
 4. Supplement exhibits whose frozen source or redistribution permission is unavailable remain documented dependencies, not complete data releases.
 5. No submission, release, DOI, Zenodo archive, merge, or force-push performed.

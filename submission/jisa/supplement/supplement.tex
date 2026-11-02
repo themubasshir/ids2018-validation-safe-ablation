@@ -7,6 +7,10 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{labelformat=empty}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,breakatwhitespace=false}
 \emergencystretch=3em
 \title{Supplementary Material: A Multi-Axis Empirical Audit of Machine-Learning Intrusion Detection}
 \author[anon]{AUTHOR\_CONFIRMATION\_REQUIRED}
@@ -14,71 +18,214 @@
 \begin{document}
 \maketitle
 \section*{Use and evidence boundary}
-This supplement contains reviewer-facing frozen evidence and provenance records. It does not redistribute restricted datasets, raw traffic, private information, closed scientific targets, unauthorized model checkpoints, or the complete research repository. Values retain their source populations, native metrics, uncertainty semantics, and qualifications. Static verification is not represented as a complete end-to-end experimental rerun. Source paths and SHA-256 values are recorded in \texttt{source-manifest.csv}.
+This supplement contains reviewer-facing frozen evidence and provenance records. It does not redistribute restricted datasets, raw traffic, private information, closed scientific targets, unauthorized model checkpoints, or the complete research repository. Values below are transcribed from approved artifacts without recomputation. Each quantitative exhibit names its population, metric, condition, qualification, and source hash in \texttt{source-manifest.csv}. A source listed as unavailable or restricted remains a dependency; no missing value is inferred.
 
-\section{S1. Reference evaluation, uncertainty, and explanation reliability}
-The processed CSE-CIC-IDS2018 reference is a rebalanced within-table condition. Its six frozen membership counts, threshold roles, operating metrics, calibration records, paired conditional intervals, seed summaries, LIME reliability diagnostics, and TreeSHAP comparisons remain governed by the revision manuscript and Stage 29 registries. No learner-winner claim is introduced. The complete approved reference source is recorded in \texttt{source/RESULTS\_SUMMARY.md}; unavailable historical arrays and closed targets remain unavailable.
+\section*{S1. Reference evaluation, uncertainty, and explanation reliability}
+The processed CSE-CIC-IDS2018 reference is a rebalanced within-table condition. Its membership counts, threshold roles, operating metrics, calibration records, paired conditional intervals, fixed-recipe seed summaries, LIME reliability diagnostics, and TreeSHAP comparisons remain conditional on the frozen holdout and protocol. No learner-winner claim is introduced. Complete raw arrays and closed targets are not redistributed.
 
-\subsection*{S1 evidence record}
-Population: processed, rebalanced CSE-CIC-IDS2018 holdout. Metrics: F1, F2, FPR, ROC-AUC, PR-AUC, Brier score, and declared conditional intervals. Qualification: reference evidence does not establish natural prevalence, temporal validity, transfer, or deployment utility. The source manifest records the copied authority and hash.
+\subsection*{S1.1 Approved reference evidence}
+Population: processed, rebalanced CSE-CIC-IDS2018 holdout. Metrics: F1, F2, FPR, ROC-AUC, PR-AUC, Brier score, and conditional intervals. Qualification: this condition does not establish natural prevalence, temporal validity, transfer, or deployment utility. The approved source summary is \texttt{source/RESULTS\_SUMMARY.md}; source hash appears in the manifest. LIME and TreeSHAP reliability evidence is source-traceable in the repository but not reproduced as a new aggregate because the approved panel contains case-level and method-specific records.
 
-\section{S2. Shortcut, representation, and architecture diagnostics}
-The approved Stage 23 table records the primary frozen subset intervention. It is presented as feature-set sensitivity, not proof of leakage or causality. Matched-size placebos, depth-one controls, attribution proxies, behavior-restricted representations, and family-composition evidence retain their original status. Stage 18 graph and Stage 21 CNN/ViT materials remain supplement-only and descriptive; no architecture or deployment superiority claim is promoted.
-
-\subsection*{S2 evidence record}
-The copied table \texttt{source/table\_23\_1\_primary\_subset\_performance.csv} is the approved primary subset artifact. Population: frozen random-natural and chronological-natural populations. Metrics: native ranking and operating metrics as recorded. The remaining Stage 23 and Stage 21 artifacts are repository dependencies, not silently reconstructed here.
-
-\section{S3. Cross-dataset contracts and sensitivity}
-Bridge62 and bridge70 are direction-specific semantic contracts. IDS2018-to-CICIDS2017 and CICIDS2017-to-IDS2018 remain separate; they are not averaged. Published-versus-corrected aggregate-flag effects retain metric-specific changes. The two planned \texttt{GROUNDED\_S4} cells remain cancelled because exact durable physical-row membership was unavailable before target opening.
-
-\subsection*{S3 Table S1. Directional transfer source}
-The following exhibit is copied from the approved publication table; no values were recomputed.
 \begin{table}[htbp]
-\centering\small
-\caption{Approved bidirectional bridge62 source artifact.}
-\begin{tabularx}{\textwidth}{@{}lX@{}}
+\centering\scriptsize
+\caption{Table S1. Reference evidence classification.}
+\begin{tabularx}{\textwidth}{@{}lXX@{}}
 \toprule
-Field & Value\\
+Evidence & Frozen interpretation & Qualification\\
 \midrule
-Source artifact & \texttt{source/table24\_1\_bidirectional\_generalization.csv}\\
-Population & Separate frozen source-to-target bridge62 directions\\
-Metrics & PR-AUC, ROC-AUC, target prevalence\\
-Qualification & Directions use different learners, populations, and target roles; no pooled score\\
+Reference holdout & Processed, rebalanced CSE-CIC-IDS2018; fixed train/validation/holdout roles & Within-table reference only\\
+Operating points & Standard, balanced, and security roles retained separately & Threshold behavior is condition-specific\\
+Calibration and uncertainty & Paired conditional intervals and calibration diagnostics & Conditional on frozen sample, arrays, and implementation\\
+Explanation reliability & LIME local reconstruction/agreement and TreeSHAP comparisons & Stable explanations do not imply fidelity or causality\\
 \bottomrule
 \end{tabularx}
 \end{table}
+\textit{Traceability:} Stage 29 evidence IDs E29-006--E29-011, E29-015; source artifact registry and approved reference records. Redistribution: summary-level exhibit permitted; raw cases/arrays excluded.
 
-\section{S4. Prevalence, workload, capacity, and cost}
-The approved operational translation is an analytic prior-shift projection. Sensitivity and false-positive rate are held fixed while prevalence varies. Traffic volume, analyst service time, capacity, and relative costs are scenarios, not field measurements. The copied source table records the selected 0.1\% operating-point translations. Full grids, break-even conditions, and cost decisions remain identified in the source registry; no new formula or value is introduced here.
+\section*{S2. Shortcut, representation, and architecture diagnostics}
+The seven registered feature subsets are reproduced below from the approved Stage 23 table. Random-natural and chronological-natural populations remain separate. Metrics are native ranking and operating-point metrics at threshold 0.50. Subset effects are sensitivity evidence, not proof of leakage or causality. Placebo controls are shown separately to preserve their distinct schema and interpretation.
 
-\section{S5. Deployment profiling}
-Deployment profiling is bounded from prepared model input to materialized probabilities on the recorded hardware and software. Warm/cold inference, throughput, memory, package size, component timings, batch schedules, representation groups, and backend statuses retain separate populations. Unsupported, incompatible, timed-out, and resource-limited paths remain statuses rather than imputed measurements. Capture, flow extraction, external representation construction, alert aggregation, and analyst response are outside the measured boundary.
+\begin{table}[htbp]
+\centering\tiny
+\caption{Table S2. Seven registered feature-subset results.}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Subset & Features & R PR-AUC & C PR-AUC & R ROC-AUC & C ROC-AUC & R F1 & C F1 & C FPR\\
+\midrule
+FULL & 70 & .995590 & .106215 & .998625 & .514918 & .983867 & .000064 & .000058\\
+NO\_DST\_PORT & 69 & .995260 & .102474 & .998473 & .488864 & .983674 & .000225 & .000135\\
+NO\_PORTS & 68 & .995267 & .102473 & .998476 & .488864 & .983684 & .000225 & .000135\\
+NO\_INIT\_FWD\_WIN\_BYTS & 69 & .993417 & .106032 & .998192 & .509212 & .974099 & .002546 & .000960\\
+NO\_FWD\_SEG\_SIZE\_MIN & 69 & .995576 & .105455 & .998609 & .511682 & .983860 & .000128 & .000081\\
+NO\_SUSPICIOUS\_GROUP & 67 & .989601 & .104667 & .997409 & .489393 & .963007 & .019143 & .006496\\
+BEHAVIOR\_ONLY & 63 & .981588 & .095540 & .996142 & .476482 & .946547 & .029455 & .045740\\
+\bottomrule
+\end{tabular}
+\end{table}
+R and C denote random-natural and chronological-natural. Source: \texttt{stage23\_7\_final\_synthesis/tables/table\_23\_1\_primary\_subset\_performance.csv}; source population and hash are in the manifest.
 
-\subsection*{S5 evidence record}
-Copied source artifacts include CPU warm inference and the approved Stage 26 publication tables. Population: compatible paths at the recorded hardware/software boundary. Metrics: latency, throughput, memory, package size, and status fields as declared by each table. No timing was regenerated.
+\begin{table}[htbp]
+\centering\tiny
+\caption{Table S3. Matched placebo controls and interaction intervals.}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Placebo & R PR-AUC & C PR-AUC & PR interaction & 95\% interval & R ROC-AUC & C ROC-AUC\\
+\midrule
+COUNTS & .995587 & .106567 & .000355 & [-.000192,.000571] & .998617 & .516785\\
+VOLUME\_DIRECTION & .995581 & .105759 & -.000447 & [-.000803,-.000167] & .998617 & .513851\\
+IAT & .995580 & .105298 & -.000908 & [-.001854,-.000826] & .998618 & .512494\\
+PACKET\_SIZE & .991702 & .106017 & .003690 & [.002138,.004160] & .996802 & .515720\\
+ACTIVITY & .995584 & .106555 & .000345 & [-.000225,.000601] & .998617 & .516519\\
+\bottomrule
+\end{tabular}
+\end{table}
+The placebo source population is 2,882,481 random-natural validation rows and 593,780 chronological-natural validation rows, with the source-specific attack supports retained. Source: \texttt{table\_23\_s1\_placebo\_subset\_performance.csv} and \texttt{table\_23\_s2\_placebo\_interactions.csv}. Placebo interactions can vary by split; they do not identify one causal shortcut mechanism. Stage 18 graph/attention and Stage 21 CNN/ViT materials remain descriptive or supplement-only under E29-017--E29-019 and are not promoted here.
 
-\section{S6. LOAO eligibility and realization stability}
-LOAO requires zero training and validation exposure to the eligible target family, day-atomic ordering, and sufficient support. DDoS, Port Scan, Web Attack, Bot, and Infiltration remain separate. Infiltration is descriptive at support 36. DOS and AUTH\_BRUTE\_FORCE remain structurally ineligible. No pooled novelty score is formed.
+\section*{S3. Cross-dataset contracts and sensitivity}
+Bridge directions remain separate. The values below are the actual approved direction-specific transfer results; no pooled score is formed. The reverse target is the IDS2018 February 28 population. Bridge62 excludes all eight aggregate flag-count fields, so its published and corrected rows are bitwise identical. Bridge70 retains published and corrected serialization as separate conditions.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.95\textwidth]{figures/stage27_primary_roc_auc_ci.png}
-\caption{Figure S1. Approved LOAO ROC-AUC evidence. Frozen family-specific conditional intervals remain conditional; this exhibit does not represent an aggregate future-attack score.}
-\end{figure}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.95\textwidth]{figures/stage27_balanced_recall_ci.png}
-\caption{Figure S2. Approved LOAO balanced-threshold recall evidence. Family eligibility, support, learner, and threshold qualifications remain attached.}
-\end{figure}
+\begin{table}[htbp]
+\centering\tiny
+\caption{Table S4. Direction-specific bridge62/bridge70 transfer metrics.}
+\begin{tabular}{@{}llllrrrr@{}}
+\toprule
+Direction & Bridge & Semantics & Target prev. & PR-AUC & PR excess & ROC-AUC & Brier\\
+\midrule
+IDS18 $\rightarrow$ CICIDS17 & 62 & Published/corrected & .196996 & .667483 & .470486 & .733946 & .145756\\
+IDS18 $\rightarrow$ CICIDS17 & 70 & Published & .196996 & .663981 & .466985 & .741891 & .142912\\
+IDS18 $\rightarrow$ CICIDS17 & 70 & Corrected & .196996 & .656252 & .459256 & .744083 & .147998\\
+CICIDS17 $\rightarrow$ IDS18 & 62 & Corrected source & .104847 & .108176 & .003329 & .525167 & .105758\\
+CICIDS17 $\rightarrow$ IDS18 & 70 & Corrected source & .104847 & .107419 & .002572 & .525302 & .105652\\
+\bottomrule
+\end{tabular}
+\end{table}
 
-The copied Stage 28 seed summary and LOAO stability registry preserve the five-seed temporal ordering, registered realization rules, learner dependence, support limits, and historically opened target boundary. No best seed was selected.
+\begin{table}[htbp]
+\centering\scriptsize
+\caption{Table S5. Approved paired bootstrap contrasts.}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Direction / comparison & Metric & Difference & 95\% interval & Excludes zero\\
+\midrule
+Forward: B70 published--B62 published & PR-AUC & -.003502 & [-.003856,-.003152] & yes\\
+Forward: B70 published--B62 published & ROC-AUC & .007945 & [.007793,.008095] & yes\\
+Forward: B70 corrected--B62 corrected & PR-AUC & -.011230 & [-.011619,-.010858] & yes\\
+Forward: B70 corrected--B62 corrected & ROC-AUC & .010137 & [.009981,.010303] & yes\\
+Forward: B70 corrected--B70 published & PR-AUC & -.007729 & [-.007921,-.007534] & yes\\
+Forward: B70 corrected--B70 published & ROC-AUC & .002192 & [.002139,.002246] & yes\\
+Reverse: B70--B62 & PR-AUC & -.000757 & [-.001058,-.000435] & yes\\
+Reverse: B70--B62 & ROC-AUC & .000135 & [-.000900,.001263] & no\\
+\bottomrule
+\end{tabular}
+\end{table}
+Each contrast uses 2,000 paired bootstrap replicates, seed 42, conditional on the frozen target and bridge protocol. Sources: the approved bridge62 and bridge70 source tables. The two planned \texttt{GROUNDED\_S4} cells were cancelled before target opening because exact durable membership was unavailable; no result exists (E29-027).
 
-\section{S7. Provenance, equivalence, and reproduction}
-The package records source paths and hashes for every copied exhibit in \texttt{source-manifest.csv}. The authoritative project retains claim-to-artifact mappings, configurations, source maps, environment records, target-opening ledgers, equivalence matrices, reproduction indexes, and static validation reports. Some environments remain \texttt{VERSION\_NOT\_PROVEN}; some raw data, historical environments, models, arrays, and closed targets are unavailable. The repository therefore supports claim-level traceability, not complete local regeneration of every result.
+\section*{S4. Prevalence, workload, capacity, and cost}
+The following approved table is an analytic prior-shift projection. TPR and FPR are held fixed while projected prevalence is set to 0.001. Traffic volume, analyst time, and relative cost are scenarios, not field observations.
 
-\subsection*{Redistribution and dependency record}
-Only approved editorial tables, documentation, and registered public figure assets are copied here. Restricted original datasets, raw packet records, private information, unauthorized checkpoints, and closed targets are excluded. Any exhibit not copied because its source or redistribution status could not be verified remains a documented dependency rather than a fabricated placeholder.
+\begin{table}[htbp]
+\centering\tiny
+\caption{Table S6. Frozen 0.1\% prevalence operational translation.}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Cell & Precision & TPR & FPR & PPV & FP/day & Hours/day\\
+\midrule
+Stage22 Random & .999775 & .968458 & .0000346 & .965572 & 34.566 & 33.466\\
+Stage22 Chronological & .060606 & .0000321 & .0000583 & .000551 & 58.323 & 1.945\\
+IDS18 to CICIDS17 B62 & .927118 & .212924 & .004106 & .049344 & 4106.292 & 143.981\\
+IDS18 to CICIDS17 B70 published & .940228 & .227838 & .003553 & .060313 & 3553.302 & 126.046\\
+IDS18 to CICIDS17 B70 corrected & .909155 & .145044 & .003556 & .039233 & 3555.502 & 123.356\\
+CICIDS17 to IDS18 B62 & .029268 & .000386 & .001498 & .000258 & 1497.581 & 49.932\\
+CICIDS17 to IDS18 B70 & .032609 & .000386 & .001340 & .000288 & 1339.544 & 44.664\\
+\bottomrule
+\end{tabular}
+\end{table}
+The full source additionally records true-alert volume, total alerts, cost decisions, required-FPR curves, capacity tiers, and break-even conditions. Those tables remain source-traceable but are not collapsed into a new summary. Sources: \texttt{table25\_1\_standard\_operational\_translation\_0p1pct.csv}, Stage 25 publication tables; E29-028--E29-031. No field-performance claim follows.
+
+\section*{S5. Deployment profiling}
+Measurements cover prepared model input through materialized probabilities on recorded hardware/software. They exclude capture, flow extraction, external representation construction, alert aggregation, and analyst response. Unsupported, timeout, and resource-limited paths remain statuses.
+
+\begin{table}[htbp]
+\centering\tiny
+\caption{Table S7. Representative approved CPU warm-inference measurements.}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Target & CPU & Batch & Status & n & p50 ms & p95 ms\\
+\midrule
+XGBoost tuned & 1 core & 1 & PASS & 200 & .4397 & .5937\\
+XGBoost tuned & 1 core & 256 & PASS & 100 & 2.4264 & 2.7338\\
+LightGBM tuned & 1 core & 1 & PASS & 200 & .5368 & .6488\\
+CatBoost tuned & 1 core & 1 & PASS & 200 & .2054 & .2392\\
+5-checkpoint voting & 1 core & 1 & PASS & 200 & 8.8806 & 11.3027\\
+5-checkpoint voting & 1 core & 8192 & TIMEOUT\_RESOURCE\_LIMIT & 0 & -- & --\\
+Packet-image CNN & 1 core & 256 & PASS & 100 & 4580.8021 & 4987.9484\\
+\bottomrule
+\end{tabular}
+\end{table}
+Source: \texttt{T26\_CPU\_WARM\_INFERENCE.csv}; Stage 26 hardware/software receipt and publication tables. Confidence intervals, throughput, memory, GPU matches, Pareto records, and backend statuses remain in the source artifact. These are hardware-specific component measurements, not end-to-end deployment latency (E29-032--E29-033).
+
+\section*{S6. LOAO eligibility, family results, and stability controls}
+LOAO requires zero training/validation exposure to the target family, day-atomic ordering, and sufficient target support. DDoS, Port Scan, Web Attack, Bot, and Infiltration were eligible; Infiltration remains descriptive at 36 positives. DOS and AUTH\_BRUTE\_FORCE were structurally ineligible.
+
+\begin{table}[htbp]
+\centering\tiny
+\caption{Table S8. Family-level LOAO primary metrics.}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Family & Learner & Support & Rows & ROC-AUC & 95\% CI & PR-AUC & Claim status\\
+\midrule
+Bot & XGBoost & 1966 & 416288 & .3224 & [.3102,.3354] & .0033 & eligible\\
+Bot & LightGBM & 1966 & 416288 & .5591 & [.5521,.5660] & .0049 & eligible\\
+DDoS & XGBoost & 128027 & 542349 & .9982 & [.9981,.9983] & .9925 & eligible\\
+DDoS & LightGBM & 128027 & 542349 & .9986 & [.9985,.9987] & .9940 & eligible\\
+Infiltration & XGBoost & 36 & 456788 & .7816 & [.7473,.8142] & .000181 & descriptive only\\
+Infiltration & LightGBM & 36 & 456788 & .7537 & [.7239,.7865] & .000156 & descriptive only\\
+Port Scan & XGBoost & 158930 & 573252 & .5506 & [.5487,.5524] & .3622 & eligible\\
+Port Scan & LightGBM & 158930 & 573252 & .7559 & [.7546,.7570] & .4191 & eligible\\
+Web Attack & XGBoost & 2180 & 458932 & .9693 & [.9660,.9726] & .7206 & eligible\\
+Web Attack & LightGBM & 2180 & 458932 & .9901 & [.9887,.9914] & .7605 & eligible\\
+\bottomrule
+\end{tabular}
+\end{table}
+Source: \texttt{stage27\_final\_primary\_metrics.csv}; confidence intervals are family-specific conditional intervals. No pooled future-attack score is formed.
+
+\begin{table}[htbp]
+\centering\scriptsize
+\caption{Table S9. Five-seed Stage 22 stability summary.}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Unit & Metric & Mean & Median & Minimum & Maximum\\
+\midrule
+Random-natural & ROC-AUC & .517615 & .519090 & .506288 & .524974\\
+Random-natural & PR-AUC & .259921 & .261240 & .254641 & .262814\\
+Chronological-natural & ROC-AUC & .820900 & .819597 & .808632 & .831170\\
+Chronological-natural & PR-AUC & .638752 & .644872 & .587465 & .676863\\
+\bottomrule
+\end{tabular}
+\end{table}
+Source: \texttt{stage28\_final\_stage22\_shared\_holdout\_five\_seed\_summary.csv} and \texttt{stage28\_final\_loao\_stability\_registry.csv}. Five-of-five ordering is descriptive, not a population guarantee; seed variation is not combined with bootstrap uncertainty.
+
+\section*{S7. Provenance, equivalence, and reproduction}
+\begin{table}[htbp]
+\centering\scriptsize
+\caption{Table S10. Evidence classification and reproduction boundary.}
+\begin{tabularx}{\textwidth}{@{}lXX@{}}
+\toprule
+Class & Examples & Boundary\\
+\midrule
+Rerunnable from frozen public/source artifacts & Static parsing, source hashes, LaTeX build, registry checks & Does not recreate restricted data or closed targets\\
+Static-only / reviewer-facing & Approved tables, claims, figures, and manifests & Values copied; no scientific recomputation\\
+Archival / environment-bound & Historical model receipts, hardware timings, immutable execution records & Requires recorded environment and artifacts\\
+Unavailable or restricted & Raw traffic, private information, unauthorized checkpoints, closed targets, missing historical environments & Not redistributed; no replacement value\\
+Cancelled / unsupported & \texttt{GROUNDED\_S4} cells, ineligible families, unsupported backends & No result exists or status is not a measurement\\
+\bottomrule
+\end{tabularx}
+\end{table}
+Traceability: Stage 29 evidence IDs E29-020--E29-041, \texttt{source\_artifact\_registry.csv}, \texttt{claim\_to\_artifact\_map.csv}, and the manifest hashes. Some environments remain \texttt{VERSION\_NOT\_PROVEN}; the package supports claim-level traceability, not complete end-to-end regeneration of every result. Redistribution is limited to approved documentation, tables, and public figure assets.
+
+\section*{Main/supplement cross-reference audit}
+S1 supports the main reference condition and explanation-reliability qualifications. S2 supports the shortcut sensitivity discussion. S3 supports the directional bridge discussion and Table 3. S4 supports the prior-shift operational discussion and Table 4. S5 supports deployment-boundary claims and Figure 5. S6 supports LOAO qualifications and stability claims without duplicating the main Figure 6. S7 supports the provenance and limitation statements. Supplement-only or unavailable evidence is not promoted into the main conclusions.
 
 \section*{Supplement production QA}
-Seven sections are populated with frozen evidence descriptions. Tables S1 and Figures S1--S2 are explicitly identified. Every copied source is listed with hash, population, metrics, and qualification in the source manifest. No scientific computation occurred during assembly. The main manuscript references this separate supplement; final author and venue review remain required.
+Ten quantitative tables are included; no supplementary figures are included, avoiding duplication of the main Figure 6 panels. All exhibits preserve source populations, metric definitions, thresholds or ranking conditions, uncertainty semantics, support, and qualifications. The source manifest records SHA-256 values. Main and supplement PDFs compile independently. Final author metadata, redistribution review, and venue portal confirmation remain required.
 \end{document}

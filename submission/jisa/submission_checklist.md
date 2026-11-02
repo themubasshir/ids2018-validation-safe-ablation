@@ -38,8 +38,10 @@
 - [x] Main manuscript compiled with MiKTeX 25.12
 - [x] Supplement compiled independently
 - [x] Flattened Elsevier export compiled independently
-- [ ] Page-by-page visual inspection with approved PDF renderer
+- [x] Page-by-page visual inspection with PyMuPDF at 160 DPI
+- [x] Supplement quantitative exhibits transcribed with source traceability
+- [x] Supplement numbering normalized: unnumbered S-sections; captions explicitly Table S1--S10
 
 ## Blocking items
 
-`AUTHOR_CONFIRMATION_REQUIRED` placeholders remain in author and institutional metadata. ImageMagick PDF rasterization failed because `gswin64c.exe` is unavailable; page-level visual QA is therefore incomplete. Supplement unsupported/restricted dependencies remain explicitly documented. No submission performed.
+`AUTHOR_CONFIRMATION_REQUIRED` placeholders remain in author and institutional metadata. Public data/code URL, funding, competing interests, overlap, author contributions, and AI declaration require author confirmation. Restricted/unavailable evidence remains explicitly documented. No submission performed.

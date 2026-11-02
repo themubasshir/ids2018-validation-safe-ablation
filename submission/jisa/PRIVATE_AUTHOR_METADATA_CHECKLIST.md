@@ -1,8 +1,8 @@
 # Private Author Metadata Checklist
 
-**Storage:** Keep completed copy outside Git, preferably in `%USERPROFILE%\Documents\JISA-private-submission\`.  
-**Proposed author:** J. M. Mubasshir Rahman  
-**Primary affiliation:** Independent Researcher, Dhaka, Bangladesh  
+**Storage:** Keep completed copy outside Git, preferably in `%USERPROFILE%\Documents\JISA-private-submission\`.
+**Proposed author:** J. M. Mubasshir Rahman
+**Primary affiliation:** Independent Researcher, Dhaka, Bangladesh
 **Corresponding author:** J. M. Mubasshir Rahman
 
 Complete only from author-provided, verified information. Do not commit the completed checklist, contact details, signatures, or authorization records.

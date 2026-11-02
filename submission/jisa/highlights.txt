@@ -1,0 +1,7 @@
+﻿Highlights
+
+Multi-axis audit separates temporal, transfer, operational, and family validity
+Chronological development retained forward ranking across five registered seeds
+Cross-dataset ranking was directional; frozen thresholds transferred poorly
+Prevalence, workload, hardware, and LOAO results remained conditional
+Claim-to-artifact provenance preserves reproducibility limits and negative findings

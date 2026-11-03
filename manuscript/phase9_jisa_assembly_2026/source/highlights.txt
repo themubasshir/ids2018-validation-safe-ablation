@@ -1,0 +1,5 @@
+Benchmark discrimination was conditional on the processed reference population.
+Chronological ranking exceeded random, but frozen thresholds transferred poorly.
+Cross-dataset ranking was directional under frozen semantic bridges.
+Projected PPV, workload, and detection yield diverged at low prevalence.
+Eligible-family results and computational feasibility were selective and bounded.

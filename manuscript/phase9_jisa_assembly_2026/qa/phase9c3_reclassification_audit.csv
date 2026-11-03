@@ -1,0 +1,62 @@
+row_id,source,locator,number_representation,classification,review_result,reason
+N9C-003,manuscript.tex,29,citation keys/years and dataset identifiers, bibliographic/structural,ACCEPTED,No empirical scalar; reproducibility context unchanged.
+N9C-004,manuscript.tex,31,citation keys/years, bibliographic,ACCEPTED,No manuscript result or protocol parameter.
+N9C-006,manuscript.tex,37,citation years/identifiers,bibliographic,ACCEPTED,Prior-work metadata; no current-study measurement.
+N9C-008,manuscript.tex,43,dataset identifiers,structural,ACCEPTED,Population labels, not counts.
+N9C-009,manuscript.tex,47,question number and dataset identifier,structural,ACCEPTED,Question numbering; no result.
+N9C-012,manuscript.tex,50,question number/bridge identifiers,structural,ACCEPTED,Schema labels, not measurements.
+N9C-013,manuscript.tex,51,question number,structural,ACCEPTED,Question numbering only.
+N9C-015,manuscript.tex,58,section/evidence IDs,administrative,ACCEPTED,Traceability identifiers, not data values.
+N9C-016,manuscript.tex,60,section/evidence IDs and support prose,administrative,ACCEPTED,No standalone unsupported count; LOAO support 36 is verified elsewhere.
+N9C-017,manuscript.tex,62,section/limitation IDs,administrative,ACCEPTED,Traceability identifiers.
+N9C-018,manuscript.tex,64,section numbers,structural,ACCEPTED,Outline numbering.
+N9C-019,manuscript.tex,68,citation/dataset identifiers,bibliographic,ACCEPTED,No current-study scalar.
+N9C-020,manuscript.tex,70,citation years,bibliographic,ACCEPTED,Prior-work metadata.
+N9C-021,manuscript.tex,72,citation years/dataset identifiers,bibliographic,ACCEPTED,Prior-work metadata.
+N9C-022,manuscript.tex,74,citation/dataset identifiers,structural,ACCEPTED,No result value.
+N9C-024,manuscript.tex,78,stage/reference identifiers,structural,ACCEPTED,Method context; no numeric measurement.
+N9C-026,manuscript.tex,84,citation identifiers,bibliographic,ACCEPTED,Prior-work metadata.
+N9C-027,manuscript.tex,86,citation identifiers,structural,ACCEPTED,Prior-work and method labels.
+N9C-028,manuscript.tex,88,citation identifiers,structural,ACCEPTED,No standalone current-study result.
+N9C-029,manuscript.tex,90,citation identifiers,structural,ACCEPTED,No measurement.
+N9C-030,manuscript.tex,92,citation identifiers and support 36/3967 references,structural,ACCEPTED,Counts are discussed elsewhere with dedicated verified rows.
+N9C-031,manuscript.tex,94,citation/section identifiers,structural,ACCEPTED,No standalone result.
+N9C-032,manuscript.tex,96,citation years, bibliographic,ACCEPTED,Prior-work metadata.
+N9C-033,manuscript.tex,98,dataset identifiers,structural,ACCEPTED,Population labels.
+N9C-034,manuscript.tex,102,subsection number/dataset identifier,structural,ACCEPTED,Heading and dataset label.
+N9C-038,manuscript.tex,108,bridge schema identifiers,structural,ACCEPTED,Bridge labels; metrics separately verified.
+N9C-041,manuscript.tex,113,subsection number,structural,ACCEPTED,Heading only.
+N9C-048,manuscript.tex,131,dataset/bridge identifiers,structural,ACCEPTED,Experimental labels; no result value.
+N9C-049,manuscript.tex,134,subsection number,structural,ACCEPTED,Heading only.
+N9C-077,manuscript.tex,213,figure number,structural,ACCEPTED,Caption numbering only.
+N9C-079,manuscript.tex,220,table number,structural,ACCEPTED,Caption numbering only.
+N9C-083,manuscript.tex,231,subsection number,structural,ACCEPTED,Heading only.
+N9C-094,manuscript.tex,262,figure/axis batch-one context,structural,ACCEPTED,No scalar value in caption; ratios verified in N9C-093.
+N9C-105,manuscript.tex,297,table number,structural,ACCEPTED,Heading/exhibit reference.
+N9C-110,manuscript.tex,331,subsection number,structural,ACCEPTED,Heading only.
+N9C-111,manuscript.tex,332,dataset IDs and direction count,structural,ACCEPTED,Transfer metrics verified in N9C-075/N9C-081/N9C-082.
+N9C-112,manuscript.tex,335,subsection number,structural,ACCEPTED,Heading only.
+N9C-116,manuscript.tex,361,limitation IDs/dataset identifiers,administrative,ACCEPTED,Interpretation boundaries, no scalar.
+N9C-118,manuscript.tex,364,limitation IDs,administrative,ACCEPTED,Interpretation boundaries, no scalar.
+N9C-119,manuscript.tex,366,subsection number,structural,ACCEPTED,Heading only.
+N9C-123,manuscript.tex,372,subsection number,structural,ACCEPTED,Heading only.
+N9C-124,manuscript.tex,373,limitation IDs,administrative,ACCEPTED,Interpretation boundaries, no scalar.
+N9C-126,manuscript.tex,376,limitation IDs,administrative,ACCEPTED,Interpretation boundaries, no scalar.
+N9C-128,supplement/supplement.tex,27,dataset identifier,structural,ACCEPTED,Population label.
+N9C-130,supplement/supplement.tex,30,dataset identifier,structural,ACCEPTED,Population label.
+N9C-131,supplement/supplement.tex,39,dataset identifier,structural,ACCEPTED,Table population label.
+N9C-132,supplement/supplement.tex,46,evidence IDs,administrative,ACCEPTED,Traceability IDs.
+N9C-141,supplement/supplement.tex,68,stage/table identifiers,administrative,ACCEPTED,Source path and schema references.
+N9C-142,supplement/supplement.tex,75,95% header,structural,ACCEPTED,Statistical header; no estimate.
+N9C-149,supplement/supplement.tex,88,dataset/date/bridge identifiers,structural,ACCEPTED,Labels; table metrics separately source-checked.
+N9C-150,supplement/supplement.tex,92,table/bridge identifiers,structural,ACCEPTED,Caption/context only.
+N9C-156,supplement/supplement.tex,111,95% header,structural,ACCEPTED,Header only.
+N9C-175,supplement/supplement.tex,146,stage/evidence IDs,administrative,ACCEPTED,Traceability references.
+N9C-184,supplement/supplement.tex,168,stage/evidence IDs,administrative,ACCEPTED,Traceability references; timing values verified separately.
+N9C-186,supplement/supplement.tex,178,95% header,structural,ACCEPTED,Header only.
+N9C-197,supplement/supplement.tex,193,stage identifier,administrative,ACCEPTED,Source reference.
+N9C-198,supplement/supplement.tex,197,stage/table identifier,administrative,ACCEPTED,Caption reference.
+N9C-204,supplement/supplement.tex,214,table count/header artifact,structural,ACCEPTED,No scientific measurement.
+N9C-205,supplement/supplement.tex,227,evidence IDs,administrative,ACCEPTED,Traceability IDs.
+N9C-206,supplement/supplement.tex,230,section numbers,structural,ACCEPTED,Supplement section references.
+N9C-207,supplement/supplement.tex,233,table/package count,administrative,ACCEPTED,Exhibit/package description; no scientific result.

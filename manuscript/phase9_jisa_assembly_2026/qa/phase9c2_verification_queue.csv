@@ -1,0 +1,16 @@
+priority,row_id,location,category,queue_action,status
+1,N9C-056,manuscript.tex:156,Original model metrics,Verify reference metrics against Stage05 source row/columns,RESOLVED_EXISTING
+1,N9C-062,manuscript.tex:174,I Realization stability,Verify Stage28 mean/SD/order fields,RESOLVED_EXISTING
+1,N9C-075,manuscript.tex:208,F Cross-dataset transfer,Verify bridge62 source rows,RESOLVED_EXISTING
+1,N9C-084,manuscript.tex:232,G Operational projections,Verify Stage25 source rows,RESOLVED
+1,N9C-085,manuscript.tex:233,G Operational projections,Verify forward/reverse PPV and cost summary,RESOLVED
+1,N9C-093,manuscript.tex:258,H Hardware profiling,Verify CPU/GPU ratio artifact,RESOLVED_EXISTING
+1,N9C-097,manuscript.tex:267,I LOAO results,Verify Stage27 primary metrics,RESOLVED_EXISTING
+1,N9C-157,N9C-160,supplement:113-116,F Cross-dataset transfer,Verify paired bridge contrasts against Stage24 JSON,RESOLVED_SOURCE_REPORT
+1,N9C-163,N9C-164,supplement:119-120,E Statistical intervals,Verify reverse paired contrasts against Stage24 JSON,RESOLVED_SOURCE_REPORT
+1,N9C-177,N9C-179,supplement:158-160,H Hardware profiling,Verify warm-inference CSV exact rows/columns,RESOLVED_SOURCE_FIELD
+1,N9C-187,N9C-196,supplement:180-189,I LOAO results,Verify Stage27 source table rows; unregistered scalars remain source-only,PARTIAL_SOURCE_VERIFICATION
+1,N9C-199,N9C-202,supplement:202-205,I Realization stability,Verify Stage28 summary mean/SD columns,RESOLVED_SOURCE_FIELD
+2,N9C-003,N9C-034,Methods/context,Bibliographic and section numerals; not empirical scalar claims,RECLASSIFICATION_REVIEW
+2,N9C-128,N9C-150,Supplement context,Stage/table/evidence identifiers and unregistered source values,UNRESOLVED_OR_NONSCALAR
+2,N9C-156,N9C-207,Supplement context,Unregistered table cells and source-only values,UNRESOLVED_OR_PARTIAL

@@ -2,7 +2,7 @@
 
 ## Checkpoint
 
-- Repository: `the mubasshir/ids2018-validation-safe-ablation`
+- Repository: `themubasshir/ids2018-validation-safe-ablation`
 - Branch: `manuscript-journal-revision-2026`
 - Base/local/remote Git commit: `228e8c94f2c16abd138b775917f2069e91c06107`
 - Assembly root: `manuscript/phase9_jisa_assembly_2026/`
@@ -24,7 +24,7 @@
 - Scientific provenance: `qa/complete_numerical_claim_audit.csv`, `qa/phase9c1_source_field_ledger.csv`, `qa/phase9c2_source_verification_receipts.csv`, `qa/phase9c3_reclassification_audit.csv`, `qa/phase9c3_independent_receipt_audit.csv`, `qa/phase9c3_scientific_validation_report.md`
 - Final review: `qa/phase9c3_final_review_decision.md`, `qa/final_submission_blockers.md`
 - Visual/build QA: `qa/pdf_visual_qa.md`, `qa/latex_build_report.md`, `qa/phase9c3_latex_diagnostics.md`, `qa/toolchain_verification.md`
-- PDF extraction evidence: `qa/phase9c_pdf_glyph_diagnostics.csv`, `qa/phase9c3_glyph_resolution.csv`, `qa/phase9d_pdf_qa_addendum.md`
+- PDF extraction evidence: `qa/phase9c3_glyph_resolution.csv`, `qa/phase9d_pdf_qa_addendum.md` (local legacy diagnostic `qa/phase9c_pdf_glyph_diagnostics.csv` remains unarchived and superseded)
 - Integration history: `qa/integration_change_log.md`
 
 ## Scientific and technical status
